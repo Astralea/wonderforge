@@ -121,8 +121,10 @@ export class WorldScene {
     return { light, sky, sunDirection };
   }
 
-  private finishFrame(): void {
-    this.pipeline.render();
+  private finishFrame(filmTime: number): void {
+    // Grain seed: playback t in cinematic mode (scrub-deterministic), elapsed
+    // wall time in ambient mode (the documented wall-clock exception).
+    this.pipeline.render(filmTime);
     const diagnostics = readRendererDiagnostics(this.pipeline.renderer);
     window.__WONDERFORGE_RENDERER__ = diagnostics;
     window.__THREE_GAME_DIAGNOSTICS__ = {
@@ -141,7 +143,7 @@ export class WorldScene {
       this.updateLegacyCamera(cameraT);
       this.legacy.update(constructionT);
     }
-    this.finishFrame();
+    this.finishFrame(lightT);
   }
 
   /**
@@ -157,7 +159,7 @@ export class WorldScene {
       this.updateLegacyCamera((elapsedSeconds / 90) % 1);
       this.legacy.update(1);
     }
-    this.finishFrame();
+    this.finishFrame(elapsedSeconds % 64);
   }
 
   dispose(): void {

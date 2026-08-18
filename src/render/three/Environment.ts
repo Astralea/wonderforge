@@ -163,10 +163,8 @@ function braidRibbonGeometry(y: number): BufferGeometry | null {
 
 interface RampVisual {
   monument: Exclude<MonumentId, 'temple'>;
-  group: Group;
-  steps: InstancedMesh;
-  brickwork: InstancedMesh;
-  retaining: InstancedMesh;
+  /** World placement (center + yaw), premultiplied onto every local matrix. */
+  transform: Matrix4;
   stepCount: number;
   bricksAcross: number;
   maxHeight: number;
@@ -193,6 +191,11 @@ export class GizaEnvironment {
     material: MeshBasicMaterial;
   }> = [];
   private readonly ramps: RampVisual[] = [];
+  private rampMeshes: {
+    steps: InstancedMesh;
+    brickwork: InstancedMesh;
+    retaining: InstancedMesh;
+  } | null = null;
   private readonly boats: Array<{
     craft: RiverCraftDescription;
     globalIndex: number;
@@ -258,20 +261,25 @@ export class GizaEnvironment {
   private addQuarry(materials: MaterialLibrary): void {
     const box = new BoxGeometry(1, 1, 1);
     this.geometries.push(box);
-    const quarryFloor = mesh(box, materials.quarryCut, [-52, -0.2, 31], [24, 0.45, 22]);
-    quarryFloor.name = 'foreground-quarry-floor';
-    this.group.add(quarryFloor);
-
-    for (let step = 0; step < 4; step += 1) {
-      const cut = mesh(
-        box,
-        materials.quarryCut,
-        [-62 + step * 2.4, 0.55 + step * 0.34, 31],
-        [2.4, 1.1 + step * 0.68, 24 - step * 2.2],
-      );
-      cut.name = `quarry-cut-${step}`;
-      this.group.add(cut);
-    }
+    // One instanced batch for the whole static quarry (floor + benched cuts):
+    // five separate meshes here were five draw calls for zero visual gain.
+    const quarryParts = new InstancedMesh(box, materials.quarryCut, 5);
+    const quarryMatrix = new Matrix4();
+    const quarrySpecs: Array<[Vec3, Vec3]> = [
+      [[-52, -0.2, 31], [24, 0.45, 22]],
+      [[-62, 0.55, 31], [2.4, 1.1, 24]],
+      [[-59.6, 0.89, 31], [2.4, 1.78, 21.8]],
+      [[-57.2, 1.23, 31], [2.4, 2.46, 19.6]],
+      [[-54.8, 1.57, 31], [2.4, 3.14, 17.4]],
+    ];
+    quarrySpecs.forEach(([position, scale], index) => {
+      quarryMatrix.compose(new Vector3(...position), new Quaternion(), new Vector3(...scale));
+      quarryParts.setMatrixAt(index, quarryMatrix);
+    });
+    quarryParts.castShadow = true;
+    quarryParts.receiveShadow = true;
+    quarryParts.name = 'foreground-quarry-floor-and-cuts';
+    this.group.add(quarryParts);
 
     const dressingStones = new InstancedMesh(box, materials.block['core-limestone'], 52);
     const random = mulberry32('giza:dressing-yard');
@@ -1239,21 +1247,35 @@ export class GizaEnvironment {
     const box = new BoxGeometry(1, 1, 1);
     const sphere = new SphereGeometry(0.5, 10, 7);
     this.geometries.push(box, sphere);
-    const sphinx = new Group();
-    sphinx.name = 'sphinx-bedrock-carving';
-    sphinx.add(
-      mesh(box, materials.block['core-limestone'], [0, 1.15, 0], [7.2, 2.1, 2.4]),
-      mesh(sphere, materials.block['core-limestone'], [3.1, 2.55, 0], [2.2, 2.4, 2.1]),
-      mesh(box, materials.block['core-limestone'], [-3.1, 0.65, 0.86], [2.6, 1, 0.55]),
-      mesh(box, materials.block['core-limestone'], [-3.1, 0.65, -0.86], [2.6, 1, 0.55]),
+    // The sphinx head keeps its sphere; its three box parts are baked (with
+    // the sphinx's world transform) into the temple's instanced batch below —
+    // four meshes plus a group used to cost four draw calls.
+    const sphinxWorld = new Matrix4().compose(
+      new Vector3(17, 0, -47),
+      new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), -0.45),
+      new Vector3(1, 1, 1),
     );
-    sphinx.position.set(17, 0, -47);
-    sphinx.rotation.y = -0.45;
-    this.group.add(sphinx);
+    const head = mesh(sphere, materials.block['core-limestone'], [0, 0, 0], [2.2, 2.4, 2.1]);
+    head.position.set(3.1, 2.55, 0).applyMatrix4(sphinxWorld);
+    head.rotation.y = -0.45;
+    head.name = 'sphinx-head';
+    this.group.add(head);
+    const sphinxBoxes: Array<[Vec3, Vec3]> = [
+      [[0, 1.15, 0], [7.2, 2.1, 2.4]],
+      [[-3.1, 0.65, 0.86], [2.6, 1, 0.55]],
+      [[-3.1, 0.65, -0.86], [2.6, 1, 0.55]],
+    ];
 
-    const temple = new InstancedMesh(box, materials.block['core-limestone'], 132);
+    const temple = new InstancedMesh(box, materials.block['core-limestone'], 132 + sphinxBoxes.length);
     const matrix = new Matrix4();
     let cursor = 0;
+    for (const [position, scale] of sphinxBoxes) {
+      matrix
+        .compose(new Vector3(...position), new Quaternion(), new Vector3(...scale))
+        .premultiply(sphinxWorld);
+      temple.setMatrixAt(cursor, matrix);
+      cursor += 1;
+    }
     for (let row = 0; row < 6; row += 1) {
       for (let col = 0; col < 11; col += 1) {
         for (const side of [-1, 1] as const) {
@@ -1278,51 +1300,49 @@ export class GizaEnvironment {
     this.geometries.push(earthwork);
     // Footprints come from the plan so the same rectangle drives the geometry
     // and the site-clearance rules that keep camp props out of the earthwork.
+    //
+    // All five earthworks share THREE instanced meshes (terraces, tread
+    // paving, revetment) with world-space matrices — the per-ramp trio used
+    // to cost 15 draw calls where 3 suffice. Per-ramp transforms are baked
+    // into a Matrix4 each ramp premultiplies during the per-frame rebuild.
+    let stepCapacity = 0;
+    let brickCapacity = 0;
+    let retainingCapacity = 0;
     for (const ramp of this.plan.ramps) {
-      const monument = ramp.monument;
-      const position: Vec3 = [ramp.center[0], ramp.baseY, ramp.center[1]];
-      const scale: Vec3 = [ramp.footprint[0], 1, ramp.footprint[1]];
-      const yaw = ramp.yaw;
-      const rampGroup = new Group();
-      rampGroup.position.set(...position);
-      rampGroup.rotation.y = yaw;
-      rampGroup.name = `${monument}-terraced-working-ramp`;
       const stepCount = 12;
-      const stepDepth = scale[2] / stepCount;
-      const steps = new InstancedMesh(earthwork, materials.compactedEarth, stepCount);
-      const bricksAcross = Math.max(4, Math.floor(scale[0] / 1.05));
-      const brickwork = new InstancedMesh(earthwork, materials.compactedEarth, stepCount * bricksAcross);
-      const retainingCourses = Math.ceil(this.plan.monuments[monument].height / 0.36);
-      // Mud-brick revetment, never cityRoof: with the terracotta roof
-      // material these walls read as a giant tiled building, not an earthwork.
-      const retaining = new InstancedMesh(
-        earthwork,
-        materials.revetment,
-        stepCount * retainingCourses * 2 + bricksAcross * retainingCourses,
-      );
-      steps.name = `${monument}-ramp-earthwork-steps`;
-      brickwork.name = `${monument}-ramp-small-mud-brick-courses`;
-      retaining.name = `${monument}-ramp-side-and-front-retaining-masonry`;
-      steps.castShadow = true;
-      steps.receiveShadow = true;
-      brickwork.castShadow = true;
-      brickwork.receiveShadow = true;
-      retaining.castShadow = true;
-      retaining.receiveShadow = true;
+      const bricksAcross = Math.max(4, Math.floor(ramp.footprint[0] / 1.05));
+      const retainingCourses = Math.ceil(this.plan.monuments[ramp.monument].height / 0.36);
+      stepCapacity += stepCount;
+      brickCapacity += stepCount * bricksAcross;
+      retainingCapacity += stepCount * retainingCourses * 2 + bricksAcross * retainingCourses;
+    }
+    const steps = new InstancedMesh(earthwork, materials.compactedEarth, stepCapacity);
+    const brickwork = new InstancedMesh(earthwork, materials.compactedEarth, brickCapacity);
+    // Mud-brick revetment, never cityRoof: with the terracotta roof material
+    // these walls read as a giant tiled building, not an earthwork.
+    const retaining = new InstancedMesh(earthwork, materials.revetment, retainingCapacity);
+    steps.name = 'ramp-earthwork-terraces';
+    brickwork.name = 'ramp-tread-paving';
+    retaining.name = 'ramp-revetment-masonry';
+    for (const item of [steps, brickwork, retaining]) {
+      item.castShadow = true;
+      item.receiveShadow = true;
       // Per-frame matrices/counts: three's first-render bounding-sphere cache
       // goes stale and camera-culls the earthwork while its shadow persists
       // (see BlockSystem). Never cull these.
-      for (const item of [steps, brickwork, retaining]) item.frustumCulled = false;
-      for (let index = 0; index < stepCount; index += 1) {
-        const stepMatrix = new Matrix4().compose(
-          new Vector3(0, 0.1, scale[2] * 0.5 - stepDepth * (index + 0.5)),
-          new Quaternion(),
-          new Vector3(scale[0], 0.2, stepDepth * 0.96),
-        );
-        steps.setMatrixAt(index, stepMatrix);
-      }
-      steps.instanceMatrix.needsUpdate = true;
-      rampGroup.add(steps, brickwork, retaining);
+      item.frustumCulled = false;
+      item.count = 0;
+    }
+    this.rampMeshes = { steps, brickwork, retaining };
+    this.group.add(steps, brickwork, retaining);
+
+    for (const ramp of this.plan.ramps) {
+      const monument = ramp.monument;
+      const transform = new Matrix4().compose(
+        new Vector3(ramp.center[0], ramp.baseY, ramp.center[1]),
+        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), ramp.yaw),
+        new Vector3(1, 1, 1),
+      );
       const monumentBlocks = this.plan.blocks.filter((block) => block.monument === monument);
       const start = Math.min(...monumentBlocks.map((block) => block.start));
       const end = Math.max(...monumentBlocks.map((block) => block.start + block.duration));
@@ -1335,23 +1355,19 @@ export class GizaEnvironment {
       }
       this.ramps.push({
         monument,
-        group: rampGroup,
-        steps,
-        brickwork,
-        retaining,
-        stepCount,
-        bricksAcross,
-        maxHeight: this.plan.monuments[monument].height,
-        width: scale[0],
-        length: scale[2],
-        baseY: position[1],
+        transform,
+        stepCount: 12,
+        bricksAcross: Math.max(4, Math.floor(ramp.footprint[0] / 1.05)),
+        maxHeight: monumentPlan.height,
+        width: ramp.footprint[0],
+        length: ramp.footprint[1],
+        baseY: ramp.baseY,
         start,
         end,
         courseStarts,
         courseHeight: monumentPlan.height / monumentPlan.courses,
         groundY: monumentPlan.groundY,
       });
-      this.group.add(rampGroup);
     }
   }
 
@@ -1419,6 +1435,11 @@ export class GizaEnvironment {
       layer.material.opacity = Math.min(baseOpacity, sky.cloudOpacity);
     }
     this.clouds.visible = light.emissive < 0.8;
+    const rampMeshes = this.rampMeshes!;
+    const rampMatrix = new Matrix4();
+    let rampStepCursor = 0;
+    let rampBrickCursor = 0;
+    let rampRetainingCursor = 0;
     for (const ramp of this.ramps) {
       // The crest is raised continuously through each course. Taking the max
       // over already-started blocks made it jump a whole course height the
@@ -1451,11 +1472,7 @@ export class GizaEnvironment {
       const raised = smoothstep((t - ramp.start) / raiseSpan);
       const struck = smoothstep((t - ramp.end) / dismantleSpan);
       const extent = Math.max(0, raised - struck);
-      if (extent <= 0.001) {
-        ramp.group.visible = false;
-        continue;
-      }
-      ramp.group.visible = true;
+      if (extent <= 0.001) continue;
 
       // Terraces keep their final size and place; only the frontier advances,
       // with a partial terrace at the tip so the earthwork extends smoothly
@@ -1466,10 +1483,7 @@ export class GizaEnvironment {
         ramp.stepCount,
         Math.max(1, Math.ceil(activeLength / fullStepDepth)),
       );
-      const matrix = new Matrix4();
-      let brickCursor = 0;
-      let retainingCursor = 0;
-      let stepCursor = 0;
+      const matrix = rampMatrix;
       const retainingHeight = 0.36;
       for (let index = 0; index < activeSteps; index += 1) {
         // Spec 08: the ramp rises TOWARD the monument. Step 0 sits at local
@@ -1487,8 +1501,9 @@ export class GizaEnvironment {
           new Quaternion(),
           new Vector3(ramp.width, stepHeight, stepDepth * 0.96),
         );
-        ramp.steps.setMatrixAt(stepCursor, matrix);
-        stepCursor += 1;
+        matrix.premultiply(ramp.transform);
+        rampMeshes.steps.setMatrixAt(rampStepCursor, matrix);
+        rampStepCursor += 1;
         const brickWidth = ramp.width / ramp.bricksAcross;
         for (let across = 0; across < ramp.bricksAcross; across += 1) {
           const offset = index % 2 === 0 ? 0 : brickWidth * 0.16;
@@ -1504,8 +1519,9 @@ export class GizaEnvironment {
             // shadow grid that read as terracotta roof tiles from above.
             new Vector3(brickWidth * 0.97, 0.08, stepDepth * 0.94),
           );
-          ramp.brickwork.setMatrixAt(brickCursor, matrix);
-          brickCursor += 1;
+          matrix.premultiply(ramp.transform);
+          rampMeshes.brickwork.setMatrixAt(rampBrickCursor, matrix);
+          rampBrickCursor += 1;
         }
         const verticalCourses = Math.ceil(stepHeight / retainingHeight);
         for (let course = 0; course < verticalCourses; course += 1) {
@@ -1519,8 +1535,9 @@ export class GizaEnvironment {
               new Quaternion(),
               new Vector3(0.42, retainingHeight * 0.96, stepDepth * 0.92),
             );
-            ramp.retaining.setMatrixAt(retainingCursor, matrix);
-            retainingCursor += 1;
+            matrix.premultiply(ramp.transform);
+            rampMeshes.retaining.setMatrixAt(rampRetainingCursor, matrix);
+            rampRetainingCursor += 1;
           }
         }
       }
@@ -1539,17 +1556,18 @@ export class GizaEnvironment {
             new Quaternion(),
             new Vector3(frontBrickWidth * 0.96, retainingHeight * 0.96, 0.42),
           );
-          ramp.retaining.setMatrixAt(retainingCursor, matrix);
-          retainingCursor += 1;
+          matrix.premultiply(ramp.transform);
+          rampMeshes.retaining.setMatrixAt(rampRetainingCursor, matrix);
+          rampRetainingCursor += 1;
         }
       }
-      ramp.steps.count = stepCursor;
-      ramp.steps.instanceMatrix.needsUpdate = true;
-      ramp.brickwork.count = brickCursor;
-      ramp.brickwork.instanceMatrix.needsUpdate = true;
-      ramp.retaining.count = retainingCursor;
-      ramp.retaining.instanceMatrix.needsUpdate = true;
     }
+    rampMeshes.steps.count = rampStepCursor;
+    rampMeshes.steps.instanceMatrix.needsUpdate = true;
+    rampMeshes.brickwork.count = rampBrickCursor;
+    rampMeshes.brickwork.instanceMatrix.needsUpdate = true;
+    rampMeshes.retaining.count = rampRetainingCursor;
+    rampMeshes.retaining.instanceMatrix.needsUpdate = true;
   }
 
   dispose(): void {

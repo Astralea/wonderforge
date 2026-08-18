@@ -98,6 +98,22 @@ The Giza scene now has:
   outside the frustum from t ≈ 0.86 to ≈ 0.95, which viewers read as the
   Great Pyramid disappearing near the end. Frustum contract tests project
   the real camera and pin all three apexes on screen through the reveal;
+- a cinematic pipeline pass (the "AAA" request): draw-call consolidation
+  first, honoring Spec 03's ≤90 gate — the five ramps share three
+  world-space instanced meshes (was 15 draw calls), the quarry is one
+  instanced batch (was 5 meshes), the sphinx's boxes bake into the valley
+  temple's batch (was 4) — scene geometry now peaks at 94 calls (dawn) and
+  sits at 81 at the reveal. Then the post stack: the scene renders linear
+  into a 4x-multisampled HalfFloat target (MSAA must be explicit on a
+  composer target — without it the shadowed block joints alias into cyan
+  speckle), UnrealBloom at threshold 0.86 lifts only the sun and lit
+  casing, OutputPass applies ACES, and a final grade adds vignette plus
+  film grain seeded from playback `t` (scrub-deterministic; ambient mode
+  uses its documented wall-clock). PCFSoft shadow filtering. Bloom is
+  disabled on mobile. Diagnostics now accumulate `renderer.info` across
+  the whole frame (`autoReset = false` + manual reset), so budget numbers
+  honestly include the ~15 fullscreen post passes: 104–109 total on
+  desktop, 80 on mobile, all inside the 300-call budget;
 - a stale-bounds culling fix (the real "pyramid disappeared, only its shadow
   left" bug, reported from live playback): three caches an InstancedMesh
   bounding sphere on FIRST render, which in the watch view happens at t = 0

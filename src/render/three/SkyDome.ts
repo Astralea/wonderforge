@@ -4,7 +4,6 @@ import {
   Mesh,
   ShaderMaterial,
   SphereGeometry,
-  SRGBColorSpace,
   Vector3,
 } from 'three';
 import { GIZA_SKY, type SkyKeyframe } from '../../data/gizaSky';
@@ -132,12 +131,13 @@ export class SkyDome {
       .lerp(new Color(GIZA_SKY.dome.groundHaze), 0.42);
     // Match the scene fog exactly (light.fog is sample.horizon for Giza) so
     // the fogged far terrain meets the dome seamlessly at the horizon. three
-    // uploads its fog uniform converted to the output color space, so this
-    // uniform must be sRGB-encoded to land on identical pixels.
-    deriveSceneFogColor(sample.horizon, this.fogScratch).getRGB(
-      uniforms.uFogColor!.value as Color,
-      SRGBColorSpace,
-    );
+    // uploads its fog uniform converted to the destination color space: for
+    // the post-processing pipeline's linear HalfFloat target that is the
+    // working space, so the uniform is passed through un-encoded. (When this
+    // dome rendered straight to the canvas it needed sRGB encoding here —
+    // if the composer is ever removed, that conversion must return.)
+    deriveSceneFogColor(sample.horizon, this.fogScratch);
+    (uniforms.uFogColor!.value as Color).copy(this.fogScratch);
     uniforms.uHazeStrength!.value = sample.haze * 0.85;
     // Wide forward scatter swells when the sun rides low.
     const lowSun = Math.min(1, Math.max(0, 1 - sunDirection.y / 0.55));

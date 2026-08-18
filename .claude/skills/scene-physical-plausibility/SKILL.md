@@ -172,6 +172,21 @@ perfectly. Reproduce presentation bugs under the real playback path — first
 render at t = 0, then seek — before declaring them absent
 (`scripts/verify-live-playback.mjs`).
 
+Two adjacent render-pipeline traps found the same way:
+
+- **A composer forfeits canvas MSAA silently.** `antialias: true` applies to
+  the default framebuffer only; an EffectComposer render target has no
+  multisampling unless constructed with `samples`. The symptom is not
+  "jagged edges" in general but whatever thin high-contrast feature the
+  scene has — here, the shadowed joints between blocks aliased into cyan
+  speckle that masqueraded as a color-math bug. Bisect post stacks
+  empirically (disable passes one at a time) and diff crops against the
+  pre-composer reference before theorizing about color spaces.
+- **`renderer.info` auto-resets per internal render pass**, so with a
+  composer the diagnostics report only the final fullscreen quad (1 call,
+  1 triangle). Set `info.autoReset = false` and reset manually once per
+  frame, or every budget number after adding post-processing is fiction.
+
 ### 9. Determinism
 
 All of the above must hold identically on every playthrough. No runtime
