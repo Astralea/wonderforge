@@ -1,0 +1,90 @@
+{
+  "wonder": "petra",
+  "style": { "notes": "the Treasury is CARVED, not built: rock-shell chunks drop away top-down to reveal the colonnade; sandstone strata; the Siq is the site" },
+  "camera": { "startAzimuth": -1.5708 },
+  "lighting": { "endsAtNight": false },
+  "background": {
+    "terrain": "cliff",
+    "layers": [
+      { "kind": "cliffs", "distance": 3.2, "height": 0.6, "tint": "#a35c38" },
+      { "kind": "dunes", "distance": 2.5, "height": 0.25, "tint": "#c9a06a" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "The Siq": 0.5, "Carving the Treasury": 2, "Portico & finish": 1 },
+    "components": [
+      {
+        "id": "siq-cliffs",
+        "stage": "The Siq",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [0, 0, -6.5], "scale": [34, 26, 7], "entrance": "none", "jitter": 0.01 },
+          { "shape": "box", "material": "accent", "position": [-24, 0, -4], "scale": [8, 18, 12], "entrance": "none", "jitter": 0.01 },
+          { "shape": "box", "material": "accent", "position": [24, 0, -4], "scale": [8, 21, 12], "entrance": "none", "jitter": 0.01 },
+          { "shape": "box", "material": "ground", "position": [0, 7, -3.1], "scale": [33, 0.5, 0.3], "entrance": "none" },
+          { "shape": "box", "material": "ground", "position": [0, 14, -3.1], "scale": [33, 0.4, 0.3], "entrance": "none" }
+        ]
+      },
+      {
+        "id": "shell-top",
+        "stage": "Carving the Treasury",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [-4.45, 16.8, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 0, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [4.45, 16.8, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 1, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [-4.45, 12.9, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 2, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [4.45, 12.9, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 3, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [-4.45, 9, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 4, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [4.45, 9, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 5, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [-4.45, 5.1, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 6, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [4.45, 5.1, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 7, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [-4.45, 1.2, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 8, "jitter": 0.08 },
+          { "shape": "box", "material": "accent", "position": [4.45, 1.2, -1.6], "scale": [8.9, 3.9, 1.4], "entrance": "carve", "order": 9, "jitter": 0.08 }
+        ]
+      },
+      {
+        "id": "facade-colonnade",
+        "stage": "Carving the Treasury",
+        "generator": "row",
+        "params": { "count": 6, "from": [-7.5, -2.2], "to": [7.5, -2.2], "size": [0.9, 9, 0.9], "y": 1.2, "shape": "cylinder" },
+        "material": "primary",
+        "entrance": "none"
+      },
+      {
+        "id": "facade-upper-colonnade",
+        "stage": "Carving the Treasury",
+        "generator": "row",
+        "params": { "count": 4, "from": [-6, -2.2], "to": [6, -2.2], "size": [0.9, 6.5, 0.9], "y": 12.2, "shape": "cylinder" },
+        "material": "primary",
+        "entrance": "none"
+      },
+      {
+        "id": "facade-body",
+        "stage": "Carving the Treasury",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [0, 10.2, -2.4], "scale": [17.5, 1.4, 3], "entrance": "none" },
+          { "shape": "box", "material": "accent", "position": [0, 0, -2.6], "scale": [18, 1.2, 3.6], "entrance": "none" },
+          { "shape": "box", "material": "primary", "position": [-4.7, 18.7, -2.3], "scale": [4.6, 1.6, 2.6], "rotation": [0, 0, 0.18], "entrance": "none" },
+          { "shape": "box", "material": "primary", "position": [4.7, 18.7, -2.3], "scale": [4.6, 1.6, 2.6], "rotation": [0, 0, -0.18], "entrance": "none" },
+          { "shape": "cylinder", "material": "accent", "position": [0, 12.2, -2.2], "scale": [3.4, 4.2, 3.4], "entrance": "none" },
+          { "shape": "cone", "material": "primary", "position": [0, 16.4, -2.2], "scale": [3.8, 2.6, 3.8], "entrance": "none" }
+        ]
+      },
+      {
+        "id": "portico",
+        "stage": "Portico & finish",
+        "parts": [
+          { "shape": "box", "material": "shadow", "position": [0, 1.2, -1.9], "scale": [3, 6.4, 0.8], "entrance": "place" },
+          { "shape": "sphere", "material": "accent", "position": [0, 19, -2.2], "scale": [1.4, 1.4, 1.4], "entrance": "place" },
+          { "shape": "box", "material": "ground", "position": [0, 0, 1.5], "scale": [10, 0.6, 3], "entrance": "stack", "order": 0 },
+          { "shape": "cone", "material": "foliage", "position": [-13, 0, 8], "scale": [1, 2.4, 1], "jitter": 1.2, "entrance": "place" },
+          { "shape": "cone", "material": "foliage", "position": [13.5, 0, 6], "scale": [1, 2.2, 1], "jitter": 1.2, "entrance": "place" }
+        ]
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 6, "path": "perimeter", "carry": true },
+    "scaffolding": { "style": "wood-frame", "aroundStages": ["Carving the Treasury"] },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 2 }
+  }
+}

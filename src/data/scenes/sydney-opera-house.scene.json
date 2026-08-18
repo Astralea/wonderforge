@@ -1,0 +1,70 @@
+{
+  "wonder": "sydney-opera-house",
+  "style": { "notes": "white shell wedges (sphere sections, per Utzon) over the harbour podium; floodlit at night" },
+  "camera": { "startAzimuth": -0.785 },
+  "lighting": { "endsAtNight": true },
+  "background": {
+    "terrain": "harbor",
+    "layers": [
+      { "kind": "harbor", "distance": 3.6, "height": 0.15, "tint": "#3d6e8f" },
+      { "kind": "city", "distance": 2.8, "height": 0.45, "tint": "#7fa8c9" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "Harbour & podium": 0.8, "Concert hall sails": 1.5, "Opera theatre sails": 1.5, "Glass walls & restaurant": 0.9 },
+    "components": [
+      {
+        "id": "harbour",
+        "stage": "Harbour & podium",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [0, 0.2, 0], "scale": [30, 1.4, 19], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "ground", "position": [0, 1.6, 0], "scale": [26, 1, 15], "entrance": "stack", "order": 1 },
+          { "shape": "box", "material": "accent", "position": [0, 0.2, 12.5], "scale": [20, 0.9, 4], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "accent", "position": [0, 0.2, -12.5], "scale": [20, 0.9, 4], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "ground", "position": [0, 2.6, 8.2], "scale": [18, 0.35, 1.1], "entrance": "stack", "order": 3 },
+          { "shape": "box", "material": "ground", "position": [0, 2.6, 9.5], "scale": [18, 0.35, 1.1], "entrance": "stack", "order": 4 },
+          { "shape": "cylinder", "material": "ground", "position": [0, 0, 0], "scale": [40, 0.35, 30], "entrance": "place" },
+          { "shape": "box", "material": "accent", "position": [0, 0.35, 14.2], "scale": [22, 0.6, 1], "entrance": "stack", "order": 5 },
+          { "shape": "box", "material": "accent", "position": [0, 0.35, -14.2], "scale": [22, 0.6, 1], "entrance": "stack", "order": 6 }
+        ]
+      },
+      {
+        "id": "concert-sails",
+        "stage": "Concert hall sails",
+        "parts": [
+          { "shape": "sail", "material": "primary", "position": [-6.4, 1.6, -3.4], "scale": [4.2, 5.2, 4.6], "rotation": [-0.55, 0, 0], "entrance": "stack", "order": 0 },
+          { "shape": "sail", "material": "primary", "position": [-6.4, 1.6, -0.9], "scale": [4.6, 6.8, 5.2], "rotation": [-0.55, 0, 0], "entrance": "stack", "order": 1 },
+          { "shape": "sail", "material": "primary", "position": [-6.4, 1.6, 1.6], "scale": [5, 8.4, 5.8], "rotation": [-0.55, 0, 0], "entrance": "stack", "order": 2 },
+          { "shape": "sail", "material": "primary", "position": [-6.4, 1.6, 4.1], "scale": [5.4, 10, 6.4], "rotation": [-0.55, 0, 0], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "opera-sails",
+        "stage": "Opera theatre sails",
+        "parts": [
+          { "shape": "sail", "material": "primary", "position": [6.4, 1.6, -3.4], "scale": [4.2, 5.2, 4.6], "rotation": [-0.55, 3.1416, 0], "entrance": "stack", "order": 0 },
+          { "shape": "sail", "material": "primary", "position": [6.4, 1.6, -0.9], "scale": [4.6, 6.8, 5.2], "rotation": [-0.55, 3.1416, 0], "entrance": "stack", "order": 1 },
+          { "shape": "sail", "material": "primary", "position": [6.4, 1.6, 1.6], "scale": [5, 8.4, 5.8], "rotation": [-0.55, 3.1416, 0], "entrance": "stack", "order": 2 },
+          { "shape": "sail", "material": "primary", "position": [6.4, 1.6, 4.1], "scale": [5.4, 10, 6.4], "rotation": [-0.55, 3.1416, 0], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "glass-walls",
+        "stage": "Glass walls & restaurant",
+        "parts": [
+          { "shape": "box", "material": "light", "position": [-6.4, 2.6, 6.2], "scale": [7.6, 5.2, 0.4], "entrance": "fade" },
+          { "shape": "box", "material": "light", "position": [6.4, 2.6, 6.2], "scale": [7.6, 5.2, 0.4], "entrance": "fade" },
+          { "shape": "sail", "material": "primary", "position": [13, 1.4, 6.5], "scale": [2.4, 3.2, 3], "rotation": [-0.4, 0.5, 0], "entrance": "stack", "order": 0 },
+          { "shape": "sail", "material": "primary", "position": [13.8, 1.4, 8.4], "scale": [1.9, 2.4, 2.4], "rotation": [-0.5, 0.9, 0], "entrance": "stack", "order": 1 },
+          { "shape": "sail", "material": "primary", "position": [12.4, 1.4, 9.8], "scale": [1.5, 1.9, 2], "rotation": [-0.6, 0.7, 0], "entrance": "stack", "order": 2 }
+        ]
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 8, "path": "perimeter", "carry": true },
+    "scaffolding": { "style": "wood-frame", "aroundStages": ["Concert hall sails", "Opera theatre sails"] },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 4 }
+  }
+}

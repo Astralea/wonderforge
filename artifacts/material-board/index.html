@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WonderForge — Material Detail Review Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --parchment: #f3ede2;
+    --parchment-dim: #b9ac93;
+    --gold: #d4a24e;
+    --umber-950: #14100c;
+    --umber-900: #1e1812;
+    --umber-850: #241b10;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(175deg, #14100c 0%, #1e1812 60%, #241b10 100%);
+    color: var(--parchment);
+    font-family: 'Alegreya Sans', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 56px 32px 72px; }
+
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--gold); font-weight: 700;
+  }
+  h1 {
+    font-family: 'Cinzel', 'Times New Roman', serif;
+    font-size: 44px; font-weight: 600; letter-spacing: 0.02em;
+    margin-top: 14px; line-height: 1.12;
+  }
+  .era {
+    margin-top: 10px; font-size: 17px; color: var(--parchment-dim);
+    font-style: italic;
+  }
+  /* Hieroglyph register line — the board's signature rule. */
+  .register {
+    margin: 26px 0 8px; height: 12px;
+    background-image:
+      linear-gradient(var(--gold), var(--gold)),
+      repeating-linear-gradient(90deg,
+        rgba(212, 162, 78, 0.55) 0 2px, transparent 2px 10px,
+        rgba(212, 162, 78, 0.55) 10px 14px, transparent 14px 34px);
+    background-size: 100% 1px, 100% 5px;
+    background-position: top left, bottom left;
+    background-repeat: no-repeat, no-repeat;
+  }
+  .legend {
+    margin-top: 22px; max-width: 760px; font-size: 16px; line-height: 1.55;
+    color: var(--parchment-dim);
+  }
+  .legend strong { color: var(--parchment); font-weight: 700; }
+  .legend .l { color: var(--parchment); }
+  .legend .r { color: var(--gold); font-weight: 700; }
+
+  .grid {
+    margin-top: 40px;
+    display: grid; gap: 22px;
+    grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+  }
+  .card {
+    background: rgba(30, 24, 18, 0.82);
+    border: 1px solid rgba(212, 162, 78, 0.22);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .card canvas {
+    display: block; width: 100%; aspect-ratio: 4 / 3;
+    background: #0d0a07;
+  }
+  .card .body { padding: 14px 16px 16px; border-top: 1px solid rgba(212, 162, 78, 0.22); }
+  .card h2 {
+    font-family: 'Cinzel', 'Times New Roman', serif;
+    font-size: 17px; font-weight: 600; letter-spacing: 0.04em;
+  }
+  .tags { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 10.5px; letter-spacing: 0.06em;
+    padding: 2px 7px; border-radius: 2px;
+    color: var(--parchment-dim);
+    border: 1px solid rgba(212, 162, 78, 0.3);
+  }
+  .tag.live { color: var(--gold); border-color: var(--gold); }
+  .params {
+    margin-top: 9px;
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 11.5px; color: var(--gold); opacity: 0.9;
+  }
+  .why {
+    margin-top: 9px; font-size: 14px; line-height: 1.5;
+    color: var(--parchment-dim);
+  }
+
+  footer {
+    margin-top: 52px; padding-top: 22px;
+    border-top: 1px solid rgba(212, 162, 78, 0.22);
+    display: grid; gap: 8px;
+    font-size: 14px; line-height: 1.6; color: var(--parchment-dim);
+    max-width: 820px;
+  }
+  footer b { color: var(--parchment); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">WonderForge · Material Pass Proposal</div>
+  <h1>Material Detail Review Board</h1>
+  <div class="era">Giza Plateau &middot; Fourth Dynasty &middot; c. 2560 BCE &middot; peret season</div>
+  <div class="register" aria-hidden="true"></div>
+  <p class="legend">
+    Every swatch is drawn live in WebGL. <span class="l">Left half: the current flat
+    material</span> as rendered in the scene today. <span class="r">Right half: the proposed
+    seeded procedural detail</span> — pure GLSL hash noise (grain, sedimentary banding,
+    compaction mottling, timber grain, water ripple) injected into the existing shared
+    materials via <em>onBeforeCompile</em>. No textures, no network fetches, fully
+    deterministic; frequencies here are representative, final values are object-space in scene.
+  </p>
+  <div class="grid" id="grid"></div>
+  <footer>
+    <div><b>Technique.</b> One shared value-noise function (two-octave fBm over a sine hash), composed per material role
+    from typed recipes. In the app these become <b>MATERIAL_DETAIL_RECIPES</b> in <b>src/data/</b> (pure data,
+    unit-tested) plus one <b>onBeforeCompile</b> injector in <b>src/render/three/</b> with per-role
+    <b>customProgramCacheKey</b> so programs never collide.</div>
+    <div><b>Cost.</b> ALU-only: zero new textures, zero new draw calls, zero geometry. The Nile swatch is the only
+    animated one — its phase derives from playback <em>t</em>, so scrubbing stays deterministic.</div>
+    <div><b>Sources.</b> Material recipes follow the kept <em>threejs-aaa-graphics-builder</em> cookbook patterns;
+    board direction follows <em>frontend-design</em> and the existing WonderForge token palette.</div>
+  </footer>
+</div>
+
+<script>
+'use strict';
+
+const VS = `
+attribute vec2 aPos;
+varying vec2 vUv;
+void main() {
+  vUv = aPos * 0.5 + 0.5;
+  gl_Position = vec4(aPos, 0.0, 1.0);
+}`;
+
+// The exact noise family proposed for the app's onBeforeCompile injection.
+const FS = `
+precision highp float;
+varying vec2 vUv;
+uniform vec3 uBase;
+uniform vec2 uGrain;    // scale, amplitude (0 disables)
+uniform float uAniso;   // 1 = isotropic, <1 stretches grain along y
+uniform vec2 uBanding;  // cycles across swatch, amplitude
+uniform vec2 uMottle;   // cycles across swatch, amplitude
+uniform vec3 uRipple;   // scale, speed, amplitude
+uniform float uTime;
+
+float wfHash(vec2 p) {
+  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+}
+float wfNoise(vec2 p) {
+  vec2 i = floor(p);
+  vec2 f = fract(p);
+  f = f * f * (3.0 - 2.0 * f);
+  return mix(mix(wfHash(i), wfHash(i + vec2(1.0, 0.0)), f.x),
+             mix(wfHash(i + vec2(0.0, 1.0)), wfHash(i + vec2(1.0, 1.0)), f.x), f.y);
+}
+float wfFbm(vec2 p) {
+  return wfNoise(p) * 0.65 + wfNoise(p * 2.13 + 7.3) * 0.35;
+}
+
+void main() {
+  vec2 p = vec2(vUv.x * (4.0 / 3.0), vUv.y);
+
+  float detail = 0.0;
+  if (uGrain.y > 0.0) {
+    detail += (wfFbm(vec2(p.x * uGrain.x, p.y * uGrain.x * uAniso)) - 0.5) * 2.0 * uGrain.y;
+  }
+  if (uMottle.y > 0.0) {
+    detail += (wfFbm(p * uMottle.x) - 0.5) * 2.0 * uMottle.y;
+  }
+  if (uBanding.y > 0.0) {
+    float wobble = wfNoise(p * 2.3) * 0.14;
+    detail += sin((p.y + wobble) * uBanding.x * 6.28318) * uBanding.y;
+  }
+  if (uRipple.z > 0.0) {
+    vec2 rp = vec2(p.x * uRipple.x + uTime * uRipple.y,
+                   p.y * uRipple.x * 0.55 - uTime * uRipple.y * 0.3);
+    detail += (wfFbm(rp) - 0.5) * 2.0 * uRipple.z;
+  }
+
+  // Representative sun falloff so swatches read as lit surfaces.
+  float light = 1.04 - 0.3 * vUv.y;
+  vec3 flatColor = uBase * light;
+  vec3 detailColor = uBase * (1.0 + detail) * light;
+
+  vec3 color = vUv.x < 0.5 ? flatColor : detailColor;
+  float divider = 1.0 - smoothstep(0.0012, 0.0042, abs(vUv.x - 0.5));
+  color = mix(color, vec3(0.831, 0.635, 0.306), divider);
+  gl_FragColor = vec4(color, 1.0);
+}`;
+
+function hexToRgb(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  return [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255];
+}
+
+const MATERIALS = [
+  {
+    name: 'Core limestone', role: 'stone', base: '#cbb07a',
+    grain: [14, 0.055], aniso: 1, banding: [7, 0.05],
+    params: 'grain 14/.055 · banding 7/.050',
+    why: 'Mokattam nummulitic limestone, rough-dressed: fine grain with faint horizontal bedding carried from the quarry strata.',
+  },
+  {
+    name: 'Casing limestone', role: 'stone', base: '#ead9ac',
+    grain: [22, 0.035], aniso: 1, banding: [11, 0.022],
+    params: 'grain 22/.035 · banding 11/.022',
+    why: 'White Tura casing, dressed smooth: finer grain, barely-visible bedding. The pyramid\u2019s original bright face.',
+  },
+  {
+    name: 'Aswan granite', role: 'stone', base: '#8d6753',
+    grain: [42, 0.06], aniso: 1,
+    params: 'grain 42/.060 · no banding',
+    why: 'Granodiorite barged from Aswan for chamber courses: dense crystalline speckle, never bedded.',
+  },
+  {
+    name: 'Plateau sand', role: 'terrain', base: '#d6c39a',
+    grain: [30, 0.03], aniso: 1, mottle: [3.5, 0.06],
+    params: 'mottle 3.5/.060 · grain 30/.030',
+    why: 'Desert pavement west of the plateau: broad wind-sorted dune patches over a fine grain.',
+  },
+  {
+    name: 'Compacted earth', role: 'terrain', base: '#b89968',
+    grain: [16, 0.04], aniso: 1, mottle: [5, 0.06],
+    params: 'mottle 5/.060 · grain 16/.040',
+    why: 'Sled roads and ramp cores: trodden, moisture-mottled compaction from constant sled and foot traffic.',
+  },
+  {
+    name: 'Quarry cut', role: 'terrain', base: '#c3a06e',
+    grain: [12, 0.05], aniso: 1, banding: [5, 0.06],
+    params: 'grain 12/.050 · banding 5/.060',
+    why: 'Fresh quarry faces south-east of the plateau: stronger strata and tool-scale grain than weathered stone.',
+  },
+  {
+    name: 'Acacia timber', role: 'timber', base: '#7a5a36',
+    grain: [10, 0.07], aniso: 0.12,
+    params: 'grain 10/.070 · aniso 0.12',
+    why: 'Sleds, masts, yards and levers: grain stretched along each member so wood stops reading as brown plastic.',
+  },
+  {
+    name: 'Nile water', role: 'water', base: '#4f7f9a',
+    grain: [0, 0], aniso: 1, ripple: [8, 0.5, 0.075], live: true,
+    params: 'ripple 8/.075 · animated from t',
+    why: 'Slow peret-season current: drifting ripple bands catch the low sun; in scene the phase derives from playback t, plus a roughness shimmer.',
+  },
+  {
+    name: 'Whitewash plaster', role: 'settlement', base: '#e9dfc6',
+    grain: [24, 0.022], aniso: 1,
+    params: 'grain 24/.022',
+    why: 'Lime-plastered estate and temple walls in Memphis: nearly smooth, slight trowel grain.',
+  },
+  {
+    name: 'Mud brick', role: 'settlement', base: '#b08a5e',
+    grain: [10, 0.05], aniso: 1,
+    params: 'grain 10/.050',
+    why: 'Sun-dried Nile-mud brick: coarse, fiber-rich grain separating city fabric from dressed stone.',
+  },
+  {
+    name: 'Linen', role: 'textile', base: '#e8ddc4',
+    grain: [26, 0.028], aniso: 1,
+    params: 'grain 26/.028',
+    why: 'Flax sailcloth and tenting: fine plain-weave grain on the square sails of upstream boats.',
+  },
+  {
+    name: 'Palm foliage', role: 'flora', base: '#6f8f4a',
+    grain: [9, 0.05], aniso: 1,
+    params: 'grain 9/.050',
+    why: 'Date-palm crowns along the canal greenbelt: value variation keeps groves from reading as flat plastic.',
+  },
+];
+
+function compile(gl, type, src) {
+  const shader = gl.createShader(type);
+  gl.shaderSource(shader, src);
+  gl.compileShader(shader);
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    throw new Error(gl.getShaderInfoLog(shader) || 'shader compile failed');
+  }
+  return shader;
+}
+
+function makeSwatch(canvas, cfg) {
+  const gl = canvas.getContext('webgl', { antialias: true, preserveDrawingBuffer: true });
+  if (!gl) return () => {};
+
+  const program = gl.createProgram();
+  gl.attachShader(program, compile(gl, gl.VERTEX_SHADER, VS));
+  gl.attachShader(program, compile(gl, gl.FRAGMENT_SHADER, FS));
+  gl.linkProgram(program);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    throw new Error(gl.getProgramInfoLog(program) || 'program link failed');
+  }
+  gl.useProgram(program);
+
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const aPos = gl.getAttribLocation(program, 'aPos');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+  const u = {};
+  for (const name of ['uBase', 'uGrain', 'uAniso', 'uBanding', 'uMottle', 'uRipple', 'uTime']) {
+    u[name] = gl.getUniformLocation(program, name);
+  }
+  gl.uniform3fv(u.uBase, hexToRgb(cfg.base));
+  gl.uniform2fv(u.uGrain, cfg.grain || [0, 0]);
+  gl.uniform1f(u.uAniso, cfg.aniso ?? 1);
+  gl.uniform2fv(u.uBanding, cfg.banding || [0, 0]);
+  gl.uniform2fv(u.uMottle, cfg.mottle || [0, 0]);
+  gl.uniform3fv(u.uRipple, cfg.ripple || [0, 0, 0]);
+
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  function resize() {
+    const w = Math.round(canvas.clientWidth * dpr);
+    const h = Math.round(canvas.clientHeight * dpr);
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w;
+      canvas.height = h;
+      gl.viewport(0, 0, w, h);
+    }
+  }
+
+  return function frame(timeSeconds) {
+    resize();
+    gl.uniform1f(u.uTime, timeSeconds);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  };
+}
+
+const grid = document.getElementById('grid');
+const animated = [];
+
+for (const cfg of MATERIALS) {
+  const card = document.createElement('article');
+  card.className = 'card';
+  const canvas = document.createElement('canvas');
+  const body = document.createElement('div');
+  body.className = 'body';
+  body.innerHTML = `
+    <h2>${cfg.name}</h2>
+    <div class="tags">
+      <span class="tag">${cfg.role}</span>
+      <span class="tag">${cfg.base}</span>
+      ${cfg.live ? '<span class="tag live">live</span>' : ''}
+    </div>
+    <div class="params">${cfg.params}</div>
+    <p class="why">${cfg.why}</p>`;
+  card.appendChild(canvas);
+  card.appendChild(body);
+  grid.appendChild(card);
+  const draw = makeSwatch(canvas, cfg);
+  animated.push({ draw, live: Boolean(cfg.live) });
+}
+
+const start = performance.now();
+function loop(now) {
+  const t = (now - start) / 1000;
+  for (const { draw, live } of animated) draw(live ? t : 0);
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

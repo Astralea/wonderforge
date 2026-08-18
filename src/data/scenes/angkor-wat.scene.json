@@ -1,0 +1,120 @@
+{
+  "wonder": "angkor-wat",
+  "style": { "notes": "five lotus-bud towers in quincunx over the moat; sandstone galleries; jungle at the horizon" },
+  "camera": { "startAzimuth": 0 },
+  "lighting": { "endsAtNight": false },
+  "background": {
+    "terrain": "jungle",
+    "layers": [
+      { "kind": "jungle", "distance": 3.6, "height": 0.35, "tint": "#4d6b3a" },
+      { "kind": "jungle", "distance": 2.6, "height": 0.24, "tint": "#6b7f52" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "Moat & causeway": 0.8, "Galleries": 1.1, "Five towers": 1.8, "Corner prasats & libraries": 1 },
+    "components": [
+      {
+        "id": "moat",
+        "stage": "Moat & causeway",
+        "parts": [
+          { "shape": "box", "material": "water", "position": [0, 0, 0], "scale": [48, 0.25, 48], "entrance": "fade" },
+          { "shape": "box", "material": "ground", "position": [0, 0.25, 0], "scale": [30, 0.5, 30], "entrance": "place" },
+          { "shape": "box", "material": "accent", "position": [0, 0.3, 17], "scale": [4, 0.6, 14], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "accent", "position": [-2.2, 0.75, 17], "scale": [0.3, 0.5, 14], "entrance": "stack", "order": 1 },
+          { "shape": "box", "material": "accent", "position": [2.2, 0.75, 17], "scale": [0.3, 0.5, 14], "entrance": "stack", "order": 1 }
+        ]
+      },
+      {
+        "id": "galleries",
+        "stage": "Galleries",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [0, 0.75, -11], "scale": [24, 2.6, 1.4], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "primary", "position": [0, 0.75, 11], "scale": [24, 2.6, 1.4], "entrance": "stack", "order": 1 },
+          { "shape": "box", "material": "primary", "position": [-11, 0.75, 0], "scale": [1.4, 2.6, 24], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "primary", "position": [11, 0.75, 0], "scale": [1.4, 2.6, 24], "entrance": "stack", "order": 3 },
+          { "shape": "prism", "material": "accent", "position": [0, 3.35, -11], "scale": [24.6, 1.2, 2.2], "entrance": "stack", "order": 4 },
+          { "shape": "prism", "material": "accent", "position": [0, 3.35, 11], "scale": [24.6, 1.2, 2.2], "entrance": "stack", "order": 5 },
+          { "shape": "prism", "material": "accent", "position": [-11, 3.35, 0], "scale": [2.2, 1.2, 24.6], "rotation": [0, 1.5708, 0], "entrance": "stack", "order": 6 },
+          { "shape": "prism", "material": "accent", "position": [11, 3.35, 0], "scale": [2.2, 1.2, 24.6], "rotation": [0, 1.5708, 0], "entrance": "stack", "order": 6 },
+          { "shape": "box", "material": "primary", "position": [0, 0.75, 0], "scale": [14, 3.4, 14], "entrance": "stack", "order": 7 },
+          { "shape": "box", "material": "shadow", "position": [0, 1.4, 11.75], "scale": [3, 1.8, 0.4], "entrance": "none" }
+        ]
+      },
+      {
+        "id": "tower-center",
+        "stage": "Five towers",
+        "generator": "tieredTower",
+        "params": { "center": [0, 0], "base": 5, "tiers": 4, "tierHeight": 2.2, "y": 4.15 },
+        "material": "primary"
+      },
+      {
+        "id": "tower-nw",
+        "stage": "Five towers",
+        "generator": "tieredTower",
+        "params": { "center": [-7, -7], "base": 3.4, "tiers": 3, "tierHeight": 1.7, "y": 3.35 },
+        "material": "primary"
+      },
+      {
+        "id": "tower-ne",
+        "stage": "Five towers",
+        "generator": "tieredTower",
+        "params": { "center": [7, -7], "base": 3.4, "tiers": 3, "tierHeight": 1.7, "y": 3.35 },
+        "material": "primary"
+      },
+      {
+        "id": "tower-sw",
+        "stage": "Five towers",
+        "generator": "tieredTower",
+        "params": { "center": [-7, 7], "base": 3.4, "tiers": 3, "tierHeight": 1.7, "y": 3.35 },
+        "material": "primary"
+      },
+      {
+        "id": "tower-se",
+        "stage": "Five towers",
+        "generator": "tieredTower",
+        "params": { "center": [7, 7], "base": 3.4, "tiers": 3, "tierHeight": 1.7, "y": 3.35 },
+        "material": "primary"
+      },
+      {
+        "id": "prasats-libraries",
+        "stage": "Corner prasats & libraries",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [-6, 0.75, 16], "scale": [3, 2, 4], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "accent", "position": [6, 0.75, 16], "scale": [3, 2, 4], "entrance": "stack", "order": 1 },
+          { "shape": "cone", "material": "accent", "position": [-6, 2.75, 16], "scale": [3.2, 1.8, 3.2], "entrance": "stack", "order": 2 },
+          { "shape": "cone", "material": "accent", "position": [6, 2.75, 16], "scale": [3.2, 1.8, 3.2], "entrance": "stack", "order": 2 }
+        ]
+      },
+      {
+        "id": "corner-tower-nw", "stage": "Corner prasats & libraries",
+        "generator": "tieredTower",
+        "params": { "center": [-13, -13], "base": 1.8, "tiers": 2, "tierHeight": 1.3, "y": 0 },
+        "material": "accent"
+      },
+      {
+        "id": "corner-tower-ne", "stage": "Corner prasats & libraries",
+        "generator": "tieredTower",
+        "params": { "center": [13, -13], "base": 1.8, "tiers": 2, "tierHeight": 1.3, "y": 0 },
+        "material": "accent"
+      },
+      {
+        "id": "corner-tower-sw", "stage": "Corner prasats & libraries",
+        "generator": "tieredTower",
+        "params": { "center": [-13, 13], "base": 1.8, "tiers": 2, "tierHeight": 1.3, "y": 0 },
+        "material": "accent"
+      },
+      {
+        "id": "corner-tower-se", "stage": "Corner prasats & libraries",
+        "generator": "tieredTower",
+        "params": { "center": [13, 13], "base": 1.8, "tiers": 2, "tierHeight": 1.3, "y": 0 },
+        "material": "accent"
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 10, "path": "perimeter", "carry": true },
+    "scaffolding": { "style": "wood-frame", "aroundStages": ["Five towers"] },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 4 }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "url": "http://127.0.0.1:5517/#/debug/wonder/pyramids-of-giza/0.62",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/canvas-inspection/giza-062/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 206,
+    "colorBuckets": 86,
+    "metrics": {
+      "colorBuckets": 114,
+      "colorEntropyBits": 3.84,
+      "edgeDensity": 0.205,
+      "luminance": {
+        "mean": 166.4,
+        "p5": 111.6,
+        "p95": 184.1,
+        "contrast": 72.5
+      },
+      "dominantColorShare": 0.305,
+      "nonBackgroundShare": 0.695
+    },
+    "renderBudget": null,
+    "diagnostics": {
+      "calls": 78,
+      "triangles": 154090,
+      "points": 0,
+      "lines": 10,
+      "geometries": 28,
+      "textures": 3
+    }
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "pageErrors": []
+}

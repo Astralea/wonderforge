@@ -1,0 +1,105 @@
+{
+  "wonder": "eiffel-tower",
+  "style": { "notes": "puddled-iron lattice over the Champ de Mars; wooden falsework during the build; sparkles at night" },
+  "camera": { "startAzimuth": 0.785 },
+  "lighting": { "endsAtNight": true },
+  "background": {
+    "terrain": "city",
+    "layers": [
+      { "kind": "city", "distance": 3.2, "height": 0.45, "tint": "#87a9c9" },
+      { "kind": "city", "distance": 2.4, "height": 0.3, "tint": "#a8b4a0" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "Four masonry feet": 0.7, "Curved legs & arches": 1.3, "First platform & upper legs": 1.1, "Second platform & shaft": 1.1, "Campanile & beacon": 1.6 },
+    "components": [
+      {
+        "id": "feet",
+        "stage": "Four masonry feet",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [7.4, 0, 7.4], "scale": [3.4, 2.2, 3.4] },
+          { "shape": "box", "material": "accent", "position": [7.4, 0, -7.4], "scale": [3.4, 2.2, 3.4] },
+          { "shape": "box", "material": "accent", "position": [-7.4, 0, 7.4], "scale": [3.4, 2.2, 3.4] },
+          { "shape": "box", "material": "accent", "position": [-7.4, 0, -7.4], "scale": [3.4, 2.2, 3.4] }
+        ]
+      },
+      {
+        "id": "lower-legs",
+        "stage": "Curved legs & arches",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [6.4, 1.9, 6.4], "scale": [2.3, 9.6, 2.3], "rotation": [0.21, 0, -0.21], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "primary", "position": [6.4, 1.9, -6.4], "scale": [2.3, 9.6, 2.3], "rotation": [-0.21, 0, -0.21], "entrance": "stack", "order": 1 },
+          { "shape": "box", "material": "primary", "position": [-6.4, 1.9, 6.4], "scale": [2.3, 9.6, 2.3], "rotation": [0.21, 0, 0.21], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "primary", "position": [-6.4, 1.9, -6.4], "scale": [2.3, 9.6, 2.3], "rotation": [-0.21, 0, 0.21], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "girder-band-low",
+        "stage": "Curved legs & arches",
+        "generator": "ring",
+        "params": { "radius": 5.9, "count": 4, "partScale": [11.8, 0.55, 0.55], "yawOffset": 1.5708, "y": 4.6 },
+        "material": "accent"
+      },
+      {
+        "id": "arches",
+        "stage": "Curved legs & arches",
+        "parts": [
+          { "shape": "torus", "material": "accent", "position": [0, 0.4, 6.6], "scale": [4.6, 4.6, 0.55], "rotation": [0, 0, 0], "entrance": "stack", "order": 4 },
+          { "shape": "torus", "material": "accent", "position": [6.6, 0.4, 0], "scale": [4.6, 4.6, 0.55], "rotation": [0, 1.5708, 0], "entrance": "stack", "order": 5 },
+          { "shape": "torus", "material": "accent", "position": [0, 0.4, -6.6], "scale": [4.6, 4.6, 0.55], "rotation": [0, 3.1416, 0], "entrance": "stack", "order": 6 },
+          { "shape": "torus", "material": "accent", "position": [-6.6, 0.4, 0], "scale": [4.6, 4.6, 0.55], "rotation": [0, -1.5708, 0], "entrance": "stack", "order": 7 }
+        ]
+      },
+      {
+        "id": "first-platform",
+        "stage": "First platform & upper legs",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [0, 10.9, 0], "scale": [15.8, 1.2, 15.8], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "primary", "position": [0, 12.1, 0], "scale": [16.3, 0.5, 16.3], "entrance": "stack", "order": 1 }
+        ]
+      },
+      {
+        "id": "upper-legs",
+        "stage": "First platform & upper legs",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [3.3, 11.2, 3.3], "scale": [1.7, 9, 1.7], "rotation": [0.13, 0, -0.13], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "primary", "position": [3.3, 11.2, -3.3], "scale": [1.7, 9, 1.7], "rotation": [-0.13, 0, -0.13], "entrance": "stack", "order": 3 },
+          { "shape": "box", "material": "primary", "position": [-3.3, 11.2, 3.3], "scale": [1.7, 9, 1.7], "rotation": [0.13, 0, 0.13], "entrance": "stack", "order": 4 },
+          { "shape": "box", "material": "primary", "position": [-3.3, 11.2, -3.3], "scale": [1.7, 9, 1.7], "rotation": [-0.13, 0, 0.13], "entrance": "stack", "order": 5 }
+        ]
+      },
+      {
+        "id": "girder-band-high",
+        "stage": "First platform & upper legs",
+        "generator": "ring",
+        "params": { "radius": 3.1, "count": 4, "partScale": [6.2, 0.5, 0.5], "yawOffset": 1.5708, "y": 16.4 },
+        "material": "accent"
+      },
+      {
+        "id": "second-platform",
+        "stage": "Second platform & shaft",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [0, 20, 0], "scale": [8.2, 1.1, 8.2], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "primary", "position": [0, 21.1, 0], "scale": [8.6, 0.45, 8.6], "entrance": "stack", "order": 1 },
+          { "shape": "box", "material": "primary", "position": [0, 21.1, 0], "scale": [3.8, 6.4, 3.8], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "primary", "position": [0, 27.5, 0], "scale": [2.4, 5.4, 2.4], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "campanile",
+        "stage": "Campanile & beacon",
+        "parts": [
+          { "shape": "box", "material": "accent", "position": [0, 32.9, 0], "scale": [2.9, 1, 2.9], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "primary", "position": [0, 33.9, 0], "scale": [1.3, 3.6, 1.3], "entrance": "stack", "order": 1 },
+          { "shape": "cylinder", "material": "light", "position": [0, 37.5, 0], "scale": [0.35, 2.6, 0.35], "entrance": "fade" }
+        ]
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 8, "path": "perimeter", "carry": true },
+    "scaffolding": { "style": "wood-frame", "aroundStages": ["Curved legs & arches", "Second platform & shaft"] },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 3 }
+  }
+}

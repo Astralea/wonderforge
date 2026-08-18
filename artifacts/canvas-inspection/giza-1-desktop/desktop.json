@@ -1,0 +1,86 @@
+{
+  "url": "http://127.0.0.1:5517/#/debug/wonder/pyramids-of-giza/1",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/canvas-inspection/giza-1-desktop/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 210,
+    "colorBuckets": 82,
+    "metrics": {
+      "colorBuckets": 104,
+      "colorEntropyBits": 4.16,
+      "edgeDensity": 0.143,
+      "luminance": {
+        "mean": 123.8,
+        "p5": 95.9,
+        "p95": 151.2,
+        "contrast": 55.3
+      },
+      "dominantColorShare": 0.206,
+      "nonBackgroundShare": 0.794
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 61,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 170602,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 27,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 3,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 61,
+        "triangles": 170602,
+        "points": 0,
+        "lines": 0,
+        "geometries": 27,
+        "textures": 3
+      },
+      "scene": "giza-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

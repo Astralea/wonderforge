@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Alegreya Sans', 'Segoe UI', sans-serif;
+  --color-parchment: #f3ede2;
+  --color-gold: #d4a24e;
+  --color-umber-950: #14100c;
+  --color-umber-900: #1e1812;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(175deg, #14100c 0%, #1e1812 60%, #241b10 100%);
+  color: var(--color-parchment);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes quote-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

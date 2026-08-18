@@ -1,0 +1,104 @@
+{
+  "wonder": "forbidden-city",
+  "style": { "notes": "vermilion colonnades and golden double-eave roofs on a three-tier marble terrace; Beijing rooftops beyond" },
+  "camera": { "startAzimuth": 0 },
+  "lighting": { "endsAtNight": false },
+  "background": {
+    "terrain": "city",
+    "layers": [
+      { "kind": "city", "distance": 3.4, "height": 0.45, "tint": "#8a6a4e" },
+      { "kind": "city", "distance": 2.5, "height": 0.3, "tint": "#b7a284" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "Marble terrace": 0.9, "Hall of Supreme Harmony": 1.7, "Side halls": 0.9, "Meridian gate & guardians": 1.1 },
+    "components": [
+      {
+        "id": "terrace",
+        "stage": "Marble terrace",
+        "parts": [
+          { "shape": "box", "material": "ground", "position": [0, 0, 0], "scale": [28, 1, 20], "entrance": "stack", "order": 0 },
+          { "shape": "box", "material": "ground", "position": [0, 1, 0], "scale": [24, 1, 16.5], "entrance": "stack", "order": 1 },
+          { "shape": "box", "material": "ground", "position": [0, 2, 0], "scale": [20, 1, 13], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "accent", "position": [0, 2, 7.2], "scale": [4, 0.4, 1.4], "rotation": [-0.35, 0, 0], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "hall-columns",
+        "stage": "Hall of Supreme Harmony",
+        "generator": "row",
+        "params": { "count": 8, "from": [-6.9, 4.1], "to": [6.9, 4.1], "size": [0.5, 3.6, 0.5], "y": 3, "shape": "cylinder" },
+        "material": "primary",
+        "entrance": "stack"
+      },
+      {
+        "id": "hall-columns-back",
+        "stage": "Hall of Supreme Harmony",
+        "generator": "row",
+        "params": { "count": 8, "from": [-6.9, -4.1], "to": [6.9, -4.1], "size": [0.5, 3.6, 0.5], "y": 3, "shape": "cylinder" },
+        "material": "primary",
+        "entrance": "stack"
+      },
+      {
+        "id": "hall-body",
+        "stage": "Hall of Supreme Harmony",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [0, 3, 0], "scale": [15, 3.6, 9], "entrance": "stack", "order": 8 },
+          { "shape": "pyramid", "material": "accent", "position": [0, 6.6, 0], "scale": [19.2, 1.7, 11.5], "entrance": "stack", "order": 9 },
+          { "shape": "pyramid", "material": "accent", "position": [0, 8.1, 0], "scale": [14.4, 1.5, 8.6], "entrance": "stack", "order": 10 },
+          { "shape": "box", "material": "accent", "position": [0, 9.6, 0], "scale": [12, 0.45, 1], "entrance": "stack", "order": 11 },
+          { "shape": "box", "material": "accent", "position": [-6, 9.9, 0], "scale": [0.8, 0.8, 0.8], "entrance": "place" },
+          { "shape": "box", "material": "accent", "position": [6, 9.9, 0], "scale": [0.8, 0.8, 0.8], "entrance": "place" }
+        ]
+      },
+      {
+        "id": "side-hall-w",
+        "stage": "Side halls",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [-17, 0, 1], "scale": [7, 3, 6], "entrance": "stack", "order": 0 },
+          { "shape": "pyramid", "material": "accent", "position": [-17, 3, 1], "scale": [8.4, 1.4, 7.2], "entrance": "stack", "order": 1 }
+        ]
+      },
+      {
+        "id": "side-hall-e",
+        "stage": "Side halls",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [17, 0, 1], "scale": [7, 3, 6], "entrance": "stack", "order": 2 },
+          { "shape": "pyramid", "material": "accent", "position": [17, 3, 1], "scale": [8.4, 1.4, 7.2], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "gate",
+        "stage": "Meridian gate & guardians",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [0, 0, 14], "scale": [10, 4.5, 2.4], "entrance": "stack", "order": 0 },
+          { "shape": "pyramid", "material": "accent", "position": [0, 4.5, 14], "scale": [11.5, 1.8, 3.4], "entrance": "stack", "order": 1 },
+          { "shape": "sphere", "material": "accent", "position": [-2.6, 0.6, 10.5], "scale": [1.1, 1.1, 1.1], "entrance": "place" },
+          { "shape": "sphere", "material": "accent", "position": [2.6, 0.6, 10.5], "scale": [1.1, 1.1, 1.1], "entrance": "place" },
+          { "shape": "box", "material": "primary", "position": [-14, 0, 12], "scale": [12, 3, 1.6], "entrance": "stack", "order": 2 },
+          { "shape": "box", "material": "primary", "position": [14, 0, 12], "scale": [12, 3, 1.6], "entrance": "stack", "order": 3 }
+        ]
+      },
+      {
+        "id": "watchtower-w",
+        "stage": "Meridian gate & guardians",
+        "generator": "tieredTower",
+        "params": { "center": [-19, 10], "base": 2.6, "tiers": 2, "tierHeight": 1.5, "y": 3 },
+        "material": "accent"
+      },
+      {
+        "id": "watchtower-e",
+        "stage": "Meridian gate & guardians",
+        "generator": "tieredTower",
+        "params": { "center": [19, 10], "base": 2.6, "tiers": 2, "tierHeight": 1.5, "y": 3 },
+        "material": "accent"
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 10, "path": "perimeter", "carry": true },
+    "scaffolding": { "style": "wood-frame", "aroundStages": ["Hall of Supreme Harmony"] },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 2 }
+  }
+}

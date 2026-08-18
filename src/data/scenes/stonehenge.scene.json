@@ -1,0 +1,58 @@
+{
+  "wonder": "stonehenge",
+  "style": { "notes": "hand-placed sarsens on open grass; the movie builds the COMPLETE monument, not the ruin" },
+  "camera": { "startAzimuth": 0 },
+  "lighting": { "endsAtNight": false },
+  "background": {
+    "terrain": "plain",
+    "layers": [
+      { "kind": "hills", "distance": 3.4, "height": 0.35, "tint": "#5d7a4a" },
+      { "kind": "hills", "distance": 2.5, "height": 0.22, "tint": "#6f8a55" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "Sarsen circle": 0.8, "Lintel ring": 1.5, "Trilithon horseshoe": 1.8, "Bluestones & heel stone": 0.9 },
+    "components": [
+      {
+        "id": "sarsen-circle",
+        "stage": "Sarsen circle",
+        "generator": "ring",
+        "params": { "radius": 9, "count": 30, "partScale": [1.25, 3.8, 0.85], "jitter": 0.1, "yawOffset": 1.5708 },
+        "material": "primary"
+      },
+      {
+        "id": "lintel-ring",
+        "stage": "Lintel ring",
+        "generator": "ring",
+        "params": { "radius": 9, "count": 30, "partScale": [2.1, 0.7, 0.95], "y": 3.8, "jitter": 0.06, "yawOffset": 1.5708, "arc": [0.105, 6.388] },
+        "material": "accent"
+      },
+      {
+        "id": "trilithons",
+        "stage": "Trilithon horseshoe",
+        "generator": "trilithonArc",
+        "params": { "radius": 4.4, "count": 5, "height": 5.4, "thickness": 1.15, "gap": 2.3, "arc": [-1.005, 2.262] },
+        "material": "primary"
+      },
+      {
+        "id": "bluestones",
+        "stage": "Bluestones & heel stone",
+        "generator": "ring",
+        "params": { "radius": 6.6, "count": 14, "partScale": [0.85, 2.1, 0.65], "jitter": 0.25 },
+        "material": "accent"
+      },
+      {
+        "id": "heel-stone",
+        "stage": "Bluestones & heel stone",
+        "parts": [
+          { "shape": "box", "material": "primary", "position": [15, 0, 14.5], "scale": [1.3, 4.2, 1], "rotation": [0, 0.85, 0.06], "jitter": 0.2, "entrance": "place" }
+        ]
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 8, "path": "perimeter", "carry": true },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 4 }
+  }
+}

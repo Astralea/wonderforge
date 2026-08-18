@@ -1,0 +1,86 @@
+{
+  "wonder": "colosseum",
+  "style": { "notes": "travertine arcades over a stepped cavea; Roman skyline behind; ends lit at night" },
+  "camera": { "startAzimuth": 0 },
+  "lighting": { "endsAtNight": true },
+  "background": {
+    "terrain": "city",
+    "layers": [
+      { "kind": "city", "distance": 3.4, "height": 0.5, "tint": "#a8895c" },
+      { "kind": "hills", "distance": 2.6, "height": 0.3, "tint": "#7d8a5c" }
+    ]
+  },
+  "mainObject": {
+    "stageWeights": { "Arena & cavea": 1.2, "First arcade": 0.8, "Second arcade": 0.8, "Third arcade": 0.8, "Attic & velarium": 1.6 },
+    "components": [
+      {
+        "id": "arena-floor",
+        "stage": "Arena & cavea",
+        "parts": [
+          { "shape": "cylinder", "material": "ground", "position": [0, 0, 0], "scale": [22.5, 1, 18], "entrance": "fade" },
+          { "shape": "box", "material": "accent", "position": [0, 1, 0], "scale": [16.5, 0.5, 1] },
+          { "shape": "box", "material": "accent", "position": [0, 1, -4.2], "scale": [13.5, 0.5, 0.8] },
+          { "shape": "box", "material": "accent", "position": [0, 1, 4.2], "scale": [13.5, 0.5, 0.8] }
+        ]
+      },
+      {
+        "id": "cavea-tier-0", "stage": "Arena & cavea",
+        "parts": [{ "shape": "cylinder", "material": "accent", "position": [0, 1, 0], "scale": [21.3, 0.85, 17], "entrance": "stack", "order": 1 }]
+      },
+      {
+        "id": "cavea-tier-1", "stage": "Arena & cavea",
+        "parts": [{ "shape": "cylinder", "material": "primary", "position": [0, 1.85, 0], "scale": [19.2, 0.85, 15.2], "entrance": "stack", "order": 2 }]
+      },
+      {
+        "id": "cavea-tier-2", "stage": "Arena & cavea",
+        "parts": [{ "shape": "cylinder", "material": "accent", "position": [0, 2.7, 0], "scale": [17.1, 0.85, 13.4], "entrance": "stack", "order": 3 }]
+      },
+      {
+        "id": "cavea-tier-3", "stage": "Arena & cavea",
+        "parts": [{ "shape": "cylinder", "material": "primary", "position": [0, 3.55, 0], "scale": [15, 0.85, 11.6], "entrance": "stack", "order": 4 }]
+      },
+      {
+        "id": "arcade-1",
+        "stage": "First arcade",
+        "generator": "arcade",
+        "params": { "a": 15, "b": 12, "count": 20, "height": 2.8, "pier": [1.5, 1.7], "y": 0 },
+        "material": "primary"
+      },
+      {
+        "id": "arcade-2",
+        "stage": "Second arcade",
+        "generator": "arcade",
+        "params": { "a": 15, "b": 12, "count": 20, "height": 2.8, "pier": [1.5, 1.7], "y": 2.8 },
+        "material": "primary"
+      },
+      {
+        "id": "arcade-3",
+        "stage": "Third arcade",
+        "generator": "arcade",
+        "params": { "a": 15, "b": 12, "count": 20, "height": 2.8, "pier": [1.5, 1.7], "y": 5.6 },
+        "material": "primary"
+      },
+      {
+        "id": "attic",
+        "stage": "Attic & velarium",
+        "generator": "ring",
+        "params": { "radius": 1, "count": 14, "partScale": [1.6, 2.6, 1.8], "arc": [-1.73, 2.67], "ellipse": [15, 12], "y": 8.4 },
+        "material": "primary"
+      },
+      {
+        "id": "velarium-poles",
+        "stage": "Attic & velarium",
+        "generator": "ring",
+        "params": { "radius": 1, "count": 12, "partScale": [0.28, 2.6, 0.28], "arc": [-1.73, 2.67], "ellipse": [16.2, 13.2], "y": 11 },
+        "material": "accent",
+        "entrance": "place"
+      }
+    ]
+  },
+  "foreground": {
+    "workers": { "count": 10, "path": "perimeter", "carry": true },
+    "scaffolding": { "style": "wood-frame", "aroundStages": ["Third arcade", "Attic & velarium"] },
+    "dust": true,
+    "fauna": { "kind": "birds", "count": 2 }
+  }
+}
