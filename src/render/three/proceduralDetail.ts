@@ -93,18 +93,38 @@ function rippleSnippet(recipe: MaterialDetailRecipe): string {
   const ripple = recipe.ripple;
   if (!ripple) return '';
   return `
-  vec2 wfRp = vec2(wfP.x * ${f(ripple.scale)} + uWfTime * ${f(ripple.speed)},
-                   wfP.z * ${f(ripple.scale * 0.55)} - uWfTime * ${f(ripple.speed * 0.3)});
-  float wfRip = wfFbm(wfRp) - 0.5;
+  wfRp = vec2(wfP.x * ${f(ripple.scale)} + uWfTime * ${f(ripple.speed)},
+              wfP.z * ${f(ripple.scale * 0.55)} - uWfTime * ${f(ripple.speed * 0.3)});
+  wfRip = wfFbm(wfRp) - 0.5;
   wfDetail += wfRip * ${f(ripple.amplitude * 2)};
   wfRough += wfRip * ${f(ripple.roughness)};
 `;
+}
+
+function normalRippleSnippet(recipe: MaterialDetailRecipe): string {
+  const ripple = recipe.ripple;
+  const normalRipple = recipe.normalRipple;
+  if (!ripple || !normalRipple) return '#include <normal_fragment_maps>';
+  const step = 0.08;
+  return `#include <normal_fragment_maps>
+// The visible water surfaces are flat, upward-facing world-XZ ribbons. Their
+// ripple-field gradient is therefore a cheap tangent-space slope; transform
+// that world-space slope to view space before perturbing three.js's normal.
+const float wfNormalStep = ${f(step)};
+float wfRippleBase = wfRip + 0.5;
+vec2 wfRippleGradient = vec2(
+  (wfFbm(wfRp + vec2(wfNormalStep, 0.0)) - wfRippleBase) / wfNormalStep * ${f(ripple.scale)},
+  (wfFbm(wfRp + vec2(0.0, wfNormalStep)) - wfRippleBase) / wfNormalStep * ${f(ripple.scale * 0.55)}
+);
+vec3 wfRippleSlopeWorld = vec3(-wfRippleGradient.x, 0.0, -wfRippleGradient.y) * ${f(normalRipple.strength)};
+normal = normalize(normal + mat3(viewMatrix) * wfRippleSlopeWorld);`;
 }
 
 function detailBlock(recipe: MaterialDetailRecipe): string {
   return `#include <color_fragment>
 float wfDetail = 0.0;
 float wfRough = 0.0;
+${recipe.ripple ? 'vec2 wfRp;\nfloat wfRip;' : ''}
 {
   vec3 wfP = vWfDetailPos;${grainSnippet(recipe)}${bandingSnippet(recipe)}${mottleSnippet(recipe)}${rippleSnippet(recipe)}
 }
@@ -138,7 +158,8 @@ function injectRecipe(material: MeshStandardMaterial, recipe: MaterialDetailReci
       .replace(
         '#include <roughnessmap_fragment>',
         '#include <roughnessmap_fragment>\nroughnessFactor = clamp(roughnessFactor + wfRough, 0.05, 1.0);',
-      );
+      )
+      .replace('#include <normal_fragment_maps>', normalRippleSnippet(recipe));
   };
   material.customProgramCacheKey = () => cacheKey;
 }

@@ -47,7 +47,7 @@ export function createMaterialLibrary(wonder: Wonder): MaterialLibrary {
   const wood = standard('#5b3822', 0.96);
   const rope = standard('#8b6338', 1);
   const foliage = standard('#506633', 0.94);
-  const water = standard('#3f7f8c', 0.35);
+  const water = standard('#3f7f8c', 0.15, 0);
   water.transparent = true;
   water.opacity = 0.82;
   const farmland = standard('#6f7445', 0.99);

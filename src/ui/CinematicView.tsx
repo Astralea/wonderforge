@@ -4,6 +4,7 @@ import { WONDERS, getWonder } from '../data';
 import { WonderCanvas } from '../render/WonderCanvas';
 import { usePlaybackStore } from '../store/playback';
 import { useUiStore } from '../store/ui';
+import { prefersReducedMotion } from './a11y';
 import { FactsPanel } from './FactsPanel';
 import { QuoteOverlay } from './QuoteOverlay';
 import { TransportBar } from './TransportBar';
@@ -14,11 +15,16 @@ const CHROME_IDLE_MS = 2500;
 /** Spec 05 §Cinematic view. */
 export function CinematicView() {
   const wonderId = usePlaybackStore((s) => s.wonderId);
+  const status = usePlaybackStore((s) => s.status);
   const wonder = getWonder(wonderId);
   const openWonder = useUiStore((s) => s.openWonder);
   const closeWonder = useUiStore((s) => s.closeWonder);
   const [chromeVisible, setChromeVisible] = useState(true);
   const [factsOpen, setFactsOpen] = useState(false);
+  const letterboxIn = status === 'playing';
+  const letterboxMotion = prefersReducedMotion()
+    ? ''
+    : 'transition-transform duration-500 ease-[ease]';
 
   useSoundtrack('cinematic');
 
@@ -111,6 +117,19 @@ export function CinematicView() {
       {/* cinematic vignette */}
       <div
         className="pointer-events-none absolute inset-0 [background:radial-gradient(120%_90%_at_50%_40%,transparent_55%,rgba(0,0,0,0.45)_100%)]"
+        aria-hidden
+      />
+      {/* cinematic letterbox — above the canvas, below chrome */}
+      <div
+        className={`pointer-events-none absolute inset-x-0 top-0 h-[6vh] bg-black ${letterboxMotion} ${
+          letterboxIn ? 'translate-y-0' : '-translate-y-full'
+        }`}
+        aria-hidden
+      />
+      <div
+        className={`pointer-events-none absolute inset-x-0 bottom-0 h-[6vh] bg-black ${letterboxMotion} ${
+          letterboxIn ? 'translate-y-0' : 'translate-y-full'
+        }`}
         aria-hidden
       />
 

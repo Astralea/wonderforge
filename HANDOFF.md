@@ -98,6 +98,22 @@ The Giza scene now has:
   outside the frustum from t ≈ 0.86 to ≈ 0.95, which viewers read as the
   Great Pyramid disappearing near the end. Frustum contract tests project
   the real camera and pin all three apexes on screen through the reveal;
+- an atmosphere tier (AAA Tier 1, four agents in parallel with disjoint
+  file ownership): screen-space god rays — a radial HDR march toward the
+  analytic sun's screen position, thresholded so only the sun disc/halo
+  contribute and monument silhouettes carve real shafts; intensity =
+  lowSun × typed haze, so shafts live at dawn/dusk and vanish at noon.
+  A time-of-day temperature grade (sun tint, luminance-normalized) rides
+  the existing grade pass. Cinematic letterbox bars slide in during
+  playback (delegated: grok/cursor-agent; reduced-motion aware). The Nile
+  got a ripple-gradient normal perturbation + low-roughness dielectric
+  base for real sun glints (delegated: Codex; ALU-only, playback-t
+  deterministic, contract-tested). Dusk campfires in the worker camp
+  (delegated: devin/K3). GTAO was trialed and REMOVED on A/B evidence
+  (artifacts/aaa-t1/gtao-ab.png): on instanced masonry with intentional
+  micro-gaps its gain is subtle joint darkening while its depth/normal
+  prepass doubles geometry passes and risks stripe moiré at glancing
+  angles — authored geometry wins again;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one

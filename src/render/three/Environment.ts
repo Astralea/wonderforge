@@ -14,6 +14,7 @@ import {
   MeshBasicMaterial,
   MeshStandardMaterial,
   PlaneGeometry,
+  PointLight,
   Quaternion,
   SphereGeometry,
   Vector3,
@@ -225,6 +226,13 @@ export class GizaEnvironment {
     }>;
   }> = [];
   private palmFronds: InstancedMesh | null = null;
+  private campfires: {
+    flames: InstancedMesh;
+    flameMaterial: MeshStandardMaterial;
+    lights: PointLight[];
+    /** Per flame instance: the base transform the per-frame flicker scales. */
+    bases: Array<{ x: number; z: number; scale: number; yaw: number }>;
+  } | null = null;
 
   /** Ground the construction occupies; props must stay off it (Spec 08). */
   private readonly keepOuts: KeepOut[];
@@ -248,6 +256,7 @@ export class GizaEnvironment {
     this.addRoads(materials);
     this.addHorizon(materials);
     this.addSettlement(materials);
+    this.addCampfires(materials);
     this.addSiteScatter(materials);
     this.addOuterNecropolis(materials);
     this.addSphinxAndTemples(materials);
@@ -1046,6 +1055,159 @@ export class GizaEnvironment {
     this.group.add(tents, supplies, shadeCloths, shadePoles);
   }
 
+  /**
+   * Dusk campfires for the worker settlement: stone-ringed pits with charred
+   * logs and an emissive flame, dark through the workday and lit as the light
+   * fails. Three instanced batches (stones, logs, flames) plus two point
+   * lights shared between pit clusters — one light per fire would recompile
+   * every lit material and tax every fragment.
+   */
+  private addCampfires(materials: MaterialLibrary): void {
+    const stoneGeometry = new DodecahedronGeometry(0.5, 0);
+    const logGeometry = new CylinderGeometry(0.055, 0.07, 0.9, 5);
+    const flameGeometry = new ConeGeometry(0.24, 0.62, 6);
+    this.geometries.push(stoneGeometry, logGeometry, flameGeometry);
+
+    // Pits tuck between the tent rows (x∈[-36,44], z∈[39,55]); the site
+    // clearance nudge keeps them off haul corridors and footprints (Spec 08).
+    const random = mulberry32('giza:campfires:v1');
+    const matrix = new Matrix4();
+    const pits: Array<{ x: number; z: number }> = [];
+    for (let i = 0; i < 5; i += 1) {
+      const [x, z] = this.clear(
+        -32 + i * 16 + (random() - 0.5) * 4,
+        42.5 + (i % 2) * 7 + (random() - 0.5) * 3,
+        1.4,
+        3.2,
+      );
+      pits.push({ x, z });
+    }
+
+    const stonesPerPit = 8;
+    const stones = new InstancedMesh(stoneGeometry, materials.quarryCut, pits.length * stonesPerPit);
+    const logs = new InstancedMesh(logGeometry, materials.wood, pits.length * 2);
+    const char = new Color('#241408');
+    let stoneCursor = 0;
+    let logCursor = 0;
+    for (const pit of pits) {
+      for (let s = 0; s < stonesPerPit; s += 1) {
+        const angle = (s / stonesPerPit) * Math.PI * 2 + random() * 0.3;
+        const radius = 0.48 + random() * 0.09;
+        const size = 0.19 + random() * 0.1;
+        matrix.compose(
+          new Vector3(pit.x + Math.cos(angle) * radius, size * 0.3, pit.z + Math.sin(angle) * radius),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), random() * Math.PI),
+          new Vector3(size * 1.3, size * 0.7, size),
+        );
+        stones.setMatrixAt(stoneCursor, matrix);
+        stoneCursor += 1;
+      }
+      for (let l = 0; l < 2; l += 1) {
+        matrix.compose(
+          new Vector3(pit.x + (random() - 0.5) * 0.16, 0.07, pit.z + (random() - 0.5) * 0.16),
+          new Quaternion().setFromEuler(new Euler(Math.PI / 2 - 0.12, random() * Math.PI, 0, 'YXZ')),
+          new Vector3(1, 1, 1),
+        );
+        logs.setMatrixAt(logCursor, matrix);
+        logs.setColorAt(logCursor, char);
+        logCursor += 1;
+      }
+    }
+    stones.castShadow = true;
+    stones.receiveShadow = true;
+    logs.castShadow = true;
+    stones.name = 'campfire-ring-stones';
+    logs.name = 'campfire-charred-logs';
+
+    // The flame material is local to this class (the MaterialLibrary owns
+    // only shared materials), so dispose() below owns it too.
+    const flameMaterial = new MeshStandardMaterial({
+      color: '#3a1d08',
+      emissive: '#ff7a2a',
+      emissiveIntensity: 0,
+      roughness: 1,
+    });
+    const flamesPerPit = 2; // an outer tongue and a smaller, brighter core
+    const flames = new InstancedMesh(flameGeometry, flameMaterial, pits.length * flamesPerPit);
+    const bases: Array<{ x: number; z: number; scale: number; yaw: number }> = [];
+    for (const pit of pits) {
+      for (let layer = 0; layer < flamesPerPit; layer += 1) {
+        bases.push({
+          x: pit.x + (layer === 0 ? 0 : (random() - 0.5) * 0.08),
+          z: pit.z + (layer === 0 ? 0 : (random() - 0.5) * 0.08),
+          scale: layer === 0 ? 1 : 0.55,
+          yaw: random() * Math.PI,
+        });
+      }
+    }
+    // Flame matrices are rewritten every frame for the flicker; opt out of
+    // the stale-bounds cull (first-render bounds would be near-zero scale).
+    flames.frustumCulled = false;
+    flames.name = 'campfire-flames';
+
+    const sorted = [...pits].sort((a, b) => a.x - b.x);
+    const half = Math.ceil(sorted.length / 2);
+    const lights = [sorted.slice(0, half), sorted.slice(half)].map((cluster, index) => {
+      const cx = cluster.reduce((sum, pit) => sum + pit.x, 0) / cluster.length;
+      const cz = cluster.reduce((sum, pit) => sum + pit.z, 0) / cluster.length;
+      const light = new PointLight('#ff8c3f', 0, 16, 2);
+      light.position.set(cx, 1.1, cz);
+      light.name = `campfire-light-${index}`;
+      return light;
+    });
+
+    // Unwritten instances keep the identity matrix and render at the world
+    // origin (inside Khufu), so park every flame at zero height until the
+    // first update writes the real flicker matrices.
+    for (let i = 0; i < bases.length; i += 1) {
+      matrix.compose(
+        new Vector3(bases[i]!.x, 0.08, bases[i]!.z),
+        new Quaternion(),
+        new Vector3(0.02, 0.02, 0.02),
+      );
+      flames.setMatrixAt(i, matrix);
+    }
+
+    this.group.add(stones, logs, flames, ...lights);
+    this.campfires = { flames, flameMaterial, lights, bases };
+  }
+
+  /** Dusk ramp plus deterministic flicker; a pure function of playback t. */
+  private updateCampfires(t: number, light: LightState, sky: SkyKeyframe): void {
+    const fires = this.campfires;
+    if (!fires) return;
+    // light.emissive is the engine's night ramp, but it only advances for
+    // endsAtNight wonders — Giza clamps its day at the t=0.9 dusk keyframe
+    // and holds emissive at 0, so the camp reads dusk off the sky axis.
+    const dusk = smoothstep((Math.max(light.emissive, sky.t) - 0.74) / 0.13);
+    // Bright enough to clear the bloom threshold: the glow halo is what
+    // carries a half-meter flame at reveal distance.
+    fires.flameMaterial.emissiveIntensity =
+      dusk * (6.5 + 1.4 * Math.sin(t * 811.3) + 0.8 * Math.sin(t * 1427.9));
+    const matrix = new Matrix4();
+    const quaternion = new Quaternion();
+    for (let i = 0; i < fires.bases.length; i += 1) {
+      const base = fires.bases[i]!;
+      // Incommensurate frequencies keep the flame from metronoming.
+      const flicker =
+        1 +
+        0.16 * Math.sin(t * 900 + i * 7.3) +
+        0.09 * Math.sin(t * 1537 + i * 3.1) +
+        0.05 * Math.sin(t * 2311 + i * 11.7);
+      const height = base.scale * Math.max(0.02, dusk) * flicker;
+      matrix.compose(
+        new Vector3(base.x, 0.08 + 0.31 * height, base.z),
+        quaternion.setFromAxisAngle(new Vector3(0, 1, 0), base.yaw),
+        new Vector3(base.scale * (0.4 + 0.6 * dusk), height, base.scale * (0.4 + 0.6 * dusk)),
+      );
+      fires.flames.setMatrixAt(i, matrix);
+    }
+    fires.flames.instanceMatrix.needsUpdate = true;
+    fires.lights.forEach((pointLight, index) => {
+      pointLight.intensity = dusk * (16 + 4 * Math.sin(t * 1031 + index * 9.4));
+    });
+  }
+
   private addSiteScatter(materials: MaterialLibrary): void {
     const rockGeometry = new DodecahedronGeometry(0.5, 0);
     const stakeGeometry = new CylinderGeometry(0.04, 0.06, 1.1, 5);
@@ -1435,6 +1597,7 @@ export class GizaEnvironment {
       layer.material.opacity = Math.min(baseOpacity, sky.cloudOpacity);
     }
     this.clouds.visible = light.emissive < 0.8;
+    this.updateCampfires(t, light, sky);
     const rampMeshes = this.rampMeshes!;
     const rampMatrix = new Matrix4();
     let rampStepCursor = 0;
@@ -1574,5 +1737,6 @@ export class GizaEnvironment {
     this.sky.dispose();
     for (const geometry of new Set(this.geometries)) geometry.dispose();
     for (const layer of this.cloudLayers) layer.material.dispose();
+    this.campfires?.flameMaterial.dispose();
   }
 }

@@ -50,6 +50,11 @@ export interface RippleRecipe {
   amplitude: number;
 }
 
+export interface NormalRippleRecipe {
+  /** Multiplier for the finite-difference ripple slope used to ruffle the surface normal. */
+  strength: number;
+}
+
 export type MaterialDetailRole =
   | 'core-limestone'
   | 'casing-limestone'
@@ -79,6 +84,8 @@ export interface MaterialDetailRecipe {
   /** Roughness swing coupled to the grain/mottle detail, 0 disables. */
   roughnessSwing?: number;
   ripple?: RippleRecipe;
+  /** Optional normal ruffle derived from the same ripple field; intended for horizontal water. */
+  normalRipple?: NormalRippleRecipe;
 }
 
 export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
@@ -150,10 +157,11 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
   {
     role: 'water',
     description:
-      'Slow peret-season Nile current: drifting ripple bands catch the low sun as a moving roughness shimmer.',
+      'Slow peret-season Nile current: the prevailing northerly breeze ruffles the river so drifting ripple bands catch the low sun.',
     space: 'world',
     plane: 'xz',
     ripple: { scale: 0.55, speed: 0.5, roughness: 0.3, amplitude: 0.035 },
+    normalRipple: { strength: 0.36 },
   },
   {
     role: 'whitewash',

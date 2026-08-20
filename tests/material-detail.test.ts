@@ -5,6 +5,7 @@ import {
   type MaterialDetailRole,
 } from '../src/data/materialDetail';
 import { createMaterialLibrary } from '../src/render/three/MaterialLibrary';
+import { updateMaterialDetailTime } from '../src/render/three/proceduralDetail';
 import type { Wonder } from '../src/data/types';
 
 const fixtureWonder: Wonder = {
@@ -40,6 +41,11 @@ describe('material detail recipes', () => {
         expect(recipe.grain.anisotropy).toBeGreaterThan(0);
         expect(recipe.grain.anisotropy).toBeLessThanOrEqual(1);
       }
+      if (recipe.normalRipple) {
+        expect(recipe.ripple).toBeDefined();
+        expect(recipe.normalRipple.strength).toBeGreaterThan(0);
+        expect(recipe.normalRipple.strength).toBeLessThanOrEqual(1);
+      }
     }
   });
 
@@ -50,6 +56,10 @@ describe('material detail recipes', () => {
     const water = materialDetailFor('water');
     expect(water.ripple?.roughness).toBeGreaterThan(0);
     expect(water.ripple?.speed).toBeGreaterThan(0);
+    expect(water.normalRipple?.strength).toBeGreaterThan(0);
+    for (const recipe of MATERIAL_DETAIL_RECIPES) {
+      expect(recipe.normalRipple !== undefined).toBe(recipe.role === 'water');
+    }
   });
 
   it('samples carried materials in object space and placed surfaces in world space', () => {
@@ -128,5 +138,47 @@ describe('material detail wiring', () => {
     expect(library.legacy.ground).toBe(library.sand);
     expect(library.legacy.water).toBe(library.water);
     expect(library.legacy.casing).toBe(library.block['casing-limestone']);
+  });
+
+  it('uses a dielectric low-roughness water base for sun glints', () => {
+    const { water } = createMaterialLibrary(fixtureWonder);
+    expect(water.roughness).toBeGreaterThanOrEqual(0.12);
+    expect(water.roughness).toBeLessThanOrEqual(0.18);
+    expect(water.metalness).toBe(0);
+  });
+
+  it('injects a deterministic ripple-gradient normal into every water variant', () => {
+    const library = createMaterialLibrary(fixtureWonder);
+    type TestShader = {
+      uniforms: Record<string, { value: unknown }>;
+      vertexShader: string;
+      fragmentShader: string;
+    };
+    const compile = library.water.onBeforeCompile as unknown as (shader: TestShader) => void;
+    const shaders: TestShader[] = Array.from({ length: 2 }, () => ({
+      uniforms: {},
+      vertexShader: '#include <project_vertex>',
+      fragmentShader: [
+        '#include <color_fragment>',
+        '#include <roughnessmap_fragment>',
+        '#include <normal_fragment_maps>',
+      ].join('\n'),
+    }));
+
+    for (const shader of shaders) compile(shader);
+
+    const variants = library.water.userData.wfDetailShaders as TestShader[];
+    expect(Array.isArray(variants)).toBe(true);
+    expect(variants).toEqual(shaders);
+    for (const shader of shaders) {
+      expect(shader.fragmentShader).toContain('wfFbm(wfRp + vec2(wfNormalStep, 0.0))');
+      expect(shader.fragmentShader).toContain('wfFbm(wfRp + vec2(0.0, wfNormalStep))');
+      expect(shader.fragmentShader).toContain('mat3(viewMatrix) * wfRippleSlopeWorld');
+      expect(shader.fragmentShader.indexOf('#include <normal_fragment_maps>'))
+        .toBeLessThan(shader.fragmentShader.indexOf('wfRippleGradient'));
+    }
+
+    updateMaterialDetailTime(library, 0.625);
+    for (const shader of shaders) expect(shader.uniforms['uWfTime']!.value).toBe(0.625);
   });
 });

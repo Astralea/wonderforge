@@ -114,6 +114,8 @@ export class WorldScene {
       // dawn and dusk gives the raking shadows the visual director asked
       // for, instead of the generic wonder-palette white.
       light.sun.color = sky.sunTint;
+      // God-ray density follows the typed dust haze: strongest at dawn/dusk.
+      this.pipeline.setAtmosphere(sky.haze);
     }
     const sunDirection = this.pipeline.updateLight(light);
     // Deterministic detail time (Nile ripple), phased from playback t.
