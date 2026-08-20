@@ -66,8 +66,17 @@ handles overlap; transparency is limited to dust, water, clouds, and sky.
   for carried materials (stone, timber, cloth, foliage) so it travels with the
   part, and in world space for placed surfaces (terrain, roads, ramps, city,
   water) so frequencies stay physically consistent. No texture fetches; the
-  only animated term is the Nile ripple, phased from playback `t` so scrubbing
-  stays deterministic.
+  only animated terms are the Nile ripple and cloth sway, both phased from
+  playback `t` so scrubbing stays deterministic.
+- Stone roles (core/casing limestone, granite, quarry cut) additionally turn
+  that same height field into normal-space relief using screen-space
+  derivatives (the `perturbNormalArb` math three.js uses for bump maps, but
+  computed from the procedural field — still no texture fetches). The relief
+  is faded by pixel footprint so distant masonry never shimmers; raking
+  dawn/dusk light is where the relief is meant to read.
+- Cloth (square sails, tent canvas, shade awnings) sways via a vertex
+  displacement injected into dedicated clones of the linen material, phased
+  from playback `t`; the shared linen of worker clothing stays still.
 
 ## Lighting and atmosphere
 
@@ -83,7 +92,15 @@ handles overlap; transparency is limited to dust, water, clouds, and sky.
   direction as the key light; it is not a flat CSS backdrop and does not
   counter-rotate with the camera.
 - Dust is shallow, contact-timed, pooled, and depth-aware. It never disguises a
-  physically impossible placement.
+  physically impossible placement. Wind-blown dust drifts in typed lanes that
+  are verified clear of masonry and earthworks, low and translucent so it
+  never conceals block transport.
+- A cinematic post stack runs over the linear HDR frame: thresholded radial
+  god rays plus a horizontal anamorphic-style streak, both keyed to the sun's
+  projected screen position and driven by sun elevation and the typed dust
+  haze so they belong to dawn and dusk; then selective bloom, ACES output,
+  and a display grade (sun-tint temperature, vignette, grain seeded from
+  playback `t`).
 
 ## Camera and responsiveness
 

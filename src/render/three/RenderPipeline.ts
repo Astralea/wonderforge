@@ -22,18 +22,21 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import type { LightState } from '../../engine/daynight';
 
 /**
- * Screen-space god rays (crepuscular shafts): a radial march toward the sun's
- * screen position over the linear HDR frame, accumulating only what clears an
- * HDR threshold — the analytical sun disc and halo qualify, the fogged ground
- * does not — so monument silhouettes carve real shafts. Runs before tone
- * mapping; intensity is driven per frame from sun elevation and haze, so the
- * shafts belong to dawn and dusk and vanish at noon.
+ * Screen-space god rays (crepuscular shafts) plus a horizontal anamorphic
+ * lens streak: a radial march toward the sun's screen position over the
+ * linear HDR frame, accumulating only what clears an HDR threshold — the
+ * analytical sun disc and halo qualify, the fogged ground does not — so
+ * monument silhouettes carve real shafts. The streak marches horizontally
+ * along each row near the sun line, so silhouettes interrupt it too. Runs
+ * before tone mapping; intensities are driven per frame from sun elevation
+ * and haze, so both belong to dawn and dusk and vanish at noon.
  */
 const GODRAYS_SHADER = {
   uniforms: {
     tDiffuse: { value: null },
     uSunUV: { value: new Vector2(0.5, 0.5) },
     uIntensity: { value: 0 },
+    uStreak: { value: 0 },
     uThreshold: { value: 0.85 },
   },
   vertexShader: /* glsl */ `
@@ -47,36 +50,84 @@ void main() {
 uniform sampler2D tDiffuse;
 uniform vec2 uSunUV;
 uniform float uIntensity;
+uniform float uStreak;
 uniform float uThreshold;
 varying vec2 vUv;
 
 const int TAPS = 40;
+const int STREAK_TAPS = 13;
+const float STREAK_STEP = 0.011;
 
 void main() {
   vec4 base = texture2D(tDiffuse, vUv);
-  if (uIntensity <= 0.001) {
+  if (uIntensity <= 0.001 && uStreak <= 0.001) {
     gl_FragColor = base;
     return;
   }
   vec2 toSun = uSunUV - vUv;
-  vec2 step = toSun / float(TAPS);
-  vec2 uv = vUv;
-  vec3 shaft = vec3(0.0);
-  float weight = 1.0;
-  for (int i = 0; i < TAPS; i++) {
-    uv += step;
-    vec3 sampleColor = texture2D(tDiffuse, uv).rgb;
-    float luma = dot(sampleColor, vec3(0.2126, 0.7152, 0.0722));
-    shaft += sampleColor * max(0.0, luma - uThreshold) * weight;
-    weight *= 0.955;
+  vec3 addition = vec3(0.0);
+  if (uIntensity > 0.001) {
+    vec2 step = toSun / float(TAPS);
+    vec2 uv = vUv;
+    vec3 shaft = vec3(0.0);
+    float weight = 1.0;
+    for (int i = 0; i < TAPS; i++) {
+      uv += step;
+      vec3 sampleColor = texture2D(tDiffuse, uv).rgb;
+      float luma = dot(sampleColor, vec3(0.2126, 0.7152, 0.0722));
+      shaft += sampleColor * max(0.0, luma - uThreshold) * weight;
+      weight *= 0.955;
+    }
+    // Normalize by tap count; soften near the screen edge opposite the sun so
+    // the march never reveals its finite length as banding.
+    float edgeFade = smoothstep(1.35, 0.55, length(toSun));
+    addition += shaft * (uIntensity * edgeFade / float(TAPS));
   }
-  // Normalize by tap count; soften near the screen edge opposite the sun so
-  // the march never reveals its finite length as banding.
-  float edgeFade = smoothstep(1.35, 0.55, length(toSun));
-  gl_FragColor = vec4(base.rgb + shaft * (uIntensity * edgeFade / float(TAPS)), base.a);
+  if (uStreak > 0.001) {
+    // Anamorphic-style horizontal streak: a thin vertical band around the
+    // sun's row, marching the thresholded frame sideways. Sampling the frame
+    // (not synthesizing a glow) keeps silhouettes occluding the streak.
+    float rowDy = vUv.y - uSunUV.y;
+    float band = exp(-rowDy * rowDy * 800.0);
+    if (band > 0.004) {
+      vec3 streak = vec3(0.0);
+      float wsum = 0.0;
+      for (int i = -STREAK_TAPS; i <= STREAK_TAPS; i++) {
+        float offset = float(i) * STREAK_STEP;
+        vec3 sampleColor = texture2D(tDiffuse, vec2(vUv.x + offset, vUv.y)).rgb;
+        float luma = dot(sampleColor, vec3(0.2126, 0.7152, 0.0722));
+        float w = 1.0 - abs(float(i)) / float(STREAK_TAPS + 1);
+        streak += sampleColor * max(0.0, luma - uThreshold) * w;
+        wsum += w;
+      }
+      addition += (streak / wsum) * (uStreak * band);
+    }
+  }
+  gl_FragColor = vec4(base.rgb + addition, base.a);
 }
 `,
 };
+
+/**
+ * Pure driver for the sun-screen effects (Spec 06 §Lighting): shaft and
+ * streak strengths from the sun's projected NDC position, its behind-camera
+ * flag, the low-sun factor, and the typed dust haze. Shafts are a haze
+ * phenomenon (they vanish in clear noon air); the streak is an optical one —
+ * it only needs the sun on screen, with a stronger showing at low sun.
+ */
+export function sunScreenEffects(
+  ndcX: number,
+  ndcY: number,
+  behind: boolean,
+  lowSun: number,
+  haze: number,
+): { shafts: number; streak: number } {
+  const onScreen = behind ? 0 : Math.max(0, Math.min(1, 1.6 - Math.hypot(ndcX, ndcY)));
+  return {
+    shafts: lowSun * haze * onScreen * 2.4,
+    streak: onScreen * (0.12 + 0.88 * lowSun) * 0.5,
+  };
+}
 
 /**
  * Final display-space grade (runs after tone mapping): a gentle photographic
@@ -285,11 +336,15 @@ export class RenderPipeline {
     const behind = projected.z > 1 || projected.z < -1;
     const sunUV = this.godrays.uniforms.uSunUV!.value as Vector2;
     sunUV.set(projected.x * 0.5 + 0.5, projected.y * 0.5 + 0.5);
-    const onScreen = behind
-      ? 0
-      : Math.max(0, Math.min(1, 1.6 - Math.hypot(projected.x, projected.y)));
-    this.godrays.uniforms.uIntensity!.value =
-      this.bloom.enabled ? this.shaftLowSun * this.haze * onScreen * 2.4 : 0;
+    const { shafts, streak } = sunScreenEffects(
+      projected.x,
+      projected.y,
+      behind,
+      this.shaftLowSun,
+      this.haze,
+    );
+    this.godrays.uniforms.uIntensity!.value = this.bloom.enabled ? shafts : 0;
+    this.godrays.uniforms.uStreak!.value = this.bloom.enabled ? streak : 0;
     // info auto-resets on every internal render() the composer issues, which
     // would leave diagnostics reporting only the final fullscreen quad.
     // Accumulate across the whole frame so the budget numbers stay honest

@@ -1,7 +1,7 @@
 # WonderForge Agent Handoff
 
-Last updated: 2026-08-18 (Asia/Tokyo), reveal-camera fix plus the realism
-pass (trajectories, sled physics, haul crews, dawn/dusk grading)
+Last updated: 2026-08-20 (Asia/Tokyo), AAA Tier 2 completion (stone relief,
+anamorphic streak, wind dust, egret flock, cloth sway)
 
 ## Start here
 
@@ -114,6 +114,24 @@ The Giza scene now has:
   micro-gaps its gain is subtle joint darkening while its depth/normal
   prepass doubles geometry passes and risks stripe moiré at glancing
   angles — authored geometry wins again;
+- an atmosphere Tier 2 (living ecology + raking-light relief): stone roles
+  turn their own procedural height field into derivative-based normal relief
+  (`normalBump` recipe, `proceduralDetail.normalBumpSnippet`) with a
+  pixel-footprint fade so distant masonry never shimmers; the god-ray pass
+  grew a horizontal anamorphic streak driven by the pure `sunScreenEffects`
+  (shafts are a haze phenomenon, the streak is optical — no haze needed);
+  wind-blown dust drifts in typed lanes (`WIND_DUST` + `windDustPuffAt`,
+  contract-verified clear of every footprint, bottoms provably off the
+  ground — the altitude floor had to clear the worst-case puff half-height);
+  a cattle-egret flock circles the Nile bend (`BIRD_FLOCK` + `birdStateAt`,
+  contract-verified over the channel and clear of masonry; two instanced
+  batches — bodies and shoulder-rooted flapping wings, the left mirrored by
+  rotation, never negative scale); cloth is alive on dedicated linen clones
+  (`applyClothSway` — sails belly between yard and boom, tents breathe,
+  awnings flutter; vertex displacement phased from playback `t`, per-instance
+  phase from the instance translation column; the shared linen on worker
+  clothing stays still). +3 draw calls (dust, bird bodies, bird wings);
+  captures under `artifacts/aaa-t2/`;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one
@@ -307,11 +325,11 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after the reveal-camera and realism passes:
+The required verification passed after the AAA Tier 2 completion:
 
 ```text
-20 test files
-223 tests
+23 test files
+250 tests
 npm run typecheck: passed
 npm run build: passed
 ```

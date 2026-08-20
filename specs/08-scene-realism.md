@@ -119,7 +119,16 @@ verification recipes.
   geometry remains fixed while the camera orbits; only explicitly living
   elements such as clouds, boats, and workers may animate.
 - Contact dust is localized and brief. Wind haze may move independently but
-  never conceals block transport.
+  never conceals block transport. Wind-blown dust rides the northerly breeze
+  in shallow typed lanes along the roads and quarry surround: low, sparse,
+  translucent puffs whose drift and end-fades are pure functions of `t`,
+  contract-verified clear of every monument and earthwork footprint.
+- A small egret flock works the Nile bend on closed circling paths — position,
+  heading, wing flap, and glide gates are pure functions of `t`; birds stay
+  over the river and floodplain and never cross masonry.
+- Cloth is alive: square sails belly between yard and boom, tent canvas
+  breathes at the apex, and shade awnings flutter — vertex displacement
+  phased from playback `t`, so scrubbing stays deterministic.
 
 ## Era and place grounding
 

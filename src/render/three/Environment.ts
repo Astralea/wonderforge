@@ -29,6 +29,8 @@ import {
   type KeepOut,
 } from '../../engine/siteClearance';
 import {
+  BIRD_FLOCK,
+  birdStateAt,
   channelTangentYawAt,
   fieldParcelAt,
   GIZA_ENVIRONMENT,
@@ -37,6 +39,8 @@ import {
   riverCenterZAt,
   riverCraftStateAt,
   riverWidthAt,
+  WIND_DUST,
+  windDustPuffAt,
   type RiverCraftDescription,
 } from '../../data/gizaEnvironment';
 import { GIZA_SKY, type CloudLayerDescription, type SkyKeyframe } from '../../data/gizaSky';
@@ -44,6 +48,7 @@ import type { LightState } from '../../engine/daynight';
 import { smoothstep } from '../../engine/easing';
 import { mulberry32 } from '../../engine/random';
 import type { MaterialLibrary } from './MaterialLibrary';
+import { applyClothSway, updateClothSwayTime } from './proceduralDetail';
 import { SkyDome } from './SkyDome';
 
 function mesh(
@@ -233,6 +238,15 @@ export class GizaEnvironment {
     /** Per flame instance: the base transform the per-frame flicker scales. */
     bases: Array<{ x: number; z: number; scale: number; yaw: number }>;
   } | null = null;
+  /** Swaying linen clones (sails, tents, awnings); the shared library linen
+   *  on worker clothing stays still (Spec 06). Owned and disposed here. */
+  private readonly clothMaterials: MeshStandardMaterial[] = [];
+  private windDust: { puffs: InstancedMesh; material: MeshStandardMaterial } | null = null;
+  private birds: {
+    bodies: InstancedMesh;
+    wings: InstancedMesh;
+    material: MeshStandardMaterial;
+  } | null = null;
 
   /** Ground the construction occupies; props must stay off it (Spec 08). */
   private readonly keepOuts: KeepOut[];
@@ -257,6 +271,8 @@ export class GizaEnvironment {
     this.addHorizon(materials);
     this.addSettlement(materials);
     this.addCampfires(materials);
+    this.addWindDust(materials);
+    this.addBirds();
     this.addSiteScatter(materials);
     this.addOuterNecropolis(materials);
     this.addSphinxAndTemples(materials);
@@ -668,8 +684,9 @@ export class GizaEnvironment {
       keelDepth: -0.26,
     });
     // Old Kingdom square sails were taller than wide; the sail is laced
-    // between the upper yard and the lower boom.
-    const sailGeometry = new BoxGeometry(0.06, 2.55, 1.55);
+    // between the upper yard and the lower boom. Segmented so the cloth-sway
+    // vertex displacement has a grid to belly (Spec 06 §Materials).
+    const sailGeometry = new BoxGeometry(0.06, 2.55, 1.55, 1, 8, 6);
     const yardGeometry = new CylinderGeometry(0.04, 0.04, 1.9, 5);
     yardGeometry.rotateX(Math.PI / 2);
     const boomGeometry = new CylinderGeometry(0.035, 0.035, 1.6, 5);
@@ -701,7 +718,12 @@ export class GizaEnvironment {
     const masts = new InstancedMesh(mastLegGeometry, materials.wood, sailCount * 2);
     const yards = new InstancedMesh(yardGeometry, materials.wood, sailCount);
     const booms = new InstancedMesh(boomGeometry, materials.wood, sailCount);
-    const sails = new InstancedMesh(sailGeometry, materials.linen, sailCount);
+    // Sails belly in the breeze on a dedicated linen clone; the shared
+    // library linen on worker clothing stays still (Spec 06).
+    const sailCloth = materials.linen.clone();
+    applyClothSway(sailCloth, 'sail');
+    this.clothMaterials.push(sailCloth);
+    const sails = new InstancedMesh(sailGeometry, sailCloth, sailCount);
     const oars = new InstancedMesh(oarGeometry, materials.wood, oarCount);
     const cargo = new InstancedMesh(cargoGeometry, materials.block['casing-limestone'], cargoCount);
     const bundles = new InstancedMesh(bundleGeometry, materials.cityAccent, bundleCount);
@@ -1001,13 +1023,23 @@ export class GizaEnvironment {
   }
 
   private addSettlement(materials: MaterialLibrary): void {
-    const tentGeometry = new ConeGeometry(1, 1, 4);
+    // Height-segmented cone: the tent-canvas breathing needs mid rings to
+    // displace (Spec 06 §Materials).
+    const tentGeometry = new ConeGeometry(1, 1, 4, 4);
     const crateGeometry = new BoxGeometry(1, 1, 1);
+    // Real-size shade cloth with a flutter grid, drawn at unit scale (the
+    // sway displacement is authored in world units).
+    const awningGeometry = new BoxGeometry(5.4, 0.12, 3.4, 8, 1, 8);
     const poleGeometry = new CylinderGeometry(0.05, 0.07, 2.5, 5);
-    this.geometries.push(tentGeometry, crateGeometry, poleGeometry);
-    const tents = new InstancedMesh(tentGeometry, materials.linen, 27);
+    this.geometries.push(tentGeometry, crateGeometry, awningGeometry, poleGeometry);
+    const tentCloth = materials.linen.clone();
+    applyClothSway(tentCloth, 'tent');
+    const awningCloth = materials.linen.clone();
+    applyClothSway(awningCloth, 'awning');
+    this.clothMaterials.push(tentCloth, awningCloth);
+    const tents = new InstancedMesh(tentGeometry, tentCloth, 27);
     const supplies = new InstancedMesh(crateGeometry, materials.wood, 72);
-    const shadeCloths = new InstancedMesh(crateGeometry, materials.linen, 12);
+    const shadeCloths = new InstancedMesh(awningGeometry, awningCloth, 12);
     const shadePoles = new InstancedMesh(poleGeometry, materials.wood, 48);
     const random = mulberry32('giza:worker-settlement');
     const matrix = new Matrix4();
@@ -1039,7 +1071,7 @@ export class GizaEnvironment {
         3.2,
         5,
       );
-      matrix.compose(new Vector3(x, 2.35, z), new Quaternion(), new Vector3(5.4, 0.12, 3.4));
+      matrix.compose(new Vector3(x, 2.35, z), new Quaternion(), new Vector3(1, 1, 1));
       shadeCloths.setMatrixAt(i, matrix);
       for (const [dx, dz] of [[-2.35, -1.35], [2.35, -1.35], [-2.35, 1.35], [2.35, 1.35]] as const) {
         matrix.compose(new Vector3(x + dx, 1.25, z + dz), new Quaternion(), new Vector3(1, 1, 1));
@@ -1206,6 +1238,115 @@ export class GizaEnvironment {
     fires.lights.forEach((pointLight, index) => {
       pointLight.intensity = dusk * (16 + 4 * Math.sin(t * 1031 + index * 9.4));
     });
+  }
+
+  /**
+   * Shallow wind-blown dust riding the typed lanes (WIND_DUST): sparse
+   * translucent puffs drifting south with the northerly breeze. Per-instance
+   * opacity is not available on one material, so the lane-end fade pinches
+   * the puff scale to zero instead — the wrap is invisible at baseOpacity.
+   */
+  private addWindDust(materials: MaterialLibrary): void {
+    const puffCount = WIND_DUST.lanes.length * WIND_DUST.puffsPerLane;
+    const geometry = new SphereGeometry(0.5, 8, 5);
+    this.geometries.push(geometry);
+    const material = materials.sand.clone();
+    material.transparent = true;
+    material.opacity = WIND_DUST.baseOpacity;
+    material.depthWrite = false;
+    const puffs = new InstancedMesh(geometry, material, puffCount);
+    puffs.castShadow = false;
+    puffs.receiveShadow = false;
+    // Matrices are rewritten every frame; opt out of the stale-bounds cull.
+    puffs.frustumCulled = false;
+    puffs.name = 'giza-wind-dust-puffs';
+    this.windDust = { puffs, material };
+    this.updateWindDust(0);
+    this.group.add(puffs);
+  }
+
+  /** Dust drift, wander, and lane-end fades — pure functions of t (Spec 08). */
+  private updateWindDust(t: number): void {
+    if (!this.windDust) return;
+    const puffCount = WIND_DUST.lanes.length * WIND_DUST.puffsPerLane;
+    const matrix = new Matrix4();
+    const quaternion = new Quaternion();
+    for (let i = 0; i < puffCount; i += 1) {
+      const state = windDustPuffAt(i, t);
+      matrix.compose(
+        new Vector3(state.x, state.y, state.z),
+        quaternion,
+        new Vector3(
+          state.scaleX * state.fade,
+          state.scaleY * state.fade,
+          state.scaleZ * state.fade,
+        ),
+      );
+      this.windDust.puffs.setMatrixAt(i, matrix);
+    }
+    this.windDust.puffs.instanceMatrix.needsUpdate = true;
+  }
+
+  /**
+   * The egret flock working the Nile bend (BIRD_FLOCK): one instanced batch
+   * of bodies, one of wings. Each wing's geometry is rooted at the shoulder
+   * so the flap is a rotation about the body-forward axis; the left wing
+   * mirrors the right across the body plane (a rotation, determinant +1 —
+   * never a negative scale, which would flip winding).
+   */
+  private addBirds(): void {
+    const bodyGeometry = new SphereGeometry(0.5, 7, 5);
+    const wingGeometry = new BoxGeometry(0.52, 0.02, 0.24);
+    wingGeometry.translate(0.26, 0, 0);
+    this.geometries.push(bodyGeometry, wingGeometry);
+    // Cattle egret: white plumage with a faint straw cast in the low sun.
+    const material = new MeshStandardMaterial({ color: '#f2ecdc', roughness: 0.9 });
+    const bodies = new InstancedMesh(bodyGeometry, material, BIRD_FLOCK.count);
+    const wings = new InstancedMesh(wingGeometry, material, BIRD_FLOCK.count * 2);
+    // Fast movers: per-frame matrices, no shadow casting, no stale bounds.
+    bodies.castShadow = false;
+    wings.castShadow = false;
+    bodies.frustumCulled = false;
+    wings.frustumCulled = false;
+    bodies.name = 'nile-egret-bodies';
+    wings.name = 'nile-egret-wings';
+    this.birds = { bodies, wings, material };
+    this.updateBirds(0);
+    this.group.add(bodies, wings);
+  }
+
+  /** Circling flight, banking, and wing flap — pure functions of t (Spec 08). */
+  private updateBirds(t: number): void {
+    if (!this.birds) return;
+    const { bodies, wings } = this.birds;
+    const body = new Matrix4();
+    const root = new Matrix4();
+    const flap = new Matrix4();
+    const mirror = new Matrix4().makeRotationY(Math.PI);
+    const wing = new Matrix4();
+    for (let i = 0; i < BIRD_FLOCK.count; i += 1) {
+      const state = birdStateAt(i, t);
+      // Forward is local +z, wings span local ±x: yaw outermost, then pitch
+      // about the span axis, then roll (bank) about the body-forward axis.
+      const orientation = new Quaternion().setFromEuler(
+        new Euler(state.pitch, state.yaw, state.roll, 'YXZ'),
+      );
+      body.compose(
+        new Vector3(state.x, state.y, state.z),
+        orientation,
+        new Vector3(0.3, 0.22, 0.55),
+      );
+      bodies.setMatrixAt(i, body);
+      for (const side of [-1, 1] as const) {
+        root.makeTranslation(side * 0.12, 0.03, 0.02);
+        flap.makeRotationZ(side * state.wingAngle);
+        wing.copy(body).multiply(root).multiply(flap);
+        if (side === -1) wing.multiply(mirror);
+        wings.setMatrixAt(i * 2 + (side + 1) / 2, wing);
+      }
+    }
+    bodies.instanceMatrix.needsUpdate = true;
+    wings.instanceMatrix.needsUpdate = true;
   }
 
   private addSiteScatter(materials: MaterialLibrary): void {
@@ -1585,6 +1726,9 @@ export class GizaEnvironment {
     // Living elements animate as pure functions of playback t (Spec 08).
     this.updateBoats(t);
     this.updatePalms(t);
+    this.updateWindDust(t);
+    this.updateBirds(t);
+    updateClothSwayTime(this.clothMaterials, t);
     for (const layer of this.cloudLayers) {
       const { drift, baseOpacity } = layer.description;
       const [dx, , dz] = drift.worldDirection;
@@ -1738,5 +1882,8 @@ export class GizaEnvironment {
     for (const geometry of new Set(this.geometries)) geometry.dispose();
     for (const layer of this.cloudLayers) layer.material.dispose();
     this.campfires?.flameMaterial.dispose();
+    for (const material of this.clothMaterials) material.dispose();
+    this.windDust?.material.dispose();
+    this.birds?.material.dispose();
   }
 }

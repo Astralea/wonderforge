@@ -55,6 +55,17 @@ export interface NormalRippleRecipe {
   strength: number;
 }
 
+export interface NormalBumpRecipe {
+  /**
+   * Strength of the normal-space relief derived from this recipe's own
+   * height field (grain + banding + mottle) via screen-space derivatives.
+   * Deliberately small: raking dawn/dusk light should read chisel and
+   * bedding relief, never turn distant masonry into shimmer (the injector
+   * fades the effect out as noise cells approach pixel size).
+   */
+  strength: number;
+}
+
 export type MaterialDetailRole =
   | 'core-limestone'
   | 'casing-limestone'
@@ -86,6 +97,12 @@ export interface MaterialDetailRecipe {
   ripple?: RippleRecipe;
   /** Optional normal ruffle derived from the same ripple field; intended for horizontal water. */
   normalRipple?: NormalRippleRecipe;
+  /**
+   * Optional stone relief: the recipe's own height field perturbs the
+   * fragment normal. Stone roles only, and the recipe must declare a grain
+   * term — the pixel-footprint fade keys off its cell scale.
+   */
+  normalBump?: NormalBumpRecipe;
 }
 
 export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
@@ -98,6 +115,7 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
     grain: { scale: 14, amplitude: 0.05 },
     banding: { scale: 9, amplitude: 0.032 },
     roughnessSwing: 0.05,
+    normalBump: { strength: 0.16 },
   },
   {
     role: 'casing-limestone',
@@ -108,6 +126,7 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
     grain: { scale: 22, amplitude: 0.03 },
     banding: { scale: 14, amplitude: 0.018 },
     roughnessSwing: 0.04,
+    normalBump: { strength: 0.1 },
   },
   {
     role: 'granite',
@@ -117,6 +136,7 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
     plane: 'mixed',
     grain: { scale: 30, amplitude: 0.05 },
     roughnessSwing: 0.06,
+    normalBump: { strength: 0.12 },
   },
   {
     role: 'sand',
@@ -144,6 +164,7 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
     plane: 'mixed',
     grain: { scale: 1.6, amplitude: 0.045 },
     banding: { scale: 1.1, amplitude: 0.04 },
+    normalBump: { strength: 0.2 },
   },
   {
     role: 'wood',

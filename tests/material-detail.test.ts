@@ -5,7 +5,12 @@ import {
   type MaterialDetailRole,
 } from '../src/data/materialDetail';
 import { createMaterialLibrary } from '../src/render/three/MaterialLibrary';
-import { updateMaterialDetailTime } from '../src/render/three/proceduralDetail';
+import {
+  applyClothSway,
+  updateClothSwayTime,
+  updateMaterialDetailTime,
+  type ClothSwayKind,
+} from '../src/render/three/proceduralDetail';
 import type { Wonder } from '../src/data/types';
 
 const fixtureWonder: Wonder = {
@@ -59,6 +64,24 @@ describe('material detail recipes', () => {
     expect(water.normalRipple?.strength).toBeGreaterThan(0);
     for (const recipe of MATERIAL_DETAIL_RECIPES) {
       expect(recipe.normalRipple !== undefined).toBe(recipe.role === 'water');
+    }
+  });
+
+  it('restricts normal relief to stone roles with a grain term to key the footprint fade', () => {
+    const stoneRoles: MaterialDetailRole[] = [
+      'core-limestone',
+      'casing-limestone',
+      'granite',
+      'quarry-cut',
+    ];
+    for (const recipe of MATERIAL_DETAIL_RECIPES) {
+      const isStone = stoneRoles.includes(recipe.role);
+      expect(recipe.normalBump !== undefined).toBe(isStone);
+      if (!recipe.normalBump) continue;
+      // The pixel-footprint fade derives noise-cell size from the grain scale.
+      expect(recipe.grain).toBeDefined();
+      expect(recipe.normalBump.strength).toBeGreaterThan(0);
+      expect(recipe.normalBump.strength).toBeLessThanOrEqual(0.5);
     }
   });
 
@@ -180,5 +203,105 @@ describe('material detail wiring', () => {
 
     updateMaterialDetailTime(library, 0.625);
     for (const shader of shaders) expect(shader.uniforms['uWfTime']!.value).toBe(0.625);
+  });
+
+  it('injects derivative-based stone relief with a pixel-footprint fade after the normal chunk', () => {
+    const library = createMaterialLibrary(fixtureWonder);
+    type TestShader = {
+      uniforms: Record<string, { value: unknown }>;
+      vertexShader: string;
+      fragmentShader: string;
+    };
+    const blank = (): TestShader => ({
+      uniforms: {},
+      vertexShader: '#include <project_vertex>',
+      fragmentShader: [
+        '#include <color_fragment>',
+        '#include <roughnessmap_fragment>',
+        '#include <normal_fragment_maps>',
+      ].join('\n'),
+    });
+
+    const stone = blank();
+    const compileStone = library.block['core-limestone']
+      .onBeforeCompile as unknown as (shader: TestShader) => void;
+    compileStone(stone);
+    // The perturbation rides the recipe's own height field — no texture
+    // fetches, no extra noise samples — and retires before pixel-size cells.
+    expect(stone.fragmentShader).toContain('dFdx(wfDetail)');
+    expect(stone.fragmentShader).toContain('wfReliefFade');
+    expect(stone.fragmentShader).toContain('fwidth(vWfDetailPos.x');
+    expect(stone.fragmentShader).toContain('gl_FrontFacing');
+    expect(stone.fragmentShader.indexOf('#include <normal_fragment_maps>'))
+      .toBeLessThan(stone.fragmentShader.indexOf('wfDhdxy'));
+    // The detail field must exist before the normal perturbation reads it.
+    expect(stone.fragmentShader.indexOf('float wfDetail'))
+      .toBeLessThan(stone.fragmentShader.indexOf('dFdx(wfDetail)'));
+
+    // Non-stone roles (e.g. timber) get no relief terms.
+    const wood = blank();
+    const compileWood = library.wood.onBeforeCompile as unknown as (shader: TestShader) => void;
+    compileWood(wood);
+    expect(wood.fragmentShader).not.toContain('wfDhdxy');
+    expect(wood.fragmentShader).not.toContain('wfReliefFade');
+  });
+});
+
+describe('cloth sway (Spec 06 §Materials and color)', () => {
+  type TestShader = {
+    uniforms: Record<string, { value: unknown }>;
+    vertexShader: string;
+    fragmentShader: string;
+  };
+  const blank = (): TestShader => ({
+    uniforms: {},
+    vertexShader: ['#include <begin_vertex>', '#include <project_vertex>'].join('\n'),
+    fragmentShader: [
+      '#include <color_fragment>',
+      '#include <roughnessmap_fragment>',
+      '#include <normal_fragment_maps>',
+    ].join('\n'),
+  });
+  const kinds: ClothSwayKind[] = ['sail', 'tent', 'awning'];
+
+  it('injects playback-phased vertex displacement into dedicated linen clones', () => {
+    const library = createMaterialLibrary(fixtureWonder);
+    for (const kind of kinds) {
+      const clone = library.linen.clone();
+      applyClothSway(clone, kind);
+      const shader = blank();
+      (clone.onBeforeCompile as unknown as (s: TestShader) => void)(shader);
+      // Displacement happens in object space before instancing/projection.
+      expect(shader.vertexShader).toContain('uniform float uWfClothTime');
+      expect(shader.vertexShader.indexOf('#include <begin_vertex>'))
+        .toBeLessThan(shader.vertexShader.indexOf('wfClothPhase'));
+      // The linen weave recipe rides along on the clone.
+      expect(shader.fragmentShader).toContain('vWfDetailPos');
+      // Program variants never collide with the still shared linen.
+      expect(clone.customProgramCacheKey()).toBe(`wf-cloth:${kind}`);
+      expect(clone.customProgramCacheKey()).not.toBe(library.linen.customProgramCacheKey());
+    }
+  });
+
+  it('leaves the shared linen of worker clothing still', () => {
+    const library = createMaterialLibrary(fixtureWonder);
+    const shader = blank();
+    (library.linen.onBeforeCompile as unknown as (s: TestShader) => void)(shader);
+    expect(shader.vertexShader).not.toContain('uWfClothTime');
+    expect(shader.vertexShader).not.toContain('wfClothPhase');
+  });
+
+  it('advances sway time on every compiled variant, phased from playback t', () => {
+    const library = createMaterialLibrary(fixtureWonder);
+    const clone = library.linen.clone();
+    applyClothSway(clone, 'awning');
+    const variants = [blank(), blank()];
+    for (const shader of variants) {
+      (clone.onBeforeCompile as unknown as (s: TestShader) => void)(shader);
+    }
+    updateClothSwayTime([clone], 0.5);
+    for (const shader of variants) expect(shader.uniforms['uWfClothTime']!.value).toBe(0.5);
+    updateClothSwayTime([clone], 0.75);
+    for (const shader of variants) expect(shader.uniforms['uWfClothTime']!.value).toBe(0.75);
   });
 });

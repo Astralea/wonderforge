@@ -8,8 +8,14 @@
  */
 
 import { mulberry32 } from '../engine/random';
+import { smoothstep } from '../engine/easing';
 import type { Vec3 } from './constructionTypes';
 import { GIZA_SKY } from './gizaSky';
+
+/** Linear interpolation across a [min, max] band by a unit parameter. */
+function lerp01(range: readonly [number, number], u: number): number {
+  return range[0] + u * (range[1] - range[0]);
+}
 
 /* ------------------------------------------------------------------ */
 /* Era and orientation                                                 */
@@ -210,6 +216,204 @@ export function riverCraftStateAt(
 }
 
 /* ------------------------------------------------------------------ */
+/* Wind-blown dust (living motion, pure functions of t)                */
+/* ------------------------------------------------------------------ */
+
+/**
+ * A dust lane is an authored ground track the northerly breeze sweeps along
+ * (toward -x, south). Lanes are typed data and contract-verified clear of
+ * every monument and earthwork footprint; drifting dust is atmosphere, but a
+ * puff clipping through a ramp reads as a bug, not weather.
+ */
+export interface WindDustLane {
+  id: string;
+  /** Drift span: puffs travel from xHigh down to xLow (southward). */
+  xLow: number;
+  xHigh: number;
+  /** Lane center line in z; puffs wander a little around it. */
+  z: number;
+}
+
+export interface WindDustDescription {
+  lanes: WindDustLane[];
+  puffsPerLane: number;
+  /**
+   * Puff center height band; bottoms stay just off the ground. The floor
+   * clears the worst case — lowest center, deepest bob, tallest puff at full
+   * fade — so no rendered puff ever dips under the terrain (contract-tested).
+   */
+  altitude: [number, number];
+  /** Drift distance per movie at 1x playback: a slow desert breeze. */
+  unitsPerMovie: number;
+  /** Peak material opacity before the haze coupling; shallow by design. */
+  baseOpacity: number;
+  description: string;
+  historicalNote: string;
+}
+
+export const WIND_DUST: WindDustDescription = {
+  lanes: [
+    // North edge of the quarry cut, along the western road stretch.
+    { id: 'quarry-rim', xLow: -76, xHigh: -30, z: 24 },
+    // The main haul road's southern shoulder, threading the camp tent rows.
+    { id: 'camp-fringe', xLow: -50, xHigh: 24, z: 42.5 },
+    // The quarry floor's southern flank, over the western haul chord.
+    { id: 'west-road', xLow: -76, xHigh: -40, z: 32 },
+  ],
+  puffsPerLane: 7,
+  altitude: [0.9, 2.0],
+  unitsPerMovie: 26,
+  baseOpacity: 0.14,
+  description:
+    'Shallow wind-blown dust: sparse translucent puffs riding the ' +
+    'prevailing northerly breeze along the haul roads and the quarry ' +
+    'surround, fading in and out at the ends of their lanes so the loop ' +
+    'never pops. Low enough never to conceal block transport.',
+  historicalNote:
+    'Afternoon khamsin winds lift Nile silt and limestone dust across the ' +
+    'plateau; wetted haul roads kept working dust down, so the drifting ' +
+    'haze belongs to the dry ground between the lanes.',
+};
+
+export interface WindDustPuffState {
+  x: number;
+  y: number;
+  z: number;
+  scaleX: number;
+  scaleY: number;
+  scaleZ: number;
+  /** 0 at both lane ends, 1 mid-lane: the wrap never pops. */
+  fade: number;
+}
+
+/**
+ * Deterministic dust drift. Each puff loops its lane over the movie; the
+ * fade pinches to zero at both ends so the wrap is invisible. Position,
+ * size, and wander derive from the puff index and playback `t` only.
+ */
+export function windDustPuffAt(index: number, t: number): WindDustPuffState {
+  const { lanes, altitude, unitsPerMovie } = WIND_DUST;
+  const lane = lanes[index % lanes.length]!;
+  const random = mulberry32(`giza:wind-dust:${index}`);
+  const phase = random();
+  const yBase = altitude[0] + random() * (altitude[1] - altitude[0]);
+  const sizeX = 2.4 + random() * 2.2;
+  const sizeY = 0.7 + random() * 0.7;
+  const sizeZ = 1.3 + random() * 0.9;
+  const wanderPhase = random() * Math.PI * 2;
+  const bobPhase = random() * Math.PI * 2;
+
+  const span = lane.xHigh - lane.xLow;
+  const u = (((phase + (t * unitsPerMovie) / span) % 1) + 1) % 1;
+  const fade = smoothstep(u / 0.12) * smoothstep((1 - u) / 0.12);
+  return {
+    x: lane.xHigh - u * span,
+    y: yBase + 0.15 * Math.sin(u * Math.PI * 2 * 2.1 + bobPhase),
+    z: lane.z + 1.1 * Math.sin(u * Math.PI * 2 * 1.3 + wanderPhase),
+    scaleX: sizeX,
+    scaleY: sizeY,
+    scaleZ: sizeZ,
+    fade,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* River birds (living motion, pure functions of t)                    */
+/* ------------------------------------------------------------------ */
+
+export interface BirdFlockDescription {
+  id: 'nile-egret-flock';
+  species: 'cattle-egret';
+  count: number;
+  /** Orbit center x over the channel; z follows the sampled centerline. */
+  centerX: number;
+  /** Per-bird orbit radii ranges: along x and off the centerline. */
+  radiusX: [number, number];
+  radiusZ: [number, number];
+  altitude: [number, number];
+  /** Closed circuits per movie (magnitude); half the flock flies counter. */
+  circuitsPerMovie: [number, number];
+  /** Wing-beat cycles per movie while flapping (~2.2-2.8 Hz at 1x). */
+  wingBeatsPerMovie: [number, number];
+  description: string;
+  historicalNote: string;
+}
+
+export const BIRD_FLOCK: BirdFlockDescription = {
+  id: 'nile-egret-flock',
+  species: 'cattle-egret',
+  count: 12,
+  centerX: 6,
+  radiusX: [24, 34],
+  radiusZ: [5, 9],
+  altitude: [7, 13],
+  circuitsPerMovie: [1.5, 2.5],
+  wingBeatsPerMovie: [132, 168],
+  description:
+    'A small egret flock working the Nile bend on closed circling paths: ' +
+    'position, heading, bank, wing flap, and glide gates are pure functions ' +
+    'of playback t. Birds stay over the river and floodplain, below the ' +
+    'monument tops and above the mast tips, and never cross masonry.',
+  historicalNote:
+    'Cattle egrets (Bubulcus ibis) and sacred ibises were everyday Nile ' +
+    'valley birds in the Old Kingdom; egrets ride thermals over the ' +
+    'floodplain and work the riverbanks in loose flocks.',
+};
+
+export interface BirdState {
+  x: number;
+  y: number;
+  z: number;
+  yaw: number;
+  pitch: number;
+  /** Constant bank into the circuit direction, as a circling bird does. */
+  roll: number;
+  /** Wing rotation (radians, + = raised); glides hold a shallow dihedral. */
+  wingAngle: number;
+}
+
+/** Deterministic circling flight over the channel at playback `t`. */
+export function birdStateAt(index: number, t: number): BirdState {
+  const flock = BIRD_FLOCK;
+  const random = mulberry32(`giza:bird:${index}`);
+  const phase = random();
+  const direction = index % 2 === 0 ? 1 : -1;
+  const radiusX = lerp01(flock.radiusX, random());
+  const radiusZ = lerp01(flock.radiusZ, random());
+  const altitude = lerp01(flock.altitude, random());
+  const circuits = lerp01(flock.circuitsPerMovie, random());
+  const beats = lerp01(flock.wingBeatsPerMovie, random());
+  const flapPhase = random() * Math.PI * 2;
+  const glidePhase = random() * Math.PI * 2;
+  const bobPhase = random() * Math.PI * 2;
+
+  const theta = Math.PI * 2 * (phase + t * circuits * direction);
+  const x = flock.centerX + radiusX * Math.cos(theta);
+  const z = riverCenterZAt(x) + radiusZ * Math.sin(theta);
+  const y = altitude + 1.1 * Math.sin(2 * theta + bobPhase);
+
+  // Heading from the orbit derivative; atan2(dx, dz) matches the scene's
+  // yaw convention (forward = +z rotated by yaw about +y).
+  const dTheta = direction;
+  const dx = -radiusX * Math.sin(theta) * dTheta;
+  const dz =
+    (riverCenterZAt(x + 0.5) - riverCenterZAt(x - 0.5)) * dx + radiusZ * Math.cos(theta) * dTheta;
+  const yaw = Math.atan2(dx, dz);
+  const horizontal = Math.hypot(dx, dz);
+  const pitch = Math.atan2(2.2 * Math.cos(2 * theta + bobPhase), Math.max(horizontal, 1e-6)) * 0.35;
+  const roll = -direction * 0.16;
+
+  // Flap unless the slow glide gate is open; glides hold a shallow dihedral
+  // with a hint of rocking.
+  const glideSine = Math.sin(t * Math.PI * 2 * (1.3 + circuits * 0.7) + glidePhase);
+  const glide = smoothstep((glideSine - 0.3) / 0.3);
+  const flap = Math.sin(t * Math.PI * 2 * beats + flapPhase);
+  const wingAngle = 0.18 + 0.62 * (1 - glide) * flap + glide * 0.05 * flap;
+
+  return { x, y, z, yaw, pitch, roll, wingAngle };
+}
+
+/* ------------------------------------------------------------------ */
 /* Cultivated strip (follows the near bank, never a fixed rectangle)   */
 /* ------------------------------------------------------------------ */
 
@@ -296,6 +500,7 @@ export interface EcologyDescription {
   palms: { description: string; historicalNote: string };
   reeds: { description: string; historicalNote: string };
   crops: { description: string; historicalNote: string };
+  birds: { description: string; historicalNote: string };
 }
 
 /* ------------------------------------------------------------------ */
@@ -602,6 +807,16 @@ const ECOLOGY: EcologyDescription = {
     historicalNote:
       'Basin irrigation trapped floodwater in walled parcels; the scene ' +
       'shows the growing season rather than the inundation (see era note).',
+  },
+  birds: {
+    description:
+      'A cattle-egret flock circling the Nile bend on closed, deterministic ' +
+      'paths (BIRD_FLOCK + birdStateAt): flapping, gliding, and banking over ' +
+      'the channel, never crossing the plateau masonry.',
+    historicalNote:
+      'Egrets, ibises, and kites were constant presences over the Old ' +
+      'Kingdom floodplain; the ibis was sacred to Thoth. The flock stays ' +
+      'over the river where the birds actually worked.',
   },
 };
 
