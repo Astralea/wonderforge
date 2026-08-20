@@ -6,13 +6,14 @@
 // Every injected material sets a unique customProgramCacheKey so program
 // variants never collide, per the kept threejs-aaa-graphics-builder cookbook.
 
-import type { MeshStandardMaterial } from 'three';
+import { Color, Vector3, type MeshStandardMaterial } from 'three';
 import {
   MATERIAL_DETAIL_RECIPES,
   materialDetailFor,
   type MaterialDetailRecipe,
   type MaterialDetailRole,
 } from '../../data/materialDetail';
+import { GIZA_SKY, type SkyKeyframe } from '../../data/gizaSky';
 import type { MaterialLibrary } from './MaterialLibrary';
 
 type ShaderUniforms = Record<string, { value: unknown }>;
@@ -93,12 +94,22 @@ function mottleSnippet(recipe: MaterialDetailRecipe): string {
 function rippleSnippet(recipe: MaterialDetailRecipe): string {
   const ripple = recipe.ripple;
   if (!ripple) return '';
+  const chop = recipe.chop;
+  const chopBlock = chop
+    ? `
+  // Fine chop octave: advected downstream with the swell but running faster,
+  // as small waves do — close-range sparkle the broad swell cannot carry.
+  wfCp = vec2(wfP.x * ${f(chop.scale)} + uWfTime * ${f(chop.speed)},
+              wfP.z * ${f(chop.scale * 0.8)} - uWfTime * ${f(chop.speed * 0.45)});
+  wfChop = wfFbm(wfCp) - 0.5;
+  wfDetail += wfChop * ${f(chop.amplitude * 2)};`
+    : '';
   return `
   wfRp = vec2(wfP.x * ${f(ripple.scale)} + uWfTime * ${f(ripple.speed)},
               wfP.z * ${f(ripple.scale * 0.55)} - uWfTime * ${f(ripple.speed * 0.3)});
   wfRip = wfFbm(wfRp) - 0.5;
   wfDetail += wfRip * ${f(ripple.amplitude * 2)};
-  wfRough += wfRip * ${f(ripple.roughness)};
+  wfRough += wfRip * ${f(ripple.roughness)};${chopBlock}
 `;
 }
 
@@ -107,6 +118,16 @@ function normalRippleSnippet(recipe: MaterialDetailRecipe): string {
   const normalRipple = recipe.normalRipple;
   if (!ripple || !normalRipple) return '';
   const step = 0.08;
+  const chop = recipe.chop;
+  const chopGradient = chop
+    ? `
+  // The chop octave perturbs the same normal at its own scale.
+  float wfChopBase = wfChop + 0.5;
+  wfRippleGradient += vec2(
+    (wfFbm(wfCp + vec2(wfNormalStep, 0.0)) - wfChopBase) / wfNormalStep * ${f(chop.scale)},
+    (wfFbm(wfCp + vec2(0.0, wfNormalStep)) - wfChopBase) / wfNormalStep * ${f(chop.scale * 0.8)}
+  ) * ${f(chop.amplitude / Math.max(ripple.amplitude, 1e-4))};`
+    : '';
   return `
 // The visible water surfaces are flat, upward-facing world-XZ ribbons. Their
 // ripple-field gradient is therefore a cheap tangent-space slope; transform
@@ -116,9 +137,40 @@ float wfRippleBase = wfRip + 0.5;
 vec2 wfRippleGradient = vec2(
   (wfFbm(wfRp + vec2(wfNormalStep, 0.0)) - wfRippleBase) / wfNormalStep * ${f(ripple.scale)},
   (wfFbm(wfRp + vec2(0.0, wfNormalStep)) - wfRippleBase) / wfNormalStep * ${f(ripple.scale * 0.55)}
-);
+);${chopGradient}
 vec3 wfRippleSlopeWorld = vec3(-wfRippleGradient.x, 0.0, -wfRippleGradient.y) * ${f(normalRipple.strength)};
 normal = normalize(normal + mat3(viewMatrix) * wfRippleSlopeWorld);`;
+}
+
+/**
+ * Analytic sky reflection for the Nile (Spec 06 §Materials): the reflected
+ * view direction is evaluated against the SAME analytical sky the dome
+ * draws — zenith/horizon gradient, sun halo, and disc — so the river shows
+ * the dawn and dusk skies and a true sun-glitter path with no reflection
+ * pass and no textures. Fresnel-weighted (Schlick, F0 0.02); the perturbed
+ * ripple normal breaks the glitter into sparkle. `uWfSkyReflStrength` is
+ * driven per frame from the typed keyframes and stays 0 for legacy scenes.
+ */
+function skyReflectionSnippet(recipe: MaterialDetailRecipe): string {
+  const reflection = recipe.skyReflection;
+  if (!reflection) return '';
+  const { dome, sunDisc } = GIZA_SKY;
+  const discCos = Math.cos((sunDisc.angularRadiusDegrees * Math.PI) / 180);
+  return `
+{
+  vec3 wfViewDir = normalize(vViewPosition);
+  vec3 wfReflectWorld = inverseTransformDirection(reflect(-wfViewDir, normal), viewMatrix);
+  float wfReflUp = max(wfReflectWorld.y, 0.0);
+  vec3 wfSkyRefl = mix(uWfSkyHorizon, uWfSkyZenith, pow(wfReflUp, ${f(dome.zenithExponent)}));
+  float wfCosSun = max(dot(wfReflectWorld, uWfSunDirection), 0.0);
+  wfSkyRefl += uWfSunTint * (
+    pow(wfCosSun, 650.0) * ${f(sunDisc.haloStrength)} +
+    pow(wfCosSun, 5.0) * ${f(sunDisc.wideHaloStrength * 0.6)} +
+    smoothstep(${f(discCos - 0.0012)}, ${f(discCos + 0.0012)}, wfCosSun) * ${f(sunDisc.intensity)}
+  );
+  float wfFresnel = 0.02 + 0.98 * pow(1.0 - max(dot(wfViewDir, normal), 0.0), 5.0);
+  totalEmissiveRadiance += wfSkyRefl * wfFresnel * uWfSkyReflStrength;
+}`;
 }
 
 /**
@@ -156,7 +208,7 @@ function detailBlock(recipe: MaterialDetailRecipe): string {
   return `#include <color_fragment>
 float wfDetail = 0.0;
 float wfRough = 0.0;
-${recipe.ripple ? 'vec2 wfRp;\nfloat wfRip;' : ''}
+${recipe.ripple ? 'vec2 wfRp;\nfloat wfRip;' : ''}${recipe.chop ? '\nvec2 wfCp;\nfloat wfChop;' : ''}
 {
   vec3 wfP = vWfDetailPos;${grainSnippet(recipe)}${bandingSnippet(recipe)}${mottleSnippet(recipe)}${rippleSnippet(recipe)}
 }
@@ -178,6 +230,15 @@ function injectRecipe(material: MeshStandardMaterial, recipe: MaterialDetailReci
       const shaders = (material.userData.wfDetailShaders ??= []) as ShaderLike[];
       shaders.push(target);
     }
+    if (recipe.skyReflection) {
+      target.uniforms.uWfSkyZenith = { value: new Color('#2f6cb8') };
+      target.uniforms.uWfSkyHorizon = { value: new Color('#cfc9ae') };
+      target.uniforms.uWfSunTint = { value: new Color('#fff4e0') };
+      target.uniforms.uWfSunDirection = { value: new Vector3(0, 1, 0) };
+      // Off until the Giza scene feeds the typed keyframes; the legacy
+      // scenes' water keeps its pre-reflection look.
+      target.uniforms.uWfSkyReflStrength = { value: 0 };
+    }
 
     target.vertexShader = `varying vec3 vWfDetailPos;\n${target.vertexShader}`.replace(
       '#include <project_vertex>',
@@ -185,13 +246,20 @@ function injectRecipe(material: MeshStandardMaterial, recipe: MaterialDetailReci
     );
 
     const timeUniform = recipe.ripple ? 'uniform float uWfTime;\n' : '';
-    target.fragmentShader = `varying vec3 vWfDetailPos;\n${timeUniform}${NOISE_GLSL}${target.fragmentShader}`
+    const skyUniforms = recipe.skyReflection
+      ? 'uniform vec3 uWfSkyZenith;\nuniform vec3 uWfSkyHorizon;\nuniform vec3 uWfSunTint;\nuniform vec3 uWfSunDirection;\nuniform float uWfSkyReflStrength;\n'
+      : '';
+    target.fragmentShader = `varying vec3 vWfDetailPos;\n${timeUniform}${skyUniforms}${NOISE_GLSL}${target.fragmentShader}`
       .replace('#include <color_fragment>', detailBlock(recipe))
       .replace(
         '#include <roughnessmap_fragment>',
         '#include <roughnessmap_fragment>\nroughnessFactor = clamp(roughnessFactor + wfRough, 0.05, 1.0);',
       )
-      .replace('#include <normal_fragment_maps>', normalSnippet(recipe));
+      .replace('#include <normal_fragment_maps>', normalSnippet(recipe))
+      .replace(
+        '#include <emissivemap_fragment>',
+        `#include <emissivemap_fragment>${skyReflectionSnippet(recipe)}`,
+      );
   };
   material.customProgramCacheKey = () => cacheKey;
 }
@@ -336,4 +404,26 @@ export function updateMaterialDetailTime(materials: MaterialLibrary, t: number):
   const shaders = materials.water.userData.wfDetailShaders as ShaderLike[] | undefined;
   if (!shaders) return;
   for (const shader of shaders) shader.uniforms.uWfTime.value = t;
+}
+
+/**
+ * Feed the water's analytic sky reflection from the typed sky keyframes and
+ * the real sun direction (Spec 06). Giza-only: legacy scenes never call this,
+ * so their water keeps `uWfSkyReflStrength = 0` and renders unchanged.
+ */
+export function updateWaterSky(
+  materials: MaterialLibrary,
+  sky: SkyKeyframe,
+  sunDirection: Vector3,
+): void {
+  const shaders = materials.water.userData.wfDetailShaders as ShaderLike[] | undefined;
+  if (!shaders) return;
+  const strength = materialDetailFor('water').skyReflection?.strength ?? 0;
+  for (const shader of shaders) {
+    (shader.uniforms.uWfSkyZenith!.value as Color).set(sky.zenith);
+    (shader.uniforms.uWfSkyHorizon!.value as Color).set(sky.horizon);
+    (shader.uniforms.uWfSunTint!.value as Color).set(sky.sunTint);
+    (shader.uniforms.uWfSunDirection!.value as Vector3).copy(sunDirection);
+    shader.uniforms.uWfSkyReflStrength!.value = strength;
+  }
 }

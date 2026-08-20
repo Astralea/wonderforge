@@ -55,6 +55,27 @@ export interface NormalRippleRecipe {
   strength: number;
 }
 
+export interface RippleChopRecipe {
+  /**
+   * Second, finer ripple octave layered over the broad swell: close-range
+   * chop is what sells water up close. Requires a ripple term; the chop
+   * shares the downstream advection but runs faster, as small waves do.
+   */
+  scale: number;
+  amplitude: number;
+  speed: number;
+}
+
+export interface SkyReflectionRecipe {
+  /**
+   * Strength of the Fresnel-weighted analytic sky reflection (the dome's
+   * own gradient and sun glitter evaluated at the reflected view
+   * direction). Water only; fed per frame from the typed sky keyframes and
+   * held at zero for legacy scenes, whose water is unchanged.
+   */
+  strength: number;
+}
+
 export interface NormalBumpRecipe {
   /**
    * Strength of the normal-space relief derived from this recipe's own
@@ -97,6 +118,10 @@ export interface MaterialDetailRecipe {
   ripple?: RippleRecipe;
   /** Optional normal ruffle derived from the same ripple field; intended for horizontal water. */
   normalRipple?: NormalRippleRecipe;
+  /** Optional fine-chop octave over the ripple; requires `ripple`. */
+  chop?: RippleChopRecipe;
+  /** Optional analytic sky reflection; water role only. */
+  skyReflection?: SkyReflectionRecipe;
   /**
    * Optional stone relief: the recipe's own height field perturbs the
    * fragment normal. Stone roles only, and the recipe must declare a grain
@@ -178,11 +203,13 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
   {
     role: 'water',
     description:
-      'Slow peret-season Nile current: the prevailing northerly breeze ruffles the river so drifting ripple bands catch the low sun.',
+      'Slow peret-season Nile current: the prevailing northerly breeze ruffles the river, a fine chop octave sparkles up close, and the analytic sky — sun glitter included — rides the surface at grazing angles.',
     space: 'world',
     plane: 'xz',
-    ripple: { scale: 0.55, speed: 0.5, roughness: 0.3, amplitude: 0.035 },
+    ripple: { scale: 0.55, speed: 0.62, roughness: 0.3, amplitude: 0.035 },
     normalRipple: { strength: 0.36 },
+    chop: { scale: 2.6, amplitude: 0.016, speed: 1.35 },
+    skyReflection: { strength: 0.5 },
   },
   {
     role: 'whitewash',

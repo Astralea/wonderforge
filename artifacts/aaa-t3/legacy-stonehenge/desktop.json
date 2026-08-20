@@ -1,0 +1,86 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/stonehenge/0.5",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/aaa-t3/legacy-stonehenge/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 168,
+    "colorBuckets": 25,
+    "metrics": {
+      "colorBuckets": 28,
+      "colorEntropyBits": 3.15,
+      "edgeDensity": 0.046,
+      "luminance": {
+        "mean": 129.3,
+        "p5": 49.3,
+        "p95": 149.9,
+        "contrast": 100.7
+      },
+      "dominantColorShare": 0.223,
+      "nonBackgroundShare": 0.777
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 142,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 1528,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 2,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 142,
+        "triangles": 1528,
+        "points": 0,
+        "lines": 0,
+        "geometries": 2,
+        "textures": 16
+      },
+      "scene": "legacy-fallback"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

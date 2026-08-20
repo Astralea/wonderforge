@@ -102,14 +102,23 @@ verification recipes.
   run south on the prevailing northerlies, and the moored skiff bobs at the
   bank. Position, heading, bob, and roll are pure functions of playback `t`,
   and hulls always stay inside the channel.
-- Palms lean slightly with tapered trunks, two tiers of drooping fronds with
-  per-instance color variation, and dry dead-frond skirts; fronds sway
-  gently in the northerly breeze as a pure function of `t`. Reeds, sparse
-  scrub, tools, and debris frame the foreground and river edge.
-- The Nile and cultivated strip provide a cool color layer between plateau and
-  settlement. The strip contains fixed field parcels, irrigation channels,
-  banks, river craft, and planting rows. City shapes combine homes, rooflines,
-  towers, walls, and monumental accents instead of one box-only silhouette.
+- Palms are a stand of individuals, not a clone row: three typed archetypes
+  assigned by pure function — tall fruiting date palms (full two-tier crowns,
+  amber date clusters under the crown), young upright palms (fewer fronds,
+  no skirt), and old leaning palms (pronounced lean, sparse drooping crown,
+  heavy dead-frond skirt) — each with per-instance height, lean, and frond
+  variation, swaying gently in the northerly breeze as a pure function of
+  `t`. A second grove stand shades the Memphis riverfront across the river.
+  Reeds, sparse scrub, tools, and debris frame the foreground and river edge.
+- The cultivated strip is a working farm mosaic, not a green checkerboard:
+  every parcel carries a typed peret-season crop state (growing emmer,
+  ripening gold emmer, pale flax, freshly plowed fallow, straw stubble)
+  assigned by pure function, planted furrow ridges run the length of each
+  parcel, and low mud boundary bunds wall the parcels for basin irrigation.
+  City shapes combine homes, rooflines, corner bastions, a riverside quay,
+  walls, and monumental accents (two pylon pairs, obelisks) instead of one
+  box-only silhouette; necropolis mastabas vary with stepped upper tiers and
+  chapel annexes.
 - Three to five cloud groups cross slowly with depth parallax. They remain
   outside the widest camera orbit, including the mobile reveal, so the camera
   can never pass through a cloud bank or expose a screen-filling cloud edge.

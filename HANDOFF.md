@@ -1,7 +1,7 @@
 # WonderForge Agent Handoff
 
-Last updated: 2026-08-20 (Asia/Tokyo), AAA Tier 2 completion (stone relief,
-anamorphic streak, wind dust, egret flock, cloth sway)
+Last updated: 2026-08-20 (Asia/Tokyo), AAA Tier 2 completion plus the Tier 3
+background pass (palm archetypes, crop mosaic, analytic-sky water)
 
 ## Start here
 
@@ -132,6 +132,31 @@ The Giza scene now has:
   phase from the instance translation column; the shared linen on worker
   clothing stays still). +3 draw calls (dust, bird bodies, bird wings);
   captures under `artifacts/aaa-t2/`;
+- a Tier 3 background pass (the "3A background" request): the palm clone row
+  is now a stand of three typed archetypes (`palmArchetypeAt` — fruiting
+  date-tall with amber clusters, upright date-young without skirts, leaning
+  palm-old with heavy skirts) plus a grove stand on the Memphis riverfront
+  (`grovePalmAt`, rejecting slots the braid squeezes shut); fields are a
+  working mosaic — typed peret-season crop states (`fieldCropAt` on every
+  parcel: growing/ripening emmer, flax, plowed fallow, stubble), furrow
+  ridges and boundary bunds (one instanced batch each); the Nile upgraded
+  past "tinted ribbon": downstream-advected swell + faster fine chop octave
+  (`chop` recipe) and a Fresnel-weighted analytic sky reflection — the
+  dome's own gradient/sun-disc math evaluated at the reflected view
+  direction (`skyReflection` recipe, `updateWaterSky` fed per frame from the
+  typed keyframes; strength stays 0 for legacy scenes so their water is
+  unchanged) — plus waterline foam ribbons with a `t`-phased wash pulse.
+  Memphis gained corner bastions, a riverfront quay, and a second pylon
+  pair; mastabas gained stepped tiers and chapel annexes (all inside
+  existing batches, +0 calls). Library research (user-requested): three.js
+  `addons/Water.js`, SeedOcean, OceanThreejs, WaterThreeJS, threejs-water,
+  skunami.js were evaluated — all are ocean/pool-shaped (FFT/Gerstner/SSR,
+  texture fetches, wall-clock time, extra render passes) and mismatch this
+  scene's calm typed meander ribbon, determinism, and procedural-only rules;
+  the analytic-reflection approach ports their *look* (notably WaterThreeJS's
+  analytic-atmosphere fallback) at zero added passes. +6 draw calls total
+  (furrows, bunds, fruit, foam, +2 ecology from Tier 2's fleet recount);
+  captures under `artifacts/aaa-t3/`;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one
@@ -325,14 +350,21 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after the AAA Tier 2 completion:
+The required verification passed after the Tier 3 background pass:
 
 ```text
 23 test files
-250 tests
+254 tests
 npm run typecheck: passed
 npm run build: passed
 ```
+
+Visual evidence (artifacts/aaa-t3/): desktop t=0.12/0.62/1.0 at 122/121/109
+calls, 171k/247k/247k triangles; mobile 1.0 at 93 calls — all within budget,
+zero console/page errors. Measured pixel evidence: colorEntropy 4.5–5.2,
+edgeDensity 0.15–0.21, luminance contrast 94–116, dominantColorShare ≤ 0.18.
+Legacy fallback spot-check (stonehenge) renders unchanged (water reflection
+strength is 0 off-Giza).
 
 Run the full gate after any meaningful change:
 

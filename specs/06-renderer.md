@@ -77,6 +77,16 @@ handles overlap; transparency is limited to dust, water, clouds, and sky.
 - Cloth (square sails, tent canvas, shade awnings) sways via a vertex
   displacement injected into dedicated clones of the linen material, phased
   from playback `t`; the shared linen of worker clothing stays still.
+- The Nile renders as real water, not a tinted ribbon: the ripple field is
+  advected downstream along the channel and carries a second fine-chop
+  octave, both feeding the normal perturbation; and a Fresnel-weighted
+  analytic sky reflection — the same zenith/horizon gradient and sun
+  disc/halo the dome draws, evaluated at the reflected view direction — so
+  dawn and dusk skies and a true sun-glitter path appear in the river with
+  no reflection pass, no texture fetches, and no extra draw calls. Sky
+  uniforms are fed per frame from the typed keyframes and stay at strength
+  zero for the legacy scenes, whose water is unchanged. Thin foam ribbons
+  ride both waterlines as authored geometry with a gentle `t`-phased pulse.
 
 ## Lighting and atmosphere
 

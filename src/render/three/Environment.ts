@@ -35,12 +35,15 @@ import {
   fieldParcelAt,
   GIZA_ENVIRONMENT,
   greenbeltInnerEdgeAt,
+  grovePalmAt,
+  palmArchetypeAt,
   riverBraidAt,
   riverCenterZAt,
   riverCraftStateAt,
   riverWidthAt,
   WIND_DUST,
   windDustPuffAt,
+  type FieldCrop,
   type RiverCraftDescription,
 } from '../../data/gizaEnvironment';
 import { GIZA_SKY, type CloudLayerDescription, type SkyKeyframe } from '../../data/gizaSky';
@@ -242,6 +245,10 @@ export class GizaEnvironment {
    *  on worker clothing stays still (Spec 06). Owned and disposed here. */
   private readonly clothMaterials: MeshStandardMaterial[] = [];
   private windDust: { puffs: InstancedMesh; material: MeshStandardMaterial } | null = null;
+  /** Waterline foam ribbons; opacity pulses gently with playback t. */
+  private foam: { mesh: InstancedMesh; material: MeshStandardMaterial } | null = null;
+  /** One-off materials outside the shared library (date fruit, etc.). */
+  private readonly extraMaterials: MeshStandardMaterial[] = [];
   private birds: {
     bodies: InstancedMesh;
     wings: InstancedMesh;
@@ -395,7 +402,15 @@ export class GizaEnvironment {
     const fields = new InstancedMesh(box, materials.farmland, fieldCount);
     fields.name = 'cultivated-field-parcels-and-planting-rows';
     const matrix = new Matrix4();
-    const fieldColors = [new Color('#70623c'), new Color('#637447'), new Color('#8a7d45')];
+    // Typed peret-season crop mosaic (Spec 08 §Ecology): growing emmer,
+    // ripening gold, pale flax, plowed fallow, and straw stubble.
+    const cropColors: Record<FieldCrop, Color> = {
+      'emmer-green': new Color('#5f7a3d'),
+      'emmer-ripe': new Color('#a8873c'),
+      flax: new Color('#7f9078'),
+      'fallow-plowed': new Color('#6b4f33'),
+      stubble: new Color('#97865a'),
+    };
     for (let i = 0; i < fieldCount; i += 1) {
       const parcel = fieldParcelAt(i);
       matrix.compose(
@@ -404,17 +419,63 @@ export class GizaEnvironment {
         new Vector3(13.6, 0.12, 5.3),
       );
       fields.setMatrixAt(i, matrix);
-      fields.setColorAt(i, fieldColors[(parcel.row + parcel.column * 2) % fieldColors.length]!);
+      fields.setColorAt(i, cropColors[parcel.crop]);
     }
     fields.receiveShadow = true;
     this.group.add(fields);
+
+    // Planted furrow ridges run the length of every parcel, tinted a shade
+    // darker than its crop state; low mud bunds wall each parcel for basin
+    // irrigation. Two instanced batches for the whole strip.
+    const furrowsPerParcel = 7;
+    const furrows = new InstancedMesh(box, materials.farmland, fieldCount * furrowsPerParcel);
+    furrows.name = 'cultivated-field-furrow-ridges';
+    const bunds = new InstancedMesh(box, materials.compactedEarth, fieldCount * 4);
+    bunds.name = 'cultivated-field-boundary-bunds';
+    const furrowTint = new Color();
+    for (let i = 0; i < fieldCount; i += 1) {
+      const parcel = fieldParcelAt(i);
+      const rotation = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), parcel.yaw);
+      const cos = Math.cos(parcel.yaw);
+      const sin = Math.sin(parcel.yaw);
+      // Parcel-local offset rotated into world (local x = long axis).
+      const place = (lx: number, lz: number) =>
+        new Vector3(parcel.x + lx * cos + lz * sin, 0, parcel.z - lx * sin + lz * cos);
+      furrowTint.copy(cropColors[parcel.crop]).multiplyScalar(0.68);
+      for (let row = 0; row < furrowsPerParcel; row += 1) {
+        const lz = -2.1 + row * 0.7;
+        const offset = place(0, lz);
+        matrix.compose(
+          new Vector3(offset.x, 0.16, offset.z),
+          rotation,
+          new Vector3(12.9, 0.1, 0.24),
+        );
+        furrows.setMatrixAt(i * furrowsPerParcel + row, matrix);
+        furrows.setColorAt(i * furrowsPerParcel + row, furrowTint);
+      }
+      const bundEdges: Array<[number, number, number, number]> = [
+        [0, -2.75, 13.9, 0.3],
+        [0, 2.75, 13.9, 0.3],
+        [-6.9, 0, 0.3, 5.6],
+        [6.9, 0, 0.3, 5.6],
+      ];
+      for (let edge = 0; edge < bundEdges.length; edge += 1) {
+        const [lx, lz, sx, sz] = bundEdges[edge]!;
+        const offset = place(lx, lz);
+        matrix.compose(new Vector3(offset.x, 0.16, offset.z), rotation, new Vector3(sx, 0.22, sz));
+        bunds.setMatrixAt(i * 4 + edge, matrix);
+      }
+    }
+    furrows.receiveShadow = true;
+    bunds.receiveShadow = true;
+    this.group.add(furrows, bunds);
 
     // Basin-irrigation feeders run in from the river, perpendicular to the
     // local bank (Spec 08: the strip follows the river).
     const irrigation = new InstancedMesh(box, materials.water, GIZA_ENVIRONMENT.irrigationChannels);
     irrigation.name = 'field-irrigation-channel-network';
     for (let i = 0; i < GIZA_ENVIRONMENT.irrigationChannels; i += 1) {
-      const x = -96 + i * 32;
+      const x = -100 + i * 21;
       matrix.compose(
         new Vector3(x, 0.16, greenbeltInnerEdgeAt(x) + 8),
         new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), channelTangentYawAt(x)),
@@ -446,6 +507,34 @@ export class GizaEnvironment {
     }
     this.group.add(banks);
 
+    // Waterline foam: thin pale ribbons riding both water edges (and the
+    // braid's outer edge), with a gentle t-phased wash pulse (Spec 06).
+    const foamMaterial = materials.whitewash.clone();
+    foamMaterial.transparent = true;
+    foamMaterial.opacity = 0.24;
+    foamMaterial.depthWrite = false;
+    const foam = new InstancedMesh(box, foamMaterial, bankSegments * 2);
+    foam.name = 'nile-waterline-foam';
+    foam.castShadow = false;
+    foam.receiveShadow = false;
+    for (let i = 0; i < bankSegments; i += 1) {
+      const x = -125 + ((i + 0.5) / bankSegments) * 230;
+      const tangent = channelTangentYawAt(x);
+      const rotation = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), tangent);
+      const half = riverWidthAt(x) / 2;
+      const braid = riverBraidAt(x);
+      const nearZ = riverCenterZAt(x) + half - 0.15;
+      const farZ = braid
+        ? braid.centerZ - braid.width / 2 + 0.15
+        : riverCenterZAt(x) - half + 0.15;
+      matrix.compose(new Vector3(x, 0.1, nearZ), rotation, new Vector3(6.4, 0.05, 0.55));
+      foam.setMatrixAt(i * 2, matrix);
+      matrix.compose(new Vector3(x, 0.1, farZ), rotation, new Vector3(6.4, 0.05, 0.55));
+      foam.setMatrixAt(i * 2 + 1, matrix);
+    }
+    this.foam = { mesh: foam, material: foamMaterial };
+    this.group.add(foam);
+
     this.addRiverVegetation(materials, box);
     this.addRiverBoats(materials);
     this.addDistantCity(materials, box);
@@ -459,13 +548,53 @@ export class GizaEnvironment {
     // Dead-frond skirt: wide end tucked under the crown, apex hanging down.
     const skirtGeometry = new ConeGeometry(0.52, 1.2, 7);
     skirtGeometry.rotateX(Math.PI);
-    this.geometries.push(reedGeometry, trunkGeometry, crownGeometry, skirtGeometry);
+    // Amber date bunches tucked under the crowns of fruiting bearers.
+    const fruitGeometry = new DodecahedronGeometry(0.17, 0);
+    this.geometries.push(reedGeometry, trunkGeometry, crownGeometry, skirtGeometry, fruitGeometry);
+
+    // The palm stand: three typed archetypes mixed through the rows plus a
+    // grove stand on the Memphis riverfront (Spec 08 §Ecology). Per-palm
+    // seeded streams keep every palm self-contained; grove slots that land
+    // on the braid are rejected outright, never shuffled.
+    const palmSpots: Array<{
+      x: number;
+      z: number;
+      archetype: ReturnType<typeof palmArchetypeAt>;
+      rng: () => number;
+    }> = [];
+    for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
+      const rng = mulberry32(`giza:palm-stand:${i}`);
+      const x = -108 + (i / (GIZA_ENVIRONMENT.palms - 1)) * 216 + (rng() - 0.5) * 4.5;
+      // Palm rows follow the meandering near bank (Spec 08).
+      const z = greenbeltInnerEdgeAt(x) + 2.0 + rng() * 14;
+      palmSpots.push({ x, z, archetype: palmArchetypeAt(i), rng });
+    }
+    for (let g = 0; g < GIZA_ENVIRONMENT.memphisGrovePalms; g += 1) {
+      const spot = grovePalmAt(g);
+      if (!spot) continue;
+      palmSpots.push({
+        x: spot.x,
+        z: spot.z,
+        archetype: palmArchetypeAt(10_000 + g),
+        rng: mulberry32(`giza:palm-grove:${g}`),
+      });
+    }
+    const frondTotal = palmSpots.reduce(
+      (total, spot) => total + spot.archetype.uprightFronds + spot.archetype.droopingFronds,
+      0,
+    );
+    const skirtTotal = palmSpots.filter((spot) => spot.archetype.skirt > 0).length;
+    const fruitTotal = palmSpots.filter((spot) => spot.archetype.fruit).length * 2;
+
     const reeds = new InstancedMesh(reedGeometry, materials.foliage, GIZA_ENVIRONMENT.reedClusters);
-    const trunks = new InstancedMesh(trunkGeometry, materials.wood, GIZA_ENVIRONMENT.palms);
-    const crowns = new InstancedMesh(crownGeometry, materials.foliage, GIZA_ENVIRONMENT.palms);
-    const skirts = new InstancedMesh(skirtGeometry, materials.wood, GIZA_ENVIRONMENT.palms);
-    const frondsPerPalm = 10;
-    const fronds = new InstancedMesh(frondGeometry, materials.foliage, GIZA_ENVIRONMENT.palms * frondsPerPalm);
+    const trunks = new InstancedMesh(trunkGeometry, materials.wood, palmSpots.length);
+    const crowns = new InstancedMesh(crownGeometry, materials.foliage, palmSpots.length);
+    const skirts = new InstancedMesh(skirtGeometry, materials.wood, Math.max(1, skirtTotal));
+    // Sun-cured amber: date bunches read as warm fruit against the crown.
+    const fruitMaterial = new MeshStandardMaterial({ color: '#bd7a2c', roughness: 0.75 });
+    this.extraMaterials.push(fruitMaterial);
+    const fruits = new InstancedMesh(fruitGeometry, fruitMaterial, Math.max(1, fruitTotal));
+    const fronds = new InstancedMesh(frondGeometry, materials.foliage, frondTotal);
     const random = mulberry32('giza:river-ecology:v3');
     const matrix = new Matrix4();
     const upperFrondColors = [new Color('#527a3a'), new Color('#5f8442'), new Color('#6d8f4b')];
@@ -491,44 +620,82 @@ export class GizaEnvironment {
     }
 
     let frondCursor = 0;
-    for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
-      const x = -108 + (i / (GIZA_ENVIRONMENT.palms - 1)) * 216 + (random() - 0.5) * 4.5;
-      // Palm rows follow the meandering near bank (Spec 08).
-      const z = greenbeltInnerEdgeAt(x) + 2.0 + random() * 14;
-      const height = 0.8 + random() * 0.42;
-      // Date palms lean a little; the crown shifts with the trunk's tilt.
-      const lean = 0.04 + random() * 0.06;
-      const leanAzimuth = random() * Math.PI * 2;
+    let skirtCursor = 0;
+    let fruitCursor = 0;
+    for (let i = 0; i < palmSpots.length; i += 1) {
+      const spot = palmSpots[i]!;
+      const { archetype, rng } = spot;
+      const height = archetype.height[0] + rng() * (archetype.height[1] - archetype.height[0]);
+      // The crown shifts with the trunk's tilt.
+      const lean = archetype.lean[0] + rng() * (archetype.lean[1] - archetype.lean[0]);
+      const leanAzimuth = rng() * Math.PI * 2;
       const tilt = new Quaternion().setFromEuler(
-        new Euler(lean * Math.cos(leanAzimuth), random() * Math.PI, lean * Math.sin(leanAzimuth), 'YXZ'),
+        new Euler(lean * Math.cos(leanAzimuth), rng() * Math.PI, lean * Math.sin(leanAzimuth), 'YXZ'),
       );
-      matrix.compose(new Vector3(x, 2.2 * height, z), tilt, new Vector3(1, height, 1));
+      matrix.compose(new Vector3(spot.x, 2.2 * height, spot.z), tilt, new Vector3(1, height, 1));
       trunks.setMatrixAt(i, matrix);
-      const crownX = x + 4.4 * height * Math.sin(lean) * Math.cos(leanAzimuth);
-      const crownZ = z + 4.4 * height * Math.sin(lean) * Math.sin(leanAzimuth);
+      const crownX = spot.x + 4.4 * height * Math.sin(lean) * Math.cos(leanAzimuth);
+      const crownZ = spot.z + 4.4 * height * Math.sin(lean) * Math.sin(leanAzimuth);
       const crownY = 4.42 * height;
-      matrix.compose(new Vector3(crownX, crownY, crownZ), new Quaternion(), new Vector3(1.25, 0.75, 1.25));
+      // Crown girth varies per palm: no two hearts match.
+      matrix.compose(
+        new Vector3(crownX, crownY, crownZ),
+        new Quaternion(),
+        new Vector3(1.05 + rng() * 0.45, 0.62 + rng() * 0.28, 1.05 + rng() * 0.45),
+      );
       crowns.setMatrixAt(i, matrix);
-      matrix.compose(new Vector3(crownX, crownY - 0.62 * height, crownZ), new Quaternion(), new Vector3(1, height, 1));
-      skirts.setMatrixAt(i, matrix);
-      // Two frond tiers: an upright young crown and a drooping older skirt
-      // row, each with its own color range (drier below).
-      const frondSpecs: (typeof this.palmSway)[number]['fronds'] = [];
-      for (let frond = 0; frond < frondsPerPalm; frond += 1) {
-        const upper = frond < 5;
-        const yaw = ((frond % 5) / 5) * Math.PI * 2 + (upper ? 0 : 0.63) + random() * 0.22;
-        const droop = upper ? -(0.3 + random() * 0.16) : -(0.72 + random() * 0.2);
-        const length = upper ? 3.6 + random() * 0.9 : 2.6 + random() * 0.7;
-        const width = 0.3 + random() * 0.14;
-        frondSpecs.push({ yaw, droop, length, width, phase: random() * Math.PI * 2 });
-        fronds.setColorAt(
-          frondCursor,
-          (upper ? upperFrondColors : lowerFrondColors)[Math.floor(random() * 3)]!,
+      if (archetype.skirt > 0) {
+        matrix.compose(
+          new Vector3(crownX, crownY - 0.62 * height * archetype.skirt, crownZ),
+          new Quaternion(),
+          new Vector3(archetype.skirt, height * (0.8 + archetype.skirt * 0.3), archetype.skirt),
         );
-        frondCursor += 1;
+        skirts.setMatrixAt(skirtCursor, matrix);
+        skirtCursor += 1;
+      }
+      if (archetype.fruit) {
+        const around = rng() * Math.PI * 2;
+        for (const cluster of [0, 2.3] as const) {
+          matrix.compose(
+            new Vector3(
+              crownX + Math.cos(around + cluster) * 0.38,
+              crownY - 0.34 * height,
+              crownZ + Math.sin(around + cluster) * 0.38,
+            ),
+            new Quaternion(),
+            new Vector3(1, 1.3, 1),
+          );
+          fruits.setMatrixAt(fruitCursor, matrix);
+          fruitCursor += 1;
+        }
+      }
+      // Two frond tiers: an upright young crown and a drooping older row,
+      // each with its own color range (drier below). Counts come from the
+      // archetype — a young palm carries almost no drooping tier.
+      const frondSpecs: (typeof this.palmSway)[number]['fronds'] = [];
+      const tiers: Array<{ count: number; upper: boolean }> = [
+        { count: archetype.uprightFronds, upper: true },
+        { count: archetype.droopingFronds, upper: false },
+      ];
+      for (const tier of tiers) {
+        for (let frond = 0; frond < tier.count; frond += 1) {
+          const yaw = (frond / Math.max(1, tier.count)) * Math.PI * 2 + (tier.upper ? 0 : 0.63) + rng() * 0.22;
+          const droop = tier.upper ? -(0.3 + rng() * 0.16) : -(0.72 + rng() * 0.2);
+          const length = (tier.upper ? 3.6 + rng() * 0.9 : 2.6 + rng() * 0.7) * Math.min(1, height);
+          const width = 0.3 + rng() * 0.14;
+          frondSpecs.push({ yaw, droop, length, width, phase: rng() * Math.PI * 2 });
+          fronds.setColorAt(
+            frondCursor,
+            (tier.upper ? upperFrondColors : lowerFrondColors)[Math.floor(rng() * 3)]!,
+          );
+          frondCursor += 1;
+        }
       }
       this.palmSway.push({ crownX, crownY, crownZ, fronds: frondSpecs });
     }
+    // Draw only placed instances: archetypes vary the counts per palm.
+    skirts.count = skirtCursor;
+    fruits.count = fruitCursor;
     this.palmFronds = fronds;
     // Frond matrices sway every frame; opt out of the stale-bounds cull.
     fronds.frustumCulled = false;
@@ -537,11 +704,13 @@ export class GizaEnvironment {
     trunks.name = 'greenbelt-palm-trunks';
     crowns.name = 'greenbelt-palm-hearts';
     skirts.name = 'greenbelt-palm-dead-frond-skirts';
+    fruits.name = 'greenbelt-date-fruit-clusters';
     fronds.name = 'greenbelt-individual-palm-fronds';
     trunks.castShadow = true;
     crowns.castShadow = true;
     fronds.castShadow = true;
-    this.group.add(reeds, trunks, crowns, skirts, fronds);
+    fruits.castShadow = false;
+    this.group.add(reeds, trunks, crowns, skirts, fruits, fronds);
   }
 
   /** Gentle frond sway in the northerly breeze; a pure function of t. */
@@ -910,7 +1079,9 @@ export class GizaEnvironment {
       matrix.compose(new Vector3(x, height + 0.02, z), new Quaternion(), new Vector3(1.75, 1, 1.75));
       domes.setMatrixAt(i, matrix);
     }
-    const walls = new InstancedMesh(cityGeometry, materials.whitewash, 42);
+    // Whitewashed riverfront wall with corner bastions and a long quay
+    // platform: the waterfront reads as a working harbor edge, not a fence.
+    const walls = new InstancedMesh(cityGeometry, materials.whitewash, 48);
     for (let i = 0; i < 42; i += 1) {
       matrix.compose(
         new Vector3(anchorX - 66 + i * 4.0, 1.1 + (i % 7 === 0 ? 0.7 : 0), anchorZ + 10.5),
@@ -919,7 +1090,23 @@ export class GizaEnvironment {
       );
       walls.setMatrixAt(i, matrix);
     }
-    const pylons = new InstancedMesh(cityGeometry, materials.cityAccent, 3);
+    for (let bastion = 0; bastion < 5; bastion += 1) {
+      matrix.compose(
+        new Vector3(anchorX - 66 + bastion * 41, 2.1, anchorZ + 10.5),
+        new Quaternion(),
+        new Vector3(2.6, 4.2, 1.7),
+      );
+      walls.setMatrixAt(42 + bastion, matrix);
+    }
+    matrix.compose(
+      new Vector3(anchorX - 2, 0.26, anchorZ + 12.6),
+      new Quaternion(),
+      new Vector3(118, 0.52, 2.4),
+    );
+    walls.setMatrixAt(47, matrix);
+    // Two temple gate pairs carry the skyline: the Ptah enclosure and a
+    // smaller sanctuary gate to the west (Spec 08).
+    const pylons = new InstancedMesh(cityGeometry, materials.cityAccent, 6);
     const pylonCenter = { x: anchorX + 14, z: anchorZ + 2 };
     matrix.compose(
       new Vector3(pylonCenter.x, 2.7, pylonCenter.z - 3.1),
@@ -939,6 +1126,25 @@ export class GizaEnvironment {
       new Vector3(2.4, 1, 4.6),
     );
     pylons.setMatrixAt(2, matrix);
+    const westGate = { x: anchorX - 38, z: anchorZ - 6 };
+    matrix.compose(
+      new Vector3(westGate.x, 2.1, westGate.z - 2.4),
+      new Quaternion(),
+      new Vector3(2.6, 4.2, 1.5),
+    );
+    pylons.setMatrixAt(3, matrix);
+    matrix.compose(
+      new Vector3(westGate.x, 2.1, westGate.z + 2.4),
+      new Quaternion(),
+      new Vector3(2.6, 4.2, 1.5),
+    );
+    pylons.setMatrixAt(4, matrix);
+    matrix.compose(
+      new Vector3(westGate.x, 3.8, westGate.z),
+      new Quaternion(),
+      new Vector3(1.9, 0.8, 3.7),
+    );
+    pylons.setMatrixAt(5, matrix);
     const obelisks = new InstancedMesh(obeliskGeometry, materials.cityAccent, 5);
     const pyramidions = new InstancedMesh(pyramidionGeometry, materials.whitewash, 5);
     const obeliskYaw = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), Math.PI / 4);
@@ -1479,13 +1685,17 @@ export class GizaEnvironment {
   private addOuterNecropolis(materials: MaterialLibrary): void {
     const box = new BoxGeometry(1, 1, 1);
     this.geometries.push(box);
-    const tombs = new InstancedMesh(box, materials.city, GIZA_ENVIRONMENT.mastabas);
+    // Bodies share one batch with their stepped upper tiers and chapel
+    // annexes (worst case: every tomb carries both).
+    const tombs = new InstancedMesh(box, materials.city, GIZA_ENVIRONMENT.mastabas * 3);
     const roofCaps = new InstancedMesh(box, materials.cityRoof, GIZA_ENVIRONMENT.mastabas);
     const falseDoors = new InstancedMesh(box, materials.cityAccent, GIZA_ENVIRONMENT.mastabas);
     const foundations = new InstancedMesh(box, materials.compactedEarth, GIZA_ENVIRONMENT.mastabas);
     const random = mulberry32('giza:outer-necropolis:v1');
     const matrix = new Matrix4();
     let cursor = 0;
+    // Bodies share their batch with tiers/annexes, so they count separately.
+    let tombCursor = 0;
     // One sweep of evenly spaced sectors, skipping any that fall on the
     // floodplain or on the working site. Sectors were previously retried in
     // place, so a blocked arc could exhaust the attempt budget and leave
@@ -1513,7 +1723,8 @@ export class GizaEnvironment {
       const height = 1.25 + random() * 1.45;
       const rotation = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), -theta);
       matrix.compose(new Vector3(x, height * 0.5, z), rotation, new Vector3(width, height, depth));
-      tombs.setMatrixAt(cursor, matrix);
+      tombs.setMatrixAt(tombCursor, matrix);
+      tombCursor += 1;
       matrix.compose(
         new Vector3(x, 0.06, z),
         rotation,
@@ -1533,10 +1744,36 @@ export class GizaEnvironment {
       );
       falseDoors.setMatrixAt(cursor, matrix);
       cursor += 1;
+      // Stepped upper tier on some mastabas, chapel annex on others: the
+      // cemetery is a century of building styles, not one stamp.
+      if (slot % 3 === 0) {
+        const tierHeight = height * 0.55;
+        matrix.compose(
+          new Vector3(x, height + 0.24 + tierHeight * 0.5, z),
+          rotation,
+          new Vector3(width * 0.68, tierHeight, depth * 0.68),
+        );
+        tombs.setMatrixAt(tombCursor, matrix);
+        tombCursor += 1;
+      }
+      if (slot % 4 === 1) {
+        matrix.compose(
+          new Vector3(
+            x - Math.cos(theta) * (depth * 0.5 + 0.9),
+            0.42,
+            z - Math.sin(theta) * (depth * 0.5 + 0.9),
+          ),
+          rotation,
+          new Vector3(width * 0.42, 0.84, 1.3),
+        );
+        tombs.setMatrixAt(tombCursor, matrix);
+        tombCursor += 1;
+      }
     }
     // Draw only what was placed; skipped sectors must not render as unset
     // identity instances sitting at the origin.
-    for (const mesh of [tombs, roofCaps, falseDoors, foundations]) mesh.count = cursor;
+    tombs.count = tombCursor;
+    for (const mesh of [roofCaps, falseDoors, foundations]) mesh.count = cursor;
     tombs.name = 'outer-necropolis-mastaba-bodies';
     roofCaps.name = 'outer-necropolis-mastaba-roof-caps';
     falseDoors.name = 'outer-necropolis-false-door-markers';
@@ -1729,6 +1966,10 @@ export class GizaEnvironment {
     this.updateWindDust(t);
     this.updateBirds(t);
     updateClothSwayTime(this.clothMaterials, t);
+    if (this.foam) {
+      // Lazy wave wash on the waterline; a pure function of playback t.
+      this.foam.material.opacity = 0.18 + 0.1 * (0.5 + 0.5 * Math.sin(t * Math.PI * 2 * 24));
+    }
     for (const layer of this.cloudLayers) {
       const { drift, baseOpacity } = layer.description;
       const [dx, , dz] = drift.worldDirection;
@@ -1883,7 +2124,9 @@ export class GizaEnvironment {
     for (const layer of this.cloudLayers) layer.material.dispose();
     this.campfires?.flameMaterial.dispose();
     for (const material of this.clothMaterials) material.dispose();
+    for (const material of this.extraMaterials) material.dispose();
     this.windDust?.material.dispose();
+    this.foam?.material.dispose();
     this.birds?.material.dispose();
   }
 }

@@ -295,7 +295,12 @@ describe('River craft geometry (era-correct silhouette)', () => {
     // reed cargo: nine instanced meshes for the entire river fleet. The bank
     // reed clusters and the egret flock are river ecology, not fleet — they
     // carry their own scene draw calls and their own contracts.
-    const ecology = new Set(['nile-bank-reed-clusters', 'nile-egret-bodies', 'nile-egret-wings']);
+    const ecology = new Set([
+      'nile-bank-reed-clusters',
+      'nile-egret-bodies',
+      'nile-egret-wings',
+      'nile-waterline-foam',
+    ]);
     const fleetMeshes = [...meshes.keys()].filter((name) => !ecology.has(name));
     expect(fleetMeshes.length).toBeLessThanOrEqual(9);
   });

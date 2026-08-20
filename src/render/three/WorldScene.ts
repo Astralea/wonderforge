@@ -8,7 +8,7 @@ import { gizaAmbientOrbitAt, gizaCinematicShotAt } from '../../engine/gizaCamera
 import { GizaWorld } from './GizaWorld';
 import { LegacyWorld } from './LegacyWorld';
 import { createMaterialLibrary, type MaterialLibrary } from './MaterialLibrary';
-import { updateMaterialDetailTime } from './proceduralDetail';
+import { updateMaterialDetailTime, updateWaterSky } from './proceduralDetail';
 import { RenderPipeline } from './RenderPipeline';
 import { readRendererDiagnostics } from './diagnostics';
 
@@ -120,6 +120,7 @@ export class WorldScene {
     const sunDirection = this.pipeline.updateLight(light);
     // Deterministic detail time (Nile ripple), phased from playback t.
     updateMaterialDetailTime(this.materials, lightT);
+    if (sky) updateWaterSky(this.materials, sky, sunDirection);
     return { light, sky, sunDirection };
   }
 

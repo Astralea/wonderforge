@@ -67,6 +67,22 @@ describe('material detail recipes', () => {
     }
   });
 
+  it('restricts the chop octave and analytic sky reflection to the water role', () => {
+    for (const recipe of MATERIAL_DETAIL_RECIPES) {
+      expect(recipe.skyReflection !== undefined).toBe(recipe.role === 'water');
+      expect(recipe.chop !== undefined).toBe(recipe.role === 'water');
+      // Chop is a second octave of the swell, never a standalone term.
+      if (recipe.chop) expect(recipe.ripple).toBeDefined();
+    }
+    const water = materialDetailFor('water');
+    // The chop is finer and faster than the broad swell, and the reflection
+    // stays subtle enough to keep the authored ripple read.
+    expect(water.chop!.scale).toBeGreaterThan(water.ripple!.scale);
+    expect(water.chop!.amplitude).toBeLessThan(water.ripple!.amplitude);
+    expect(water.skyReflection!.strength).toBeGreaterThan(0);
+    expect(water.skyReflection!.strength).toBeLessThanOrEqual(1);
+  });
+
   it('restricts normal relief to stone roles with a grain term to key the footprint fade', () => {
     const stoneRoles: MaterialDetailRole[] = [
       'core-limestone',

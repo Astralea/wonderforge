@@ -414,6 +414,86 @@ export function birdStateAt(index: number, t: number): BirdState {
 }
 
 /* ------------------------------------------------------------------ */
+/* Palm archetypes (a stand of individuals, not a clone row)           */
+/* ------------------------------------------------------------------ */
+
+export type PalmKind = 'date-tall' | 'date-young' | 'palm-old';
+
+export interface PalmArchetype {
+  kind: PalmKind;
+  /** Trunk height scale band (the shared trunk geometry is 4.4 units). */
+  height: [number, number];
+  /** Lean magnitude band (radians); old palms lean hardest. */
+  lean: [number, number];
+  uprightFronds: number;
+  droopingFronds: number;
+  /** Dead-frond skirt scale; 0 = no skirt (young palms carry none). */
+  skirt: number;
+  /** Amber date clusters tucked under the crown (fruiting bearers only). */
+  fruit: boolean;
+}
+
+const PALM_ARCHETYPES: Record<PalmKind, Omit<PalmArchetype, 'kind'>> = {
+  'date-tall': {
+    height: [1.0, 1.32],
+    lean: [0.03, 0.07],
+    uprightFronds: 6,
+    droopingFronds: 6,
+    skirt: 1,
+    fruit: true,
+  },
+  'date-young': {
+    height: [0.55, 0.8],
+    lean: [0.0, 0.04],
+    uprightFronds: 7,
+    droopingFronds: 2,
+    skirt: 0,
+    fruit: false,
+  },
+  'palm-old': {
+    height: [0.88, 1.12],
+    lean: [0.1, 0.18],
+    uprightFronds: 3,
+    droopingFronds: 7,
+    skirt: 1.3,
+    fruit: false,
+  },
+};
+
+/**
+ * Deterministic archetype assignment per palm-stand index — about half are
+ * fruiting bearers, with youngsters and gnarled elders mixed in. Pure: the
+ * same index always yields the same archetype, so the stand never reshuffles
+ * between plays.
+ */
+export function palmArchetypeAt(index: number): PalmArchetype {
+  const random = mulberry32(`giza:palm-archetype:${index}`);
+  const u = random();
+  const kind: PalmKind = u < 0.48 ? 'date-tall' : u < 0.76 ? 'date-young' : 'palm-old';
+  return { kind, ...PALM_ARCHETYPES[kind] };
+}
+
+/**
+ * Memphis riverfront palm groves, shading the levee path between the far
+ * waterline (channel or braid) and the riverside quay. Returns null where
+ * the braid squeezes the strip shut — a palm stand on the water or on the
+ * quay is a bug, not scenery — and the renderer skips rejected slots with
+ * count hygiene.
+ */
+export function grovePalmAt(index: number): { x: number; z: number } | null {
+  const random = mulberry32(`giza:memphis-grove:${index}`);
+  const [anchorX, , anchorZ] = GIZA_ENVIRONMENT.settlement.anchor;
+  const x = anchorX - 58 + random() * 112;
+  const half = riverWidthAt(x) / 2;
+  const braid = riverBraidAt(x);
+  const waterEdge = braid ? braid.centerZ - braid.width / 2 : riverCenterZAt(x) - half;
+  const z = waterEdge - 1.8 - random() * 2.2;
+  // The quay's river edge plus a trunk's width of walkway.
+  if (z < anchorZ + 14.6) return null;
+  return { x, z };
+}
+
+/* ------------------------------------------------------------------ */
 /* Cultivated strip (follows the near bank, never a fixed rectangle)   */
 /* ------------------------------------------------------------------ */
 
@@ -444,6 +524,34 @@ export function greenbeltInnerEdgeAt(x: number): number {
   return riverCenterZAt(x) + riverWidthAt(x) / 2 + GIZA_GREENBELT.bankOffset;
 }
 
+/**
+ * Peret-season crop states: after the inundation retreats, parcels run
+ * growing emmer (green), ripening emmer (gold), pale flowering flax,
+ * freshly plowed fallow, and post-harvest stubble side by side — the
+ * working mosaic reads from the reveal distance where a flat green
+ * checkerboard reads as a game board.
+ */
+export type FieldCrop = 'emmer-green' | 'emmer-ripe' | 'flax' | 'fallow-plowed' | 'stubble';
+
+const FIELD_CROP_WEIGHTS: Array<{ crop: FieldCrop; weight: number }> = [
+  { crop: 'emmer-green', weight: 0.34 },
+  { crop: 'emmer-ripe', weight: 0.22 },
+  { crop: 'flax', weight: 0.16 },
+  { crop: 'stubble', weight: 0.14 },
+  { crop: 'fallow-plowed', weight: 0.14 },
+];
+
+/** Deterministic crop assignment per parcel cell. */
+export function fieldCropAt(row: number, column: number): FieldCrop {
+  const random = mulberry32(`giza:field-crop:${row}:${column}`);
+  let u = random();
+  for (const { crop, weight } of FIELD_CROP_WEIGHTS) {
+    if (u < weight) return crop;
+    u -= weight;
+  }
+  return 'fallow-plowed';
+}
+
 export interface FieldParcel {
   x: number;
   z: number;
@@ -451,6 +559,7 @@ export interface FieldParcel {
   yaw: number;
   row: number;
   column: number;
+  crop: FieldCrop;
 }
 
 /** Deterministic field parcel placement following the near bank. */
@@ -459,7 +568,7 @@ export function fieldParcelAt(index: number, columns = 12): FieldParcel {
   const column = index % columns;
   const x = -108 + column * 17.8;
   const z = greenbeltInnerEdgeAt(x) + 3.0 + row * 6.9;
-  return { x, z, yaw: channelTangentYawAt(x), row, column };
+  return { x, z, yaw: channelTangentYawAt(x), row, column, crop: fieldCropAt(row, column) };
 }
 
 export interface RiverBraidSample {
@@ -544,6 +653,8 @@ export interface GizaEnvironmentPlan {
   fields: number;
   irrigationChannels: number;
   palms: number;
+  /** Palm-grove slots along the Memphis riverfront (some reject to water). */
+  memphisGrovePalms: number;
   reedClusters: number;
   riverBoats: number;
   cityBuildings: number;
@@ -787,9 +898,12 @@ const SETTLEMENT: SettlementDescription = {
 const ECOLOGY: EcologyDescription = {
   palms: {
     description:
-      'Date palms leaning over the greenbelt: tapered trunks, two tiers of ' +
-      'drooping fronds with per-instance color variation, dry dead-frond ' +
-      'skirts, and a gentle sway in the northerly breeze (pure function of t).',
+      'A stand of individuals, not a clone row: tall fruiting date palms ' +
+      'with amber clusters under the crown, young upright palms without ' +
+      'skirts, and old leaning palms with heavy dead-frond skirts — three ' +
+      'typed archetypes via palmArchetypeAt, plus a grove stand on the ' +
+      'Memphis riverfront (grovePalmAt), all swaying gently in the ' +
+      'northerly breeze (pure function of t).',
     historicalNote:
       'Date and doum palms lined the fields and provided fruit, fiber, and ' +
       'timber; they were never planted out on the bare plateau.',
@@ -802,11 +916,14 @@ const ECOLOGY: EcologyDescription = {
   },
   crops: {
     description:
-      'Fixed field parcels of emmer wheat, barley, and flax in peret green, ' +
-      'gridded by irrigation channels.',
+      'A working peret-season mosaic: parcels carry typed crop states ' +
+      '(growing emmer, ripening gold emmer, pale flax, plowed fallow, ' +
+      'straw stubble) via fieldCropAt, planted with furrow ridges and ' +
+      'walled by low mud boundary bunds, gridded by irrigation channels.',
     historicalNote:
       'Basin irrigation trapped floodwater in walled parcels; the scene ' +
-      'shows the growing season rather than the inundation (see era note).',
+      'shows the growing season rather than the inundation (see era note). ' +
+      'Emmer and flax were the dominant Old Kingdom field crops.',
   },
   birds: {
     description:
@@ -898,8 +1015,9 @@ export function createGizaEnvironmentPlan(): GizaEnvironmentPlan {
       samples,
     },
     fields: 36,
-    irrigationChannels: 7,
+    irrigationChannels: 10,
     palms: 56,
+    memphisGrovePalms: 30,
     reedClusters: 112,
     riverBoats: RIVER_CRAFT.reduce((total, craft) => total + craft.count, 0),
     cityBuildings: 168,

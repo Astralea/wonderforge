@@ -4,9 +4,16 @@ import { GIZA_CONSTRUCTION } from '../src/data/gizaConstruction';
 import {
   BIRD_FLOCK,
   birdStateAt,
+  fieldParcelAt,
+  GIZA_ENVIRONMENT,
+  grovePalmAt,
+  palmArchetypeAt,
+  riverBraidAt,
   riverCenterZAt,
+  riverWidthAt,
   WIND_DUST,
   windDustPuffAt,
+  type FieldCrop,
 } from '../src/data/gizaEnvironment';
 import { isClearOfSiteWorks, siteKeepOuts } from '../src/engine/siteClearance';
 import { gizaSunStateAt, sampleGizaSky } from '../src/data/gizaSky';
@@ -131,6 +138,74 @@ describe('river egret flock (Spec 08 §Era and place grounding)', () => {
   it('is a pure function of playback t', () => {
     expect(birdStateAt(7, 0.31)).toEqual(birdStateAt(7, 0.31));
     expect(birdStateAt(7, 0.31)).not.toEqual(birdStateAt(7, 0.32));
+  });
+});
+
+describe('palm archetypes (Spec 08 §Ecology)', () => {
+  it('assigns three deterministic archetypes across the stand', () => {
+    const kinds = new Set<string>();
+    for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
+      const archetype = palmArchetypeAt(i);
+      expect(archetype).toEqual(palmArchetypeAt(i)); // pure per index
+      kinds.add(archetype.kind);
+      expect(archetype.uprightFronds + archetype.droopingFronds).toBeGreaterThan(0);
+      expect(archetype.height[0]).toBeGreaterThan(0.4);
+      expect(archetype.height[1]).toBeLessThanOrEqual(1.4);
+      if (archetype.kind === 'date-tall') expect(archetype.fruit).toBe(true);
+      if (archetype.kind === 'date-young') {
+        expect(archetype.skirt).toBe(0);
+        expect(archetype.fruit).toBe(false);
+      }
+      if (archetype.kind === 'palm-old') expect(archetype.lean[0]).toBeGreaterThanOrEqual(0.1);
+    }
+    expect(kinds).toEqual(new Set(['date-tall', 'date-young', 'palm-old']));
+  });
+
+  it('keeps the Memphis riverfront groves out of the channel and the braid', () => {
+    const [anchorX, , anchorZ] = GIZA_ENVIRONMENT.settlement.anchor;
+    let placed = 0;
+    let rejected = 0;
+    for (let i = 0; i < GIZA_ENVIRONMENT.memphisGrovePalms; i += 1) {
+      const grove = grovePalmAt(i);
+      expect(grove).toEqual(grovePalmAt(i)); // pure per index
+      if (!grove) {
+        rejected += 1;
+        continue;
+      }
+      placed += 1;
+      expect(grove.x).toBeGreaterThanOrEqual(anchorX - 58);
+      expect(grove.x).toBeLessThanOrEqual(anchorX + 54);
+      // Clear of the main channel water, plus a margin for the trunk.
+      expect(Math.abs(grove.z - riverCenterZAt(grove.x)))
+        .toBeGreaterThan(riverWidthAt(grove.x) / 2 + 0.5);
+      // And clear of the braided side channel where it exists.
+      const braid = riverBraidAt(grove.x);
+      if (braid) {
+        expect(Math.abs(grove.z - braid.centerZ)).toBeGreaterThan(braid.width / 2 + 0.5);
+      }
+      // Landward of the quay's river edge is the city's; groves stay on the
+      // levee path with a trunk's width of walkway.
+      expect(grove.z).toBeGreaterThanOrEqual(anchorZ + 14.6);
+    }
+    // Both outcomes must occur: a braid-squeezed slot rejects instead of
+    // growing a palm out of the water.
+    expect(placed).toBeGreaterThan(10);
+    expect(rejected).toBeGreaterThan(0);
+  });
+});
+
+describe('field crop mosaic (Spec 08 §Ecology)', () => {
+  it('assigns every parcel a typed, deterministic peret-season crop state', () => {
+    const allowed: FieldCrop[] = ['emmer-green', 'emmer-ripe', 'flax', 'fallow-plowed', 'stubble'];
+    const seen = new Set<FieldCrop>();
+    for (let i = 0; i < GIZA_ENVIRONMENT.fields; i += 1) {
+      const parcel = fieldParcelAt(i);
+      expect(allowed).toContain(parcel.crop);
+      expect(fieldParcelAt(i).crop).toBe(parcel.crop); // pure per index
+      seen.add(parcel.crop);
+    }
+    // The mosaic only reads if every state actually appears.
+    expect(seen.size).toBe(allowed.length);
   });
 });
 
