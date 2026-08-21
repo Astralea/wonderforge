@@ -5,6 +5,7 @@ import { WonderCanvas } from '../render/WonderCanvas';
 import { usePlaybackStore } from '../store/playback';
 import { useUiStore } from '../store/ui';
 import { prefersReducedMotion } from './a11y';
+import { CaptionLayer } from './CaptionLayer';
 import { FactsPanel } from './FactsPanel';
 import { QuoteOverlay } from './QuoteOverlay';
 import { TransportBar } from './TransportBar';
@@ -132,6 +133,10 @@ export function CinematicView() {
         }`}
         aria-hidden
       />
+
+      {/* Caption layer: above the letterbox, outside the chrome — it stays
+          while the chrome hides (Spec 05 §Caption layer). */}
+      <CaptionLayer wonder={wonder} />
 
       <div className={`transition-opacity duration-500 ${chrome}`}>
         <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5">

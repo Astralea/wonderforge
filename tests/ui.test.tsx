@@ -106,6 +106,32 @@ describe('cinematic view', () => {
     );
   });
 
+  it('caption layer: beats appear while playing at 1×, never in gaps, at speed, or at the reveal', () => {
+    openWonder(); // status 'playing', speed 1
+    // Inside Giza's first beat (0.18–0.30): the quarry caption shows.
+    act(() => usePlaybackStore.getState().seek(0.24));
+    expect(screen.getByText('The Quarry')).toBeInTheDocument();
+
+    // The gap between beats (0.46–0.50) shows nothing.
+    act(() => usePlaybackStore.getState().seek(0.48));
+    expect(screen.queryByText('The Quarry')).not.toBeInTheDocument();
+    expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+
+    // The reveal stays clean.
+    act(() => usePlaybackStore.getState().seek(0.95));
+    expect(screen.queryByText('The Horizon')).not.toBeInTheDocument();
+
+    // At 2× the read time would compress past honesty: no captions.
+    fireEvent.click(screen.getByRole('button', { name: '2× speed' }));
+    act(() => usePlaybackStore.getState().seek(0.54));
+    expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+
+    // Back at 1× the same window shows the caption again.
+    fireEvent.click(screen.getByRole('button', { name: '1× speed' }));
+    act(() => usePlaybackStore.getState().seek(0.54));
+    expect(screen.getByText('The Ramps')).toBeInTheDocument();
+  });
+
   it('next/previous navigate the catalog in order', () => {
     openWonder(); // pyramids-of-giza is first
     fireEvent.click(screen.getByRole('button', { name: /next wonder/i }));

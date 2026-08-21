@@ -232,6 +232,20 @@ The Giza scene now has:
   measures 158 calls vs the 150 advisory budget — pre-existing Tier 4
   content volume at that beat (proved with a swing-0 attribution capture),
   not the swing; trim mobile instances if it ever bites in profiling;
+- a cinematic caption layer (owner request, Spec 05 §Caption layer):
+  authored documentary lower-thirds fade in over the playing movie, hold a
+  full-opacity plateau long enough to read, and fade out — typed beats in
+  `src/data/captions.ts` (t-window, placement, small-caps kicker, one
+  authentic sentence each — Giza's track mirrors the scene's own vetted
+  historicalNotes; other wonders derive two beats verbatim from catalog
+  facts), pure envelope in `src/engine/captions.ts` (opacity is a pure
+  function of t — pause/scrub freeze a caption mid-fade), rendered by
+  `src/ui/CaptionLayer.tsx` outside the auto-hiding chrome, above the
+  letterbox. Playing-only, 1×-only, never under reduced motion, disjoint
+  windows with reading gaps, and nothing crosses the reveal (t ≥ 0.88);
+  `aria-live="polite"` announces beats in order. Verified in the live app
+  (chrome-devtools MCP): "THE ROADS" caption captured over the playing
+  movie at t=0.196 with chrome hidden and letterbox in.
 - a palm-stand variety v2 (owner report: "all the trees seem to look the
   same" — Tier 3 varied parameters on ONE morphology, which reads as one
   stamp at movie distance). Now silhouette-level variety via a generative
@@ -443,11 +457,11 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after the palm-stand v2 pass:
+The required verification passed after the caption-layer pass:
 
 ```text
-25 test files
-279 tests
+26 test files
+285 tests
 npm run typecheck: passed
 npm run build: passed
 ```
