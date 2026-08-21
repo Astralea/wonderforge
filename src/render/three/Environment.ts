@@ -17,6 +17,7 @@ import {
   PointLight,
   Quaternion,
   SphereGeometry,
+  TorusGeometry,
   Vector3,
 } from 'three';
 import type { GizaConstructionPlan, MonumentId, Vec3 } from '../../data/constructionTypes';
@@ -50,6 +51,7 @@ import { GIZA_SKY, type CloudLayerDescription, type SkyKeyframe } from '../../da
 import type { LightState } from '../../engine/daynight';
 import { smoothstep } from '../../engine/easing';
 import { mulberry32 } from '../../engine/random';
+import { gizaWaveHeightAt } from '../../engine/waveField';
 import type { MaterialLibrary } from './MaterialLibrary';
 import { applyClothSway, updateClothSwayTime } from './proceduralDetail';
 import { SkyDome } from './SkyDome';
@@ -170,6 +172,11 @@ function braidRibbonGeometry(y: number): BufferGeometry | null {
   return geometry;
 }
 
+/** Trail segments per moving hull (plus one bow pulse). */
+const WAKE_SEGMENTS = 9;
+/** Per-segment lookback in movie time — the wake replays the boat's own path. */
+const WAKE_DT = 0.012;
+
 interface RampVisual {
   monument: Exclude<MonumentId, 'temple'>;
   /** World placement (center + yaw), premultiplied onto every local matrix. */
@@ -220,6 +227,13 @@ export class GizaEnvironment {
     oars: InstancedMesh;
     cargo: InstancedMesh;
     bundles: InstancedMesh;
+    wakes: InstancedMesh;
+    crewBodies: InstancedMesh;
+    crewHeads: InstancedMesh;
+    jars: InstancedMesh;
+    coils: InstancedMesh;
+    mooringStake: Mesh;
+    mooringRope: InstancedMesh;
   } | null = null;
   private readonly palmSway: Array<{
     crownX: number;
@@ -897,7 +911,82 @@ export class GizaEnvironment {
     const cargo = new InstancedMesh(cargoGeometry, materials.block['casing-limestone'], cargoCount);
     const bundles = new InstancedMesh(bundleGeometry, materials.cityAccent, bundleCount);
 
-    this.boatFleet = { hulls, reedHulls, masts, yards, booms, sails, oars, cargo, bundles };
+    // Living-water fittings (Spec 08 §Living environment): a fading foam
+    // wake trailing every moving hull, a two-figure deck crew, a water jar
+    // and a rope coil per deck; the moored skiff instead gets a bank stake
+    // and a rope that rides its bow. (This block runs before `this.boats`
+    // is populated below — counts come straight from the fleet plan.)
+    const movingCount = fleet
+      .filter((craft) => craft.kind !== 'reed-skiff')
+      .reduce((total, craft) => total + craft.count, 0);
+    const wakeGeometry = new BoxGeometry(1, 0.04, 1);
+    const crewBodyGeometry = new CylinderGeometry(0.16, 0.2, 0.62, 6);
+    const crewHeadGeometry = new SphereGeometry(0.11, 6, 5);
+    const jarGeometry = new CylinderGeometry(0.09, 0.13, 0.3, 7);
+    const coilGeometry = new TorusGeometry(0.16, 0.05, 5, 10);
+    coilGeometry.rotateX(Math.PI / 2);
+    const stakeGeometry = new CylinderGeometry(0.05, 0.07, 0.55, 5);
+    const ropeGeometry = new CylinderGeometry(0.025, 0.025, 1, 4);
+    ropeGeometry.translate(0, 0.5, 0);
+    this.geometries.push(
+      wakeGeometry,
+      crewBodyGeometry,
+      crewHeadGeometry,
+      jarGeometry,
+      coilGeometry,
+      stakeGeometry,
+      ropeGeometry,
+    );
+    const wakeMaterial = materials.whitewash.clone();
+    wakeMaterial.transparent = true;
+    wakeMaterial.opacity = 0.3;
+    wakeMaterial.depthWrite = false;
+    this.extraMaterials.push(wakeMaterial);
+    const wakes = new InstancedMesh(wakeGeometry, wakeMaterial, movingCount * (WAKE_SEGMENTS + 1));
+    const crewBodies = new InstancedMesh(crewBodyGeometry, materials.linen, movingCount * 2);
+    const crewHeads = new InstancedMesh(crewHeadGeometry, materials.skin, movingCount * 2);
+    const jars = new InstancedMesh(jarGeometry, materials.cityRoof, movingCount);
+    const coils = new InstancedMesh(coilGeometry, materials.rope, movingCount);
+    const mooringStake = new Mesh(stakeGeometry, materials.wood);
+    const mooringRope = new InstancedMesh(ropeGeometry, materials.rope, 1);
+    wakes.castShadow = false;
+    crewBodies.castShadow = true;
+    crewHeads.castShadow = true;
+    wakes.name = 'nile-boat-wake-ribbons';
+    crewBodies.name = 'nile-boat-crew-bodies';
+    crewHeads.name = 'nile-boat-crew-heads';
+    jars.name = 'nile-boat-water-jars';
+    coils.name = 'nile-boat-rope-coils';
+    mooringStake.name = 'nile-skiff-mooring-stake';
+    mooringRope.name = 'nile-skiff-mooring-rope';
+    // The stake is static; compute it from the skiff's moored state (the
+    // skiff is the fleet's last craft, so its global index is the last one).
+    {
+      const skiffCraft = fleet.find((craft) => craft.kind === 'reed-skiff')!;
+      const skiff = riverCraftStateAt(skiffCraft, totalBoats - 1, 0);
+      mooringStake.position.set(skiff.x + 1.9, 0.28, skiff.z + 1.5);
+      mooringStake.quaternion.setFromAxisAngle(new Vector3(0, 0, 1), -0.12);
+    }
+    this.group.add(wakes, crewBodies, crewHeads, jars, coils, mooringStake, mooringRope);
+
+    this.boatFleet = {
+      hulls,
+      reedHulls,
+      masts,
+      yards,
+      booms,
+      sails,
+      oars,
+      cargo,
+      bundles,
+      wakes,
+      crewBodies,
+      crewHeads,
+      jars,
+      coils,
+      mooringStake,
+      mooringRope,
+    };
     // Fleet matrices are rewritten every frame; the first-render bounds cache
     // would camera-cull the boats while their shadows persist (see BlockSystem).
     for (const item of Object.values(this.boatFleet)) item.frustumCulled = false;
@@ -921,10 +1010,27 @@ export class GizaEnvironment {
     this.group.add(hulls, reedHulls, masts, yards, booms, sails, oars, cargo, bundles);
   }
 
-  /** Boat drift, bob, and roll — all pure functions of playback t (Spec 08). */
+  /** Boat motion, wakes, and deck life — all pure functions of t (Spec 08). */
   private updateBoats(t: number): void {
     if (!this.boatFleet) return;
-    const { hulls, reedHulls, masts, yards, booms, sails, oars, cargo, bundles } = this.boatFleet;
+    const {
+      hulls,
+      reedHulls,
+      masts,
+      yards,
+      booms,
+      sails,
+      oars,
+      cargo,
+      bundles,
+      wakes,
+      crewBodies,
+      crewHeads,
+      jars,
+      coils,
+      mooringStake,
+      mooringRope,
+    } = this.boatFleet;
     const matrix = new Matrix4();
     const up = new Vector3(0, 1, 0);
     const down = new Vector3(0, -1, 0);
@@ -934,10 +1040,14 @@ export class GizaEnvironment {
     let oarIndex = 0;
     let cargoIndex = 0;
     let bundleIndex = 0;
+    let wakeIndex = 0;
+    let crewIndex = 0;
+    let detailIndex = 0;
     for (const boat of this.boats) {
       const state = riverCraftStateAt(boat.craft, boat.globalIndex, t);
       const rotation = new Quaternion().setFromEuler(
-        new Euler(state.roll, state.yaw, 0, 'YXZ'),
+        // Bow/stern pitch about the beam axis, heel roll, then heading.
+        new Euler(state.roll, state.yaw, state.pitch, 'YXZ'),
       );
       const origin = new Vector3(state.x, state.bobY, state.z);
       const isSkiff = boat.craft.kind === 'reed-skiff';
@@ -955,6 +1065,59 @@ export class GizaEnvironment {
         );
         hulls.setMatrixAt(hullIndex, matrix);
         hullIndex += 1;
+
+        // Wake: the boat's own recent path, fading and spreading astern.
+        // A lookback across the wrap point would streak across the world —
+        // collapse those segments to zero scale instead (deterministic).
+        for (let k = 1; k <= WAKE_SEGMENTS; k += 1) {
+          const past = riverCraftStateAt(boat.craft, boat.globalIndex, t - k * WAKE_DT);
+          const jumped = Math.abs(past.x - state.x) > 24;
+          const fade = 1 - k / (WAKE_SEGMENTS + 1);
+          // Hulls are long along local x (bow +x): astern is −(cos, −sin)
+          // of the past heading — never the bird flock's +z convention.
+          matrix.compose(
+            new Vector3(
+              past.x - Math.cos(past.yaw) * 0.9,
+              0.1 + gizaWaveHeightAt(past.x, past.z, t) * 0.4,
+              past.z + Math.sin(past.yaw) * 0.9,
+            ),
+            new Quaternion().setFromAxisAngle(up, past.yaw),
+            jumped
+              ? new Vector3(0, 0, 0)
+              : new Vector3((0.55 + k * 0.24) * fade, 1, 1.05 * fade),
+          );
+          wakes.setMatrixAt(wakeIndex, matrix);
+          wakeIndex += 1;
+        }
+        // Bow pulse: a small bright ellipse breathing with the bow wave.
+        const bowPulse = 0.55 + 0.2 * Math.sin(state.pitch * 14 + t * Math.PI * 2 * 2.2 + boat.globalIndex * 1.7);
+        matrix.compose(
+          place(new Vector3(1.95, -state.bobY + 0.11, 0)),
+          rotation,
+          new Vector3(1.2 * bowPulse, 1, 0.75 * bowPulse),
+        );
+        wakes.setMatrixAt(wakeIndex, matrix);
+        wakeIndex += 1;
+
+        // Deck crew: helmsman aft between the quarter oars, a hand forward;
+        // figures stand upright while their footing rides the hull.
+        const upright = new Quaternion().setFromAxisAngle(up, state.yaw);
+        for (const local of [
+          new Vector3(-1.5, 0.62, 0),
+          new Vector3(0.7, 0.6, 0.18),
+        ]) {
+          matrix.compose(place(local), upright, new Vector3(1, 1, 1));
+          crewBodies.setMatrixAt(crewIndex, matrix);
+          matrix.compose(place(local.clone().add(new Vector3(0, 0.42, 0))), upright, new Vector3(1, 1, 1));
+          crewHeads.setMatrixAt(crewIndex, matrix);
+          crewIndex += 1;
+        }
+        // Deck detail: one water jar and one rope coil per moving hull.
+        matrix.compose(place(new Vector3(-0.4, 0.52, -0.3)), rotation, new Vector3(1, 1, 1));
+        jars.setMatrixAt(detailIndex, matrix);
+        matrix.compose(place(new Vector3(0.2, 0.52, 0.34)), rotation, new Vector3(1, 1, 1));
+        coils.setMatrixAt(detailIndex, matrix);
+        detailIndex += 1;
       }
       if (boat.craft.squareSail) {
         // Bipod (A-frame) mast: two legs from the deck to a centerline apex.
@@ -978,13 +1141,15 @@ export class GizaEnvironment {
         sailIndex += 1;
       }
       // Quarter steering oars mounted on the raised stern quarters, blades
-      // dipping into the water, handles leaning inboard over the deck.
+      // dipping into the water; the steersman sweeps them, biased into turns.
       const oarSides = isSkiff ? [1] : [-1, 1];
       const oarPivotX = isSkiff ? -1.35 : -1.85;
       const oarPivotY = isSkiff ? 0.62 : 0.5;
       const oarPivotZ = isSkiff ? 0.28 : 0.5;
       for (const side of oarSides) {
-        const direction = new Vector3(-0.78, -0.72, 0.28 * side).normalize();
+        const direction = new Vector3(-0.78, -0.72, 0.28 * side)
+          .applyAxisAngle(up, state.oarSweep)
+          .normalize();
         const oarRotation = rotation
           .clone()
           .multiply(new Quaternion().setFromUnitVectors(down, direction));
@@ -995,6 +1160,19 @@ export class GizaEnvironment {
         );
         oars.setMatrixAt(oarIndex, matrix);
         oarIndex += 1;
+      }
+      if (isSkiff) {
+        // Mooring rope: stake on the bank to the bow cleat, riding the bow.
+        const bow = place(new Vector3(1.55, -state.bobY + 0.42, 0));
+        const stakeTop = mooringStake.position.clone().add(new Vector3(0, 0.26, 0));
+        const span = bow.clone().sub(stakeTop);
+        const ropeLength = span.length();
+        matrix.compose(
+          stakeTop,
+          new Quaternion().setFromUnitVectors(up, span.normalize()),
+          new Vector3(1, ropeLength, 1),
+        );
+        mooringRope.setMatrixAt(0, matrix);
       }
       if (boat.craft.cargo === 'tura-casing-stones') {
         for (let block = 0; block < 4; block += 1) {
@@ -1028,6 +1206,12 @@ export class GizaEnvironment {
     oars.instanceMatrix.needsUpdate = true;
     cargo.instanceMatrix.needsUpdate = true;
     bundles.instanceMatrix.needsUpdate = true;
+    wakes.instanceMatrix.needsUpdate = true;
+    crewBodies.instanceMatrix.needsUpdate = true;
+    crewHeads.instanceMatrix.needsUpdate = true;
+    jars.instanceMatrix.needsUpdate = true;
+    coils.instanceMatrix.needsUpdate = true;
+    mooringRope.instanceMatrix.needsUpdate = true;
   }
 
   private addDistantCity(materials: MaterialLibrary, cityGeometry: BoxGeometry): void {

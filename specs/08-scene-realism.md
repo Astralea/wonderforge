@@ -100,8 +100,18 @@ verification recipes.
   water, survey, and animal traffic uses deterministic loops outside masonry.
 - The river is alive: barges drift north with the current, square-sail boats
   run south on the prevailing northerlies, and the moored skiff bobs at the
-  bank. Position, heading, bob, and roll are pure functions of playback `t`,
-  and hulls always stay inside the channel.
+  bank. Everything is a pure function of playback `t`, and hulls always stay
+  inside the channel. Craft move at a perceptible pace (a hull length in
+  seconds, not per film) along the channel's true arc length — ground speed
+  never surges through bends — with a slow gust breathing on top. Heading
+  lags the tangent slightly and weaves gently; hulls heel into turns and
+  ride the same ripple field the water shader draws (bob and pitch from the
+  wave height at bow and stern). Quarter steering oars sweep slowly, biased
+  into the turn. Moving hulls trail a fading foam wake ribbon and carry a
+  small deck crew (helmsman aft, hand forward) and deck detail (water jar,
+  rope coil); the moored skiff instead shows a mooring rope to a bank stake
+  and emits no wake. A larger kite flock works the thermals over the
+  cultivated strip, clear of all masonry.
 - Palms are a stand of individuals, not a clone row: three typed archetypes
   assigned by pure function — tall fruiting date palms (full two-tier crowns,
   amber date clusters under the crown), young upright palms (fewer fronds,

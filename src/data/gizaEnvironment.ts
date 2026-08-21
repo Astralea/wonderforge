@@ -8,7 +8,8 @@
  */
 
 import { mulberry32 } from '../engine/random';
-import { smoothstep } from '../engine/easing';
+import { clamp, smoothstep } from '../engine/easing';
+import { gizaWaveHeightAt, gizaWaveSampleAt } from '../engine/waveField';
 import type { Vec3 } from './constructionTypes';
 import { GIZA_SKY } from './gizaSky';
 
@@ -172,15 +173,79 @@ export interface BoatKinematics {
   yaw: number;
   bobY: number;
   roll: number;
+  /** Bow-up positive pitch, from the wave height difference bow vs stern. */
+  pitch: number;
+  /** Quarter-oar blade angle about its pivot (radians), biased into turns. */
+  oarSweep: number;
+  /** Ground speed in world units per movie (0 when moored); drives wakes. */
+  groundSpeed: number;
+}
+
+/* Channel arc-length parameterization: boats advance by distance ALONG the
+ * meander, not by raw x, so ground speed never surges through bends. The
+ * table derives from the typed centerline once, deterministically. */
+const CHANNEL_ARC_START = -118;
+const CHANNEL_ARC_END = 98;
+const CHANNEL_ARC_SAMPLES = 256;
+let channelArcCache: readonly { x: number; s: number }[] | null = null;
+
+function channelArcSamples(): readonly { x: number; s: number }[] {
+  if (channelArcCache) return channelArcCache;
+  const samples: { x: number; s: number }[] = [{ x: CHANNEL_ARC_START, s: 0 }];
+  let prevZ = riverCenterZAt(CHANNEL_ARC_START);
+  for (let i = 1; i <= CHANNEL_ARC_SAMPLES; i += 1) {
+    const x = CHANNEL_ARC_START +
+      ((CHANNEL_ARC_END - CHANNEL_ARC_START) * i) / CHANNEL_ARC_SAMPLES;
+    const z = riverCenterZAt(x);
+    samples.push({ x, s: samples[i - 1]!.s + Math.hypot(x - samples[i - 1]!.x, z - prevZ) });
+    prevZ = z;
+  }
+  channelArcCache = samples;
+  return samples;
+}
+
+/** Arc length along the channel centerline at world x (clamped, lerp). */
+export function channelArcLengthAt(x: number): number {
+  const samples = channelArcSamples();
+  if (x <= CHANNEL_ARC_START) return 0;
+  if (x >= CHANNEL_ARC_END) return samples[samples.length - 1]!.s;
+  const u = (x - CHANNEL_ARC_START) / (CHANNEL_ARC_END - CHANNEL_ARC_START);
+  const f = u * CHANNEL_ARC_SAMPLES;
+  const i = Math.min(CHANNEL_ARC_SAMPLES - 1, Math.floor(f));
+  const a = samples[i]!;
+  const b = samples[i + 1]!;
+  return a.s + (b.s - a.s) * (f - i);
+}
+
+/** World x at channel arc length s (binary search + lerp over the table). */
+export function channelXAtArc(s: number): number {
+  const samples = channelArcSamples();
+  const total = samples[samples.length - 1]!.s;
+  const clamped = Math.min(Math.max(s, 0), total);
+  let lo = 0;
+  let hi = samples.length - 1;
+  while (hi - lo > 1) {
+    const mid = (lo + hi) >> 1;
+    if (samples[mid]!.s <= clamped) lo = mid;
+    else hi = mid;
+  }
+  const a = samples[lo]!;
+  const b = samples[hi]!;
+  const spanS = Math.max(1e-9, b.s - a.s);
+  return a.x + (b.x - a.x) * ((clamped - a.s) / spanS);
 }
 
 /**
  * Deterministic boat motion on the channel (Spec 08 §Living environment):
  * barges drift north (+x) with the current, square-sail boats run south on
- * the prevailing northerlies, the skiff stays moored. Everything — lane,
- * start position, drift, bob, roll — derives from the craft description,
- * the fleet index, and playback `t`. Speeds are slow enough that no hull
- * reaches a ribbon end within one movie even at 4× (wrap is a safety net).
+ * the prevailing northerlies, the skiff stays moored. Craft advance by arc
+ * length along the meander at a perceptible pace, breathing with a slow
+ * gust cycle; heading lags the tangent slightly astern and weaves; hulls
+ * heel into turns and ride the CPU twin of the water shader's wave field
+ * (bob from the mean of bow/stern heights, pitch from their difference,
+ * roll from the beam slope plus the heel). Speeds are slow enough that no
+ * hull reaches a ribbon end within one movie even at 4× (wrap is a safety
+ * net).
  */
 export function riverCraftStateAt(
   craft: RiverCraftDescription,
@@ -190,29 +255,93 @@ export function riverCraftStateAt(
   const random = mulberry32(`giza:boat:${craft.id}:${globalIndex}`);
   const lane = random() - 0.5;
   const phase = random() * Math.PI * 2;
+  const gustPhase = random() * Math.PI * 2;
+  const weavePhase = random() * Math.PI * 2;
   const x0 = -100 + globalIndex * 26 + (random() - 0.5) * 8;
-  const speed =
-    craft.kind === 'cargo-barge' ? 8 : craft.kind === 'sailing-boat' ? 12 : 0;
+
+  if (craft.kind === 'reed-skiff') {
+    // Moored at the near bank: the current never takes it, but the wave
+    // field still rocks it against its mooring rope.
+    const x = x0;
+    const half = riverWidthAt(x) / 2;
+    const z = riverCenterZAt(x) + half - 1.6;
+    const tangent = channelTangentYawAt(x);
+    const bow = gizaWaveSampleAt(x + 1.2, z, t);
+    const stern = gizaWaveSampleAt(x - 1.2, z, t);
+    return {
+      x,
+      z,
+      yaw: 0.42 + tangent,
+      bobY: 0.47 + ((bow.height + stern.height) / 2) * 0.8,
+      roll: bow.slopeZ * 0.35,
+      pitch: Math.atan((bow.height - stern.height) / 2.4) * 0.8,
+      oarSweep: 0,
+      groundSpeed: 0,
+    };
+  }
+
   const direction = craft.heading === 'upstream-south' ? -1 : 1;
-  const spanStart = -118;
-  const span = 216;
-  const raw = x0 + direction * speed * t;
-  const x = spanStart + (((raw - spanStart) % span) + span) % span;
+  // Perceptible pace: a hull length in seconds, not two per film.
+  const baseSpeed = craft.kind === 'cargo-barge' ? 26 : 40;
+  // Gust breathing: speed(t) = base·(0.82 + 0.18·sin(ωt+φ)), integrated in
+  // closed form so position stays a pure function of t (no frame-stepping).
+  const gustFreq = 2.1 + (globalIndex % 3) * 0.4;
+  const omega = Math.PI * 2 * gustFreq;
+  const gustDistance = (tt: number) =>
+    baseSpeed * (0.82 * tt - (0.18 * Math.cos(omega * tt + gustPhase)) / omega);
+  const groundSpeed = baseSpeed * (0.82 + 0.18 * Math.sin(omega * t + gustPhase));
+
+  const samples = channelArcSamples();
+  const arcStart = samples[0]!.s;
+  const arcSpan = samples[samples.length - 1]!.s - arcStart;
+  const s0 = channelArcLengthAt(x0);
+  const raw = s0 + direction * gustDistance(t);
+  const s = arcStart + (((raw - arcStart) % arcSpan) + arcSpan) % arcSpan;
+  const x = channelXAtArc(s);
   const half = riverWidthAt(x) / 2;
   const centerZ = riverCenterZAt(x);
-  const z = craft.kind === 'reed-skiff'
-    ? centerZ + half - 1.6
-    : centerZ + lane * Math.max(4, half * 2 - 5);
-  const tangent = channelTangentYawAt(x);
+  const z = centerZ + lane * Math.max(4, half * 2 - 5);
+
+  // Heading: the tangent sampled slightly astern (a hull answers the water
+  // it has already met), plus a slow helm weave.
+  const xLag = channelXAtArc(s - direction * 3.2);
+  const tangentLag = channelTangentYawAt(xLag);
+  const weave = 0.05 * Math.sin(Math.PI * 2 * 1.3 * t + weavePhase);
   const yaw =
-    craft.heading === 'downstream-north'
-      ? tangent + 0.08
-      : craft.heading === 'upstream-south'
-        ? Math.PI + tangent - 0.08
-        : 0.42 + tangent;
-  const bobY = 0.47 + 0.045 * Math.sin(Math.PI * 2 * t * 18 + phase);
-  const roll = 0.03 * Math.sin(Math.PI * 2 * t * 15 + phase * 1.3);
-  return { x, z, yaw, bobY, roll };
+    (craft.heading === 'downstream-north'
+      ? tangentLag + 0.08
+      : Math.PI + tangentLag - 0.08) +
+    weave;
+
+  // Heel into the turn: roll follows curvature × speed (analytic turn rate).
+  const curvature =
+    (channelTangentYawAt(channelXAtArc(s + 2)) -
+      channelTangentYawAt(channelXAtArc(s - 2))) / 4;
+  const heel = clamp(-curvature * groundSpeed * 0.35 * direction, -0.05, 0.05);
+
+  // Ride the same field the water shader draws: bow/stern give bob + pitch,
+  // the beam pair gives the wave roll on top of the helm heel.
+  const sinYaw = Math.sin(yaw);
+  const cosYaw = Math.cos(yaw);
+  const hullHalf = 2.3;
+  const bowWave = gizaWaveSampleAt(x + sinYaw * hullHalf, z + cosYaw * hullHalf, t);
+  const sternWave = gizaWaveSampleAt(x - sinYaw * hullHalf, z - cosYaw * hullHalf, t);
+  const portWave = gizaWaveHeightAt(x + cosYaw * 0.8, z - sinYaw * 0.8, t);
+  const starboardWave = gizaWaveHeightAt(x - cosYaw * 0.8, z + sinYaw * 0.8, t);
+  const bobY = 0.47 + ((bowWave.height + sternWave.height) / 2) * 0.9;
+  const pitch = Math.atan((bowWave.height - sternWave.height) / (hullHalf * 2)) * 0.9;
+  const roll = clamp(
+    heel + Math.atan((portWave - starboardWave) / 1.6) * 0.6 + 0.015 * Math.sin(Math.PI * 2 * t * 15 + phase * 1.3),
+    -0.09,
+    0.09,
+  );
+
+  // The steersman works the quarter oars: a slow sweep, biased into the turn.
+  const oarSweep =
+    0.1 * Math.sin(Math.PI * 2 * (2.6 + (globalIndex % 2) * 0.5) * t + phase) +
+    clamp(curvature * 18 * direction, -0.14, 0.14);
+
+  return { x, z, yaw, bobY, roll, pitch, oarSweep, groundSpeed };
 }
 
 /* ------------------------------------------------------------------ */

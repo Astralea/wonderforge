@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { InstancedMesh, type MeshStandardMaterial } from 'three';
 import {
+  channelArcLengthAt,
   fieldParcelAt,
   GIZA_ENVIRONMENT,
   greenbeltInnerEdgeAt,
@@ -174,14 +175,16 @@ describe('River craft kinematics (Spec 08 §Living environment)', () => {
           // Gentle bob and roll, always right-side up and afloat.
           expect(state.bobY).toBeGreaterThan(0.4);
           expect(state.bobY).toBeLessThan(0.55);
-          expect(Math.abs(state.roll)).toBeLessThan(0.035);
+          // Wave roll + helm heel stay well inside a stable hull's envelope.
+          expect(Math.abs(state.roll)).toBeLessThan(0.09);
+          expect(Math.abs(state.pitch)).toBeLessThan(0.09);
         }
         globalIndex += 1;
       }
     }
   });
 
-  it('heads hulls along the local channel tangent', () => {
+  it('heads hulls along the local channel tangent, with helm lag and weave', () => {
     const barge = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'cargo-barge')!;
     for (const t of T_SAMPLES) {
       const state = riverCraftStateAt(barge, 1, t);
@@ -189,8 +192,86 @@ describe('River craft kinematics (Spec 08 §Living environment)', () => {
         riverCenterZAt(state.x + 1) - riverCenterZAt(state.x - 1),
         2,
       );
-      expect(state.yaw).toBeCloseTo(tangent + 0.08, 10);
+      // Heading tracks the tangent within the lag + weave envelope — never
+      // crossing the channel, never mechanically exact.
+      expect(Math.abs(state.yaw - (tangent + 0.08))).toBeLessThan(0.12);
     }
+  });
+
+  it('advances craft along the channel arc, not raw x (no surging through bends)', () => {
+    const sail = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'sailing-boat')!;
+    // Equal time steps cover equal arc length, within the gust band.
+    const steps = 40;
+    const arcs: number[] = [];
+    for (let i = 0; i <= steps; i += 1) {
+      arcs.push(channelArcLengthAt(riverCraftStateAt(sail, 4, i / steps).x));
+    }
+    // Unwrap the wrap point so differences measure real travel.
+    const totalArc = channelArcLengthAt(98) - channelArcLengthAt(-118);
+    for (let i = 1; i < arcs.length; i += 1) {
+      let delta = arcs[i]! - arcs[i - 1]!;
+      if (delta > totalArc / 2) delta -= totalArc;
+      if (delta < -totalArc / 2) delta += totalArc;
+      const perStep = delta * steps;
+      expect(Math.abs(perStep)).toBeGreaterThan(20);
+      expect(Math.abs(perStep)).toBeLessThan(50);
+    }
+  });
+
+  it('moves the fleet at a perceptible pace — a hull length in seconds', () => {
+    const barge = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'cargo-barge')!;
+    const sail = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'sailing-boat')!;
+    // The movie is 60 s; a 4.6-unit hull at 26+ units/movie crosses its own
+    // length in ~11 s of playback (was ~35 s — an imperceptible drift).
+    const bargeArc =
+      channelArcLengthAt(riverCraftStateAt(barge, 0, 1).x) -
+      channelArcLengthAt(riverCraftStateAt(barge, 0, 0).x);
+    const sailArc = Math.abs(
+      channelArcLengthAt(riverCraftStateAt(sail, 5, 1).x) -
+        channelArcLengthAt(riverCraftStateAt(sail, 5, 0).x),
+    );
+    expect(bargeArc).toBeGreaterThan(15);
+    expect(sailArc).toBeGreaterThan(30);
+  });
+
+  it('couples hull motion to the wave field: bob, pitch, roll all live', () => {
+    const barge = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'cargo-barge')!;
+    let bobRange = 0;
+    let pitchRange = 0;
+    let minBob = Infinity;
+    let maxBob = -Infinity;
+    let minPitch = Infinity;
+    let maxPitch = -Infinity;
+    for (let i = 0; i <= 100; i += 1) {
+      const state = riverCraftStateAt(barge, 2, i / 100);
+      minBob = Math.min(minBob, state.bobY);
+      maxBob = Math.max(maxBob, state.bobY);
+      minPitch = Math.min(minPitch, state.pitch);
+      maxPitch = Math.max(maxPitch, state.pitch);
+    }
+    bobRange = maxBob - minBob;
+    pitchRange = maxPitch - minPitch;
+    expect(bobRange).toBeGreaterThan(0.01);
+    expect(pitchRange).toBeGreaterThan(0.004);
+    // Steering oars sweep, biased into the turn.
+    let oarMin = Infinity;
+    let oarMax = -Infinity;
+    for (let i = 0; i <= 100; i += 1) {
+      const { oarSweep } = riverCraftStateAt(barge, 2, i / 100);
+      oarMin = Math.min(oarMin, oarSweep);
+      oarMax = Math.max(oarMax, oarSweep);
+    }
+    expect(oarMax - oarMin).toBeGreaterThan(0.1);
+  });
+
+  it('marks the moored skiff as wake-ineligible while the fleet moves', () => {
+    const skiff = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'reed-skiff')!;
+    const barge = GIZA_ENVIRONMENT.riverCraft.find((c) => c.kind === 'cargo-barge')!;
+    expect(riverCraftStateAt(skiff, 6, 0.5).groundSpeed).toBe(0);
+    expect(riverCraftStateAt(barge, 0, 0.5).groundSpeed).toBeGreaterThan(15);
+    // Moored does not mean frozen: the wave field still rocks the skiff.
+    expect(riverCraftStateAt(skiff, 6, 0.25).bobY)
+      .not.toBe(riverCraftStateAt(skiff, 6, 0.75).bobY);
   });
 });
 
@@ -290,11 +371,11 @@ describe('River craft geometry (era-correct silhouette)', () => {
     );
   });
 
-  it('keeps the whole fleet within a tight draw-call budget', () => {
-    // Hulls, reed hulls, mast legs, yards, booms, sails, oars, stone cargo,
-    // reed cargo: nine instanced meshes for the entire river fleet. The bank
-    // reed clusters and the egret flock are river ecology, not fleet — they
-    // carry their own scene draw calls and their own contracts.
+  it('keeps the whole fleet within a tight, itemized draw-call budget', () => {
+    // Nine hull/rig/cargo batches plus the living-water fittings: wakes,
+    // crew bodies + heads, jars, rope coils, mooring rope. (The mooring
+    // stake is a plain Mesh and never enters this census.) The bank reeds,
+    // egret flock, and waterline foam are river ecology, not fleet.
     const ecology = new Set([
       'nile-bank-reed-clusters',
       'nile-egret-bodies',
@@ -302,7 +383,23 @@ describe('River craft geometry (era-correct silhouette)', () => {
       'nile-waterline-foam',
     ]);
     const fleetMeshes = [...meshes.keys()].filter((name) => !ecology.has(name));
-    expect(fleetMeshes.length).toBeLessThanOrEqual(9);
+    expect([...fleetMeshes].sort()).toEqual([
+      'nile-barge-tura-casing-cargo',
+      'nile-bipod-mast-legs',
+      'nile-boat-crew-bodies',
+      'nile-boat-crew-heads',
+      'nile-boat-rope-coils',
+      'nile-boat-wake-ribbons',
+      'nile-boat-water-jars',
+      'nile-papyrus-skiff-hulls',
+      'nile-quarter-steering-oars',
+      'nile-skiff-mooring-rope',
+      'nile-skiff-reed-bundle-cargo',
+      'nile-square-linen-sails',
+      'nile-square-sail-booms',
+      'nile-square-sail-yards',
+      'nile-wooden-hulls',
+    ]);
   });
 
   it('stays deterministic across repeated construction', () => {

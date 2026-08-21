@@ -1,7 +1,17 @@
 # WonderForge Agent Handoff
 
-Last updated: 2026-08-20 (Asia/Tokyo), AAA Tier 2 completion plus the Tier 3
-background pass (palm archetypes, crop mosaic, analytic-sky water)
+Last updated: 2026-08-20 (Asia/Tokyo), Tier 4 P1 living river (fleet motion,
+wakes, deck crews, field kites) after the Tier 2/3 passes
+
+## Tier 4 plan of record
+
+`specs/09-tier4-living-site-plan.md` is the active plan (owner directives +
+four-role review-board evidence + reference language from the owner's
+bookmarked visual benchmarks). Phases: P1 living river (shipped — see the
+product-state bullet), P2 working foreground, P3 farm-strip revolution, P4
+stretch (dusk sky presence). Recorded follow-ups: mobile reveal framing
+crops both flanking pyramids; Spec 04's scorecard scale (0–5) conflicts
+with the review board's 0–3 and needs a one-line amendment.
 
 ## Start here
 
@@ -157,6 +167,25 @@ The Giza scene now has:
   analytic-atmosphere fallback) at zero added passes. +6 draw calls total
   (furrows, bunds, fruit, foam, +2 ecology from Tier 2's fleet recount);
   captures under `artifacts/aaa-t3/`;
+- Tier 4 P1, the living river (Spec 09 plan; motion-clarity release blocker
+  cleared): `riverCraftStateAt` v2 — craft advance by channel ARC LENGTH
+  (typed-centerline table, `channelArcLengthAt`/`channelXAtArc`) at a
+  perceptible pace (barges ~21 u/movie, sailboats ~31; was 8–12, the "parked
+  specks" bug) with closed-form gust breathing; heading lags the tangent
+  astern + slow weave; heel-into-turn roll; bob/pitch/roll ride
+  `src/engine/waveField.ts`, the CPU twin of the water shader's ripple+chop
+  field (same recipe constants — hulls visibly ride the drawn waves);
+  steering oars sweep with turn bias. Every moving hull trails a fading foam
+  wake ribbon that replays its own `t−Δ` path (wrap-point lookbacks collapse
+  to zero scale, never streak) plus a bow pulse; two-figure deck crews
+  (helmsman aft, hand forward), a water jar, and a rope coil ride each hull;
+  the moored skiff got a bank stake + live mooring rope and emits no wake.
+  A second flock (18 black kites, `src/data/gizaFieldBirds.ts` +
+  `src/render/three/FieldBirds.ts`, built by a delegated droid in disjoint
+  files) works the strip thermals. Fleet roster now pinned itemized at 15
+  instanced meshes (+7 calls); `scripts/probe-fleet-motion.mts` is the
+  numeric evidence probe (62% of moving-hull samples in the camera-near
+  reach). Captures under `artifacts/aaa-t4/`;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one
@@ -350,14 +379,19 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after the Tier 3 background pass:
+The required verification passed after Tier 4 P1 (living river):
 
 ```text
-23 test files
-254 tests
+24 test files
+265 tests
 npm run typecheck: passed
 npm run build: passed
 ```
+
+Tier 4 P1 visual evidence (artifacts/aaa-t4/): desktop t=0.12/0.35/0.62/1.0
+at 133/128/132/120 calls including post; mobile 1.0 at 104 — within budget,
+zero console/page errors; `scripts/verify-live-playback.mjs` passes (no
+stale-bounds culling of the new per-frame batches).
 
 Visual evidence (artifacts/aaa-t3/): desktop t=0.12/0.62/1.0 at 122/121/109
 calls, 171k/247k/247k triangles; mobile 1.0 at 93 calls — all within budget,

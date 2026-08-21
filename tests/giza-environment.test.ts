@@ -242,6 +242,20 @@ describe('living-ecology render wiring (Spec 06/08)', () => {
     expect(bodies!.frustumCulled).toBe(false);
     expect(wings!.frustumCulled).toBe(false);
 
+    // Living-water fittings: wake trail + bow pulse per moving hull, a
+    // two-figure crew, and deck detail — the moored skiff gets none of it.
+    const moving = GIZA_ENVIRONMENT.riverCraft
+      .filter((craft) => craft.kind !== 'reed-skiff')
+      .reduce((total, craft) => total + craft.count, 0);
+    const wakes = meshes.get('nile-boat-wake-ribbons');
+    expect(wakes!.count).toBe(moving * 10);
+    expect(wakes!.frustumCulled).toBe(false);
+    expect((wakes!.material as MeshStandardMaterial).transparent).toBe(true);
+    expect(meshes.get('nile-boat-crew-bodies')!.count).toBe(moving * 2);
+    expect(meshes.get('nile-boat-crew-heads')!.count).toBe(moving * 2);
+    expect(meshes.get('nile-boat-water-jars')!.count).toBe(moving);
+    expect(meshes.get('nile-boat-rope-coils')!.count).toBe(moving);
+
     // Living cloth rides dedicated linen clones with their own program
     // cache keys; worker clothing keeps the still shared linen.
     expect(meshes.get('nile-square-linen-sails')!.material).not.toBe(meshes.get('nile-wooden-hulls')!.material);
@@ -261,6 +275,7 @@ describe('living-ecology render wiring (Spec 06/08)', () => {
     const meshes = instancedByName(environment);
     const puffs = meshes.get('giza-wind-dust-puffs')!;
     const wings = meshes.get('nile-egret-wings')!;
+    const wakes = meshes.get('nile-boat-wake-ribbons')!;
     const readRow = (mesh: InstancedMesh, index: number) =>
       Array.from(mesh.instanceMatrix.array.slice(index * 16, index * 16 + 16));
 
@@ -277,14 +292,19 @@ describe('living-ecology render wiring (Spec 06/08)', () => {
     );
     const dustBefore = readRow(puffs, 3);
     const wingBefore = readRow(wings, 5);
+    const wakeBefore = readRow(wakes, 3);
     environment.update(t, light, sunDirection, sky);
     const dustMid = readRow(puffs, 3);
     const wingMid = readRow(wings, 5);
+    const wakeMid = readRow(wakes, 3);
     expect(dustMid).not.toEqual(dustBefore);
     expect(wingMid).not.toEqual(wingBefore);
+    // The wake replays the boat's own past positions: it must move with t.
+    expect(wakeMid).not.toEqual(wakeBefore);
     environment.update(t, light, sunDirection, sky);
     expect(readRow(puffs, 3)).toEqual(dustMid);
     expect(readRow(wings, 5)).toEqual(wingMid);
+    expect(readRow(wakes, 3)).toEqual(wakeMid);
     environment.dispose();
   });
 });
