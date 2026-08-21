@@ -39,6 +39,7 @@ import {
   greenbeltInnerEdgeAt,
   grovePalmAt,
   palmArchetypeAt,
+  palmStandAt,
   riverBraidAt,
   riverCenterZAt,
   riverCraftStateAt,
@@ -263,15 +264,20 @@ export class GizaEnvironment {
     crownX: number;
     crownY: number;
     crownZ: number;
+    /** Frond ring radius around the crown heart (archetype crownRadius). */
+    ring: number;
     fronds: Array<{
       yaw: number;
       droop: number;
       length: number;
       width: number;
       phase: number;
+      /** Doum fan fronds draw into the stiff fan batch, not the feather one. */
+      fan?: boolean;
     }>;
   }> = [];
   private palmFronds: InstancedMesh | null = null;
+  private palmFanFronds: InstancedMesh | null = null;
   private campfires: {
     flames: InstancedMesh;
     flameMaterial: MeshStandardMaterial;
@@ -918,55 +924,90 @@ export class GizaEnvironment {
     skirtGeometry.rotateX(Math.PI);
     // Amber date bunches tucked under the crowns of fruiting bearers.
     const fruitGeometry = new DodecahedronGeometry(0.17, 0);
-    this.geometries.push(reedGeometry, trunkGeometry, crownGeometry, skirtGeometry, fruitGeometry);
+    // Doum fan fronds: short, wide, flat, and stiff — the forked palm reads
+    // as a candelabra of paddles, not a feather crown.
+    const fanFrondGeometry = new BoxGeometry(1.4, 0.06, 0.85);
+    this.geometries.push(
+      reedGeometry,
+      trunkGeometry,
+      crownGeometry,
+      skirtGeometry,
+      fruitGeometry,
+      fanFrondGeometry,
+    );
 
-    // The palm stand: three typed archetypes mixed through the rows plus a
-    // grove stand on the Memphis riverfront (Spec 08 §Ecology). Per-palm
-    // seeded streams keep every palm self-contained; grove slots that land
-    // on the braid are rejected outright, never shuffled.
+    // The palm stand: five typed archetypes (Spec 08 §Ecology) clustered
+    // into groves with real gaps along the near bank (palmStandAt), plus a
+    // grove stand on the Memphis riverfront. Per-palm seeded streams keep
+    // every palm self-contained; rejected slots (off the stand extent, or
+    // on the braid for the Memphis groves) are skipped outright, never
+    // shuffled. Fork counts are drawn here so batch capacities are exact.
     const palmSpots: Array<{
       x: number;
       z: number;
       archetype: ReturnType<typeof palmArchetypeAt>;
+      forks: number;
       rng: () => number;
     }> = [];
     for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
+      const spot = palmStandAt(i);
+      if (!spot) continue;
+      const archetype = palmArchetypeAt(i);
       const rng = mulberry32(`giza:palm-stand:${i}`);
-      const x = -108 + (i / (GIZA_ENVIRONMENT.palms - 1)) * 216 + (rng() - 0.5) * 4.5;
-      // Palm rows follow the meandering near bank (Spec 08).
-      const z = greenbeltInnerEdgeAt(x) + 2.0 + rng() * 14;
-      palmSpots.push({ x, z, archetype: palmArchetypeAt(i), rng });
+      const forks =
+        archetype.forks[0] + Math.round(rng() * (archetype.forks[1] - archetype.forks[0]));
+      palmSpots.push({ x: spot.x, z: spot.z, archetype, forks, rng });
     }
     for (let g = 0; g < GIZA_ENVIRONMENT.memphisGrovePalms; g += 1) {
       const spot = grovePalmAt(g);
       if (!spot) continue;
-      palmSpots.push({
-        x: spot.x,
-        z: spot.z,
-        archetype: palmArchetypeAt(10_000 + g),
-        rng: mulberry32(`giza:palm-grove:${g}`),
-      });
+      const archetype = palmArchetypeAt(10_000 + g);
+      const rng = mulberry32(`giza:palm-grove:${g}`);
+      const forks =
+        archetype.forks[0] + Math.round(rng() * (archetype.forks[1] - archetype.forks[0]));
+      palmSpots.push({ x: spot.x, z: spot.z, archetype, forks, rng });
     }
+    // One trunk and one crown heart per arm: a forked doum counts its arms.
+    const trunkTotal = palmSpots.reduce((total, spot) => total + spot.forks, 0);
     const frondTotal = palmSpots.reduce(
-      (total, spot) => total + spot.archetype.uprightFronds + spot.archetype.droopingFronds,
+      (total, spot) =>
+        total +
+        (spot.archetype.fanFronds
+          ? 0
+          : spot.archetype.uprightFronds + spot.archetype.droopingFronds),
+      0,
+    );
+    const fanFrondTotal = palmSpots.reduce(
+      (total, spot) =>
+        total +
+        (spot.archetype.fanFronds
+          ? spot.forks * (spot.archetype.uprightFronds + spot.archetype.droopingFronds)
+          : 0),
       0,
     );
     const skirtTotal = palmSpots.filter((spot) => spot.archetype.skirt > 0).length;
     const fruitTotal = palmSpots.filter((spot) => spot.archetype.fruit).length * 2;
 
     const reeds = new InstancedMesh(reedGeometry, materials.foliage, GIZA_ENVIRONMENT.reedClusters);
-    const trunks = new InstancedMesh(trunkGeometry, materials.wood, palmSpots.length);
-    const crowns = new InstancedMesh(crownGeometry, materials.foliage, palmSpots.length);
+    const trunks = new InstancedMesh(trunkGeometry, materials.wood, Math.max(1, trunkTotal));
+    const crowns = new InstancedMesh(crownGeometry, materials.foliage, Math.max(1, trunkTotal));
     const skirts = new InstancedMesh(skirtGeometry, materials.wood, Math.max(1, skirtTotal));
     // Sun-cured amber: date bunches read as warm fruit against the crown.
     const fruitMaterial = new MeshStandardMaterial({ color: '#bd7a2c', roughness: 0.75 });
     this.extraMaterials.push(fruitMaterial);
     const fruits = new InstancedMesh(fruitGeometry, fruitMaterial, Math.max(1, fruitTotal));
-    const fronds = new InstancedMesh(frondGeometry, materials.foliage, frondTotal);
+    const fronds = new InstancedMesh(frondGeometry, materials.foliage, Math.max(1, frondTotal));
+    const fanFronds = new InstancedMesh(
+      fanFrondGeometry,
+      materials.foliage,
+      Math.max(1, fanFrondTotal),
+    );
     const random = mulberry32('giza:river-ecology:v3');
     const matrix = new Matrix4();
     const upperFrondColors = [new Color('#527a3a'), new Color('#5f8442'), new Color('#6d8f4b')];
     const lowerFrondColors = [new Color('#7d8f4b'), new Color('#93914f'), new Color('#a08a52')];
+    // Doum fronds carry the species' grey-green (glaucous) cast.
+    const fanFrondColors = [new Color('#5d7f52'), new Color('#698a58'), new Color('#54744a')];
 
     for (let i = 0; i < GIZA_ENVIRONMENT.reedClusters; i += 1) {
       const nearBank = i % 2 === 0;
@@ -987,13 +1028,83 @@ export class GizaEnvironment {
       reeds.setMatrixAt(i, matrix);
     }
 
+    let trunkCursor = 0;
+    let crownCursor = 0;
     let frondCursor = 0;
+    let fanFrondCursor = 0;
     let skirtCursor = 0;
     let fruitCursor = 0;
     for (let i = 0; i < palmSpots.length; i += 1) {
       const spot = palmSpots[i]!;
       const { archetype, rng } = spot;
       const height = archetype.height[0] + rng() * (archetype.height[1] - archetype.height[0]);
+      if (archetype.fanFronds) {
+        // Doum (Hyphaene thebaica): the trunk forks into 2–3 arms angled
+        // from the base — dichotomous branching — each arm tip carrying a
+        // small crown heart with one ring of stiff fan fronds.
+        const baseAzimuth = rng() * Math.PI * 2;
+        for (let arm = 0; arm < spot.forks; arm += 1) {
+          const azimuth = baseAzimuth + (arm / spot.forks) * Math.PI * 2 + (rng() - 0.5) * 0.5;
+          const spread = 0.24 + rng() * 0.14;
+          const armHeight = height * (0.92 + rng() * 0.16);
+          // Tilt the shared trunk geometry about the horizontal axis
+          // perpendicular to the arm's azimuth, so the arm's base sits
+          // exactly on the fork point and its tip math stays exact.
+          const armTilt = new Quaternion().setFromAxisAngle(
+            new Vector3(Math.sin(azimuth), 0, -Math.cos(azimuth)),
+            spread,
+          );
+          const axisX = Math.sin(spread) * Math.cos(azimuth);
+          const axisY = Math.cos(spread);
+          const axisZ = Math.sin(spread) * Math.sin(azimuth);
+          matrix.compose(
+            new Vector3(
+              spot.x + 2.2 * armHeight * axisX,
+              2.2 * armHeight * axisY,
+              spot.z + 2.2 * armHeight * axisZ,
+            ),
+            armTilt,
+            new Vector3(0.82, armHeight, 0.82),
+          );
+          trunks.setMatrixAt(trunkCursor, matrix);
+          trunkCursor += 1;
+          const crownX = spot.x + 4.4 * armHeight * axisX;
+          const crownY = 4.4 * armHeight * axisY;
+          const crownZ = spot.z + 4.4 * armHeight * axisZ;
+          // A small heart per arm: the doum crown is a tuft, not a heart.
+          matrix.compose(
+            new Vector3(crownX, crownY, crownZ),
+            new Quaternion(),
+            new Vector3(0.58 + rng() * 0.18, 0.48 + rng() * 0.16, 0.58 + rng() * 0.18),
+          );
+          crowns.setMatrixAt(crownCursor, matrix);
+          crownCursor += 1;
+          const frondSpecs: (typeof this.palmSway)[number]['fronds'] = [];
+          for (let frond = 0; frond < archetype.uprightFronds; frond += 1) {
+            const yaw = (frond / archetype.uprightFronds) * Math.PI * 2 + rng() * 0.3;
+            // Stiff and shallow-angled; length/width scale the baked fan
+            // geometry rather than the unit feather box.
+            frondSpecs.push({
+              yaw,
+              droop: -(0.16 + rng() * 0.14),
+              length: 0.85 + rng() * 0.3,
+              width: 0.9 + rng() * 0.2,
+              phase: rng() * Math.PI * 2,
+              fan: true,
+            });
+            fanFronds.setColorAt(fanFrondCursor, fanFrondColors[Math.floor(rng() * 3)]!);
+            fanFrondCursor += 1;
+          }
+          this.palmSway.push({
+            crownX,
+            crownY,
+            crownZ,
+            ring: archetype.crownRadius,
+            fronds: frondSpecs,
+          });
+        }
+        continue;
+      }
       // The crown shifts with the trunk's tilt.
       const lean = archetype.lean[0] + rng() * (archetype.lean[1] - archetype.lean[0]);
       const leanAzimuth = rng() * Math.PI * 2;
@@ -1001,7 +1112,8 @@ export class GizaEnvironment {
         new Euler(lean * Math.cos(leanAzimuth), rng() * Math.PI, lean * Math.sin(leanAzimuth), 'YXZ'),
       );
       matrix.compose(new Vector3(spot.x, 2.2 * height, spot.z), tilt, new Vector3(1, height, 1));
-      trunks.setMatrixAt(i, matrix);
+      trunks.setMatrixAt(trunkCursor, matrix);
+      trunkCursor += 1;
       const crownX = spot.x + 4.4 * height * Math.sin(lean) * Math.cos(leanAzimuth);
       const crownZ = spot.z + 4.4 * height * Math.sin(lean) * Math.sin(leanAzimuth);
       const crownY = 4.42 * height;
@@ -1011,7 +1123,8 @@ export class GizaEnvironment {
         new Quaternion(),
         new Vector3(1.05 + rng() * 0.45, 0.62 + rng() * 0.28, 1.05 + rng() * 0.45),
       );
-      crowns.setMatrixAt(i, matrix);
+      crowns.setMatrixAt(crownCursor, matrix);
+      crownCursor += 1;
       if (archetype.skirt > 0) {
         matrix.compose(
           new Vector3(crownX, crownY - 0.62 * height * archetype.skirt, crownZ),
@@ -1038,8 +1151,10 @@ export class GizaEnvironment {
         }
       }
       // Two frond tiers: an upright young crown and a drooping older row,
-      // each with its own color range (drier below). Counts come from the
-      // archetype — a young palm carries almost no drooping tier.
+      // each with its own color range (drier below). Counts, ring radius,
+      // length, and extra droop come from the archetype — a young palm
+      // carries almost no drooping tier, a weeping palm's long fronds fall
+      // in a wide fountain.
       const frondSpecs: (typeof this.palmSway)[number]['fronds'] = [];
       const tiers: Array<{ count: number; upper: boolean }> = [
         { count: archetype.uprightFronds, upper: true },
@@ -1048,8 +1163,12 @@ export class GizaEnvironment {
       for (const tier of tiers) {
         for (let frond = 0; frond < tier.count; frond += 1) {
           const yaw = (frond / Math.max(1, tier.count)) * Math.PI * 2 + (tier.upper ? 0 : 0.63) + rng() * 0.22;
-          const droop = tier.upper ? -(0.3 + rng() * 0.16) : -(0.72 + rng() * 0.2);
-          const length = (tier.upper ? 3.6 + rng() * 0.9 : 2.6 + rng() * 0.7) * Math.min(1, height);
+          const droop =
+            (tier.upper ? -(0.3 + rng() * 0.16) : -(0.72 + rng() * 0.2)) - archetype.droopExtra;
+          const length =
+            (tier.upper ? 3.6 + rng() * 0.9 : 2.6 + rng() * 0.7) *
+            Math.min(1, height) *
+            archetype.frondLength;
           const width = 0.3 + rng() * 0.14;
           frondSpecs.push({ yaw, droop, length, width, phase: rng() * Math.PI * 2 });
           fronds.setColorAt(
@@ -1059,12 +1178,16 @@ export class GizaEnvironment {
           frondCursor += 1;
         }
       }
-      this.palmSway.push({ crownX, crownY, crownZ, fronds: frondSpecs });
+      this.palmSway.push({ crownX, crownY, crownZ, ring: archetype.crownRadius, fronds: frondSpecs });
     }
     // Draw only placed instances: archetypes vary the counts per palm.
+    trunks.count = trunkCursor;
+    crowns.count = crownCursor;
     skirts.count = skirtCursor;
     fruits.count = fruitCursor;
+    fanFronds.count = fanFrondCursor;
     this.palmFronds = fronds;
+    this.palmFanFronds = fanFronds;
     // Understory litter (Spec 08 §Ecology): fallen dry fronds and dropped
     // dates under every crown, so the ground beneath a palm tells on it.
     const litterGeometry = new BoxGeometry(1, 0.04, 0.3);
@@ -1093,6 +1216,7 @@ export class GizaEnvironment {
     this.group.add(litter);
     // Frond matrices sway every frame; opt out of the stale-bounds cull.
     fronds.frustumCulled = false;
+    fanFronds.frustumCulled = false;
     this.updatePalms(0);
     reeds.name = 'nile-bank-reed-clusters';
     trunks.name = 'greenbelt-palm-trunks';
@@ -1100,11 +1224,13 @@ export class GizaEnvironment {
     skirts.name = 'greenbelt-palm-dead-frond-skirts';
     fruits.name = 'greenbelt-date-fruit-clusters';
     fronds.name = 'greenbelt-individual-palm-fronds';
+    fanFronds.name = 'palm-fan-fronds';
     trunks.castShadow = true;
     crowns.castShadow = true;
     fronds.castShadow = true;
+    fanFronds.castShadow = true;
     fruits.castShadow = false;
-    this.group.add(reeds, trunks, crowns, skirts, fruits, fronds);
+    this.group.add(reeds, trunks, crowns, skirts, fruits, fronds, fanFronds);
   }
 
   /** Gentle frond sway in the northerly breeze; a pure function of t. */
@@ -1112,26 +1238,37 @@ export class GizaEnvironment {
     if (!this.palmFronds) return;
     const matrix = new Matrix4();
     let cursor = 0;
+    let fanCursor = 0;
     for (const palm of this.palmSway) {
       for (const frond of palm.fronds) {
-        const sway = 0.055 * Math.sin(Math.PI * 2 * t * 10 + frond.phase);
+        // Doum fan fronds are stiff: they rock rather than sway.
+        const amplitude = frond.fan ? 0.022 : 0.055;
+        const sway = amplitude * Math.sin(Math.PI * 2 * t * 10 + frond.phase);
         const rotation = new Quaternion().setFromEuler(
           new Euler(0, frond.yaw, frond.droop + sway, 'YXZ'),
         );
         matrix.compose(
           new Vector3(
-            palm.crownX + Math.cos(frond.yaw) * 1.35,
+            palm.crownX + Math.cos(frond.yaw) * palm.ring,
             palm.crownY + 0.15,
-            palm.crownZ + Math.sin(frond.yaw) * 1.35,
+            palm.crownZ + Math.sin(frond.yaw) * palm.ring,
           ),
           rotation,
-          new Vector3(frond.length, 0.08, frond.width),
+          frond.fan
+            ? new Vector3(frond.length, 1, frond.width)
+            : new Vector3(frond.length, 0.08, frond.width),
         );
-        this.palmFronds.setMatrixAt(cursor, matrix);
-        cursor += 1;
+        if (frond.fan) {
+          this.palmFanFronds?.setMatrixAt(fanCursor, matrix);
+          fanCursor += 1;
+        } else {
+          this.palmFronds.setMatrixAt(cursor, matrix);
+          cursor += 1;
+        }
       }
     }
     this.palmFronds.instanceMatrix.needsUpdate = true;
+    if (this.palmFanFronds) this.palmFanFronds.instanceMatrix.needsUpdate = true;
   }
 
   /**

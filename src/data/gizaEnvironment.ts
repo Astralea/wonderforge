@@ -546,7 +546,7 @@ export function birdStateAt(index: number, t: number): BirdState {
 /* Palm archetypes (a stand of individuals, not a clone row)           */
 /* ------------------------------------------------------------------ */
 
-export type PalmKind = 'date-tall' | 'date-young' | 'palm-old';
+export type PalmKind = 'date-tall' | 'date-young' | 'palm-old' | 'date-weeping' | 'palm-doum';
 
 export interface PalmArchetype {
   kind: PalmKind;
@@ -560,6 +560,23 @@ export interface PalmArchetype {
   skirt: number;
   /** Amber date clusters tucked under the crown (fruiting bearers only). */
   fruit: boolean;
+  /**
+   * Trunk arms per palm: a single stem for date palms, 2–3 for the
+   * dichotomously branching doum (Hyphaene thebaica) — the one palm genus
+   * that forks. The renderer draws one trunk + one crown per arm.
+   */
+  forks: [number, number];
+  /**
+   * Radius of the frond ring around the crown heart (world units). Weeping
+   * palms spread the ring wide so the long fronds fall in a fountain.
+   */
+  crownRadius: number;
+  /** Frond length multiplier; weeping fronds run long. */
+  frondLength: number;
+  /** Extra downward droop (radians) added to both frond tiers. */
+  droopExtra: number;
+  /** Stiff, wide fan fronds (doum) instead of pinnate feather fronds. */
+  fanFronds: boolean;
 }
 
 const PALM_ARCHETYPES: Record<PalmKind, Omit<PalmArchetype, 'kind'>> = {
@@ -570,6 +587,11 @@ const PALM_ARCHETYPES: Record<PalmKind, Omit<PalmArchetype, 'kind'>> = {
     droopingFronds: 6,
     skirt: 1,
     fruit: true,
+    forks: [1, 1],
+    crownRadius: 1.35,
+    frondLength: 1,
+    droopExtra: 0,
+    fanFronds: false,
   },
   'date-young': {
     height: [0.55, 0.8],
@@ -578,6 +600,12 @@ const PALM_ARCHETYPES: Record<PalmKind, Omit<PalmArchetype, 'kind'>> = {
     droopingFronds: 2,
     skirt: 0,
     fruit: false,
+    forks: [1, 1],
+    // A tight ring keeps the shuttlecock silhouette narrow and upright.
+    crownRadius: 1.0,
+    frondLength: 0.9,
+    droopExtra: 0,
+    fanFronds: false,
   },
   'palm-old': {
     height: [0.88, 1.12],
@@ -586,19 +614,69 @@ const PALM_ARCHETYPES: Record<PalmKind, Omit<PalmArchetype, 'kind'>> = {
     droopingFronds: 7,
     skirt: 1.3,
     fruit: false,
+    forks: [1, 1],
+    crownRadius: 1.35,
+    frondLength: 0.95,
+    droopExtra: 0.12,
+    fanFronds: false,
+  },
+  'date-weeping': {
+    height: [0.8, 1.05],
+    lean: [0.02, 0.06],
+    uprightFronds: 5,
+    droopingFronds: 8,
+    skirt: 0.5,
+    fruit: false,
+    forks: [1, 1],
+    // The fountain silhouette: a wide ring of long fronds falling deep.
+    crownRadius: 1.9,
+    frondLength: 1.35,
+    droopExtra: 0.26,
+    fanFronds: false,
+  },
+  'palm-doum': {
+    height: [0.5, 0.72],
+    lean: [0.0, 0.02],
+    // Per arm: one ring of stiff, shallow-angled fan fronds, no drooping
+    // tier, no dead-frond skirt, no fruit — the doum reads as a forked
+    // candelabra, not a feather duster.
+    uprightFronds: 7,
+    droopingFronds: 0,
+    skirt: 0,
+    fruit: false,
+    forks: [2, 3],
+    crownRadius: 0.6,
+    frondLength: 1,
+    droopExtra: 0,
+    fanFronds: true,
   },
 };
 
 /**
- * Deterministic archetype assignment per palm-stand index — about half are
- * fruiting bearers, with youngsters and gnarled elders mixed in. Pure: the
- * same index always yields the same archetype, so the stand never reshuffles
- * between plays.
+ * Deterministic archetype assignment per palm-stand index: tall fruiting
+ * bearers anchor the stand, with youngsters, gnarled elders, weeping
+ * fountains, and forked doums mixed in so no two neighbors share a
+ * silhouette. Pure: the same index always yields the same archetype, so the
+ * stand never reshuffles between plays. The first two stream values are
+ * discarded: mulberry32's opening draw clusters across these seed strings,
+ * and the third draw lands the stand on the intended ≈.32/.20/.16/.16/.16
+ * mix.
  */
 export function palmArchetypeAt(index: number): PalmArchetype {
   const random = mulberry32(`giza:palm-archetype:${index}`);
+  random();
+  random();
   const u = random();
-  const kind: PalmKind = u < 0.48 ? 'date-tall' : u < 0.76 ? 'date-young' : 'palm-old';
+  const kind: PalmKind =
+    u < 0.32
+      ? 'date-tall'
+      : u < 0.52
+        ? 'date-young'
+        : u < 0.68
+          ? 'palm-old'
+          : u < 0.8
+            ? 'date-weeping'
+            : 'palm-doum';
   return { kind, ...PALM_ARCHETYPES[kind] };
 }
 
@@ -620,6 +698,82 @@ export function grovePalmAt(index: number): { x: number; z: number } | null {
   // The quay's river edge plus a trunk's width of walkway.
   if (z < anchorZ + 14.6) return null;
   return { x, z };
+}
+
+/**
+ * Greenbelt palm-stand layout: five grove centers along the near-bank strip
+ * and roughly one palm in ten walking alone between them.
+ */
+const PALM_STAND_GROVES = { count: 5, lonerShare: 0.1 } as const;
+
+/** Golden angle (radians): the phyllotactic step that never repeats a bearing. */
+const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+
+/**
+ * Greenbelt palm-stand placement: five groves spaced along the near-bank
+ * strip with real gaps between them, plus a scattering of loners in those
+ * gaps — clustering is what breaks the clone-row read at movie distance.
+ * Grove centers and radii come from their own seeded streams, so the layout
+ * is deterministic. Within a grove, palms grow on a phyllotactic
+ * (golden-angle) spiral of slots with a little jitter — a generative-growth
+ * pattern that keeps any two trunks apart while the crowns mingle, the way
+ * a real date grove thickens.
+ *
+ * Every accepted slot stays on the cultivated strip: z is clamped into
+ * [innerEdge + 1.5, innerEdge + depth - 2] at the palm's own x, which also
+ * keeps trunks out of the water by construction. Slots that jitter beyond
+ * the stand's x-extent reject to null; the renderer skips them with count
+ * hygiene rather than shuffling neighbors.
+ */
+export function palmStandAt(index: number): { x: number; z: number } | null {
+  const random = mulberry32(`giza:palm-stand:${index}`);
+  const standHalf = 108;
+  const pitch = (standHalf * 2) / PALM_STAND_GROVES.count;
+  const groveCenterAt = (grove: number): { x: number; radius: number } => {
+    const groveRandom = mulberry32(`giza:palm-stand:grove:${grove}`);
+    return {
+      x: -standHalf + (grove + 0.5) * pitch + (groveRandom() - 0.5) * 12,
+      radius: 6 + groveRandom() * 4,
+    };
+  };
+  const zBandMin = 1.5;
+  const zBandMax = GIZA_GREENBELT.depth - 2;
+  let x: number;
+  let zOffset: number;
+  if (random() < PALM_STAND_GROVES.lonerShare) {
+    // A loner in one of the real gaps between neighboring groves.
+    const gap = Math.min(
+      PALM_STAND_GROVES.count - 2,
+      Math.floor(random() * (PALM_STAND_GROVES.count - 1)),
+    );
+    const left = groveCenterAt(gap);
+    const right = groveCenterAt(gap + 1);
+    const spanStart = left.x + left.radius + 2;
+    const spanEnd = right.x - right.radius - 2;
+    const span = Math.max(0, spanEnd - spanStart);
+    // Thirds of the gap by a seeded sub-slot keep two loners sharing one
+    // gap from colliding.
+    const subSlot = Math.floor(random() * 3);
+    x = spanStart + span * ((subSlot + 0.5) / 3) + (random() - 0.5) * Math.min(2, span / 4);
+    zOffset = zBandMin + random() * (zBandMax - zBandMin);
+  } else {
+    // A grove member: round-robin assignment keeps grove sizes even, and
+    // the golden-angle slot keeps neighbors off each other's trunks.
+    const groveIndex = index % PALM_STAND_GROVES.count;
+    const slot = Math.floor(index / PALM_STAND_GROVES.count);
+    const grove = groveCenterAt(groveIndex);
+    const slotsPerGrove = Math.ceil(GIZA_ENVIRONMENT.palms / PALM_STAND_GROVES.count);
+    const phase = mulberry32(`giza:palm-stand:grove-phase:${groveIndex}`)() * Math.PI * 2;
+    const theta = phase + slot * GOLDEN_ANGLE;
+    const radius = grove.radius * Math.sqrt((slot + 0.5) / slotsPerGrove);
+    x = grove.x + Math.cos(theta) * radius + (random() - 0.5) * 1.6;
+    // The z jitter is damped so the cluster follows the bank instead of
+    // spilling off the strip.
+    zOffset = (zBandMin + zBandMax) / 2 + Math.sin(theta) * radius * 0.8 + (random() - 0.5) * 1.6;
+  }
+  if (x < -standHalf + 4 || x > standHalf - 4) return null;
+  const inner = greenbeltInnerEdgeAt(x);
+  return { x, z: clamp(inner + zOffset, inner + zBandMin, inner + zBandMax) };
 }
 
 /* ------------------------------------------------------------------ */
@@ -1085,15 +1239,22 @@ const SETTLEMENT: SettlementDescription = {
 const ECOLOGY: EcologyDescription = {
   palms: {
     description:
-      'A stand of individuals, not a clone row: tall fruiting date palms ' +
-      'with amber clusters under the crown, young upright palms without ' +
-      'skirts, and old leaning palms with heavy dead-frond skirts — three ' +
-      'typed archetypes via palmArchetypeAt, plus a grove stand on the ' +
-      'Memphis riverfront (grovePalmAt), all swaying gently in the ' +
-      'northerly breeze (pure function of t).',
+      'A stand of individuals, not a clone row: five typed archetypes via ' +
+      'palmArchetypeAt — tall fruiting date palms with amber clusters under ' +
+      'the crown, young upright shuttlecocks without skirts, old leaning ' +
+      'palms with heavy dead-frond skirts, weeping date palms whose long ' +
+      'fronds fall in a wide fountain, and forked doum palms carrying small ' +
+      'crowns of stiff fan fronds on 2–3 angled arms. The greenbelt stand ' +
+      'clusters into five groves with real gaps and scattered loners ' +
+      '(palmStandAt), plus a grove stand on the Memphis riverfront ' +
+      '(grovePalmAt), all swaying gently in the northerly breeze (pure ' +
+      'function of t).',
     historicalNote:
-      'Date and doum palms lined the fields and provided fruit, fiber, and ' +
-      'timber; they were never planted out on the bare plateau.',
+      'Date and doum palms (Hyphaene thebaica, the one palm genus that ' +
+      'forks) are both documented for ancient Egypt and lined the fields, ' +
+      'providing fruit, fiber, and timber; doums were more common upstream ' +
+      'toward Thebes, and appear here at Giza as a deliberate silhouette-' +
+      'readability choice. Palms were never planted out on the bare plateau.',
   },
   reeds: {
     description: 'Papyrus and reed beds hugging both river banks.',

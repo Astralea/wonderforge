@@ -123,13 +123,22 @@ verification recipes.
   rope coil); the moored skiff instead shows a mooring rope to a bank stake
   and emits no wake. A larger kite flock works the thermals over the
   cultivated strip, clear of all masonry.
-- Palms are a stand of individuals, not a clone row: three typed archetypes
+- Palms are a stand of individuals, not a clone row: five typed archetypes
   assigned by pure function — tall fruiting date palms (full two-tier crowns,
-  amber date clusters under the crown), young upright palms (fewer fronds,
-  no skirt), and old leaning palms (pronounced lean, sparse drooping crown,
-  heavy dead-frond skirt) — each with per-instance height, lean, and frond
-  variation, swaying gently in the northerly breeze as a pure function of
-  `t`. A second grove stand shades the Memphis riverfront across the river.
+  amber date clusters under the crown), young upright palms (tight
+  shuttlecock crowns, no skirt), old leaning palms (pronounced lean, sparse
+  drooping crown, heavy dead-frond skirt), weeping date palms (long fronds
+  falling in a wide fountain), and branching doum palms (Hyphaene thebaica —
+  the trunk forks into 2–3 angled arms, each tipped with a small crown of
+  stiff fan fronds; no skirt, no fruit). Doums are documented for ancient
+  Egypt, more common upstream toward Thebes; they appear at Giza as a
+  deliberate silhouette-readability choice. The greenbelt stand is clustered
+  by pure function (`palmStandAt`) into five groves with real gaps and
+  scattered loners between them — never an even-pitch row — with
+  phyllotactic slots keeping trunks apart inside each grove. Each palm
+  carries per-instance height, lean, and frond variation, swaying gently in
+  the northerly breeze as a pure function of `t` (fan fronds rock stiffly).
+  A second grove stand shades the Memphis riverfront across the river.
   Reeds, sparse scrub, tools, and debris frame the foreground and river edge.
 - The cultivated strip is a worked floodplain, not a lattice: parcels jitter
   in size and yaw, adjacent same-crop cells merge into larger fields, and

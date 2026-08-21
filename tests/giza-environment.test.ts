@@ -1,21 +1,25 @@
 import { describe, expect, it } from 'vitest';
-import { InstancedMesh, Vector3, type MeshStandardMaterial } from 'three';
+import { InstancedMesh, Matrix4, Vector3, type MeshStandardMaterial } from 'three';
 import { GIZA_CONSTRUCTION } from '../src/data/gizaConstruction';
 import {
   BIRD_FLOCK,
   birdStateAt,
   fieldParcelAt,
   GIZA_ENVIRONMENT,
+  greenbeltInnerEdgeAt,
   grovePalmAt,
   palmArchetypeAt,
+  palmStandAt,
   riverBraidAt,
   riverCenterZAt,
   riverWidthAt,
   WIND_DUST,
   windDustPuffAt,
   type FieldCrop,
+  type PalmKind,
 } from '../src/data/gizaEnvironment';
 import { isClearOfSiteWorks, siteKeepOuts } from '../src/engine/siteClearance';
+import { mulberry32 } from '../src/engine/random';
 import { gizaSunStateAt, sampleGizaSky } from '../src/data/gizaSky';
 import { lightStateAt } from '../src/engine/daynight';
 import { GizaEnvironment } from '../src/render/three/Environment';
@@ -142,12 +146,14 @@ describe('river egret flock (Spec 08 §Era and place grounding)', () => {
 });
 
 describe('palm archetypes (Spec 08 §Ecology)', () => {
-  it('assigns three deterministic archetypes across the stand', () => {
+  it('assigns five deterministic archetypes across the stand, including weeping and doum', () => {
     const kinds = new Set<string>();
+    const counts = new Map<PalmKind, number>();
     for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
       const archetype = palmArchetypeAt(i);
       expect(archetype).toEqual(palmArchetypeAt(i)); // pure per index
       kinds.add(archetype.kind);
+      counts.set(archetype.kind, (counts.get(archetype.kind) ?? 0) + 1);
       expect(archetype.uprightFronds + archetype.droopingFronds).toBeGreaterThan(0);
       expect(archetype.height[0]).toBeGreaterThan(0.4);
       expect(archetype.height[1]).toBeLessThanOrEqual(1.4);
@@ -157,8 +163,71 @@ describe('palm archetypes (Spec 08 §Ecology)', () => {
         expect(archetype.fruit).toBe(false);
       }
       if (archetype.kind === 'palm-old') expect(archetype.lean[0]).toBeGreaterThanOrEqual(0.1);
+      if (archetype.kind === 'date-weeping') {
+        // The fountain silhouette: a wide frond ring, long fronds, deep droop.
+        expect(archetype.crownRadius).toBeGreaterThan(1.6);
+        expect(archetype.frondLength).toBeGreaterThan(1.2);
+        expect(archetype.droopExtra).toBeGreaterThan(0.15);
+        expect(archetype.fanFronds).toBe(false);
+      }
+      if (archetype.kind === 'palm-doum') {
+        // Dichotomous branching: fan fronds, no skirt, no fruit.
+        expect(archetype.fanFronds).toBe(true);
+        expect(archetype.skirt).toBe(0);
+        expect(archetype.fruit).toBe(false);
+      }
+      // Fork bands: single stems for date palms, 2–3 arms for doums.
+      if (archetype.fanFronds) {
+        expect(archetype.forks[0]).toBeGreaterThanOrEqual(2);
+        expect(archetype.forks[1]).toBeLessThanOrEqual(3);
+      } else {
+        expect(archetype.forks).toEqual([1, 1]);
+      }
     }
-    expect(kinds).toEqual(new Set(['date-tall', 'date-young', 'palm-old']));
+    expect(kinds).toEqual(
+      new Set(['date-tall', 'date-young', 'palm-old', 'date-weeping', 'palm-doum']),
+    );
+    // The mix keeps every silhouette well represented (≈.32/.20/.16/.16/.16).
+    for (const kind of kinds) {
+      expect(counts.get(kind as PalmKind)!).toBeGreaterThanOrEqual(4);
+    }
+  });
+
+  it('clusters the stand into groves with real gaps, on the strip and out of the water', () => {
+    const spots: Array<{ x: number; z: number }> = [];
+    for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
+      const spot = palmStandAt(i);
+      expect(spot).toEqual(palmStandAt(i)); // pure per index
+      if (!spot) continue;
+      const inner = greenbeltInnerEdgeAt(spot.x);
+      // On the cultivated strip at the palm's own x…
+      expect(spot.z).toBeGreaterThanOrEqual(inner + 1.5 - 1e-9);
+      expect(spot.z).toBeLessThanOrEqual(inner + GIZA_ENVIRONMENT.greenbelt.depth - 2 + 1e-9);
+      // …and clear of the channel water.
+      expect(spot.z).toBeGreaterThan(riverCenterZAt(spot.x) + riverWidthAt(spot.x) / 2);
+      spots.push(spot);
+    }
+    expect(spots.length).toBeGreaterThan(GIZA_ENVIRONMENT.palms * 0.8);
+    // The even-row bug stays dead: grove gaps make adjacent-x spacing far
+    // from uniform (the old pitch was 3.93 with ±2.25 jitter — variance
+    // ~3.4 and a hard max gap of 8.43).
+    const sorted = [...spots].sort((a, b) => a.x - b.x);
+    const gaps = sorted.slice(1).map((palm, index) => palm.x - sorted[index]!.x);
+    const mean = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+    const variance = gaps.reduce((a, b) => a + (b - mean) ** 2, 0) / gaps.length;
+    expect(Math.max(...gaps)).toBeGreaterThan(12);
+    expect(variance).toBeGreaterThan(8);
+    // …while trunks never fuse: phyllotactic slots keep neighbors apart.
+    let minDistance = Infinity;
+    for (let a = 0; a < spots.length; a += 1) {
+      for (let b = a + 1; b < spots.length; b += 1) {
+        minDistance = Math.min(
+          minDistance,
+          Math.hypot(spots[a]!.x - spots[b]!.x, spots[a]!.z - spots[b]!.z),
+        );
+      }
+    }
+    expect(minDistance).toBeGreaterThan(1);
   });
 
   it('keeps the Memphis riverfront groves out of the channel and the braid', () => {
@@ -266,6 +335,76 @@ describe('living-ecology render wiring (Spec 06/08)', () => {
     ] as const) {
       const material = meshes.get(name)!.material as MeshStandardMaterial;
       expect(material.customProgramCacheKey()).toBe(key);
+    }
+    environment.dispose();
+  });
+
+  it('builds forked doum palms with exact batch counts and no unwritten instances', () => {
+    const environment = new GizaEnvironment(GIZA_CONSTRUCTION, createMaterialLibrary(fixtureWonder));
+    const meshes = instancedByName(environment);
+
+    // Rebuild the expected stand from the same pure placement/archetype
+    // functions and per-palm fork draws the renderer consumes.
+    const spots: Array<{ archetype: ReturnType<typeof palmArchetypeAt>; forks: number }> = [];
+    const pushSpot = (index: number, seed: string) => {
+      const archetype = palmArchetypeAt(index);
+      const rng = mulberry32(`${seed}:${index % 10_000}`);
+      const forks =
+        archetype.forks[0] + Math.round(rng() * (archetype.forks[1] - archetype.forks[0]));
+      spots.push({ archetype, forks });
+    };
+    for (let i = 0; i < GIZA_ENVIRONMENT.palms; i += 1) {
+      if (!palmStandAt(i)) continue;
+      pushSpot(i, 'giza:palm-stand');
+    }
+    for (let g = 0; g < GIZA_ENVIRONMENT.memphisGrovePalms; g += 1) {
+      if (!grovePalmAt(g)) continue;
+      pushSpot(10_000 + g, 'giza:palm-grove');
+    }
+    // One trunk + one crown heart per arm; fan fronds per doum arm.
+    const trunkTotal = spots.reduce((total, spot) => total + spot.forks, 0);
+    const featherTotal = spots.reduce(
+      (total, spot) =>
+        total +
+        (spot.archetype.fanFronds
+          ? 0
+          : spot.archetype.uprightFronds + spot.archetype.droopingFronds),
+      0,
+    );
+    const fanTotal = spots.reduce(
+      (total, spot) =>
+        total +
+        (spot.archetype.fanFronds
+          ? spot.forks * (spot.archetype.uprightFronds + spot.archetype.droopingFronds)
+          : 0),
+      0,
+    );
+    expect(spots.some((spot) => spot.archetype.kind === 'palm-doum')).toBe(true);
+    expect(fanTotal).toBeGreaterThan(0);
+
+    const trunks = meshes.get('greenbelt-palm-trunks')!;
+    const crowns = meshes.get('greenbelt-palm-hearts')!;
+    const feathers = meshes.get('greenbelt-individual-palm-fronds')!;
+    const fans = meshes.get('palm-fan-fronds')!;
+    expect(trunks.count).toBe(trunkTotal);
+    expect(crowns.count).toBe(trunkTotal);
+    expect(feathers.count).toBe(featherTotal);
+    expect(fans.count).toBe(fanTotal);
+    expect(fans.frustumCulled).toBe(false);
+    // Litter stays per crown — a forked palm drops fronds under each arm tip.
+    expect(meshes.get('palm-understory-fallen-fronds')!.count).toBe(trunkTotal * 2);
+
+    // Full-instance-count hygiene: every drawn instance carries a written
+    // matrix (three.js initializes the buffer to identity).
+    const identity = Array.from(new Matrix4().elements);
+    for (const mesh of [trunks, crowns, feathers, fans]) {
+      const allocated = mesh.instanceMatrix.array.length / 16;
+      expect(mesh.count).toBeLessThanOrEqual(allocated);
+      for (let i = 0; i < mesh.count; i += 1) {
+        expect(Array.from(mesh.instanceMatrix.array.slice(i * 16, i * 16 + 16))).not.toEqual(
+          identity,
+        );
+      }
     }
     environment.dispose();
   });

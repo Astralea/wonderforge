@@ -232,6 +232,24 @@ The Giza scene now has:
   measures 158 calls vs the 150 advisory budget — pre-existing Tier 4
   content volume at that beat (proved with a swing-0 attribution capture),
   not the swing; trim mobile instances if it ever bites in profiling;
+- a palm-stand variety v2 (owner report: "all the trees seem to look the
+  same" — Tier 3 varied parameters on ONE morphology, which reads as one
+  stamp at movie distance). Now silhouette-level variety via a generative
+  growth grammar: five archetypes (`palmArchetypeAt` — date-tall, date-young
+  shuttlecocks, leaning palm-old, wide date-weeping fountains, and forked
+  palm-doum candelabras with stiff glaucous fan fronds — doum = Hyphaene
+  thebaica, the one forking palm genus, era note owned) placed by
+  `palmStandAt` into five golden-angle phyllotactic groves with real gaps +
+  loners (trunk spacing ≥1.9 units enforced by the spiral; gap variance
+  contract-pinned > 8). The sway system is per-crown (forked palms push one
+  entry per arm tip); a stiff `palm-fan-fronds` batch joins the feather one;
+  the foliage base lifted (#506633 → #5b7040) so daylight crowns never read
+  as black cutouts (blind-judge defect). Blind-judge verdict (images only,
+  no code): 3–4 readable silhouettes, clumped grouping, "believable mixed
+  palm grove at cinematic distance" — residual close-up limits (spiky flat
+  frond planes, dense clumps fusing canopies) recorded, not blocking.
+  Captures + crops under `artifacts/palm-v2/`; probe:
+  `scripts/probe-palm-stand.mts`;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one
@@ -425,11 +443,11 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after Tier 4 P4 (dusk sky presence):
+The required verification passed after the palm-stand v2 pass:
 
 ```text
 25 test files
-277 tests
+279 tests
 npm run typecheck: passed
 npm run build: passed
 ```

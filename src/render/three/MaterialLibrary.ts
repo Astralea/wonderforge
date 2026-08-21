@@ -46,7 +46,9 @@ export function createMaterialLibrary(wonder: Wonder): MaterialLibrary {
   const quarryCut = standard('#b98c58', 1);
   const wood = standard('#5b3822', 0.96);
   const rope = standard('#8b6338', 1);
-  const foliage = standard('#506633', 0.94);
+  // Sunlit palm foliage: dark enough to sit under the bright sky, light
+  // enough that the crown never reads as a black cutout (VD blind review).
+  const foliage = standard('#5b7040', 0.94);
   const water = standard('#3f7f8c', 0.15, 0);
   water.transparent = true;
   water.opacity = 0.82;
