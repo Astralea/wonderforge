@@ -25,6 +25,19 @@ and ask before initializing version control or deleting generated evidence.
 3. Implement until `npm run test && npm run typecheck && npm run build` is green.
 4. Run desktop and mobile browser QA for visual/rendering work.
 
+## Delegation preferences (owner, 2026-08-21)
+
+- Default delegate: the review-board droids in `.factory/droids/` run as
+  parallel subagents (read-only roles must cite evidence; implementation
+  droids get tightly-scoped briefs with disjoint file ownership).
+- Non-frontend work may also go to Codex 5.6-sol or Claude Opus as separate
+  sessions — past passes credit "delegated: Codex" and "delegated:
+  grok/cursor-agent". From inside a Devin CLI session those CLIs are not
+  invocable (no MCP bridge; `claude_design` is unreliable): author the brief
+  into a droid file or task prompt and let the owner run the other tool.
+- Frontend visual work stays with the in-session droids so captures,
+  contract tests, and the review board stay in one evidence chain.
+
 ## Hard rules
 
 - `src/engine/` and `src/data/` stay pure: no React, DOM, or Three.js imports.
