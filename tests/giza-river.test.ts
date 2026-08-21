@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { InstancedMesh, type MeshStandardMaterial } from 'three';
 import {
   channelArcLengthAt,
+  fieldAbsorptionAt,
   fieldParcelAt,
   GIZA_ENVIRONMENT,
   greenbeltInnerEdgeAt,
@@ -135,11 +136,41 @@ describe('Nile channel description (Spec 08)', () => {
       // Parcel center stays on dry land and inside the strip depth.
       expect(parcel.z).toBeGreaterThan(riverCenterZAt(parcel.x) + half + 1);
       expect(parcel.z).toBeLessThan(greenbeltInnerEdgeAt(parcel.x) + depth);
-      expect(parcel.yaw).toBeCloseTo(
-        Math.atan2(riverCenterZAt(parcel.x + 1) - riverCenterZAt(parcel.x - 1), 2),
-        10,
+      // Bank-parallel within the seeded yaw jitter envelope (±0.03 rad).
+      const tangent = Math.atan2(
+        riverCenterZAt(parcel.x + 1) - riverCenterZAt(parcel.x - 1),
+        2,
       );
+      expect(Math.abs(parcel.yaw - tangent)).toBeLessThanOrEqual(0.031);
     }
+  });
+
+  it('jitters, merges, and rests parcels — never a uniform lattice', () => {
+    let merged = 0;
+    let bare = 0;
+    let widened = 0;
+    const widths = new Set<number>();
+    for (let i = 0; i < GIZA_ENVIRONMENT.fields; i += 1) {
+      const parcel = fieldParcelAt(i);
+      if (parcel.merged) {
+        merged += 1;
+        expect(parcel.width).toBe(0);
+        continue;
+      }
+      if (parcel.bare) bare += 1;
+      widths.add(Number(parcel.width.toFixed(4)));
+      const absorbed = fieldAbsorptionAt(i);
+      expect(absorbed.width).toBeGreaterThanOrEqual(parcel.width);
+      if (absorbed.width > parcel.width) {
+        widened += 1;
+        expect(absorbed.xOffset).toBeGreaterThan(0);
+      }
+    }
+    // The mosaic needs every break from uniformity present.
+    expect(merged).toBeGreaterThan(0);
+    expect(bare).toBeGreaterThan(0);
+    expect(widened).toBeGreaterThan(0);
+    expect(widths.size).toBeGreaterThan(GIZA_ENVIRONMENT.fields / 2);
   });
 });
 

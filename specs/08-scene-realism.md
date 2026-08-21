@@ -30,12 +30,19 @@ The plateau fills the frame. It is not a floating island on an empty gradient.
 
 ## Site zones
 
-1. Foreground limestone quarry with cut channels, partially dressed blocks,
-   chips, tools, shade frames, and crews.
-2. Dressing yard with masons, measuring lines, lever stations, and block queue.
-3. Two-lane wetted haul road with outbound loaded sleds and returning crews.
+1. Foreground limestone quarry with cut channels, benched working faces
+   carrying wedge-slot notch lines, half-extracted blocks still attached at
+   one edge, a chip apron at the bench toe, partially dressed blocks, tools,
+   shade frames, and crews.
+2. Dressing yard anchored on the haul route's dressing waypoint, with blocks
+   clustered by state — rough queue, in-dressing (chip piles, measuring
+   cords stretched between stake pairs), and a squared dressed stack.
+3. Two-lane wetted haul road with outbound loaded sleds and returning crews;
+   marker stones and water troughs at the typed queue waypoints show where
+   the water and the waiting happen.
 4. Staging yard at the pyramid foot with rollers, ropes, water carriers, and
-   finite queues.
+   finite queues; idle sleds park near road ends and lever piles cache at
+   ramp feet — equipment never vanishes when crews step off it.
 5. Broad compacted-earth/mud-brick ramp whose crest follows the active course.
    The ramp rises toward the monument: its high end meets the working face,
    its foot stands out on the plateau — the gradient never runs away from the
@@ -43,6 +50,10 @@ The plateau fills the frame. It is not a floating island on an empty gradient.
    monument than rampCrest).
 6. Alignment deck with cribbing, levers, rope teams, and seating dust.
 7. Necropolis, temples, causeways, Sphinx, worker settlement, and supplies.
+   The settlement is a lived-in camp, not a cone grid: tents vary in scale
+   and yaw with a second ridge-tent archetype, and the ground story shows
+   baskets, water jars, rope coils, cooking pots at the fire pits, and
+   trampled paths to the haul road and quarry.
 
 ## Mechanical motion
 
@@ -120,15 +131,21 @@ verification recipes.
   variation, swaying gently in the northerly breeze as a pure function of
   `t`. A second grove stand shades the Memphis riverfront across the river.
   Reeds, sparse scrub, tools, and debris frame the foreground and river edge.
-- The cultivated strip is a working farm mosaic, not a green checkerboard:
-  every parcel carries a typed peret-season crop state (growing emmer,
-  ripening gold emmer, pale flax, freshly plowed fallow, straw stubble)
-  assigned by pure function, planted furrow ridges run the length of each
-  parcel, and low mud boundary bunds wall the parcels for basin irrigation.
-  City shapes combine homes, rooflines, corner bastions, a riverside quay,
-  walls, and monumental accents (two pylon pairs, obelisks) instead of one
-  box-only silhouette; necropolis mastabas vary with stepped upper tiers and
-  chapel annexes.
+- The cultivated strip is a worked floodplain, not a lattice: parcels jitter
+  in size and yaw, adjacent same-crop cells merge into larger fields, and
+  some cells lie bare — scrub gaps with tufts, or plowed fallow. Every
+  parcel carries a typed peret-season crop state (growing emmer, ripening
+  gold emmer, pale flax, freshly plowed fallow, straw stubble) assigned by
+  pure function; planted furrows run within each parcel's own extents, and
+  low mud boundary bunds wall the parcels for basin irrigation. Between the
+  parcels run trodden field paths; stubble fields stand with stooks of
+  bound sheaves; a threshing floor with a grain mound sits at the strip's
+  west end; fallen fronds and dates litter the ground under the palms; and
+  a few workers with oxen hoe and gather at parcel corners. City shapes
+  combine homes, rooflines, corner bastions, a riverside quay, walls, and
+  monumental accents (two pylon pairs, obelisks) instead of one box-only
+  silhouette; necropolis mastabas vary with stepped upper tiers and chapel
+  annexes.
 - Three to five cloud groups cross slowly with depth parallax. They remain
   outside the widest camera orbit, including the mobile reveal, so the camera
   can never pass through a cloud bank or expose a screen-filling cloud edge.

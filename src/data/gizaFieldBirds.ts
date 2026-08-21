@@ -52,13 +52,13 @@ export const FIELD_BIRD_FLOCK: FieldBirdFlockDescription = {
   // excursions still land inside that span.
   centerX: [-100, 80],
   // Radii are capped so the flock quarters the strip and the levee line only:
-  // the deepest landward reach (stripOffset + radiusZ = 16) still clears the
+  // the deepest landward reach (stripOffset + radiusZ = 12) still clears the
   // nearest earthwork (Menkaure's footprint edge, ~22 units beyond) with
   // margin, and no orbit ever crosses a monument or ramp footprint.
-  radiusX: [9, 15],
-  radiusZ: [3, 6],
-  stripOffset: [6, 10],
-  altitude: [4, 10],
+  radiusX: [7, 12],
+  radiusZ: [2.2, 4],
+  stripOffset: [5, 8],
+  altitude: [3.5, 8],
   circuitsPerMovie: [2, 3.5],
   wingBeatsPerMovie: [110, 150],
   description:

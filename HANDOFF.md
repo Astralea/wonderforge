@@ -1,7 +1,7 @@
 # WonderForge Agent Handoff
 
-Last updated: 2026-08-20 (Asia/Tokyo), Tier 4 P1 living river (fleet motion,
-wakes, deck crews, field kites) after the Tier 2/3 passes
+Last updated: 2026-08-20 (Asia/Tokyo), Tier 4 complete: living river (P1),
+working foreground (P2), farm-strip revolution (P3)
 
 ## Tier 4 plan of record
 
@@ -186,6 +186,29 @@ The Giza scene now has:
   instanced meshes (+7 calls); `scripts/probe-fleet-motion.mts` is the
   numeric evidence probe (62% of moving-hull samples in the camera-near
   reach). Captures under `artifacts/aaa-t4/`;
+- Tier 4 P2, the working foreground: quarry benches carry wedge-slot notch
+  lines, half-extracted blocks, and chip aprons (one tinted detail batch);
+  the dressing yard re-anchored on the route's dressing waypoint and split
+  into rough queue / in-dressing (measuring cords between stake pairs) /
+  squared dressed stack; camp de-gridded (per-tent scale+yaw, ridge-tent
+  archetype) with domestic pottery, rope coils, cook pots at the fire pits,
+  and merged-ribbon trampled paths; idle sleds, lever piles, queue marker
+  stones and water troughs stage the site. Placement hardened: `placeIfClear`
+  verifies nudge results slightly STRICTER than claimed margins (a point
+  pushed to exactly the corridor clearance sits one float-epsilon from
+  failing its own audit) and rejects trapped spots outright; sled runners
+  verify all three contact lines. Spoil heaps gained three silhouettes
+  (conical dump, skirted mound, windrow ridge) in two tints, clustered;
+  scatter boulders two-tone. Captures under `artifacts/aaa-t4p2/`;
+- Tier 4 P3, the farm-strip revolution: `fieldParcelAt` v2 jitters size and
+  yaw, merges same-crop neighbors into wider fields (`fieldAbsorptionAt`),
+  and rests some cells bare (scrub-tuft gaps); furrows and bunds follow each
+  parcel's own jittered extents; stooks stand in the stubble; a threshing
+  floor + grain mound at the strip's west end; trodden field paths follow
+  the meander (merged ribbon); fallen-frond litter under every palm crown;
+  static hoe/gather figures and an ox pair work the plowed and stubble
+  parcels. Kite flock orbits tightened (VD evidence: scattered flecks →
+  flock). Captures under `artifacts/aaa-t4p3/`;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one
@@ -379,14 +402,20 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after Tier 4 P1 (living river):
+The required verification passed after Tier 4 P3 (farm-strip revolution):
 
 ```text
-24 test files
-265 tests
+25 test files
+271 tests
 npm run typecheck: passed
 npm run build: passed
 ```
+
+Tier 4 P2/P3 visual evidence (artifacts/aaa-t4p2/, aaa-t4p3/): desktop
+t=0.12/0.35/0.62/1.0 at 164/154/155/152 calls including post; mobile 1.0 at
+131 — within the 300/150 budgets, zero console/page errors. Draw-call growth
+from Tier 2's 94-call dawn peak is the tier's authored content (wakes, crews,
+staging, farm detail); watch it if more batches are added.
 
 Tier 4 P1 visual evidence (artifacts/aaa-t4/): desktop t=0.12/0.35/0.62/1.0
 at 133/128/132/120 calls including post; mobile 1.0 at 104 — within budget,

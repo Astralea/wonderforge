@@ -33,6 +33,7 @@ import {
   BIRD_FLOCK,
   birdStateAt,
   channelTangentYawAt,
+  fieldAbsorptionAt,
   fieldParcelAt,
   GIZA_ENVIRONMENT,
   greenbeltInnerEdgeAt,
@@ -120,6 +121,29 @@ function riverRibbonGeometry(
   geometry.setIndex(indices);
   geometry.computeVertexNormals();
   return geometry;
+}
+
+/** Merge flat ribbon geometries (positions + indices) into one draw call. */
+function mergeRibbons(ribbons: BufferGeometry[]): BufferGeometry {
+  const positions: number[] = [];
+  const indices: number[] = [];
+  for (const ribbon of ribbons) {
+    const offset = positions.length / 3;
+    const pos = ribbon.getAttribute('position');
+    for (let i = 0; i < pos.count; i += 1) {
+      positions.push(pos.getX(i), pos.getY(i), pos.getZ(i));
+    }
+    const idx = ribbon.getIndex()!;
+    for (let i = 0; i < idx.count; i += 1) {
+      indices.push(idx.getX(i) + offset);
+    }
+    ribbon.dispose();
+  }
+  const merged = new BufferGeometry();
+  merged.setAttribute('position', new Float32BufferAttribute(positions, 3));
+  merged.setIndex(indices);
+  merged.computeVertexNormals();
+  return merged;
 }
 
 /** Cultivated strip ribbon following the near bank (Spec 08). */
@@ -263,6 +287,8 @@ export class GizaEnvironment {
   private foam: { mesh: InstancedMesh; material: MeshStandardMaterial } | null = null;
   /** One-off materials outside the shared library (date fruit, etc.). */
   private readonly extraMaterials: MeshStandardMaterial[] = [];
+  /** Tent positions, recorded so the staging pass can find the camp. */
+  private readonly tentSpots: Array<{ x: number; z: number }> = [];
   private birds: {
     bodies: InstancedMesh;
     wings: InstancedMesh;
@@ -292,6 +318,7 @@ export class GizaEnvironment {
     this.addHorizon(materials);
     this.addSettlement(materials);
     this.addCampfires(materials);
+    this.addStagingEquipment(materials);
     this.addWindDust(materials);
     this.addBirds();
     this.addSiteScatter(materials);
@@ -327,23 +354,180 @@ export class GizaEnvironment {
     quarryParts.name = 'foreground-quarry-floor-and-cuts';
     this.group.add(quarryParts);
 
-    const dressingStones = new InstancedMesh(box, materials.block['core-limestone'], 52);
-    const random = mulberry32('giza:dressing-yard');
+    // Extraction evidence (Spec 08 §Site zones): the stepped benches east
+    // faces are the worked faces. One detail batch carries wedge-slot notch
+    // lines along the bench tops, half-extracted blocks still attached at
+    // one edge, and a chip apron at the bench toes — per-instance tints over
+    // the shared quarry material.
+    const detail = new InstancedMesh(box, materials.quarryCut, 66);
+    detail.name = 'quarry-extraction-detail';
+    const detailRandom = mulberry32('giza:quarry-extraction:v1');
+    const darkNotch = new Color('#4f3d28');
+    const paleFresh = new Color('#e4d3a4');
+    const chipTint = new Color('#c69a63');
     const matrix = new Matrix4();
-    for (let i = 0; i < 52; i += 1) {
-      const x = -45 + (i % 13) * 1.35 + (random() - 0.5) * 0.12;
-      const z = 17 + Math.floor(i / 13) * 1.7 + (random() - 0.5) * 0.12;
-      matrix.compose(
-        new Vector3(x, 0.34, z),
-        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), (random() - 0.5) * 0.12),
-        new Vector3(1.12 + random() * 0.18, 0.58, 0.94 + random() * 0.16),
-      );
-      dressingStones.setMatrixAt(i, matrix);
+    let detailCursor = 0;
+    const benches = quarrySpecs.slice(1);
+    for (const [position, scale] of benches) {
+      const [bx, by, bz] = position;
+      const [sx, sy, sz] = scale;
+      const faceX = bx + sx / 2;
+      const topY = by + sy / 2;
+      // Wedge-notch line along the top of the face: the row of dark slots a
+      // wedging crew leaves. 8 notches per bench.
+      for (let n = 0; n < 8; n += 1) {
+        matrix.compose(
+          new Vector3(faceX - 0.22, topY + 0.035, bz - sz * 0.4 + n * (sz * 0.8 / 7)),
+          new Quaternion(),
+          new Vector3(0.34, 0.07, 0.14),
+        );
+        detail.setMatrixAt(detailCursor, matrix);
+        detail.setColorAt(detailCursor, darkNotch);
+        detailCursor += 1;
+      }
+      // Chip apron at the bench toe: small fresh flakes where the face sheds.
+      for (let c = 0; c < 6; c += 1) {
+        const size = 0.12 + detailRandom() * 0.22;
+        matrix.compose(
+          new Vector3(
+            faceX + 0.4 + detailRandom() * 1.6,
+            topY - sy + size * 0.3 + 0.02,
+            bz - sz * 0.42 + detailRandom() * sz * 0.84,
+          ),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), detailRandom() * Math.PI),
+          new Vector3(size * 1.5, size * 0.4, size),
+        );
+        detail.setMatrixAt(detailCursor, matrix);
+        detail.setColorAt(detailCursor, chipTint);
+        detailCursor += 1;
+      }
     }
-    dressingStones.castShadow = true;
-    dressingStones.receiveShadow = true;
-    dressingStones.name = 'dressing-yard-blocks';
-    this.group.add(dressingStones);
+    // Half-extracted blocks on the two middle benches: detached on three
+    // sides, still attached at the back edge, pale fresh-split faces.
+    for (let b = 0; b < 6; b += 1) {
+      const [position, scale] = benches[1 + (b % 3)]!;
+      const [bx, by, bz] = position;
+      const [sx, sy, sz] = scale;
+      matrix.compose(
+        new Vector3(
+          bx + sx / 2 + 0.42,
+          by + sy / 2 + 0.31,
+          bz - sz * 0.36 + b * (sz * 0.72 / 5) + (detailRandom() - 0.5) * 0.4,
+        ),
+        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), (detailRandom() - 0.5) * 0.1),
+        new Vector3(1.35, 0.6, 1.0),
+      );
+      detail.setMatrixAt(detailCursor, matrix);
+      detail.setColorAt(detailCursor, paleFresh);
+      detailCursor += 1;
+    }
+    detail.count = detailCursor;
+    detail.castShadow = true;
+    detail.receiveShadow = true;
+    this.group.add(detail);
+
+    // Dressing yard, anchored on the haul route's dressing waypoint so the
+    // sled path visibly passes through it (Spec 08 §Site zones): blocks
+    // cluster by state — rough queue near the quarry lip, in-dressing with
+    // chip piles and measuring cords, and a squared dressed stack.
+    const dressing = this.plan.routes[0]!.waypoints.dressing;
+    const yardX = dressing[0];
+    const yardZ = dressing[2] - 4;
+    const random = mulberry32('giza:dressing-yard:v2');
+
+    const roughQueue = new InstancedMesh(box, materials.quarryCut, 18);
+    roughQueue.name = 'dressing-yard-rough-queue';
+    let roughCursor = 0;
+    for (let i = 0; i < 18; i += 1) {
+      const spot = this.placeIfClear(
+        yardX - 7 + (i % 6) * 1.5 + (random() - 0.5) * 0.5,
+        yardZ + 2.5 + Math.floor(i / 6) * 1.8 + (random() - 0.5) * 0.5,
+        0.9,
+        1.2,
+      );
+      if (!spot) continue;
+      matrix.compose(
+        new Vector3(spot[0], 0.36, spot[1]),
+        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), (random() - 0.5) * 0.5),
+        new Vector3(1.14 + random() * 0.28, 0.62, 0.9 + random() * 0.3),
+      );
+      roughQueue.setMatrixAt(roughCursor, matrix);
+      roughCursor += 1;
+    }
+    roughQueue.count = roughCursor;
+
+    // In-dressing: blocks squared on the mason's spot, one tilted mid-pass.
+    const inDressing = new InstancedMesh(box, materials.block['core-limestone'], 14);
+    inDressing.name = 'dressing-yard-in-dressing-blocks';
+    let dressingCursor = 0;
+    for (let i = 0; i < 14; i += 1) {
+      const spot = this.placeIfClear(
+        yardX - 1 + (i % 5) * 1.55 + (random() - 0.5) * 0.3,
+        yardZ - 3.2 + Math.floor(i / 5) * 1.9 + (random() - 0.5) * 0.3,
+        0.9,
+        1.2,
+      );
+      if (!spot) continue;
+      const tilt = i % 5 === 2 ? 0.16 : 0;
+      matrix.compose(
+        new Vector3(spot[0], 0.35, spot[1]),
+        new Quaternion().setFromEuler(new Euler(tilt, (random() - 0.5) * 0.14, 0, 'YXZ')),
+        new Vector3(1.08 + random() * 0.14, 0.56, 0.92 + random() * 0.12),
+      );
+      inDressing.setMatrixAt(dressingCursor, matrix);
+      dressingCursor += 1;
+    }
+    inDressing.count = dressingCursor;
+
+    const dressedStack = new InstancedMesh(box, materials.block['casing-limestone'], 20);
+    dressedStack.name = 'dressing-yard-dressed-stack';
+    let stackCursor = 0;
+    for (let i = 0; i < 20; i += 1) {
+      const spot = this.placeIfClear(
+        yardX + 6.5 + (i % 5) * 1.32,
+        yardZ - 2.6 + Math.floor(i / 5) * 1.55,
+        0.9,
+        1.2,
+      );
+      if (!spot) continue;
+      matrix.compose(
+        new Vector3(spot[0], 0.33, spot[1]),
+        new Quaternion(),
+        new Vector3(1.18, 0.52, 0.98),
+      );
+      dressedStack.setMatrixAt(stackCursor, matrix);
+      stackCursor += 1;
+    }
+    dressedStack.count = stackCursor;
+
+    // Measuring cords stretched between stake pairs across the in-dressing
+    // row — the "stretching the cord" layout step made visible.
+    const cords = new InstancedMesh(box, materials.rope, 4);
+    cords.name = 'dressing-yard-measuring-cords';
+    for (let c = 0; c < 2; c += 1) {
+      const end0 = this.placeIfClear(yardX - 1.5, yardZ - 3.4 + c * 2.1, 0.4, 1.2);
+      const end1 = this.placeIfClear(yardX + 6.2, yardZ - 3.1 + c * 2.0, 0.4, 1.2);
+      if (!end0 || !end1) continue;
+      const [x0, z0] = end0;
+      const [x1, z1] = end1;
+      const length = Math.hypot(x1 - x0, z1 - z0);
+      matrix.compose(
+        new Vector3((x0 + x1) / 2, 0.62, (z0 + z1) / 2),
+        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), -Math.atan2(z1 - z0, x1 - x0)),
+        new Vector3(length, 0.035, 0.035),
+      );
+      cords.setMatrixAt(c * 2, matrix);
+      for (const [sx, sz] of [[x0, z0], [x1, z1]] as const) {
+        matrix.compose(new Vector3(sx, 0.42, sz), new Quaternion(), new Vector3(0.07, 0.84, 0.07));
+        cords.setMatrixAt(c * 2 + 1, matrix);
+      }
+    }
+
+    for (const batch of [roughQueue, inDressing, dressedStack]) {
+      batch.castShadow = true;
+      batch.receiveShadow = true;
+    }
+    this.group.add(roughQueue, inDressing, dressedStack, cords);
   }
 
   private addRoads(materials: MaterialLibrary): void {
@@ -413,8 +597,6 @@ export class GizaEnvironment {
     this.group.add(greenbelt);
 
     const fieldCount = GIZA_ENVIRONMENT.fields;
-    const fields = new InstancedMesh(box, materials.farmland, fieldCount);
-    fields.name = 'cultivated-field-parcels-and-planting-rows';
     const matrix = new Matrix4();
     // Typed peret-season crop mosaic (Spec 08 §Ecology): growing emmer,
     // ripening gold, pale flax, plowed fallow, and straw stubble.
@@ -425,64 +607,236 @@ export class GizaEnvironment {
       'fallow-plowed': new Color('#6b4f33'),
       stubble: new Color('#97865a'),
     };
-    for (let i = 0; i < fieldCount; i += 1) {
-      const parcel = fieldParcelAt(i);
-      matrix.compose(
-        new Vector3(parcel.x, 0.09, parcel.z),
-        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), parcel.yaw),
-        new Vector3(13.6, 0.12, 5.3),
-      );
-      fields.setMatrixAt(i, matrix);
-      fields.setColorAt(i, cropColors[parcel.crop]);
-    }
-    fields.receiveShadow = true;
-    this.group.add(fields);
+    const bareEarthTint = new Color('#6f5b3a');
 
-    // Planted furrow ridges run the length of every parcel, tinted a shade
-    // darker than its crop state; low mud bunds wall each parcel for basin
-    // irrigation. Two instanced batches for the whole strip.
-    const furrowsPerParcel = 7;
-    const furrows = new InstancedMesh(box, materials.farmland, fieldCount * furrowsPerParcel);
-    furrows.name = 'cultivated-field-furrow-ridges';
-    const bunds = new InstancedMesh(box, materials.compactedEarth, fieldCount * 4);
-    bunds.name = 'cultivated-field-boundary-bunds';
-    const furrowTint = new Color();
-    for (let i = 0; i < fieldCount; i += 1) {
+    // Precompute per-cell render specs: merged cells vanish into their left
+    // twin (which widens and shifts center); bare cells draw an earth slab
+    // with no crop and no furrows, plus scrub tufts.
+    const cellSpecs = Array.from({ length: fieldCount }, (_, i) => {
       const parcel = fieldParcelAt(i);
+      const absorption = fieldAbsorptionAt(i);
+      const rng = mulberry32(`giza:field-render:${i}`);
+      return {
+        parcel,
+        width: absorption.width,
+        x: parcel.x + absorption.xOffset,
+        furrowRows: parcel.bare ? 0 : Math.max(3, Math.round(parcel.depth / 0.72)),
+        stooks: !parcel.merged && !parcel.bare && parcel.crop === 'stubble' ? 5 + Math.floor(rng() * 3) : 0,
+        scrub: !parcel.merged && parcel.bare ? 5 + Math.floor(rng() * 3) : 0,
+      };
+    });
+    const visible = cellSpecs.filter((spec) => !spec.parcel.merged);
+    const furrowTotal = cellSpecs.reduce((total, spec) => total + spec.furrowRows, 0);
+    const stookTotal = cellSpecs.reduce((total, spec) => total + spec.stooks, 0) + 4;
+    const scrubTotal = cellSpecs.reduce((total, spec) => total + spec.scrub, 0);
+
+    const fields = new InstancedMesh(box, materials.farmland, visible.length);
+    fields.name = 'cultivated-field-parcels-and-planting-rows';
+    const furrows = new InstancedMesh(box, materials.farmland, furrowTotal);
+    furrows.name = 'cultivated-field-furrow-ridges';
+    const bunds = new InstancedMesh(box, materials.compactedEarth, visible.length * 4);
+    bunds.name = 'cultivated-field-boundary-bunds';
+    // Bound sheaves standing in the stubble, plus the threshing-floor grain
+    // mound — one straw batch for the whole harvest story.
+    const stooks = new InstancedMesh(new ConeGeometry(0.5, 1, 6), materials.cityAccent, stookTotal);
+    stooks.name = 'field-stooks-and-grain-mound';
+    this.geometries.push(stooks.geometry);
+    const scrubTufts = new InstancedMesh(new ConeGeometry(0.5, 1, 5), materials.foliage, scrubTotal);
+    scrubTufts.name = 'field-scrub-gap-tufts';
+    this.geometries.push(scrubTufts.geometry);
+    const furrowTint = new Color();
+    const scrubTint = new Color('#55603a');
+
+    let fieldCursor = 0;
+    let furrowCursor = 0;
+    let bundCursor = 0;
+    let stookCursor = 0;
+    let scrubCursor = 0;
+    for (const spec of cellSpecs) {
+      if (spec.parcel.merged) continue;
+      const { parcel } = spec;
       const rotation = new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), parcel.yaw);
       const cos = Math.cos(parcel.yaw);
       const sin = Math.sin(parcel.yaw);
       // Parcel-local offset rotated into world (local x = long axis).
       const place = (lx: number, lz: number) =>
-        new Vector3(parcel.x + lx * cos + lz * sin, 0, parcel.z - lx * sin + lz * cos);
+        new Vector3(spec.x + lx * cos + lz * sin, 0, parcel.z - lx * sin + lz * cos);
+      matrix.compose(
+        new Vector3(spec.x, 0.09, parcel.z),
+        rotation,
+        new Vector3(spec.width, 0.12, parcel.depth),
+      );
+      fields.setMatrixAt(fieldCursor, matrix);
+      fields.setColorAt(fieldCursor, parcel.bare ? bareEarthTint : cropColors[parcel.crop]);
+      fieldCursor += 1;
+
       furrowTint.copy(cropColors[parcel.crop]).multiplyScalar(0.68);
-      for (let row = 0; row < furrowsPerParcel; row += 1) {
-        const lz = -2.1 + row * 0.7;
+      for (let row = 0; row < spec.furrowRows; row += 1) {
+        const lz = -parcel.depth / 2 + 0.55 + row * 0.72;
+        if (lz > parcel.depth / 2 - 0.4) break;
         const offset = place(0, lz);
         matrix.compose(
           new Vector3(offset.x, 0.16, offset.z),
           rotation,
-          new Vector3(12.9, 0.1, 0.24),
+          new Vector3(spec.width - 0.7, 0.1, 0.24),
         );
-        furrows.setMatrixAt(i * furrowsPerParcel + row, matrix);
-        furrows.setColorAt(i * furrowsPerParcel + row, furrowTint);
+        furrows.setMatrixAt(furrowCursor, matrix);
+        furrows.setColorAt(furrowCursor, furrowTint);
+        furrowCursor += 1;
       }
+
+      const hw = spec.width / 2 + 0.2;
+      const hd = parcel.depth / 2 + 0.2;
       const bundEdges: Array<[number, number, number, number]> = [
-        [0, -2.75, 13.9, 0.3],
-        [0, 2.75, 13.9, 0.3],
-        [-6.9, 0, 0.3, 5.6],
-        [6.9, 0, 0.3, 5.6],
+        [0, -hd, spec.width + 0.4, 0.3],
+        [0, hd, spec.width + 0.4, 0.3],
+        [-hw, 0, 0.3, parcel.depth + 0.4],
+        [hw, 0, 0.3, parcel.depth + 0.4],
       ];
-      for (let edge = 0; edge < bundEdges.length; edge += 1) {
-        const [lx, lz, sx, sz] = bundEdges[edge]!;
+      for (const [lx, lz, sx, sz] of bundEdges) {
         const offset = place(lx, lz);
         matrix.compose(new Vector3(offset.x, 0.16, offset.z), rotation, new Vector3(sx, 0.22, sz));
-        bunds.setMatrixAt(i * 4 + edge, matrix);
+        bunds.setMatrixAt(bundCursor, matrix);
+        bundCursor += 1;
+      }
+
+      const rng = mulberry32(`giza:field-render:${parcel.row}:${parcel.column}`);
+      for (let s = 0; s < spec.stooks; s += 1) {
+        const offset = place(
+          (rng() - 0.5) * (spec.width - 1.6),
+          (rng() - 0.5) * (parcel.depth - 1.4),
+        );
+        const size = 0.38 + rng() * 0.2;
+        matrix.compose(
+          new Vector3(offset.x, 0.27, offset.z),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), rng() * Math.PI),
+          new Vector3(size, 0.55, size),
+        );
+        stooks.setMatrixAt(stookCursor, matrix);
+        stookCursor += 1;
+      }
+      for (let s = 0; s < spec.scrub; s += 1) {
+        const offset = place(
+          (rng() - 0.5) * (spec.width - 1),
+          (rng() - 0.5) * (parcel.depth - 0.8),
+        );
+        const size = 0.3 + rng() * 0.35;
+        matrix.compose(
+          new Vector3(offset.x, 0.2, offset.z),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), rng() * Math.PI),
+          new Vector3(size * 1.6, size * 0.5, size * 1.4),
+        );
+        scrubTufts.setMatrixAt(scrubCursor, matrix);
+        scrubTufts.setColorAt(scrubCursor, scrubTint);
+        scrubCursor += 1;
       }
     }
+    fields.count = fieldCursor;
+    furrows.count = furrowCursor;
+    bunds.count = bundCursor;
+    stooks.count = stookCursor;
+    scrubTufts.count = scrubCursor;
+    fields.receiveShadow = true;
     furrows.receiveShadow = true;
     bunds.receiveShadow = true;
-    this.group.add(furrows, bunds);
+    this.group.add(fields, furrows, bunds, stooks, scrubTufts);
+
+    // Threshing floor at the strip's west end: hard-packed pad, a grain
+    // mound (into the straw batch), and the working pair beside it.
+    const threshingX = -102;
+    const threshingZ = greenbeltInnerEdgeAt(threshingX) + 8;
+    const padGeometry = new CylinderGeometry(3.2, 3.2, 0.06, 14);
+    this.geometries.push(padGeometry);
+    const pad = new Mesh(padGeometry, materials.compactedEarth);
+    pad.position.set(threshingX, 0.05, threshingZ);
+    pad.receiveShadow = true;
+    pad.name = 'field-threshing-floor';
+    this.group.add(pad);
+    matrix.compose(
+      new Vector3(threshingX + 0.9, 0.26, threshingZ + 0.4),
+      new Quaternion(),
+      new Vector3(1.7, 0.5, 1.7),
+    );
+    stooks.setMatrixAt(stookCursor, matrix);
+    stookCursor += 1;
+    stooks.count = stookCursor;
+
+    // Field paths: trodden dirt spines along the strip between the rows,
+    // following the meander, merged into one ribbon geometry.
+    const pathAt = (rowEdge: number, x0: number, x1: number) => {
+      const points: Vec3[] = [];
+      for (let x = x0; x <= x1; x += 8) {
+        points.push([x, 0.05, greenbeltInnerEdgeAt(x) + rowEdge]);
+      }
+      return roadGeometry(points, 1.4);
+    };
+    const fieldPaths = mergeRibbons([pathAt(7.1, -104, 96), pathAt(13.9, -100, 90)]);
+    this.geometries.push(fieldPaths);
+    const pathsMesh = new Mesh(fieldPaths, materials.compactedEarth);
+    pathsMesh.receiveShadow = true;
+    pathsMesh.name = 'field-trodden-paths';
+    this.group.add(pathsMesh);
+
+    // Field labor: a hoe pair in the plowed fallow, a gathering pair with an
+    // ox team in the stubble — the strip is worked, not wallpaper. Static
+    // deterministic figures; the living workers belong to the site crews.
+    const laborBodyGeometry = new CylinderGeometry(0.16, 0.2, 0.62, 6);
+    const laborHeadGeometry = new SphereGeometry(0.11, 6, 5);
+    this.geometries.push(laborBodyGeometry, laborHeadGeometry);
+    const laborBodies = new InstancedMesh(laborBodyGeometry, materials.linen, 4);
+    const laborHeads = new InstancedMesh(laborHeadGeometry, materials.skin, 4);
+    const oxen = new InstancedMesh(box, materials.cityRoof, 4);
+    laborBodies.name = 'field-labor-worker-bodies';
+    laborHeads.name = 'field-labor-worker-heads';
+    oxen.name = 'field-labor-oxen';
+    const plowed = cellSpecs.find((spec) => !spec.parcel.merged && spec.parcel.crop === 'fallow-plowed');
+    const stubble = cellSpecs.find((spec) => !spec.parcel.merged && spec.parcel.crop === 'stubble');
+    let laborCursor = 0;
+    const worker = (x: number, z: number, yaw: number) => {
+      // Bent forward at the hips, working the row.
+      matrix.compose(
+        new Vector3(x, 0.32, z),
+        new Quaternion().setFromEuler(new Euler(0.42, yaw, 0, 'YXZ')),
+        new Vector3(1, 1, 1),
+      );
+      laborBodies.setMatrixAt(laborCursor, matrix);
+      matrix.compose(
+        new Vector3(x + Math.sin(yaw) * 0.26, 0.62, z + Math.cos(yaw) * 0.26),
+        new Quaternion(),
+        new Vector3(1, 1, 1),
+      );
+      laborHeads.setMatrixAt(laborCursor, matrix);
+      laborCursor += 1;
+    };
+    if (plowed) {
+      const rng = mulberry32('giza:field-labor:plowed');
+      worker(plowed.x - plowed.width * 0.28, plowed.parcel.z, rng() * Math.PI);
+      worker(plowed.x + plowed.width * 0.22, plowed.parcel.z + 1.4, rng() * Math.PI);
+    }
+    if (stubble) {
+      const rng = mulberry32('giza:field-labor:stubble');
+      worker(stubble.x - stubble.width * 0.3, stubble.parcel.z + 0.8, rng() * Math.PI);
+      worker(stubble.x + stubble.width * 0.34, stubble.parcel.z - 0.6, rng() * Math.PI);
+      // An ox pair waiting at the parcel corner.
+      for (let o = 0; o < 2; o += 1) {
+        const ox = stubble.x + stubble.width * 0.42;
+        const oz = stubble.parcel.z + stubble.parcel.depth * 0.28 + o * 1.05;
+        const yaw = stubble.parcel.yaw + Math.PI / 2;
+        matrix.compose(new Vector3(ox, 0.62, oz), new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), yaw), new Vector3(1.5, 0.9, 0.62));
+        oxen.setMatrixAt(o * 2, matrix);
+        matrix.compose(
+          new Vector3(ox + Math.sin(yaw) * 0.95, 0.68, oz + Math.cos(yaw) * 0.95),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), yaw),
+          new Vector3(0.46, 0.42, 0.42),
+        );
+        oxen.setMatrixAt(o * 2 + 1, matrix);
+      }
+    }
+    laborBodies.count = laborCursor;
+    laborHeads.count = laborCursor;
+    laborBodies.castShadow = true;
+    oxen.castShadow = true;
+    this.group.add(laborBodies, laborHeads, oxen);
 
     // Basin-irrigation feeders run in from the river, perpendicular to the
     // local bank (Spec 08: the strip follows the river).
@@ -711,6 +1065,32 @@ export class GizaEnvironment {
     skirts.count = skirtCursor;
     fruits.count = fruitCursor;
     this.palmFronds = fronds;
+    // Understory litter (Spec 08 §Ecology): fallen dry fronds and dropped
+    // dates under every crown, so the ground beneath a palm tells on it.
+    const litterGeometry = new BoxGeometry(1, 0.04, 0.3);
+    this.geometries.push(litterGeometry);
+    const litter = new InstancedMesh(litterGeometry, materials.foliage, this.palmSway.length * 2);
+    const litterTint = new Color('#7a6a3f');
+    let litterCursor = 0;
+    for (const palm of this.palmSway) {
+      const rng = mulberry32(`giza:palm-litter:${litterCursor}`);
+      for (let piece = 0; piece < 2; piece += 1) {
+        const angle = rng() * Math.PI * 2;
+        const radius = 0.7 + rng() * 1.1;
+        matrix.compose(
+          new Vector3(palm.crownX + Math.cos(angle) * radius, 0.05, palm.crownZ + Math.sin(angle) * radius),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), rng() * Math.PI),
+          new Vector3(1.3 + rng() * 0.9, 1, 1),
+        );
+        litter.setMatrixAt(litterCursor, matrix);
+        litter.setColorAt(litterCursor, litterTint);
+        litterCursor += 1;
+      }
+    }
+    litter.count = litterCursor;
+    litter.receiveShadow = true;
+    litter.name = 'palm-understory-fallen-fronds';
+    this.group.add(litter);
     // Frond matrices sway every frame; opt out of the stale-bounds cull.
     fronds.frustumCulled = false;
     this.updatePalms(0);
@@ -902,8 +1282,11 @@ export class GizaEnvironment {
     const yards = new InstancedMesh(yardGeometry, materials.wood, sailCount);
     const booms = new InstancedMesh(boomGeometry, materials.wood, sailCount);
     // Sails belly in the breeze on a dedicated linen clone; the shared
-    // library linen on worker clothing stays still (Spec 06).
+    // library linen on worker clothing stays still (Spec 06). Aged flax
+    // deeper than the whitewashed city wall behind — the square sail must
+    // not camo against Memphis at the dusk beats (review-board evidence).
     const sailCloth = materials.linen.clone();
+    sailCloth.color.set('#c4a877');
     applyClothSway(sailCloth, 'sail');
     this.clothMaterials.push(sailCloth);
     const sails = new InstancedMesh(sailGeometry, sailCloth, sailCount);
@@ -939,7 +1322,8 @@ export class GizaEnvironment {
     );
     const wakeMaterial = materials.whitewash.clone();
     wakeMaterial.transparent = true;
-    wakeMaterial.opacity = 0.3;
+    // Review-board evidence: below ~0.45 the trail is sub-threshold at 1x.
+    wakeMaterial.opacity = 0.5;
     wakeMaterial.depthWrite = false;
     this.extraMaterials.push(wakeMaterial);
     const wakes = new InstancedMesh(wakeGeometry, wakeMaterial, movingCount * (WAKE_SEGMENTS + 1));
@@ -1412,6 +1796,29 @@ export class GizaEnvironment {
     });
   }
 
+  /**
+   * Nudge, then verify at the same margins: the nudge's last pass resolves
+   * footprints and can push a prop back into a lane (corridors resolve
+   * first). A spot that still fails is rejected — null — rather than left
+   * straddling a corridor.
+   */
+  private placeIfClear(
+    x: number,
+    z: number,
+    margin: number,
+    lane = 0,
+  ): [number, number] | null {
+    const [px, pz] = this.clear(x, z, margin, lane);
+    // Verify slightly STRICTER than claimed: a point nudged to exactly the
+    // corridor clearance sits one float-epsilon from failing its own audit.
+    return isClearOfSiteWorks(px, pz, this.keepOuts, this.corridors, {
+      margin: margin + 0.05,
+      corridorClearance: lane + 0.05,
+    })
+      ? [px, pz]
+      : null;
+  }
+
   private addSettlement(materials: MaterialLibrary): void {
     // Height-segmented cone: the tent-canvas breathing needs mid rings to
     // displace (Spec 06 §Materials).
@@ -1431,8 +1838,13 @@ export class GizaEnvironment {
     const supplies = new InstancedMesh(crateGeometry, materials.wood, 72);
     const shadeCloths = new InstancedMesh(awningGeometry, awningCloth, 12);
     const shadePoles = new InstancedMesh(poleGeometry, materials.wood, 48);
+    // Ridge tents: two sloped cloth panels per ridge — the second archetype
+    // that breaks the cone grid's stamp (Spec 08 §Site zones 7).
+    const ridgeTents = new InstancedMesh(crateGeometry, tentCloth, 16);
     const random = mulberry32('giza:worker-settlement');
     const matrix = new Matrix4();
+    const up = new Vector3(0, 1, 0);
+    const ridgeAxis = new Vector3(1, 0, 0);
     for (let i = 0; i < 27; i += 1) {
       const [x, z] = this.clear(
         -36 + (i % 9) * 10 + (random() - 0.5) * 1.6,
@@ -1440,8 +1852,36 @@ export class GizaEnvironment {
         2.2,
         4.2,
       );
-      matrix.compose(new Vector3(x, 1.35, z), new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), Math.PI / 4), new Vector3(3, 2.7, 3));
+      // Lived-in variance: free yaw and 0.85–1.25× scale, never one stamp.
+      const scale = 0.85 + random() * 0.4;
+      matrix.compose(
+        new Vector3(x, 1.35 * scale, z),
+        new Quaternion().setFromAxisAngle(up, random() * Math.PI * 2),
+        new Vector3(3 * scale, 2.7 * scale, 3 * scale),
+      );
       tents.setMatrixAt(i, matrix);
+      this.tentSpots.push({ x, z });
+    }
+    for (let i = 0; i < 8; i += 1) {
+      const [x, z] = this.clear(
+        -34 + (i % 4) * 16 + (random() - 0.5) * 3,
+        58 + Math.floor(i / 4) * 6 + (random() - 0.5) * 2,
+        2.6,
+        4.2,
+      );
+      const yaw = random() * Math.PI * 2;
+      const ridgeYaw = new Quaternion().setFromAxisAngle(up, yaw);
+      for (const side of [-1, 1] as const) {
+        const tilt = new Quaternion()
+          .setFromAxisAngle(ridgeAxis, side * 0.56)
+          .premultiply(ridgeYaw);
+        matrix.compose(
+          new Vector3(x - Math.sin(yaw) * side * 0.5, 0.82, z - Math.cos(yaw) * side * 0.5),
+          tilt,
+          new Vector3(2.6, 0.06, 1.65),
+        );
+        ridgeTents.setMatrixAt(i * 2 + (side + 1) / 2, matrix);
+      }
     }
     for (let i = 0; i < 72; i += 1) {
       const [x, z] = this.clear(
@@ -1469,12 +1909,15 @@ export class GizaEnvironment {
         poleCursor += 1;
       }
     }
-    for (const item of [tents, supplies, shadeCloths, shadePoles]) item.castShadow = true;
+    for (const item of [tents, supplies, shadeCloths, shadePoles, ridgeTents]) {
+      item.castShadow = true;
+    }
     tents.name = 'worker-settlement-tents';
     supplies.name = 'worker-settlement-supplies';
     shadeCloths.name = 'worker-settlement-shade-cloths';
     shadePoles.name = 'worker-settlement-shade-poles';
-    this.group.add(tents, supplies, shadeCloths, shadePoles);
+    ridgeTents.name = 'worker-settlement-ridge-tents';
+    this.group.add(tents, supplies, shadeCloths, shadePoles, ridgeTents);
   }
 
   /**
@@ -1631,6 +2074,199 @@ export class GizaEnvironment {
   }
 
   /**
+   * Site staging and camp ground story (Spec 08 §Site zones 2–4, 7): the
+   * equipment and domestic scatter a state project actually leaves lying —
+   * idle sleds parked at road ends, lever piles cached at ramp feet, rope
+   * coils at the queue waypoints and in camp, marker stones and water
+   * troughs where the haul roads are wetted, and the camp's baskets, jars,
+   * and cook pots, joined by trampled paths to the road and quarry.
+   * Everything clears footprints and haul lanes through the shared rules.
+   */
+  private addStagingEquipment(materials: MaterialLibrary): void {
+    const box = new BoxGeometry(1, 1, 1);
+    const coilGeometry = new TorusGeometry(0.16, 0.05, 5, 10);
+    coilGeometry.rotateX(Math.PI / 2);
+    const potteryGeometry = new CylinderGeometry(0.5, 0.5, 1, 8);
+    const markerGeometry = new ConeGeometry(0.22, 0.7, 6);
+    this.geometries.push(box, coilGeometry, potteryGeometry, markerGeometry);
+    const random = mulberry32('giza:site-staging:v1');
+    const matrix = new Matrix4();
+    const up = new Vector3(0, 1, 0);
+
+    // Idle wood equipment: parked sleds (bed + two runners each) near the
+    // road ends, lever poles cached in crossed piles at the ramp feet.
+    const equipment = new InstancedMesh(box, materials.wood, 24);
+    equipment.name = 'site-idle-sleds-and-lever-piles';
+    let woodCursor = 0;
+    for (let s = 0; s < 4; s += 1) {
+      // The bed center verifying is not enough: the runners extend 0.48 to
+      // either side, and a runner poking over a footprint edge reads as
+      // clipping. Verify all three contact lines before parking.
+      const yaw = random() * Math.PI;
+      const cx = -64 + s * 18 + (random() - 0.5) * 3;
+      const cz = 46.5 + (random() - 0.5) * 2.5;
+      const runnerAt = (side: number): [number, number] => [
+        cx - Math.sin(yaw) * side * 0.48,
+        cz - Math.cos(yaw) * side * 0.48,
+      ];
+      const bed = this.placeIfClear(cx, cz, 2.0, 1.8);
+      const runners = [runnerAt(-1), runnerAt(1)].map(([rx, rz]) =>
+        this.placeIfClear(rx, rz, 1.25, 1.6),
+      );
+      // Parked on the camp fringe: never overlapping a tent either.
+      const nearTent = this.tentSpots.some(
+        (spot) => bed && Math.hypot(spot.x - bed[0], spot.z - bed[1]) < 2.8,
+      );
+      if (!bed || runners.some((spot) => !spot) || nearTent) continue;
+      const [x, z] = bed;
+      const yawQ = new Quaternion().setFromAxisAngle(up, yaw);
+      matrix.compose(new Vector3(x, 0.24, z), yawQ, new Vector3(2.1, 0.22, 1.1));
+      equipment.setMatrixAt(woodCursor, matrix);
+      woodCursor += 1;
+      for (const side of [-1, 1] as const) {
+        const [rx, rz] = runners[(side + 1) / 2]!;
+        matrix.compose(
+          new Vector3(rx, 0.09, rz),
+          yawQ,
+          new Vector3(2.3, 0.18, 0.16),
+        );
+        equipment.setMatrixAt(woodCursor, matrix);
+        woodCursor += 1;
+      }
+    }
+    for (const route of this.plan.routes.slice(0, 3)) {
+      const [fx, , fz] = route.waypoints.rampFoot;
+      // Margin covers the per-pole jitter so no pole escapes verification.
+      const spot = this.placeIfClear(fx + 2.4, fz + 1.6, 1.9, 2.6);
+      if (!spot) continue;
+      const [x, z] = spot;
+      for (let pole = 0; pole < 4; pole += 1) {
+        matrix.compose(
+          new Vector3(x + (random() - 0.5) * 0.5, 0.1 + pole * 0.09, z + (random() - 0.5) * 0.5),
+          new Quaternion().setFromAxisAngle(up, pole * 0.42 + random() * 0.2),
+          new Vector3(2.6, 0.09, 0.09),
+        );
+        equipment.setMatrixAt(woodCursor, matrix);
+        woodCursor += 1;
+      }
+    }
+    equipment.count = woodCursor;
+    equipment.castShadow = true;
+    this.group.add(equipment);
+
+    // Queue furniture per route: two marker stones and a water trough.
+    const markers = new InstancedMesh(markerGeometry, materials.cityAccent, this.plan.routes.length * 2);
+    const troughs = new InstancedMesh(box, materials.compactedEarth, this.plan.routes.length);
+    markers.name = 'haul-queue-marker-stones';
+    troughs.name = 'haul-queue-water-troughs';
+    let markerCursor = 0;
+    let troughCursor = 0;
+    for (let r = 0; r < this.plan.routes.length; r += 1) {
+      const [qx, , qz] = this.plan.routes[r]!.waypoints.roadQueue;
+      for (const off of [-1.7, 1.7]) {
+        const spot = this.placeIfClear(qx + off, qz + 1.9, 0.4, 2.0);
+        if (!spot) continue;
+        matrix.compose(new Vector3(spot[0], 0.35, spot[1]), new Quaternion(), new Vector3(1, 1, 1));
+        markers.setMatrixAt(markerCursor, matrix);
+        markerCursor += 1;
+      }
+      const trough = this.placeIfClear(qx - 2.6, qz - 2.2, 0.8, 2.2);
+      if (trough) {
+        matrix.compose(new Vector3(trough[0], 0.22, trough[1]), new Quaternion().setFromAxisAngle(up, random() * Math.PI), new Vector3(1.7, 0.44, 0.9));
+        troughs.setMatrixAt(troughCursor, matrix);
+        troughCursor += 1;
+      }
+    }
+    markers.count = markerCursor;
+    troughs.count = troughCursor;
+    markers.castShadow = true;
+    troughs.castShadow = true;
+    troughs.receiveShadow = true;
+    this.group.add(markers, troughs);
+
+    // Rope coils: at the queue waypoints and beside camp shade frames.
+    const coils = new InstancedMesh(coilGeometry, materials.rope, 14);
+    coils.name = 'site-rope-coils';
+    let coilCursor = 0;
+    for (const route of this.plan.routes) {
+      const [qx, , qz] = route.waypoints.roadQueue;
+      const spot = this.placeIfClear(qx + 2.2, qz + 0.9, 0.4, 1.8);
+      if (!spot) continue;
+      matrix.compose(new Vector3(spot[0], 0.06, spot[1]), new Quaternion(), new Vector3(1, 1, 1));
+      coils.setMatrixAt(coilCursor, matrix);
+      coilCursor += 1;
+    }
+    let coilAttempts = 0;
+    while (coilCursor < 14 && coilAttempts < 26 && this.tentSpots.length > 0) {
+      const spot = this.tentSpots[coilAttempts % this.tentSpots.length]!;
+      coilAttempts += 1;
+      const placed = this.placeIfClear(spot.x + 2.6, spot.z + 1.8, 0.4, 1.2);
+      if (!placed) continue; // reject: no identity instance inside the count
+      matrix.compose(new Vector3(placed[0], 0.06, placed[1]), new Quaternion(), new Vector3(1, 1, 1));
+      coils.setMatrixAt(coilCursor, matrix);
+      coilCursor += 1;
+    }
+    coils.count = coilCursor;
+    this.group.add(coils);
+
+    // Camp domestic kit: baskets and jars clustered by the tents, cook pots
+    // at the fire pits. Per-instance tints over the pottery material.
+    const pottery = new InstancedMesh(potteryGeometry, materials.cityRoof, 30);
+    pottery.name = 'camp-domestic-pottery';
+    const firedRed = new Color('#8a4f30');
+    const paleClay = new Color('#b98a5e');
+    let potCursor = 0;
+    const pot = (x: number, z: number, radius: number, height: number) => {
+      if (potCursor >= 30) return;
+      const placed = this.placeIfClear(x, z, 0.4, 0.8);
+      if (!placed) return;
+      matrix.compose(new Vector3(placed[0], height / 2, placed[1]), new Quaternion().setFromAxisAngle(up, random() * Math.PI), new Vector3(radius * 2, height, radius * 2));
+      pottery.setMatrixAt(potCursor, matrix);
+      pottery.setColorAt(potCursor, random() < 0.5 ? firedRed : paleClay);
+      potCursor += 1;
+    };
+    for (let i = 0; i < 12 && this.tentSpots.length > 0; i += 1) {
+      const spot = this.tentSpots[(i * 2) % this.tentSpots.length]!;
+      pot(spot.x + 2.1 + random() * 0.8, spot.z - 1.6 + random() * 0.8, 0.14, 0.52);
+      if (i % 2 === 0) pot(spot.x - 2.2 - random() * 0.6, spot.z + 1.9, 0.26, 0.3);
+    }
+    for (const base of this.campfires?.bases ?? []) {
+      pot(base.x + 0.85, base.z + 0.55, 0.2, 0.26);
+    }
+    pottery.count = potCursor;
+    pottery.castShadow = true;
+    this.group.add(pottery);
+
+    // Trampled paths: camp center to the haul road and west to the quarry
+    // lip, merged into one ribbon geometry (one draw call).
+    const pathsGeometry = mergeRibbons([
+      roadGeometry(
+        [
+          [-8, 0.045, 44],
+          [-14, 0.05, 40],
+          [-22, 0.05, 36],
+          [-28, 0.055, 32.5],
+        ],
+        2.2,
+      ),
+      roadGeometry(
+        [
+          [-24, 0.045, 46],
+          [-34, 0.05, 42],
+          [-43, 0.05, 36],
+          [-49, 0.055, 32],
+        ],
+        1.8,
+      ),
+    ]);
+    this.geometries.push(pathsGeometry);
+    const paths = new Mesh(pathsGeometry, materials.compactedEarth);
+    paths.receiveShadow = true;
+    paths.name = 'camp-trampled-paths';
+    this.group.add(paths);
+  }
+
+  /**
    * Shallow wind-blown dust riding the typed lanes (WIND_DUST): sparse
    * translucent puffs drifting south with the northerly breeze. Per-instance
    * opacity is not available on one material, so the lane-end fade pinches
@@ -1747,6 +2383,8 @@ export class GizaEnvironment {
     const stakes = new InstancedMesh(stakeGeometry, materials.wood, 84);
     const random = mulberry32('giza:site-scatter');
     const matrix = new Matrix4();
+    const paleRock = new Color('#c8ab7d');
+    const darkRock = new Color('#8a6a48');
     let rockCursor = 0;
     let attempts = 0;
     while (rockCursor < 260 && attempts < 4000) {
@@ -1761,54 +2399,102 @@ export class GizaEnvironment {
       })) {
         continue;
       }
-      const size = 0.18 + random() * 0.58;
+      const size = 0.16 + random() * 0.7;
       matrix.compose(
         new Vector3(x, size * 0.28, z),
         new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), random() * Math.PI),
-        new Vector3(size * 1.4, size * 0.65, size),
+        new Vector3(size * (1.1 + random() * 0.7), size * 0.65, size * (0.8 + random() * 0.5)),
       );
       rocks.setMatrixAt(rockCursor, matrix);
+      // Weathered limestone comes in two readings: fresh-split pale and
+      // long-surface dark.
+      rocks.setColorAt(rockCursor, random() < 0.55 ? paleRock : darkRock);
       rockCursor += 1;
     }
     // Foreground interest (visual director): the reveal's lower third was
     // dead sand. Spoil heaps and abandoned rough-cut stones — the debris a
     // decades-long quarry actually leaves — scattered through the southern
-    // and western foreground, clear of every footprint and haul lane.
-    const spoilGeometry = new DodecahedronGeometry(0.5, 0);
+    // and western foreground, clear of every footprint and haul lane. Three
+    // heap silhouettes (conical dump, skirted mound, windrow ridge) in two
+    // earth tints, clustered the way dumping actually accumulates.
+    const dumpGeometry = new ConeGeometry(0.5, 1, 8);
+    const moundGeometry = new DodecahedronGeometry(0.5, 0);
+    const ridgeGeometry = new BoxGeometry(1, 1, 1);
     const roughBlockGeometry = new BoxGeometry(1, 1, 1);
-    this.geometries.push(spoilGeometry, roughBlockGeometry);
-    const spoil = new InstancedMesh(spoilGeometry, materials.compactedEarth, 52);
+    this.geometries.push(dumpGeometry, moundGeometry, ridgeGeometry, roughBlockGeometry);
+    const dumps = new InstancedMesh(dumpGeometry, materials.compactedEarth, 18);
+    const mounds = new InstancedMesh(moundGeometry, materials.compactedEarth, 18);
+    const ridges = new InstancedMesh(ridgeGeometry, materials.compactedEarth, 16);
     const roughBlocks = new InstancedMesh(roughBlockGeometry, materials.quarryCut, 22);
-    const debrisRandom = mulberry32('giza:foreground-debris:v1');
-    let spoilCursor = 0;
-    let debrisAttempts = 0;
-    while (spoilCursor < 52 && debrisAttempts < 1200) {
-      debrisAttempts += 1;
-      // Southern and south-western foreground — the band the reveal camera
-      // looks across (it orbits to roughly (-118, 105) at t = 1) and the
-      // quarry's own surroundings. Clearance rejects anything on a footprint
-      // or haul lane.
-      const x = -96 + debrisRandom() * 128;
-      const z = -6 + debrisRandom() * 86;
-      if (z < 26 && x > -48) continue; // keep the central working plateau open
-      if (!isClearOfSiteWorks(x, z, this.keepOuts, this.corridors, {
-        margin: 2.4,
-        corridorClearance: 3,
-      })) {
-        continue;
+    const debrisRandom = mulberry32('giza:foreground-debris:v2');
+    const freshEarth = new Color('#a4734a');
+    const oldEarth = new Color('#8a613c');
+    // Cluster centers: dumping concentrates near the quarry rim and along
+    // the southern foreground the reveal camera looks across.
+    const spoilClusters: Array<[number, number]> = [
+      [-72, 12],
+      [-58, 52],
+      [-88, 34],
+      [-38, 66],
+      [-14, 74],
+      [8, 62],
+    ];
+    let dumpCursor = 0;
+    let moundCursor = 0;
+    let ridgeCursor = 0;
+    for (const [cx, cz] of spoilClusters) {
+      const members = 7 + Math.floor(debrisRandom() * 3);
+      for (let m = 0; m < members; m += 1) {
+        const x = cx + (debrisRandom() - 0.5) * 14;
+        const z = cz + (debrisRandom() - 0.5) * 12;
+        if (z < 26 && x > -48) continue; // keep the central working plateau open
+        if (!isClearOfSiteWorks(x, z, this.keepOuts, this.corridors, {
+          margin: 2.4,
+          corridorClearance: 3,
+        })) {
+          continue;
+        }
+        const width = 2.2 + debrisRandom() * 3.6;
+        const tint = debrisRandom() < 0.5 ? freshEarth : oldEarth;
+        const pick = debrisRandom();
+        if (pick < 0.36 && dumpCursor < 18) {
+          // Conical dump: the single-tip pile.
+          matrix.compose(
+            new Vector3(x, width * 0.34, z),
+            new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), debrisRandom() * Math.PI),
+            new Vector3(width * 1.5, width * 0.68, width * 1.5),
+          );
+          dumps.setMatrixAt(dumpCursor, matrix);
+          dumps.setColorAt(dumpCursor, tint);
+          dumpCursor += 1;
+        } else if (pick < 0.72 && moundCursor < 18) {
+          // Skirted mound: slumped and spread.
+          matrix.compose(
+            new Vector3(x, width * 0.09, z),
+            new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), debrisRandom() * Math.PI),
+            new Vector3(width, width * 0.28, width * 0.85),
+          );
+          mounds.setMatrixAt(moundCursor, matrix);
+          mounds.setColorAt(moundCursor, tint);
+          moundCursor += 1;
+        } else if (ridgeCursor < 16) {
+          // Windrow ridge: the long push of a clearing crew.
+          matrix.compose(
+            new Vector3(x, width * 0.16, z),
+            new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), debrisRandom() * Math.PI),
+            new Vector3(width * 2.4, width * 0.42, width * 0.62),
+          );
+          ridges.setMatrixAt(ridgeCursor, matrix);
+          ridges.setColorAt(ridgeCursor, tint);
+          ridgeCursor += 1;
+        }
       }
-      const width = 2.4 + debrisRandom() * 4;
-      matrix.compose(
-        new Vector3(x, width * 0.1, z),
-        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), debrisRandom() * Math.PI),
-        new Vector3(width, width * 0.3, width * 0.8),
-      );
-      spoil.setMatrixAt(spoilCursor, matrix);
-      spoilCursor += 1;
     }
-    spoil.count = spoilCursor;
+    dumps.count = dumpCursor;
+    mounds.count = moundCursor;
+    ridges.count = ridgeCursor;
     let roughCursor = 0;
-    debrisAttempts = 0;
+    let debrisAttempts = 0;
     while (roughCursor < 22 && debrisAttempts < 700) {
       debrisAttempts += 1;
       const x = -92 + debrisRandom() * 126;
@@ -1831,13 +2517,17 @@ export class GizaEnvironment {
       roughCursor += 1;
     }
     roughBlocks.count = roughCursor;
-    spoil.castShadow = true;
-    spoil.receiveShadow = true;
+    for (const heapBatch of [dumps, mounds, ridges]) {
+      heapBatch.castShadow = true;
+      heapBatch.receiveShadow = true;
+    }
     roughBlocks.castShadow = true;
     roughBlocks.receiveShadow = true;
-    spoil.name = 'quarry-spoil-heaps';
+    dumps.name = 'quarry-spoil-conical-dumps';
+    mounds.name = 'quarry-spoil-skirted-mounds';
+    ridges.name = 'quarry-spoil-windrow-ridges';
     roughBlocks.name = 'abandoned-rough-cut-stones';
-    this.group.add(spoil, roughBlocks);
+    this.group.add(dumps, mounds, ridges, roughBlocks);
 
     // Survey stakes sit on a rigid grid, so a stake with no clear ground —
     // the gap where a ramp meets the face it serves is zero-width — is simply

@@ -684,20 +684,78 @@ export function fieldCropAt(row: number, column: number): FieldCrop {
 export interface FieldParcel {
   x: number;
   z: number;
-  /** Yawed to the local channel tangent so parcels parallel the bank. */
+  /** Yawed to the local channel tangent plus a small seeded jitter. */
   yaw: number;
   row: number;
   column: number;
   crop: FieldCrop;
+  /** Jittered parcel extents (the lattice is only a starting skeleton). */
+  width: number;
+  depth: number;
+  /**
+   * Bare cells carry no crop mesh: scrub gaps or resting ground. Merged
+   * cells are absorbed by their left neighbor (which widens to cover both).
+   */
+  bare: boolean;
+  merged: boolean;
 }
 
 /** Deterministic field parcel placement following the near bank. */
 export function fieldParcelAt(index: number, columns = 12): FieldParcel {
   const row = Math.floor(index / columns);
   const column = index % columns;
-  const x = -108 + column * 17.8;
-  const z = greenbeltInnerEdgeAt(x) + 3.0 + row * 6.9;
-  return { x, z, yaw: channelTangentYawAt(x), row, column, crop: fieldCropAt(row, column) };
+  const shape = mulberry32(`giza:field-shape:${row}:${column}`);
+  const x = -108 + column * 17.8 + (shape() - 0.5) * 2.4;
+  const depth = 5.3 * (0.72 + shape() * 0.6);
+  const width = 13.6 * (0.7 + shape() * 0.65);
+  const crop = fieldCropAt(row, column);
+  // Bare ground: some fallow cells read as scrub gaps, not crop at all.
+  const bare = crop === 'fallow-plowed' ? shape() < 0.45 : shape() < 0.08;
+  // Same-crop neighbors merge: the left cell widens over its twin. Same-crop
+  // adjacency is rare enough (a few pairs per strip) that merging most of
+  // them reads as intentional field management, not repetition.
+  const mergeable =
+    column > 0 && fieldCropAt(row, column - 1) === crop && crop !== 'fallow-plowed';
+  const merged = mergeable && mulberry32(`giza:field-merge:${row}:${column}`)() < 0.75;
+  const yawJitter = (shape() - 0.5) * 0.06;
+  const inner = greenbeltInnerEdgeAt(x);
+  return {
+    x,
+    // The river-side edge never crosses the levee: anchor on the inner edge
+    // plus half the jittered depth, not the other way around.
+    z: inner + depth / 2 + 0.6 + row * 6.9,
+    yaw: channelTangentYawAt(x) + yawJitter,
+    row,
+    column,
+    crop,
+    width: merged ? 0 : width,
+    depth,
+    bare,
+    merged,
+  };
+}
+
+/**
+ * A merged-away cell's left twin absorbs it: the absorbing field widens by
+ * one column pitch per absorbed cell, and its center shifts right by half
+ * the absorbed span. Returns the combined width and center offset.
+ */
+export function fieldAbsorptionAt(
+  index: number,
+  columns = 12,
+): { width: number; xOffset: number } {
+  const parcel = fieldParcelAt(index, columns);
+  if (parcel.merged) return { width: 0, xOffset: 0 };
+  let absorbed = 0;
+  let next = index + 1;
+  while (next % columns !== 0 && fieldParcelAt(next, columns).merged) {
+    absorbed += 1;
+    next += 1;
+  }
+  return {
+    width: parcel.width + absorbed * 17.8,
+    xOffset: (absorbed * 17.8) / 2,
+  };
 }
 
 export interface RiverBraidSample {
