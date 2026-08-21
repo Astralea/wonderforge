@@ -133,6 +133,78 @@ describe('Giza sky description (era and place grounding)', () => {
   });
 });
 
+describe('Giza dusk tuning (sunset tail and dusk sky structure)', () => {
+  it('drops the sun to a sunset-low 7–11° tail across the dusk beats', () => {
+    // Review-board fix: the dusk reveal read late-afternoon high (24.1° at
+    // t=0.9–1.0, all clamped to the reveal hold). The sunPath dusk tail must
+    // hold the sun sunset-low through the whole reveal window.
+    for (const t of [0.9, 0.925, 0.95, 1]) {
+      const { elevation } = gizaSunStateAt(t);
+      expect(elevation).toBeGreaterThanOrEqual(7);
+      expect(elevation).toBeLessThanOrEqual(11);
+    }
+  });
+
+  it('keeps the sun path continuous, above the horizon, and never rising after culmination', () => {
+    const steps = 1000;
+    const elevations: number[] = [];
+    for (let i = 0; i <= steps; i += 1) {
+      elevations.push(gizaSunStateAt(i / steps).elevation);
+    }
+    let maxStep = 0;
+    for (let i = 1; i < elevations.length; i += 1) {
+      const t = Math.min(i / steps, DAYLIGHT_HOLD_T);
+      const delta = Math.abs(elevations[i]! - elevations[i - 1]!);
+      maxStep = Math.max(maxStep, delta);
+      // Monotonic descent once the daylit axis passes the t=0.5 culmination.
+      if (t > 0.5) {
+        expect(elevations[i]!).toBeLessThanOrEqual(elevations[i - 1]! + 1e-9);
+      }
+      // The sun never touches the horizon after sunrise (t=0 is sunrise).
+      expect(elevations[i]!).toBeGreaterThan(0);
+    }
+    // The smoothstep taper keeps value and slope continuous at the join, so
+    // the largest per-step change across the movie stays a fraction of a
+    // degree (measured slope peaks near t=0.9 at ~0.24°/step).
+    expect(maxStep).toBeLessThan(0.5);
+  });
+
+  it('leaves the dawn arc, noon culmination, and azimuth sweep untouched', () => {
+    // The tail starts at t=0.62, after every accepted morning/noon beat, and
+    // a parallel droid designs against the current azimuths — pin both.
+    expect(GIZA_SKY.sunPath.dawnAzimuthDegrees).toBe(-90);
+    expect(GIZA_SKY.sunPath.sweepDegrees).toBe(200);
+    // Pre-change probe value at t=0.12 was 28.7°; the taper is exactly zero
+    // there, so the dawn read must stay within ±2°.
+    expect(gizaSunStateAt(0.12).elevation).toBeGreaterThanOrEqual(26.7);
+    expect(gizaSunStateAt(0.12).elevation).toBeLessThanOrEqual(30.7);
+    // Noon culmination unchanged at 78° (also pinned by the sky suite above).
+    expect(gizaSunStateAt(0.5).elevation).toBeCloseTo(78, 5);
+    // The historical note must keep owning the peret compression.
+    expect(GIZA_SKY.sunPath.historicalNote.toLowerCase()).toContain('peret');
+  });
+
+  it('structures the dusk sky: dark cool zenith, warm band, pink-lit cloud banks', () => {
+    // Review-board fix: dusk read as a monochrome orange wash. The zenith
+    // must sit strictly below the warm horizon band in luminance (gradient
+    // structure, not wash), and the cloud banks must be opaque enough to read.
+    const luminance = (hex: string) => {
+      const [r, g, b] = hexRgb(hex);
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    const dawn = GIZA_SKY.keyframes.find((keyframe) => keyframe.label === 'dawn')!;
+    const dusk = GIZA_SKY.keyframes.find((keyframe) => keyframe.label === 'dusk')!;
+    expect(luminance(dusk.zenith)).toBeLessThan(luminance(dusk.horizon));
+    // Deepened zenith: clearly darker than dawn's soft blue-grey dome.
+    expect(luminance(dusk.zenith)).toBeLessThan(luminance(dawn.zenith) / 2);
+    expect(dusk.cloudOpacity).toBeGreaterThanOrEqual(0.5);
+    // Clouds carry the low sun's cast: a strong red-over-blue spread keeps
+    // the banks pink-lit rather than neutral white/grey.
+    const [cloudR, , cloudB] = hexRgb(dusk.cloudTint);
+    expect(cloudR - cloudB).toBeGreaterThanOrEqual(80);
+  });
+});
+
 describe('Giza environment description (era and place grounding)', () => {
   it('documents every geography zone with a bearing and history', () => {
     const ids = environment.geography.map((zone) => zone.id);

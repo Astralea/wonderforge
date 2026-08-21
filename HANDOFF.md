@@ -1,17 +1,22 @@
 # WonderForge Agent Handoff
 
 Last updated: 2026-08-20 (Asia/Tokyo), Tier 4 complete: living river (P1),
-working foreground (P2), farm-strip revolution (P3)
+working foreground (P2), farm-strip revolution (P3), dusk sky presence (P4)
 
 ## Tier 4 plan of record
 
-`specs/09-tier4-living-site-plan.md` is the active plan (owner directives +
-four-role review-board evidence + reference language from the owner's
-bookmarked visual benchmarks). Phases: P1 living river (shipped — see the
-product-state bullet), P2 working foreground, P3 farm-strip revolution, P4
-stretch (dusk sky presence). Recorded follow-ups: mobile reveal framing
-crops both flanking pyramids; Spec 04's scorecard scale (0–5) conflicts
-with the review board's 0–3 and needs a one-line amendment.
+`specs/09-tier4-living-site-plan.md` is the plan of record (owner directives
++ four-role review-board evidence + reference language from the owner's
+bookmarked visual benchmarks). All four phases shipped: P1 living river, P2
+working foreground, P3 farm-strip revolution, P4 dusk sky presence. Both
+recorded follow-ups are DONE: the Spec 04 scorecard scale conflict has its
+one-line amendment (board 0–3 × 5/3 maps to the card), and the mobile
+reveal's flank cropping was eliminated as a side effect of P4's reveal
+azimuth swing. Open option, not a bug: the god-ray gate in
+`sunScreenEffects` (NDC radius < 1.6) can never open at the reveal's 75°
+sun-view offset — if shafts are ever wanted at the reveal, the gate needs a
+near-edge term, and the design question is whether shafts belong in a frame
+whose sun is off-screen.
 
 ## Start here
 
@@ -209,6 +214,24 @@ The Giza scene now has:
   static hoe/gather figures and an ox pair work the plowed and stubble
   parcels. Kite flock orbits tightened (VD evidence: scattered flecks →
   flock). Captures under `artifacts/aaa-t4p3/`;
+- Tier 4 P4, dusk sky presence (two droids, disjoint files): the sun path
+  gained a C1-smooth dusk tail (`duskTailStart` 0.62 / `duskTailDepth` 15.1°,
+  typed + documented with the peret-compression note) — the reveal hold now
+  reads sunset-low at 9.0° (was 24.1°), with the dawn arc and 78° noon
+  culmination bit-identical; the dusk keyframe deepened its zenith
+  (structure vs wash: luminance 69 vs horizon 162), warmed clouds pink-lit
+  at 0.55 opacity, and clouds catch the low sun via a `lowSun`-keyed lerp
+  toward the keyframe's sunTint (same curve as the dome's wide halo). The
+  reveal orbit swings +73° (eased in from t=0.88, zero before) so the final
+  frame lands at a measured 75° sun-view offset: sunset glow at the right
+  frame edge, raking side light carving long shadows (measured contrast
+  104→134 at t=1.0), no sun ball in the lens. Side effect: the mobile
+  reveal's Khufu/Menkaure crops are gone (the monument spread axis turned
+  near-parallel to the view axis). Frustum pins kept green on both aspects.
+  Captures under `artifacts/aaa-t4p4/`. Documented tradeoff: mobile t=0.9
+  measures 158 calls vs the 150 advisory budget — pre-existing Tier 4
+  content volume at that beat (proved with a swing-0 attribution capture),
+  not the swing; trim mobile instances if it ever bites in profiling;
 - a cinematic pipeline pass (the "AAA" request): draw-call consolidation
   first, honoring Spec 03's ≤90 gate — the five ramps share three
   world-space instanced meshes (was 15 draw calls), the quarry is one
@@ -402,11 +425,11 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after Tier 4 P3 (farm-strip revolution):
+The required verification passed after Tier 4 P4 (dusk sky presence):
 
 ```text
 25 test files
-271 tests
+277 tests
 npm run typecheck: passed
 npm run build: passed
 ```

@@ -85,3 +85,5 @@ detail but never merge stones into giant slabs.
 Before release, score 0–5 for composition, silhouette, construction causality,
 material readability, lighting, environment depth, motion clarity, and UI
 restraint. No category may score below 4; construction causality must score 5.
+
+Amendment (Tier 4 P4): the four-role review board scores 0–3 per category; map board marks onto this card as board × 5/3, so the floor of 4 corresponds to board ≥ 2.4 and the causality 5 to board 3.

@@ -75,6 +75,20 @@ export const GIZA_SHOTS = {
   baseRadius: 148,
   /** The reveal widens the orbit from focus (0.82) to full (1.0). */
   focus: { min: 0.82, from: 0.87, to: 0.97 },
+  /**
+   * Reveal azimuth swing (degrees, eased in across the reveal window). The
+   * dusk sun holds at azimuth −270° (gizaSky sunPath), which the unswung
+   * orbit leaves 148–167° BEHIND the camera through the reveal: the
+   * forward-scatter halo sits out of frame and the ensemble is flatly lit
+   * from behind the viewer. Swinging the orbit +73° lands the final frame at
+   * a measured 75° sun-view offset — sunset glow at the right frame edge,
+   * low sun raking the masonry from the side — with the sun disc still far
+   * outside the lens. The eased swing is exactly zero at the window start
+   * (t = 0.88), so no earlier beat's framing moves, and its ease-out end
+   * stops the rotation as the movie settles. Pinned by the dusk-presence
+   * test in tests/giza-camera.test.ts.
+   */
+  revealAzimuthSwingDegrees: 73,
 } as const;
 
 function clamp01(value: number): number {
@@ -131,7 +145,11 @@ export function gizaCinematicShotAt(t: number, aspect: number): GizaCinematicSho
   return {
     target,
     radius: GIZA_SHOTS.baseRadius * focusRadius * intro * reveal * narrow * mobileReveal,
-    azimuth: GIZA_CAMERA.startAzimuth + t * Math.PI * 2 * 1.25,
+    azimuth:
+      GIZA_CAMERA.startAzimuth +
+      t * Math.PI * 2 * 1.25 +
+      easeInOutQuad((t - handoffs.reveal.from) / (1 - handoffs.reveal.from)) *
+        GIZA_SHOTS.revealAzimuthSwingDegrees * DEG,
     pitch: gizaCinematicPitchAt(t, aspect),
   };
 }

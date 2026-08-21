@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { PerspectiveCamera, Vector3 } from 'three';
 import { createGizaConstructionPlan } from '../src/data/gizaConstruction';
+import { gizaSunStateAt } from '../src/data/gizaSky';
 import {
   GIZA_CAMERA,
   GIZA_SHOTS,
@@ -131,6 +132,44 @@ describe('Giza reveal frustum contract', () => {
     }
     expect(khufuToKhafre.to).toBeLessThanOrEqual(khafreToMenkaure.from);
     expect(khafreToMenkaure.to).toBeLessThanOrEqual(reveal.from);
+  });
+});
+
+describe('Giza dusk sun presence (Tier 4 P4)', () => {
+  /**
+   * Wrapped |sun azimuth − camera view azimuth| in degrees. The dusk sun
+   * holds azimuth −270° (the sky sampler clamps to the daylit window), so
+   * this offset decides whether the reveal reads as sunset or as flat
+   * backlight. Aspect-independent: only radius/pitch respond to aspect.
+   */
+  function sunViewOffsetAt(t: number): number {
+    const shot = gizaCinematicShotAt(t, 16 / 9);
+    const viewAzDeg = (shot.azimuth * DEG + 180) % 360;
+    let diff = Math.abs(gizaSunStateAt(t).azimuth - viewAzDeg) % 360;
+    if (diff > 180) diff = 360 - diff;
+    return diff;
+  }
+
+  it('lands the setting sun at the frame edge for the final frame', () => {
+    // Unswung orbit measured 147.9° at t = 1.0 (sun behind the camera). The
+    // design band is 65–85°: forward-scatter glow at the frame edge and low
+    // sun raking the ensemble, without the sun disc entering the lens
+    // (desktop half-frame is ±29.3° horizontally) and without breaking the
+    // frustum contract above.
+    expect(sunViewOffsetAt(1)).toBeGreaterThanOrEqual(65);
+    expect(sunViewOffsetAt(1)).toBeLessThanOrEqual(85);
+  });
+
+  it('leaves every beat before the reveal window untouched', () => {
+    // The swing eases in from zero at the window start, so the dawn and
+    // build framings keep their authored azimuths exactly.
+    for (const t of [0, 0.12, 0.35, 0.62, 0.87, GIZA_SHOTS.handoffs.reveal.from]) {
+      const shot = gizaCinematicShotAt(t, 16 / 9);
+      expect(shot.azimuth, `azimuth at t=${t}`).toBeCloseTo(
+        GIZA_CAMERA.startAzimuth + t * Math.PI * 2 * 1.25,
+        10,
+      );
+    }
   });
 });
 

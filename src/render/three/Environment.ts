@@ -2852,7 +2852,17 @@ export class GizaEnvironment {
         0,
         dz * drift.unitsPerMovie * t,
       );
-      layer.material.color.set(sky.cloudTint);
+      // Dusk presence (Tier 4 P4): let the clouds catch the low sun. The
+      // typed cloudTint warms toward the keyframe's sunTint by a factor that
+      // follows the sun's height — the same low-sun curve the dome's wide
+      // halo uses (full at the horizon, gone by ~31°) — so the high cirrus
+      // over the sunset reads as ember-lit streaks instead of flat cutouts,
+      // while the high noon sun leaves the authored tint untouched. Pure per
+      // frame; driven by the typed keyframe, no new geometry or draw calls.
+      const lowSun = Math.min(1, Math.max(0, 1 - sunDirection.y / 0.55));
+      layer.material.color
+        .set(sky.cloudTint)
+        .lerp(new Color(sky.sunTint), lowSun * 0.55);
       layer.material.opacity = Math.min(baseOpacity, sky.cloudOpacity);
     }
     this.clouds.visible = light.emissive < 0.8;

@@ -180,7 +180,9 @@ from renderer-side magic numbers:
 World compass (fixed): east = `-z` (the Nile), west = `+z` (the Libyan
 desert), north = `+x`, south = `-x`. The sun rises over the Nile in the east,
 culminates in the south at roughly 78° (near-summer at 30°N), and sets over
-the western desert, the Egyptian realm of the dead.
+the western desert, the Egyptian realm of the dead. A smoothstep dusk tail
+(`sunPath.duskTailStart`/`duskTailDepth`) lowers the arc to ~9° by the reveal
+hold so the held dusk frame reads sunset-low; dawn and noon are untouched.
 
 Historical rules for c. 2560 BCE (Fourth Dynasty, reign of Khufu):
 

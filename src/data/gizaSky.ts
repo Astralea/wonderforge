@@ -10,7 +10,7 @@
  */
 
 import { lerpColor } from '../engine/daynight';
-import { clamp } from '../engine/easing';
+import { clamp, smoothstep } from '../engine/easing';
 
 /** The engine holds daylit wonders at this movie time during the reveal. */
 export const DAYLIGHT_HOLD_T = 0.9;
@@ -48,6 +48,20 @@ export interface SunPathDescription {
   sweepDegrees: number;
   /** Culmination height; near-summer noon sun at ~30°N. */
   noonElevationDegrees: number;
+  /**
+   * Movie time where the sunset taper begins. Before this the elevation is
+   * the pure symmetric sine arc, so the accepted dawn and noon reads are
+   * untouched; 0.62 sits just past the camera's midday/afternoon beats.
+   */
+  duskTailStart: number;
+  /**
+   * Degrees the taper lowers the sun by the reveal hold. A smoothstep
+   * window from `duskTailStart` to `DAYLIGHT_HOLD_T` subtracts this from
+   * the sine arc with zero slope at both ends (no kink at the join), so
+   * the reveal holds the sun ~9° over the western horizon — sunset-low,
+   * never at or below it.
+   */
+  duskTailDepth: number;
   description: string;
   historicalNote: string;
 }
@@ -121,10 +135,14 @@ export const GIZA_SKY: GizaSkyDescription = {
     dawnAzimuthDegrees: -90,
     sweepDegrees: 200,
     noonElevationDegrees: 78,
+    duskTailStart: 0.62,
+    duskTailDepth: 15.1,
     description:
       'The sun rises due east over the Nile valley, culminates in the south ' +
       'at 78° (the movie midpoint sits just past solar noon), and sets ' +
-      'west-northwest over the Western Desert.',
+      'west-northwest over the Western Desert. A smoothstep dusk tail from ' +
+      't = 0.62 to the reveal hold lowers the arc to ~9°, so the held dusk ' +
+      'frame reads sunset-low instead of late-afternoon high.',
     historicalNote:
       'At 29.98°N in near-summer the sun rises slightly north of east and ' +
       'sets north of west; the sweep is simplified to a due-east rise and a ' +
@@ -136,7 +154,12 @@ export const GIZA_SKY: GizaSkyDescription = {
       'whose noon sun at this latitude tops out near 37–57°; the 78° ' +
       'near-summer arc is retained deliberately for steeper masonry ' +
       'shadows and a higher, more legible sun. One movie-day compresses ' +
-      'both season and sun for the camera, and owns it here.',
+      'both season and sun for the camera, and owns it here. The dusk tail ' +
+      'is the same kind of honest compression: a real near-summer sun at ' +
+      'this latitude only dips to single-digit elevation in the last ' +
+      'minutes before sunset, so the taper hastens that final descent for ' +
+      'the reveal while the dawn arc, the 78° culmination, and the azimuth ' +
+      'sweep stay exactly as declared.',
   },
   sunDisc: {
     angularRadiusDegrees: 1.15,
@@ -233,15 +256,21 @@ export const GIZA_SKY: GizaSkyDescription = {
       t: 0.9,
       label: 'dusk',
       description:
-        'Dusk over the realm of the dead: a violet-grey dome with a ' +
-        'burnt-orange western band; the reveal holds this light.',
-      zenith: '#4a4f86',
+        'Dusk over the realm of the dead: a deepened indigo zenith pulls ' +
+        'away from the burnt-orange western band, so the dome reads as a ' +
+        'structured gradient instead of one orange wash, and raised pink-' +
+        'lit cloud banks catch the low sun. The reveal holds this light.',
+      // Deepened/cooled from #4a4f86 so the zenith sits clearly darker than
+      // the warm horizon band (luminance ~69 vs ~162) — structure, not wash.
+      zenith: '#3a437c',
       horizon: '#ff8f52',
       sunTint: '#ff7e47',
       haze: 0.58,
       fogStretch: 1.22,
-      cloudTint: '#ffc9a0',
-      cloudOpacity: 0.4,
+      // Warmed from #ffc9a0 toward the sun tint #ff7e47: pink-lit clouds.
+      cloudTint: '#ffae8f',
+      // Raised from 0.4 so the cloud banks actually structure the dusk sky.
+      cloudOpacity: 0.55,
     },
   ],
   cloudLayers: [
@@ -339,13 +368,23 @@ export function sampleGizaSky(rawT: number): SkyKeyframe {
  * Sun azimuth/elevation (degrees) on the same daylit axis. Azimuth sweeps
  * from due east (over the Nile) through south to west-northwest (over the
  * Libyan desert); elevation follows a sine arc culminating south at
- * `noonElevationDegrees`.
+ * `noonElevationDegrees`, then a smoothstep dusk tail lowers it toward the
+ * western horizon so the reveal hold reads sunset-low. The tail is exactly
+ * zero before `duskTailStart` and has zero slope at both window ends, so
+ * the dawn arc, the culmination, and the taper join stay kink-free.
  */
 export function gizaSunStateAt(rawT: number): { azimuth: number; elevation: number } {
   const t = clampDaylit(rawT);
-  const { dawnAzimuthDegrees, sweepDegrees, noonElevationDegrees } = GIZA_SKY.sunPath;
+  const {
+    dawnAzimuthDegrees,
+    sweepDegrees,
+    noonElevationDegrees,
+    duskTailStart,
+    duskTailDepth,
+  } = GIZA_SKY.sunPath;
+  const tail = smoothstep((t - duskTailStart) / (DAYLIGHT_HOLD_T - duskTailStart));
   return {
     azimuth: dawnAzimuthDegrees - sweepDegrees * t,
-    elevation: Math.sin(Math.PI * t) * noonElevationDegrees,
+    elevation: Math.sin(Math.PI * t) * noonElevationDegrees - duskTailDepth * tail,
   };
 }
