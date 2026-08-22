@@ -32,6 +32,14 @@ describe('caption tracks (Spec 05 §Caption layer)', () => {
       expect(wonder.facts).toContain(beats[1]!.text);
     }
   });
+
+  it('never takes the quote card corner: no beat places lower-left', () => {
+    for (const wonder of WONDERS) {
+      for (const beat of captionsFor(wonder)) {
+        expect(beat.place).not.toBe('lower-left');
+      }
+    }
+  });
 });
 
 describe('caption envelope engine', () => {

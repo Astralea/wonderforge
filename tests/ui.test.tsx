@@ -106,30 +106,86 @@ describe('cinematic view', () => {
     );
   });
 
-  it('caption layer: beats appear while playing at 1×, never in gaps, at speed, or at the reveal', () => {
-    openWonder(); // status 'playing', speed 1
-    // Inside Giza's first beat (0.18–0.30): the quarry caption shows.
-    act(() => usePlaybackStore.getState().seek(0.24));
-    expect(screen.getByText('The Quarry')).toBeInTheDocument();
+  it('caption layer: beats appear in the chrome-free cinema frame, never in gaps, at speed, or at the reveal', () => {
+    vi.useFakeTimers();
+    try {
+      openWonder(); // status 'playing', speed 1
+      // Chrome shows on entry — and while it shows, captions stay away so
+      // they can never overlap the quote/title card.
+      act(() => usePlaybackStore.getState().seek(0.24));
+      expect(screen.queryByText('The Quarry')).not.toBeInTheDocument();
 
-    // The gap between beats (0.46–0.50) shows nothing.
-    act(() => usePlaybackStore.getState().seek(0.48));
-    expect(screen.queryByText('The Quarry')).not.toBeInTheDocument();
-    expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+      // After the idle window the chrome hides and the cinema frame is
+      // clean: the caption fades in.
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      expect(screen.getByText('The Quarry')).toBeInTheDocument();
 
-    // The reveal stays clean.
-    act(() => usePlaybackStore.getState().seek(0.95));
-    expect(screen.queryByText('The Horizon')).not.toBeInTheDocument();
+      // The gap between beats (0.46–0.50) shows nothing.
+      act(() => usePlaybackStore.getState().seek(0.48));
+      expect(screen.queryByText('The Quarry')).not.toBeInTheDocument();
+      expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
 
-    // At 2× the read time would compress past honesty: no captions.
-    fireEvent.click(screen.getByRole('button', { name: '2× speed' }));
-    act(() => usePlaybackStore.getState().seek(0.54));
-    expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+      // The reveal stays clean.
+      act(() => usePlaybackStore.getState().seek(0.95));
+      expect(screen.queryByText('The Horizon')).not.toBeInTheDocument();
 
-    // Back at 1× the same window shows the caption again.
-    fireEvent.click(screen.getByRole('button', { name: '1× speed' }));
-    act(() => usePlaybackStore.getState().seek(0.54));
-    expect(screen.getByText('The Ramps')).toBeInTheDocument();
+      // At 2× the read time would compress past honesty: no captions.
+      fireEvent.click(screen.getByRole('button', { name: '2× speed' }));
+      act(() => usePlaybackStore.getState().seek(0.54));
+      expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+
+      // Back at 1× the same window shows the caption again.
+      fireEvent.click(screen.getByRole('button', { name: '1× speed' }));
+      act(() => usePlaybackStore.getState().seek(0.54));
+      expect(screen.getByText('The Ramps')).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('caption voice: off by default, the toggle narrates the active caption, and off cancels', () => {
+    const speak = vi.fn();
+    const cancel = vi.fn();
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak, cancel },
+      configurable: true,
+    });
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', {
+      value: class {
+        rate = 1;
+        constructor(public text: string) {}
+      },
+      configurable: true,
+    });
+    vi.useFakeTimers();
+    try {
+      openWonder();
+      // Off by default: reaching a beat speaks nothing.
+      act(() => usePlaybackStore.getState().seek(0.24));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      expect(screen.getByText('The Quarry')).toBeInTheDocument();
+      expect(speak).not.toHaveBeenCalled();
+
+      // Toggle on: the active caption is read aloud.
+      fireEvent.click(screen.getByRole('button', { name: /caption narration on/i }));
+      expect(speak).toHaveBeenCalledTimes(1);
+      expect(String(speak.mock.calls[0]![0].text)).toContain('Blocks are won from the plateau');
+
+      // The next beat speaks its own text; toggling off cancels.
+      act(() => usePlaybackStore.getState().seek(0.4));
+      expect(speak).toHaveBeenCalledTimes(2);
+      expect(String(speak.mock.calls[1]![0].text)).toContain('Sledges run on wetted roads');
+      fireEvent.click(screen.getByRole('button', { name: /caption narration off/i }));
+      expect(cancel).toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis;
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance;
+    }
   });
 
   it('next/previous navigate the catalog in order', () => {

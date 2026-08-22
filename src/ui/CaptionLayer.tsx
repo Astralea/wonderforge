@@ -3,27 +3,39 @@ import { captionsFor, type CaptionPlace } from '../data/captions';
 import type { Wonder } from '../data/types';
 import { captionStateAt } from '../engine/captions';
 import { usePlaybackStore } from '../store/playback';
+import { useCaptionVoice } from './useCaptionVoice';
 
 const PLACE_CLASSES: Record<CaptionPlace, string> = {
-  'lower-left': 'bottom-[8vh] left-6 text-left md:left-10',
   'lower-right': 'bottom-[8vh] right-6 text-right md:right-10',
   'upper-left': 'top-[8vh] left-6 text-left md:left-10',
+  'upper-right': 'top-[8vh] right-6 text-right md:right-10',
 };
 
 /**
  * Spec 05 §Caption layer: authored lower-thirds over the playing movie.
- * Renders only while playing at 1× (chrome is hidden then; at 2×/4× the
- * read time would compress past honesty; under reduced motion the movie
- * never plays). The envelope is a pure function of t — pausing or
- * scrubbing freezes a caption mid-fade.
+ * Renders only while playing at 1× with the chrome hidden — the quote and
+ * title cards live in the chrome, so the two text systems can never
+ * overlap, and the lower-left corner is permanently the quote card's.
+ * The envelope is a pure function of t — pausing or scrubbing freezes a
+ * caption mid-fade. Optional narration reads each caption aloud.
  */
-export function CaptionLayer({ wonder }: { wonder: Wonder }) {
+export function CaptionLayer({
+  wonder,
+  chromeHidden,
+}: {
+  wonder: Wonder;
+  chromeHidden: boolean;
+}) {
   const t = usePlaybackStore((s) => s.t);
   const status = usePlaybackStore((s) => s.status);
   const speed = usePlaybackStore((s) => s.speed);
   const beats = useMemo(() => captionsFor(wonder), [wonder]);
   const caption =
-    status === 'playing' && speed === 1 ? captionStateAt(beats, t) : null;
+    status === 'playing' && speed === 1 && chromeHidden
+      ? captionStateAt(beats, t)
+      : null;
+
+  useCaptionVoice(caption?.text ?? null, caption !== null);
 
   return (
     <div aria-live="polite" className="pointer-events-none absolute inset-0">

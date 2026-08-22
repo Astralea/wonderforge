@@ -246,6 +246,16 @@ The Giza scene now has:
   `aria-live="polite"` announces beats in order. Verified in the live app
   (chrome-devtools MCP): "THE ROADS" caption captured over the playing
   movie at t=0.196 with chrome hidden and letterbox in.
+  Follow-up (owner review): captions suppress entirely while the chrome is
+  visible (pointer wake, pause) and never place lower-left — the
+  quote/title card owns that corner permanently, so the two text systems
+  cannot overlap by construction; placements are lower-right / upper-left /
+  upper-right. An optional narration toggle (mic, top-right chrome; off by
+  default, preference persisted) reads each active caption via the
+  browser's speech synthesis — no assets, no network; leaving the beat,
+  pausing, seeking, waking the chrome, or toggling off cancels the current
+  utterance. Verified live: narration speaking with the Quarry caption
+  active; overlap-free frame captured in the clean cinema state.
 - a palm-stand variety v2 (owner report: "all the trees seem to look the
   same" — Tier 3 varied parameters on ONE morphology, which reads as one
   stamp at movie distance). Now silhouette-level variety via a generative
@@ -457,11 +467,11 @@ only) and is deliberately skipped.
 
 ## Verification state
 
-The required verification passed after the caption-layer pass:
+The required verification passed after the caption voice + overlap pass:
 
 ```text
 26 test files
-285 tests
+287 tests
 npm run typecheck: passed
 npm run build: passed
 ```

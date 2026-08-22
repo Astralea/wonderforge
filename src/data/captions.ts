@@ -8,7 +8,11 @@
 
 import type { Wonder } from './types';
 
-export type CaptionPlace = 'lower-left' | 'lower-right' | 'upper-left';
+/**
+ * The quote/title card owns the lower-left corner permanently — captions
+ * never take it (Spec 05 §Caption layer: no overlap, by construction).
+ */
+export type CaptionPlace = 'lower-right' | 'upper-left' | 'upper-right';
 
 export interface CaptionBeat {
   /** Movie-time window [from, until); windows are disjoint with gaps. */
@@ -37,7 +41,7 @@ const GIZA_CAPTIONS: CaptionBeat[] = [
   {
     from: 0.34,
     until: 0.46,
-    place: 'lower-left',
+    place: 'upper-right',
     kicker: 'The Roads',
     text: 'Sledges run on wetted roads — water on the sand eases the haul.',
   },
@@ -80,7 +84,7 @@ function genericCaptions(wonder: Wonder): CaptionBeat[] {
     beats.push({
       from: 0.52,
       until: 0.66,
-      place: 'lower-left',
+      place: 'upper-left',
       kicker: wonder.location,
       text: wonder.facts[1],
     });
