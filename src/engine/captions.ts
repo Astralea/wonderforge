@@ -8,11 +8,23 @@ import { smoothstep } from './easing';
 import type { CaptionBeat } from '../data/captions';
 
 export interface CaptionState {
+  id: string;
   kicker: string;
   text: string;
   place: CaptionBeat['place'];
+  from: number;
+  until: number;
   /** 0 outside the window; smoothstep fade edges at both ends. */
   opacity: number;
+}
+
+export type CaptionBeatProgress = 'upcoming' | 'current' | 'past';
+
+/** Where t sits relative to one authored window. Pure; used by the beat index. */
+export function captionBeatProgressAt(beat: CaptionBeat, t: number): CaptionBeatProgress {
+  if (t < beat.from) return 'upcoming';
+  if (t < beat.until) return 'current';
+  return 'past';
 }
 
 /**
@@ -27,9 +39,12 @@ export function captionStateAt(beats: readonly CaptionBeat[], t: number): Captio
       const fade = Math.min(0.012, (beat.until - beat.from) * 0.18);
       const opacity = smoothstep((t - beat.from) / fade) * smoothstep((beat.until - t) / fade);
       return {
+        id: beat.id,
         kicker: beat.kicker,
         text: beat.text,
         place: beat.place,
+        from: beat.from,
+        until: beat.until,
         opacity,
       };
     }

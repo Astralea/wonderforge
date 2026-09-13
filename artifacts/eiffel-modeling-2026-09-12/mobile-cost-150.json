@@ -1,0 +1,1220 @@
+{
+  "costs": {
+    "filmTime": 0.8642178887991985,
+    "meshes": [
+      {
+        "id": 22985,
+        "main": {
+          "calls": 1,
+          "triangles": 72315
+        },
+        "name": "eiffel-paris-city-batch",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-city/eiffel-paris-city-batch",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 22921,
+        "main": {
+          "calls": 1,
+          "triangles": 65472
+        },
+        "name": "eiffel-kit-iron-0",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-iron-0",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 638,
+        "main": {
+          "calls": 1,
+          "triangles": 12400
+        },
+        "name": "eiffel-traffic-near-wagons",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-near-wagons",
+        "shadow": {
+          "calls": 1,
+          "triangles": 4644
+        }
+      },
+      {
+        "id": 22949,
+        "main": {
+          "calls": 1,
+          "triangles": 6576
+        },
+        "name": "eiffel-kit-dark-iron-28",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-dark-iron-28",
+        "shadow": {
+          "calls": 1,
+          "triangles": 6576
+        }
+      },
+      {
+        "id": 1689,
+        "main": {
+          "calls": 1,
+          "triangles": 5800
+        },
+        "name": "second-floor-relay-batch-6",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-6",
+        "shadow": {
+          "calls": 1,
+          "triangles": 5800
+        }
+      },
+      {
+        "id": 1687,
+        "main": {
+          "calls": 1,
+          "triangles": 5588
+        },
+        "name": "second-floor-relay-batch-4",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-4",
+        "shadow": {
+          "calls": 1,
+          "triangles": 5588
+        }
+      },
+      {
+        "id": 1358,
+        "main": {
+          "calls": 1,
+          "triangles": 4944
+        },
+        "name": "long-load-export-batch-10",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-10",
+        "shadow": {
+          "calls": 1,
+          "triangles": 4944
+        }
+      },
+      {
+        "id": 22950,
+        "main": {
+          "calls": 1,
+          "triangles": 4416
+        },
+        "name": "eiffel-kit-iron-29",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-iron-29",
+        "shadow": {
+          "calls": 1,
+          "triangles": 4416
+        }
+      },
+      {
+        "id": 171,
+        "main": {
+          "calls": 1,
+          "triangles": 8240
+        },
+        "name": "eiffel-champ-floor",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-champ-floor",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1357,
+        "main": {
+          "calls": 1,
+          "triangles": 4044
+        },
+        "name": "long-load-export-batch-9",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-9",
+        "shadow": {
+          "calls": 1,
+          "triangles": 4044
+        }
+      },
+      {
+        "id": 1350,
+        "main": {
+          "calls": 1,
+          "triangles": 3356
+        },
+        "name": "long-load-export-batch-2",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-2",
+        "shadow": {
+          "calls": 1,
+          "triangles": 3356
+        }
+      },
+      {
+        "id": 1352,
+        "main": {
+          "calls": 1,
+          "triangles": 3084
+        },
+        "name": "long-load-export-batch-4",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-4",
+        "shadow": {
+          "calls": 1,
+          "triangles": 3084
+        }
+      },
+      {
+        "id": 1209,
+        "main": {
+          "calls": 1,
+          "triangles": 2472
+        },
+        "name": "onward-export-batch-1",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/eiffel-long-load-onward/onward-export-batch-1",
+        "shadow": {
+          "calls": 1,
+          "triangles": 2472
+        }
+      },
+      {
+        "id": 1683,
+        "main": {
+          "calls": 1,
+          "triangles": 2400
+        },
+        "name": "second-floor-relay-batch-0",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-0",
+        "shadow": {
+          "calls": 1,
+          "triangles": 2400
+        }
+      },
+      {
+        "id": 1208,
+        "main": {
+          "calls": 1,
+          "triangles": 2352
+        },
+        "name": "onward-export-batch-0",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/eiffel-long-load-onward/onward-export-batch-0",
+        "shadow": {
+          "calls": 1,
+          "triangles": 2352
+        }
+      },
+      {
+        "id": 1354,
+        "main": {
+          "calls": 1,
+          "triangles": 2220
+        },
+        "name": "long-load-export-batch-6",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-6",
+        "shadow": {
+          "calls": 1,
+          "triangles": 2220
+        }
+      },
+      {
+        "id": 1700,
+        "main": {
+          "calls": 1,
+          "triangles": 2220
+        },
+        "name": "second-floor-relay-batch-17",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-17",
+        "shadow": {
+          "calls": 1,
+          "triangles": 2220
+        }
+      },
+      {
+        "id": 1684,
+        "main": {
+          "calls": 1,
+          "triangles": 2188
+        },
+        "name": "second-floor-relay-batch-1",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-1",
+        "shadow": {
+          "calls": 1,
+          "triangles": 2188
+        }
+      },
+      {
+        "id": 1685,
+        "main": {
+          "calls": 1,
+          "triangles": 1724
+        },
+        "name": "second-floor-relay-batch-2",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-2",
+        "shadow": {
+          "calls": 1,
+          "triangles": 1724
+        }
+      },
+      {
+        "id": 1688,
+        "main": {
+          "calls": 1,
+          "triangles": 1716
+        },
+        "name": "second-floor-relay-batch-5",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-5",
+        "shadow": {
+          "calls": 1,
+          "triangles": 1716
+        }
+      },
+      {
+        "id": 641,
+        "main": {
+          "calls": 1,
+          "triangles": 3112
+        },
+        "name": "eiffel-traffic-far-people",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-far-people",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 642,
+        "main": {
+          "calls": 1,
+          "triangles": 3096
+        },
+        "name": "eiffel-traffic-far-heads",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-far-heads",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1691,
+        "main": {
+          "calls": 1,
+          "triangles": 1536
+        },
+        "name": "second-floor-relay-batch-8",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-8",
+        "shadow": {
+          "calls": 1,
+          "triangles": 1536
+        }
+      },
+      {
+        "id": 1348,
+        "main": {
+          "calls": 1,
+          "triangles": 1448
+        },
+        "name": "long-load-export-batch-0",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-0",
+        "shadow": {
+          "calls": 1,
+          "triangles": 1448
+        }
+      },
+      {
+        "id": 1693,
+        "main": {
+          "calls": 1,
+          "triangles": 1380
+        },
+        "name": "second-floor-relay-batch-10",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-10",
+        "shadow": {
+          "calls": 1,
+          "triangles": 1380
+        }
+      },
+      {
+        "id": 22947,
+        "main": {
+          "calls": 1,
+          "triangles": 1260
+        },
+        "name": "eiffel-kit-deck-26",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-deck-26",
+        "shadow": {
+          "calls": 1,
+          "triangles": 1260
+        }
+      },
+      {
+        "id": 941,
+        "main": {
+          "calls": 1,
+          "triangles": 2444
+        },
+        "name": "steam-drive-batch-4",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-4",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 639,
+        "main": {
+          "calls": 1,
+          "triangles": 1728
+        },
+        "name": "eiffel-traffic-near-horses",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-near-horses",
+        "shadow": {
+          "calls": 1,
+          "triangles": 648
+        }
+      },
+      {
+        "id": 1694,
+        "main": {
+          "calls": 1,
+          "triangles": 932
+        },
+        "name": "second-floor-relay-batch-11",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-11",
+        "shadow": {
+          "calls": 1,
+          "triangles": 932
+        }
+      },
+      {
+        "id": 316,
+        "main": {
+          "calls": 1,
+          "triangles": 816
+        },
+        "name": "second-floor-relay-rope",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/second-floor-relay-rope",
+        "shadow": {
+          "calls": 1,
+          "triangles": 816
+        }
+      },
+      {
+        "id": 176,
+        "main": {
+          "calls": 1,
+          "triangles": 768
+        },
+        "name": "eiffel-pont-d-iena-stonework",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-seine-quays/eiffel-pont-d-iena-stonework",
+        "shadow": {
+          "calls": 1,
+          "triangles": 768
+        }
+      },
+      {
+        "id": 937,
+        "main": {
+          "calls": 1,
+          "triangles": 1536
+        },
+        "name": "steam-drive-batch-0",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-0",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 169,
+        "main": {
+          "calls": 1,
+          "triangles": 1520
+        },
+        "name": "eiffel-world-space-weather-sky",
+        "path": "eiffel-tower-reference-world/eiffel-world-space-weather-sky",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1349,
+        "main": {
+          "calls": 1,
+          "triangles": 744
+        },
+        "name": "long-load-export-batch-1",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-1",
+        "shadow": {
+          "calls": 1,
+          "triangles": 744
+        }
+      },
+      {
+        "id": 939,
+        "main": {
+          "calls": 1,
+          "triangles": 1380
+        },
+        "name": "steam-drive-batch-2",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-2",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 178,
+        "main": {
+          "calls": 1,
+          "triangles": 1344
+        },
+        "name": "eiffel-seine-foam",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-seine-foam",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 315,
+        "main": {
+          "calls": 1,
+          "triangles": 544
+        },
+        "name": "long-load-hoist-rope",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-hoist-rope",
+        "shadow": {
+          "calls": 1,
+          "triangles": 544
+        }
+      },
+      {
+        "id": 1755,
+        "main": {
+          "calls": 1,
+          "triangles": 536
+        },
+        "name": "splice-hardware-batch-1",
+        "path": "eiffel-tower-reference-world/eiffel-delivered-splice/splice-hardware-batch-1",
+        "shadow": {
+          "calls": 1,
+          "triangles": 536
+        }
+      },
+      {
+        "id": 22946,
+        "main": {
+          "calls": 1,
+          "triangles": 528
+        },
+        "name": "eiffel-kit-window-25",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-window-25",
+        "shadow": {
+          "calls": 1,
+          "triangles": 528
+        }
+      },
+      {
+        "id": 1359,
+        "main": {
+          "calls": 1,
+          "triangles": 512
+        },
+        "name": "long-load-export-batch-11",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-11",
+        "shadow": {
+          "calls": 1,
+          "triangles": 512
+        }
+      },
+      {
+        "id": 1212,
+        "main": {
+          "calls": 1,
+          "triangles": 480
+        },
+        "name": "onward-export-batch-4",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/eiffel-long-load-onward/onward-export-batch-4",
+        "shadow": {
+          "calls": 1,
+          "triangles": 480
+        }
+      },
+      {
+        "id": 940,
+        "main": {
+          "calls": 1,
+          "triangles": 932
+        },
+        "name": "steam-drive-batch-3",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-3",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1355,
+        "main": {
+          "calls": 1,
+          "triangles": 412
+        },
+        "name": "long-load-export-batch-7",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-7",
+        "shadow": {
+          "calls": 1,
+          "triangles": 412
+        }
+      },
+      {
+        "id": 1701,
+        "main": {
+          "calls": 1,
+          "triangles": 412
+        },
+        "name": "second-floor-relay-batch-18",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-18",
+        "shadow": {
+          "calls": 1,
+          "triangles": 412
+        }
+      },
+      {
+        "id": 1692,
+        "main": {
+          "calls": 1,
+          "triangles": 400
+        },
+        "name": "second-floor-relay-batch-9",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-9",
+        "shadow": {
+          "calls": 1,
+          "triangles": 400
+        }
+      },
+      {
+        "id": 22948,
+        "main": {
+          "calls": 1,
+          "triangles": 384
+        },
+        "name": "eiffel-kit-masonry-27",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-masonry-27",
+        "shadow": {
+          "calls": 1,
+          "triangles": 384
+        }
+      },
+      {
+        "id": 22951,
+        "main": {
+          "calls": 1,
+          "triangles": 672
+        },
+        "name": "eiffel-kit-gold-30",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-gold-30",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1698,
+        "main": {
+          "calls": 1,
+          "triangles": 292
+        },
+        "name": "second-floor-relay-batch-15",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-15",
+        "shadow": {
+          "calls": 1,
+          "triangles": 292
+        }
+      },
+      {
+        "id": 1697,
+        "main": {
+          "calls": 1,
+          "triangles": 288
+        },
+        "name": "second-floor-relay-batch-14",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-14",
+        "shadow": {
+          "calls": 1,
+          "triangles": 288
+        }
+      },
+      {
+        "id": 800,
+        "main": {
+          "calls": 1,
+          "triangles": 564
+        },
+        "name": "Mesh#800",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 799,
+        "main": {
+          "calls": 1,
+          "triangles": 544
+        },
+        "name": "Mesh#799",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1695,
+        "main": {
+          "calls": 1,
+          "triangles": 256
+        },
+        "name": "second-floor-relay-batch-12",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-12",
+        "shadow": {
+          "calls": 1,
+          "triangles": 256
+        }
+      },
+      {
+        "id": 1351,
+        "main": {
+          "calls": 1,
+          "triangles": 240
+        },
+        "name": "long-load-export-batch-3",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-3",
+        "shadow": {
+          "calls": 1,
+          "triangles": 240
+        }
+      },
+      {
+        "id": 1690,
+        "main": {
+          "calls": 1,
+          "triangles": 240
+        },
+        "name": "second-floor-relay-batch-7",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-7",
+        "shadow": {
+          "calls": 1,
+          "triangles": 240
+        }
+      },
+      {
+        "id": 536,
+        "main": {
+          "calls": 1,
+          "triangles": 452
+        },
+        "name": "Mesh#536",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-palais-trocadero",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 938,
+        "main": {
+          "calls": 1,
+          "triangles": 400
+        },
+        "name": "steam-drive-batch-1",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-1",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1211,
+        "main": {
+          "calls": 1,
+          "triangles": 192
+        },
+        "name": "onward-export-batch-3",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/eiffel-long-load-onward/onward-export-batch-3",
+        "shadow": {
+          "calls": 1,
+          "triangles": 192
+        }
+      },
+      {
+        "id": 1213,
+        "main": {
+          "calls": 1,
+          "triangles": 192
+        },
+        "name": "onward-export-batch-5",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/eiffel-long-load-onward/onward-export-batch-5",
+        "shadow": {
+          "calls": 1,
+          "triangles": 192
+        }
+      },
+      {
+        "id": 186,
+        "main": {
+          "calls": 1,
+          "triangles": 322
+        },
+        "name": "eiffel-plane-trees-culled",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-plane-trees-culled",
+        "shadow": {
+          "calls": 1,
+          "triangles": 46
+        }
+      },
+      {
+        "id": 1754,
+        "main": {
+          "calls": 1,
+          "triangles": 168
+        },
+        "name": "splice-hardware-batch-0",
+        "path": "eiffel-tower-reference-world/eiffel-delivered-splice/splice-hardware-batch-0",
+        "shadow": {
+          "calls": 1,
+          "triangles": 168
+        }
+      },
+      {
+        "id": 945,
+        "main": {
+          "calls": 1,
+          "triangles": 292
+        },
+        "name": "steam-drive-batch-8",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-8",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 174,
+        "main": {
+          "calls": 1,
+          "triangles": 288
+        },
+        "name": "eiffel-expo-pool-underbeds",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-expo-pool-underbeds",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 944,
+        "main": {
+          "calls": 1,
+          "triangles": 288
+        },
+        "name": "steam-drive-batch-7",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-7",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 535,
+        "main": {
+          "calls": 1,
+          "triangles": 272
+        },
+        "name": "Mesh#535",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-palais-trocadero",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1699,
+        "main": {
+          "calls": 1,
+          "triangles": 132
+        },
+        "name": "second-floor-relay-batch-16",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-16",
+        "shadow": {
+          "calls": 1,
+          "triangles": 132
+        }
+      },
+      {
+        "id": 645,
+        "main": {
+          "calls": 1,
+          "triangles": 256
+        },
+        "name": "eiffel-traffic-far-wheels",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-far-wheels",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 942,
+        "main": {
+          "calls": 1,
+          "triangles": 256
+        },
+        "name": "steam-drive-batch-5",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-5",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 798,
+        "main": {
+          "calls": 1,
+          "triangles": 204
+        },
+        "name": "Mesh#798",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 177,
+        "main": {
+          "calls": 1,
+          "triangles": 96
+        },
+        "name": "eiffel-pont-d-iena-railings",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-seine-quays/eiffel-pont-d-iena-railings",
+        "shadow": {
+          "calls": 1,
+          "triangles": 96
+        }
+      },
+      {
+        "id": 181,
+        "main": {
+          "calls": 1,
+          "triangles": 192
+        },
+        "name": "eiffel-levallois-road-batched",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-levallois-road/eiffel-levallois-road-batched",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 647,
+        "main": {
+          "calls": 1,
+          "triangles": 192
+        },
+        "name": "eiffel-quay-mooring-bollards",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-quay-mooring-bollards",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 644,
+        "main": {
+          "calls": 1,
+          "triangles": 168
+        },
+        "name": "eiffel-traffic-far-horses",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-far-horses",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 802,
+        "main": {
+          "calls": 1,
+          "triangles": 168
+        },
+        "name": "Mesh#802",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 187,
+        "main": {
+          "calls": 1,
+          "triangles": 140
+        },
+        "name": "eiffel-tree-trunks-culled",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-tree-trunks-culled",
+        "shadow": {
+          "calls": 1,
+          "triangles": 20
+        }
+      },
+      {
+        "id": 797,
+        "main": {
+          "calls": 1,
+          "triangles": 156
+        },
+        "name": "Mesh#797",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1353,
+        "main": {
+          "calls": 1,
+          "triangles": 72
+        },
+        "name": "long-load-export-batch-5",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-5",
+        "shadow": {
+          "calls": 1,
+          "triangles": 72
+        }
+      },
+      {
+        "id": 803,
+        "main": {
+          "calls": 1,
+          "triangles": 114
+        },
+        "name": "Mesh#803",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 534,
+        "main": {
+          "calls": 1,
+          "triangles": 108
+        },
+        "name": "Mesh#534",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-palais-trocadero",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 646,
+        "main": {
+          "calls": 1,
+          "triangles": 96
+        },
+        "name": "eiffel-barge-mooring-lines",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-barge-mooring-lines",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 22952,
+        "main": {
+          "calls": 1,
+          "triangles": 48
+        },
+        "name": "eiffel-kit-roof-31",
+        "path": "eiffel-tower-reference-world/eiffel-bounded-construction-kit/eiffel-kit-roof-31",
+        "shadow": {
+          "calls": 1,
+          "triangles": 48
+        }
+      },
+      {
+        "id": 643,
+        "main": {
+          "calls": 1,
+          "triangles": 72
+        },
+        "name": "eiffel-traffic-far-vehicles",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-paris-1889-traffic/eiffel-traffic-far-vehicles",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 796,
+        "main": {
+          "calls": 1,
+          "triangles": 72
+        },
+        "name": "Mesh#796",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 804,
+        "main": {
+          "calls": 1,
+          "triangles": 72
+        },
+        "name": "Mesh#804",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1696,
+        "main": {
+          "calls": 1,
+          "triangles": 36
+        },
+        "name": "second-floor-relay-batch-13",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-13",
+        "shadow": {
+          "calls": 1,
+          "triangles": 36
+        }
+      },
+      {
+        "id": 172,
+        "main": {
+          "calls": 1,
+          "triangles": 64
+        },
+        "name": "eiffel-seine",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-seine",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 801,
+        "main": {
+          "calls": 1,
+          "triangles": 48
+        },
+        "name": "Mesh#801",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 795,
+        "main": {
+          "calls": 1,
+          "triangles": 36
+        },
+        "name": "Mesh#795",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-photo-entrance",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 943,
+        "main": {
+          "calls": 1,
+          "triangles": 36
+        },
+        "name": "steam-drive-batch-6",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-steam-drive/steam-drive-batch-6",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      },
+      {
+        "id": 1356,
+        "main": {
+          "calls": 1,
+          "triangles": 12
+        },
+        "name": "long-load-export-batch-8",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/long-load-export-batch-8",
+        "shadow": {
+          "calls": 1,
+          "triangles": 12
+        }
+      },
+      {
+        "id": 1686,
+        "main": {
+          "calls": 1,
+          "triangles": 12
+        },
+        "name": "second-floor-relay-batch-3",
+        "path": "eiffel-tower-reference-world/eiffel-second-floor-relay-candidate/second-floor-relay-batch-3",
+        "shadow": {
+          "calls": 1,
+          "triangles": 12
+        }
+      },
+      {
+        "id": 1210,
+        "main": {
+          "calls": 1,
+          "triangles": 8
+        },
+        "name": "onward-export-batch-2",
+        "path": "eiffel-tower-reference-world/eiffel-long-load-first-floor/eiffel-long-load-onward/onward-export-batch-2",
+        "shadow": {
+          "calls": 1,
+          "triangles": 8
+        }
+      },
+      {
+        "id": 173,
+        "main": {
+          "calls": 1,
+          "triangles": 4
+        },
+        "name": "eiffel-expo-reflecting-pools",
+        "path": "eiffel-tower-reference-world/eiffel-environment/eiffel-expo-reflecting-pools",
+        "shadow": {
+          "calls": 0,
+          "triangles": 0
+        }
+      }
+    ],
+    "total": {
+      "calls": 149,
+      "triangles": 328380
+    },
+    "untracked": {
+      "calls": 4,
+      "triangles": 3
+    }
+  },
+  "diagnostics": {
+    "calls": 149,
+    "geometries": 135,
+    "lines": 3,
+    "points": 0,
+    "textures": 204,
+    "triangles": 328380
+  },
+  "t": 0.833
+}

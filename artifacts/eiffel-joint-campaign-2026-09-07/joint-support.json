@@ -1,0 +1,653 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-static",
+  "units": "metres",
+  "axes": "Three.js Y-up",
+  "freeze": 0.09193744785606445,
+  "partIds": [
+    "lower-ne-02-m012-c001",
+    "lower-ne-02-m012-c002"
+  ],
+  "joint": [
+    51.31428527832031,
+    19,
+    -40.295236587524414
+  ],
+  "bearingTopY": 18.94194916,
+  "beams": [
+    {
+      "id": "east-raker",
+      "kind": "extension-raker",
+      "a": [
+        51,
+        15.9,
+        -44.5
+      ],
+      "b": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "halfWidth": 0.11
+    },
+    {
+      "id": "east-cross-raker",
+      "kind": "extension-raker",
+      "a": [
+        51,
+        15.9,
+        -44.5
+      ],
+      "b": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "halfWidth": 0.09
+    },
+    {
+      "id": "west-raker",
+      "kind": "extension-raker",
+      "a": [
+        46.6,
+        15.9,
+        -42.8
+      ],
+      "b": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "halfWidth": 0.11
+    },
+    {
+      "id": "west-cross-raker",
+      "kind": "extension-raker",
+      "a": [
+        46.6,
+        15.9,
+        -42.8
+      ],
+      "b": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "halfWidth": 0.09
+    },
+    {
+      "id": "middle-tie",
+      "kind": "extension-tie",
+      "a": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "b": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "halfWidth": 0.09
+    },
+    {
+      "id": "east-head-left",
+      "kind": "bearing-knee",
+      "a": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "b": [
+        50.9,
+        18.64194916,
+        -40.295236587524414
+      ],
+      "halfWidth": 0.11
+    },
+    {
+      "id": "east-head-right",
+      "kind": "bearing-knee",
+      "a": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "b": [
+        51.7,
+        18.64194916,
+        -40.295236587524414
+      ],
+      "halfWidth": 0.11
+    },
+    {
+      "id": "west-head-left",
+      "kind": "bearing-knee",
+      "a": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "b": [
+        50.9,
+        18.64194916,
+        -40.295236587524414
+      ],
+      "halfWidth": 0.09
+    },
+    {
+      "id": "west-head-right",
+      "kind": "bearing-knee",
+      "a": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "b": [
+        51.7,
+        18.64194916,
+        -40.295236587524414
+      ],
+      "halfWidth": 0.09
+    },
+    {
+      "id": "bearing-header",
+      "kind": "bearing-header",
+      "a": [
+        50.9,
+        18.64194916,
+        -40.295236587524414
+      ],
+      "b": [
+        51.7,
+        18.64194916,
+        -40.295236587524414
+      ],
+      "halfWidth": 0.15
+    },
+    {
+      "id": "platform-brace-west-a",
+      "kind": "platform-brace",
+      "a": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "b": [
+        49.9,
+        17.56,
+        -40.795236587524414
+      ],
+      "halfWidth": 0.08
+    },
+    {
+      "id": "platform-brace-west-b",
+      "kind": "platform-brace",
+      "a": [
+        48.8,
+        17.3,
+        -41.8
+      ],
+      "b": [
+        49.9,
+        17.56,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.08
+    },
+    {
+      "id": "platform-brace-east-a",
+      "kind": "platform-brace",
+      "a": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "b": [
+        50.7,
+        17.56,
+        -40.795236587524414
+      ],
+      "halfWidth": 0.08
+    },
+    {
+      "id": "platform-brace-east-b",
+      "kind": "platform-brace",
+      "a": [
+        50.9,
+        17.3,
+        -42.2
+      ],
+      "b": [
+        50.7,
+        17.56,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.08
+    },
+    {
+      "id": "platform-under-tie",
+      "kind": "platform-tie",
+      "a": [
+        49.9,
+        17.56,
+        -40.795236587524414
+      ],
+      "b": [
+        50.7,
+        17.56,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.07
+    },
+    {
+      "id": "platform-under-cross",
+      "kind": "platform-tie",
+      "a": [
+        50.7,
+        17.56,
+        -40.795236587524414
+      ],
+      "b": [
+        49.9,
+        17.56,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.07
+    },
+    {
+      "id": "platform-rail-post-0",
+      "kind": "platform-guard-rail",
+      "a": [
+        49.9,
+        17.56,
+        -40.795236587524414
+      ],
+      "b": [
+        49.9,
+        18.65,
+        -40.795236587524414
+      ],
+      "halfWidth": 0.045
+    },
+    {
+      "id": "platform-rail-post-1",
+      "kind": "platform-guard-rail",
+      "a": [
+        49.9,
+        17.56,
+        -39.795236587524414
+      ],
+      "b": [
+        49.9,
+        18.65,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.045
+    },
+    {
+      "id": "platform-rail-post-2",
+      "kind": "platform-guard-rail",
+      "a": [
+        50.7,
+        17.56,
+        -39.795236587524414
+      ],
+      "b": [
+        50.7,
+        18.65,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.045
+    },
+    {
+      "id": "platform-rail-west",
+      "kind": "platform-guard-rail",
+      "a": [
+        49.9,
+        18.65,
+        -40.795236587524414
+      ],
+      "b": [
+        49.9,
+        18.65,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.045
+    },
+    {
+      "id": "platform-rail-north",
+      "kind": "platform-guard-rail",
+      "a": [
+        49.9,
+        18.65,
+        -40.795236587524414
+      ],
+      "b": [
+        50.7,
+        18.65,
+        -40.795236587524414
+      ],
+      "halfWidth": 0.045
+    },
+    {
+      "id": "platform-rail-south",
+      "kind": "platform-guard-rail",
+      "a": [
+        49.9,
+        18.65,
+        -39.795236587524414
+      ],
+      "b": [
+        50.7,
+        18.65,
+        -39.795236587524414
+      ],
+      "halfWidth": 0.045
+    }
+  ],
+  "boxes": [
+    {
+      "id": "east-saddle",
+      "kind": "existing-frame-saddle",
+      "center": [
+        51,
+        15.72,
+        -44.5
+      ],
+      "size": [
+        0.5,
+        0.24,
+        0.5
+      ]
+    },
+    {
+      "id": "west-saddle",
+      "kind": "existing-frame-saddle",
+      "center": [
+        46.6,
+        15.72,
+        -42.8
+      ],
+      "size": [
+        0.5,
+        0.24,
+        0.5
+      ]
+    },
+    {
+      "id": "joint-bearing",
+      "kind": "bearing-block",
+      "center": [
+        51.31428527832031,
+        18.86694916,
+        -40.295236587524414
+      ],
+      "size": [
+        1.12,
+        0.15,
+        0.7
+      ]
+    },
+    {
+      "id": "fastening-platform",
+      "kind": "worker-platform",
+      "center": [
+        50.3,
+        17.68,
+        -40.295236587524414
+      ],
+      "size": [
+        0.8,
+        0.24,
+        1
+      ]
+    }
+  ],
+  "bearingSurfaces": [
+    {
+      "id": "shared-m012-joint-bearing",
+      "center": [
+        51.31428527832031,
+        18.94194916,
+        -40.295236587524414
+      ],
+      "size": [
+        1.12,
+        0,
+        0.7
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "contacts": [
+        "lower-ne-02-m012-c001:end",
+        "lower-ne-02-m012-c002:start"
+      ]
+    }
+  ],
+  "workerPlatform": {
+    "center": [
+      50.3,
+      17.68,
+      -40.295236587524414
+    ],
+    "size": [
+      0.8,
+      0.24,
+      1
+    ],
+    "topY": 17.8,
+    "openFace": "+X",
+    "recommendedWorker": {
+      "feet": [
+        {
+          "center": [
+            50.2,
+            17.86,
+            -40.475236587524414
+          ],
+          "size": [
+            0.28,
+            0.12,
+            0.14
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "center": [
+            50.2,
+            17.86,
+            -40.115236587524414
+          ],
+          "size": [
+            0.28,
+            0.12,
+            0.14
+          ],
+          "quaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "legs": [
+        {
+          "start": [
+            50.2,
+            17.86,
+            -40.475236587524414
+          ],
+          "joint": [
+            50.22,
+            18.28,
+            -40.435236587524415
+          ],
+          "end": [
+            50.24,
+            18.78,
+            -40.395236587524415
+          ]
+        },
+        {
+          "start": [
+            50.2,
+            17.86,
+            -40.115236587524414
+          ],
+          "joint": [
+            50.22,
+            18.28,
+            -40.15523658752441
+          ],
+          "end": [
+            50.24,
+            18.78,
+            -40.19523658752441
+          ]
+        }
+      ],
+      "hip": [
+        50.24,
+        18.78,
+        -40.295236587524414
+      ],
+      "torso": [
+        [
+          50.24,
+          18.99,
+          -40.295236587524414
+        ],
+        [
+          50.65,
+          19.35,
+          -40.295236587524414
+        ]
+      ],
+      "shoulderCenter": [
+        50.65,
+        19.35,
+        -40.295236587524414
+      ],
+      "head": {
+        "center": [
+          50.65,
+          19.6,
+          -40.295236587524414
+        ],
+        "size": [
+          0.22,
+          0.24,
+          0.22
+        ]
+      },
+      "arms": [
+        {
+          "shoulder": [
+            50.65,
+            19.35,
+            -40.395236587524415
+          ],
+          "hand": [
+            51.31428527832031,
+            19,
+            -40.37523658752441
+          ]
+        },
+        {
+          "shoulder": [
+            50.65,
+            19.35,
+            -40.19523658752441
+          ],
+          "hand": [
+            51.31428527832031,
+            19,
+            -40.215236587524416
+          ]
+        }
+      ],
+      "hands": [
+        [
+          51.31428527832031,
+          19,
+          -40.37523658752441
+        ],
+        [
+          51.31428527832031,
+          19,
+          -40.215236587524416
+        ]
+      ],
+      "upperArmLength": 0.38,
+      "forearmLength": 0.4,
+      "job": "splice-fastener",
+      "activeFilmSeconds": [
+        113,
+        119
+      ],
+      "permanentConnectedAtSeconds": 119
+    }
+  },
+  "groundFeet": [
+    [
+      44.5,
+      0,
+      -51
+    ],
+    [
+      44.5,
+      0,
+      -44.5
+    ],
+    [
+      51,
+      0,
+      -51
+    ],
+    [
+      51,
+      0,
+      -44.5
+    ],
+    [
+      42.8,
+      0,
+      -46.6
+    ],
+    [
+      46.6,
+      0,
+      -42.8
+    ]
+  ],
+  "supportPath": {
+    "type": "braced-extension-of-existing-ground-frame",
+    "existingAnchorIds": [
+      "post-3-2-piece-0",
+      "post-5-2-piece-0",
+      "frame-5-3-15.6-0-piece-0"
+    ],
+    "saddles": [
+      "east-saddle",
+      "west-saddle"
+    ],
+    "stack": "Head-raker endpoints and 0.30m-square header centerline are Y=18.64194916; header top contacts bearing-block bottom Y=18.79194916 without overlap.",
+    "platform": "Four diagonal members and two crossed underside ties connect the fastening deck to both middle truss nodes; guard rails enclose -X and both Z edges, leaving +X open toward the splice."
+  },
+  "limits": [
+    "Uses the previously authored six-foot ground-rooted frame; groundFeet identify that inherited support path and are not duplicate new pads.",
+    "Capacity, installation sequence and removal remain unverified.",
+    "Moving cargo clearance is a separate audit gate.",
+    "Permanent steel splice plates between the two cargo segments are required before temporary-bearing removal and are outside this timber-support artifact."
+  ]
+}

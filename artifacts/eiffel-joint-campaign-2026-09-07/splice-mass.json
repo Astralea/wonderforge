@@ -1,0 +1,94 @@
+{
+  "sourceSHA256": "0f69178a26a575e57ff0777566f73b1591e39ce0e82dc9a2825b621329913a64",
+  "method": "Sum of signed closed-triangle mesh volumes at7800kg/m3, using stowed plate poses. Interpenetrating retained subparts are not unioned. Hemp loop mass excluded.",
+  "ironMassKg": 579.2594282453615,
+  "hardwareMassKg": 17.860603499036415,
+  "combinedCOM": [
+    51.31428527832031,
+    19.0,
+    -42.97904279141648
+  ],
+  "combinedMassKg": 597.1200317443979,
+  "rows": [
+    {
+      "name": "joint-splice-plate-0-iron.002",
+      "volume": 0.0010957498937882522,
+      "massKg": 8.546849171548367,
+      "world": [
+        51.24723434448242,
+        19.0,
+        -40.67908991417682
+      ]
+    },
+    {
+      "name": "joint-splice-plate-0-rivet.002",
+      "volume": 2.6066785008579087e-05,
+      "massKg": 0.20332092306691688,
+      "world": [
+        51.2342343442142,
+        19.0,
+        -40.69523468017578
+      ]
+    },
+    {
+      "name": "joint-splice-plate-1-iron.002",
+      "volume": 0.0010957498937882522,
+      "massKg": 8.546849171548367,
+      "world": [
+        51.3813362121582,
+        19.0,
+        -40.67908991417682
+      ]
+    },
+    {
+      "name": "joint-splice-plate-1-rivet.002",
+      "volume": 2.6066785008579053e-05,
+      "massKg": 0.2033209230669166,
+      "world": [
+        51.394336212426424,
+        19.0,
+        -40.69523468017578
+      ]
+    },
+    {
+      "name": "joint-splice-retainer-0-iron.001",
+      "volume": 8.093802990104479e-06,
+      "massKg": 0.06313166332281493,
+      "world": [
+        51.24723434448242,
+        19.0,
+        -40.595237731933594
+      ]
+    },
+    {
+      "name": "joint-splice-retainer-0-rivet.001",
+      "volume": 1.49999989205259e-05,
+      "massKg": 0.11699999158010202,
+      "world": [
+        51.231234344653785,
+        19.0,
+        -40.595237731933594
+      ]
+    },
+    {
+      "name": "joint-splice-retainer-1-iron.001",
+      "volume": 8.093802990104479e-06,
+      "massKg": 0.06313166332281493,
+      "world": [
+        51.3813362121582,
+        19.0,
+        -40.595237731933594
+      ]
+    },
+    {
+      "name": "joint-splice-retainer-1-rivet.001",
+      "volume": 1.4999998920525907e-05,
+      "massKg": 0.11699999158010208,
+      "world": [
+        51.39733621198684,
+        19.0,
+        -40.595237731933594
+      ]
+    }
+  ]
+}

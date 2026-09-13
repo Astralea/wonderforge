@@ -1,0 +1,23 @@
+{
+  "scene": "WonderForge \u2014 independent package bridle",
+  "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-package-2026-09-08/blender/eiffel-face-package-bridle.blend",
+  "payloadSHA256": "dde2a9308b75ce48a40bd863912984789b5781814b47c3763d6a13eed4a228a1",
+  "masterLocal": [
+    0.012881050368373514,
+    1.35,
+    -0.019342189806648348
+  ],
+  "legLengths": [
+    1.1794641959186312,
+    1.1957508698246333,
+    1.1741226004640275,
+    1.1904823535663156
+  ],
+  "ropeRadius": 0.012,
+  "eyeTubeRadius": 0.006,
+  "productionAdmitted": false,
+  "limits": [
+    "Canonical rigging alignment asset, not a complete construction scene.",
+    "Loose-part support, end-eye contacts and full delivery admission remain separately verified."
+  ]
+}

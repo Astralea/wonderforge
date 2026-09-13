@@ -1,7 +1,7 @@
 // Injects the typed recipes from src/data/materialDetail.ts into the shared
 // MeshStandardMaterial kit via onBeforeCompile (Spec 06). Pure GLSL value
 // noise: no textures, no extra draw calls, no runtime randomness. The only
-// animated term is the Nile ripple, phased from playback t.
+// animated water term is the shared ripple, phased from playback t.
 //
 // Every injected material sets a unique customProgramCacheKey so program
 // variants never collide, per the kept threejs-aaa-graphics-builder cookbook.
@@ -13,7 +13,7 @@ import {
   type MaterialDetailRecipe,
   type MaterialDetailRole,
 } from '../../data/materialDetail';
-import { GIZA_SKY, type SkyKeyframe } from '../../data/gizaSky';
+import { GIZA_SKY } from '../../data/gizaSky';
 import type { MaterialLibrary } from './MaterialLibrary';
 
 type ShaderUniforms = Record<string, { value: unknown }>;
@@ -85,9 +85,46 @@ function bandingSnippet(recipe: MaterialDetailRecipe): string {
 
 function mottleSnippet(recipe: MaterialDetailRecipe): string {
   const mottle = recipe.mottle;
-  if (!mottle) return '';
+  const secondary = recipe.mottleSecondary;
+  if (!mottle && !secondary) return '';
+  const sample = recipe.plane === 'xz' ? 'wfP.xz' : 'vec2(wfP.x + wfP.z * 0.35, wfP.y)';
+  const primaryTerm = mottle
+    ? `\n  wfDetail += (wfFbm(${sample} * ${f(mottle.scale)}) - 0.5) * ${f(mottle.amplitude * 2)};`
+    : '';
+  const secondaryTerm = secondary
+    ? `\n  wfDetail += (wfFbm(${sample} * ${f(secondary.scale)} + 19.4) - 0.5) * ${f(secondary.amplitude * 2)};`
+    : '';
   return `
-  wfDetail += (wfFbm(wfP.xz * ${f(mottle.scale)}) - 0.5) * ${f(mottle.amplitude * 2)};
+  ${primaryTerm}${secondaryTerm}
+`;
+}
+
+/**
+ * Static long-wavelength sand streaks, warped by the existing value field so
+ * the plateau reads as wind-sorted pavement rather than a tiled sine pattern.
+ * The term is only authored for sand and lives in the same detail height field
+ * as its mottle/grain, so the low-strength normal relief remains coherent.
+ */
+function chevronSnippet(recipe: MaterialDetailRecipe): string {
+  const chevron = recipe.chevron;
+  if (!chevron) return '';
+  return `
+  float wfChevU = wfP.x * ${f(chevron.scale)} + wfP.z * ${f(chevron.scale * 0.22)};
+  float wfChevV = wfP.y * ${f(chevron.scale * 1.15)};
+  float wfChevron = abs(fract(wfChevU + abs(fract(wfChevV) - 0.5)) - 0.5);
+  wfDetail += (wfChevron - 0.25) * ${f(chevron.amplitude * 2)};
+  wfRough += wfChevron * ${f((recipe.roughnessSwing ?? 0) * 0.8)};
+`;
+}
+
+function streakSnippet(recipe: MaterialDetailRecipe): string {
+  const streak = recipe.streak;
+  if (!streak) return '';
+  return `
+  float wfStreakWarp = (wfFbm(wfP.xz * ${f(streak.scale * 0.44)}) - 0.5) * 1.25;
+  float wfStreak = sin((wfP.x * ${f(streak.scale)} + wfP.z * ${f(streak.scale * streak.stretch)} + wfStreakWarp) * 6.28318);
+  wfDetail += wfStreak * ${f(streak.amplitude)};
+  wfRough += abs(wfStreak) * ${f((recipe.roughnessSwing ?? 0) * 0.35)};
 `;
 }
 
@@ -143,13 +180,14 @@ normal = normalize(normal + mat3(viewMatrix) * wfRippleSlopeWorld);`;
 }
 
 /**
- * Analytic sky reflection for the Nile (Spec 06 §Materials): the reflected
- * view direction is evaluated against the SAME analytical sky the dome
- * draws — zenith/horizon gradient, sun halo, and disc — so the river shows
- * the dawn and dusk skies and a true sun-glitter path with no reflection
- * pass and no textures. Fresnel-weighted (Schlick, F0 0.02); the perturbed
- * ripple normal breaks the glitter into sparkle. `uWfSkyReflStrength` is
- * driven per frame from the typed keyframes and stays 0 for legacy scenes.
+ * Analytic sky reflection for outdoor water (Spec 06 §Materials): the
+ * reflected view direction is evaluated against the SAME analytical sky the
+ * dome draws — zenith/horizon gradient, sun halo, and disc — so a river,
+ * harbour, or remaining lake shows dawn/dusk skies and a true sun-glitter
+ * path with no reflection pass and no textures. Fresnel-weighted (Schlick,
+ * F0 0.02); the perturbed ripple normal breaks the glitter into sparkle.
+ * `uWfSkyReflStrength` is driven per frame from the active typed sky and
+ * stays 0 for legacy scenes.
  */
 function skyReflectionSnippet(recipe: MaterialDetailRecipe): string {
   const reflection = recipe.skyReflection;
@@ -174,13 +212,15 @@ function skyReflectionSnippet(recipe: MaterialDetailRecipe): string {
 }
 
 /**
- * Raking-light stone relief (Spec 06 §Materials): the recipe's own detail
+ * Raking-light surface relief (Spec 06 §Materials): the recipe's own detail
  * field doubles as a bump height. The perturbation is three.js's
  * perturbNormalArb math over screen-space derivatives of that field, so no
  * texture fetches and no extra noise samples are added. A pixel-footprint
  * fade (keyed to the grain's cell scale) retires the relief before noise
  * cells shrink to pixel size, so distant faces never shimmer — the authored
- * micro-gaps stay in charge of the far read, per the GTAO A/B lesson.
+ * micro-gaps stay in charge of the far read, per the GTAO A/B lesson. Giza
+ * sand uses a much lower recipe strength than the quarry and masonry so it
+ * reads as wind-worked pavement, never displaced or choppy terrain.
  */
 function normalBumpSnippet(recipe: MaterialDetailRecipe): string {
   const bump = recipe.normalBump;
@@ -210,7 +250,7 @@ float wfDetail = 0.0;
 float wfRough = 0.0;
 ${recipe.ripple ? 'vec2 wfRp;\nfloat wfRip;' : ''}${recipe.chop ? '\nvec2 wfCp;\nfloat wfChop;' : ''}
 {
-  vec3 wfP = vWfDetailPos;${grainSnippet(recipe)}${bandingSnippet(recipe)}${mottleSnippet(recipe)}${rippleSnippet(recipe)}
+  vec3 wfP = vWfDetailPos;${grainSnippet(recipe)}${bandingSnippet(recipe)}${mottleSnippet(recipe)}${chevronSnippet(recipe)}${streakSnippet(recipe)}${rippleSnippet(recipe)}
 }
 diffuseColor.rgb *= 1.0 + wfDetail;
 `;
@@ -264,7 +304,7 @@ function injectRecipe(material: MeshStandardMaterial, recipe: MaterialDetailReci
   material.customProgramCacheKey = () => cacheKey;
 }
 
-const TARGETS: Record<MaterialDetailRole, (materials: MaterialLibrary) => MeshStandardMaterial> = {
+const TARGETS: Partial<Record<MaterialDetailRole, (materials: MaterialLibrary) => MeshStandardMaterial>> = {
   'core-limestone': (m) => m.block['core-limestone'],
   'casing-limestone': (m) => m.block['casing-limestone'],
   granite: (m) => m.block.granite,
@@ -284,7 +324,8 @@ const TARGETS: Record<MaterialDetailRole, (materials: MaterialLibrary) => MeshSt
 
 export function applyMaterialDetail(materials: MaterialLibrary): void {
   for (const recipe of MATERIAL_DETAIL_RECIPES) {
-    injectRecipe(TARGETS[recipe.role](materials), recipe);
+    const target = TARGETS[recipe.role];
+    if (target) injectRecipe(target(materials), recipe);
   }
 }
 
@@ -399,21 +440,29 @@ export function updateClothSwayTime(
   }
 }
 
-/** Advance deterministic, playback-derived detail time (Nile ripple). */
+/** Advance deterministic, playback-derived detail time (water ripple). */
 export function updateMaterialDetailTime(materials: MaterialLibrary, t: number): void {
   const shaders = materials.water.userData.wfDetailShaders as ShaderLike[] | undefined;
   if (!shaders) return;
   for (const shader of shaders) shader.uniforms.uWfTime.value = t;
 }
 
+/** Typed sky colors any outdoor water body can feed. */
+export interface WaterSkyFeed {
+  zenith: string;
+  horizon: string;
+  sunTint: string;
+}
+
 /**
- * Feed the water's analytic sky reflection from the typed sky keyframes and
- * the real sun direction (Spec 06). Giza-only: legacy scenes never call this,
- * so their water keeps `uWfSkyReflStrength = 0` and renders unchanged.
+ * Feed the water's analytic sky reflection from the active typed sky and
+ * the real sun direction (Spec 06). Giza, Colosseum, and Sydney call this
+ * with their own sky samples. Legacy scenes never call it, so their water
+ * keeps `uWfSkyReflStrength = 0`.
  */
 export function updateWaterSky(
   materials: MaterialLibrary,
-  sky: SkyKeyframe,
+  sky: WaterSkyFeed,
   sunDirection: Vector3,
 ): void {
   const shaders = materials.water.userData.wfDetailShaders as ShaderLike[] | undefined;

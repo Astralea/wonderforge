@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 /** Spec 05 §Cinematic view: the sound preference persists across sessions. */
 const STORAGE_KEY = 'wonderforge:muted';
-/** Caption narration preference (Spec 05 §Caption voice); default OFF. */
+/** Explicit caption preference. Eiffel defaults on only when this is absent. */
 const VOICE_KEY = 'wonderforge:caption-voice';
 
 function readStoredMuted(): boolean {
@@ -14,11 +14,12 @@ function readStoredMuted(): boolean {
   }
 }
 
-function readStoredVoice(): boolean {
+function readStoredVoice(): boolean | null {
   try {
-    return typeof localStorage !== 'undefined' && localStorage.getItem(VOICE_KEY) === '1';
+    const value = typeof localStorage === 'undefined' ? null : localStorage.getItem(VOICE_KEY);
+    return value === '1' ? true : value === '0' ? false : null;
   } catch {
-    return false;
+    return null;
   }
 }
 
@@ -44,19 +45,23 @@ export interface AudioState {
   muted: boolean;
   /** True once the browser has actually let us start a cue. */
   unlocked: boolean;
-  /** Caption narration preference — default off, persists across sessions. */
+  /** Effective choice for the current wonder. */
   voiceEnabled: boolean;
+  /** null means no explicit choice; never mistake the old default for OFF. */
+  voicePreference: boolean | null;
   setMuted: (muted: boolean) => void;
   toggleMuted: () => void;
   setUnlocked: (unlocked: boolean) => void;
   setVoiceEnabled: (enabled: boolean) => void;
   toggleVoice: () => void;
+  applyNarrationDefault: (wonderId: string) => void;
 }
 
 export const useAudioStore = create<AudioState>((set, get) => ({
   muted: readStoredMuted(),
   unlocked: false,
-  voiceEnabled: readStoredVoice(),
+  voiceEnabled: readStoredVoice() ?? false,
+  voicePreference: readStoredVoice(),
 
   setMuted: (muted) => {
     persistMuted(muted);
@@ -69,8 +74,13 @@ export const useAudioStore = create<AudioState>((set, get) => ({
 
   setVoiceEnabled: (enabled) => {
     persistVoice(enabled);
-    set({ voiceEnabled: enabled });
+    set({ voiceEnabled: enabled, voicePreference: enabled });
   },
 
   toggleVoice: () => get().setVoiceEnabled(!get().voiceEnabled),
+
+  applyNarrationDefault: (wonderId) => {
+    const preference = get().voicePreference ?? readStoredVoice();
+    set({ voicePreference: preference, voiceEnabled: preference ?? wonderId === 'eiffel-tower' });
+  },
 }));

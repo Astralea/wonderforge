@@ -1,0 +1,69 @@
+{
+  "collarOuterWidth": 0.4,
+  "collarThickness": 0.06,
+  "collarRodRadius": 0.015,
+  "collarRodCenter": 0.17,
+  "fastenerXZ": [
+    [
+      -0.16,
+      0
+    ],
+    [
+      0.16,
+      0
+    ],
+    [
+      0,
+      -0.16
+    ],
+    [
+      0,
+      0.16
+    ]
+  ],
+  "shaftRadius": 0.009,
+  "boreRadius": 0.01,
+  "cartBed": [
+    0.24,
+    0.34
+  ],
+  "shoe": [
+    0.34,
+    0.42
+  ],
+  "spreader": [
+    0.22,
+    0.24
+  ],
+  "topWasher": [
+    0.42,
+    0.43
+  ],
+  "bottomWasher": [
+    0.21,
+    0.22
+  ],
+  "head": [
+    0.43,
+    0.446
+  ],
+  "nut": [
+    0.19,
+    0.21
+  ],
+  "shaft": [
+    0.19,
+    0.43
+  ],
+  "carrierOrigin": [
+    0,
+    0.34,
+    0
+  ],
+  "productionReady": false,
+  "limits": [
+    "Stationary preassembled geometry only; not a fastening animation.",
+    "Smooth shaft and bored nut envelope: threads, preload and strength unresolved.",
+    "Cart stability, operator access and release remain unadmitted."
+  ]
+}

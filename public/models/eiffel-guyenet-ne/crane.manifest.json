@@ -1,0 +1,60 @@
+{
+  "description": {
+    "historical": {
+      "minReach": 5.5,
+      "maxReach": 12,
+      "capacityKg": 4000,
+      "climbStroke": 2.5,
+      "safetyStroke": 0.5
+    },
+    "model": {
+      "boomLength": 13.416407864998739,
+      "tieLength": 12.165525060596439,
+      "mastAboveDeck": 4.8,
+      "postBelowDeck": 4.2,
+      "railGauge": 2.8,
+      "railTiltDegrees": 37.87640024160825,
+      "platformOffsetZ": -1.8,
+      "hingeY": 0.3,
+      "headRest": 1.0,
+      "safetyBase": -4.5,
+      "safetyHead": -4.0,
+      "screwLength": 4.2,
+      "railFaceOffsetZ": -0.95,
+      "skateOffsetZ": 0.11630153783986102,
+      "lowerBearingHalfSpan": 0.7,
+      "recessedCrossbars": true
+    },
+    "sources": [
+      "https://cnum.cnam.fr/pgi/redir.php?ident=8XAE353.1&onglet=c",
+      "https://cnum.cnam.fr/pgi/fpage.php?4XAE43.1/79/100/265/5/265="
+    ],
+    "interpretation": "Reach, capacity and screw strokes transcribed from the 1889 technical account. Diagram informs articulated chassis, level hotte, pivot, jib and ties. Jib/tie lengths, gauge, rail inclination and unlabelled dimensions are authored proportions, not surveyed historical dimensions. Prototype is not yet the production rig. Head G rests 1.00 guide-metres above the carriage nut and main screw I is 4.20 m long, with an authored -0.80 m lateral offset: these clearance proportions are not measurements from the plate. The unloaded climb parks the jib inward at 5.5 m reach. Lowering G clears the working jib from G/I; it does not authorize unrestricted slew through the guide girders. Moving chassis is offset 0.95 m toward the front flange; inclined bronze skates supply the explicit guide contact."
+  },
+  "triangles": 11512,
+  "roles": [
+    "root",
+    "guides",
+    "carriage",
+    "haul-nut",
+    "rail-skates",
+    "rotor",
+    "jib",
+    "hoist-drum",
+    "slider",
+    "tie-left",
+    "tie-right",
+    "head-anchor",
+    "main-screw",
+    "safety-base",
+    "safety-heads"
+  ],
+  "coordinates": "metres, Y-up; root deck at y=0",
+  "operatingReviewSlewDegrees": 90,
+  "climbingReviewReach": 5.5,
+  "knownLimits": [
+    "Full swept-volume clearance and installed elevator rail support not yet certified.",
+    "Steam feed and bolt insertion are not animated; screw lead is an authored visual parameter.",
+    "Operational luff reviewed perpendicular to guides; climb unloaded along guides."
+  ]
+}

@@ -23,10 +23,25 @@ src/
     types.ts
     constructionTypes.ts       # serializable blocks, core fill, routes, layers
     gizaConstruction.ts        # Giza source-of-truth scene plan
+    stonehengeTypes.ts         # serializable uprights, lintels, routes, supports
+    stonehengeConstruction.ts  # first replication scene plan
+    petraTypes.ts              # remaining-rock members, spoil cells, routes
+    petraConstruction.ts       # subtractive Treasury carving plan
+    colosseumTypes.ts          # bay units, routes, crane/wagon supports
+    colosseumConstruction.ts   # Flavian amphitheatre additive plan
+    sydneyTypes.ts             # podium, ribs, sail skins, yard route
+    sydneyConstruction.ts      # Bennelong Point additive plan
+    eiffelTypes.ts             # lattice bays, piers, routes, supports
+    eiffelConstruction.ts      # Champ de Mars additive plan
     scenes/                    # legacy JSON scenes for catalog fallbacks
   engine/                      # PURE: no React, DOM, or Three.js
     timeline.ts
     construction.ts            # block state graph + kinematic path sampling
+    stonehengeConstruction.ts  # upright/pit and lintel/crib state graphs
+    petraConstruction.ts       # top-down carve + Siq spoil haul graph
+    colosseumConstruction.ts   # wagon haul + treadwheel crane graph
+    sydneyConstruction.ts      # trolley haul + tower-crane graph
+    eiffelConstruction.ts      # wagon haul + creeper-crane graph
     camera.ts
     daynight.ts
     geometry.ts
@@ -39,6 +54,11 @@ src/
       RenderPipeline.ts        # renderer, camera, shadows, fog, tone mapping
       MaterialLibrary.ts       # shared physically based materials
       GizaWorld.ts             # reference-scene composition
+      StonehengeWorld.ts       # first replicated typed-world composition
+      PetraWorld.ts            # subtractive Treasury world composition
+      ColosseumWorld.ts        # Flavian amphitheatre world composition
+      SydneyWorld.ts           # Bennelong Point harbour world composition
+      EiffelWorld.ts           # Champ de Mars iron-lattice world composition
       BlockSystem.ts           # settled instancing + active moving blocks
       WorkerSystem.ts          # workers, sleds, ropes, levers from event state
       Environment.ts           # terrain, quarry, fields, Nile, city, ridges, sky
@@ -101,3 +121,10 @@ stable wonder IDs.
   checked-in, licensed assets only.
 - ACES filmic tone mapping, sRGB output, fog matching the horizon, and one
   physically coherent sun/sky direction are required.
+
+### Build source boundary — 2026-09-07
+
+Tailwind class detection is scoped to `src/` through the CSS import source
+option. Retained Blender manifests and QA evidence are not UI source and must
+not participate in class discovery. Keep generated evidence; do not delete it
+to accelerate builds. Verify the production UI after this boundary changes.

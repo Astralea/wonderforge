@@ -19,6 +19,8 @@ function parseArgs(argv) {
     wait: 750,
     state: null,
     seed: undefined,
+    width: undefined,
+    height: undefined,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -29,11 +31,14 @@ function parseArgs(argv) {
     else if (value === '--wait') args.wait = Number(argv[++i]);
     else if (value === '--state') args.state = argv[++i];
     else if (value === '--seed') args.seed = Number(argv[++i]);
+    else if (value === '--width') args.width = Number(argv[++i]);
+    else if (value === '--height') args.height = Number(argv[++i]);
     else if (value === '-h' || value === '--help') {
       console.log(
-        'Usage: inspect-threejs-canvas.mjs [--url URL] [--out DIR] [--mobile] [--wait MS] [--state NAME] [--seed N]\n' +
+        'Usage: inspect-threejs-canvas.mjs [--url URL] [--out DIR] [--mobile] [--wait MS] [--state NAME] [--seed N] [--width W] [--height H]\n' +
           '  --state/--seed drive window.__THREE_GAME_TEST_HOOKS__ (setState/seed) before capture\n' +
-          '  so specific game states can be measured deterministically.',
+          '  so specific game states can be measured deterministically.\n' +
+          '  --width/--height override the desktop viewport (default 1280×720) or mobile CSS size.',
       );
       process.exit(0);
     } else {
@@ -237,8 +242,15 @@ async function main() {
 
   const browser = await launchBrowser();
   const context = await browser.newContext(args.mobile
-    ? { ...devices['iPhone 13'], userAgent: undefined }
-    : { viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
+    ? {
+      ...devices['iPhone 13'],
+      userAgent: undefined,
+      viewport: {
+        width: args.width ?? devices['iPhone 13'].viewport.width,
+        height: args.height ?? 844,
+      },
+    }
+    : { viewport: { width: args.width ?? 1280, height: args.height ?? 720 }, deviceScaleFactor: 1 });
   const page = await context.newPage();
   const consoleErrors = [];
   const pageErrors = [];

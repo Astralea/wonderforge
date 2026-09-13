@@ -22,6 +22,12 @@ seat. A stone follows an authored, continuous and causally ordered state graph:
 
 `quarried → dressed → loaded → hauled → queued → raised → aligned → seated`
 
+The Giza eight-phase graph is Giza's. Other wonders author their own
+graphs: Stonehenge splits uprights and lintels, Petra splits remaining rock
+from spoil, and the Colosseum uses a crane-and-wagon graph
+(`quarry → hauled → staged → hoisted → seated`). Caption beat count is
+also per-wonder — Giza's five faces are not a template.
+
 For a block with event window `[start, end]`, `constructionStateAt(block, t)`
 returns its phase, world transform, carrier/sled relationship, contact state,
 and visibility. The same inputs always return the same result.
@@ -43,9 +49,36 @@ Required invariants:
    permitted.
 9. Giza structural stones are human-scale units. Exterior stones must fit the
    bounds in Spec 08; a whole course, face, tier, or pyramid may not be a part.
+10. A support name is not evidence of contact. At representative phase
+    interiors and boundaries, the transformed stone contact point must match
+    the declared terrain, sled deck, ramp/deck, crib, guide, or joint surface
+    within 0.03 world units unless a scene documents a tighter exception.
+    Carrier height is applied exactly once, and terrain/support samplers used
+    by construction state are the same pure samplers used to build the visible
+    support geometry.
+
+Subtractive reference scenes (Spec 11 Petra) keep the same size, continuity,
+and contact rules, but split the population: remaining-rock members are
+authored at their final transform and never travel; spoil cells are the
+parts that must leave a source and follow a route before they may sit at a
+dump. A member becoming visible in place after its covering cells leave is
+unmasking, not an additive teleport.
+
+The Colosseum (Spec 12) is additive again, with a crane-and-wagon graph
+(`quarry → hauled → staged → hoisted → seated`) rather than Giza ramps or
+Stonehenge pits. Vaults wait on timber centering and seated piers; the
+attic waits on storey 2 of its bay.
 
 Non-structural atmosphere may fade. Wood rigs may be assembled or dismantled,
 but their members also retain their physical dimensions while visible.
+Scaffolding grows by adding final-size lifts from the ground, then loses
+those lifts from the top when struck. It does not scale a pole in Y, and it
+does not hang a short pole in empty air at storey height.
+
+There is no rigid-body collision detector and no gravity solver. Support is
+an authored numeric contact residual against a shared terrain/masonry
+sampler; occupancy is a keep-out footprint. Both must exist for Colosseum
+scaffolds and props the same way they exist for Giza camps.
 
 ## Kinematic path model
 
@@ -59,8 +92,14 @@ prevents unstable piles while retaining visible mechanical cause and effect.
   so sled speed does not jump at polyline corners.
 - Moving stones remain aligned to the sled or rig. A short seating descent is
   allowed only above the final support surface.
+- Surface-following legs sample the support at the current horizontal
+  position. Easing may change progress along a route, but may not ease height
+  away from a linear/terraced support or compare an object origin to the
+  support in place of the transformed lower contact.
 - Workers, sled, ropes, rollers, levers, dust, and stone read the same event
-  state; they are not independent decorative loops.
+  state; they are not independent decorative loops. Colosseum labour
+  (`colosseumLabourAt`) is a pure function of active operations and `t`:
+  gait, shuttle, and treadwheel spin advance with phase progress.
 - Future stones are not rendered. Settled stones are batched separately from
   the small set of active stones.
 

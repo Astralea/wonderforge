@@ -1,0 +1,1459 @@
+{
+  "partId": "summit-access-stair-m000-c000",
+  "floor": 116.13999938964844,
+  "direction": [
+    -0.9472159695726095,
+    0.32059617431688325
+  ],
+  "lateral": [
+    -0.32059617431688325,
+    -0.9472159695726095
+  ],
+  "origin": [
+    -8.5,
+    0,
+    -4
+  ],
+  "yaw": -2.8152338368830305,
+  "length": 6.862215385719105,
+  "guide": [
+    7.7,
+    125.7,
+    0
+  ],
+  "drum": [
+    10.850000000000001,
+    116.93999938964843,
+    0
+  ],
+  "trolleyYOffset": 0.145,
+  "sheaveRadius": 0.25,
+  "drumRadius": 0.3,
+  "wheelRadius": 0.115,
+  "roles": [
+    {
+      "role": "relay-clevis",
+      "name": "opening-clevis.013",
+      "parent": null,
+      "position": [
+        -8.5,
+        65.16250610351562,
+        -4.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-clevis-keeper",
+      "name": "clevis-keeper.013",
+      "parent": "relay-clevis",
+      "position": [
+        0.02800000086426735,
+        0.10400000214576721,
+        0.057999998331069946
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-clevis-pin",
+      "name": "clevis-pin.013",
+      "parent": "relay-clevis",
+      "position": [
+        0.0,
+        0.10400000214576721,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-access-scaffold",
+      "name": "release-scaffold.017",
+      "parent": null,
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-access-anchors",
+      "name": "relay-access-anchors.007",
+      "parent": null,
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-upper-cart",
+      "name": "stock-cart.008",
+      "parent": null,
+      "position": [
+        -15.0,
+        116.13999938964844,
+        -1.7999999523162842
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-upper-wheel-0",
+      "name": "cart-wheel.029",
+      "parent": "relay-upper-cart",
+      "position": [
+        -0.25,
+        0.11999999731779099,
+        -0.3799999952316284
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-upper-wheel-1",
+      "name": "cart-wheel.030",
+      "parent": "relay-upper-cart",
+      "position": [
+        -0.25,
+        0.11999999731779099,
+        0.3799999952316284
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-upper-wheel-2",
+      "name": "cart-wheel.031",
+      "parent": "relay-upper-cart",
+      "position": [
+        0.25,
+        0.11999999731779099,
+        -0.3799999952316284
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-upper-wheel-3",
+      "name": "cart-wheel.032",
+      "parent": "relay-upper-cart",
+      "position": [
+        0.25,
+        0.11999999731779099,
+        0.3799999952316284
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-frame",
+      "name": "relay-frame.007",
+      "parent": null,
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-trolley",
+      "name": "diagonal-trolley.006",
+      "parent": null,
+      "position": [
+        -8.736804008483887,
+        125.84500122070312,
+        -3.919851064682007
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-wheel-0",
+      "name": "trolley-wheel.021",
+      "parent": "relay-trolley",
+      "position": [
+        -0.30000001192092896,
+        0.0,
+        -0.3499999940395355
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-wheel-1",
+      "name": "trolley-wheel.022",
+      "parent": "relay-trolley",
+      "position": [
+        -0.30000001192092896,
+        0.0,
+        0.3499999940395355
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-wheel-2",
+      "name": "trolley-wheel.023",
+      "parent": "relay-trolley",
+      "position": [
+        0.30000001192092896,
+        0.0,
+        -0.3499999940395355
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-wheel-3",
+      "name": "trolley-wheel.024",
+      "parent": "relay-trolley",
+      "position": [
+        0.30000001192092896,
+        0.0,
+        0.3499999940395355
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-moving-sheave",
+      "name": "relay-moving-sheave.006",
+      "parent": "relay-trolley",
+      "position": [
+        0.0,
+        -0.14499999582767487,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-fixed-winch",
+      "name": "relay-fixed-winch.006",
+      "parent": null,
+      "position": [
+        -8.5,
+        0.0,
+        -4.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-drum",
+      "name": "drum.006",
+      "parent": "relay-fixed-winch",
+      "position": [
+        8.550000190734863,
+        116.94000244140625,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-fixed-sheave",
+      "name": "fixed-sheave.006",
+      "parent": "relay-fixed-winch",
+      "position": [
+        7.699999809265137,
+        125.69999694824219,
+        -0.0
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-drive-connecting-rod",
+      "name": "drive-connecting-rod.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.229999542236328,
+        58.7400016784668,
+        -5.199999809265137
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-connecting-rod-big-end",
+      "name": "connecting-rod-big-end.007",
+      "parent": "relay-drive-connecting-rod",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-connecting-rod-shank",
+      "name": "connecting-rod-shank.007",
+      "parent": "relay-drive-connecting-rod",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-connecting-rod-small-end",
+      "name": "connecting-rod-small-end.007",
+      "parent": "relay-drive-connecting-rod",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-drive-crank",
+      "name": "drive-crank.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.079999923706055,
+        58.7400016784668,
+        -4.690000057220459
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-crank-pin",
+      "name": "crank-pin.007",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.10000038146972656,
+        0.0,
+        -0.46000003814697266
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-crank-web",
+      "name": "crank-web.007",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.0,
+        0.0,
+        -0.4250001907348633
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-driven-shaft",
+      "name": "driven-shaft.007",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.0,
+        0.0,
+        -0.3299999237060547
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-flywheel-rim",
+      "name": "flywheel-rim.007",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-flywheel-spoke",
+      "name": "flywheel-spoke.037",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.13899993896484375,
+        0.0,
+        -0.75
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-flywheel-spoke",
+      "name": "flywheel-spoke.038",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.06949996948242188,
+        0.1203765869140625,
+        -0.75
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.2588191032409668,
+        0.9659258127212524
+      ]
+    },
+    {
+      "role": "relay-flywheel-spoke",
+      "name": "flywheel-spoke.039",
+      "parent": "relay-drive-crank",
+      "position": [
+        -0.06949996948242188,
+        0.1203765869140625,
+        -0.75
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.2588191032409668,
+        0.9659258127212524
+      ]
+    },
+    {
+      "role": "relay-flywheel-spoke",
+      "name": "flywheel-spoke.040",
+      "parent": "relay-drive-crank",
+      "position": [
+        -0.13899993896484375,
+        0.0,
+        -0.75
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-flywheel-spoke",
+      "name": "flywheel-spoke.041",
+      "parent": "relay-drive-crank",
+      "position": [
+        -0.06949996948242188,
+        -0.1203765869140625,
+        -0.75
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.9659258127212524,
+        0.2588191032409668
+      ]
+    },
+    {
+      "role": "relay-flywheel-spoke",
+      "name": "flywheel-spoke.042",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.06949996948242188,
+        -0.1203765869140625,
+        -0.75
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.9659258127212524,
+        0.2588191032409668
+      ]
+    },
+    {
+      "role": "relay-involute-pinion-12",
+      "name": "involute-pinion-12.007",
+      "parent": "relay-drive-crank",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-drive-fixed",
+      "name": "drive-fixed.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.079999923706055,
+        58.7400016784668,
+        -4.690000057220459
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-bearing-pedestal",
+      "name": "bearing-pedestal.013",
+      "parent": "relay-drive-fixed",
+      "position": [
+        0.0,
+        -0.3699989318847656,
+        -0.6500000953674316
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-bearing-pedestal",
+      "name": "bearing-pedestal.014",
+      "parent": "relay-drive-fixed",
+      "position": [
+        0.0,
+        -0.3699989318847656,
+        -0.3400001525878906
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-bored-crank-bearing",
+      "name": "bored-crank-bearing.013",
+      "parent": "relay-drive-fixed",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-bored-crank-bearing",
+      "name": "bored-crank-bearing.014",
+      "parent": "relay-drive-fixed",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-crosshead-guide",
+      "name": "crosshead-guide.013",
+      "parent": "relay-drive-fixed",
+      "position": [
+        -0.5,
+        -0.06600189208984375,
+        -0.5099997520446777
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-crosshead-guide",
+      "name": "crosshead-guide.014",
+      "parent": "relay-drive-fixed",
+      "position": [
+        -0.5,
+        0.06600189208984375,
+        -0.5099997520446777
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-cylinder-back-cap",
+      "name": "cylinder-back-cap.007",
+      "parent": "relay-drive-fixed",
+      "position": [
+        -1.2950000762939453,
+        0.0,
+        -0.5099997520446777
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-cylinder-foot",
+      "name": "cylinder-foot.013",
+      "parent": "relay-drive-fixed",
+      "position": [
+        -1.2299995422363281,
+        -0.3849983215332031,
+        -0.5099997520446777
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-cylinder-foot",
+      "name": "cylinder-foot.014",
+      "parent": "relay-drive-fixed",
+      "position": [
+        -0.75,
+        -0.3849983215332031,
+        -0.5099997520446777
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-cylinder-gland",
+      "name": "cylinder-gland.007",
+      "parent": "relay-drive-fixed",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-engine-bed",
+      "name": "engine-bed.007",
+      "parent": "relay-drive-fixed",
+      "position": [
+        -0.47500038146972656,
+        -0.720001220703125,
+        -0.5300002098083496
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-steam-cylinder",
+      "name": "steam-cylinder.007",
+      "parent": "relay-drive-fixed",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-drive-slider",
+      "name": "drive-slider.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.479999542236328,
+        58.7400016784668,
+        -5.199999809265137
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-crosshead-pin",
+      "name": "crosshead-pin.007",
+      "parent": "relay-drive-slider",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-crosshead",
+      "name": "crosshead.007",
+      "parent": "relay-drive-slider",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-piston-rod",
+      "name": "piston-rod.007",
+      "parent": "relay-drive-slider",
+      "position": [
+        -0.27499961853027344,
+        0.0,
+        0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-boiler",
+      "name": "steam-boiler.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -25.399999618530273,
+        57.94000244140625,
+        -3.549999952316284
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-boiler-band",
+      "name": "boiler-band.013",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-boiler-band",
+      "name": "boiler-band.014",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-boiler-chimney",
+      "name": "boiler-chimney.007",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.0,
+        1.8100013732910156,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-boiler-foot",
+      "name": "boiler-foot.007",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.0,
+        0.09000015258789062,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-boiler-shell",
+      "name": "boiler-shell.007",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.0,
+        0.8050003051757812,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-boiler-water-gauge",
+      "name": "boiler-water-gauge.007",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.1900005340576172,
+        0.7999992370605469,
+        0.43000006675720215
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-fire-door",
+      "name": "fire-door.007",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.2800006866455078,
+        0.3899993896484375,
+        0.28999996185302734
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-gauge-connection",
+      "name": "gauge-connection.013",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.1900005340576172,
+        0.5800018310546875,
+        0.36500000953674316
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-gauge-connection",
+      "name": "gauge-connection.014",
+      "parent": "relay-steam-boiler",
+      "position": [
+        0.1900005340576172,
+        1.0200004577636719,
+        0.36500000953674316
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-control-wheel",
+      "name": "steam-control-wheel.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-steam-pipe",
+      "name": "steam-pipe.031",
+      "parent": "relay-steam-drive",
+      "position": [
+        -25.149999618530273,
+        59.340003967285156,
+        -3.549999952316284
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-pipe",
+      "name": "steam-pipe.032",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.899999618530273,
+        59.1400032043457,
+        -3.549999952316284
+      ],
+      "quaternion": [
+        -0.7071068286895752,
+        0.0,
+        0.7071068286895752,
+        4.371138828673793e-08
+      ]
+    },
+    {
+      "role": "relay-steam-pipe",
+      "name": "steam-pipe.033",
+      "parent": "relay-steam-drive",
+      "position": [
+        -25.0,
+        58.94000244140625,
+        -3.549999952316284
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-pipe",
+      "name": "steam-pipe.034",
+      "parent": "relay-steam-drive",
+      "position": [
+        -25.100000381469727,
+        58.94000244140625,
+        -4.375
+      ],
+      "quaternion": [
+        -0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-pipe",
+      "name": "steam-pipe.035",
+      "parent": "relay-steam-drive",
+      "position": [
+        -25.100000381469727,
+        58.900001525878906,
+        -5.199999809265137
+      ],
+      "quaternion": [
+        -0.7071068286895752,
+        0.0,
+        0.7071068286895752,
+        4.371138828673793e-08
+      ]
+    },
+    {
+      "role": "relay-steam-valve-stem",
+      "name": "steam-valve-stem.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.899999618530273,
+        59.1400032043457,
+        -3.3299999237060547
+      ],
+      "quaternion": [
+        0.7071068286895752,
+        0.0,
+        -0.0,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-wheel-spoke",
+      "name": "steam-wheel-spoke.025",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.84000015258789,
+        59.1400032043457,
+        -3.109999895095825
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-wheel-spoke",
+      "name": "steam-wheel-spoke.026",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.899999618530273,
+        59.20000457763672,
+        -3.109999895095825
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-steam-wheel-spoke",
+      "name": "steam-wheel-spoke.027",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.959999084472656,
+        59.1400032043457,
+        -3.109999895095825
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.7071068286895752,
+        0.7071068286895752
+      ]
+    },
+    {
+      "role": "relay-steam-wheel-spoke",
+      "name": "steam-wheel-spoke.028",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.899999618530273,
+        59.08000183105469,
+        -3.109999895095825
+      ],
+      "quaternion": [
+        -0.7071068286895752,
+        0.0,
+        0.7071068286895752,
+        4.371138828673793e-08
+      ]
+    },
+    {
+      "role": "relay-winch-operator",
+      "name": "winch-operator.007",
+      "parent": "relay-steam-drive",
+      "position": [
+        -24.700000762939453,
+        57.94000244140625,
+        -2.6500000953674316
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-boot",
+      "name": "operator-boot.013",
+      "parent": "relay-winch-operator",
+      "position": [
+        -0.12999916076660156,
+        0.06499862670898438,
+        -0.04500007629394531
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-boot",
+      "name": "operator-boot.014",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.12999916076660156,
+        0.06499862670898438,
+        -0.04500007629394531
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-cap",
+      "name": "operator-cap.007",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.0,
+        1.8100013732910156,
+        -0.059999942779541016
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-coat",
+      "name": "operator-coat.007",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.0,
+        1.2599983215332031,
+        -0.029999971389770508
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-forearm",
+      "name": "operator-forearm.013",
+      "parent": "relay-winch-operator",
+      "position": [
+        -0.2329998016357422,
+        1.2649993896484375,
+        -0.3299999237060547
+      ],
+      "quaternion": [
+        -0.5146602988243103,
+        0.0,
+        -0.1306445300579071,
+        0.8473824262619019
+      ]
+    },
+    {
+      "role": "relay-operator-forearm",
+      "name": "operator-forearm.014",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.09799957275390625,
+        1.2000007629394531,
+        -0.3299999237060547
+      ],
+      "quaternion": [
+        -0.4327375292778015,
+        0.0,
+        0.5592300295829773,
+        0.7071067690849304
+      ]
+    },
+    {
+      "role": "relay-operator-hand",
+      "name": "operator-hand.013",
+      "parent": "relay-winch-operator",
+      "position": [
+        -0.20000076293945312,
+        1.3300018310546875,
+        -0.46000003814697266
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-hand",
+      "name": "operator-hand.014",
+      "parent": "relay-winch-operator",
+      "position": [
+        -0.06999969482421875,
+        1.2000007629394531,
+        -0.46000003814697266
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-head",
+      "name": "operator-head.007",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.0,
+        1.6699981689453125,
+        -0.05500006675720215
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-neck",
+      "name": "operator-neck.007",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.0,
+        1.5,
+        -0.039999961853027344
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-pelvis",
+      "name": "operator-pelvis.007",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.0,
+        0.9599990844726562,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-operator-trouser",
+      "name": "operator-trouser.013",
+      "parent": "relay-winch-operator",
+      "position": [
+        -0.11700057983398438,
+        0.5200004577636719,
+        0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.015470635145902634,
+        0.9998804330825806
+      ]
+    },
+    {
+      "role": "relay-operator-trouser",
+      "name": "operator-trouser.014",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.11700057983398438,
+        0.5200004577636719,
+        -0.0
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.015470635145902634,
+        0.9998804330825806
+      ]
+    },
+    {
+      "role": "relay-operator-upper-arm",
+      "name": "operator-upper-arm.013",
+      "parent": "relay-winch-operator",
+      "position": [
+        -0.22800064086914062,
+        1.3149986267089844,
+        -0.13000011444091797
+      ],
+      "quaternion": [
+        -0.8388515114784241,
+        0.0,
+        0.4553765654563904,
+        0.2982625365257263
+      ]
+    },
+    {
+      "role": "relay-operator-upper-arm",
+      "name": "operator-upper-arm.014",
+      "parent": "relay-winch-operator",
+      "position": [
+        0.22800064086914062,
+        1.3149986267089844,
+        -0.13000011444091797
+      ],
+      "quaternion": [
+        -0.8388515114784241,
+        0.0,
+        -0.4553765654563904,
+        0.2982625365257263
+      ]
+    },
+    {
+      "role": "relay-steam-drive",
+      "name": "relay-steam-drive.006",
+      "parent": null,
+      "position": [
+        -40.61907196044922,
+        58.19999694824219,
+        0.9167795181274414
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-drum-gear",
+      "name": "involute-drum-24.007",
+      "parent": "relay-drum",
+      "position": [
+        -3.814697265625e-06,
+        0.0,
+        0.9499979019165039
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ]
+    },
+    {
+      "role": "relay-bolt-tray",
+      "name": "bolt-tray.014",
+      "parent": null,
+      "position": [
+        12.75,
+        0.0,
+        1.25
+      ],
+      "quaternion": null
+    },
+    {
+      "role": "relay-wrench",
+      "name": "fastening-wrench.014",
+      "parent": null,
+      "position": [
+        -9.25,
+        58.26000213623047,
+        -3.359999895095825
+      ],
+      "quaternion": null
+    }
+  ],
+  "steam": {
+    "rootPosition": [
+      -42.797670179487724,
+      58.19999694824219,
+      1.6541507106795779
+    ],
+    "yaw": -2.8152338368830305,
+    "originalCrankOrigin": [
+      -24.08,
+      58.74000244140625,
+      -4.69
+    ],
+    "ratio": 2,
+    "crankRadius": 0.1,
+    "rodLength": 0.5,
+    "rodPlaneZ": -0.51
+  },
+  "productionReady": false,
+  "sourceScene": "WonderForge \u2014 second floor clear machinery bay",
+  "clearanceCorrection": {
+    "distanceU": 2.3,
+    "worldDelta": [
+      -2.1785967300170017,
+      0,
+      0.7373712009288315
+    ],
+    "movedRoots": [
+      "relay-steam-drive.002",
+      "drum-shaft.008",
+      "drum.009",
+      "winch-bearing.003",
+      "winch-bearing.004",
+      "winch-bed.002"
+    ]
+  }
+}

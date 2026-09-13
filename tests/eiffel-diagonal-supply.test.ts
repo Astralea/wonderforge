@@ -1,0 +1,6 @@
+import {describe,it,expect} from 'vitest';
+import {sampleEiffelDiagonalSupply as sample} from '../src/engine/eiffelDiagonalSupply';
+describe('same cargo to original upper-relay stock cart',()=>{
+ it('preserves cargo at first-cart handoff and seats it on original second-cart bed',()=>{for(const t of[124,145,160,163,166]){const s=sample(t);expect(s.worldCargo[0]).toBeCloseTo(s.lower.cart[0],10);expect(s.worldCargo[1]-.9).toBeCloseTo(s.lower.cart[1]+.34,10);}for(const t of[292,296,298,302]){const s=sample(t);expect(s.worldCargo[0]).toBe(-15);expect(s.worldCargo[2]).toBeCloseTo(-1.8,12);expect(s.worldCargo[1]-.9).toBeCloseTo(s.secondCart[1]+.34,12);expect(s.lower.cart[0]).toBe(-8.5);}});
+ it('keeps cargo continuous through each transition, releases slings before empty hook rises',()=>{for(const t of[160,163,166,272,288,292,296,298]){const a=sample(t-1e-6),b=sample(t+1e-6);expect(Math.hypot(...a.worldCargo.map((v,k)=>v-b.worldCargo[k]!))).toBeLessThan(1e-5);}const a=sample(296),b=sample(302);expect(b.worldCargo).toEqual(a.worldCargo);expect(b.secondRig.hook[1]-a.secondRig.hook[1]).toBeCloseTo(.6,10);for(const sling of b.secondRig.slings)expect(sling[1]![1]).toBeCloseTo(b.secondRig.hook[1]-.5,10);});
+});

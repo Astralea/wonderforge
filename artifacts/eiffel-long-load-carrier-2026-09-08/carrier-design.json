@@ -1,0 +1,42 @@
+{
+  "partId": "summit-access-stair-m000-c000",
+  "payloadSize": [
+    0.15000000596046448,
+    5.992500305175781,
+    0.15000000596046448
+  ],
+  "payloadBottom": 0.08,
+  "headPlateTop": 6.2325003051757815,
+  "carrierTop": 6.317500305175781,
+  "hookY": 6.882500305175782,
+  "eyeCenters": [
+    [
+      -0.17000000178813934,
+      6.267500400543213,
+      -0.17000000178813934
+    ],
+    [
+      -0.17000000178813934,
+      6.267500400543213,
+      0.17000000178813934
+    ],
+    [
+      0.17000000178813934,
+      6.267500400543213,
+      -0.17000000178813934
+    ],
+    [
+      0.17000000178813934,
+      6.267500400543213,
+      0.17000000178813934
+    ]
+  ],
+  "eyeInnerRadius": 0.026,
+  "slingRadius": 0.008,
+  "productionReady": false,
+  "limits": [
+    "Unrated interpreted carrier; no structural capacity claim.",
+    "Hook stays attached after landing; cart anchorage and unloading are not authored.",
+    "Equipment drive, braking and erection remain incomplete."
+  ]
+}

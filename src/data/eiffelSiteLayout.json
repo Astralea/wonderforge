@@ -1,0 +1,101 @@
+{
+  "workyard": {
+    "bounds": [
+      114,
+      -65,
+      172,
+      85
+    ],
+    "gate": [
+      114,
+      75
+    ],
+    "connector": [
+      [
+        86,
+        75
+      ],
+      [
+        114,
+        75
+      ]
+    ],
+    "connectorWidth": 5,
+    "buildings": [
+      {
+        "id": "iron-workshop",
+        "center": [
+          155,
+          -30
+        ],
+        "size": [
+          24,
+          22,
+          6
+        ]
+      },
+      {
+        "id": "tool-store",
+        "center": [
+          156,
+          15
+        ],
+        "size": [
+          22,
+          15,
+          4.5
+        ]
+      }
+    ],
+    "racks": [
+      [
+        128,
+        -42
+      ],
+      [
+        128,
+        -12
+      ],
+      [
+        128,
+        18
+      ]
+    ],
+    "masonryStock": [
+      153,
+      55
+    ]
+  },
+  "constructionGround": {
+    "bounds": [
+      -88,
+      -84,
+      90,
+      85
+    ],
+    "lift": 0.025
+  },
+  "northBank": {
+    "xStart": -840,
+    "columns": 25,
+    "xSpacing": 70,
+    "rowCenters": [
+      -425,
+      -510,
+      -595,
+      -680
+    ],
+    "roadWidth": 6,
+    "sidewalkWidth": 2,
+    "connectorsX": [
+      -292,
+      292
+    ],
+    "palaisKeepout": [
+      -195,
+      -440,
+      195,
+      -230
+    ]
+  }
+}

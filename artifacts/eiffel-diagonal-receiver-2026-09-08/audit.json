@@ -1,0 +1,20 @@
+{
+  "label": "candidate-geometry-audit-not-production-admission",
+  "productionReady": false,
+  "counts": {
+    "frame": 16,
+    "stage45Kit": 11386,
+    "bridges": 660,
+    "footCorners": 16,
+    "workerParts": 18
+  },
+  "staticFailures": [],
+  "routeFailures": [],
+  "footMisses": [],
+  "workerFailures": [],
+  "geometryClear": true,
+  "limits": [
+    "Exact source-prism and conservative kit-envelope clearance does not certify capacity or erection.",
+    "No drive, trolley asset, ropes, worker access or operational timing is admitted by this candidate audit."
+  ]
+}

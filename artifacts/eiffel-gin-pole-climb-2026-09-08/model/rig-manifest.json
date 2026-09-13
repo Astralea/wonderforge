@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "status": "candidate geometry; integration requires actual contact/sweep gates",
+  "pole": {
+    "base": [
+      -0.9,
+      300.9,
+      0
+    ],
+    "length": 6,
+    "section": 0.13,
+    "axialBoreY": 1.4,
+    "axialBoreDiameter": 0.022,
+    "jibLength": 3,
+    "jibMaterial": "timber lattice; mass must be measured"
+  },
+  "guides": [
+    {
+      "index": 0,
+      "y": 301.85,
+      "bore": 0.138,
+      "hinges": [
+        [
+          -0.4,
+          301.85,
+          0
+        ],
+        [
+          -0.4,
+          301.85,
+          0
+        ]
+      ],
+      "axialPin": false
+    },
+    {
+      "index": 1,
+      "y": 302.3,
+      "bore": 0.138,
+      "hinges": [
+        [
+          -0.4,
+          302.3,
+          0
+        ],
+        [
+          -0.4,
+          302.3,
+          0
+        ]
+      ],
+      "axialPin": true
+    },
+    {
+      "index": 2,
+      "y": 305.76666666666665,
+      "bore": 0.138,
+      "hinges": [
+        [
+          -0.4,
+          305.76666666666665,
+          0
+        ],
+        [
+          -0.4,
+          305.76666666666665,
+          0
+        ]
+      ],
+      "axialPin": false
+    },
+    {
+      "index": 3,
+      "y": 306.96666666666664,
+      "bore": 0.138,
+      "hinges": [
+        [
+          -0.4,
+          306.96666666666664,
+          0
+        ],
+        [
+          -0.4,
+          306.96666666666664,
+          0
+        ]
+      ],
+      "axialPin": true
+    }
+  ],
+  "drive": {
+    "supportPartId": "summit-crown-m075-c000",
+    "supportY": 306.0325005054474,
+    "shoes": [
+      [
+        -0.2,
+        306.0325005054474,
+        0
+      ],
+      [
+        0.2,
+        306.0325005054474,
+        0
+      ]
+    ],
+    "drumCenter": [
+      0.25,
+      306.91,
+      -0.12
+    ],
+    "drumAxis": [
+      1,
+      0,
+      0
+    ],
+    "drumRadius": 0.07,
+    "gearRatio": 2,
+    "crankCenter": [
+      0.43,
+      306.7,
+      -0.12
+    ],
+    "crankRadius": 0.18,
+    "fairleadCenters": [
+      [
+        0.25,
+        307.04,
+        0.28
+      ],
+      [
+        0.19,
+        307.22,
+        0.34
+      ],
+      [
+        -1.02,
+        307.2,
+        0.34
+      ]
+    ],
+    "westVerticalTangent": [
+      -1.1,
+      307.2,
+      0.34
+    ],
+    "movingLug": [
+      -1.1,
+      300.98,
+      0.34
+    ],
+    "ropeRadius": 0.006
+  },
+  "ladder": {
+    "railX": [
+      -0.17320508075688773,
+      0.17320508075688773
+    ],
+    "z": -0.3,
+    "floor": 300.6700134277344,
+    "rungYs": [
+      300.87001342773436,
+      301.15001342773434,
+      301.43001342773437,
+      301.71001342773434,
+      301.99001342773437,
+      302.27001342773434,
+      302.55001342773437,
+      302.83001342773434,
+      303.1100134277344,
+      303.39001342773435,
+      303.6700134277344,
+      303.95001342773435,
+      304.2300134277344,
+      304.51001342773435,
+      304.7900134277344,
+      305.07001342773435,
+      305.3500134277344,
+      305.63001342773435,
+      305.9100134277344,
+      306.19001342773436,
+      306.4700134277344,
+      306.75001342773436,
+      307.0300134277344,
+      307.31001342773436
+    ],
+    "rungRadius": 0.018
+  },
+  "manifestSha256": "e054bfb8cbded7e636075ba1371e624430f600da0b2e8f0cc765e205d1e54080",
+  "roles": {
+    "gin-pole-system": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": null
+    },
+    "moving-pole": {
+      "position": [
+        -0.8999999761581421,
+        300.8999938964844,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "jib-yaw": {
+      "position": [
+        0.0,
+        6.0,
+        -0.0
+      ],
+      "parent": "moving-pole"
+    },
+    "jib-pitch": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "jib-yaw"
+    },
+    "guide-0-fixed": {
+      "position": [
+        0.0,
+        301.8500061035156,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-0-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-0-fixed"
+    },
+    "guide-0-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-0-north-leaf"
+    },
+    "guide-0-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-0-fixed"
+    },
+    "guide-0-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-0-south-leaf"
+    },
+    "guide-1-fixed": {
+      "position": [
+        0.0,
+        302.29998779296875,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-1-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-1-fixed"
+    },
+    "guide-1-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-1-north-leaf"
+    },
+    "guide-1-axial-pin": {
+      "position": [
+        -0.5,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-1-north-leaf"
+    },
+    "guide-1-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-1-fixed"
+    },
+    "guide-1-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-1-south-leaf"
+    },
+    "guide-2-fixed": {
+      "position": [
+        0.0,
+        305.76666259765625,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-2-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-2-fixed"
+    },
+    "guide-2-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-2-north-leaf"
+    },
+    "guide-2-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-2-fixed"
+    },
+    "guide-2-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-2-south-leaf"
+    },
+    "guide-3-fixed": {
+      "position": [
+        0.0,
+        306.9666748046875,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-3-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-3-fixed"
+    },
+    "guide-3-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-3-north-leaf"
+    },
+    "guide-3-axial-pin": {
+      "position": [
+        -0.5,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-3-north-leaf"
+    },
+    "guide-3-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-3-fixed"
+    },
+    "guide-3-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-3-south-leaf"
+    },
+    "climb-drive-fixed": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "climb-winch-drum": {
+      "position": [
+        0.25,
+        306.9100036621094,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-output-gear": {
+      "position": [
+        0.3700000047683716,
+        306.9100036621094,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-input-crank": {
+      "position": [
+        0.3700000047683716,
+        306.70001220703125,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-ratchet-wheel": {
+      "position": [
+        0.12999999523162842,
+        306.9100036621094,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-pawl": {
+      "position": [
+        0.12999999523162842,
+        307.010009765625,
+        -0.18000000715255737
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-west-fairlead": {
+      "position": [
+        -1.0199999809265137,
+        307.20001220703125,
+        0.3400000035762787
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-east-fairlead": {
+      "position": [
+        0.25,
+        307.0400085449219,
+        0.2800000011920929
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-east-upper-fairlead": {
+      "position": [
+        0.1899999976158142,
+        307.2200012207031,
+        0.3400000035762787
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "mast-access-ladder": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    }
+  },
+  "objects": 334,
+  "meshes": 298
+}

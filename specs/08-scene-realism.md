@@ -79,7 +79,10 @@ verification recipes.
 
 - **Support.** Nothing floats and nothing is buried. A block's declared
   support must agree with its geometry — an eased path over a linear terrace
-  separates in the middle even when the endpoints match.
+  separates in the middle even when the endpoints match. The test point is the
+  transformed stone bottom (or phase-specific sled runner/crib top), never the
+  stone origin. Ramp ascent and working-deck alignment use one pure support
+  profile shared with the renderer; sled and crib height are applied once.
 - **Occupancy.** Masonry, earthworks, and props never intersect. Ground the
   construction occupies is unavailable to scenery. Footprints are typed once
   (`plan.ramps`) and drive both the geometry and the keep-out set; props are
@@ -104,6 +107,11 @@ verification recipes.
 - **Instance hygiene.** Placement loops that can reject a candidate set
   `mesh.count` to what they placed; unwritten instances otherwise render at
   the world origin, inside the main monument.
+
+Stonehenge quality transfers here as contracts rather than borrowed mechanics:
+surface-matched interpolation, contact bound to visible support, honest far
+landscape/fog, and a target-owned sky. Giza keeps its own ramp/deck semantics;
+it does not acquire Stonehenge pits or A-frames.
 
 ## Living environment
 
@@ -229,6 +237,7 @@ remain visible in the hero pyramid without moiré or noisy color variation.
 
 ## Replication gate
 
-Do not rebuild the other nine wonders until Giza passes the scorecard and
-desktop/mobile checkpoints in Spec 04. Their existing deep links and fallback
-scenes must continue to work during this focused milestone.
+The accepted Giza evidence in `HANDOFF.md` unlocks replications: Stonehenge
+in Spec 10, then Petra in Spec 11. Giza remains the visual and causal quality
+bar. Remaining fallback deep links must continue to work, and a new migration
+may not weaken any production scene's contracts.

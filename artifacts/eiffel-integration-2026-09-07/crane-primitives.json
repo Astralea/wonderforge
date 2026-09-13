@@ -1,0 +1,10615 @@
+{
+  "sourceBuilderSHA256": "19ecf8cdfc756d18ef6bf08c7b393d8f29037c85757a7d0e7de00d435a16b0d2",
+  "description": {
+    "historical": {
+      "minReach": 5.5,
+      "maxReach": 12,
+      "capacityKg": 4000,
+      "climbStroke": 2.5,
+      "safetyStroke": 0.5
+    },
+    "model": {
+      "boomLength": 13.416407864998739,
+      "tieLength": 12.165525060596439,
+      "mastAboveDeck": 4.8,
+      "postBelowDeck": 4.2,
+      "railGauge": 2.8,
+      "railTiltDegrees": 37.87640024160825,
+      "platformOffsetZ": -1.8,
+      "hingeY": 0.3,
+      "headRest": 1.0,
+      "safetyBase": -4.5,
+      "safetyHead": -4.0,
+      "screwLength": 4.2,
+      "railFaceOffsetZ": -0.95,
+      "skateOffsetZ": 0.11630153783986102,
+      "lowerBearingHalfSpan": 0.7,
+      "recessedCrossbars": true
+    },
+    "sources": [
+      "https://cnum.cnam.fr/pgi/redir.php?ident=8XAE353.1&onglet=c",
+      "https://cnum.cnam.fr/pgi/fpage.php?4XAE43.1/79/100/265/5/265="
+    ],
+    "interpretation": "Reach, capacity and screw strokes transcribed from the 1889 technical account. Diagram informs articulated chassis, level hotte, pivot, jib and ties. Jib/tie lengths, gauge, rail inclination and unlabelled dimensions are authored proportions, not surveyed historical dimensions. Prototype is not yet the production rig. Head G rests 1.00 guide-metres above the carriage nut and main screw I is 4.20 m long, with an authored -0.80 m lateral offset: these clearance proportions are not measurements from the plate. The unloaded climb parks the jib inward at 5.5 m reach. Lowering G clears the working jib from G/I; it does not authorize unrestricted slew through the guide girders. Moving chassis is offset 0.95 m toward the front flange; inclined bronze skates supply the explicit guide contact."
+  },
+  "roles": [
+    {
+      "role": "root",
+      "parent": null,
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "guides",
+      "parent": "root",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "carriage",
+      "parent": "root",
+      "position": [
+        0,
+        0,
+        -0.95
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "haul-nut",
+      "parent": "carriage",
+      "position": [
+        -0.8,
+        0,
+        0
+      ],
+      "rotationX": 0.6610678930192397
+    },
+    {
+      "role": "rail-skates",
+      "parent": "carriage",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "rotor",
+      "parent": "carriage",
+      "position": [
+        0,
+        0.3,
+        -1.8
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "jib",
+      "parent": "rotor",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "hoist-drum",
+      "parent": "jib",
+      "position": [
+        0,
+        0.65,
+        -0.4
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "slider",
+      "parent": "rotor",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "tie-left",
+      "parent": "rotor",
+      "position": [
+        -0.26,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "tie-right",
+      "parent": "rotor",
+      "position": [
+        0.26,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "head-anchor",
+      "parent": "root",
+      "position": [
+        0,
+        0.7893370379638585,
+        -0.3360398705954577
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "main-screw",
+      "parent": "head-anchor",
+      "position": [
+        -0.8,
+        0,
+        0
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "safety-base",
+      "parent": "root",
+      "position": [
+        0,
+        -3.552016670837363,
+        -3.7128205823204405
+      ],
+      "rotationX": 0
+    },
+    {
+      "role": "safety-heads",
+      "parent": "root",
+      "position": [
+        0,
+        -3.157348151855434,
+        -3.405840517618169
+      ],
+      "rotationX": 0
+    }
+  ],
+  "primitives": [
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        -1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:0"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -1.4,
+        -3.354682411346398,
+        -2.6093305499693047
+      ],
+      "b": [
+        -1.4,
+        -2.9600138923644694,
+        -2.3023504852670333
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:1"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        -1.52,
+        -3.157348151855434,
+        -2.655840517618169
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:2"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        -1.2799999999999998,
+        -3.157348151855434,
+        -2.655840517618169
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:3"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -1.4,
+        -1.7760083354186815,
+        -1.3814102911602202
+      ],
+      "b": [
+        -1.4,
+        -1.3813398164367523,
+        -1.0744302264579488
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:4"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        -1.52,
+        -1.578674075927717,
+        -1.4279202588090845
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:5"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        -1.2799999999999998,
+        -1.578674075927717,
+        -1.4279202588090845
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:6"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -1.4,
+        -0.19733425949096461,
+        -0.15349003235113556
+      ],
+      "b": [
+        -1.4,
+        0.19733425949096461,
+        0.15349003235113556
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:7"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        -1.52,
+        0.0,
+        -0.2
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:8"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        -1.2799999999999998,
+        0.0,
+        -0.2
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:9"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        -1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.105,
+      "role": "carriage",
+      "id": "carriage:10"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        0.0,
+        0.0
+      ],
+      "b": [
+        -1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.09,
+      "role": "carriage",
+      "id": "carriage:11"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        -1.578674075927717,
+        -1.2279202588090845
+      ],
+      "b": [
+        -1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:12"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        0,
+        -1.8
+      ],
+      "b": [
+        -0.7,
+        -4.2,
+        -1.8
+      ],
+      "halfWidth": 0.07,
+      "role": "carriage",
+      "id": "carriage:13"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        -0.7,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "halfWidth": 0.08,
+      "role": "carriage",
+      "id": "carriage:14"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.7,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        -0.7,
+        -4.2,
+        -1.8
+      ],
+      "halfWidth": 0.08,
+      "role": "carriage",
+      "id": "carriage:15"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.7,
+        -4.2,
+        -1.8
+      ],
+      "b": [
+        1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:16"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:17"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        1.4,
+        -3.354682411346398,
+        -2.6093305499693047
+      ],
+      "b": [
+        1.4,
+        -2.9600138923644694,
+        -2.3023504852670333
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:18"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        1.2799999999999998,
+        -3.157348151855434,
+        -2.655840517618169
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:19"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        1.52,
+        -3.157348151855434,
+        -2.655840517618169
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:20"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        1.4,
+        -1.7760083354186815,
+        -1.3814102911602202
+      ],
+      "b": [
+        1.4,
+        -1.3813398164367523,
+        -1.0744302264579488
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:21"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        1.2799999999999998,
+        -1.578674075927717,
+        -1.4279202588090845
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:22"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        1.52,
+        -1.578674075927717,
+        -1.4279202588090845
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:23"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        1.4,
+        -0.19733425949096461,
+        -0.15349003235113556
+      ],
+      "b": [
+        1.4,
+        0.19733425949096461,
+        0.15349003235113556
+      ],
+      "halfWidth": 0.14,
+      "role": "carriage",
+      "id": "carriage:24"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        1.2799999999999998,
+        0.0,
+        -0.2
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:25"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        1.52,
+        0.0,
+        -0.2
+      ],
+      "radius": 0.045,
+      "length": 0.08,
+      "axis": "y",
+      "sides": 6,
+      "role": "carriage",
+      "id": "carriage:26"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.105,
+      "role": "carriage",
+      "id": "carriage:27"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        0.0,
+        0.0
+      ],
+      "b": [
+        1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.09,
+      "role": "carriage",
+      "id": "carriage:28"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        -1.578674075927717,
+        -1.2279202588090845
+      ],
+      "b": [
+        1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:29"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        0,
+        -1.8
+      ],
+      "b": [
+        0.7,
+        -4.2,
+        -1.8
+      ],
+      "halfWidth": 0.07,
+      "role": "carriage",
+      "id": "carriage:30"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        0.7,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "halfWidth": 0.08,
+      "role": "carriage",
+      "id": "carriage:31"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.7,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        0.7,
+        -4.2,
+        -1.8
+      ],
+      "halfWidth": 0.08,
+      "role": "carriage",
+      "id": "carriage:32"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.7,
+        -4.2,
+        -1.8
+      ],
+      "b": [
+        -1.4,
+        0,
+        -1.8
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:33"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.1,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "b": [
+        1.1,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "halfWidth": 0.12,
+      "role": "carriage",
+      "id": "carriage:34"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.1,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "b": [
+        -1.4,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:35"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.1,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "b": [
+        1.4,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:36"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.7,
+        -4.2,
+        -1.8
+      ],
+      "b": [
+        0.7,
+        -4.2,
+        -1.8
+      ],
+      "halfWidth": 0.12,
+      "role": "carriage",
+      "id": "carriage:37"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -2.325,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:38"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -2.015,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:39"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -1.705,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:40"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -1.3950000000000002,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:41"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -1.0850000000000002,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:42"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.7750000000000001,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:43"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.4650000000000003,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:44"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.15500000000000025,
+        0.11,
+        -3.2
+      ],
+      "size": [
+        0.295,
+        0.18,
+        1.6
+      ],
+      "role": "carriage",
+      "id": "carriage:45"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.15500000000000025,
+        0.11,
+        -1.05
+      ],
+      "size": [
+        0.295,
+        0.18,
+        0.3
+      ],
+      "role": "carriage",
+      "id": "carriage:46"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.1549999999999998,
+        0.11,
+        -3.2
+      ],
+      "size": [
+        0.295,
+        0.18,
+        1.6
+      ],
+      "role": "carriage",
+      "id": "carriage:47"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.1549999999999998,
+        0.11,
+        -1.05
+      ],
+      "size": [
+        0.295,
+        0.18,
+        0.3
+      ],
+      "role": "carriage",
+      "id": "carriage:48"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.46499999999999986,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:49"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.7749999999999999,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:50"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        1.085,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:51"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        1.3949999999999996,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:52"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        1.705,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:53"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        2.0149999999999997,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:54"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        2.325,
+        0.11,
+        -2.45
+      ],
+      "size": [
+        0.295,
+        0.18,
+        3.1
+      ],
+      "role": "carriage",
+      "id": "carriage:55"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        -0.1,
+        -4
+      ],
+      "b": [
+        -2.5,
+        -0.1,
+        -0.9
+      ],
+      "halfWidth": 0.1,
+      "role": "carriage",
+      "id": "carriage:56"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.2,
+        -4
+      ],
+      "b": [
+        -2.5,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:57"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.2,
+        -2.65
+      ],
+      "b": [
+        -2.5,
+        1.25,
+        -2.65
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:58"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.2,
+        -1.3
+      ],
+      "b": [
+        -2.5,
+        1.25,
+        -1.3
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:59"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.2,
+        -0.9
+      ],
+      "b": [
+        -2.5,
+        1.25,
+        -0.9
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:60"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.7,
+        -4
+      ],
+      "b": [
+        -2.5,
+        0.7,
+        -0.9
+      ],
+      "halfWidth": 0.027,
+      "role": "carriage",
+      "id": "carriage:61"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        1.25,
+        -4
+      ],
+      "b": [
+        -2.5,
+        1.25,
+        -0.9
+      ],
+      "halfWidth": 0.027,
+      "role": "carriage",
+      "id": "carriage:62"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        -0.1,
+        -4
+      ],
+      "b": [
+        2.5,
+        -0.1,
+        -0.9
+      ],
+      "halfWidth": 0.1,
+      "role": "carriage",
+      "id": "carriage:63"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        0.2,
+        -4
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:64"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        0.2,
+        -2.65
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -2.65
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:65"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        0.2,
+        -1.3
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -1.3
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:66"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        0.2,
+        -0.9
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -0.9
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:67"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        0.7,
+        -4
+      ],
+      "b": [
+        2.5,
+        0.7,
+        -0.9
+      ],
+      "halfWidth": 0.027,
+      "role": "carriage",
+      "id": "carriage:68"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        1.25,
+        -4
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -0.9
+      ],
+      "halfWidth": 0.027,
+      "role": "carriage",
+      "id": "carriage:69"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        -0.1,
+        -4
+      ],
+      "b": [
+        2.5,
+        -0.1,
+        -4
+      ],
+      "halfWidth": 0.1,
+      "role": "carriage",
+      "id": "carriage:70"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.7,
+        -4
+      ],
+      "b": [
+        2.5,
+        0.7,
+        -4
+      ],
+      "halfWidth": 0.027,
+      "role": "carriage",
+      "id": "carriage:71"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        1.25,
+        -4
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.027,
+      "role": "carriage",
+      "id": "carriage:72"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        0.2,
+        -4
+      ],
+      "b": [
+        -2.5,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:73"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.25,
+        0.2,
+        -4
+      ],
+      "b": [
+        -1.25,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:74"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.2,
+        -4
+      ],
+      "b": [
+        0,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:75"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.25,
+        0.2,
+        -4
+      ],
+      "b": [
+        1.25,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:76"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.5,
+        0.2,
+        -4
+      ],
+      "b": [
+        2.5,
+        1.25,
+        -4
+      ],
+      "halfWidth": 0.025,
+      "role": "carriage",
+      "id": "carriage:77"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -2.5,
+        -0.1,
+        -0.9
+      ],
+      "b": [
+        2.5,
+        -0.1,
+        -0.9
+      ],
+      "halfWidth": 0.1,
+      "role": "carriage",
+      "id": "carriage:78"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        -4.2,
+        -1.8
+      ],
+      "radius": 0.3,
+      "length": 0.25,
+      "axis": "y",
+      "sides": 16,
+      "role": "carriage",
+      "id": "carriage:79"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.085,
+      "role": "carriage",
+      "id": "carriage:80"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.085,
+      "role": "carriage",
+      "id": "carriage:81"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.53,
+        0,
+        0.0
+      ],
+      "b": [
+        -0.5505525262219526,
+        0,
+        0.10332452673857424
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:82"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.53,
+        0,
+        0.0
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:83"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.5505525262219526,
+        0,
+        0.10332452673857424
+      ],
+      "b": [
+        -0.6090811690796322,
+        0,
+        0.19091883092036782
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:84"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.6090811690796322,
+        0,
+        0.19091883092036782
+      ],
+      "b": [
+        -0.6966754732614258,
+        0,
+        0.24944747377804743
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:85"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.6090811690796322,
+        0,
+        0.19091883092036782
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:86"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.6966754732614258,
+        0,
+        0.24944747377804743
+      ],
+      "b": [
+        -0.8,
+        0,
+        0.27
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:87"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0.27
+      ],
+      "b": [
+        -0.9033245267385743,
+        0,
+        0.24944747377804743
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:88"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.8,
+        0,
+        0.27
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:89"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.9033245267385743,
+        0,
+        0.24944747377804743
+      ],
+      "b": [
+        -0.9909188309203678,
+        0,
+        0.19091883092036785
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:90"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.9909188309203678,
+        0,
+        0.19091883092036785
+      ],
+      "b": [
+        -1.0494474737780475,
+        0,
+        0.10332452673857427
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:91"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.9909188309203678,
+        0,
+        0.19091883092036785
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:92"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.0494474737780475,
+        0,
+        0.10332452673857427
+      ],
+      "b": [
+        -1.07,
+        0,
+        3.306546357697854e-17
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:93"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.07,
+        0,
+        3.306546357697854e-17
+      ],
+      "b": [
+        -1.0494474737780475,
+        0,
+        -0.10332452673857422
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:94"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -1.07,
+        0,
+        3.306546357697854e-17
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:95"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.0494474737780475,
+        0,
+        -0.10332452673857422
+      ],
+      "b": [
+        -0.9909188309203679,
+        0,
+        -0.19091883092036782
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:96"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.9909188309203679,
+        0,
+        -0.19091883092036782
+      ],
+      "b": [
+        -0.9033245267385744,
+        0,
+        -0.24944747377804738
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:97"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.9909188309203679,
+        0,
+        -0.19091883092036782
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:98"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.9033245267385744,
+        0,
+        -0.24944747377804738
+      ],
+      "b": [
+        -0.8,
+        0,
+        -0.27
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:99"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        -0.27
+      ],
+      "b": [
+        -0.6966754732614258,
+        0,
+        -0.2494474737780474
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:100"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.8,
+        0,
+        -0.27
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:101"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.6966754732614258,
+        0,
+        -0.2494474737780474
+      ],
+      "b": [
+        -0.6090811690796323,
+        0,
+        -0.19091883092036788
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:102"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.6090811690796323,
+        0,
+        -0.19091883092036788
+      ],
+      "b": [
+        -0.5505525262219526,
+        0,
+        -0.10332452673857441
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:103"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.8,
+        0,
+        0
+      ],
+      "b": [
+        -0.6090811690796323,
+        0,
+        -0.19091883092036788
+      ],
+      "halfWidth": 0.035750000000000004,
+      "role": "carriage",
+      "id": "carriage:104"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.5505525262219526,
+        0,
+        -0.10332452673857441
+      ],
+      "b": [
+        -0.53,
+        0,
+        -6.613092715395707e-17
+      ],
+      "halfWidth": 0.055,
+      "role": "carriage",
+      "id": "carriage:105"
+    },
+    {
+      "kind": "cylinder",
+      "material": "iron",
+      "center": [
+        -0.8,
+        0,
+        0
+      ],
+      "radius": 0.048600000000000004,
+      "length": 0.16,
+      "axis": "y",
+      "sides": 12,
+      "role": "carriage",
+      "id": "carriage:106"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.17,
+      "length": 0.32,
+      "axis": "y",
+      "sides": 16,
+      "role": "haul-nut",
+      "id": "haul-nut:107"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.48,
+        0.25,
+        0.0
+      ],
+      "b": [
+        0.4565071278216737,
+        0.25,
+        0.14832815729997476
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:108"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        0.48,
+        0.25,
+        0.0
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:109"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.4565071278216737,
+        0.25,
+        0.14832815729997476
+      ],
+      "b": [
+        0.3883281572999748,
+        0.25,
+        0.2821369211003871
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:110"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.3883281572999748,
+        0.25,
+        0.2821369211003871
+      ],
+      "b": [
+        0.2821369211003871,
+        0.25,
+        0.3883281572999748
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:111"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        0.3883281572999748,
+        0.25,
+        0.2821369211003871
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:112"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.2821369211003871,
+        0.25,
+        0.3883281572999748
+      ],
+      "b": [
+        0.14832815729997478,
+        0.25,
+        0.4565071278216737
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:113"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.14832815729997478,
+        0.25,
+        0.4565071278216737
+      ],
+      "b": [
+        2.9391523179536474e-17,
+        0.25,
+        0.48
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:114"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        0.14832815729997478,
+        0.25,
+        0.4565071278216737
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:115"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        2.9391523179536474e-17,
+        0.25,
+        0.48
+      ],
+      "b": [
+        -0.14832815729997473,
+        0.25,
+        0.45650712782167374
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:116"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.14832815729997473,
+        0.25,
+        0.45650712782167374
+      ],
+      "b": [
+        -0.282136921100387,
+        0.25,
+        0.3883281572999748
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:117"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        -0.14832815729997473,
+        0.25,
+        0.45650712782167374
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:118"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.282136921100387,
+        0.25,
+        0.3883281572999748
+      ],
+      "b": [
+        -0.3883281572999747,
+        0.25,
+        0.28213692110038713
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:119"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.3883281572999747,
+        0.25,
+        0.28213692110038713
+      ],
+      "b": [
+        -0.4565071278216737,
+        0.25,
+        0.1483281572999748
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:120"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        -0.3883281572999747,
+        0.25,
+        0.28213692110038713
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:121"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.4565071278216737,
+        0.25,
+        0.1483281572999748
+      ],
+      "b": [
+        -0.48,
+        0.25,
+        5.878304635907295e-17
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:122"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.48,
+        0.25,
+        5.878304635907295e-17
+      ],
+      "b": [
+        -0.4565071278216738,
+        0.25,
+        -0.1483281572999745
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:123"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        -0.48,
+        0.25,
+        5.878304635907295e-17
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:124"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.4565071278216738,
+        0.25,
+        -0.1483281572999745
+      ],
+      "b": [
+        -0.3883281572999748,
+        0.25,
+        -0.282136921100387
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:125"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.3883281572999748,
+        0.25,
+        -0.282136921100387
+      ],
+      "b": [
+        -0.28213692110038713,
+        0.25,
+        -0.3883281572999747
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:126"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        -0.3883281572999748,
+        0.25,
+        -0.282136921100387
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:127"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28213692110038713,
+        0.25,
+        -0.3883281572999747
+      ],
+      "b": [
+        -0.1483281572999748,
+        0.25,
+        -0.4565071278216737
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:128"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.1483281572999748,
+        0.25,
+        -0.4565071278216737
+      ],
+      "b": [
+        -8.817456953860942e-17,
+        0.25,
+        -0.48
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:129"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        -0.1483281572999748,
+        0.25,
+        -0.4565071278216737
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:130"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -8.817456953860942e-17,
+        0.25,
+        -0.48
+      ],
+      "b": [
+        0.14832815729997467,
+        0.25,
+        -0.45650712782167374
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:131"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.14832815729997467,
+        0.25,
+        -0.45650712782167374
+      ],
+      "b": [
+        0.28213692110038696,
+        0.25,
+        -0.38832815729997483
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:132"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        0.14832815729997467,
+        0.25,
+        -0.45650712782167374
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:133"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.28213692110038696,
+        0.25,
+        -0.38832815729997483
+      ],
+      "b": [
+        0.3883281572999747,
+        0.25,
+        -0.2821369211003872
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:134"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.3883281572999747,
+        0.25,
+        -0.2821369211003872
+      ],
+      "b": [
+        0.4565071278216737,
+        0.25,
+        -0.14832815729997487
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:135"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0.25,
+        0
+      ],
+      "b": [
+        0.3883281572999747,
+        0.25,
+        -0.2821369211003872
+      ],
+      "halfWidth": 0.01755,
+      "role": "haul-nut",
+      "id": "haul-nut:136"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.4565071278216737,
+        0.25,
+        -0.14832815729997487
+      ],
+      "b": [
+        0.48,
+        0.25,
+        -1.175660927181459e-16
+      ],
+      "halfWidth": 0.027,
+      "role": "haul-nut",
+      "id": "haul-nut:137"
+    },
+    {
+      "kind": "cylinder",
+      "material": "iron",
+      "center": [
+        0,
+        0.25,
+        0
+      ],
+      "radius": 0.08639999999999999,
+      "length": 0.16,
+      "axis": "y",
+      "sides": 12,
+      "role": "haul-nut",
+      "id": "haul-nut:138"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -1.4,
+        -3.141561411096157,
+        -2.3272597771902173
+      ],
+      "b": [
+        -1.4,
+        -2.6995326698363957,
+        -1.9834421047236734
+      ],
+      "halfWidth": 0.055,
+      "role": "rail-skates",
+      "id": "rail-skates:139"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -1.4,
+        -1.7996884465575975,
+        -1.2835275572024953
+      ],
+      "b": [
+        -1.4,
+        -1.3576597052978365,
+        -0.9397098847359515
+      ],
+      "halfWidth": 0.055,
+      "role": "rail-skates",
+      "id": "rail-skates:140"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -1.4,
+        -0.22101437062988039,
+        -0.05560729839341083
+      ],
+      "b": [
+        -1.4,
+        0.22101437062988039,
+        0.2882103740731329
+      ],
+      "halfWidth": 0.055,
+      "role": "rail-skates",
+      "id": "rail-skates:141"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        1.4,
+        -3.141561411096157,
+        -2.3272597771902173
+      ],
+      "b": [
+        1.4,
+        -2.6995326698363957,
+        -1.9834421047236734
+      ],
+      "halfWidth": 0.055,
+      "role": "rail-skates",
+      "id": "rail-skates:142"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        1.4,
+        -1.7996884465575975,
+        -1.2835275572024953
+      ],
+      "b": [
+        1.4,
+        -1.3576597052978365,
+        -0.9397098847359515
+      ],
+      "halfWidth": 0.055,
+      "role": "rail-skates",
+      "id": "rail-skates:143"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        1.4,
+        -0.22101437062988039,
+        -0.05560729839341083
+      ],
+      "b": [
+        1.4,
+        0.22101437062988039,
+        0.2882103740731329
+      ],
+      "halfWidth": 0.055,
+      "role": "rail-skates",
+      "id": "rail-skates:144"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.18,
+        -4.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        4.5,
+        -0.18
+      ],
+      "halfWidth": 0.035,
+      "role": "rotor",
+      "id": "rotor:145"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.18,
+        -4.5,
+        0.18
+      ],
+      "b": [
+        -0.18,
+        4.5,
+        0.18
+      ],
+      "halfWidth": 0.035,
+      "role": "rotor",
+      "id": "rotor:146"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.18,
+        -4.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        4.5,
+        -0.18
+      ],
+      "halfWidth": 0.035,
+      "role": "rotor",
+      "id": "rotor:147"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.18,
+        -4.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        4.5,
+        0.18
+      ],
+      "halfWidth": 0.035,
+      "role": "rotor",
+      "id": "rotor:148"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -4.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -4.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:149"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -4.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -4.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:150"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -4.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -4.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:151"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -4.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -4.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:152"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -4.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -4.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:153"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -4.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -4.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:154"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -4.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -4.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:155"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -4.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -4.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:156"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -3.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -3.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:157"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -3.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -3.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:158"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -3.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -3.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:159"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -3.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -3.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:160"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -3.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -3.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:161"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -3.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -3.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:162"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -3.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -3.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:163"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -3.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -3.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:164"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -2.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -2.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:165"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -2.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -2.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:166"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -2.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -2.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:167"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -2.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -2.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:168"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -2.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -2.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:169"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -2.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -2.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:170"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -2.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -2.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:171"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -2.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -2.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:172"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -1.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -1.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:173"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -1.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -1.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:174"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -1.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -1.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:175"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -1.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -1.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:176"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -1.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -1.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:177"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -1.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -1.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:178"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -1.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -1.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:179"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -1.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -1.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:180"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -0.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        -0.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:181"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        -0.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -0.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:182"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -0.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        -0.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:183"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        -0.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        -0.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:184"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        0.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:185"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        0.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:186"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        0.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:187"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        0.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        0.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:188"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        0.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        0.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:189"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        0.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        0.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:190"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        0.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        0.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:191"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        0.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        0.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:192"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        1.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        1.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:193"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        1.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        1.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:194"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        1.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        1.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:195"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        1.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        1.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:196"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        1.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        1.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:197"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        1.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        1.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:198"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        1.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        1.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:199"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        1.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        1.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:200"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        2.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        2.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:201"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        2.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        2.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:202"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        2.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        2.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:203"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        2.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        2.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:204"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        2.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        2.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:205"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        2.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        2.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:206"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        2.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        2.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:207"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        2.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        2.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:208"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        3.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        3.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:209"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        3.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        3.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:210"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        3.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        3.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:211"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        3.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        3.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:212"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        3.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        3.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:213"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        3.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        3.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:214"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        3.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        3.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:215"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        3.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        3.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:216"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        4.0,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        4.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:217"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        4.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        4.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:218"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        4.0,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        4.0,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:219"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        4.0,
+        0.18
+      ],
+      "b": [
+        0.18,
+        4.0,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:220"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        4.5,
+        -0.18
+      ],
+      "b": [
+        -0.18,
+        4.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:221"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        0.18,
+        4.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        4.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:222"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        4.5,
+        -0.18
+      ],
+      "b": [
+        0.18,
+        4.5,
+        -0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:223"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.18,
+        4.5,
+        0.18
+      ],
+      "b": [
+        0.18,
+        4.5,
+        0.18
+      ],
+      "halfWidth": 0.03,
+      "role": "rotor",
+      "id": "rotor:224"
+    },
+    {
+      "kind": "cylinder",
+      "material": "iron",
+      "center": [
+        0,
+        -0.1,
+        0
+      ],
+      "radius": 0.46,
+      "length": 0.2,
+      "axis": "y",
+      "sides": 24,
+      "role": "rotor",
+      "id": "rotor:225"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.5,
+        -0.21,
+        0.0
+      ],
+      "b": [
+        0.48296291314453416,
+        -0.21,
+        0.12940952255126037
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:226"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        0.5,
+        -0.21,
+        0.0
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:227"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.48296291314453416,
+        -0.21,
+        0.12940952255126037
+      ],
+      "b": [
+        0.43301270189221935,
+        -0.21,
+        0.24999999999999997
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:228"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.43301270189221935,
+        -0.21,
+        0.24999999999999997
+      ],
+      "b": [
+        0.3535533905932738,
+        -0.21,
+        0.35355339059327373
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:229"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        0.43301270189221935,
+        -0.21,
+        0.24999999999999997
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:230"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.3535533905932738,
+        -0.21,
+        0.35355339059327373
+      ],
+      "b": [
+        0.25000000000000006,
+        -0.21,
+        0.4330127018922193
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:231"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.25000000000000006,
+        -0.21,
+        0.4330127018922193
+      ],
+      "b": [
+        0.12940952255126037,
+        -0.21,
+        0.48296291314453416
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:232"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        0.25000000000000006,
+        -0.21,
+        0.4330127018922193
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:233"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.12940952255126037,
+        -0.21,
+        0.48296291314453416
+      ],
+      "b": [
+        3.061616997868383e-17,
+        -0.21,
+        0.5
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:234"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        3.061616997868383e-17,
+        -0.21,
+        0.5
+      ],
+      "b": [
+        -0.12940952255126031,
+        -0.21,
+        0.48296291314453416
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:235"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        3.061616997868383e-17,
+        -0.21,
+        0.5
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:236"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.12940952255126031,
+        -0.21,
+        0.48296291314453416
+      ],
+      "b": [
+        -0.24999999999999992,
+        -0.21,
+        0.43301270189221935
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:237"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.24999999999999992,
+        -0.21,
+        0.43301270189221935
+      ],
+      "b": [
+        -0.35355339059327373,
+        -0.21,
+        0.3535533905932738
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:238"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        -0.24999999999999992,
+        -0.21,
+        0.43301270189221935
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:239"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.35355339059327373,
+        -0.21,
+        0.3535533905932738
+      ],
+      "b": [
+        -0.43301270189221935,
+        -0.21,
+        0.24999999999999997
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:240"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.43301270189221935,
+        -0.21,
+        0.24999999999999997
+      ],
+      "b": [
+        -0.4829629131445341,
+        -0.21,
+        0.1294095225512605
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:241"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        -0.43301270189221935,
+        -0.21,
+        0.24999999999999997
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:242"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.4829629131445341,
+        -0.21,
+        0.1294095225512605
+      ],
+      "b": [
+        -0.5,
+        -0.21,
+        6.123233995736766e-17
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:243"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.5,
+        -0.21,
+        6.123233995736766e-17
+      ],
+      "b": [
+        -0.48296291314453416,
+        -0.21,
+        -0.1294095225512604
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:244"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        -0.5,
+        -0.21,
+        6.123233995736766e-17
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:245"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.48296291314453416,
+        -0.21,
+        -0.1294095225512604
+      ],
+      "b": [
+        -0.4330127018922194,
+        -0.21,
+        -0.2499999999999999
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:246"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.4330127018922194,
+        -0.21,
+        -0.2499999999999999
+      ],
+      "b": [
+        -0.35355339059327395,
+        -0.21,
+        -0.35355339059327356
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:247"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        -0.4330127018922194,
+        -0.21,
+        -0.2499999999999999
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:248"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.35355339059327395,
+        -0.21,
+        -0.35355339059327356
+      ],
+      "b": [
+        -0.2500000000000002,
+        -0.21,
+        -0.4330127018922192
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:249"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.2500000000000002,
+        -0.21,
+        -0.4330127018922192
+      ],
+      "b": [
+        -0.12940952255126031,
+        -0.21,
+        -0.48296291314453416
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:250"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        -0.2500000000000002,
+        -0.21,
+        -0.4330127018922192
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:251"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -0.12940952255126031,
+        -0.21,
+        -0.48296291314453416
+      ],
+      "b": [
+        -9.184850993605148e-17,
+        -0.21,
+        -0.5
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:252"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -9.184850993605148e-17,
+        -0.21,
+        -0.5
+      ],
+      "b": [
+        0.12940952255126015,
+        -0.21,
+        -0.4829629131445342
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:253"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        -9.184850993605148e-17,
+        -0.21,
+        -0.5
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:254"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.12940952255126015,
+        -0.21,
+        -0.4829629131445342
+      ],
+      "b": [
+        0.25000000000000006,
+        -0.21,
+        -0.4330127018922193
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:255"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.25000000000000006,
+        -0.21,
+        -0.4330127018922193
+      ],
+      "b": [
+        0.3535533905932737,
+        -0.21,
+        -0.35355339059327384
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:256"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        0.25000000000000006,
+        -0.21,
+        -0.4330127018922193
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:257"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.3535533905932737,
+        -0.21,
+        -0.35355339059327384
+      ],
+      "b": [
+        0.4330127018922192,
+        -0.21,
+        -0.2500000000000002
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:258"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.4330127018922192,
+        -0.21,
+        -0.2500000000000002
+      ],
+      "b": [
+        0.48296291314453405,
+        -0.21,
+        -0.12940952255126079
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:259"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        -0.21,
+        0
+      ],
+      "b": [
+        0.4330127018922192,
+        -0.21,
+        -0.2500000000000002
+      ],
+      "halfWidth": 0.029249999999999998,
+      "role": "rotor",
+      "id": "rotor:260"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.48296291314453405,
+        -0.21,
+        -0.12940952255126079
+      ],
+      "b": [
+        0.5,
+        -0.21,
+        -1.2246467991473532e-16
+      ],
+      "halfWidth": 0.045,
+      "role": "rotor",
+      "id": "rotor:261"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        -0.21,
+        0
+      ],
+      "radius": 0.09,
+      "length": 0.16,
+      "axis": "y",
+      "sides": 12,
+      "role": "rotor",
+      "id": "rotor:262"
+    },
+    {
+      "kind": "cylinder",
+      "material": "steel",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.13,
+      "length": 0.9,
+      "axis": "x",
+      "sides": 16,
+      "role": "rotor",
+      "id": "rotor:263"
+    },
+    {
+      "kind": "cylinder",
+      "material": "steel",
+      "center": [
+        -0.28,
+        2.25,
+        0
+      ],
+      "radius": 0.055,
+      "length": 4.5,
+      "axis": "y",
+      "sides": 12,
+      "role": "rotor",
+      "id": "rotor:264"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.0,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:265"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.12,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:266"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.24,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:267"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.36,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:268"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.48,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:269"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.6,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:270"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.72,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:271"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.84,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:272"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        0.96,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:273"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.08,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:274"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.2,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:275"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.3199999999999998,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:276"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.44,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:277"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.56,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:278"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.68,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:279"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.7999999999999998,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:280"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        1.92,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:281"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.04,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:282"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.16,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:283"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.28,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:284"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.4,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:285"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.52,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:286"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.6399999999999997,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:287"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.76,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:288"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        2.88,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:289"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.0,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:290"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.12,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:291"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.2399999999999998,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:292"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.36,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:293"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.48,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:294"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.5999999999999996,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:295"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.7199999999999998,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:296"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.84,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:297"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        3.96,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:298"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        4.08,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:299"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        4.2,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:300"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        4.32,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:301"
+    },
+    {
+      "kind": "cylinder",
+      "material": "edge",
+      "center": [
+        -0.28,
+        4.4399999999999995,
+        0
+      ],
+      "radius": 0.066,
+      "length": 0.025,
+      "axis": "y",
+      "sides": 8,
+      "role": "rotor",
+      "id": "rotor:302"
+    },
+    {
+      "kind": "cylinder",
+      "material": "iron",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.26,
+      "length": 0.7,
+      "axis": "x",
+      "sides": 20,
+      "role": "hoist-drum",
+      "id": "hoist-drum:303"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.43,
+        0.0
+      ],
+      "b": [
+        0.44,
+        0.408954302006916,
+        0.13287730758122737
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:304"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        0.43,
+        0.0
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:305"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.408954302006916,
+        0.13287730758122737
+      ],
+      "b": [
+        0.44,
+        0.3478773075812274,
+        0.25274765848576347
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:306"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.3478773075812274,
+        0.25274765848576347
+      ],
+      "b": [
+        0.44,
+        0.25274765848576347,
+        0.3478773075812274
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:307"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        0.3478773075812274,
+        0.25274765848576347
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:308"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.25274765848576347,
+        0.3478773075812274
+      ],
+      "b": [
+        0.44,
+        0.1328773075812274,
+        0.408954302006916
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:309"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.1328773075812274,
+        0.408954302006916
+      ],
+      "b": [
+        0.44,
+        2.6329906181668094e-17,
+        0.43
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:310"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        0.1328773075812274,
+        0.408954302006916
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:311"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        2.6329906181668094e-17,
+        0.43
+      ],
+      "b": [
+        0.44,
+        -0.13287730758122734,
+        0.40895430200691607
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:312"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.13287730758122734,
+        0.40895430200691607
+      ],
+      "b": [
+        0.44,
+        -0.2527476584857634,
+        0.3478773075812274
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:313"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        -0.13287730758122734,
+        0.40895430200691607
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:314"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.2527476584857634,
+        0.3478773075812274
+      ],
+      "b": [
+        0.44,
+        -0.34787730758122737,
+        0.25274765848576347
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:315"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.34787730758122737,
+        0.25274765848576347
+      ],
+      "b": [
+        0.44,
+        -0.408954302006916,
+        0.13287730758122743
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:316"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        -0.34787730758122737,
+        0.25274765848576347
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:317"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.408954302006916,
+        0.13287730758122743
+      ],
+      "b": [
+        0.44,
+        -0.43,
+        5.265981236333619e-17
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:318"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.43,
+        5.265981236333619e-17
+      ],
+      "b": [
+        0.44,
+        -0.4089543020069161,
+        -0.13287730758122715
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:319"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        -0.43,
+        5.265981236333619e-17
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:320"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.4089543020069161,
+        -0.13287730758122715
+      ],
+      "b": [
+        0.44,
+        -0.3478773075812274,
+        -0.2527476584857634
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:321"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.3478773075812274,
+        -0.2527476584857634
+      ],
+      "b": [
+        0.44,
+        -0.25274765848576347,
+        -0.34787730758122737
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:322"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        -0.3478773075812274,
+        -0.2527476584857634
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:323"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.25274765848576347,
+        -0.34787730758122737
+      ],
+      "b": [
+        0.44,
+        -0.13287730758122746,
+        -0.408954302006916
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:324"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -0.13287730758122746,
+        -0.408954302006916
+      ],
+      "b": [
+        0.44,
+        -7.898971854500428e-17,
+        -0.43
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:325"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        -0.13287730758122746,
+        -0.408954302006916
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:326"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        -7.898971854500428e-17,
+        -0.43
+      ],
+      "b": [
+        0.44,
+        0.13287730758122732,
+        -0.40895430200691607
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:327"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.13287730758122732,
+        -0.40895430200691607
+      ],
+      "b": [
+        0.44,
+        0.25274765848576336,
+        -0.3478773075812274
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:328"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        0.13287730758122732,
+        -0.40895430200691607
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:329"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.25274765848576336,
+        -0.3478773075812274
+      ],
+      "b": [
+        0.44,
+        0.34787730758122737,
+        -0.2527476584857635
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:330"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.34787730758122737,
+        -0.2527476584857635
+      ],
+      "b": [
+        0.44,
+        0.408954302006916,
+        -0.1328773075812275
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:331"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0,
+        0
+      ],
+      "b": [
+        0.44,
+        0.34787730758122737,
+        -0.2527476584857635
+      ],
+      "halfWidth": 0.0195,
+      "role": "hoist-drum",
+      "id": "hoist-drum:332"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0.44,
+        0.408954302006916,
+        -0.1328773075812275
+      ],
+      "b": [
+        0.44,
+        0.43,
+        -1.0531962472667238e-16
+      ],
+      "halfWidth": 0.03,
+      "role": "hoist-drum",
+      "id": "hoist-drum:333"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0.44,
+        0,
+        0
+      ],
+      "radius": 0.0774,
+      "length": 0.16,
+      "axis": "x",
+      "sides": 12,
+      "role": "hoist-drum",
+      "id": "hoist-drum:334"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        0,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        13.416407864998739,
+        -0.18
+      ],
+      "halfWidth": 0.033,
+      "role": "jib",
+      "id": "jib:335"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        0,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        13.416407864998739,
+        0.18
+      ],
+      "halfWidth": 0.033,
+      "role": "jib",
+      "id": "jib:336"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        13.416407864998739,
+        -0.18
+      ],
+      "halfWidth": 0.033,
+      "role": "jib",
+      "id": "jib:337"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0,
+        0.18
+      ],
+      "b": [
+        0.26,
+        13.416407864998739,
+        0.18
+      ],
+      "halfWidth": 0.033,
+      "role": "jib",
+      "id": "jib:338"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        0.6708203932499369,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:339"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        0.6708203932499369,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:340"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        0.0,
+        0.18
+      ],
+      "b": [
+        0.26,
+        0.6708203932499369,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:341"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0.0,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        0.6708203932499369,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:342"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        0.6708203932499369,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:343"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        0.6708203932499369,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:344"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        0.0,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        0.0,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:345"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        0.6708203932499369,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        1.3416407864998738,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:346"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0.6708203932499369,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        1.3416407864998738,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:347"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        0.6708203932499369,
+        0.18
+      ],
+      "b": [
+        0.26,
+        1.3416407864998738,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:348"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0.6708203932499369,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        1.3416407864998738,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:349"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        0.6708203932499369,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        1.3416407864998738,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:350"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        0.6708203932499369,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        1.3416407864998738,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:351"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        0.6708203932499369,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        0.6708203932499369,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:352"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        1.3416407864998738,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        2.0124611797498106,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:353"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        1.3416407864998738,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        2.0124611797498106,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:354"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        1.3416407864998738,
+        0.18
+      ],
+      "b": [
+        0.26,
+        2.0124611797498106,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:355"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        1.3416407864998738,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        2.0124611797498106,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:356"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        1.3416407864998738,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        2.0124611797498106,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:357"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        1.3416407864998738,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        2.0124611797498106,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:358"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        1.3416407864998738,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        1.3416407864998738,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:359"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        2.0124611797498106,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        2.6832815729997477,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:360"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        2.0124611797498106,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        2.6832815729997477,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:361"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        2.0124611797498106,
+        0.18
+      ],
+      "b": [
+        0.26,
+        2.6832815729997477,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:362"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        2.0124611797498106,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        2.6832815729997477,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:363"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        2.0124611797498106,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        2.6832815729997477,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:364"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        2.0124611797498106,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        2.6832815729997477,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:365"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        2.0124611797498106,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        2.0124611797498106,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:366"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        2.6832815729997477,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        3.354101966249685,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:367"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        2.6832815729997477,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        3.354101966249685,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:368"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        2.6832815729997477,
+        0.18
+      ],
+      "b": [
+        0.26,
+        3.354101966249685,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:369"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        2.6832815729997477,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        3.354101966249685,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:370"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        2.6832815729997477,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        3.354101966249685,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:371"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        2.6832815729997477,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        3.354101966249685,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:372"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        2.6832815729997477,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        2.6832815729997477,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:373"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        3.354101966249685,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        4.024922359499621,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:374"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        3.354101966249685,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        4.024922359499621,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:375"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        3.354101966249685,
+        0.18
+      ],
+      "b": [
+        0.26,
+        4.024922359499621,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:376"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        3.354101966249685,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        4.024922359499621,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:377"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        3.354101966249685,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        4.024922359499621,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:378"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        3.354101966249685,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        4.024922359499621,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:379"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        3.354101966249685,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        3.354101966249685,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:380"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        4.024922359499621,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        4.695742752749558,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:381"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        4.024922359499621,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        4.695742752749558,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:382"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        4.024922359499621,
+        0.18
+      ],
+      "b": [
+        0.26,
+        4.695742752749558,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:383"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        4.024922359499621,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        4.695742752749558,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:384"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        4.024922359499621,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        4.695742752749558,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:385"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        4.024922359499621,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        4.695742752749558,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:386"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        4.024922359499621,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        4.024922359499621,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:387"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        4.695742752749558,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        5.366563145999495,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:388"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        4.695742752749558,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        5.366563145999495,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:389"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        4.695742752749558,
+        0.18
+      ],
+      "b": [
+        0.26,
+        5.366563145999495,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:390"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        4.695742752749558,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        5.366563145999495,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:391"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        4.695742752749558,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        5.366563145999495,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:392"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        4.695742752749558,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        5.366563145999495,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:393"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        4.695742752749558,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        4.695742752749558,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:394"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        5.366563145999495,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        6.037383539249433,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:395"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        5.366563145999495,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        6.037383539249433,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:396"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        5.366563145999495,
+        0.18
+      ],
+      "b": [
+        0.26,
+        6.037383539249433,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:397"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        5.366563145999495,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        6.037383539249433,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:398"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        5.366563145999495,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        6.037383539249433,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:399"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        5.366563145999495,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        6.037383539249433,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:400"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        5.366563145999495,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        5.366563145999495,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:401"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        6.037383539249433,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        6.70820393249937,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:402"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        6.037383539249433,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        6.70820393249937,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:403"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        6.037383539249433,
+        0.18
+      ],
+      "b": [
+        0.26,
+        6.70820393249937,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:404"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        6.037383539249433,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        6.70820393249937,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:405"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        6.037383539249433,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        6.70820393249937,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:406"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        6.037383539249433,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        6.70820393249937,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:407"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        6.037383539249433,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        6.037383539249433,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:408"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        6.70820393249937,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        7.379024325749306,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:409"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        6.70820393249937,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        7.379024325749306,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:410"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        6.70820393249937,
+        0.18
+      ],
+      "b": [
+        0.26,
+        7.379024325749306,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:411"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        6.70820393249937,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        7.379024325749306,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:412"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        6.70820393249937,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        7.379024325749306,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:413"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        6.70820393249937,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        7.379024325749306,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:414"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        6.70820393249937,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        6.70820393249937,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:415"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        7.379024325749306,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        8.049844718999243,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:416"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        7.379024325749306,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        8.049844718999243,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:417"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        7.379024325749306,
+        0.18
+      ],
+      "b": [
+        0.26,
+        8.049844718999243,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:418"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        7.379024325749306,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        8.049844718999243,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:419"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        7.379024325749306,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        8.049844718999243,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:420"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        7.379024325749306,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        8.049844718999243,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:421"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        7.379024325749306,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        7.379024325749306,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:422"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        8.049844718999243,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        8.720665112249181,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:423"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        8.049844718999243,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        8.720665112249181,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:424"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        8.049844718999243,
+        0.18
+      ],
+      "b": [
+        0.26,
+        8.720665112249181,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:425"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        8.049844718999243,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        8.720665112249181,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:426"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        8.049844718999243,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        8.720665112249181,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:427"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        8.049844718999243,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        8.720665112249181,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:428"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        8.049844718999243,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        8.049844718999243,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:429"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        8.720665112249181,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        9.391485505499116,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:430"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        8.720665112249181,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        9.391485505499116,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:431"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        8.720665112249181,
+        0.18
+      ],
+      "b": [
+        0.26,
+        9.391485505499116,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:432"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        8.720665112249181,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        9.391485505499116,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:433"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        8.720665112249181,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        9.391485505499116,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:434"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        8.720665112249181,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        9.391485505499116,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:435"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        8.720665112249181,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        8.720665112249181,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:436"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        9.391485505499116,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        10.062305898749054,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:437"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        9.391485505499116,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        10.062305898749054,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:438"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        9.391485505499116,
+        0.18
+      ],
+      "b": [
+        0.26,
+        10.062305898749054,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:439"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        9.391485505499116,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        10.062305898749054,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:440"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        9.391485505499116,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        10.062305898749054,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:441"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        9.391485505499116,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        10.062305898749054,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:442"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        9.391485505499116,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        9.391485505499116,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:443"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        10.062305898749054,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        10.73312629199899,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:444"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        10.062305898749054,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        10.73312629199899,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:445"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        10.062305898749054,
+        0.18
+      ],
+      "b": [
+        0.26,
+        10.73312629199899,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:446"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        10.062305898749054,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        10.73312629199899,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:447"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        10.062305898749054,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        10.73312629199899,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:448"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        10.062305898749054,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        10.73312629199899,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:449"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        10.062305898749054,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        10.062305898749054,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:450"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        10.73312629199899,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        11.403946685248929,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:451"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        10.73312629199899,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        11.403946685248929,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:452"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        10.73312629199899,
+        0.18
+      ],
+      "b": [
+        0.26,
+        11.403946685248929,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:453"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        10.73312629199899,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        11.403946685248929,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:454"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        10.73312629199899,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        11.403946685248929,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:455"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        10.73312629199899,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        11.403946685248929,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:456"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        10.73312629199899,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        10.73312629199899,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:457"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        11.403946685248929,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        12.074767078498866,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:458"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        11.403946685248929,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        12.074767078498866,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:459"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        11.403946685248929,
+        0.18
+      ],
+      "b": [
+        0.26,
+        12.074767078498866,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:460"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        11.403946685248929,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        12.074767078498866,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:461"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        11.403946685248929,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        12.074767078498866,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:462"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        11.403946685248929,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        12.074767078498866,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:463"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        11.403946685248929,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        11.403946685248929,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:464"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        12.074767078498866,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        12.745587471748802,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:465"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        12.074767078498866,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        12.745587471748802,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:466"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        12.074767078498866,
+        0.18
+      ],
+      "b": [
+        0.26,
+        12.745587471748802,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:467"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        12.074767078498866,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        12.745587471748802,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:468"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        12.074767078498866,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        12.745587471748802,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:469"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        12.074767078498866,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        12.745587471748802,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:470"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        12.074767078498866,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        12.074767078498866,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:471"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        12.745587471748802,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        13.41640786499874,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:472"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        12.745587471748802,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        13.41640786499874,
+        -0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:473"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.26,
+        12.745587471748802,
+        0.18
+      ],
+      "b": [
+        0.26,
+        13.41640786499874,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:474"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        12.745587471748802,
+        0.18
+      ],
+      "b": [
+        -0.26,
+        13.41640786499874,
+        0.18
+      ],
+      "halfWidth": 0.025,
+      "role": "jib",
+      "id": "jib:475"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.26,
+        12.745587471748802,
+        -0.18
+      ],
+      "b": [
+        -0.26,
+        13.41640786499874,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:476"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0.26,
+        12.745587471748802,
+        -0.18
+      ],
+      "b": [
+        0.26,
+        13.41640786499874,
+        0.18
+      ],
+      "halfWidth": 0.023,
+      "role": "jib",
+      "id": "jib:477"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.28,
+        12.745587471748802,
+        -0.18
+      ],
+      "b": [
+        0.28,
+        12.745587471748802,
+        -0.18
+      ],
+      "halfWidth": 0.032,
+      "role": "jib",
+      "id": "jib:478"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.686407864998738,
+        0.0
+      ],
+      "b": [
+        0,
+        13.67319312439843,
+        0.0834345884812358
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:479"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.686407864998738,
+        0.0
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:480"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.67319312439843,
+        0.0834345884812358
+      ],
+      "b": [
+        0,
+        13.634842453479974,
+        0.15870201811896775
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:481"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.634842453479974,
+        0.15870201811896775
+      ],
+      "b": [
+        0,
+        13.575109883117706,
+        0.21843458848123581
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:482"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.634842453479974,
+        0.15870201811896775
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:483"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.575109883117706,
+        0.21843458848123581
+      ],
+      "b": [
+        0,
+        13.499842453479975,
+        0.2567852593996915
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:484"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.499842453479975,
+        0.2567852593996915
+      ],
+      "b": [
+        0,
+        13.416407864998739,
+        0.27
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:485"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.499842453479975,
+        0.2567852593996915
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:486"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0.27
+      ],
+      "b": [
+        0,
+        13.332973276517503,
+        0.2567852593996915
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:487"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.332973276517503,
+        0.2567852593996915
+      ],
+      "b": [
+        0,
+        13.257705846879771,
+        0.21843458848123581
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:488"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.332973276517503,
+        0.2567852593996915
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:489"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.257705846879771,
+        0.21843458848123581
+      ],
+      "b": [
+        0,
+        13.197973276517503,
+        0.15870201811896778
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:490"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.197973276517503,
+        0.15870201811896778
+      ],
+      "b": [
+        0,
+        13.159622605599047,
+        0.08343458848123583
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:491"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.197973276517503,
+        0.15870201811896778
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:492"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.159622605599047,
+        0.08343458848123583
+      ],
+      "b": [
+        0,
+        13.14640786499874,
+        3.306546357697854e-17
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:493"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.14640786499874,
+        3.306546357697854e-17
+      ],
+      "b": [
+        0,
+        13.159622605599047,
+        -0.08343458848123567
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:494"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.14640786499874,
+        3.306546357697854e-17
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:495"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.159622605599047,
+        -0.08343458848123567
+      ],
+      "b": [
+        0,
+        13.197973276517503,
+        -0.15870201811896772
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:496"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.197973276517503,
+        -0.15870201811896772
+      ],
+      "b": [
+        0,
+        13.257705846879771,
+        -0.2184345884812358
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:497"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.197973276517503,
+        -0.15870201811896772
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:498"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.257705846879771,
+        -0.2184345884812358
+      ],
+      "b": [
+        0,
+        13.332973276517503,
+        -0.2567852593996915
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:499"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.332973276517503,
+        -0.2567852593996915
+      ],
+      "b": [
+        0,
+        13.416407864998739,
+        -0.27
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:500"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.332973276517503,
+        -0.2567852593996915
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:501"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        -0.27
+      ],
+      "b": [
+        0,
+        13.499842453479975,
+        -0.2567852593996915
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:502"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.499842453479975,
+        -0.2567852593996915
+      ],
+      "b": [
+        0,
+        13.575109883117706,
+        -0.21843458848123587
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:503"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.499842453479975,
+        -0.2567852593996915
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:504"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.575109883117706,
+        -0.21843458848123587
+      ],
+      "b": [
+        0,
+        13.634842453479974,
+        -0.1587020181189678
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:505"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.634842453479974,
+        -0.1587020181189678
+      ],
+      "b": [
+        0,
+        13.67319312439843,
+        -0.08343458848123587
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:506"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "b": [
+        0,
+        13.634842453479974,
+        -0.1587020181189678
+      ],
+      "halfWidth": 0.022750000000000003,
+      "role": "jib",
+      "id": "jib:507"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        0,
+        13.67319312439843,
+        -0.08343458848123587
+      ],
+      "b": [
+        0,
+        13.686407864998738,
+        -6.613092715395707e-17
+      ],
+      "halfWidth": 0.035,
+      "role": "jib",
+      "id": "jib:508"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "radius": 0.048600000000000004,
+      "length": 0.16,
+      "axis": "x",
+      "sides": 12,
+      "role": "jib",
+      "id": "jib:509"
+    },
+    {
+      "kind": "cylinder",
+      "material": "steel",
+      "center": [
+        0,
+        13.416407864998739,
+        0
+      ],
+      "radius": 0.07,
+      "length": 0.8,
+      "axis": "x",
+      "sides": 12,
+      "role": "jib",
+      "id": "jib:510"
+    },
+    {
+      "kind": "beam",
+      "material": "rope",
+      "a": [
+        0,
+        0.65,
+        -0.4
+      ],
+      "b": [
+        0,
+        13.416407864998739,
+        -0.24
+      ],
+      "halfWidth": 0.018,
+      "role": "jib",
+      "id": "jib:511"
+    },
+    {
+      "kind": "box",
+      "material": "iron",
+      "center": [
+        0,
+        0.18,
+        -0.4
+      ],
+      "size": [
+        1,
+        0.16,
+        0.7
+      ],
+      "role": "jib",
+      "id": "jib:512"
+    },
+    {
+      "kind": "box",
+      "material": "bronze",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.52,
+        0.25,
+        0.53
+      ],
+      "role": "slider",
+      "id": "slider:513"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.32,
+        0.0
+      ],
+      "b": [
+        -0.38,
+        0.2956414504036118,
+        0.12245869835682874
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:514"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        0.32,
+        0.0
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:515"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.2956414504036118,
+        0.12245869835682874
+      ],
+      "b": [
+        -0.38,
+        0.22627416997969524,
+        0.22627416997969518
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:516"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.22627416997969524,
+        0.22627416997969518
+      ],
+      "b": [
+        -0.38,
+        0.12245869835682875,
+        0.2956414504036118
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:517"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        0.22627416997969524,
+        0.22627416997969518
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:518"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.12245869835682875,
+        0.2956414504036118
+      ],
+      "b": [
+        -0.38,
+        1.959434878635765e-17,
+        0.32
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:519"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        1.959434878635765e-17,
+        0.32
+      ],
+      "b": [
+        -0.38,
+        -0.12245869835682871,
+        0.2956414504036118
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:520"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        1.959434878635765e-17,
+        0.32
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:521"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.12245869835682871,
+        0.2956414504036118
+      ],
+      "b": [
+        -0.38,
+        -0.22627416997969518,
+        0.22627416997969524
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:522"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.22627416997969518,
+        0.22627416997969524
+      ],
+      "b": [
+        -0.38,
+        -0.2956414504036118,
+        0.12245869835682877
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:523"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        -0.22627416997969518,
+        0.22627416997969524
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:524"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.2956414504036118,
+        0.12245869835682877
+      ],
+      "b": [
+        -0.38,
+        -0.32,
+        3.91886975727153e-17
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:525"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.32,
+        3.91886975727153e-17
+      ],
+      "b": [
+        -0.38,
+        -0.2956414504036118,
+        -0.1224586983568287
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:526"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        -0.32,
+        3.91886975727153e-17
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:527"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.2956414504036118,
+        -0.1224586983568287
+      ],
+      "b": [
+        -0.38,
+        -0.22627416997969527,
+        -0.22627416997969518
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:528"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.22627416997969527,
+        -0.22627416997969518
+      ],
+      "b": [
+        -0.38,
+        -0.1224586983568289,
+        -0.29564145040361167
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:529"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        -0.22627416997969527,
+        -0.22627416997969518
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:530"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -0.1224586983568289,
+        -0.29564145040361167
+      ],
+      "b": [
+        -0.38,
+        -5.878304635907295e-17,
+        -0.32
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:531"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        -5.878304635907295e-17,
+        -0.32
+      ],
+      "b": [
+        -0.38,
+        0.12245869835682881,
+        -0.2956414504036117
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:532"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        -5.878304635907295e-17,
+        -0.32
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:533"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.12245869835682881,
+        -0.2956414504036117
+      ],
+      "b": [
+        -0.38,
+        0.22627416997969516,
+        -0.22627416997969527
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:534"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.22627416997969516,
+        -0.22627416997969527
+      ],
+      "b": [
+        -0.38,
+        0.29564145040361167,
+        -0.12245869835682893
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:535"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0,
+        0
+      ],
+      "b": [
+        -0.38,
+        0.22627416997969516,
+        -0.22627416997969527
+      ],
+      "halfWidth": 0.015600000000000001,
+      "role": "slider",
+      "id": "slider:536"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -0.38,
+        0.29564145040361167,
+        -0.12245869835682893
+      ],
+      "b": [
+        -0.38,
+        0.32,
+        -7.83773951454306e-17
+      ],
+      "halfWidth": 0.024,
+      "role": "slider",
+      "id": "slider:537"
+    },
+    {
+      "kind": "cylinder",
+      "material": "iron",
+      "center": [
+        -0.38,
+        0,
+        0
+      ],
+      "radius": 0.0576,
+      "length": 0.16,
+      "axis": "x",
+      "sides": 12,
+      "role": "slider",
+      "id": "slider:538"
+    },
+    {
+      "kind": "cylinder",
+      "material": "steel",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.075,
+      "length": 0.85,
+      "axis": "x",
+      "sides": 12,
+      "role": "slider",
+      "id": "slider:539"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0,
+        0
+      ],
+      "b": [
+        0,
+        12.165525060596439,
+        0
+      ],
+      "halfWidth": 0.035,
+      "role": "tie-left",
+      "id": "tie-left:540"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.07,
+      "length": 0.12,
+      "axis": "x",
+      "sides": 12,
+      "role": "tie-left",
+      "id": "tie-left:541"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        12.165525060596439,
+        0
+      ],
+      "radius": 0.07,
+      "length": 0.12,
+      "axis": "x",
+      "sides": 12,
+      "role": "tie-left",
+      "id": "tie-left:542"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        0,
+        0,
+        0
+      ],
+      "b": [
+        0,
+        12.165525060596439,
+        0
+      ],
+      "halfWidth": 0.035,
+      "role": "tie-right",
+      "id": "tie-right:543"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 0.07,
+      "length": 0.12,
+      "axis": "x",
+      "sides": 12,
+      "role": "tie-right",
+      "id": "tie-right:544"
+    },
+    {
+      "kind": "cylinder",
+      "material": "bronze",
+      "center": [
+        0,
+        12.165525060596439,
+        0
+      ],
+      "radius": 0.07,
+      "length": 0.12,
+      "axis": "x",
+      "sides": 12,
+      "role": "tie-right",
+      "id": "tie-right:545"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.1,
+        0.0,
+        0.0
+      ],
+      "b": [
+        1.1,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.13,
+      "role": "head-anchor",
+      "id": "head-anchor:546"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.1,
+        0.0,
+        0.0
+      ],
+      "b": [
+        -1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.055,
+      "role": "head-anchor",
+      "id": "head-anchor:547"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.1,
+        0.0,
+        0.0
+      ],
+      "b": [
+        1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.055,
+      "role": "head-anchor",
+      "id": "head-anchor:548"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -1.4,
+        -0.19733425949096461,
+        -0.15349003235113556
+      ],
+      "b": [
+        -1.4,
+        0.19733425949096461,
+        0.15349003235113556
+      ],
+      "halfWidth": 0.14,
+      "role": "head-anchor",
+      "id": "head-anchor:549"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -1.4,
+        -0.19733425949096461,
+        -0.03718849451127454
+      ],
+      "b": [
+        -1.4,
+        0.19733425949096461,
+        0.2697915701909966
+      ],
+      "halfWidth": 0.055,
+      "role": "head-anchor",
+      "id": "head-anchor:550"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        1.4,
+        -0.19733425949096461,
+        -0.15349003235113556
+      ],
+      "b": [
+        1.4,
+        0.19733425949096461,
+        0.15349003235113556
+      ],
+      "halfWidth": 0.14,
+      "role": "head-anchor",
+      "id": "head-anchor:551"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        1.4,
+        -0.19733425949096461,
+        -0.03718849451127454
+      ],
+      "b": [
+        1.4,
+        0.19733425949096461,
+        0.2697915701909966
+      ],
+      "halfWidth": 0.055,
+      "role": "head-anchor",
+      "id": "head-anchor:552"
+    },
+    {
+      "kind": "beam",
+      "material": "steel",
+      "a": [
+        0,
+        0,
+        0
+      ],
+      "b": [
+        0,
+        -3.315215559448206,
+        -2.5786325434990776
+      ],
+      "halfWidth": 0.06,
+      "role": "main-screw",
+      "id": "main-screw:553"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        0.0,
+        0.0
+      ],
+      "b": [
+        0.085,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:554"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.07893370379638585,
+        -0.06139601294045423
+      ],
+      "b": [
+        0.085,
+        -0.07893370379638585,
+        -0.06139601294045423
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:555"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.1578674075927717,
+        -0.12279202588090846
+      ],
+      "b": [
+        0.085,
+        -0.1578674075927717,
+        -0.12279202588090846
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:556"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.23680111138915758,
+        -0.1841880388213627
+      ],
+      "b": [
+        0.085,
+        -0.23680111138915758,
+        -0.1841880388213627
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:557"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.3157348151855434,
+        -0.2455840517618169
+      ],
+      "b": [
+        0.085,
+        -0.3157348151855434,
+        -0.2455840517618169
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:558"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.39466851898192923,
+        -0.3069800647022711
+      ],
+      "b": [
+        0.085,
+        -0.39466851898192923,
+        -0.3069800647022711
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:559"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.47360222277831515,
+        -0.3683760776427254
+      ],
+      "b": [
+        0.085,
+        -0.47360222277831515,
+        -0.3683760776427254
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:560"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.552535926574701,
+        -0.4297720905831796
+      ],
+      "b": [
+        0.085,
+        -0.552535926574701,
+        -0.4297720905831796
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:561"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.6314696303710868,
+        -0.4911681035236338
+      ],
+      "b": [
+        0.085,
+        -0.6314696303710868,
+        -0.4911681035236338
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:562"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.7104033341674726,
+        -0.5525641164640881
+      ],
+      "b": [
+        0.085,
+        -0.7104033341674726,
+        -0.5525641164640881
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:563"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.7893370379638585,
+        -0.6139601294045423
+      ],
+      "b": [
+        0.085,
+        -0.7893370379638585,
+        -0.6139601294045423
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:564"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.8682707417602443,
+        -0.6753561423449965
+      ],
+      "b": [
+        0.085,
+        -0.8682707417602443,
+        -0.6753561423449965
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:565"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -0.9472044455566303,
+        -0.7367521552854508
+      ],
+      "b": [
+        0.085,
+        -0.9472044455566303,
+        -0.7367521552854508
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:566"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.026138149353016,
+        -0.798148168225905
+      ],
+      "b": [
+        0.085,
+        -1.026138149353016,
+        -0.798148168225905
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:567"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.105071853149402,
+        -0.8595441811663592
+      ],
+      "b": [
+        0.085,
+        -1.105071853149402,
+        -0.8595441811663592
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:568"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.1840055569457877,
+        -0.9209401941068134
+      ],
+      "b": [
+        0.085,
+        -1.1840055569457877,
+        -0.9209401941068134
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:569"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.2629392607421737,
+        -0.9823362070472677
+      ],
+      "b": [
+        0.085,
+        -1.2629392607421737,
+        -0.9823362070472677
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:570"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.3418729645385594,
+        -1.043732219987722
+      ],
+      "b": [
+        0.085,
+        -1.3418729645385594,
+        -1.043732219987722
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:571"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.4208066683349452,
+        -1.1051282329281762
+      ],
+      "b": [
+        0.085,
+        -1.4208066683349452,
+        -1.1051282329281762
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:572"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.4997403721313312,
+        -1.1665242458686305
+      ],
+      "b": [
+        0.085,
+        -1.4997403721313312,
+        -1.1665242458686305
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:573"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.578674075927717,
+        -1.2279202588090845
+      ],
+      "b": [
+        0.085,
+        -1.578674075927717,
+        -1.2279202588090845
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:574"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.657607779724103,
+        -1.2893162717495388
+      ],
+      "b": [
+        0.085,
+        -1.657607779724103,
+        -1.2893162717495388
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:575"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.7365414835204886,
+        -1.350712284689993
+      ],
+      "b": [
+        0.085,
+        -1.7365414835204886,
+        -1.350712284689993
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:576"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.8154751873168746,
+        -1.4121082976304473
+      ],
+      "b": [
+        0.085,
+        -1.8154751873168746,
+        -1.4121082976304473
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:577"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.8944088911132606,
+        -1.4735043105709016
+      ],
+      "b": [
+        0.085,
+        -1.8944088911132606,
+        -1.4735043105709016
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:578"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -1.9733425949096461,
+        -1.5349003235113556
+      ],
+      "b": [
+        0.085,
+        -1.9733425949096461,
+        -1.5349003235113556
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:579"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.052276298706032,
+        -1.59629633645181
+      ],
+      "b": [
+        0.085,
+        -2.052276298706032,
+        -1.59629633645181
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:580"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.131210002502418,
+        -1.6576923493922642
+      ],
+      "b": [
+        0.085,
+        -2.131210002502418,
+        -1.6576923493922642
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:581"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.210143706298804,
+        -1.7190883623327184
+      ],
+      "b": [
+        0.085,
+        -2.210143706298804,
+        -1.7190883623327184
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:582"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.2890774100951896,
+        -1.7804843752731727
+      ],
+      "b": [
+        0.085,
+        -2.2890774100951896,
+        -1.7804843752731727
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:583"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.3680111138915754,
+        -1.8418803882136268
+      ],
+      "b": [
+        0.085,
+        -2.3680111138915754,
+        -1.8418803882136268
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:584"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.446944817687961,
+        -1.903276401154081
+      ],
+      "b": [
+        0.085,
+        -2.446944817687961,
+        -1.903276401154081
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:585"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.5258785214843473,
+        -1.9646724140945353
+      ],
+      "b": [
+        0.085,
+        -2.5258785214843473,
+        -1.9646724140945353
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:586"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.604812225280733,
+        -2.0260684270349896
+      ],
+      "b": [
+        0.085,
+        -2.604812225280733,
+        -2.0260684270349896
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:587"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.683745929077119,
+        -2.087464439975444
+      ],
+      "b": [
+        0.085,
+        -2.683745929077119,
+        -2.087464439975444
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:588"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.7626796328735046,
+        -2.1488604529158977
+      ],
+      "b": [
+        0.085,
+        -2.7626796328735046,
+        -2.1488604529158977
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:589"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.8416133366698904,
+        -2.2102564658563524
+      ],
+      "b": [
+        0.085,
+        -2.8416133366698904,
+        -2.2102564658563524
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:590"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "b": [
+        0.085,
+        -2.9205470404662766,
+        -2.2716524787968067
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:591"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -2.9994807442626623,
+        -2.333048491737261
+      ],
+      "b": [
+        0.085,
+        -2.9994807442626623,
+        -2.333048491737261
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:592"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -3.078414448059048,
+        -2.394444504677715
+      ],
+      "b": [
+        0.085,
+        -3.078414448059048,
+        -2.394444504677715
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:593"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "b": [
+        0.085,
+        -3.157348151855434,
+        -2.455840517618169
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:594"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -3.23628185565182,
+        -2.5172365305586237
+      ],
+      "b": [
+        0.085,
+        -3.23628185565182,
+        -2.5172365305586237
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:595"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -0.085,
+        -3.315215559448206,
+        -2.5786325434990776
+      ],
+      "b": [
+        0.085,
+        -3.315215559448206,
+        -2.5786325434990776
+      ],
+      "halfWidth": 0.018,
+      "role": "main-screw",
+      "id": "main-screw:596"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.1,
+        0.0,
+        0.0
+      ],
+      "b": [
+        1.1,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.13,
+      "role": "safety-base",
+      "id": "safety-base:597"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.1,
+        0.0,
+        0.0
+      ],
+      "b": [
+        -1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.055,
+      "role": "safety-base",
+      "id": "safety-base:598"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.1,
+        0.0,
+        0.0
+      ],
+      "b": [
+        1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.055,
+      "role": "safety-base",
+      "id": "safety-base:599"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.4,
+        0,
+        0
+      ],
+      "b": [
+        -1.4,
+        -0.7104033341674726,
+        -0.5525641164640881
+      ],
+      "halfWidth": 0.11,
+      "role": "safety-base",
+      "id": "safety-base:600"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        -1.4,
+        -0.19733425949096461,
+        -0.15349003235113556
+      ],
+      "b": [
+        -1.4,
+        0.19733425949096461,
+        0.15349003235113556
+      ],
+      "halfWidth": 0.14,
+      "role": "safety-base",
+      "id": "safety-base:601"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -1.4,
+        -0.19733425949096461,
+        -0.03718849451127454
+      ],
+      "b": [
+        -1.4,
+        0.19733425949096461,
+        0.2697915701909966
+      ],
+      "halfWidth": 0.055,
+      "role": "safety-base",
+      "id": "safety-base:602"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.4,
+        0,
+        0
+      ],
+      "b": [
+        1.4,
+        -0.7104033341674726,
+        -0.5525641164640881
+      ],
+      "halfWidth": 0.11,
+      "role": "safety-base",
+      "id": "safety-base:603"
+    },
+    {
+      "kind": "beam",
+      "material": "edge",
+      "a": [
+        1.4,
+        -0.19733425949096461,
+        -0.15349003235113556
+      ],
+      "b": [
+        1.4,
+        0.19733425949096461,
+        0.15349003235113556
+      ],
+      "halfWidth": 0.14,
+      "role": "safety-base",
+      "id": "safety-base:604"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        1.4,
+        -0.19733425949096461,
+        -0.03718849451127454
+      ],
+      "b": [
+        1.4,
+        0.19733425949096461,
+        0.2697915701909966
+      ],
+      "halfWidth": 0.055,
+      "role": "safety-base",
+      "id": "safety-base:605"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -1.6,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:606"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -1.2400000000000002,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:607"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.8800000000000001,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:608"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.52,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:609"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        -0.16000000000000014,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:610"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.19999999999999973,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:611"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.56,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:612"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        0.9199999999999999,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:613"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        1.2799999999999998,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:614"
+    },
+    {
+      "kind": "box",
+      "material": "timber",
+      "center": [
+        1.6399999999999997,
+        -0.15,
+        -0.6
+      ],
+      "size": [
+        0.34,
+        0.16,
+        1.1
+      ],
+      "role": "safety-base",
+      "id": "safety-base:615"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.8,
+        0,
+        -1.1
+      ],
+      "b": [
+        -1.8,
+        1,
+        -1.1
+      ],
+      "halfWidth": 0.025,
+      "role": "safety-base",
+      "id": "safety-base:616"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        1.8,
+        0,
+        -1.1
+      ],
+      "b": [
+        1.8,
+        1,
+        -1.1
+      ],
+      "halfWidth": 0.025,
+      "role": "safety-base",
+      "id": "safety-base:617"
+    },
+    {
+      "kind": "beam",
+      "material": "iron",
+      "a": [
+        -1.8,
+        1,
+        -1.1
+      ],
+      "b": [
+        1.8,
+        1,
+        -1.1
+      ],
+      "halfWidth": 0.025,
+      "role": "safety-base",
+      "id": "safety-base:618"
+    },
+    {
+      "kind": "beam",
+      "material": "steel",
+      "a": [
+        -1.4,
+        0,
+        0
+      ],
+      "b": [
+        -1.4,
+        -0.9866712974548231,
+        -0.7674501617556778
+      ],
+      "halfWidth": 0.054,
+      "role": "safety-heads",
+      "id": "safety-heads:619"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        -1.4,
+        -0.07893370379638585,
+        -0.06139601294045423
+      ],
+      "b": [
+        -1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.14,
+      "role": "safety-heads",
+      "id": "safety-heads:620"
+    },
+    {
+      "kind": "beam",
+      "material": "steel",
+      "a": [
+        1.4,
+        0,
+        0
+      ],
+      "b": [
+        1.4,
+        -0.9866712974548231,
+        -0.7674501617556778
+      ],
+      "halfWidth": 0.054,
+      "role": "safety-heads",
+      "id": "safety-heads:621"
+    },
+    {
+      "kind": "beam",
+      "material": "bronze",
+      "a": [
+        1.4,
+        -0.07893370379638585,
+        -0.06139601294045423
+      ],
+      "b": [
+        1.4,
+        0.0,
+        0.0
+      ],
+      "halfWidth": 0.14,
+      "role": "safety-heads",
+      "id": "safety-heads:622"
+    }
+  ],
+  "notes": "Beam/box records are actual builder primitives; cylinders get conservative OBB envelopes in audit. No Blender was called."
+}

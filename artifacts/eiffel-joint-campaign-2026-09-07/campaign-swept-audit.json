@@ -1,0 +1,19 @@
+{
+  "elapsedSeconds": 0.00878454099999999,
+  "sweptPrisms": 104,
+  "sourceHashes": {
+    "campaign-routes.json": "0e18ba7485e0112a4cf70b5dcb23e6430c114eb2ad8d483c6336f7acd4176c7c",
+    "joint-support.json": "17d57198ca8f0f543fa0f8aabba9e5b59d87d4aea47302deaaf4807b26f344a3"
+  },
+  "scope": "Actual captured crane box/beam OBBs and conservative cylinders; renderer-sized upper ropes/hook; four basket loops; captive plates/retainers; both payload identities; both cart beds and conservative wheel cylinders. Extras also checked against all articulated crane primitives and other cargo. All1,900 initial completed box solids +219 original falsework +jointextension. Payload final joint overlap allowed only on final lowering/slide; Exact straight translation swept OBB enclosures cover cargo/baskets/captive hardware ground approach, hoist, lower and slide. Curved/slew/rope motion is sampled. Crew, exact cartunderframe and crane internal self-collision excluded; separate linked audits cover these.",
+  "step": 0.2,
+  "samples": 0,
+  "completed": 1900,
+  "structure": 245,
+  "rigPrimitives": 623,
+  "minRope": null,
+  "minReach": null,
+  "maxReach": 0,
+  "maxYaw": 0,
+  "findings": []
+}

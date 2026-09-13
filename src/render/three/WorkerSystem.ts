@@ -71,7 +71,8 @@ export class WorkerSystem {
     this.legs = new InstancedMesh(this.legGeometry, materials.skin, workerCount * 2);
     this.sleds = new InstancedMesh(this.sledGeometry, materials.wood, MAX_OPERATIONS);
     this.runners = new InstancedMesh(this.sledGeometry, materials.wood, MAX_OPERATIONS * 2);
-    this.levers = new InstancedMesh(this.leverGeometry, materials.wood, MAX_OPERATIONS);
+    this.levers = new InstancedMesh(this.leverGeometry, materials.wood, MAX_OPERATIONS * 3);
+    this.levers.name = 'operation-bound-cribbing-and-levers';
     this.dustMaterial = materials.compactedEarth.clone();
     this.dustMaterial.transparent = true;
     this.dustMaterial.opacity = 0.42;
@@ -116,23 +117,23 @@ export class WorkerSystem {
       const forward = new Vector3(Math.sin(yaw), 0, Math.cos(yaw));
       const lateral = new Vector3(Math.cos(yaw), 0, -Math.sin(yaw));
       const blockPosition = new Vector3(...state.position);
-      const supportY = Math.max(0.08, state.position[1] - block.dimensions[1] * 0.5);
-      const isSledPhase = state.phase === 'loaded' || state.phase === 'hauled' || state.phase === 'queued' || state.phase === 'raised';
-      // The engine lifts a sled-borne block by state.sledLift; the surface
-      // the crew stands on — and the sled bed fills — is below that gap.
-      const groundY = supportY - state.sledLift;
+      const supportY = state.supportY;
+      const groundY = state.groundY;
+      const isSledPhase = state.mechanism === 'sled';
       const hauling = isSledPhase && state.phase !== 'loaded';
 
       if (isSledPhase) {
-        // Deck directly under the stone, runners under the deck, both inside
-        // the engine's sled gap so the assembly sits ON the surface.
-        compose(matrix, new Vector3(blockPosition.x, supportY - 0.08, blockPosition.z), yaw, new Vector3(block.dimensions[0] * 1.2, 0.16, block.dimensions[2] * 1.35));
+        // Deck directly under the stone and runners down to groundY. Carrier
+        // height comes from the same state as the block and is applied once.
+        const deckHeight = state.carrierHeight * 0.47;
+        const runnerHeight = state.carrierHeight - deckHeight;
+        compose(matrix, new Vector3(blockPosition.x, supportY - deckHeight * 0.5, blockPosition.z), yaw, new Vector3(block.dimensions[0] * 1.2, deckHeight, block.dimensions[2] * 1.35));
         this.sleds.setMatrixAt(sledCursor, matrix);
         sledCursor += 1;
         for (const side of [-1, 1] as const) {
           const runnerPosition = blockPosition.clone().addScaledVector(lateral, side * block.dimensions[0] * 0.48);
-          runnerPosition.y = supportY - 0.24;
-          compose(matrix, runnerPosition, yaw, new Vector3(0.1, 0.16, block.dimensions[2] * 1.65));
+          runnerPosition.y = groundY + runnerHeight * 0.5;
+          compose(matrix, runnerPosition, yaw, new Vector3(0.1, runnerHeight, block.dimensions[2] * 1.65));
           this.runners.setMatrixAt(runnerCursor, matrix);
           runnerCursor += 1;
         }
@@ -187,6 +188,25 @@ export class WorkerSystem {
           ropeEnd.x, ropeEnd.y, ropeEnd.z,
         ], ropeCursor * 6);
         ropeCursor += 1;
+      }
+
+      if (state.mechanism === 'cribbing') {
+        for (let layer = 0; layer < 2; layer += 1) {
+          const height = state.carrierHeight * 0.5;
+          const cribPosition = new Vector3(
+            blockPosition.x,
+            groundY + height * (layer + 0.5),
+            blockPosition.z,
+          );
+          compose(
+            matrix,
+            cribPosition,
+            yaw + (layer % 2 === 0 ? 0 : Math.PI / 2),
+            new Vector3(block.dimensions[0] * 1.22, height, 0.2),
+          );
+          this.levers.setMatrixAt(leverCursor, matrix);
+          leverCursor += 1;
+        }
       }
 
       if (state.phase === 'aligned') {

@@ -1,0 +1,174 @@
+import {
+  BackSide,
+  Color,
+  Mesh,
+  ShaderMaterial,
+  SphereGeometry,
+  Vector3,
+} from 'three';
+import type { EiffelSkySample } from '../../data/eiffelSky';
+import { EIFFEL_SKY, EIFFEL_SKY_MIX } from '../../data/eiffelSky';
+import { deriveSceneFogColor } from './RenderPipeline';
+
+// Mean apparent angular radius of the sun as seen from Earth: ~0.266 degrees.
+export const EIFFEL_SUN_ANGULAR_RADIUS = 0.00465;
+export const EIFFEL_SKY_BLUE_ELEVATION = 0.052;
+
+const VERTEX_SHADER = /* glsl */ `
+varying vec3 vWorldPosition;
+varying vec3 vViewRay;
+
+void main() {
+  vWorldPosition = (modelMatrix * vec4(position, 1.0)).xyz;
+  vec4 viewPosition = modelViewMatrix * vec4(position, 1.0);
+  vViewRay = viewPosition.xyz;
+  gl_Position = (projectionMatrix * viewPosition).xyww;
+}
+`;
+
+const FRAGMENT_SHADER = /* glsl */ `
+uniform vec3 uZenith;
+uniform vec3 uHorizon;
+uniform vec3 uFogColor;
+uniform vec3 uSunDirection;
+uniform vec3 uSunTint;
+uniform vec3 uCloudTint;
+uniform vec3 uCloudShadow;
+uniform float uCloudOpacity;
+uniform float uHaze;
+uniform float uTime;
+
+varying vec3 vWorldPosition;
+varying vec3 vViewRay;
+
+float hash(vec2 p) {
+  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+}
+
+float noise(vec2 p) {
+  vec2 i = floor(p);
+  vec2 f = fract(p);
+  f = f * f * (3.0 - 2.0 * f);
+  return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
+             mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+}
+
+float fbm(vec2 p) {
+  return noise(p) * 0.58
+    + noise(p * 2.07 + vec2(4.1, -2.8)) * 0.29
+    + noise(p * 4.13 + vec2(-1.7, 6.2)) * 0.13;
+}
+
+void main() {
+  vec3 dir = normalize(vWorldPosition - cameraPosition);
+  float elevation = dir.y;
+  float skyT = smoothstep(${EIFFEL_SKY_MIX.horizonLo.toFixed(3)}, ${EIFFEL_SKY_BLUE_ELEVATION.toFixed(3)}, elevation);
+  vec3 temperedHorizon = mix(uHorizon, uZenith, 0.16);
+  vec3 clearSky = uZenith * mix(1.16, 1.0, smoothstep(0.04, 0.68, elevation));
+  vec3 color = mix(temperedHorizon, clearSky, skyT);
+
+  vec2 weatherUv = dir.xz * (2.2 / max(0.16, dir.y + 0.42)) + vec2(uTime * 0.08, -uTime * 0.025);
+  float broad = fbm(weatherUv + dir.y * vec2(1.1, -0.6));
+  float detail = fbm(weatherUv * 3.4 + vec2(5.1, -3.2));
+  float cloudField = broad * 0.76 + detail * 0.24;
+  float altitudeMask = smoothstep(0.025, 0.09, elevation)
+    * (1.0 - smoothstep(0.62, 0.88, elevation));
+  float cloudBody = smoothstep(0.47, 0.59, cloudField) * altitudeMask;
+  float cloudCore = smoothstep(0.51, 0.66, cloudField) * altitudeMask;
+  float highVeil = smoothstep(0.59, 0.74,
+    fbm(weatherUv * 0.38 + vec2(-8.4, 3.7)))
+    * smoothstep(0.28, 0.46, elevation);
+  // A short density sample toward the scene sun gives the cloud field a
+  // consistent lit edge, without pretending to integrate a 3D cloud volume.
+  vec2 sunUv = uSunDirection.xz / max(length(uSunDirection.xz), 0.001);
+  float sunwardDensity = fbm(weatherUv + dir.y * vec2(1.1, -0.6) + sunUv * 0.12);
+  float litEdge = clamp((broad - sunwardDensity) * 5.0, 0.0, 1.0);
+  float coreShade = cloudCore * (0.46 + 0.16 * (1.0 - uSunDirection.y));
+  vec3 litCloud = mix(uCloudTint, uCloudShadow, coreShade);
+  litCloud = mix(litCloud, uCloudTint, litEdge * 0.72);
+  // Thin wisps transmit the blue sky; optically denser cores retain a cool base.
+  float cloudAlpha = (cloudBody * 0.80 + cloudCore * 0.20) * uCloudOpacity;
+  color = mix(color, litCloud, cloudAlpha);
+  color = mix(color, uCloudTint, highVeil * uCloudOpacity * 0.08);
+
+  float warmBand = exp(-max(0.0, elevation) * ${EIFFEL_SKY_MIX.warmFalloff.toFixed(1)}) * uHaze;
+  float aerialDepth = 1.0 - smoothstep(-0.06, 0.075, elevation);
+  color = mix(color, temperedHorizon, warmBand * 0.14 + aerialDepth * uHaze * 0.06);
+  color *= 0.985 + (detail - 0.5) * 0.02;
+
+  float cosSun = dot(dir, uSunDirection);
+  float sunAngle = acos(clamp(cosSun, -1.0, 1.0));
+  float disc = 1.0 - smoothstep(
+    ${(EIFFEL_SUN_ANGULAR_RADIUS - 0.0007).toFixed(5)},
+    ${(EIFFEL_SUN_ANGULAR_RADIUS + 0.0007).toFixed(5)},
+    sunAngle
+  );
+  float innerHalo = exp(-sunAngle * 36.0);
+  float broadHalo = exp(-sunAngle * 8.0) * (0.35 + uHaze);
+  color += uSunTint * (innerHalo * 0.2 + broadHalo * 0.035 + disc * 2.4);
+
+  gl_FragColor = vec4(color, 1.0);
+  #include <tonemapping_fragment>
+  #include <colorspace_fragment>
+  // Below the horizon, match the terrain's terminal fog exactly so its far
+  // edge disappears. Restrict the transition to the horizon instead of
+  // dimming the whole sky with a capped blend (which exposes a hard seam).
+  float fogBlend = 1.0 - smoothstep(-0.06, 0.018, elevation);
+  gl_FragColor.rgb = mix(gl_FragColor.rgb, uFogColor, fogBlend);
+}
+`;
+
+const PARIS_FOG_NEUTRALIZER = new Color('#6a92b8');
+
+export class EiffelSkyDome {
+  readonly mesh: Mesh;
+  private readonly geometry = new SphereGeometry(EIFFEL_SKY.domeRadius, 40, 20);
+  private readonly material: ShaderMaterial;
+  private readonly fogScratch = new Color();
+
+  constructor() {
+    this.material = new ShaderMaterial({
+      vertexShader: VERTEX_SHADER,
+      fragmentShader: FRAGMENT_SHADER,
+      side: BackSide,
+      depthWrite: false,
+      fog: false,
+      uniforms: {
+        uZenith: { value: new Color('#3a78ac') },
+        uHorizon: { value: new Color('#d4bba0') },
+        uFogColor: { value: new Color('#c4b8a8') },
+        uSunDirection: { value: new Vector3(0, 1, 0) },
+        uSunTint: { value: new Color('#ffe0b0') },
+        uCloudTint: { value: new Color('#f4f0ea') },
+        uCloudShadow: { value: new Color('#748aa0') },
+        uCloudOpacity: { value: 0.24 },
+        uHaze: { value: 0.12 },
+        uTime: { value: 0 },
+      },
+    });
+    this.mesh = new Mesh(this.geometry, this.material);
+    this.mesh.name = 'eiffel-world-space-weather-sky';
+    this.mesh.frustumCulled = false;
+    this.mesh.renderOrder = -100;
+  }
+
+  update(t: number, sky: EiffelSkySample, sunDirection: Vector3): void {
+    const uniforms = this.material.uniforms;
+    (uniforms.uHorizon!.value as Color).set(sky.horizon);
+    (uniforms.uZenith!.value as Color).set(sky.zenith);
+    deriveSceneFogColor(sky.horizon, this.fogScratch, PARIS_FOG_NEUTRALIZER);
+    (uniforms.uFogColor!.value as Color).copy(this.fogScratch);
+    (uniforms.uSunDirection!.value as Vector3).copy(sunDirection);
+    (uniforms.uSunTint!.value as Color).set(sky.sunTint);
+    (uniforms.uCloudTint!.value as Color).set(sky.cloudTint);
+    (uniforms.uCloudShadow!.value as Color).set(sky.cloudShadow);
+    uniforms.uCloudOpacity!.value = sky.cloudOpacity;
+    uniforms.uHaze!.value = sky.haze;
+    uniforms.uTime!.value = t;
+  }
+
+  dispose(): void {
+    this.geometry.dispose();
+    this.material.dispose();
+  }
+}

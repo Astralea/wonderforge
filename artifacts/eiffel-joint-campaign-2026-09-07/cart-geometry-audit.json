@@ -1,0 +1,7 @@
+{
+  "scope": "Actual Blender cart body closed box primitives (validated twelve-triangle, eight-corner blocks) (planks, underframe, axles, handles and crossbars), excluding separately audited rotating wheels. Against frozen tower, old/new support, both actual cargo poses, all four actual basket loop .015m rope envelopes and the other cart body.",
+  "componentCount": 50,
+  "step": 0.1,
+  "states": 135100,
+  "findings": []
+}

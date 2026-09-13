@@ -1,0 +1,68 @@
+[
+  {
+    "captionId": "eiffel-lift-prepared",
+    "text": "At the foot of each pylon, a lifting frame takes the weight of the iron.",
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "model": "eleven_multilingual_v2",
+    "speed": 1.2,
+    "src": "/audio/narration/eiffel-adam-lift-prepared.mp3",
+    "duration": 3.761633,
+    "sha256": "4e913ac5568720a657c47372922ee901c6bd58133962b932d7fe7efd3d359129",
+    "bytes": 61066
+  },
+  {
+    "captionId": "eiffel-lift-later",
+    "text": "One member settles into place, while the other crews continue around the tower.",
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "model": "eleven_multilingual_v2",
+    "speed": 1.2,
+    "src": "/audio/narration/eiffel-adam-lift-later.mp3",
+    "duration": 3.761633,
+    "sha256": "85b14bd79a784affead5bd6da3a260954c7b43fd8984fb74778258594339ebee",
+    "bytes": 61066
+  },
+  {
+    "captionId": "eiffel-joint-prepared",
+    "text": "Up close, workers align the plates and tighten the bolts that hold the joint.",
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "model": "eleven_multilingual_v2",
+    "speed": 1.2,
+    "src": "/audio/narration/eiffel-adam-joint-prepared.mp3",
+    "duration": 3.390113,
+    "sha256": "a062ba1725e9b7f59972f6c306a8c59325cf2b42857335b22cb01a4c75ae1976",
+    "bytes": 55214
+  },
+  {
+    "captionId": "eiffel-joint-later",
+    "text": "Around them, many hands repeat the work, joining the four pylons into one tower.",
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "model": "eleven_multilingual_v2",
+    "speed": 1.2,
+    "src": "/audio/narration/eiffel-adam-joint-later.mp3",
+    "duration": 4.272472,
+    "sha256": "769c1921ab913ceedfad832509aac31bd5450243327db53874dbe2adf9004d5c",
+    "bytes": 69425
+  },
+  {
+    "captionId": "eiffel-relay-prepared",
+    "text": "Winches lift the longer members from platform to platform, toward the narrowing summit.",
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "model": "eleven_multilingual_v2",
+    "speed": 1.2,
+    "src": "/audio/narration/eiffel-adam-relay-prepared.mp3",
+    "duration": 4.272472,
+    "sha256": "9029550a432a01b759af8f840ac1ed9e049404e3ce80658d14d11b56a45b17bf",
+    "bytes": 69425
+  },
+  {
+    "captionId": "eiffel-relay-later",
+    "text": "The work rises above Paris, until the tower’s iron lattice reaches the sky.",
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "model": "eleven_multilingual_v2",
+    "speed": 1.2,
+    "src": "/audio/narration/eiffel-adam-relay-later.mp3",
+    "duration": 4.318912,
+    "sha256": "2296351aac3c801de36e5115f3bbfac1e84982371a7d112e4258effd627d889c",
+    "bytes": 70261
+  }
+]

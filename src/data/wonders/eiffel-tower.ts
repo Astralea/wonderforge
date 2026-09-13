@@ -1,7 +1,7 @@
 import type { Wonder } from '../types';
 import { getCompiledScene } from '../scenes';
 
-/** Scene doc: src/data/scenes/eiffel-tower.scene.json (Spec 07). */
+/** Typed Champ de Mars world: src/data/eiffelConstruction.ts (Spec 14). */
 export const eiffelTower: Wonder = {
   id: 'eiffel-tower',
   name: 'Eiffel Tower',

@@ -147,8 +147,10 @@ describe('Giza layered world', () => {
     for (const block of plan.blocks.filter((_, index) => index % 251 === 0)) {
       const route = plan.routes.find((candidate) => candidate.id === block.routeId)!;
       const crestY = route.rampCrestFor(block)[1];
-      expect(crestY).toBeCloseTo(block.finalPosition[1] + block.dimensions[1] * 0.5, 5);
-      expect(crestY).toBeGreaterThan(route.waypoints.rampFoot[1]);
+      expect(crestY).toBeCloseTo(block.finalPosition[1] - block.dimensions[1] * 0.5, 5);
+      const footSurface = route.waypoints.rampFoot[1] - block.dimensions[1] * 0.5;
+      if (block.course > 0) expect(crestY).toBeGreaterThan(footSurface);
+      else expect(Math.abs(crestY - footSurface)).toBeLessThan(0.4);
     }
   });
 

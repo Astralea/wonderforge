@@ -10,8 +10,12 @@ export interface RendererDiagnostics {
 }
 
 export interface ThreeGameDiagnostics {
+  /** Plain sampled state and source-node pose snapshots; no writable scene handles. */
+  eiffelLongLoad?: Record<string, unknown>;
+  eiffelCrowd?: Record<string, unknown>;
+  camera?: { position: number[]; direction: number[]; fov: number; aspect: number; near: number };
   renderer: RendererDiagnostics;
-  scene: 'giza-reference' | 'legacy-fallback';
+  scene: 'giza-reference' | 'stonehenge-reference' | 'petra-reference' | 'colosseum-reference' | 'sydney-opera-house-reference' | 'eiffel-tower-reference' | 'legacy-fallback';
 }
 
 export function readRendererDiagnostics(renderer: WebGLRenderer): RendererDiagnostics {

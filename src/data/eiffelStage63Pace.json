@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "manifestSha256": "e054bfb8cbded7e636075ba1371e624430f600da0b2e8f0cc765e205d1e54080",
+    "partCount": 13852
+  },
+  "originalDuration": 60,
+  "duration": 160.42677070385625,
+  "selectedStages": [
+    63
+  ],
+  "selectedOperationCount": 75,
+  "selectedWaveCount": 20,
+  "backgroundTimeLapse": {
+    "metresPerFrame": 0.22,
+    "radiansPerFrame": 0.08726646259971647,
+    "riggingFrames": 4
+  },
+  "representative": {
+    "partId": "summit-crown-m072-c002",
+    "wave": 3596,
+    "productionStart": 0.8995834287321787,
+    "productionEnd": 0.9,
+    "secondsStart": 108.66037255160924,
+    "secondsEnd": 154.42677070385625
+  },
+  "segments": [
+    {
+      "productionStart": 0,
+      "productionEnd": 0.8863536998472109,
+      "secondsStart": 0,
+      "secondsEnd": 53.181221990832654,
+      "kind": "hold",
+      "wave": null,
+      "phase": null
+    },
+    {
+      "productionStart": 0.8863536998472109,
+      "productionEnd": 0.8864036883993496,
+      "secondsStart": 53.181221990832654,
+      "secondsEnd": 53.247888657499324,
+      "kind": "wave-phase",
+      "wave": 3577,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8864036883993496,
+      "productionEnd": 0.8864786712275575,
+      "secondsStart": 53.247888657499324,
+      "secondsEnd": 55.63105918422804,
+      "kind": "wave-phase",
+      "wave": 3577,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8864786712275575,
+      "productionEnd": 0.8866786254361121,
+      "secondsStart": 55.63105918422804,
+      "secondsEnd": 56.08973363926749,
+      "kind": "wave-phase",
+      "wave": 3577,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8866786254361121,
+      "productionEnd": 0.8867702711150329,
+      "secondsStart": 56.08973363926749,
+      "secondsEnd": 56.251384492538435,
+      "kind": "wave-phase",
+      "wave": 3577,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8867702711150329,
+      "productionEnd": 0.8868202596671716,
+      "secondsStart": 56.251384492538435,
+      "secondsEnd": 56.318051159205105,
+      "kind": "wave-phase",
+      "wave": 3578,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8868202596671716,
+      "productionEnd": 0.8868952424953795,
+      "secondsStart": 56.318051159205105,
+      "secondsEnd": 58.3354060897868,
+      "kind": "wave-phase",
+      "wave": 3578,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8868952424953795,
+      "productionEnd": 0.8870951967039341,
+      "secondsStart": 58.3354060897868,
+      "secondsEnd": 58.79408054482625,
+      "kind": "wave-phase",
+      "wave": 3578,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8870951967039341,
+      "productionEnd": 0.887186842382855,
+      "secondsStart": 58.79408054482625,
+      "secondsEnd": 58.86226236300807,
+      "kind": "wave-phase",
+      "wave": 3578,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.887186842382855,
+      "productionEnd": 0.8872368309349936,
+      "secondsStart": 58.86226236300807,
+      "secondsEnd": 58.92892902967474,
+      "kind": "wave-phase",
+      "wave": 3579,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8872368309349936,
+      "productionEnd": 0.8873118137632016,
+      "secondsStart": 58.92892902967474,
+      "secondsEnd": 61.10632785008244,
+      "kind": "wave-phase",
+      "wave": 3579,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8873118137632016,
+      "productionEnd": 0.8875117679717561,
+      "secondsStart": 61.10632785008244,
+      "secondsEnd": 61.56500230512189,
+      "kind": "wave-phase",
+      "wave": 3579,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8875117679717561,
+      "productionEnd": 0.887603413650677,
+      "secondsStart": 61.56500230512189,
+      "secondsEnd": 61.72665314552843,
+      "kind": "wave-phase",
+      "wave": 3579,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.887603413650677,
+      "productionEnd": 0.8876534022028156,
+      "secondsStart": 61.72665314552843,
+      "secondsEnd": 61.7933198121951,
+      "kind": "wave-phase",
+      "wave": 3580,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8876534022028156,
+      "productionEnd": 0.8877283850310236,
+      "secondsStart": 61.7933198121951,
+      "secondsEnd": 64.17649033892381,
+      "kind": "wave-phase",
+      "wave": 3580,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8877283850310236,
+      "productionEnd": 0.8879283392395781,
+      "secondsStart": 64.17649033892381,
+      "secondsEnd": 64.53496368296965,
+      "kind": "wave-phase",
+      "wave": 3580,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8879283392395781,
+      "productionEnd": 0.888019984918499,
+      "secondsStart": 64.53496368296965,
+      "secondsEnd": 64.60314550115147,
+      "kind": "wave-phase",
+      "wave": 3580,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.888019984918499,
+      "productionEnd": 0.8880699734706377,
+      "secondsStart": 64.60314550115147,
+      "secondsEnd": 64.66981216781814,
+      "kind": "wave-phase",
+      "wave": 3581,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8880699734706377,
+      "productionEnd": 0.8881449562988456,
+      "secondsStart": 64.66981216781814,
+      "secondsEnd": 67.00725487805182,
+      "kind": "wave-phase",
+      "wave": 3581,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8881449562988456,
+      "productionEnd": 0.8883449105074002,
+      "secondsStart": 67.00725487805182,
+      "secondsEnd": 67.36572821976439,
+      "kind": "wave-phase",
+      "wave": 3581,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8883449105074002,
+      "productionEnd": 0.888436556186321,
+      "secondsStart": 67.36572821976439,
+      "secondsEnd": 67.43391003794622,
+      "kind": "wave-phase",
+      "wave": 3581,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.888436556186321,
+      "productionEnd": 0.8891243297140216,
+      "secondsStart": 67.43391003794622,
+      "secondsEnd": 67.50057670461288,
+      "kind": "wave-phase",
+      "wave": 3582,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8891243297140216,
+      "productionEnd": 0.8901559900055724,
+      "secondsStart": 67.50057670461288,
+      "secondsEnd": 69.79229506625815,
+      "kind": "wave-phase",
+      "wave": 3582,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8901559900055724,
+      "productionEnd": 0.8929070841163748,
+      "secondsStart": 69.79229506625815,
+      "secondsEnd": 70.15076841030398,
+      "kind": "wave-phase",
+      "wave": 3582,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8929070841163748,
+      "productionEnd": 0.8941680022504924,
+      "secondsStart": 70.15076841030398,
+      "secondsEnd": 70.22642349835104,
+      "kind": "wave-phase",
+      "wave": 3582,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8941680022504924,
+      "productionEnd": 0.8942179908026311,
+      "secondsStart": 70.22642349835104,
+      "secondsEnd": 70.2930901650177,
+      "kind": "wave-phase",
+      "wave": 3583,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8942179908026311,
+      "productionEnd": 0.894292973630839,
+      "secondsStart": 70.2930901650177,
+      "secondsEnd": 72.53908071016794,
+      "kind": "wave-phase",
+      "wave": 3583,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.894292973630839,
+      "productionEnd": 0.8944929278393936,
+      "secondsStart": 72.53908071016794,
+      "secondsEnd": 72.89755405421377,
+      "kind": "wave-phase",
+      "wave": 3583,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8944929278393936,
+      "productionEnd": 0.8945845735183144,
+      "secondsStart": 72.89755405421377,
+      "secondsEnd": 72.9657358723956,
+      "kind": "wave-phase",
+      "wave": 3583,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8945845735183144,
+      "productionEnd": 0.8946345620704531,
+      "secondsStart": 72.9657358723956,
+      "secondsEnd": 73.03240253906226,
+      "kind": "wave-phase",
+      "wave": 3584,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8946345620704531,
+      "productionEnd": 0.8947095448986611,
+      "secondsStart": 73.03240253906226,
+      "secondsEnd": 75.48416479053353,
+      "kind": "wave-phase",
+      "wave": 3584,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8947095448986611,
+      "productionEnd": 0.8949094991072156,
+      "secondsStart": 75.48416479053353,
+      "secondsEnd": 75.8426381322461,
+      "kind": "wave-phase",
+      "wave": 3584,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8949094991072156,
+      "productionEnd": 0.8950011447861365,
+      "secondsStart": 75.8426381322461,
+      "secondsEnd": 75.91081995042792,
+      "kind": "wave-phase",
+      "wave": 3584,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8950011447861365,
+      "productionEnd": 0.8950511333382751,
+      "secondsStart": 75.91081995042792,
+      "secondsEnd": 75.97748661709458,
+      "kind": "wave-phase",
+      "wave": 3585,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8950511333382751,
+      "productionEnd": 0.8951261161664831,
+      "secondsStart": 75.97748661709458,
+      "secondsEnd": 78.13202152925476,
+      "kind": "wave-phase",
+      "wave": 3585,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8951261161664831,
+      "productionEnd": 0.8953260703750376,
+      "secondsStart": 78.13202152925476,
+      "secondsEnd": 78.49049487330059,
+      "kind": "wave-phase",
+      "wave": 3585,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8953260703750376,
+      "productionEnd": 0.8954177160539585,
+      "secondsStart": 78.49049487330059,
+      "secondsEnd": 78.55867669148242,
+      "kind": "wave-phase",
+      "wave": 3585,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8954177160539585,
+      "productionEnd": 0.8954677046060971,
+      "secondsStart": 78.55867669148242,
+      "secondsEnd": 78.62534335814908,
+      "kind": "wave-phase",
+      "wave": 3586,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8954677046060971,
+      "productionEnd": 0.8955426874343051,
+      "secondsStart": 78.62534335814908,
+      "secondsEnd": 80.252469878691,
+      "kind": "wave-phase",
+      "wave": 3586,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8955426874343051,
+      "productionEnd": 0.8957426416428597,
+      "secondsStart": 80.252469878691,
+      "secondsEnd": 80.77752429036846,
+      "kind": "wave-phase",
+      "wave": 3586,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8957426416428597,
+      "productionEnd": 0.8958342873217805,
+      "secondsStart": 80.77752429036846,
+      "secondsEnd": 80.89785402444417,
+      "kind": "wave-phase",
+      "wave": 3586,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8958342873217805,
+      "productionEnd": 0.8958842758739192,
+      "secondsStart": 80.89785402444417,
+      "secondsEnd": 80.96452069111083,
+      "kind": "wave-phase",
+      "wave": 3587,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8958842758739192,
+      "productionEnd": 0.8959592587021271,
+      "secondsStart": 80.96452069111083,
+      "secondsEnd": 83.34614924800752,
+      "kind": "wave-phase",
+      "wave": 3587,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8959592587021271,
+      "productionEnd": 0.8961592129106817,
+      "secondsStart": 83.34614924800752,
+      "secondsEnd": 83.87120365968498,
+      "kind": "wave-phase",
+      "wave": 3587,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8961592129106817,
+      "productionEnd": 0.8962508585896025,
+      "secondsStart": 83.87120365968498,
+      "secondsEnd": 83.9915333934715,
+      "kind": "wave-phase",
+      "wave": 3587,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8962508585896025,
+      "productionEnd": 0.8963008471417412,
+      "secondsStart": 83.9915333934715,
+      "secondsEnd": 84.05820006013816,
+      "kind": "wave-phase",
+      "wave": 3588,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8963008471417412,
+      "productionEnd": 0.8963758299699491,
+      "secondsStart": 84.05820006013816,
+      "secondsEnd": 86.57700859861333,
+      "kind": "wave-phase",
+      "wave": 3588,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8963758299699491,
+      "productionEnd": 0.8965757841785037,
+      "secondsStart": 86.57700859861333,
+      "secondsEnd": 87.10206301029079,
+      "kind": "wave-phase",
+      "wave": 3588,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8965757841785037,
+      "productionEnd": 0.8966674298574245,
+      "secondsStart": 87.10206301029079,
+      "secondsEnd": 87.2223927447772,
+      "kind": "wave-phase",
+      "wave": 3588,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8966674298574245,
+      "productionEnd": 0.8967174184095632,
+      "secondsStart": 87.2223927447772,
+      "secondsEnd": 87.28905941144386,
+      "kind": "wave-phase",
+      "wave": 3589,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8967174184095632,
+      "productionEnd": 0.8967924012377712,
+      "secondsStart": 87.28905941144386,
+      "secondsEnd": 90.022279436407,
+      "kind": "wave-phase",
+      "wave": 3589,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8967924012377712,
+      "productionEnd": 0.8969923554463257,
+      "secondsStart": 90.022279436407,
+      "secondsEnd": 91.0444000967569,
+      "kind": "wave-phase",
+      "wave": 3589,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8969923554463257,
+      "productionEnd": 0.8970840011252466,
+      "secondsStart": 91.0444000967569,
+      "secondsEnd": 91.19212736948418,
+      "kind": "wave-phase",
+      "wave": 3589,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8970840011252466,
+      "productionEnd": 0.8971339896773852,
+      "secondsStart": 91.19212736948418,
+      "secondsEnd": 91.25879403615085,
+      "kind": "wave-phase",
+      "wave": 3590,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8971339896773852,
+      "productionEnd": 0.8972089725055932,
+      "secondsStart": 91.25879403615085,
+      "secondsEnd": 93.4765536022361,
+      "kind": "wave-phase",
+      "wave": 3590,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8972089725055932,
+      "productionEnd": 0.8974089267141477,
+      "secondsStart": 93.4765536022361,
+      "secondsEnd": 93.83217561494574,
+      "kind": "wave-phase",
+      "wave": 3590,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8974089267141477,
+      "productionEnd": 0.8975005723930686,
+      "secondsStart": 93.83217561494574,
+      "secondsEnd": 93.90035743312757,
+      "kind": "wave-phase",
+      "wave": 3590,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8975005723930686,
+      "productionEnd": 0.8975505609452072,
+      "secondsStart": 93.90035743312757,
+      "secondsEnd": 93.96702409979423,
+      "kind": "wave-phase",
+      "wave": 3591,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8975505609452072,
+      "productionEnd": 0.8976255437734152,
+      "secondsStart": 93.96702409979423,
+      "secondsEnd": 96.41342274835462,
+      "kind": "wave-phase",
+      "wave": 3591,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8976255437734152,
+      "productionEnd": 0.8978254979819698,
+      "secondsStart": 96.41342274835462,
+      "secondsEnd": 96.76904476106427,
+      "kind": "wave-phase",
+      "wave": 3591,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8978254979819698,
+      "productionEnd": 0.8979171436608906,
+      "secondsStart": 96.76904476106427,
+      "secondsEnd": 96.83722657924609,
+      "kind": "wave-phase",
+      "wave": 3591,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8979171436608906,
+      "productionEnd": 0.8979671322130293,
+      "secondsStart": 96.83722657924609,
+      "secondsEnd": 96.90389324591276,
+      "kind": "wave-phase",
+      "wave": 3592,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8979671322130293,
+      "productionEnd": 0.8980421150412372,
+      "secondsStart": 96.90389324591276,
+      "secondsEnd": 99.2817001697306,
+      "kind": "wave-phase",
+      "wave": 3592,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8980421150412372,
+      "productionEnd": 0.8982420692497918,
+      "secondsStart": 99.2817001697306,
+      "secondsEnd": 99.63732218244024,
+      "kind": "wave-phase",
+      "wave": 3592,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8982420692497918,
+      "productionEnd": 0.8983337149287126,
+      "secondsStart": 99.63732218244024,
+      "secondsEnd": 99.70550400062207,
+      "kind": "wave-phase",
+      "wave": 3592,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8983337149287126,
+      "productionEnd": 0.8983837034808513,
+      "secondsStart": 99.70550400062207,
+      "secondsEnd": 99.77217066728873,
+      "kind": "wave-phase",
+      "wave": 3593,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8983837034808513,
+      "productionEnd": 0.8984586863090592,
+      "secondsStart": 99.77217066728873,
+      "secondsEnd": 101.82988634354798,
+      "kind": "wave-phase",
+      "wave": 3593,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8984586863090592,
+      "productionEnd": 0.8986586405176138,
+      "secondsStart": 101.82988634354798,
+      "secondsEnd": 102.18550835625763,
+      "kind": "wave-phase",
+      "wave": 3593,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8986586405176138,
+      "productionEnd": 0.8987502861965346,
+      "secondsStart": 102.18550835625763,
+      "secondsEnd": 102.25369017443946,
+      "kind": "wave-phase",
+      "wave": 3593,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8987502861965346,
+      "productionEnd": 0.8988002747486733,
+      "secondsStart": 102.25369017443946,
+      "secondsEnd": 102.32035684110612,
+      "kind": "wave-phase",
+      "wave": 3594,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8988002747486733,
+      "productionEnd": 0.8988752575768812,
+      "secondsStart": 102.32035684110612,
+      "secondsEnd": 104.62957204018143,
+      "kind": "wave-phase",
+      "wave": 3594,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8988752575768812,
+      "productionEnd": 0.8990752117854358,
+      "secondsStart": 104.62957204018143,
+      "secondsEnd": 104.98519405289107,
+      "kind": "wave-phase",
+      "wave": 3594,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8990752117854358,
+      "productionEnd": 0.8991668574643567,
+      "secondsStart": 104.98519405289107,
+      "secondsEnd": 105.0533758710729,
+      "kind": "wave-phase",
+      "wave": 3594,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8991668574643567,
+      "productionEnd": 0.8992168460164953,
+      "secondsStart": 105.0533758710729,
+      "secondsEnd": 105.12004253773956,
+      "kind": "wave-phase",
+      "wave": 3595,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8992168460164953,
+      "productionEnd": 0.8992918288447033,
+      "secondsStart": 105.12004253773956,
+      "secondsEnd": 107.43730300222362,
+      "kind": "wave-phase",
+      "wave": 3595,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8992918288447033,
+      "productionEnd": 0.8994917830532578,
+      "secondsStart": 107.43730300222362,
+      "secondsEnd": 108.59219073342743,
+      "kind": "wave-phase",
+      "wave": 3595,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8994917830532578,
+      "productionEnd": 0.8995834287321787,
+      "secondsStart": 108.59219073342743,
+      "secondsEnd": 108.66037255160924,
+      "kind": "wave-phase",
+      "wave": 3595,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.8995834287321787,
+      "productionEnd": 0.8996334172843172,
+      "secondsStart": 108.66037255160924,
+      "secondsEnd": 110.16037255160924,
+      "kind": "wave-phase",
+      "wave": 3596,
+      "phase": "staged"
+    },
+    {
+      "productionStart": 0.8996334172843172,
+      "productionEnd": 0.8997084001125251,
+      "secondsStart": 110.16037255160924,
+      "secondsEnd": 127.37366600864058,
+      "kind": "wave-phase",
+      "wave": 3596,
+      "phase": "hoist"
+    },
+    {
+      "productionStart": 0.8997084001125251,
+      "productionEnd": 0.8999083543210793,
+      "secondsStart": 127.37366600864058,
+      "secondsEnd": 150.82677070385645,
+      "kind": "wave-phase",
+      "wave": 3596,
+      "phase": "transfer"
+    },
+    {
+      "productionStart": 0.8999083543210793,
+      "productionEnd": 0.9,
+      "secondsStart": 150.82677070385645,
+      "secondsEnd": 154.42677070385625,
+      "kind": "wave-phase",
+      "wave": 3596,
+      "phase": "lower"
+    },
+    {
+      "productionStart": 0.9,
+      "productionEnd": 1,
+      "secondsStart": 154.42677070385625,
+      "secondsEnd": 160.42677070385625,
+      "kind": "hold",
+      "wave": null,
+      "phase": null
+    }
+  ]
+}

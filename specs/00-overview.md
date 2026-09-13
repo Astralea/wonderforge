@@ -7,16 +7,37 @@ Wonder construction movies. It presents authored, procedural miniature worlds
 in real-time 3D: a camera circles a living construction site while daylight
 moves from dawn to dusk and the monument is assembled by visible human labor.
 
-The first production-quality scene is the **Pyramids of Giza**. The remaining
-catalog stays navigable, but Giza is the reference scene and the only scene that
-must meet the full physical-construction quality bar in this milestone.
+The first production-quality scene is the **Pyramids of Giza**. It remains the
+quality bar. **Stonehenge** is the first additive replication. **Petra** is
+the first subtractive replication: Al-Khazneh is carved from living sandstone
+rather than stacked. **Colosseum** is the second additive replication: a
+freestanding Flavian amphitheatre of travertine, tuff, and concrete vaults.
+**Sydney Opera House** is the third additive replication: a harbour podium,
+precast spherical-section ribs, tower cranes, and ceramic tile skins.
+**Eiffel Tower** is the fourth additive replication: puddled-iron lattice
+pylons raised with creeper cranes on the Champ de Mars.
+The remaining three catalog entries stay navigable through their fallbacks.
+
+## Primary platform
+
+Desktop is the intended experience (owner clarification2026-09-12). Prioritize
+desktop composition, visual detail and interaction quality. Mobile gets modest
+responsive accommodations for readable text and usable controls; it does not
+require feature or visual parity and should not drive extensive separate work.
 
 ## Experience flow
 
-1. Hero / landing — one cinematic brand signal and one gallery CTA.
-2. Wonder gallery — the existing ten-wonder catalog and stable deep links.
+1. Home — one full-bleed Giza diorama. A title plate (brand, headline,
+   sentence, "Enter the gallery") crossfades into the ten-wonder catalog
+   over the same picture; there is no page scroll between them.
+2. Wonder catalog — the existing ten-wonder index and stable deep links.
 3. Cinematic view — quarrying, dressing, hauling, raising, aligning, and
-   seating happen across one deterministic 60-second construction movie.
+   seating happen across a deterministic construction movie. Eiffel includes
+   longer working chapters with playback speed controls; other scenes retain
+   their existing timelines.
+   A wonder-owned score plays when a reviewed Lyria cue exists (Giza,
+   Stonehenge, Colosseum, Sydney, Eiffel); otherwise the movie is silent.
+   Optional ElevenLabs narration reads authored captions.
 4. Info overlay — name, location, era, authentic attributed quote, facts,
    replay, scrub, and next/previous navigation.
 
@@ -28,7 +49,7 @@ must meet the full physical-construction quality bar in this milestone.
 | M2 Vector prototype | Canvas 2D renderer and ten procedural silhouettes | Superseded |
 | M3 Physical 3D foundation | Three.js/WebGL renderer, material and lighting pipeline, diagnostics | Active |
 | M4 Giza reference scene | Layered environment plus individual-stone construction logistics | Active |
-| M5 Replication | Apply the proven physical scene pipeline to the other nine wonders | Future |
+| M5 Replication | Apply the proven physical scene pipeline; Stonehenge, Petra, Colosseum | Active |
 
 ## Non-goals
 

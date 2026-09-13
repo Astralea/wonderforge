@@ -1,0 +1,24 @@
+{
+  "model": "lyria-3-pro-preview",
+  "crossfadeSeconds": 5,
+  "distinctLongSourceSeconds": 855.075979,
+  "detailedTempoFactor": 1.0309240178905459,
+  "shortTempoFactor": 0.8203900444444444,
+  "repeatedSource": false,
+  "deliveries": [
+    {
+      "src": "/audio/eiffel-tower-detailed.mp3",
+      "duration": 829.426771,
+      "bytes": 15156981,
+      "sha256": "b0184707bf5f1acd11741460ba02caa38d419a532d74cf5719394522e6ab9125",
+      "lufs": -18.0
+    },
+    {
+      "src": "/audio/eiffel-tower-short.mp3",
+      "duration": 179.978521,
+      "bytes": 3276789,
+      "sha256": "3069f1a9a9f9fc2569ed155c1cb6373e3b0c32c7a0422e3da0c7c4652ad8aa70",
+      "lufs": -18.1
+    }
+  ]
+}

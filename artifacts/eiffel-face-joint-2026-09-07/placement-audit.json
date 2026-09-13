@@ -1,0 +1,53 @@
+{
+  "sourceManifestSHA256": "0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c",
+  "candidateSHA256": "292cea3c72451782f7da641d5f970c4d4f192835f2c31b16a84272a5bd2aa5cb",
+  "final": {
+    "testedTowerSolids": 13813,
+    "clashes": []
+  },
+  "selfClashes": [],
+  "insertion": {
+    "translation": 0.4,
+    "direction": [
+      0.8466365492110048,
+      0.5321715452183459,
+      0
+    ],
+    "method": "Exact fixed-orientation convex translation sweep",
+    "clashes": []
+  },
+  "preinstalledPlate": {
+    "samples": 4601,
+    "stepSeconds": 0.01,
+    "beam": "lower-ne-02-m012-c001",
+    "clashes": [
+      {
+        "piece": "lower-ne-02-m015-c000",
+        "seconds": 44.61,
+        "depth": 0.0865186420608491
+      },
+      {
+        "piece": "lower-ne-02-m015-c001",
+        "seconds": 44.84,
+        "depth": 0.11146015735780423
+      },
+      {
+        "piece": "lower-ne-02-m015-c003",
+        "seconds": 44.96,
+        "depth": 0.10759714891996826
+      },
+      {
+        "piece": "lower-ne-02-m015-c002",
+        "seconds": 44.96,
+        "depth": 0.09354160561986931
+      }
+    ]
+  },
+  "geometryAccepted": true,
+  "productionAdmitted": false,
+  "limits": [
+    "Geometry only. No ground-delivery or fastening admission.",
+    "Other original tower joint contacts remain unresolved.",
+    "Incoming beam clearance is sampled; it is sufficient to reject an observed intersecting order, not to prove all motion clear."
+  ]
+}

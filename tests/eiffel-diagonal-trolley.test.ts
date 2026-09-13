@@ -1,0 +1,36 @@
+import {readFileSync} from 'node:fs';
+import {BufferAttribute,Mesh,Object3D,Raycaster,Vector3} from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {describe,expect,it} from 'vitest';
+import type {EiffelKitManifest} from '../src/data/eiffelKitTypes';
+import {eiffelConvexBox,eiffelConvexPenetration,eiffelConvexSolid,eiffelConvexTranslationSweep,type EiffelConvexSolid} from '../src/engine/eiffelConvex';
+import {eiffelSolidBox} from '../src/engine/eiffelOccupancy';
+import type {RigidVec3 as V} from '../src/engine/eiffelRigid';
+
+type Prism={id:string;vertices:V[]};
+const folder='artifacts/eiffel-diagonal-trolley-2026-09-08/';
+const receiver=JSON.parse(readFileSync('artifacts/eiffel-diagonal-receiver-2026-09-08/design.json','utf8')) as {length:number;direction:[number,number];lateral:[number,number];shapes:Prism[];pickup:V};
+const manifest=JSON.parse(readFileSync('public/models/eiffel-construction-kit/tower-kit.manifest.json','utf8')) as EiffelKitManifest;
+const first=JSON.parse(readFileSync('artifacts/eiffel-first-floor-transfer-2026-09-08/bridge-design.json','utf8')) as {shapes:Prism[]};
+const second=JSON.parse(readFileSync('artifacts/eiffel-second-floor-supply-2026-09-08/bridge-design.json','utf8')) as {shapes:Prism[]};
+const faces=[[0,1,3,2],[4,6,7,5],[0,4,5,1],[2,3,7,6],[0,2,6,4],[1,5,7,3]] as const,[dx,dz]=receiver.direction,[nx,nz]=receiver.lateral;
+const frame=receiver.shapes.map(p=>({id:p.id,solid:eiffelConvexSolid(p.vertices,faces)}));
+const fixed=[...manifest.parts.filter(p=>p.stage<=45).map(p=>({id:p.id,solid:eiffelConvexBox(eiffelSolidBox(p,p.finalPose))})),...first.shapes.map(p=>({id:`first:${p.id}`,solid:eiffelConvexSolid(p.vertices,faces)})),...second.shapes.map(p=>({id:`second:${p.id}`,solid:eiffelConvexSolid(p.vertices,faces)})),...frame];
+const overlaps=(a:EiffelConvexSolid,b:EiffelConvexSolid)=>!a.min.some((v,k)=>v>b.max[k]!||a.max[k]!<b.min[k]!);
+const load=async(path=folder+'model/diagonal-trolley.glb')=>{const bytes=readFileSync(path);return(await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'')).scene;};
+const dispose=(root:Object3D)=>root.traverse(o=>{if(o instanceof Mesh)o.geometry.dispose();});
+const meshObb=(mesh:Mesh)=>{const a=mesh.geometry.getAttribute('position') as BufferAttribute,values:{u:number;y:number;n:number}[]=[];for(let i=0;i<a.count;i++){const p=new Vector3(a.getX(i),a.getY(i),a.getZ(i)).applyMatrix4(mesh.matrixWorld);values.push({u:p.x*dx+p.z*dz,y:p.y,n:p.x*nx+p.z*nz});}const lo=(k:'u'|'y'|'n')=>Math.min(...values.map(v=>v[k])),hi=(k:'u'|'y'|'n')=>Math.max(...values.map(v=>v[k])),cu=(lo('u')+hi('u'))/2,cy=(lo('y')+hi('y'))/2,cn=(lo('n')+hi('n'))/2;return eiffelConvexBox({center:[cu*dx+cn*nx,cy,cu*dz+cn*nz],half:[(hi('u')-lo('u'))/2,(hi('y')-lo('y'))/2,(hi('n')-lo('n'))/2],axes:[[dx,0,dz],[0,1,0],[nx,0,nz]]});};
+
+describe('Eiffel diagonal receiver trolley asset',()=>{
+ it('sweeps every actual mesh through the full diagonal travel with named wheel contact only',async()=>{const [asset,frameAsset]=await Promise.all([load(),load('artifacts/eiffel-diagonal-receiver-2026-09-08/model/diagonal-receiver-frame.glb')]);try{asset.updateMatrixWorld(true);frameAsset.updateMatrixWorld(true);const meshes:Mesh[]=[],railMeshes:Mesh[]=[];asset.traverse(o=>{if(o instanceof Mesh)meshes.push(o);});frameAsset.traverse(o=>{if(o instanceof Mesh&&String(o.userData.wf_source_id).startsWith('rail-'))railMeshes.push(o);});expect(meshes).toHaveLength(17);expect(railMeshes).toHaveLength(2);const counts=new Map<string,number>();for(const mesh of meshes){const id=String(mesh.userData.wf_part);counts.set(id,(counts.get(id)??0)+1);}expect(Object.fromEntries(counts)).toEqual({'axle-bearing':4,'sheave-flange':2,'sheave-groove':1,'sheave-hanger':2,'sheave-shaft':1,'trolley-axle':2,'trolley-topplate':1,'trolley-wheel':4});const failures:string[]=[],contacts:string[]=[];
+   for(const mesh of meshes){const moving=eiffelConvexTranslationSweep(meshObb(mesh),[dx*receiver.length,0,dz*receiver.length]);for(const obstacle of fixed){if(!overlaps(moving,obstacle.solid))continue;const depth=eiffelConvexPenetration(moving,obstacle.solid),rolling=mesh.userData.wf_part==='trolley-wheel'&&obstacle.id.startsWith('rail-');if(rolling){if(depth>2e-5)failures.push(`${mesh.name}:${obstacle.id}:${depth}`);}else if(depth>1e-6)failures.push(`${mesh.name}:${obstacle.id}:${depth}`);}
+    if(mesh.userData.wf_part==='trolley-wheel'){const wheel=meshObb(mesh),wc=(wheel.min[2]+wheel.max[2])/2,rail=frame.filter(x=>x.id.startsWith('rail-')).sort((a,b)=>Math.abs((a.solid.min[2]+a.solid.max[2])/2-wc)-Math.abs((b.solid.min[2]+b.solid.max[2])/2-wc))[0]!;expect(Math.abs(wheel.min[1]-rail.solid.max[1]),mesh.name).toBeLessThan(2e-5);contacts.push(`${mesh.name}:${rail.id}`);}}
+   expect(contacts).toHaveLength(4);const ray=new Raycaster(),supportFailures:string[]=[];for(const mesh of meshes.filter(m=>m.userData.wf_part==='trolley-wheel')){const wheel=meshObb(mesh),x=(wheel.min[0]+wheel.max[0])/2,z=(wheel.min[2]+wheel.max[2])/2,y=wheel.min[1];for(const fraction of[0,.25,.5,.75,1]){ray.set(new Vector3(x+dx*receiver.length*fraction,y+.1,z+dz*receiver.length*fraction),new Vector3(0,-1,0));const hit=ray.intersectObjects(railMeshes,false).find(h=>h.point.y<=y+1e-5);if(!hit||Math.abs(hit.point.y-y)>2e-5)supportFailures.push(`${mesh.name}:${fraction}:${hit?.point.y??'miss'}`);}}expect(supportFailures).toEqual([]);expect(failures).toEqual([]);
+  }finally{dispose(asset);dispose(frameAsset);}},30_000);
+
+ it('has real axle and sheave bores while both shafts occupy their axes',async()=>{const asset=await load();try{asset.updateMatrixWorld(true);const byPart=new Map<string,Mesh[]>();asset.traverse(o=>{if(o instanceof Mesh){const id=String(o.userData.wf_part),list=byPart.get(id)??[];list.push(o);byPart.set(id,list);}});const ray=new Raycaster(),axis=new Vector3(nx,0,nz),misses:string[]=[];
+   const rayHits=(mesh:Mesh,center:Vector3)=>{ray.set(center.clone().addScaledVector(axis,-1),axis);return ray.intersectObject(mesh,false).filter(h=>h.distance<2);};
+   const wheels=byPart.get('trolley-wheel')??[],bearings=byPart.get('axle-bearing')??[];expect(wheels).toHaveLength(4);expect(bearings).toHaveLength(4);for(const wheel of wheels){const solid=meshObb(wheel),center=new Vector3((solid.min[0]+solid.max[0])/2,121.495,(solid.min[2]+solid.max[2])/2);if(rayHits(wheel,center).length)misses.push(`${wheel.name}:filled-bore`);const bearing=bearings.sort((a,b)=>new Vector3().setFromMatrixPosition(a.matrixWorld).distanceTo(center)-new Vector3().setFromMatrixPosition(b.matrixWorld).distanceTo(center))[0]!;if(rayHits(bearing,center).length)misses.push(`${bearing.name}:filled-bore`);}
+   const sheaveCenter=new Vector3(receiver.pickup[0],121.35,receiver.pickup[2]);for(const id of['sheave-hanger','sheave-groove','sheave-flange'])for(const mesh of byPart.get(id)??[])if(rayHits(mesh,sheaveCenter).length)misses.push(`${mesh.name}:filled-bore`);for(const id of['trolley-axle','sheave-shaft'])for(const mesh of byPart.get(id)??[])if(!rayHits(mesh,id==='sheave-shaft'?sheaveCenter:new Vector3().setFromMatrixPosition(mesh.matrixWorld)).length)misses.push(`${mesh.name}:missing-shaft`);expect(misses).toEqual([]);
+  }finally{dispose(asset);}},30_000);
+});

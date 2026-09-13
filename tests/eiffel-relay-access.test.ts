@@ -1,0 +1,12 @@
+import{it,expect}from'vitest';
+import{EIFFEL_RELAY_ACCESS as d,sampleEiffelRelayAccessStep}from'../src/engine/eiffelRelayAccess';
+import{EIFFEL_FIRST_FLOOR_Y as F}from'../src/engine/eiffelFirstFloorSupply';
+it('keeps the mirrored platform clear of every incoming carrier pose',()=>{const platformMin=d.platformCenter[0]-d.platformSize[0]/2;for(let x=-21.5;x<=-8.5;x+=.1)expect(platformMin-(x+.22)).toBeGreaterThanOrEqual(.08-1e-9);});
+it('joins supported ascent, pin reach, closing and descent without reflected pose jumps',()=>{const steps=['ascent','reach-open-pin','close-connector','descent']as const;for(let i=1;i<steps.length;i++){const a=sampleEiffelRelayAccessStep(steps[i-1]!,1),b=sampleEiffelRelayAccessStep(steps[i]!,0);expect(a.roles).toEqual(b.roles);}for(const step of steps)for(const u of[0,.2,.5,.8,1])for(const r of sampleEiffelRelayAccessStep(step,u).roles){expect(Math.hypot(...r.quaternion)).toBeCloseTo(1,9);expect(r.position.every(Number.isFinite)).toBe(true);}});
+it('bears every new frame/ladder sole corner on the actual bridge planks and clears the parked cart',async()=>{
+ const{readFileSync}=await import('node:fs');const{GLTFLoader}=await import('three/addons/loaders/GLTFLoader.js');const{Mesh,Raycaster,Vector3,Box3}=await import('three');const bytes=readFileSync('public/models/eiffel-long-load-first-floor/bridge.glb');const root=(await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'')).scene;const timber:any[]=[];let cart:any;root.traverse(o=>{if(o.userData.wf_role==='bridge-timber')timber.push(o);if(o.userData.wf_role==='stock-cart')cart=o;});cart.position.set(-8.5,F,-4);root.updateMatrixWorld(true);const cartBox=new Box3().setFromObject(cart),ray=new Raycaster();
+ const feet=[...d.postXZ.map(([x,z])=>({x,z,width:d.soleWidth})),...d.ladderStileZ.map(z=>({x:d.ladderX,z,width:.1}))];
+ for(const foot of feet){for(const dx of[-foot.width/2,foot.width/2])for(const dz of[-foot.width/2,foot.width/2]){ray.set(new Vector3(foot.x+dx,F+.03,foot.z+dz),new Vector3(0,-1,0));const hit=ray.intersectObjects(timber,true)[0];expect(hit).toBeDefined();expect(hit!.point.y).toBeCloseTo(F,4);}}
+ for(const[x,z]of d.postXZ){const post=new Box3(new Vector3(x-.045,F,z-.045),new Vector3(x+.045,F+5.72,z+.045));expect(post.intersectsBox(cartBox)).toBe(false);}
+ root.traverse(o=>{if(o instanceof Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});
+});

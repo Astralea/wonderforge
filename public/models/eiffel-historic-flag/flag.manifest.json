@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "asset": "flag.glb",
+  "coordinates": "metres, Y up, local hoist top at origin",
+  "anchor": [
+    0.09,
+    310.9,
+    0
+  ],
+  "width": 8,
+  "height": 5,
+  "triangles": 720,
+  "stripes": [
+    "blue",
+    "white",
+    "red"
+  ],
+  "windAxis": "local Z",
+  "fixedHoistX": 0,
+  "interpretation": "Authored 8 by 5 m interpretation of the flag shown in Rouillard 1889; not a measured historical size.",
+  "source": "https://www.toureiffel.paris/en/news/history-and-culture/french-flag-eiffel-tower-powerful-symbol"
+}

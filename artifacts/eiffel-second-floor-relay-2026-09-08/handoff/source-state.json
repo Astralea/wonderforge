@@ -1,0 +1,131 @@
+{
+  "partId": "summit-access-stair-m000-c000",
+  "cartOrigin": [
+    -8.5,
+    57.94000244140625,
+    -4
+  ],
+  "carrierOrigin": [
+    -8.5,
+    58.280002441406246,
+    -4
+  ],
+  "masterOrigin": [
+    -8.5,
+    65.16250274658205,
+    -4
+  ],
+  "oldClevis": {
+    "role": "opening-clevis",
+    "position": [
+      -21.5,
+      65.31050274658205,
+      -4
+    ]
+  },
+  "bolts": [
+    {
+      "role": "cart-bolt-0",
+      "position": [
+        -8.66,
+        58.25000244140625,
+        -4
+      ],
+      "quaternion": [
+        0,
+        -4.898587196589413e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "role": "cart-bolt-1",
+      "position": [
+        -8.34,
+        58.25000244140625,
+        -4
+      ],
+      "quaternion": [
+        0,
+        -4.898587196589413e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "role": "cart-bolt-2",
+      "position": [
+        -8.5,
+        58.25000244140625,
+        -4.16
+      ],
+      "quaternion": [
+        0,
+        -4.898587196589413e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "role": "cart-bolt-3",
+      "position": [
+        -8.5,
+        58.25000244140625,
+        -3.84
+      ],
+      "quaternion": [
+        0,
+        -4.898587196589413e-16,
+        0,
+        1
+      ]
+    }
+  ],
+  "chock": {
+    "role": "cart-chock",
+    "position": [
+      -8.146,
+      57.94000244140625,
+      -4.38
+    ]
+  },
+  "payloads": [
+    {
+      "position": [
+        0,
+        3.0762500762939453,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "partId": "summit-access-stair-m000-c000"
+    }
+  ],
+  "assets": [
+    {
+      "file": "public/models/eiffel-long-load-first-floor/carrier.glb",
+      "sha256": "999ed0fb6ce3e2942716442d96b404177bb30726060c17405b048bdf275e54b2"
+    },
+    {
+      "file": "public/models/eiffel-long-load-first-floor/closed-sling.glb",
+      "sha256": "a97656a66caa97fa6f13fc6c7c3d6cf3542348027c8cb32300e40d08b1516461"
+    },
+    {
+      "file": "public/models/eiffel-long-load-first-floor/onward.glb",
+      "sha256": "ab0422496a275de59092cbeeccd423c11aeb81aeb9f8f1994386abf4a7ab42fd"
+    },
+    {
+      "file": "public/models/eiffel-long-load-first-floor/bridge.glb",
+      "sha256": "fe820856a652d9a18320026c14f752935e83ff67247870817c48deb6da73ceeb"
+    }
+  ]
+}

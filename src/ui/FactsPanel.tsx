@@ -14,7 +14,7 @@ export function FactsPanel({
   if (!open) return null;
 
   return (
-    <aside className="absolute inset-y-0 right-0 w-full max-w-sm overflow-y-auto border-l border-white/10 bg-umber-950/85 p-8 pt-20 backdrop-blur-md">
+    <aside className="absolute inset-y-0 right-0 z-30 w-full max-w-sm overflow-y-auto border-l border-white/10 bg-umber-950/85 p-8 pt-20 backdrop-blur-md">
       <button
         aria-label="Close facts"
         onClick={onClose}

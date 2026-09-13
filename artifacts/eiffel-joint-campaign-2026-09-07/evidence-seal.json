@@ -1,0 +1,21 @@
+{
+  "status": "admitted-two-load-route",
+  "note": "Dense .02s audit and exact cart gate precede admission flag/comments only; no pose or rig geometry changed after these passes. Swept check uses conservative complete translation enclosures. Curved motions remain densely sampled, not a formal continuous collision proof. 2026-09-13: eiffelJointFastening.ts handle travel was enlarged for the spoken close-up; plates, bolt face contact and sealed routes are unchanged.",
+  "sha256": {
+    "src/engine/eiffelJointCampaign.ts": "ffc87ef9fab9eeafcae328cecfe4207cae7b9b8b228ac2bb816ae763a118218a",
+    "src/engine/eiffelJointFastening.ts": "d819f31c72a4d65c0589337b8fef4f4a1f499d29fc82d0741a57357054bfb968",
+    "artifacts/eiffel-joint-campaign-2026-09-07/campaign-routes.json": "217aced874364d597206a4581f39c726020eb36299bf7b2e50b309dbcf1b302a",
+    "artifacts/eiffel-joint-campaign-2026-09-07/joint-support.json": "17d57198ca8f0f543fa0f8aabba9e5b59d87d4aea47302deaaf4807b26f344a3",
+    "artifacts/eiffel-integration-2026-09-07/crane-primitives.json": "0f98de6c4ff63e67083640826ac02afe3b215eb936c5e68e968e9fc9e006bcf9",
+    "artifacts/eiffel-integration-2026-09-07/guyenet-ne-station.json": "4af2f610eeceee7c93b58bd7837c843681fe87be259c1e642b3ed68135df2747",
+    "public/models/eiffel-construction-kit/tower-kit.manifest.json": "0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c",
+    "public/models/eiffel-guyenet-ne/crane.glb": "99d9a5f0495cdec26a6699ac79b22c04fddb16da60cbad49aac52b2a0bfff806",
+    "public/models/eiffel-joint-campaign/cart.glb": "6063193d71c9db04e8fc511328a0e220520d3bb176b30f4529ee24ff2873d2e4",
+    "public/models/eiffel-joint-campaign/support.glb": "f68c176c04689cdc8b0a05ba663caecf9a002865a189bd6fee66c49a66f4393e",
+    "public/models/eiffel-joint-campaign/splice.glb": "0f69178a26a575e57ff0777566f73b1591e39ce0e82dc9a2825b621329913a64",
+    "artifacts/eiffel-joint-campaign-2026-09-07/campaign-audit.json": "0698ea079f1f934ab6ba63cf0334c5cee10da5a825b7633302a433626a529684",
+    "artifacts/eiffel-joint-campaign-2026-09-07/campaign-swept-audit.json": "6f534fbb03d5f31cd30a175a217638c2a7a1b4352a1ba9efa9b94a7621392196",
+    "artifacts/eiffel-joint-campaign-2026-09-07/cart-geometry-audit.json": "8aa97147689f27968b7dbe42b0931350fca7bbcf52de5afd4a6f9e5b92335abe",
+    "artifacts/eiffel-joint-campaign-2026-09-07/splice-mass.json": "05660a3f478864c38f6d6a6ae16fe5d34f5a181e37cfbc0da7f817c9ede5680c"
+  }
+}

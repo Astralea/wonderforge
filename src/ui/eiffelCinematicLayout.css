@@ -1,0 +1,47 @@
+.eiffel-chapters-toggle {
+  display: none;
+}
+.eiffel-story-focus .eiffel-chapter-caption {
+  top: calc(6vh + 1rem);
+  bottom: auto;
+}
+/* Use the existing black footer as control space; do not shrink touch targets. */
+.eiffel-story-focus [aria-label='Cinematic controls'] {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.eiffel-story-focus div:has(> [aria-label='Cinematic controls']) {
+  bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 767px) {
+  .eiffel-story-focus [data-testid='cinematic-top-chrome'] {
+    top: 0;
+    right: 0.5rem;
+    left: auto;
+    align-items: flex-end;
+    padding-inline: 0;
+  }
+  .eiffel-story-focus .eiffel-chapters-toggle {
+    display: block;
+    height: 6vh;
+  }
+  .eiffel-story-focus .eiffel-compact-index-nav:not([data-expanded='true']) {
+    display: none;
+  }
+  .eiffel-story-focus .eiffel-compact-index-nav[data-expanded='true'] {
+    max-height: min(22rem, 60dvh);
+    max-width: calc(100vw - 1rem);
+    padding: 0.75rem 1rem;
+    background: rgb(20 16 12 / 95%);
+  }
+  .eiffel-story-focus[data-chapters-open='true'] .eiffel-chapter-caption {
+    visibility: hidden;
+  }
+  .eiffel-story-focus .eiffel-chapter-caption {
+    left: 1.25rem;
+    right: 1.25rem;
+    width: auto;
+    padding: 0.6rem 0.8rem;
+  }
+}

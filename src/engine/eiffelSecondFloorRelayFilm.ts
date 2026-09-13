@@ -1,0 +1,1 @@
+export{EIFFEL_SECOND_FLOOR_RELAY_SEQUENCE_DURATION as EIFFEL_SECOND_FLOOR_RELAY_FILM_DURATION,sampleEiffelSecondFloorRelaySequence as sampleEiffelSecondFloorRelayFilm}from'./eiffelSecondFloorRelaySequence';

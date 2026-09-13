@@ -91,8 +91,17 @@ The renderer queries that unit once per frame so dependents cannot drift apart.
 
 Existing JSON documents remain the catalog source for content and temporary
 fallback silhouettes. Their generic component generators are not evidence that
-a reference scene meets this specification. Each future upgrade replaces a
-legacy monument with typed physical construction data while preserving its ID.
+a reference scene meets this specification. Each upgrade replaces a legacy
+monument with typed physical construction data while preserving its ID.
+Stonehenge is the first such replication and uses target-specific upright/pit
+and lintel/crib state graphs rather than forcing its mechanics into Giza's
+masonry phases. Petra is the second and uses remaining-rock members plus
+spoil-cell haul rather than Giza ramps or Stonehenge pits. The Colosseum is
+the third and uses wagon haul plus treadwheel cranes for a freestanding
+elliptical amphitheatre. Sydney Opera House is the fourth and uses on-site
+precast ribs, tower cranes, and ceramic tile skins on a harbour podium.
+The Eiffel Tower is the fifth and uses wagon haul plus creeper cranes for
+four inward-leaning puddled-iron lattice pylons on the Champ de Mars.
 
 ## Validation
 

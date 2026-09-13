@@ -87,6 +87,16 @@ export interface SkyDomeDescription {
   hazeFalloff: number;
   /** Below-horizon color so the dome never shows void under the terrain. */
   groundHaze: string;
+  /**
+   * Very low-frequency, world-directional variation in the desert aerosol.
+   * It is masked out of the upper zenith and never animated, so it adds depth
+   * without reading as a painted cloud texture or flickering while orbiting.
+   */
+  atmosphericTexture: {
+    scale: number;
+    strength: number;
+    description: string;
+  };
   description: string;
 }
 
@@ -175,6 +185,12 @@ export const GIZA_SKY: GizaSkyDescription = {
     zenithExponent: 0.55,
     hazeFalloff: 8.5,
     groundHaze: '#b89a6e',
+    atmosphericTexture: {
+      scale: 15,
+      strength: 0.09,
+      description:
+        'Subtle, fixed directional variation in dust and dry aerosol across the low desert sky; it adds depth below the zenith without becoming a cloud map.',
+    },
     description:
       'Analytical gradient dome: horizon-to-zenith gradient, dust haze band, ' +
       'and sun disc/halo computed per fragment from the world-space sun ' +

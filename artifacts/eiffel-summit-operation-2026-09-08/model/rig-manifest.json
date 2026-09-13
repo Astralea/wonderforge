@@ -1,0 +1,763 @@
+{
+  "schemaVersion": 1,
+  "status": "separate Blender mechanical candidate; rope feed and contact admission pending",
+  "sourceV9": "artifacts/eiffel-gin-pole-climb-2026-09-08/blender/eiffel-summit-gin-pole-climb.blend",
+  "coordinates": "metres Y up",
+  "head": {
+    "poleBase": [
+      -0.9,
+      300.9,
+      0
+    ],
+    "heelY": 307.05,
+    "jibLength": 5.7,
+    "heelOffsetX": 0.3,
+    "maximumPlanarReach": 6,
+    "fixedFrameHalfWidth": 0.09,
+    "tipSheaveLocal": [
+      5.7,
+      0,
+      0.49517673612559787
+    ],
+    "annularPitchRadius": 0.49152822909778027,
+    "sideFeed": 0.49517673612559787,
+    "heelGuideLocal": [
+      0.06,
+      0.3,
+      0.49517673612559787
+    ]
+  },
+  "cargoDrive": {
+    "supportPartId": "summit-crown-m073-c000",
+    "shoeBottomY": 302.0325005054474,
+    "drumCenter": [
+      0.25,
+      303.01,
+      0.12
+    ],
+    "coreRadius": 0.1,
+    "flangeRadius": 0.24,
+    "clearWindingWidth": 0.16,
+    "ropeDiameter": 0.012,
+    "windingPitch": 0.0122,
+    "turnsPerLayer": 12,
+    "maximumTraverse": 0.0732,
+    "inventoryRole": "dynamic conserved winding only; no full reference rings",
+    "traverseCamSource": "rope/traverse-cam.json",
+    "westRiser": [
+      -1.26,
+      303.46,
+      -0.34
+    ]
+  },
+  "cart": {
+    "floorY": 280.5899952,
+    "parentPose": [
+      -6.4701368053,
+      281.0400000036,
+      0
+    ],
+    "tailPivot": [
+      -6.4701368053,
+      281.0400000036,
+      -2.0333333333
+    ],
+    "wheelRadius": 0.16,
+    "wheelOffsets": [
+      [
+        -0.3,
+        -2.45
+      ],
+      [
+        -0.3,
+        2.45
+      ],
+      [
+        0.3,
+        -2.45
+      ],
+      [
+        0.3,
+        2.45
+      ]
+    ],
+    "saddleTopY": 280.95000000360005,
+    "tailPin": "two opposed retractable stub axles, each outside the solid mast; no central through-pin"
+  },
+  "worker": {
+    "futureClimbCrankGripCenter": [
+      0.73,
+      306.86,
+      -0.12
+    ],
+    "crankAxisCenter": [
+      0.73,
+      306.7,
+      -0.12
+    ],
+    "crankRadius": 0.16,
+    "grabrailGrip": [
+      0.3,
+      306.55,
+      -0.43
+    ]
+  },
+  "luff": {
+    "drumYawLocal": [
+      -0.15,
+      0.6,
+      0
+    ],
+    "topGuideYawLocal": [
+      -0.2,
+      1.13,
+      0
+    ],
+    "blockPitchLocal": [
+      5.25,
+      0.34,
+      0
+    ],
+    "becketYawLocal": [
+      0.16,
+      1.0,
+      0
+    ],
+    "controlStatus": "positive winch and ratchet authored; visible crew and inventory not admitted"
+  },
+  "limits": [
+    "No structural load certification",
+    "New head feed reeving awaits geometric admission",
+    "Cart fixture and full cargo sweep require exported mesh checks",
+    "Not a photogrammetric reconstruction or certified historical crane"
+  ],
+  "roles": {
+    "gin-pole-system": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": null
+    },
+    "moving-pole": {
+      "position": [
+        -0.8999999761581421,
+        300.8999938964844,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-0-fixed": {
+      "position": [
+        0.0,
+        301.8500061035156,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-0-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-0-fixed"
+    },
+    "guide-0-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-0-north-leaf"
+    },
+    "guide-0-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-0-fixed"
+    },
+    "guide-0-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-0-south-leaf"
+    },
+    "guide-1-fixed": {
+      "position": [
+        0.0,
+        302.29998779296875,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-1-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-1-fixed"
+    },
+    "guide-1-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-1-north-leaf"
+    },
+    "guide-1-axial-pin": {
+      "position": [
+        -0.5,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-1-north-leaf"
+    },
+    "guide-1-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-1-fixed"
+    },
+    "guide-1-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-1-south-leaf"
+    },
+    "guide-2-fixed": {
+      "position": [
+        0.0,
+        305.76666259765625,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-2-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-2-fixed"
+    },
+    "guide-2-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-2-north-leaf"
+    },
+    "guide-2-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-2-fixed"
+    },
+    "guide-2-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-2-south-leaf"
+    },
+    "guide-3-fixed": {
+      "position": [
+        0.0,
+        306.9666748046875,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "guide-3-north-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-3-fixed"
+    },
+    "guide-3-north-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "guide-3-north-leaf"
+    },
+    "guide-3-axial-pin": {
+      "position": [
+        -0.5,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-3-north-leaf"
+    },
+    "guide-3-south-leaf": {
+      "position": [
+        -0.4000000059604645,
+        0.0,
+        -0.0
+      ],
+      "parent": "guide-3-fixed"
+    },
+    "guide-3-south-latch": {
+      "position": [
+        -0.07999999821186066,
+        0.0,
+        -0.12999999523162842
+      ],
+      "parent": "guide-3-south-leaf"
+    },
+    "climb-drive-fixed": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "climb-winch-drum": {
+      "position": [
+        0.25,
+        306.9100036621094,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-output-gear": {
+      "position": [
+        0.3700000047683716,
+        306.9100036621094,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-input-crank": {
+      "position": [
+        0.3700000047683716,
+        306.70001220703125,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-ratchet-wheel": {
+      "position": [
+        0.12999999523162842,
+        306.9100036621094,
+        -0.11999999731779099
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-pawl": {
+      "position": [
+        0.12999999523162842,
+        307.010009765625,
+        -0.18000000715255737
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-west-fairlead": {
+      "position": [
+        -1.0199999809265137,
+        307.20001220703125,
+        0.3400000035762787
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-east-fairlead": {
+      "position": [
+        0.25,
+        307.0400085449219,
+        0.2800000011920929
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "climb-east-upper-fairlead": {
+      "position": [
+        0.1899999976158142,
+        307.2200012207031,
+        0.3400000035762787
+      ],
+      "parent": "climb-drive-fixed"
+    },
+    "mast-access-ladder": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "cargo-jib-yaw": {
+      "position": [
+        0.0,
+        6.150000095367432,
+        -0.0
+      ],
+      "parent": "moving-pole"
+    },
+    "cargo-jib-pitch": {
+      "position": [
+        0.30000001192092896,
+        0.0,
+        -0.0
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "cargo-luff-swivel": {
+      "position": [
+        0.0,
+        1.0499999523162842,
+        -0.0
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "cargo-tip-sheave": {
+      "position": [
+        5.699999809265137,
+        0.0,
+        0.4951767325401306
+      ],
+      "parent": "cargo-jib-pitch"
+    },
+    "cargo-annular-feed": {
+      "position": [
+        0.0,
+        5.96999979019165,
+        -0.0
+      ],
+      "parent": "moving-pole"
+    },
+    "cargo-fixed-head-entry": {
+      "position": [
+        -0.39560839533805847,
+        5.909999847412109,
+        -0.291708767414093
+      ],
+      "parent": "moving-pole"
+    },
+    "cargo-yaw-head-exit": {
+      "position": [
+        -0.05955791473388672,
+        -0.11999999731779099,
+        0.4879066050052643
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "cargo-heel-feed": {
+      "position": [
+        0.05999999865889549,
+        0.30000001192092896,
+        0.4951767325401306
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "cargo-luff-head-sheave": {
+      "position": [
+        -0.20000000298023224,
+        0.07999999821186066,
+        -0.0
+      ],
+      "parent": "cargo-luff-swivel"
+    },
+    "cargo-luff-moving-block": {
+      "position": [
+        5.25,
+        0.3400000035762787,
+        -0.0
+      ],
+      "parent": "cargo-jib-pitch"
+    },
+    "cargo-drive-fixed": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "cargo-east-fairlead": {
+      "position": [
+        0.25,
+        303.1400146484375,
+        0.5799999833106995
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-east-upper-fairlead": {
+      "position": [
+        0.1899999976158142,
+        303.32000732421875,
+        0.6399999856948853
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-west-horizontal-fairlead": {
+      "position": [
+        -1.1799999475479126,
+        303.3800048828125,
+        0.5600000023841858
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-west-fairlead": {
+      "position": [
+        -1.2599999904632568,
+        303.4599914550781,
+        -0.25999999046325684
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-output-shaft": {
+      "position": [
+        0.25,
+        303.010009765625,
+        0.11999999731779099
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-winch-drum": {
+      "position": [
+        0.31709998846054077,
+        303.010009765625,
+        0.11999999731779099
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-drum-carriage": {
+      "position": [
+        0.31709998846054077,
+        303.010009765625,
+        0.11999999731779099
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-traverse-follower": {
+      "position": [
+        0.0,
+        -0.3370000123977661,
+        0.30000001192092896
+      ],
+      "parent": "cargo-drum-carriage"
+    },
+    "cargo-output-gear": {
+      "position": [
+        0.5899999737739563,
+        303.010009765625,
+        0.11999999731779099
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-input-crank": {
+      "position": [
+        0.5899999737739563,
+        302.79998779296875,
+        0.11999999731779099
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-ratchet-wheel": {
+      "position": [
+        0.6499999761581421,
+        303.010009765625,
+        0.11999999731779099
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-pawl": {
+      "position": [
+        0.6499999761581421,
+        303.1099853515625,
+        0.05999999865889549
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-drum-rope-inventory": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "cargo-winch-drum"
+    },
+    "cargo-traverse-cam": {
+      "position": [
+        0.25,
+        302.6400146484375,
+        0.41999998688697815
+      ],
+      "parent": "cargo-drive-fixed"
+    },
+    "cargo-traverse-drive-sprocket": {
+      "position": [
+        0.20000000298023224,
+        0.0,
+        -0.0
+      ],
+      "parent": "cargo-output-shaft"
+    },
+    "cargo-traverse-cam-sprocket": {
+      "position": [
+        0.20000000298023224,
+        0.0,
+        -0.0
+      ],
+      "parent": "cargo-traverse-cam"
+    },
+    "cargo-luff-drum": {
+      "position": [
+        -0.15000000596046448,
+        0.6000000238418579,
+        -0.0
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "cargo-luff-output-wheel": {
+      "position": [
+        0.0,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "cargo-luff-drum"
+    },
+    "cargo-luff-input": {
+      "position": [
+        0.029999999329447746,
+        0.6000000238418579,
+        -0.0
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "cargo-luff-input-wheel": {
+      "position": [
+        0.0,
+        0.0,
+        0.12999999523162842
+      ],
+      "parent": "cargo-luff-input"
+    },
+    "cargo-luff-ratchet": {
+      "position": [
+        0.0,
+        0.0,
+        -0.1599999964237213
+      ],
+      "parent": "cargo-luff-drum"
+    },
+    "cargo-luff-pawl": {
+      "position": [
+        -0.20999999344348907,
+        0.699999988079071,
+        -0.1599999964237213
+      ],
+      "parent": "cargo-jib-yaw"
+    },
+    "terrace-cargo-cart": {
+      "position": [
+        -6.470136642456055,
+        280.5899963378906,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "cargo-cart-wheel--0.3--2.45": {
+      "position": [
+        -0.30000001192092896,
+        0.1599999964237213,
+        -2.450000047683716
+      ],
+      "parent": "terrace-cargo-cart"
+    },
+    "cargo-cart-wheel-0.3--2.45": {
+      "position": [
+        0.30000001192092896,
+        0.1599999964237213,
+        -2.450000047683716
+      ],
+      "parent": "terrace-cargo-cart"
+    },
+    "cargo-cart-wheel--0.3-2.45": {
+      "position": [
+        -0.30000001192092896,
+        0.1599999964237213,
+        2.450000047683716
+      ],
+      "parent": "terrace-cargo-cart"
+    },
+    "cargo-cart-wheel-0.3-2.45": {
+      "position": [
+        0.30000001192092896,
+        0.1599999964237213,
+        2.450000047683716
+      ],
+      "parent": "terrace-cargo-cart"
+    },
+    "cargo-tail-pin": {
+      "position": [
+        0.0,
+        0.45000481605529785,
+        -2.0333333015441895
+      ],
+      "parent": "terrace-cargo-cart"
+    },
+    "cargo-tail-pin-negative": {
+      "position": [
+        0.0,
+        0.45000481605529785,
+        -2.0333333015441895
+      ],
+      "parent": "terrace-cargo-cart"
+    },
+    "cargo-tail-collar": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "cargo-upper-collar": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "cargo-travelling-block": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "gin-pole-system"
+    },
+    "cargo-lower-load-sheave": {
+      "position": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "parent": "cargo-travelling-block"
+    }
+  },
+  "objects": 1099,
+  "meshes": 1021,
+  "assetSHA256": "a5a2a96ede7dd1d1f8b37573e85ba6118bee0226a8ad2bc7ea552eee194a6d82"
+}

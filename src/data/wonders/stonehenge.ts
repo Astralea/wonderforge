@@ -21,6 +21,6 @@ export const stonehenge: Wonder = {
     'The smaller bluestones were transported from the Preseli Hills in Wales, over 200 km away.',
     'The monument is aligned to the summer solstice sunrise and winter solstice sunset.',
   ],
-  palette: { ground: '#5d7a4a', primary: '#8d8d84', accent: '#6f6f66', sky: '#7fa8c9' },
+  palette: { ground: '#66794a', primary: '#8d8d84', accent: '#5c6a70', sky: '#7895ad' },
   structure: getCompiledScene('stonehenge')!.structure,
 };

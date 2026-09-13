@@ -1,0 +1,13 @@
+{
+  "scope": "Actual captured crane box/beam OBBs and conservative cylinders; active ropes; both payload identities; both cart beds and conservative wheel cylinders. All1,900 initial completed box solids +219 original falsework +jointextension. Payload final joint overlap allowed only on final lowering/slide; crew, splice insertion, exact cartunderframe and crane internal self-collision excluded.",
+  "step": 0.02,
+  "samples": 6751,
+  "completed": 1900,
+  "structure": 245,
+  "rigPrimitives": 623,
+  "minRope": 1.4718016716880342,
+  "minReach": 5.700000063411868,
+  "maxReach": 10.3721947793063,
+  "maxYaw": 119.99999606423137,
+  "findings": []
+}

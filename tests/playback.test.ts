@@ -1,12 +1,20 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { WONDERS } from '../src/data';
 import { createInitialState, usePlaybackStore } from '../src/store/playback';
+import { eiffelFilmEditDuration } from '../src/engine/eiffelFilmEdit';
 
 beforeEach(() => {
   usePlaybackStore.setState(createInitialState());
 });
 
 describe('playback store', () => {
+  it('does not consume the opening while scene assets load', () => {
+    const s=usePlaybackStore.getState();s.play();
+    usePlaybackStore.setState({assetsReady:false});s.tick(15000);
+    expect(usePlaybackStore.getState().t).toBe(0);
+    usePlaybackStore.setState({assetsReady:true});s.tick(1000);
+    expect(usePlaybackStore.getState().t).toBeCloseTo(1/60);
+  });
   it('starts idle at t=0 on the first wonder, 60s duration at 1× speed', () => {
     const s = usePlaybackStore.getState();
     expect(s.status).toBe('idle');
@@ -80,6 +88,34 @@ describe('playback store', () => {
     expect(after.t).toBe(0);
     expect(() => s.select('atlantis')).toThrow();
   });
+
+  it('defaults to the three-minute Eiffel film and retains programmatic detailed playback', () => {
+    const s = usePlaybackStore.getState();
+    s.select('eiffel-tower');
+    expect(usePlaybackStore.getState().eiffelEdit).toBe('cinematic');
+    expect(usePlaybackStore.getState().durationMs).toBe(180000);
+    s.play();
+    s.tick(1000);
+    expect(usePlaybackStore.getState().t).toBeCloseTo(1 / 180, 10);
+    s.setEiffelEdit('detailed');
+    expect(usePlaybackStore.getState()).toMatchObject({ eiffelEdit: 'detailed', t: 0, status: 'playing' });
+    expect(usePlaybackStore.getState().durationMs).toBe(eiffelFilmEditDuration('detailed') * 1000);
+    s.seek(.5); s.setEiffelEdit('cinematic');
+    expect(usePlaybackStore.getState()).toMatchObject({ eiffelEdit: 'cinematic', t: 0, durationMs: 180000, status: 'playing' });
+    s.pause(); s.setEiffelEdit('detailed');
+    expect(usePlaybackStore.getState()).toMatchObject({ eiffelEdit: 'detailed', t: 0, status: 'paused' });
+    expect(usePlaybackStore.getState().durationMs).toBe(eiffelFilmEditDuration('detailed') * 1000);
+  });
+
+  it('keeps the chosen edition across wonder visits without changing their clocks', () => {
+    const s = usePlaybackStore.getState();
+    s.select('eiffel-tower'); s.setEiffelEdit('cinematic'); s.select('petra');
+    expect(usePlaybackStore.getState()).toMatchObject({ durationMs: 60000, eiffelEdit: 'cinematic' });
+    s.select('eiffel-tower');
+    expect(usePlaybackStore.getState().durationMs).toBe(180000);
+    s.play(); s.tick(180000); s.setEiffelEdit('detailed');
+    expect(usePlaybackStore.getState()).toMatchObject({ status: 'paused', t: 0 });
+  });
 });
 
 describe('playback store under prefers-reduced-motion', () => {
@@ -119,5 +155,11 @@ describe('playback store under prefers-reduced-motion', () => {
     const after = usePlaybackStore.getState();
     expect(after.status).toBe('complete');
     expect(after.t).toBe(1);
+  });
+
+  it('keeps the completed still when changing Eiffel edition', () => {
+    const s = usePlaybackStore.getState();
+    s.select('eiffel-tower'); s.setEiffelEdit('detailed'); s.setEiffelEdit('cinematic');
+    expect(usePlaybackStore.getState()).toMatchObject({ status: 'complete', t: 1, durationMs: 180000 });
   });
 });

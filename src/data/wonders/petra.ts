@@ -1,7 +1,7 @@
 import type { Wonder } from '../types';
 import { getCompiledScene } from '../scenes';
 
-/** Scene doc: src/data/scenes/petra.scene.json (Spec 07). */
+/** Scene replaced by Spec 11 typed world; catalog copy and ID stay. */
 export const petra: Wonder = {
   id: 'petra',
   name: 'Petra',

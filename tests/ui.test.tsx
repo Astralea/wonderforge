@@ -1,10 +1,15 @@
 // @vitest-environment jsdom
 import '@testing-library/jest-dom/vitest';
-import { act, cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { WONDERS, getWonder } from '../src/data';
+import { captionsFor } from '../src/data/captions';
+import { GIZA_NARRATION, STONEHENGE_NARRATION, SYDNEY_NARRATION, narrationClipsForWonder } from '../src/data/narration';
+import { useAudioStore } from '../src/store/audio';
 import { createInitialState, usePlaybackStore } from '../src/store/playback';
 import { useUiStore } from '../src/store/ui';
+import { EIFFEL_FILM_LIFT_START_SECONDS, EIFFEL_FILM_DURATION } from '../src/engine/eiffelFilm';
+import { eiffelChapterCaptionsForEdit, eiffelFactCaptionsForEdit } from '../src/ui/eiffelChapterCaptions';
 
 // The render layer is mocked out for UI tests (pure UI contract tests).
 vi.mock('../src/render/WonderCanvas', () => ({
@@ -17,28 +22,55 @@ import App from '../src/App';
 // every mount. Stub the transport; the cue's own contract lives in
 // tests/soundtrack.test.ts.
 beforeEach(() => {
+  localStorage.clear();
   vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue(undefined);
   vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
   vi.spyOn(HTMLMediaElement.prototype, 'load').mockImplementation(() => {});
 
   window.location.hash = '';
   usePlaybackStore.setState(createInitialState());
-  useUiStore.setState({ view: 'home' });
+  useAudioStore.setState({ muted: false, unlocked: false, voiceEnabled: false, voicePreference: null });
+  useUiStore.setState({ view: 'home', homePlate: 'title' });
 });
 
 afterEach(cleanup);
 
 describe('home', () => {
-  it('renders the brand and all 10 wonder names', () => {
+  it('renders the brand, then the catalog after Enter — without leaving the page', () => {
     render(<App />);
-    expect(screen.getByText('WonderForge')).toBeInTheDocument();
+    expect(screen.getByRole('banner')).toHaveTextContent('WonderForge');
+    expect(screen.getByRole('button', { name: /enter the gallery/i })).toHaveClass(
+      'cursor-pointer',
+    );
+    expect(screen.queryByRole('button', { name: /petra/i })).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: /enter the gallery/i }));
+    expect(useUiStore.getState().homePlate).toBe('catalog');
+    expect(screen.queryByRole('button', { name: /enter the gallery/i })).not.toBeInTheDocument();
     for (const w of WONDERS) {
-      expect(screen.getAllByText(w.name).length).toBeGreaterThan(0);
+      expect(screen.getByRole('button', { name: new RegExp(w.name, 'i') })).toBeInTheDocument();
     }
+  });
+
+  it('catalog wordmark returns to the title plate', () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole('button', { name: /enter the gallery/i }));
+    fireEvent.click(screen.getByRole('button', { name: /back to title/i }));
+    expect(useUiStore.getState().homePlate).toBe('title');
+    expect(screen.getByRole('button', { name: /enter the gallery/i })).toBeInTheDocument();
+  });
+
+  it('Escape on the catalog returns to the title plate', () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole('button', { name: /enter the gallery/i }));
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(useUiStore.getState().homePlate).toBe('title');
+    expect(useUiStore.getState().view).toBe('home');
   });
 
   it('clicking a gallery row opens the cinematic and starts playing', () => {
     render(<App />);
+    fireEvent.click(screen.getByRole('button', { name: /enter the gallery/i }));
     fireEvent.click(screen.getByRole('button', { name: /petra/i }));
     expect(useUiStore.getState().view).toBe('watch');
     expect(usePlaybackStore.getState().wonderId).toBe('petra');
@@ -50,6 +82,7 @@ describe('home', () => {
 describe('cinematic view', () => {
   function openWonder(id = 'pyramids-of-giza') {
     render(<App />);
+    fireEvent.click(screen.getByRole('button', { name: /enter the gallery/i }));
     fireEvent.click(screen.getByRole('button', { name: new RegExp(getWonder(id).name, 'i') }));
   }
 
@@ -74,6 +107,25 @@ describe('cinematic view', () => {
     const scrubber = screen.getByRole('slider', { name: /seek/i });
     fireEvent.change(scrubber, { target: { value: '0.5' } });
     expect(usePlaybackStore.getState().t).toBeCloseTo(0.5, 5);
+  });
+
+  it('keeps every global cinematic control together in the bottom control rail', () => {
+    openWonder();
+    const controls = screen.getByRole('group', { name: /cinematic controls/i });
+
+    expect(within(controls).getByRole('button', { name: /previous wonder/i })).toBeInTheDocument();
+    expect(within(controls).getByRole('button', { name: /^pause$/i })).toBeInTheDocument();
+    expect(within(controls).getByRole('button', { name: /next wonder/i })).toBeInTheDocument();
+    expect(within(controls).getByRole('button', { name: /mute soundtrack/i })).toBeInTheDocument();
+    expect(within(controls).getByRole('button', { name: /enable narration/i })).toHaveTextContent(
+      'Narration off',
+    );
+    expect(within(controls).getByRole('button', { name: /wonder facts/i })).toBeInTheDocument();
+    expect(within(controls).queryByRole('button', { name: /back to gallery/i })).not.toBeInTheDocument();
+    const scrubber = within(controls).getByRole('slider', { name: /seek/i });
+    expect(scrubber).toHaveClass('w-full', 'h-12');
+    expect(within(controls).getByText('0%')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'WonderForge' })).toBeInTheDocument();
   });
 
   it('replay appears when the movie completes and restarts it', () => {
@@ -106,46 +158,91 @@ describe('cinematic view', () => {
     );
   });
 
-  it('caption layer: beats appear in the chrome-free cinema frame, never in gaps, at speed, or at the reveal', () => {
+  it('caption layer: beats appear at 1× during play, never in gaps, at speed, or at the reveal', () => {
     vi.useFakeTimers();
     try {
       openWonder(); // status 'playing', speed 1
-      // Chrome shows on entry — and while it shows, captions stay away so
-      // they can never overlap the quote/title card.
+      const index = screen.getByRole('navigation', { name: /construction beats/i });
+      // Captions show even while chrome is visible so turning narration on
+      // or moving the pointer does not hide the line.
       act(() => usePlaybackStore.getState().seek(0.24));
-      expect(screen.queryByText('The Quarry')).not.toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText('The Quarry')).toBeInTheDocument();
+      expect(within(index).getByText('The Quarry')).toBeInTheDocument();
 
-      // After the idle window the chrome hides and the cinema frame is
-      // clean: the caption fades in.
-      act(() => {
-        vi.advanceTimersByTime(2600);
-      });
-      expect(screen.getByText('The Quarry')).toBeInTheDocument();
+      act(() => usePlaybackStore.getState().pause());
+      expect(within(screen.getByTestId('live-caption')).getByText('The Quarry')).toBeInTheDocument();
+      act(() => usePlaybackStore.getState().play());
 
-      // The gap between beats (0.46–0.50) shows nothing.
+      // The gap between beats (0.46–0.50) shows nothing in the live caption;
+      // the index still lists finished and upcoming titles.
       act(() => usePlaybackStore.getState().seek(0.48));
-      expect(screen.queryByText('The Quarry')).not.toBeInTheDocument();
-      expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
+      expect(within(index).getByText('The Quarry')).toBeInTheDocument();
+      expect(within(index).getByText('The Ramps')).toBeInTheDocument();
 
-      // The reveal stays clean.
+      // The reveal stays clean of a live caption; the index keeps the last face.
       act(() => usePlaybackStore.getState().seek(0.95));
-      expect(screen.queryByText('The Horizon')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
+      expect(within(index).getByText('The Horizon')).toBeInTheDocument();
 
-      // At 2× the read time would compress past honesty: no captions.
+      // At 2× the read time would compress past honesty: no live captions.
       fireEvent.click(screen.getByRole('button', { name: '2× speed' }));
       act(() => usePlaybackStore.getState().seek(0.54));
-      expect(screen.queryByText('The Ramps')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
+      expect(within(index).getByText('The Ramps')).toBeInTheDocument();
 
       // Back at 1× the same window shows the caption again.
       fireEvent.click(screen.getByRole('button', { name: '1× speed' }));
       act(() => usePlaybackStore.getState().seek(0.54));
-      expect(screen.getByText('The Ramps')).toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText('The Ramps')).toBeInTheDocument();
     } finally {
       vi.useRealTimers();
     }
   });
 
-  it('caption voice: off by default, the toggle narrates the active caption, and off cancels', () => {
+  it('parks the wordmark in the top letterbox slot and keeps the beat index below it', () => {
+    openWonder();
+    expect(screen.getByTestId('cinematic-letterbox-top')).toBeInTheDocument();
+    expect(screen.getByTestId('cinematic-letterbox-bottom')).toBeInTheDocument();
+    expect(screen.getByTestId('cinematic-wordmark')).toHaveClass('top-0', 'h-[6vh]');
+    expect(screen.getByTestId('cinematic-top-chrome')).toHaveClass(
+      'top-[calc(6vh+1rem)]',
+    );
+    expect(screen.getByTestId('cinematic-top-chrome')).not.toContainElement(
+      screen.getByRole('button', { name: 'WonderForge' }),
+    );
+    expect(screen.getByTestId('cinematic-title-card')).toHaveClass(
+      'bottom-[calc(6vh+14rem)]',
+    );
+  });
+
+  it('a touch press wakes hidden movie controls without requiring a mouse move', () => {
+    openWonder();
+    expect(screen.getByTestId('cinematic-top-chrome').parentElement).toHaveClass('pointer-events-none');
+    fireEvent.pointerDown(screen.getByTestId('wonder-canvas'), { pointerType: 'touch' });
+    expect(screen.getByTestId('cinematic-top-chrome').parentElement).not.toHaveClass('pointer-events-none');
+    fireEvent.click(screen.getByRole('button', { name: 'Pause' }));
+    expect(usePlaybackStore.getState().status).toBe('paused');
+  });
+
+  it('caption beat index: titles stay listed and a click seeks to that face', () => {
+    openWonder();
+    const index = screen.getByRole('navigation', { name: /construction beats/i });
+    expect(within(index).getByRole('button', { name: /jump to the quarry/i })).toBeInTheDocument();
+    expect(within(index).getByRole('button', { name: /jump to the ramps/i })).toBeInTheDocument();
+    expect(within(index).getByRole('button', { name: /jump to the horizon/i })).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: /pause/i }));
+    fireEvent.click(within(index).getByRole('button', { name: /jump to the ramps/i }));
+    expect(usePlaybackStore.getState().t).toBeCloseTo(0.5, 5);
+    expect(usePlaybackStore.getState().status).toBe('playing');
+    expect(within(index).getByRole('button', { name: /jump to the ramps/i })).toHaveAttribute(
+      'aria-current',
+      'true',
+    );
+  });
+
+  it('caption voice: Giza uses bundled George clips and stops them when turned off', () => {
     const speak = vi.fn();
     const cancel = vi.fn();
     Object.defineProperty(window, 'speechSynthesis', {
@@ -167,20 +264,245 @@ describe('cinematic view', () => {
       act(() => {
         vi.advanceTimersByTime(2600);
       });
-      expect(screen.getByText('The Quarry')).toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText('The Quarry')).toBeInTheDocument();
       expect(speak).not.toHaveBeenCalled();
 
-      // Toggle on: the active caption is read aloud.
-      fireEvent.click(screen.getByRole('button', { name: /caption narration on/i }));
-      expect(speak).toHaveBeenCalledTimes(1);
-      expect(String(speak.mock.calls[0]![0].text)).toContain('Blocks are won from the plateau');
+      const play = vi.mocked(HTMLMediaElement.prototype.play);
+      const pause = vi.mocked(HTMLMediaElement.prototype.pause);
+      play.mockClear();
+      pause.mockClear();
 
-      // The next beat speaks its own text; toggling off cancels.
+      // Toggle on: the active caption uses its prerecorded clip.
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      // Enabling primes every Giza clip in the immediate click gesture, then
+      // the active beat starts its own (reused) element.
+      expect(play).toHaveBeenCalledTimes(GIZA_NARRATION.length + 1);
+      expect(speak).not.toHaveBeenCalled();
+
+      // The next beat starts its own clip; toggling off stops it.
       act(() => usePlaybackStore.getState().seek(0.4));
-      expect(speak).toHaveBeenCalledTimes(2);
-      expect(String(speak.mock.calls[1]![0].text)).toContain('Sledges run on wetted roads');
-      fireEvent.click(screen.getByRole('button', { name: /caption narration off/i }));
-      expect(cancel).toHaveBeenCalled();
+      // jsdom keeps the soundtrack element's `paused` flag true, so its
+      // store subscriber may also retry play on seek. At least two calls are
+      // the two narration beats; the data contract pins their exact sources.
+      expect(play.mock.calls.length).toBeGreaterThanOrEqual(2);
+      fireEvent.click(screen.getByRole('button', { name: /disable narration/i }));
+      expect(pause).toHaveBeenCalled();
+      expect(speak).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis;
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance;
+    }
+  });
+
+  it('caption voice: Stonehenge uses bundled Daniel clips, not browser speech', () => {
+    const speak = vi.fn();
+    const cancel = vi.fn();
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak, cancel },
+      configurable: true,
+    });
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', {
+      value: class {
+        rate = 1;
+        constructor(public text: string) {}
+      },
+      configurable: true,
+    });
+    vi.useFakeTimers();
+    try {
+      openWonder('stonehenge');
+      act(() => usePlaybackStore.getState().seek(0.22));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      expect(within(screen.getByTestId('live-caption')).getByText('The Sarsens')).toBeInTheDocument();
+      expect(speak).not.toHaveBeenCalled();
+
+      const play = vi.mocked(HTMLMediaElement.prototype.play);
+      play.mockClear();
+
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      expect(play).toHaveBeenCalledTimes(STONEHENGE_NARRATION.length + 1);
+      expect(speak).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis;
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance;
+    }
+  });
+
+  it('caption voice still plays when the browser rejects an early seek', async () => {
+    vi.useFakeTimers();
+    const descriptor = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'currentTime');
+    try {
+      openWonder('stonehenge');
+      act(() => usePlaybackStore.getState().seek(0.22));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      expect(within(screen.getByTestId('live-caption')).getByText('The Sarsens')).toBeInTheDocument();
+
+      Object.defineProperty(HTMLMediaElement.prototype, 'currentTime', {
+        configurable: true,
+        get() {
+          return 0;
+        },
+        set() {
+          throw new DOMException('The element has no supported sources.', 'InvalidStateError');
+        },
+      });
+
+      const play = vi.mocked(HTMLMediaElement.prototype.play);
+      play.mockClear();
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      await act(async () => {
+        await Promise.resolve();
+        await Promise.resolve();
+      });
+      expect(play.mock.calls.length).toBeGreaterThanOrEqual(STONEHENGE_NARRATION.length + 1);
+    } finally {
+      vi.useRealTimers();
+      if (descriptor) {
+        Object.defineProperty(HTMLMediaElement.prototype, 'currentTime', descriptor);
+      }
+    }
+  });
+
+  it('caption voice stays silent if a bundled clip is rejected', async () => {
+    const speak = vi.fn();
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak, cancel: vi.fn() },
+      configurable: true,
+    });
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', {
+      value: class {
+        rate = 1;
+        constructor(public text: string) {}
+      },
+      configurable: true,
+    });
+    vi.mocked(HTMLMediaElement.prototype.play).mockRejectedValue(new Error('playback blocked'));
+    vi.useFakeTimers();
+    try {
+      openWonder();
+      act(() => usePlaybackStore.getState().seek(0.24));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      await act(async () => {
+        await Promise.resolve();
+        await Promise.resolve();
+      });
+
+      expect(speak).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis;
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance;
+    }
+  });
+
+  it('caption voice stays silent for a wonder without ElevenLabs clips', () => {
+    expect(narrationClipsForWonder('petra')).toHaveLength(0);
+    const speak = vi.fn();
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak, cancel: vi.fn() },
+      configurable: true,
+    });
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', {
+      value: class {
+        rate = 1;
+        constructor(public text: string) {}
+      },
+      configurable: true,
+    });
+    vi.useFakeTimers();
+    try {
+      openWonder('petra');
+      act(() => usePlaybackStore.getState().seek(0.27));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      expect(speak).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis;
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance;
+    }
+  });
+
+  it('caption voice: Sydney uses bundled Alice clips, not browser speech', () => {
+    const speak = vi.fn();
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak, cancel: vi.fn() },
+      configurable: true,
+    });
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', {
+      value: class {
+        rate = 1;
+        constructor(public text: string) {}
+      },
+      configurable: true,
+    });
+    vi.useFakeTimers();
+    try {
+      openWonder('sydney-opera-house');
+      act(() => usePlaybackStore.getState().seek(0.18));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      expect(within(screen.getByTestId('live-caption')).getByText('The Point')).toBeInTheDocument();
+      expect(speak).not.toHaveBeenCalled();
+
+      const play = vi.mocked(HTMLMediaElement.prototype.play);
+      play.mockClear();
+
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      expect(play).toHaveBeenCalledTimes(SYDNEY_NARRATION.length + 1);
+      expect(speak).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis;
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance;
+    }
+  });
+
+  it('caption voice: Eiffel uses bundled Adam clips, not browser speech', () => {
+    useAudioStore.getState().setVoiceEnabled(false); // explicit saved OFF remains respected
+    const speak = vi.fn();
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak, cancel: vi.fn() },
+      configurable: true,
+    });
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', {
+      value: class {
+        rate = 1;
+        constructor(public text: string) {}
+      },
+      configurable: true,
+    });
+    vi.useFakeTimers();
+    try {
+      openWonder('eiffel-tower');
+      act(() => usePlaybackStore.getState().setEiffelEdit('detailed'));
+      const champ = eiffelFactCaptionsForEdit(captionsFor(getWonder('eiffel-tower')), 'detailed')[0]!;
+      act(() => usePlaybackStore.getState().seek(champ.from + 2.5 / EIFFEL_FILM_DURATION));
+      act(() => {
+        vi.advanceTimersByTime(2600);
+      });
+      expect(within(screen.getByTestId('live-caption')).getByText('The Champ')).toBeInTheDocument();
+      expect(speak).not.toHaveBeenCalled();
+
+      const play = vi.mocked(HTMLMediaElement.prototype.play);
+      play.mockClear();
+
+      fireEvent.click(screen.getByRole('button', { name: /enable narration/i }));
+      expect(play).toHaveBeenCalledTimes(narrationClipsForWonder('eiffel-tower').length + 1);
+      expect(speak).not.toHaveBeenCalled();
     } finally {
       vi.useRealTimers();
       delete (window as { speechSynthesis?: unknown }).speechSynthesis;
@@ -205,12 +527,85 @@ describe('cinematic view', () => {
     expect(usePlaybackStore.getState().status).toBe('paused');
   });
 
+  it('floats the construction story over the uninterrupted ground lift, free of quote cards', () => {
+    openWonder('eiffel-tower');
+    act(() => usePlaybackStore.getState().setEiffelEdit('detailed'));
+    act(() => usePlaybackStore.getState().seek((EIFFEL_FILM_LIFT_START_SECONDS-1)/EIFFEL_FILM_DURATION));
+    expect(screen.getByTestId('eiffel-chapter-caption')).toHaveTextContent('a lifting frame takes the weight');
+    expect(screen.queryByTestId('eiffel-editorial-cut')).not.toBeInTheDocument();
+    expect(usePlaybackStore.getState().status).toBe('playing');
+    expect(screen.queryByTestId('cinematic-title-card')).not.toBeInTheDocument();
+    act(() => usePlaybackStore.getState().seek((EIFFEL_FILM_LIFT_START_SECONDS+6.1)/EIFFEL_FILM_DURATION));
+    expect(screen.queryByTestId('eiffel-chapter-caption')).not.toBeInTheDocument();
+    expect(screen.getByTestId('eiffel-ground-lift-caption')).toHaveTextContent('Bring the iron section');
+    expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('cinematic-title-card')).not.toBeInTheDocument();
+  });
+
   it('space toggles playback', () => {
     openWonder();
     fireEvent.keyDown(window, { key: ' ' });
     expect(usePlaybackStore.getState().status).toBe('paused');
     fireEvent.keyDown(window, { key: ' ' });
     expect(usePlaybackStore.getState().status).toBe('playing');
+  });
+
+  it('opens the three-minute Eiffel film without an edition picker and navigates its own clock', () => {
+    openWonder('eiffel-tower');
+    expect(screen.queryByRole('combobox', { name: 'Eiffel film version' })).not.toBeInTheDocument();
+    expect(screen.queryByText(/Detailed.*14 min/)).not.toBeInTheDocument();
+    expect(screen.getByText('3 min film')).toBeInTheDocument();
+    expect(usePlaybackStore.getState()).toMatchObject({ eiffelEdit: 'cinematic', durationMs: 180000, status: 'playing', t: 0 });
+    fireEvent.click(screen.getByRole('button', { name: 'Jump to An iron joint' }));
+    expect(usePlaybackStore.getState().t).toBeCloseTo(eiffelChapterCaptionsForEdit('cinematic').find(cue => cue.id === 'eiffel-joint-prepared')!.fromSeconds / 180, 10);
+    expect(screen.getByTestId('eiffel-chapter-caption')).toHaveTextContent('workers align the plates');
+    expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('cinematic-title-card')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /next wonder/i }));
+    expect(screen.queryByRole('combobox', { name: 'Eiffel film version' })).not.toBeInTheDocument();
+    expect(screen.queryByText('3 min film')).not.toBeInTheDocument();
+    expect(usePlaybackStore.getState().durationMs).toBe(60000);
+  });
+
+  it('clears the short-film closeup for captions while retaining chapter navigation and every control', () => {
+    openWonder('eiffel-tower');
+    act(() => usePlaybackStore.getState().seek(74 / 180));
+    const scene = screen.getByTestId('wonder-canvas').closest('section')!;
+    expect(scene).toHaveClass('eiffel-story-focus');
+    expect(screen.getByTestId('eiffel-chapter-caption')).toHaveTextContent('Winches lift');
+    const toggle = screen.getByRole('button', { name: 'Chapters' });
+    const navigation = screen.getByRole('navigation', { name: 'Construction beats' });
+    expect(toggle).toHaveAttribute('aria-controls', navigation.id);
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(navigation).toHaveClass('eiffel-compact-index-nav');
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    expect(scene).toHaveAttribute('data-chapters-open', 'true');
+    fireEvent.click(screen.getByRole('button', { name: 'Jump to An iron joint' }));
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(scene).toHaveAttribute('data-chapters-open', 'false');
+    expect(toggle).toHaveFocus();
+    expect(usePlaybackStore.getState().t).toBeCloseTo(eiffelChapterCaptionsForEdit('cinematic').find(cue => cue.id === 'eiffel-joint-prepared')!.fromSeconds / 180, 10);
+    const controls = screen.getByRole('group', { name: 'Cinematic controls' });
+    for (const name of ['Previous wonder', 'Pause', 'Next wonder', 'Wonder facts', '1× speed', '2× speed', '4× speed']) {
+      expect(within(controls).getByRole('button', { name })).toBeInTheDocument();
+    }
+    expect(within(controls).getByRole('slider', { name: 'Seek' })).toHaveClass('h-12');
+  });
+
+  it('restores normal layout outside short-film caption windows and preserves Detailed and other wonders', () => {
+    openWonder('eiffel-tower');
+    const scene = screen.getByTestId('wonder-canvas').closest('section')!;
+    act(() => usePlaybackStore.getState().seek(74 / 180));
+    expect(scene).toHaveClass('eiffel-story-focus');
+    act(() => usePlaybackStore.getState().seek(88 / 180));
+    expect(scene).not.toHaveClass('eiffel-story-focus');
+    expect(screen.queryByRole('button', { name: 'Chapters' })).not.toBeInTheDocument();
+    act(() => { usePlaybackStore.getState().setEiffelEdit('detailed'); usePlaybackStore.getState().seek(74 / 180); });
+    expect(scene).not.toHaveClass('eiffel-story-focus');
+    fireEvent.click(screen.getByRole('button', { name: 'Next wonder' }));
+    expect(scene).not.toHaveClass('eiffel-story-focus');
+    expect(screen.queryByRole('button', { name: 'Chapters' })).not.toBeInTheDocument();
   });
 });
 

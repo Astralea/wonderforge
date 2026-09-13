@@ -34,6 +34,13 @@ export interface ConstructionState {
   yaw: number;
   scale: UnitScale;
   support: ConstructionSupport;
+  mechanism: 'none' | 'sled' | 'cribbing';
+  /** Immediate support top; transformed block bottom must equal this. */
+  supportY: number;
+  /** Ground/ramp/deck surface below any temporary carrier. */
+  groundY: number;
+  /** Height occupied by the sled or crib between groundY and supportY. */
+  carrierHeight: number;
   /**
    * Height of the sled bed under the block, already included in `position`.
    * Zero off the sled. The renderer draws deck and runners inside this gap
@@ -54,6 +61,7 @@ export interface ActiveConstructionState {
 
 /** Runner + deck height of a transport sled, world units (~34 cm). */
 export const SLED_BED_HEIGHT = 0.34;
+export const GIZA_CRIB_HEIGHT = 0.24;
 
 const SUPPORTS: Record<ConstructionPhase, ConstructionSupport> = {
   quarried: 'quarry',
@@ -81,21 +89,27 @@ function add(a: Vec3, b: Vec3): Vec3 {
 function pathPoints(block: ConstructionBlock, route: ConstructionRoute): Vec3[] {
   const { quarry, dressing, roadQueue, rampFoot } = route.waypoints;
   const crest = route.rampCrestFor(block);
-  const aboveSeat: Vec3 = [
+  const halfHeight = block.dimensions[1] * 0.5;
+  const surface = (point: Vec3): Vec3 => [point[0], point[1] - halfHeight, point[2]];
+  const quarrySurface = surface(quarry);
+  const dressingSurface = surface(dressing);
+  const queueSurface = surface(roadQueue);
+  const footSurface = surface(rampFoot);
+  const seatSurface: Vec3 = [
     block.finalPosition[0],
-    block.finalPosition[1] + Math.max(0.38, block.dimensions[1] * 0.72),
+    block.finalPosition[1] - halfHeight,
     block.finalPosition[2],
   ];
   return [
-    quarry,
-    add(quarry, [0.48, 0.08, -0.22]),
-    dressing,
-    add(dressing, [0.34, 0.16, -0.18]),
-    roadQueue,
-    rampFoot,
+    quarrySurface,
+    add(quarrySurface, [0.48, 0, -0.22]),
+    dressingSurface,
+    add(dressingSurface, [0.34, 0, -0.18]),
+    queueSurface,
+    footSurface,
     crest,
-    aboveSeat,
-    block.finalPosition,
+    seatSurface,
+    seatSurface,
   ];
 }
 
@@ -112,6 +126,7 @@ export function constructionStateAt(
 ): ConstructionState {
   const points = pathPoints(block, route);
   const local = clamp((t - block.start) / block.duration);
+  const complete = t >= block.start + block.duration - 1e-12;
   const rawPhase = Math.min(CONSTRUCTION_PHASES.length - 1, Math.floor(local * CONSTRUCTION_PHASES.length));
   const phase = CONSTRUCTION_PHASES[rawPhase]!;
   const phaseProgress = local >= 1 ? 1 : local * CONSTRUCTION_PHASES.length - rawPhase;
@@ -124,38 +139,46 @@ export function constructionStateAt(
     : phase === 'hauled'
       ? easeInOutQuad(phaseProgress)
       : easeOutCubic(phaseProgress);
-  let position = local >= 1
-    ? [...block.finalPosition] as Vec3
+  const surfacePosition = complete
+    ? points[8]!
     : lerpVec3(points[rawPhase]!, points[rawPhase + 1]!, eased);
-  if (phase === 'raised' && local < 1) {
-    // Ride the terrace treads, not the staircase's inside corners: the
-    // earthwork renders as 12 terraces (Environment addRamps), and the
-    // straight foot-to-crest line grazes each tread's uphill edge, so lift
-    // by half a tread mid-climb. Sine-tapered to zero at the foot and the
-    // crest platform so the phase-boundary positions stay continuous.
-    const climb = points[rawPhase + 1]![1] - points[rawPhase]![1];
-    const lift = (Math.max(0, climb) / 24) * Math.sin(Math.PI * phaseProgress);
-    position = [position[0], position[1] + lift, position[2]];
-  }
 
   // A block on a sled rides a sled-bed above the surface (Spec 08: "sled and
   // stone move as one unit" — ON the road, not through it). Lifted while
   // being loaded, carried at full height, then lowered through the climb's
   // last stretch so it arrives at the crest platform on cribbing height.
   // Ramps at both ends keep every phase boundary position-continuous.
-  let sledLift = 0;
-  if (local < 1) {
+  let carrierHeight = 0;
+  if (!complete) {
     if (phase === 'loaded') {
-      sledLift = SLED_BED_HEIGHT * eased;
-    } else if (phase === 'hauled' || phase === 'queued') {
-      sledLift = SLED_BED_HEIGHT;
-    } else if (phase === 'raised') {
-      sledLift = SLED_BED_HEIGHT * Math.min(1, (1 - phaseProgress) / 0.18);
+      carrierHeight = SLED_BED_HEIGHT * eased;
+    } else if (phase === 'hauled' || phase === 'queued' || phase === 'raised') {
+      carrierHeight = SLED_BED_HEIGHT;
+    } else if (phase === 'aligned') {
+      carrierHeight = lerp(SLED_BED_HEIGHT, GIZA_CRIB_HEIGHT, eased);
+    } else if (phase === 'seated') {
+      carrierHeight = GIZA_CRIB_HEIGHT * (1 - eased);
     }
   }
-  if (sledLift > 0) {
-    position = [position[0], position[1] + sledLift, position[2]];
-  }
+  const sledLift = phase === 'loaded' || phase === 'hauled' || phase === 'queued' || phase === 'raised'
+    ? carrierHeight
+    : 0;
+  const position: Vec3 = complete
+    ? [...block.finalPosition]
+    : [
+        surfacePosition[0],
+        surfacePosition[1] + block.dimensions[1] * 0.5 + carrierHeight,
+        surfacePosition[2],
+      ];
+  const supportY = position[1] - block.dimensions[1] * 0.5;
+  const groundY = supportY - carrierHeight;
+  const mechanism: ConstructionState['mechanism'] = sledLift > 0
+    ? 'sled'
+    : carrierHeight > 0
+      ? 'cribbing'
+      : 'none';
+  let support = SUPPORTS[phase];
+  if (phase === 'seated' && !complete) support = 'cribbing';
   const yaw = phase === 'aligned' || phase === 'seated'
     ? block.finalYaw
     : yawAlong(points[rawPhase]!, points[rawPhase + 1]!, block.finalYaw);
@@ -169,7 +192,11 @@ export function constructionStateAt(
     position,
     yaw,
     scale: [1, 1, 1],
-    support: SUPPORTS[phase],
+    support,
+    mechanism,
+    supportY,
+    groundY,
+    carrierHeight,
     sledLift,
     contactDust,
     visible: t >= block.start,

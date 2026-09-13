@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+/* UI classes live here; retained Blender/QA evidence is not a CSS source. */
+@import 'tailwindcss' source('./');
 
 @theme {
   --font-display: 'Cinzel', 'Times New Roman', serif;
@@ -33,11 +34,123 @@ body {
   }
 }
 
+@keyframes catalog-row-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hairline-draw {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 2.75rem;
+    opacity: 1;
+  }
+}
+
+.home-catalog-veil {
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 16, 12, 0.9),
+    rgba(20, 16, 12, 0.72) 42%,
+    rgba(20, 16, 12, 0.4)
+  );
+}
+
+@media (min-width: 768px) {
+  .home-catalog-veil {
+    background: linear-gradient(
+      to right,
+      rgba(20, 16, 12, 0.93) 0%,
+      rgba(20, 16, 12, 0.58) 36%,
+      rgba(20, 16, 12, 0.16) 62%,
+      transparent 100%
+    );
+  }
+}
+
+.home-plate {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.home-plate-on {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 0.7s ease,
+    visibility 0s linear 0s;
+}
+
+.home-plate-off {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.55s ease,
+    visibility 0s linear 0.55s;
+}
+
+.eiffel-chapter-caption {
+  position: absolute;
+  right: 1.25rem;
+  bottom: calc(6vh + 15.25rem);
+  width: min(27rem, calc(100vw - 2.5rem));
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-left: 1px solid rgb(212 162 78 / 45%);
+  background: linear-gradient(110deg, rgb(20 16 12 / 72%), rgb(20 16 12 / 40%));
+  text-shadow: 0 1px 8px rgb(0 0 0 / 80%);
+}
+
+.eiffel-chapter-caption-text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.eiffel-fact-caption { bottom: calc(6vh + 15.25rem); }
+
+.eiffel-short-beats { scrollbar-width: thin; scrollbar-color: #a48b5b transparent; }
+.eiffel-short-beats::-webkit-scrollbar { width: 4px; }
+.eiffel-short-beats::-webkit-scrollbar-track { background: transparent; }
+.eiffel-short-beats::-webkit-scrollbar-thumb { background: #a48b5b; border-radius: 2px; }
+
+@media (min-width: 768px) {
+  .eiffel-chapter-caption { right: 2.5rem; }
+  .eiffel-chapter-caption, .eiffel-fact-caption { bottom: calc(6vh + 13rem); }
+  .eiffel-chapter-caption-text { font-size: 1rem; }
+}
+
+@media (max-height: 520px) {
+  .eiffel-chapter-caption {
+    bottom: calc(6vh + 12.25rem);
+    width: min(26rem, calc(100vw - 2.5rem));
+    padding: 0.5rem 0.75rem;
+  }
+  .eiffel-chapter-caption-text { font-size: 0.75rem; line-height: 1.4; }
+  .eiffel-fact-caption { bottom: calc(6vh + 12.25rem); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation: none !important;
+    transition: none !important;
+  }
+
+  .home-plate-on,
+  .home-plate-off {
     transition: none !important;
   }
 }

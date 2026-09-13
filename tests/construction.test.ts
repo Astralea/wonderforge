@@ -117,7 +117,7 @@ describe('raised-leg trajectory contract (Spec 08 ramp ascent)', () => {
       expect(crest[0], block.id).toBe(route.waypoints.rampCrest[0]);
       expect(crest[2], block.id).toBe(route.waypoints.rampCrest[2]);
       expect(crest[1]).toBeCloseTo(
-        block.finalPosition[1] + block.dimensions[1] * 0.5,
+        block.finalPosition[1] - block.dimensions[1] * 0.5,
         5,
       );
     }
@@ -157,24 +157,44 @@ describe('raised-leg trajectory contract (Spec 08 ramp ascent)', () => {
   });
 
   it('holds the sled to the terrace line for the whole climb', () => {
-    // Half-tread band: never buried below the linear terrace profile, never
-    // floating more than a tread above it.
+    // Compare the transformed block bottom and carrier bottom, never the
+    // object origin, to the support surface.
     for (let index = 0; index < plan.blocks.length; index += 211) {
       const block = plan.blocks[index]!;
       const route = plan.routes.find((candidate) => candidate.id === block.routeId)!;
       const foot = route.waypoints.rampFoot;
       const crest = route.rampCrestFor(block);
-      const climb = crest[1] - foot[1];
+      const footSurface = foot[1] - block.dimensions[1] * 0.5;
+      const climb = crest[1] - footSurface;
       for (let step = 1; step <= 9; step += 1) {
         const progress = step / 10;
         const local = (5 + progress) / 8;
         const state = constructionStateAt(block, route, block.start + block.duration * local);
-        const surface = foot[1] + climb * progress;
-        // The stone rides a sled bed (state.sledLift) above the terrace line;
-        // what must hug the line is the sled's underside.
-        const offset = state.position[1] - state.sledLift - surface;
-        expect(offset, `${block.id} at climb ${progress}`).toBeGreaterThanOrEqual(-0.01);
-        expect(offset, `${block.id} at climb ${progress}`).toBeLessThanOrEqual(climb / 12 + 0.01);
+        const stoneBottom = state.position[1] - block.dimensions[1] * 0.5;
+        expect(Math.abs(stoneBottom - state.supportY), `${block.id} stone/support at ${progress}`)
+          .toBeLessThanOrEqual(0.01);
+        expect(Math.abs(state.supportY - state.carrierHeight - state.groundY), `${block.id} carrier/ground at ${progress}`)
+          .toBeLessThanOrEqual(0.01);
+        const expectedSurface = footSurface + climb * progress;
+        expect(Math.abs(state.groundY - expectedSurface), `${block.id} ramp surface at ${progress}`)
+          .toBeLessThanOrEqual(0.03);
+      }
+    }
+  });
+
+  it('keeps every active block in contact with its declared carrier or support', () => {
+    for (let index = 0; index < plan.blocks.length; index += 173) {
+      const block = plan.blocks[index]!;
+      const route = plan.routes.find((candidate) => candidate.id === block.routeId)!;
+      for (const phase of [0.25, 1.5, 2.25, 2.75, 3.5, 4.5, 5.25, 5.75, 6.25, 6.75, 7.25, 7.75]) {
+        const state = constructionStateAt(block, route, block.start + block.duration * phase / 8);
+        const bottom = state.position[1] - block.dimensions[1] * 0.5;
+        expect(Math.abs(bottom - state.supportY), `${block.id} ${state.phase} stone/support`)
+          .toBeLessThanOrEqual(0.01);
+        expect(Math.abs(state.supportY - state.carrierHeight - state.groundY), `${block.id} ${state.phase} carrier/base`)
+          .toBeLessThanOrEqual(0.01);
+        if (state.mechanism === 'sled') expect(state.sledLift).toBe(state.carrierHeight);
+        else expect(state.sledLift).toBe(0);
       }
     }
   });
@@ -268,8 +288,9 @@ describe('causal construction state graph', () => {
     expect(raised.support).toBe('ramp');
     expect(raised.contactDust).toBe(false);
     expect(aligned.support).toBe('cribbing');
-    expect(seated.support).toBe('masonry');
+    expect(seated.support).toBe('cribbing');
     expect(seated.contactDust).toBe(true);
+    expect(constructionStateAt(block, route, block.start + block.duration).support).toBe('masonry');
   });
 
   it('caps active operations and does not double-book a route lane', () => {

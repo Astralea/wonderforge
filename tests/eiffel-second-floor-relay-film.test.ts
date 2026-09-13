@@ -1,0 +1,5 @@
+import{describe,expect,it}from'vitest';import{EIFFEL_SECOND_FLOOR_RELAY_FILM_DURATION,sampleEiffelSecondFloorRelayFilm}from'../src/engine/eiffelSecondFloorRelayFilm';
+describe('second-floor relay combined candidate',()=>{
+ it('exposes the handoff plus full route without altering the main film clock',()=>{expect(EIFFEL_SECOND_FLOOR_RELAY_FILM_DURATION).toBe(348);expect(sampleEiffelSecondFloorRelayFilm(0).phase).toBe('connecting');expect(sampleEiffelSecondFloorRelayFilm(348).phase).toBe('received')});
+ it('is continuous at the 222 second ownership join and retains one identity',()=>{const a=sampleEiffelSecondFloorRelayFilm(222-1e-6),b=sampleEiffelSecondFloorRelayFilm(222),c=sampleEiffelSecondFloorRelayFilm(222+1e-6);for(const s of[a,b,c]){expect(s.partId).toBe('summit-access-stair-m000-c000');expect(s.seated).toBe(false);expect(s.cartPose?.position).toEqual([-8.5,57.94000244140625,-4]);expect(s.cartAttached).toBe(false)}expect(Math.hypot(...a.carrierPose.position.map((v,i)=>v-b.carrierPose.position[i]!))).toBeLessThan(1e-5);expect(Math.hypot(...c.carrierPose.position.map((v,i)=>v-b.carrierPose.position[i]!))).toBeLessThan(1e-5)});
+});

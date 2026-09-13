@@ -1,0 +1,30 @@
+{
+  "scene": "WonderForge \u2014 ground-loaded face-joint carrier.001",
+  "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-carrier-2026-09-07/blender/eiffel-face-carrier.blend",
+  "productionAdmitted": false,
+  "clampEnds": [
+    -1.6,
+    0.9
+  ],
+  "cartSlots": [
+    {
+      "centerZ": -1.5912350325892373,
+      "width": 0.2,
+      "depth": 0.035
+    },
+    {
+      "centerZ": 0.895069705831446,
+      "width": 0.2,
+      "depth": 0.035
+    }
+  ],
+  "frameMeshes": 20,
+  "plateMeshes": 5,
+  "sourceCarrierSHA256": "d3b3a6070925009191927faf09ec0dadee1b7191c7c7f69e389562315c21bf21",
+  "limits": [
+    "Ground-load and carrier geometry study. No lift or fastening admission.",
+    "Plate-to-pad manufacturing fasteners remain unmodelled.",
+    "Changed mass and transverse COM require a new supported lifting bridle; the original two slings are not admitted for this load.",
+    "Carrier release, grounded crew and placement sequence remain to be authored."
+  ]
+}

@@ -59,34 +59,50 @@ handles overlap; transparency is limited to dust, water, clouds, and sky.
 - Renderer output is sRGB with ACES filmic tone mapping and calibrated exposure.
 - Texture generation, if used, is local, seamless, mipmapped, and documented.
 - Procedural surface detail (stone grain, limestone bedding, compaction
-  mottling, timber grain, Nile ripple) is pure GLSL value noise injected into
+  mottling, wind-worked plateau streaks, timber grain, water ripple) is pure
+  GLSL value noise injected into
   the shared materials via `onBeforeCompile`, composed from typed recipes in
   `src/data/materialDetail.ts`. Each recipe carries an era/material rationale
   and sets a unique `customProgramCacheKey`. Detail is sampled in object space
   for carried materials (stone, timber, cloth, foliage) so it travels with the
   part, and in world space for placed surfaces (terrain, roads, ramps, city,
   water) so frequencies stay physically consistent. No texture fetches; the
-  only animated terms are the Nile ripple and cloth sway, both phased from
+  only animated terms are the water ripple and cloth sway, both phased from
   playback `t` so scrubbing stays deterministic.
-- Stone roles (core/casing limestone, granite, quarry cut) additionally turn
-  that same height field into normal-space relief using screen-space
-  derivatives (the `perturbNormalArb` math three.js uses for bump maps, but
-  computed from the procedural field — still no texture fetches). The relief
-  is faded by pixel footprint so distant masonry never shimmers; raking
-  dawn/dusk light is where the relief is meant to read.
+- The plateau sand uses a broad dune mottle, a second middle-scale pavement
+  mottle, and static wind-aligned streaks. Their frequencies are world-space,
+  intentionally wider than stone grain, and use no vertex displacement: roads,
+  props, and constructed solids retain their authoritative ground contact.
+- Stone roles (core/casing limestone, granite, quarry cut), the Giza plateau
+  sand, and compacted haul earth turn their own procedural height fields into restrained normal-space
+  relief using screen-space derivatives (the `perturbNormalArb` math three.js
+  uses for bump maps, but computed from the procedural field — still no texture
+  fetches). Sand uses the gentlest value so it reads as wind-worked ground, not
+  choppy terrain; compacted earth reads as compression under raking light. The
+  relief is faded by pixel footprint so distant masonry or ground never
+  shimmers; raking dawn/dusk light is where it is meant to read. Stonehenge
+  sarsen and bluestone keep that grain for close-up and add a broader
+  rain-dark mottle so 135 shared-material stones still break up at the 50 m
+  camera hold — never unique 2K maps.
 - Cloth (square sails, tent canvas, shade awnings) sways via a vertex
   displacement injected into dedicated clones of the linen material, phased
   from playback `t`; the shared linen of worker clothing stays still.
-- The Nile renders as real water, not a tinted ribbon: the ripple field is
-  advected downstream along the channel and carries a second fine-chop
-  octave, both feeding the normal perturbation; and a Fresnel-weighted
-  analytic sky reflection — the same zenith/horizon gradient and sun
-  disc/halo the dome draws, evaluated at the reflected view direction — so
-  dawn and dusk skies and a true sun-glitter path appear in the river with
-  no reflection pass, no texture fetches, and no extra draw calls. Sky
-  uniforms are fed per frame from the typed keyframes and stay at strength
-  zero for the legacy scenes, whose water is unchanged. Thin foam ribbons
-  ride both waterlines as authored geometry with a gentle `t`-phased pulse.
+- Outdoor water bodies render as real water, not a tinted plane. Giza's Nile
+  is the quality bar: a playback-phased ripple field plus a fine-chop octave
+  both feed the normal, and a Fresnel-weighted analytic sky reflection — the
+  same zenith/horizon gradient and sun disc/halo the dome draws, evaluated
+  at the reflected view direction — so dawn and dusk skies and a true
+  sun-glitter path appear with no reflection pass, no texture fetches, and
+  no extra draw calls. Every typed outdoor reference that has a water body
+  (harbour, remaining lake, river glint) uses the shared `materials.water`
+  recipe and feeds sky uniforms per frame from **that scene's** typed sky
+  sample. Never clone the library water onto a new `MeshStandardMaterial`
+  and leave it as a plastic card — that is how the Colosseum lake stayed
+  flat blue while the Nile glittered. Tint the shared dielectric for local
+  colour; never dispose it from a scene environment. Legacy fallback scenes
+  keep reflection strength zero. Thin foam ribbons ride the waterline as
+  authored geometry with a gentle `t`-phased pulse. Transfer the optical
+  recipe, never Nile meanders or boats.
 
 ## Lighting and atmosphere
 
@@ -100,7 +116,10 @@ handles overlap; transparency is limited to dust, water, clouds, and sky.
   horizon haze are sampled from the scene's typed sky description
   (`src/data/gizaSky.ts` for Giza) and driven by the same world-space sun
   direction as the key light; it is not a flat CSS backdrop and does not
-  counter-rotate with the camera.
+  counter-rotate with the camera. Giza additionally carries a subtle,
+  world-directional, low-altitude desert-aerosol variation authored in that
+  typed sky description: no cloud texture, no wall-clock animation, and no
+  variation near the zenith where procedural noise would read as artifact.
 - Dust is shallow, contact-timed, pooled, and depth-aware. It never disguises a
   physically impossible placement. Wind-blown dust drifts in typed lanes that
   are verified clear of masonry and earthworks, low and translucent so it

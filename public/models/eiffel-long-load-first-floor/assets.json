@@ -1,0 +1,96 @@
+{
+  "source": "Saved Blender Lab MCP exports; onward crossing and mobile profiles, 2026-09-08",
+  "sourceDirectory": "artifacts/eiffel-long-load-onward-2026-09-08/",
+  "files": [
+    {
+      "file": "bridge-mobile.glb",
+      "bytes": 335924,
+      "sha256": "5f068f7f54e879bdefea023f97e6b517864b2e8908feb8be11cb6f817e40218e",
+      "triangles": 5788,
+      "materials": 2,
+      "active": true,
+      "profile": "mobile"
+    },
+    {
+      "file": "bridge.glb",
+      "bytes": 468532,
+      "sha256": "fe820856a652d9a18320026c14f752935e83ff67247870817c48deb6da73ceeb",
+      "triangles": 8152,
+      "materials": 2,
+      "active": true,
+      "profile": "full"
+    },
+    {
+      "file": "carrier.glb",
+      "bytes": 216388,
+      "sha256": "999ed0fb6ce3e2942716442d96b404177bb30726060c17405b048bdf275e54b2",
+      "triangles": 4056,
+      "materials": 2,
+      "active": true,
+      "profile": "shared"
+    },
+    {
+      "file": "closed-sling-mobile.glb",
+      "bytes": 164052,
+      "sha256": "6cc99b2a06cc2a15caf3f70825a54114fac246649db8694147116cad0fbf9990",
+      "triangles": 5456,
+      "materials": 2,
+      "active": true,
+      "profile": "mobile"
+    },
+    {
+      "file": "closed-sling.glb",
+      "bytes": 500076,
+      "sha256": "a97656a66caa97fa6f13fc6c7c3d6cf3542348027c8cb32300e40d08b1516461",
+      "triangles": 11216,
+      "materials": 2,
+      "active": true,
+      "profile": "full"
+    },
+    {
+      "file": "onward-mobile.glb",
+      "bytes": 417304,
+      "sha256": "b827103bada36be2be12c385ef980cc32b17bcd826a42fae9b0057569d25d44f",
+      "triangles": 5696,
+      "materials": 4,
+      "active": true,
+      "profile": "mobile"
+    },
+    {
+      "file": "onward.glb",
+      "bytes": 606876,
+      "sha256": "ab0422496a275de59092cbeeccd423c11aeb81aeb9f8f1994386abf4a7ab42fd",
+      "triangles": 8000,
+      "materials": 4,
+      "active": true,
+      "profile": "full"
+    },
+    {
+      "file": "receiver-driven.glb",
+      "bytes": 295328,
+      "sha256": "4582dea01f7b6efcd053a7083a834c66deff45fecb9f0a644182f0e9e17efdd8",
+      "triangles": 5788,
+      "materials": 3,
+      "active": true,
+      "profile": "shared"
+    },
+    {
+      "file": "receiver.glb",
+      "bytes": 184328,
+      "sha256": "944bb4694d0df2baa2fa868463ae0e1a635bf56b9f5cc68f316d6c187d6a834e",
+      "triangles": 2844,
+      "materials": 2,
+      "active": false,
+      "profile": "shared"
+    },
+    {
+      "file": "steam-drive.glb",
+      "bytes": 398956,
+      "sha256": "3b7f1f4dd44d305d0981fde40b6b5a301ec79a80cb80dff42e96ad2253b2b9ce",
+      "triangles": 7564,
+      "materials": 6,
+      "active": true,
+      "profile": "shared"
+    }
+  ]
+}

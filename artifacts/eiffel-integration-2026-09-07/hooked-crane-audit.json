@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "completed": 1840,
+    "primitives": 623,
+    "structure": 219,
+    "samples": 2751
+  },
+  "step": 0.02,
+  "sourceBuilderSHA256": "19ecf8cdfc756d18ef6bf08c7b393d8f29037c85757a7d0e7de00d435a16b0d2",
+  "scope": "Builder primitive OBBs and actual sampler ropes vs all completed tower and proposed ground structure; cylinders conservative, beam/box shapes exact. Recorded time-step samples. Excludes crane self-collision.",
+  "findings": []
+}

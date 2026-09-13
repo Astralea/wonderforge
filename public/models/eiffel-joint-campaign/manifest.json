@@ -1,0 +1,50 @@
+{
+  "supportSourceSHA256": "17d57198ca8f0f543fa0f8aabba9e5b59d87d4aea47302deaaf4807b26f344a3",
+  "supportTriangles": 312,
+  "cartTriangles": 2024,
+  "spliceTriangles": 704,
+  "bed": {
+    "size": [
+      1.8,
+      0.24,
+      5.909524027506511
+    ],
+    "topY": 1.141950000822544,
+    "centerY": 1.0219500008225442
+  },
+  "wheelRadius": 0.4,
+  "wheelZ": 1.9205953089396162,
+  "plates": [
+    {
+      "role": "splice-plate-0",
+      "center": [
+        51.247235279142856,
+        19,
+        -40.295236587524414
+      ],
+      "size": [
+        0.018,
+        0.11,
+        0.65
+      ]
+    },
+    {
+      "role": "splice-plate-1",
+      "center": [
+        51.38133527749777,
+        19,
+        -40.295236587524414
+      ],
+      "size": [
+        0.018,
+        0.11,
+        0.65
+      ]
+    }
+  ],
+  "limits": [
+    "Original authored interpretation; no historical dimensions claimed for this added support/cart/splice.",
+    "Grounded support context is not duplicated in support.glb.",
+    "Campaign paths and fastening/lifecycle need separate runtime verification."
+  ]
+}

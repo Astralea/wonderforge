@@ -1,0 +1,85 @@
+{
+  "floorY": 197,
+  "stage": 45,
+  "attachments": [
+    {
+      "partId": "shaft-10-m000-c000",
+      "faceCenter": [
+        -6.845243125102091,
+        196.09011300997275,
+        -6.845243851619642
+      ],
+      "localNormal": [
+        0,
+        -1,
+        0
+      ],
+      "collarHeight": 0.6
+    },
+    {
+      "partId": "shaft-10-m008-c000",
+      "faceCenter": [
+        6.845243125102091,
+        196.09011300997275,
+        -6.845243851619642
+      ],
+      "localNormal": [
+        0,
+        -1,
+        0
+      ],
+      "collarHeight": 0.6
+    },
+    {
+      "partId": "shaft-10-m016-c000",
+      "faceCenter": [
+        6.845244552670536,
+        196.09011297302044,
+        6.845243875027059
+      ],
+      "localNormal": [
+        0,
+        -1,
+        0
+      ],
+      "collarHeight": 0.6
+    },
+    {
+      "partId": "shaft-10-m024-c000",
+      "faceCenter": [
+        -6.845244552670536,
+        196.09011297302044,
+        6.845243875027059
+      ],
+      "localNormal": [
+        0,
+        -1,
+        0
+      ],
+      "collarHeight": 0.6
+    }
+  ],
+  "centralOpening": [
+    -2.99,
+    2.99,
+    -2.99,
+    2.99
+  ],
+  "deckOpening": [
+    -3.1,
+    3.1,
+    -3.1,
+    3.1
+  ],
+  "stairExclusion": [
+    -1.15,
+    1.15,
+    -0.9,
+    0.9
+  ],
+  "productionReady": false,
+  "limits": [
+    "Authored fixed collars; no rated bolt/clamp capacity or erection sequence.",
+    "Distinct freight aperture and relay machinery remain to be designed."
+  ]
+}

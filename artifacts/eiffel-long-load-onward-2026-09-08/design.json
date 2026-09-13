@@ -1,0 +1,412 @@
+{
+  "floorY": 57.94000244140625,
+  "duration": 280,
+  "cartOrigin": [
+    -21.5,
+    57.94000244140625,
+    -4
+  ],
+  "carrierOffset": [
+    0,
+    0.34,
+    0
+  ],
+  "masterOffset": [
+    0,
+    6.882500305175782,
+    0
+  ],
+  "hoistEnd": [
+    0,
+    0.325,
+    0
+  ],
+  "clevis": {
+    "role": "opening-clevis",
+    "pinRole": "clevis-pin",
+    "keeperRole": "clevis-keeper",
+    "cheekCentersZ": [
+      -0.03,
+      0.03
+    ],
+    "cheekSize": [
+      0.065,
+      0.145,
+      0.016
+    ],
+    "cheekCenterY": 0.1425,
+    "pinCenter": [
+      0,
+      0.104,
+      0
+    ],
+    "pinRadius": 0.008,
+    "pinLength": 0.084,
+    "pinHeadZ": 0.048,
+    "boreCenterY": 0.1048,
+    "boreRadius": 0.0088,
+    "pinWithdrawal": 0.084,
+    "keeperPivot": [
+      0.028,
+      0.104,
+      0.058
+    ],
+    "keeperAxis": [
+      0,
+      1,
+      0
+    ],
+    "unloadDrop": 0.002,
+    "retraction": 0.15,
+    "ropeApex": [
+      0,
+      0.325,
+      0
+    ]
+  },
+  "saddle": {
+    "role": "sling-parking-saddle",
+    "bottomY": 6.2325003051757815,
+    "topY": 6.734500305175782,
+    "padSize": [
+      0.06,
+      0.01,
+      0.05
+    ],
+    "postSize": [
+      0.022,
+      0.492,
+      0.022
+    ]
+  },
+  "bolts": {
+    "roles": [
+      "cart-bolt-0",
+      "cart-bolt-1",
+      "cart-bolt-2",
+      "cart-bolt-3"
+    ],
+    "centerY": 0.31,
+    "pointsXZ": [
+      [
+        -0.16,
+        0
+      ],
+      [
+        0.16,
+        0
+      ],
+      [
+        0,
+        -0.16
+      ],
+      [
+        0,
+        0.16
+      ]
+    ],
+    "storedCenters": [
+      [
+        -22.0,
+        58.37000244140625,
+        -4.78
+      ],
+      [
+        -22.0,
+        58.37000244140625,
+        -4.7250000000000005
+      ],
+      [
+        -22.0,
+        58.37000244140625,
+        -4.67
+      ],
+      [
+        -22.0,
+        58.37000244140625,
+        -4.615
+      ]
+    ],
+    "shaftRadius": 0.009,
+    "shaftLength": 0.24,
+    "headOffsetY": 0.128,
+    "washerOffsetY": 0.115
+  },
+  "scaffold": {
+    "landingMin": [
+      -22.6,
+      63.66000244140625,
+      -4.72
+    ],
+    "landingMax": [
+      -21.8,
+      63.76000244140625,
+      -3.28
+    ],
+    "postXZ": [
+      [
+        -22.48,
+        -4.6
+      ],
+      [
+        -22.48,
+        -3.4
+      ],
+      [
+        -21.88,
+        -4.6
+      ],
+      [
+        -21.88,
+        -3.4
+      ]
+    ],
+    "postWidth": 0.09,
+    "ladderX": -22.65,
+    "ladderCenterZ": -4,
+    "ladderWidth": 0.62,
+    "rungHeights": [
+      0.3,
+      0.6,
+      0.9,
+      1.2,
+      1.5,
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3.0,
+      3.3,
+      3.6,
+      3.9,
+      4.2,
+      4.5,
+      4.8,
+      5.1,
+      5.4,
+      5.7,
+      5.82
+    ],
+    "rungRadius": 0.018
+  },
+  "hatch": {
+    "pivot": [
+      -19.8,
+      57.94000244140625,
+      -3.05
+    ],
+    "handleRole": "hatch-handle",
+    "handleCenter": [
+      -0.43,
+      0.18,
+      -1.65
+    ],
+    "handleAxis": [
+      0,
+      0,
+      1
+    ],
+    "handleLength": 0.32,
+    "handleRadius": 0.022,
+    "workerX": -20.65
+  },
+  "workers": {
+    "prefixes": [
+      "deck-rigger",
+      "rigger",
+      "hatch-worker",
+      "pusher"
+    ],
+    "parts": [
+      {
+        "id": "pelvis",
+        "size": [
+          0.24,
+          0.18,
+          0.3
+        ],
+        "material": "pants"
+      },
+      {
+        "id": "torso",
+        "size": [
+          0.25,
+          0.46,
+          0.34
+        ],
+        "material": "cloth"
+      },
+      {
+        "id": "neck",
+        "size": [
+          0.12,
+          0.1,
+          0.12
+        ],
+        "material": "skin"
+      },
+      {
+        "id": "head",
+        "size": [
+          0.23,
+          0.27,
+          0.23
+        ],
+        "material": "skin"
+      },
+      {
+        "id": "cap",
+        "size": [
+          0.28,
+          0.055,
+          0.28
+        ],
+        "material": "boot"
+      },
+      {
+        "id": "cap-brim",
+        "size": [
+          0.12,
+          0.025,
+          0.28
+        ],
+        "material": "boot"
+      },
+      {
+        "id": "foot-0",
+        "size": [
+          0.26,
+          0.12,
+          0.14
+        ],
+        "material": "boot"
+      },
+      {
+        "id": "shin-0",
+        "size": [
+          0.09,
+          0.43,
+          0.09
+        ],
+        "material": "pants"
+      },
+      {
+        "id": "thigh-0",
+        "size": [
+          0.11,
+          0.44,
+          0.11
+        ],
+        "material": "pants"
+      },
+      {
+        "id": "upper-arm-0",
+        "size": [
+          0.065,
+          0.31,
+          0.065
+        ],
+        "material": "cloth"
+      },
+      {
+        "id": "forearm-0",
+        "size": [
+          0.065,
+          0.31,
+          0.065
+        ],
+        "material": "cloth"
+      },
+      {
+        "id": "hand-0",
+        "size": [
+          0.07,
+          0.08,
+          0.08
+        ],
+        "material": "skin"
+      },
+      {
+        "id": "foot-1",
+        "size": [
+          0.26,
+          0.12,
+          0.14
+        ],
+        "material": "boot"
+      },
+      {
+        "id": "shin-1",
+        "size": [
+          0.09,
+          0.43,
+          0.09
+        ],
+        "material": "pants"
+      },
+      {
+        "id": "thigh-1",
+        "size": [
+          0.11,
+          0.44,
+          0.11
+        ],
+        "material": "pants"
+      },
+      {
+        "id": "upper-arm-1",
+        "size": [
+          0.065,
+          0.31,
+          0.065
+        ],
+        "material": "cloth"
+      },
+      {
+        "id": "forearm-1",
+        "size": [
+          0.065,
+          0.31,
+          0.065
+        ],
+        "material": "cloth"
+      },
+      {
+        "id": "hand-1",
+        "size": [
+          0.07,
+          0.08,
+          0.08
+        ],
+        "material": "skin"
+      }
+    ]
+  },
+  "rolesConvention": "All roots world positions; clevis-pin child position pinCenter+[0,0,withdrawal], keeper child position keeperPivot and local Y rotation. Worker root per bodypart centered zero; all fixed sizes. Bolts root centered shaft midpoint. Hatch-handle root shares original hatch world pivot and X rotation.",
+  "limits": [
+    "Mechanism visualization, not engineered load capacity or historical hardware certification.",
+    "Manual hatch lowering requires continuous two-hand contact; no automatic closure."
+  ],
+  "chock": {
+    "role": "cart-chock",
+    "cartOffset": [
+      0.354,
+      0,
+      -0.38
+    ],
+    "size": [
+      0.1,
+      0.06,
+      0.09
+    ]
+  },
+  "wrench": {
+    "role": "fastening-wrench",
+    "boltGripOffset": [
+      0,
+      0,
+      0
+    ],
+    "length": 0.2
+  }
+}

@@ -1,23 +1,50 @@
 import { Fog, Vector3 } from 'three';
 import type { Wonder } from '../../data/types';
 import { gizaSunStateAt, sampleGizaSky } from '../../data/gizaSky';
+import { colosseumSunStateAt, sampleColosseumSky } from '../../data/colosseumSky';
+import { samplePetraSky, petraSunStateAt } from '../../data/petraSky';
+import { sampleStonehengeSky, stonehengeSunStateAt } from '../../data/stonehengeSky';
+import { sampleSydneySky, sydneySunStateAt } from '../../data/sydneySky';
+import { sampleEiffelSky, eiffelSunStateAt } from '../../data/eiffelSky';
 import { cameraStateAt } from '../../engine/camera';
 import { lightStateAt } from '../../engine/daynight';
+import { sampleEiffelCinematicAtmosphere } from '../../engine/eiffelCinematicAtmosphere';
 import { clamp } from '../../engine/easing';
 import { gizaAmbientOrbitAt, gizaCinematicShotAt } from '../../engine/gizaCamera';
+import { colosseumCinematicShotAt } from '../../engine/colosseumCamera';
+import { petraCinematicShotAt } from '../../engine/petraCamera';
+import { stonehengeCinematicShotAt } from '../../engine/stonehengeCamera';
+import { sydneyCinematicShotAt } from '../../engine/sydneyCamera';
+import { eiffelCinematicShotAt } from '../../engine/eiffelCamera';
+import { eiffelFilmShotAt, sampleEiffelFilm } from '../../engine/eiffelFilm';
+import { eiffelFilmEditShotAt, sampleEiffelFilmEdit, type EiffelFilmEdit } from '../../engine/eiffelFilmEdit';
+import { ColosseumWorld } from './ColosseumWorld';
+import { EiffelWorld } from './EiffelWorld';
+import { EIFFEL_CAMERA_NEAR } from './eiffelRenderPrecision';
 import { GizaWorld } from './GizaWorld';
 import { LegacyWorld } from './LegacyWorld';
 import { createMaterialLibrary, type MaterialLibrary } from './MaterialLibrary';
 import { updateMaterialDetailTime, updateWaterSky } from './proceduralDetail';
+import { PetraWorld } from './PetraWorld';
 import { RenderPipeline } from './RenderPipeline';
+import { referenceWorldKindFor, type ReferenceWorldKind } from './sceneRegistry';
+import { StonehengeWorld } from './StonehengeWorld';
+import { SydneyWorld } from './SydneyWorld';
 import { readRendererDiagnostics } from './diagnostics';
 
 export class WorldScene {
   private readonly pipeline: RenderPipeline;
   private readonly materials: MaterialLibrary;
   private readonly giza?: GizaWorld;
+  private readonly stonehenge?: StonehengeWorld;
+  private readonly petra?: PetraWorld;
+  private readonly colosseum?: ColosseumWorld;
+  private readonly sydney?: SydneyWorld;
+  private readonly eiffel?: EiffelWorld;
   private readonly legacy?: LegacyWorld;
+  private readonly worldKind: ReferenceWorldKind;
   private aspect = 16 / 9;
+  private viewportHeight = 900;
 
   constructor(
     canvas: HTMLCanvasElement,
@@ -25,17 +52,45 @@ export class WorldScene {
   ) {
     this.pipeline = new RenderPipeline(canvas);
     this.materials = createMaterialLibrary(wonder);
-    if (wonder.id === 'pyramids-of-giza') {
+    this.worldKind = referenceWorldKindFor(wonder.id);
+    if (this.worldKind === 'giza') {
       this.giza = new GizaWorld(this.materials);
       this.pipeline.scene.add(this.giza.group);
+    } else if (this.worldKind === 'stonehenge') {
+      this.stonehenge = new StonehengeWorld(this.materials);
+      this.pipeline.scene.add(this.stonehenge.group);
+    } else if (this.worldKind === 'petra') {
+      this.petra = new PetraWorld(this.materials);
+      this.pipeline.scene.add(this.petra.group);
+    } else if (this.worldKind === 'colosseum') {
+      this.colosseum = new ColosseumWorld(this.materials);
+      this.pipeline.scene.add(this.colosseum.group);
+    } else if (this.worldKind === 'sydney') {
+      this.sydney = new SydneyWorld(this.materials);
+      this.pipeline.scene.add(this.sydney.group);
+    } else if (this.worldKind === 'eiffel') {
+      // Fine Paris panes and distant roofs should not shimmer from display noise.
+      this.pipeline.setFilmGrain(0);
+      this.pipeline.enableEiffelReflection();
+      this.eiffel = new EiffelWorld(this.materials, canvas.clientWidth > 0 && canvas.clientWidth < 700);
+      this.pipeline.scene.add(this.eiffel.group);
     } else {
       this.legacy = new LegacyWorld(wonder, this.materials);
       this.pipeline.scene.add(this.legacy.group);
     }
   }
 
+  get loadStage(): string { return this.eiffel?.loadStage ?? 'Preparing scene'; }
+
+  get loadProgress(): number { return this.eiffel?.loadProgress ?? 0; }
+
+  get ready(): Promise<void> {
+    return this.eiffel?.ready ?? Promise.resolve();
+  }
+
   resize(width: number, height: number): void {
     this.aspect = width / Math.max(1, height);
+    this.viewportHeight = Math.max(1, height);
     const pixelRatio = Math.min(window.devicePixelRatio || 1, width < 700 ? 1.35 : 1.75);
     this.pipeline.resize(width, height, pixelRatio);
   }
@@ -97,12 +152,116 @@ export class WorldScene {
     this.pipeline.camera.updateProjectionMatrix();
   }
 
-  private updateLightRig(lightT: number) {
-    const light = lightStateAt(lightT, this.wonder);
+  private updateStonehengeCamera(t: number, fogStretch = 1): void {
+    const shot = stonehengeCinematicShotAt(t, this.aspect);
+    if (this.pipeline.scene.fog instanceof Fog) {
+      this.pipeline.scene.fog.near = shot.radius * 3.2 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 7.6 * fogStretch;
+    }
+    const target = new Vector3(...shot.target);
+    const horizontal = Math.cos(shot.pitch) * shot.radius;
+    this.pipeline.camera.position.set(
+      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.y + Math.sin(shot.pitch) * shot.radius,
+      target.z + Math.sin(shot.azimuth) * horizontal,
+    );
+    this.pipeline.camera.fov = shot.fov;
+    this.pipeline.camera.lookAt(target);
+    this.pipeline.camera.updateProjectionMatrix();
+  }
+
+  private updatePetraCamera(t: number, fogStretch = 1): void {
+    const shot = petraCinematicShotAt(t, this.aspect);
+    if (this.pipeline.scene.fog instanceof Fog) {
+      this.pipeline.scene.fog.near = shot.radius * 1.55 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 4.2 * fogStretch;
+    }
+    const target = new Vector3(...shot.target);
+    const horizontal = Math.cos(shot.pitch) * shot.radius;
+    this.pipeline.camera.position.set(
+      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.y + Math.sin(shot.pitch) * shot.radius,
+      target.z + Math.sin(shot.azimuth) * horizontal,
+    );
+    this.pipeline.camera.fov = shot.fov;
+    this.pipeline.camera.lookAt(target);
+    this.pipeline.camera.updateProjectionMatrix();
+  }
+
+  private updateColosseumCamera(t: number, fogStretch = 1): void {
+    const shot = colosseumCinematicShotAt(t, this.aspect);
+    if (this.pipeline.scene.fog instanceof Fog) {
+      this.pipeline.scene.fog.near = shot.radius * 1.85 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 4.6 * fogStretch;
+    }
+    const target = new Vector3(...shot.target);
+    const horizontal = Math.cos(shot.pitch) * shot.radius;
+    this.pipeline.camera.position.set(
+      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.y + Math.sin(shot.pitch) * shot.radius,
+      target.z + Math.sin(shot.azimuth) * horizontal,
+    );
+    this.pipeline.camera.fov = shot.fov;
+    this.pipeline.camera.lookAt(target);
+    this.pipeline.camera.updateProjectionMatrix();
+  }
+
+  private updateSydneyCamera(t: number, fogStretch = 1): void {
+    const shot = sydneyCinematicShotAt(t, this.aspect);
+    if (this.pipeline.scene.fog instanceof Fog) {
+      this.pipeline.scene.fog.near = shot.radius * 1.7 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 4.4 * fogStretch;
+    }
+    const target = new Vector3(...shot.target);
+    const horizontal = Math.cos(shot.pitch) * shot.radius;
+    this.pipeline.camera.position.set(
+      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.y + Math.sin(shot.pitch) * shot.radius,
+      target.z + Math.sin(shot.azimuth) * horizontal,
+    );
+    this.pipeline.camera.fov = shot.fov;
+    this.pipeline.camera.lookAt(target);
+    this.pipeline.camera.updateProjectionMatrix();
+  }
+
+  private updateEiffelCamera(t: number, fogStretch = 1, filmMode = false, editCamera?: { edit: EiffelFilmEdit; t: number }): void {
+    const film = editCamera ? sampleEiffelFilmEdit(editCamera.edit, editCamera.t) : sampleEiffelFilm(t);
+    const shot = editCamera ? eiffelFilmEditShotAt(editCamera.edit, editCamera.t, this.aspect) : filmMode ? eiffelFilmShotAt(t, this.aspect) : eiffelCinematicShotAt(t, this.aspect);
+    this.pipeline.setEiffelShadowFrame(editCamera?.edit === 'cinematic'
+      ? { productionT: film.productionT, shot }
+      : null);
+    // A closer working lens changes framing, not the Paris air density.
+    const atmosphereRadius = filmMode ? eiffelCinematicShotAt(film.productionT, this.aspect).radius : shot.radius;
+    if (this.pipeline.scene.fog instanceof Fog) {
+      this.pipeline.scene.fog.near = atmosphereRadius * 1.05 * fogStretch;
+      this.pipeline.scene.fog.far = atmosphereRadius * 2.7 * fogStretch;
+    }
+    const target = new Vector3(...shot.target);
+    const horizontal = Math.cos(shot.pitch) * shot.radius;
+    this.pipeline.camera.position.set(
+      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.y + Math.sin(shot.pitch) * shot.radius,
+      target.z + Math.sin(shot.azimuth) * horizontal,
+    );
+    // Centimetre-separated Paris panes need depth precision at city distances.
+    this.pipeline.camera.near = EIFFEL_CAMERA_NEAR;
+    this.pipeline.camera.fov = shot.fov;
+    this.pipeline.camera.lookAt(target);
+    this.pipeline.camera.updateProjectionMatrix();
+  }
+
+  private updateLightRig(lightT: number, motionT = lightT, cinematicSeconds?: number) {
+    const parisEnding = this.eiffel && cinematicSeconds !== undefined ? sampleEiffelCinematicAtmosphere(lightT, cinematicSeconds, this.wonder) : undefined;
+    const light = parisEnding?.light ?? lightStateAt(lightT, this.wonder);
     // Era/place grounding (Spec 08): Giza re-derives its sun path, sky, fog,
     // and ambient tints from the typed scene description rather than the
     // generic wonder palette.
     const sky = this.giza ? sampleGizaSky(lightT) : undefined;
+    const downlandSky = this.stonehenge ? sampleStonehengeSky(lightT) : undefined;
+    const riftSky = this.petra ? samplePetraSky(lightT) : undefined;
+    const valleySky = this.colosseum ? sampleColosseumSky(lightT) : undefined;
+    const harbourSky = this.sydney ? sampleSydneySky(lightT) : undefined;
+    const parisSky = this.eiffel ? parisEnding?.sky ?? sampleEiffelSky(lightT) : undefined;
     if (sky) {
       const sun = gizaSunStateAt(lightT);
       light.sun.azimuth = sun.azimuth;
@@ -116,15 +275,133 @@ export class WorldScene {
       light.sun.color = sky.sunTint;
       // God-ray density follows the typed dust haze: strongest at dawn/dusk.
       this.pipeline.setAtmosphere(sky.haze);
+      this.pipeline.setShadowSoftness(0);
+    } else if (downlandSky) {
+      const sun = stonehengeSunStateAt(lightT);
+      light.sun.azimuth = sun.azimuth;
+      light.sun.elevation = sun.elevation;
+      light.sun.color = downlandSky.sunTint;
+      light.sky = downlandSky.horizon;
+      light.fog = downlandSky.horizon;
+      light.ambient.skyColor = downlandSky.zenith;
+      // Target data owns the humid aerial perspective. Keep it below the old
+      // global wash so the blue upper dome survives the cinematic grade.
+      this.pipeline.setAtmosphere(downlandSky.haze);
+      // Low-sun fill: dusk/dawn key is warm and raking; a cooler, brighter
+      // hemisphere and a slightly softer key keep turf/timber/sarsen from
+      // collapsing into one inked family. No extra post pass.
+      if (sun.elevation < 22) {
+        const dusk = Math.min(1, (22 - sun.elevation) / 18);
+        light.ambient.intensity = Math.min(0.58, light.ambient.intensity + 0.08 + dusk * 0.14);
+        light.sun.intensity *= 1 - dusk * 0.26;
+        this.pipeline.setShadowSoftness(dusk);
+      } else {
+        this.pipeline.setShadowSoftness(0);
+      }
+    } else if (riftSky) {
+      const sun = petraSunStateAt(lightT);
+      light.sun.azimuth = sun.azimuth;
+      light.sun.elevation = sun.elevation;
+      light.sun.color = riftSky.sunTint;
+      light.sky = riftSky.horizon;
+      light.fog = riftSky.horizon;
+      light.ambient.skyColor = riftSky.zenith;
+      this.pipeline.setAtmosphere(riftSky.haze);
+      light.ambient.intensity = Math.min(0.64, light.ambient.intensity + 0.14);
+      if (sun.elevation < 24) {
+        const dusk = Math.min(1, (24 - sun.elevation) / 16);
+        light.ambient.intensity = Math.min(0.68, light.ambient.intensity + dusk * 0.1);
+        light.sun.intensity *= 1 - dusk * 0.12;
+        this.pipeline.setShadowSoftness(dusk * 0.55);
+      } else {
+        this.pipeline.setShadowSoftness(0);
+      }
+    } else if (valleySky) {
+      const sun = colosseumSunStateAt(lightT);
+      light.sun.azimuth = sun.azimuth;
+      light.sun.elevation = sun.elevation;
+      light.sun.color = valleySky.sunTint;
+      light.sky = valleySky.horizon;
+      light.fog = valleySky.horizon;
+      light.ambient.skyColor = valleySky.zenith;
+      this.pipeline.setAtmosphere(valleySky.haze);
+      light.ambient.intensity = Math.min(0.62, light.ambient.intensity + 0.12);
+      if (sun.elevation < 22) {
+        const dusk = Math.min(1, (22 - sun.elevation) / 16);
+        light.ambient.intensity = Math.min(0.66, light.ambient.intensity + dusk * 0.1);
+        light.sun.intensity *= 1 - dusk * 0.14;
+        this.pipeline.setShadowSoftness(dusk * 0.5);
+      } else {
+        this.pipeline.setShadowSoftness(0);
+      }
+    } else if (harbourSky) {
+      const sun = sydneySunStateAt(lightT);
+      light.sun.azimuth = sun.azimuth;
+      light.sun.elevation = sun.elevation;
+      light.sun.color = harbourSky.sunTint;
+      light.sky = harbourSky.horizon;
+      light.fog = harbourSky.horizon;
+      light.ambient.skyColor = harbourSky.zenith;
+      this.pipeline.setAtmosphere(harbourSky.haze);
+      light.ambient.intensity = Math.min(0.64, light.ambient.intensity + 0.1);
+      if (sun.elevation < 18 || light.emissive > 0) {
+        const dusk = Math.min(1, Math.max((18 - sun.elevation) / 14, light.emissive));
+        light.ambient.intensity = Math.min(0.7, light.ambient.intensity + dusk * 0.12);
+        light.sun.intensity *= 1 - dusk * 0.18;
+        this.pipeline.setShadowSoftness(dusk * 0.55);
+      } else {
+        this.pipeline.setShadowSoftness(0);
+      }
+    } else if (parisEnding) {
+      this.pipeline.setAtmosphere(parisEnding.sky.haze);
+      this.pipeline.setShadowSoftness(parisEnding.shadowSoftness);
+    } else if (parisSky) {
+      const sun = eiffelSunStateAt(lightT);
+      light.sun.azimuth = sun.azimuth;
+      light.sun.elevation = sun.elevation;
+      light.sun.color = parisSky.sunTint;
+      light.sky = parisSky.horizon;
+      light.fog = parisSky.horizon;
+      light.ambient.skyColor = parisSky.zenith;
+      this.pipeline.setAtmosphere(parisSky.haze);
+      // Neutral fill keeps painted iron legible on the shaded face.
+      light.ambient.skyColor = '#c6ccd0';
+      light.ambient.intensity = Math.min(0.76, light.ambient.intensity + 0.24);
+      if (sun.elevation < 18 || light.emissive > 0) {
+        const dusk = Math.min(1, Math.max((18 - sun.elevation) / 14, light.emissive));
+        light.ambient.intensity = Math.min(0.84, light.ambient.intensity + dusk * 0.14);
+        light.sun.intensity *= 1 - dusk * 0.06;
+        if (dusk > 0.6) light.sun.color = '#c8d0e8';
+        this.pipeline.setShadowSoftness(dusk * 0.45);
+      } else {
+        this.pipeline.setShadowSoftness(0);
+      }
+    }
+    if (downlandSky) {
+      this.pipeline.setEnvironmentNeutralizers('#c5cdc9', '#e8eef4', '#5e7348');
+    } else if (riftSky) {
+      this.pipeline.setEnvironmentNeutralizers('#cbb49a', '#efe6d8', '#a35c38');
+    } else if (valleySky) {
+      this.pipeline.setEnvironmentNeutralizers('#cbb49a', '#efe6d8', '#9a5a42');
+    } else if (harbourSky) {
+      this.pipeline.setEnvironmentNeutralizers('#3a7a9c', '#d8e6f0', '#8a7a6a');
+    } else if (parisSky) {
+      this.pipeline.setEnvironmentNeutralizers('#6a92b8', '#d9d6d0', '#a2947c');
+    } else {
+      this.pipeline.setEnvironmentNeutralizers();
     }
     const sunDirection = this.pipeline.updateLight(light);
-    // Deterministic detail time (Nile ripple), phased from playback t.
-    updateMaterialDetailTime(this.materials, lightT);
-    if (sky) updateWaterSky(this.materials, sky, sunDirection);
-    return { light, sky, sunDirection };
+    // Deterministic detail time (water ripple), phased from playback t.
+    updateMaterialDetailTime(this.materials, motionT);
+    const waterSky = sky ?? valleySky ?? harbourSky ?? parisSky;
+    if (waterSky) updateWaterSky(this.materials, waterSky, sunDirection);
+    return { light, sky, downlandSky, riftSky, valleySky, harbourSky, parisSky, sunDirection };
   }
 
-  private finishFrame(filmTime: number): void {
+  private finishFrame(filmTime: number, eiffelShortFilm = false): void {
+    // Rank people against this frame's final camera and current route poses,
+    // including paused seeks and ambient camera movement.
+    this.eiffel?.setCrowdCamera(this.pipeline.camera, this.viewportHeight, eiffelShortFilm);
     // Grain seed: playback t in cinematic mode (scrub-deterministic), elapsed
     // wall time in ambient mode (the documented wall-clock exception).
     this.pipeline.render(filmTime);
@@ -132,21 +409,58 @@ export class WorldScene {
     window.__WONDERFORGE_RENDERER__ = diagnostics;
     window.__THREE_GAME_DIAGNOSTICS__ = {
       renderer: diagnostics,
-      scene: this.giza ? 'giza-reference' : 'legacy-fallback',
+      ...(this.eiffel ? {eiffelLongLoad:this.eiffel.longLoadDiagnostics,eiffelCrowd:this.eiffel.crowdDiagnostics,eiffelLighting:this.eiffel.lightingDiagnostics,eiffelGroundPlant:this.eiffel.groundPlantDiagnostics} : {}),
+      camera: {
+        position: this.pipeline.camera.position.toArray(),
+        direction: this.pipeline.camera.getWorldDirection(new Vector3()).toArray(),
+        fov: this.pipeline.camera.fov,
+        aspect: this.pipeline.camera.aspect,
+        near: this.pipeline.camera.near,
+      },
+      scene: this.worldKind === 'giza'
+        ? 'giza-reference'
+        : this.worldKind === 'stonehenge'
+          ? 'stonehenge-reference'
+          : this.worldKind === 'petra'
+            ? 'petra-reference'
+            : this.worldKind === 'colosseum'
+              ? 'colosseum-reference'
+              : this.worldKind === 'sydney'
+                ? 'sydney-opera-house-reference'
+                : this.worldKind === 'eiffel'
+                  ? 'eiffel-tower-reference'
+                : 'legacy-fallback',
     };
     this.pipeline.renderer.domElement.dataset.rendererDiagnostics = JSON.stringify(diagnostics);
   }
 
-  update(constructionT: number, cameraT: number, lightT: number): void {
-    const { light, sky, sunDirection } = this.updateLightRig(lightT);
+  update(constructionT: number, cameraT: number, lightT: number, eiffelEditCamera?: { edit: EiffelFilmEdit; t: number }): void {
+    const editedFilm = this.eiffel && eiffelEditCamera ? sampleEiffelFilmEdit(eiffelEditCamera.edit, eiffelEditCamera.t) : undefined;
+    const film = this.eiffel ? editedFilm ?? sampleEiffelFilm(lightT) : null;
+    const { light, sky, downlandSky, riftSky, valleySky, harbourSky, parisSky, sunDirection } = this.updateLightRig(film?.productionT ?? lightT, film?.motionT ?? lightT, eiffelEditCamera?.edit === 'cinematic' ? eiffelEditCamera.t * 180 : undefined);
     if (this.giza && sky) {
       this.updateGizaCamera(cameraT, sky.fogStretch);
       this.giza.update(constructionT, light, sunDirection, sky);
+    } else if (this.stonehenge) {
+      this.updateStonehengeCamera(cameraT, downlandSky?.fogStretch);
+      this.stonehenge.update(constructionT, light, sunDirection, downlandSky!);
+    } else if (this.petra) {
+      this.updatePetraCamera(cameraT, riftSky?.fogStretch);
+      this.petra.update(constructionT, light, sunDirection, riftSky!);
+    } else if (this.colosseum) {
+      this.updateColosseumCamera(cameraT, valleySky?.fogStretch);
+      this.colosseum.update(constructionT, light, sunDirection, valleySky!);
+    } else if (this.sydney) {
+      this.updateSydneyCamera(cameraT, harbourSky?.fogStretch);
+      this.sydney.update(constructionT, light, sunDirection, harbourSky!);
+    } else if (this.eiffel) {
+      this.updateEiffelCamera(cameraT, parisSky?.fogStretch, true, eiffelEditCamera);
+      this.eiffel.update(constructionT, light, sunDirection, parisSky!, editedFilm);
     } else if (this.legacy) {
       this.updateLegacyCamera(cameraT);
       this.legacy.update(constructionT);
     }
-    this.finishFrame(lightT);
+    this.finishFrame(lightT, eiffelEditCamera?.edit === 'cinematic');
   }
 
   /**
@@ -154,10 +468,25 @@ export class WorldScene {
    * orbit, breathing daylight — seamless forever, no periodic snap.
    */
   updateAmbient(elapsedSeconds: number, lightT: number): void {
-    const { light, sky, sunDirection } = this.updateLightRig(lightT);
+    const { light, sky, downlandSky, riftSky, valleySky, harbourSky, parisSky, sunDirection } = this.updateLightRig(lightT);
     if (this.giza && sky) {
       this.updateAmbientCamera(elapsedSeconds);
       this.giza.update(1, light, sunDirection, sky);
+    } else if (this.stonehenge) {
+      this.updateStonehengeCamera((elapsedSeconds / 90) % 1, downlandSky?.fogStretch);
+      this.stonehenge.update(1, light, sunDirection, downlandSky!);
+    } else if (this.petra) {
+      this.updatePetraCamera((elapsedSeconds / 90) % 1, riftSky?.fogStretch);
+      this.petra.update(1, light, sunDirection, riftSky!);
+    } else if (this.colosseum) {
+      this.updateColosseumCamera((elapsedSeconds / 90) % 1, valleySky?.fogStretch);
+      this.colosseum.update(1, light, sunDirection, valleySky!);
+    } else if (this.sydney) {
+      this.updateSydneyCamera((elapsedSeconds / 90) % 1, harbourSky?.fogStretch);
+      this.sydney.update(1, light, sunDirection, harbourSky!);
+    } else if (this.eiffel) {
+      this.updateEiffelCamera((elapsedSeconds / 90) % 1, parisSky?.fogStretch);
+      this.eiffel.update(1, light, sunDirection, parisSky!);
     } else if (this.legacy) {
       this.updateLegacyCamera((elapsedSeconds / 90) % 1);
       this.legacy.update(1);
@@ -167,6 +496,11 @@ export class WorldScene {
 
   dispose(): void {
     this.giza?.dispose();
+    this.stonehenge?.dispose();
+    this.petra?.dispose();
+    this.colosseum?.dispose();
+    this.sydney?.dispose();
+    this.eiffel?.dispose();
     this.legacy?.dispose();
     for (const material of this.materials.all) material.dispose();
     this.pipeline.dispose();

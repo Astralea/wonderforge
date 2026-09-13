@@ -1,0 +1,134 @@
+{
+  "false": {
+    "scatter": {
+      "trees": {
+        "count": 533,
+        "hash": "83cda40879b7864acd5c493712abae9120d094be78d381c7b28ae9f75464d690"
+      },
+      "trunks": {
+        "count": 533,
+        "hash": "d6449a2958b97a6c223db36c05d13a22ed6e23569a1505db0264b1afed6551a0"
+      },
+      "houses": {
+        "count": 156,
+        "hash": "b5ba82f01f05a353050f91c5137fb32845226f6fc7f166169d4d8069a2212def"
+      },
+      "roofs": {
+        "count": 156,
+        "hash": "2e13de57a265fa2fafd3537ace78271bcd30b03f6edead964222f1ba18a211ed"
+      },
+      "mansards": {
+        "count": 156,
+        "hash": "7ee67e4ce0b8a73bca586ce6df326da4be31308d8fe0ef124ee53bc2b6b7ccc8"
+      },
+      "dormers": {
+        "count": 384,
+        "hash": "665d00c185d24e1791fd354c231d8cf2554627ba2797c07ef6ff6f5e2b9daf28"
+      },
+      "chimneys": {
+        "count": 156,
+        "hash": "51b36e1301233da0691092a6c10ed153f51760873879a7f3055af1ab52a5712a"
+      },
+      "barges": {
+        "count": 8,
+        "hash": "a5e99a8fe62f87eabe66b4270f9bc8c461c5d99504a33cfb0b287f249e21d447"
+      },
+      "windows": {
+        "count": 2769,
+        "hash": "7f0f15b44fbf88935cc9cc01a0fd0a43aca5d275fb0596ca8ef6b1a12e32cf2f"
+      },
+      "plinths": {
+        "count": 156,
+        "hash": "10ef4f2e66f3ec9c660c084c4f64c91470f09d22696b2d9483ec3806b1f9fccf"
+      },
+      "cornices": {
+        "count": 156,
+        "hash": "9ac8622bc104e01e5472207c90d4c6a0584fbc44e0ea095cf7e7f696289bb996"
+      },
+      "balconies": {
+        "count": 156,
+        "hash": "f3b29910f8a4b7a0f2862adf7f76374df0dede7fbde2446f06b87e37c8dac600"
+      },
+      "stocks": {
+        "count": 36,
+        "hash": "85aaf92893b18f5e4b28f6a9de52f86cdd9b59689c8169bc5c10966a721a25a7"
+      },
+      "forges": {
+        "count": 14,
+        "hash": "17764a37db74b8618c15c05d3263b78072061b24b9a6c1b6711adf5d06251bec"
+      },
+      "falsework": {
+        "count": 16,
+        "hash": "ff33f239ec2df4bbd262554f79655c796668c37164f99680861cd0b2455968ff"
+      }
+    },
+    "geometries": 14,
+    "materials": 19
+  },
+  "true": {
+    "scatter": {
+      "trees": {
+        "count": 60,
+        "hash": "468c17402ddc72d201bfe83ce5aaf4549083e8834886ddf6227f5378b28a7a44"
+      },
+      "trunks": {
+        "count": 60,
+        "hash": "d8ac879a0ac2493c46cb83874ba58cabca18eee64fe738bf864187924d7d0514"
+      },
+      "houses": {
+        "count": 236,
+        "hash": "a8a7bf730fa0fb7fb7e6a8f7a8bdff40a2cf9ae9fd49a2f367d792787fbd6890"
+      },
+      "roofs": {
+        "count": 236,
+        "hash": "9373dc19a1f30e5b2ff957acfc67177955811033c7d130180bacf6566a58b9f3"
+      },
+      "mansards": {
+        "count": 236,
+        "hash": "66dbfcff61a62863cce153b8d3dc614d14893a0a3ae2693fae36973adaac22b8"
+      },
+      "dormers": {
+        "count": 581,
+        "hash": "14d4eede9769855a276a9966c54478a67ada551cf0068ce680bcdd7ae50b3664"
+      },
+      "chimneys": {
+        "count": 236,
+        "hash": "31b3e28755dd4cddf1e7e0ca97be0ffc8188ccea2713b8d0f8fc87c6cb9d82e2"
+      },
+      "barges": {
+        "count": 8,
+        "hash": "14d7d24d52dfe4de2b53b426273061671c456c41cbba7aa2139bcea849e902ec"
+      },
+      "windows": {
+        "count": 4189,
+        "hash": "ed32b8dce1309847afff636ecfce8852838918ef9eb4564abe35fdb23346b802"
+      },
+      "plinths": {
+        "count": 236,
+        "hash": "fe823a7413da8594a4d740f01140f90c53e347874f08dfd55fb4d7980cc653de"
+      },
+      "cornices": {
+        "count": 236,
+        "hash": "fa1847a6419d0f58b11d6ae2d40c20797dd5411262417a5b61f56c0fe38253fe"
+      },
+      "balconies": {
+        "count": 236,
+        "hash": "0ba2dfe54c7c72faa6f717adcc070295da9eace41999835d93aa3666a8b5fe36"
+      },
+      "stocks": {
+        "count": 36,
+        "hash": "19a026bc1ab7062f23e1237fd60dae3537af95dc213bbb0552c893b8492a9811"
+      },
+      "forges": {
+        "count": 14,
+        "hash": "394188114fc10c35c3b17c91bfefb4728f8a0922cdab67b1cac0f668097c253b"
+      },
+      "falsework": {
+        "count": 16,
+        "hash": "ff33f239ec2df4bbd262554f79655c796668c37164f99680861cd0b2455968ff"
+      }
+    },
+    "geometries": 16,
+    "materials": 20
+  }
+}

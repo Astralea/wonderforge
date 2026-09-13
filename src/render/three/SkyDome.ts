@@ -29,6 +29,8 @@ uniform vec3 uFogColor;
 uniform float uHazeStrength;
 uniform float uHazeFalloff;
 uniform float uZenithExponent;
+uniform float uAtmosphericTextureScale;
+uniform float uAtmosphericTextureStrength;
 uniform vec3 uSunDirection;
 uniform vec3 uSunTint;
 uniform float uSunDiscCos;
@@ -37,6 +39,22 @@ uniform float uHaloStrength;
 uniform float uWideHaloStrength;
 
 varying vec3 vWorldPosition;
+
+float wfSkyHash(vec2 p) {
+  return fract(sin(dot(p, vec2(91.37, 269.53))) * 43758.5453123);
+}
+
+float wfSkyNoise(vec2 p) {
+  vec2 i = floor(p);
+  vec2 f = fract(p);
+  f = f * f * (3.0 - 2.0 * f);
+  return mix(mix(wfSkyHash(i), wfSkyHash(i + vec2(1.0, 0.0)), f.x),
+             mix(wfSkyHash(i + vec2(0.0, 1.0)), wfSkyHash(i + vec2(1.0, 1.0)), f.x), f.y);
+}
+
+float wfSkyFbm(vec2 p) {
+  return wfSkyNoise(p) * 0.68 + wfSkyNoise(p * 2.07 + 4.3) * 0.32;
+}
 
 void main() {
   vec3 dir = normalize(vWorldPosition - cameraPosition);
@@ -52,6 +70,16 @@ void main() {
 
   float hazeBand = exp(-abs(elevation) * uHazeFalloff) * uHazeStrength;
   color = mix(color, uHazeColor, clamp(hazeBand, 0.0, 1.0));
+
+  // Desert aerosol is not a smooth CSS gradient. A fixed world-directional
+  // field supplies only a faint low-sky variation; the mask protects the
+  // clean blue zenith and eliminates the noise before it can resemble clouds.
+  vec2 aerosolField = dir.xz * uAtmosphericTextureScale +
+    vec2(dir.y * 2.17, -dir.y * 1.31);
+  float aerosolVariation = wfSkyFbm(aerosolField) - 0.5;
+  float aerosolMask = smoothstep(0.015, 0.12, elevation) *
+    (1.0 - smoothstep(0.48, 0.76, elevation));
+  color *= 1.0 + aerosolVariation * uAtmosphericTextureStrength * aerosolMask;
 
   float cosSun = dot(dir, uSunDirection);
   float tightGlow = pow(clamp(cosSun, 0.0, 1.0), 650.0);
@@ -103,6 +131,8 @@ export class SkyDome {
         uHazeStrength: { value: 0.35 },
         uHazeFalloff: { value: dome.hazeFalloff },
         uZenithExponent: { value: dome.zenithExponent },
+        uAtmosphericTextureScale: { value: dome.atmosphericTexture.scale },
+        uAtmosphericTextureStrength: { value: dome.atmosphericTexture.strength },
         uSunDirection: { value: new Vector3(0, 1, 0) },
         uSunTint: { value: new Color('#fff4e0') },
         uSunDiscCos: {

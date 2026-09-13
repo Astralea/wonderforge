@@ -1,0 +1,6 @@
+{
+  "partId": "summit-access-stair-m000-c000",
+  "productionT": 0.8054955483449447,
+  "manifestSha256": "e054bfb8cbded7e636075ba1371e624430f600da0b2e8f0cc765e205d1e54080",
+  "source": "createEiffelProductionPlan(manifest, { upperClearance: 'skip' }).byPart.get(partId).start"
+}

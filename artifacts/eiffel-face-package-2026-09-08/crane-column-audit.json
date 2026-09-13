@@ -1,0 +1,145 @@
+{
+  "productionAdmitted": false,
+  "sourceGLBSHA256": "dde2a9308b75ce48a40bd863912984789b5781814b47c3763d6a13eed4a228a1",
+  "fixedSolids": 2146,
+  "cranePrimitives": 623,
+  "scope": "Exact whole straight sweeps of the actual package bounding envelope and four conservative upper-leg envelopes; full hoist rope; 21 articulated crane poses against completed tower and 245 support solids. Working members are additionally checked against fixed guides/anchors/screw. End links, other crane self-intersections, cart/crew, onward transfer and installation excluded.",
+  "reports": [
+    {
+      "offset": [
+        1.5,
+        -0.5
+      ],
+      "pickup": {
+        "position": [
+          53.80523319295242,
+          0.858,
+          -45.80381939062641
+        ],
+        "quaternion": [
+          0,
+          -0.05233595624294383,
+          0,
+          0.9986295347545738
+        ]
+      },
+      "high": {
+        "position": [
+          53.80523319295242,
+          22.065,
+          -45.80381939062641
+        ],
+        "quaternion": [
+          0,
+          -0.05233595624294383,
+          0,
+          0.9986295347545738
+        ]
+      },
+      "localBounds": {
+        "min": [
+          -0.2491961568593979,
+          -0.2879999876022339,
+          -0.5400000214576721
+        ],
+        "max": [
+          0.2491961568593979,
+          0.28200000524520874,
+          0.5400000214576721
+        ]
+      },
+      "centerOfMassAtPickup": [
+        53.820065488955834,
+        0.8131665214890361,
+        -45.82170918549321
+      ],
+      "hookLocal": [
+        0.012881050368373514,
+        1.35,
+        -0.019342189806648348
+      ],
+      "reach": 7.22254596658141,
+      "yawDegrees": 128.45832819219007,
+      "tip": [
+        53.820065488955834,
+        27.606406580369317,
+        -45.82170918549321
+      ],
+      "minHoistRopeLength": 4.191406580369318,
+      "outsidePreviousReviewedSector": true,
+      "payloadHits": [],
+      "bridleHits": [],
+      "hoistRopeHits": [],
+      "craneHits": [],
+      "guideSelfHits": []
+    },
+    {
+      "offset": [
+        1.5,
+        -1
+      ],
+      "pickup": {
+        "position": [
+          53.80523319295242,
+          0.858,
+          -46.30381939062641
+        ],
+        "quaternion": [
+          0,
+          -0.05233595624294383,
+          0,
+          0.9986295347545738
+        ]
+      },
+      "high": {
+        "position": [
+          53.80523319295242,
+          22.065,
+          -46.30381939062641
+        ],
+        "quaternion": [
+          0,
+          -0.05233595624294383,
+          0,
+          0.9986295347545738
+        ]
+      },
+      "localBounds": {
+        "min": [
+          -0.2491961568593979,
+          -0.2879999876022339,
+          -0.5400000214576721
+        ],
+        "max": [
+          0.2491961568593979,
+          0.28200000524520874,
+          0.5400000214576721
+        ]
+      },
+      "centerOfMassAtPickup": [
+        53.820065488955834,
+        0.8131665214890361,
+        -46.32170918549321
+      ],
+      "hookLocal": [
+        0.012881050368373514,
+        1.35,
+        -0.019342189806648348
+      ],
+      "reach": 7.182780504554736,
+      "yawDegrees": 132.42393833024903,
+      "tip": [
+        53.820065488955834,
+        27.631710560342974,
+        -46.32170918549321
+      ],
+      "minHoistRopeLength": 4.216710560342975,
+      "outsidePreviousReviewedSector": true,
+      "payloadHits": [],
+      "bridleHits": [],
+      "hoistRopeHits": [],
+      "craneHits": [],
+      "guideSelfHits": []
+    }
+  ]
+}

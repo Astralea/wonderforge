@@ -5,7 +5,10 @@ import {
   Fog,
   HalfFloatType,
   HemisphereLight,
+  Mesh,
+  type Object3D,
   PCFSoftShadowMap,
+  PMREMGenerator,
   PerspectiveCamera,
   Scene,
   SRGBColorSpace,
@@ -20,6 +23,10 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import type { LightState } from '../../engine/daynight';
+import type { EiffelCameraShot } from '../../engine/eiffelCamera';
+import { eiffelShadowEnvelope, fitEiffelShadow } from '../../engine/eiffelShadow';
+import { applyEiffelShadowFrame, restoreEiffelShadowFrame } from './eiffelShadow';
+import { createEiffelReflectionSource, eiffelReflectionIntensity } from './eiffelReflection';
 
 /**
  * Screen-space god rays (crepuscular shafts) plus a horizontal anamorphic
@@ -188,8 +195,83 @@ const FOG_NEUTRALIZER = new Color('#c7b499');
  * this exact color at low elevation, so any geometry that ends fully fogged
  * (ground plane, horizon heightfield) meets the dome without a visible seam.
  */
-export function deriveSceneFogColor(fog: string, target: Color): Color {
-  return target.set(fog).lerp(FOG_NEUTRALIZER, 0.28);
+export function deriveSceneFogColor(
+  fog: string,
+  target: Color,
+  neutralizer: Color = FOG_NEUTRALIZER,
+): Color {
+  return target.set(fog).lerp(neutralizer, 0.28);
+}
+
+type DrawCost = { calls: number; triangles: number };
+export type SceneRenderCosts = {
+  total: DrawCost;
+  untracked: DrawCost;
+  meshes: Array<{ id: number; name: string; path: string; main: DrawCost; shadow: DrawCost }>;
+};
+
+/** Diagnostic-only accounting of actual submissions, including instanced draws.
+ * Wrap for one frame so newly loaded meshes are covered and no callback survives
+ * disposal. Postprocess scenes and non-Mesh objects remain in `untracked`.
+ */
+export function measureSceneRenderCosts(
+  scene: Scene,
+  info: { render: DrawCost },
+  render: () => void,
+): SceneRenderCosts {
+  const records: SceneRenderCosts['meshes'] = [];
+  const restore: Array<() => void> = [];
+  const snapshot = (): DrawCost => ({ calls: info.render.calls, triangles: info.render.triangles });
+  const frameStart = snapshot();
+  const delta = (start: DrawCost): DrawCost => ({
+    calls: info.render.calls - start.calls, triangles: info.render.triangles - start.triangles,
+  });
+  // Invisible parents prune both main and shadow traversal in Three.js.
+  // Do not visit hidden source GLTF trees retained behind batched renderers.
+  scene.traverseVisible(object => {
+    if (!(object instanceof Mesh)) return;
+    const names: string[] = [];
+    for (let ancestor: Object3D | null = object; ancestor; ancestor = ancestor.parent) {
+      if (ancestor.name) names.unshift(ancestor.name);
+    }
+    const record = { id: object.id, name: object.name || `${object.type}#${object.id}`,
+      path: names.join('/'), main: { calls: 0, triangles: 0 }, shadow: { calls: 0, triangles: 0 } };
+    records.push(record);
+    const before = object.onBeforeRender, after = object.onAfterRender;
+    const beforeShadow = object.onBeforeShadow, afterShadow = object.onAfterShadow;
+    let mainStart: DrawCost, shadowStart: DrawCost;
+    const accumulate = (target: DrawCost, start: DrawCost) => {
+      const cost = delta(start); target.calls += cost.calls; target.triangles += cost.triangles;
+    };
+    const wrappedBefore: Mesh['onBeforeRender'] = function (this: Mesh, ...args) {
+      before.apply(this, args); mainStart = snapshot();
+    };
+    const wrappedAfter: Mesh['onAfterRender'] = function (this: Mesh, ...args) {
+      accumulate(record.main, mainStart); after.apply(this, args);
+    };
+    const wrappedBeforeShadow: Mesh['onBeforeShadow'] = function (this: Mesh, ...args) {
+      beforeShadow.apply(this, args); shadowStart = snapshot();
+    };
+    const wrappedAfterShadow: Mesh['onAfterShadow'] = function (this: Mesh, ...args) {
+      accumulate(record.shadow, shadowStart); afterShadow.apply(this, args);
+    };
+    object.onBeforeRender = wrappedBefore; object.onAfterRender = wrappedAfter;
+    object.onBeforeShadow = wrappedBeforeShadow; object.onAfterShadow = wrappedAfterShadow;
+    restore.push(() => {
+      // An original callback may intentionally replace itself during the frame.
+      if (object.onBeforeRender === wrappedBefore) object.onBeforeRender = before;
+      if (object.onAfterRender === wrappedAfter) object.onAfterRender = after;
+      if (object.onBeforeShadow === wrappedBeforeShadow) object.onBeforeShadow = beforeShadow;
+      if (object.onAfterShadow === wrappedAfterShadow) object.onAfterShadow = afterShadow;
+    });
+  });
+  try { render(); } finally { for (const undo of restore) undo(); }
+  const total = delta(frameStart);
+  const meshes = records.filter(record => record.main.calls || record.shadow.calls)
+    .sort((a, b) => b.main.triangles + b.shadow.triangles - a.main.triangles - a.shadow.triangles);
+  const tracked = meshes.reduce((sum, record) => ({ calls: sum.calls + record.main.calls + record.shadow.calls,
+    triangles: sum.triangles + record.main.triangles + record.shadow.triangles }), { calls: 0, triangles: 0 });
+  return { total, untracked: { calls: total.calls - tracked.calls, triangles: total.triangles - tracked.triangles }, meshes };
 }
 
 export class RenderPipeline {
@@ -199,6 +281,9 @@ export class RenderPipeline {
   readonly sun = new DirectionalLight('#fff4e0', 2.3);
   readonly ambient = new HemisphereLight('#b9d7e9', '#6f4d2c', 1.05);
   private readonly sunTarget = new Vector3(-15, 7, -17);
+  private eiffelShadowActive = false;
+  private eiffelReflection?: WebGLRenderTarget;
+  private readonly renderCostDiagnostics: boolean;
   private readonly composer: EffectComposer;
   private readonly godrays: ShaderPass;
   private readonly bloom: UnrealBloomPass;
@@ -206,11 +291,17 @@ export class RenderPipeline {
   /** Atmosphere inputs for the god-ray pass, set once per frame. */
   private readonly sunDirection = new Vector3(0, 1, 0);
   private shaftLowSun = 0;
+  private sunVisibility = 1;
   private haze = 0.35;
   private readonly sunWorld = new Vector3();
   private readonly warmTint = new Color('#ffffff');
+  private readonly fogNeutralizer = FOG_NEUTRALIZER.clone();
+  private readonly ambientSkyNeutralizer = new Color('#fff5df');
+  private readonly ambientGroundNeutralizer = new Color('#8b6a42');
 
   constructor(canvas: HTMLCanvasElement) {
+    this.renderCostDiagnostics = typeof window !== 'undefined'
+      && new URLSearchParams(window.location.search).get('renderCosts') === '1';
     this.renderer = new WebGLRenderer({
       canvas,
       antialias: true,
@@ -266,7 +357,22 @@ export class RenderPipeline {
     this.sun.shadow.camera.far = 300;
     this.sun.shadow.bias = -0.00035;
     this.sun.shadow.normalBias = 0.035;
+    this.sun.shadow.intensity = 1;
     this.camera.up.set(0, 1, 0);
+  }
+
+  enableEiffelReflection(): void {
+    if (this.eiffelReflection) return;
+    const source = createEiffelReflectionSource();
+    const filter = new PMREMGenerator(this.renderer);
+    try {
+      this.eiffelReflection = filter.fromEquirectangular(source);
+      this.scene.environment = this.eiffelReflection.texture;
+      this.scene.environmentIntensity = .025;
+    } finally {
+      source.dispose();
+      filter.dispose();
+    }
   }
 
   resize(width: number, height: number, pixelRatio: number): void {
@@ -298,25 +404,28 @@ export class RenderPipeline {
       Math.cos(elevation) * Math.sin(azimuth),
     ).normalize();
     this.sun.color.set(light.sun.color);
-    this.sun.intensity = 0.72 + light.sun.intensity * 1.72;
+    const sunVisibility = Math.max(0, Math.min(1, light.sun.visibility ?? 1));
+    this.sunVisibility = sunVisibility;
+    this.sun.intensity = (0.72 + light.sun.intensity * 1.72) * sunVisibility;
     this.sun.position.copy(this.sunTarget).addScaledVector(direction, 145);
     this.sunDirection.copy(direction);
+    if (this.eiffelReflection) this.scene.environmentIntensity = eiffelReflectionIntensity(direction.y);
     // Shafts and warm grade belong to the low sun: full strength near the
     // horizon, gone by ~30° elevation. Haze arrives via setAtmosphere.
     const lowSun = Math.max(0, Math.min(1, 1 - direction.y / 0.5));
-    this.shaftLowSun = lowSun;
+    this.shaftLowSun = lowSun * sunVisibility;
     this.warmTint.set(light.sun.color);
     const tintLuma =
       this.warmTint.r * 0.2126 + this.warmTint.g * 0.7152 + this.warmTint.b * 0.0722;
     if (tintLuma > 0.001) this.warmTint.multiplyScalar(1 / tintLuma);
     (this.grade.uniforms.uTint!.value as Color).copy(this.warmTint);
-    this.grade.uniforms.uTintStrength!.value = lowSun * 0.12;
-    this.ambient.color.set(light.ambient.skyColor).lerp(new Color('#fff5df'), 0.43);
-    this.ambient.groundColor.set(light.ambient.groundColor).lerp(new Color('#8b6a42'), 0.32);
+    this.grade.uniforms.uTintStrength!.value = lowSun * sunVisibility * 0.12;
+    this.ambient.color.set(light.ambient.skyColor).lerp(this.ambientSkyNeutralizer, 0.43);
+    this.ambient.groundColor.set(light.ambient.groundColor).lerp(this.ambientGroundNeutralizer, 0.32);
     this.ambient.intensity = 0.9 + light.ambient.intensity * 1.65;
     this.scene.background = new Color(light.sky);
     if (this.scene.fog instanceof Fog) {
-      deriveSceneFogColor(light.fog, this.scene.fog.color);
+      deriveSceneFogColor(light.fog, this.scene.fog.color, this.fogNeutralizer);
     }
     return direction;
   }
@@ -324,6 +433,47 @@ export class RenderPipeline {
   /** Dust-haze density from the typed sky sample; scales the god rays. */
   setAtmosphere(haze: number): void {
     this.haze = haze;
+  }
+
+  /** Call after updateLight and camera selection; only the short Eiffel edit opts in. */
+  setEiffelShadowFrame(context: { productionT: number; shot: EiffelCameraShot } | null): void {
+    const direction: [number, number, number] = [this.sunDirection.x, this.sunDirection.y, this.sunDirection.z];
+    if (context) {
+      applyEiffelShadowFrame(this.sun, fitEiffelShadow(
+        eiffelShadowEnvelope(context.productionT, context.shot), direction, this.sun.shadow.mapSize.width,
+      ));
+      this.eiffelShadowActive = true;
+    } else if (this.eiffelShadowActive) {
+      restoreEiffelShadowFrame(this.sun, direction);
+      this.eiffelShadowActive = false;
+    }
+  }
+
+  /**
+   * Soften the key shadow at low sun without a new post pass.
+   * `amount` 0 is the default Giza/legacy grade; 1 is dusk fill.
+   */
+  setShadowSoftness(amount: number): void {
+    const k = Math.max(0, Math.min(1, amount));
+    this.sun.shadow.normalBias = 0.035 + k * 0.05;
+    this.sun.shadow.bias = -0.00035 - k * 0.00025;
+    this.sun.shadow.intensity = 1 - k * 0.32;
+  }
+
+  /** Target-specific color climate; omit arguments to restore the Giza/legacy grade. */
+  setEnvironmentNeutralizers(
+    fog = '#c7b499',
+    sky = '#fff5df',
+    ground = '#8b6a42',
+  ): void {
+    this.fogNeutralizer.set(fog);
+    this.ambientSkyNeutralizer.set(sky);
+    this.ambientGroundNeutralizer.set(ground);
+  }
+
+  /** Scenes with fine architectural detail can opt out of animated display noise. */
+  setFilmGrain(amount: number): void {
+    this.grade.uniforms.uGrain!.value = Math.max(0, Math.min(0.1, amount));
   }
 
   /** `filmTime` seeds the grade's grain; playback `t` keeps scrubs identical. */
@@ -344,17 +494,23 @@ export class RenderPipeline {
       this.haze,
     );
     this.godrays.uniforms.uIntensity!.value = this.bloom.enabled ? shafts : 0;
-    this.godrays.uniforms.uStreak!.value = this.bloom.enabled ? streak : 0;
+    this.godrays.uniforms.uStreak!.value = this.bloom.enabled ? streak * this.sunVisibility : 0;
     // info auto-resets on every internal render() the composer issues, which
     // would leave diagnostics reporting only the final fullscreen quad.
     // Accumulate across the whole frame so the budget numbers stay honest
     // (they now include the bloom mip chain and the grade).
     this.renderer.info.autoReset = false;
     this.renderer.info.reset();
-    this.composer.render();
+    if (this.renderCostDiagnostics) {
+      const costs = measureSceneRenderCosts(this.scene, this.renderer.info, () => this.composer.render());
+      this.renderer.domElement.dataset.renderCosts = JSON.stringify({ filmTime, ...costs });
+    } else this.composer.render();
   }
 
   dispose(): void {
+    this.scene.environment = null;
+    this.eiffelReflection?.dispose();
+    this.eiffelReflection = undefined;
     this.sun.shadow.map?.dispose();
     this.godrays.material.dispose();
     this.bloom.dispose();

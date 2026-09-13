@@ -1,0 +1,30 @@
+{
+  "historical": {
+    "minReach": 5.5,
+    "maxReach": 12,
+    "capacityKg": 4000,
+    "climbStroke": 2.5,
+    "safetyStroke": 0.5
+  },
+  "model": {
+    "boomLength": 13.416407864998739,
+    "tieLength": 12.165525060596439,
+    "mastAboveDeck": 4.8,
+    "postBelowDeck": 4.2,
+    "railGauge": 2.8,
+    "railTiltDegrees": 0,
+    "platformOffsetZ": -1.8,
+    "hingeY": 0.3,
+    "headRest": 1.0,
+    "safetyBase": -4.5,
+    "safetyHead": -4.0,
+    "screwLength": 4.2,
+    "railFaceOffsetZ": -0.95
+  },
+  "sources": [
+    "https://cnum.cnam.fr/pgi/redir.php?ident=8XAE353.1&onglet=c",
+    "https://cnum.cnam.fr/pgi/fpage.php?4XAE43.1/79/100/265/5/265=",
+    "https://archive.org/details/civilengineering00wats/page/823/mode/2up"
+  ],
+  "interpretation": "Vertical paired-crane mechanism study after Watson GPO1892 pp823\u2013824 Fig239/PlateXVI. Three3m frames and back-to-back arrangement are documented. Other component dimensions reuse the authored Guyenet prototype, not measured from the plate. Not installed in the tower; contacts, clearance, climbing lifecycle and carrying capacity remain unverified."
+}

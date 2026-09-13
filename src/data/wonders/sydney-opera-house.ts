@@ -1,7 +1,7 @@
 import type { Wonder } from '../types';
 import { getCompiledScene } from '../scenes';
 
-/** Scene doc: src/data/scenes/sydney-opera-house.scene.json (Spec 07). */
+/** Catalog entry; production dispatch is the typed SydneyWorld (Spec 13). */
 export const sydneyOperaHouse: Wonder = {
   id: 'sydney-opera-house',
   name: 'Sydney Opera House',

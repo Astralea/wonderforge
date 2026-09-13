@@ -94,6 +94,14 @@ describe('Giza sky description (era and place grounding)', () => {
     }
   });
 
+  it('authors restrained low-altitude aerosol texture without a moving sky backdrop', () => {
+    const texture = GIZA_SKY.dome.atmosphericTexture;
+    expect(texture.scale).toBeGreaterThan(0);
+    expect(texture.strength).toBeGreaterThan(0);
+    expect(texture.strength).toBeLessThanOrEqual(0.12);
+    expect(texture.description.length).toBeGreaterThan(24);
+  });
+
   it('keeps warm horizons at dawn/dusk and a blue midday zenith', () => {
     const dawn = GIZA_SKY.keyframes.find((keyframe) => keyframe.label === 'dawn')!;
     const dusk = GIZA_SKY.keyframes.find((keyframe) => keyframe.label === 'dusk')!;

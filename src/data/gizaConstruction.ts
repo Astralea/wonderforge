@@ -94,7 +94,9 @@ function route(
     // aligned phase (rollers/cribbing), which is the attested method.
     rampCrestFor: (block) => [
       rampCrest[0],
-      block.finalPosition[1] + block.dimensions[1] * 0.5,
+      // Support-surface height, not the block origin or top. Construction
+      // adds the stone half-height and carrier exactly once.
+      block.finalPosition[1] - block.dimensions[1] * 0.5,
       rampCrest[2],
     ],
   };

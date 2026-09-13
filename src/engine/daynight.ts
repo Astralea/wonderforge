@@ -10,6 +10,8 @@ export interface LightState {
     elevation: number;
     color: string;
     intensity: number;
+    /** Optional light-source visibility during an authored below-horizon transition. */
+    visibility?: number;
   };
   ambient: { skyColor: string; groundColor: string; intensity: number };
   /** Horizon color. */
