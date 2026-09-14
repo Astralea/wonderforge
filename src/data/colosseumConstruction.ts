@@ -89,10 +89,12 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
     }));
   }
 
+  // Continuous exterior silhouette: storeys overlap so the oval keeps rising
+  // instead of freezing on a completed ground arcade while inner vaults fill.
   const storeyWindow = [
-    { storey: 0, origin: 0.16, span: 0.22, duration: 0.032 },
-    { storey: 1, origin: 0.56, span: 0.16, duration: 0.024 },
-    { storey: 2, origin: 0.70, span: 0.12, duration: 0.018 },
+    { storey: 0, origin: 0.12, span: 0.24, duration: 0.030 },
+    { storey: 1, origin: 0.34, span: 0.22, duration: 0.028 },
+    { storey: 2, origin: 0.55, span: 0.18, duration: 0.022 },
   ];
   const arcadeHeight = COLOSSEUM_STOREY_HEIGHT;
   for (const wave of storeyWindow) {
@@ -144,7 +146,7 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       finalRotation: [0, yaw, 0],
       material: 'travertine',
       lane: bay % 4,
-      start: 0.84 + bay * (0.10 / COLOSSEUM_BAYS),
+      start: 0.74 + bay * (0.12 / COLOSSEUM_BAYS),
       duration: 0.016,
       colorVariation: rand() * 2 - 1,
     }));
@@ -159,7 +161,7 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
     const [x, z] = ellipsePoint(midA, midB, theta);
     const yaw = ellipseYaw(COLOSSEUM_A, COLOSSEUM_B, theta);
     const arcade = parts.find((entry) => entry.id === `arcade-0-${bay}`)!;
-    const radialStart = 0.405 + index * (0.09 / 24);
+    const radialStart = 0.33 + index * (0.18 / 24);
     parts.push(part({
       id: `radial-${index}`,
       group: 'radial',
@@ -172,10 +174,10 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       material: 'tuff',
       lane: index % 3,
       start: Math.max(radialStart, arcade.start + arcade.duration + 0.01),
-      duration: 0.032,
+      duration: 0.026,
       colorVariation: rand() * 2 - 1,
     }));
-    const vaultStart = 0.48 + index * (0.08 / 24);
+    const vaultStart = 0.42 + index * (0.18 / 24);
     parts.push(part({
       id: `vault-${index}`,
       group: 'vault',
@@ -187,8 +189,8 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       finalRotation: [0.18, yaw, 0],
       material: 'pozzolana',
       lane: index % 3,
-      start: Math.max(vaultStart, radialStart + 0.034),
-      duration: 0.03,
+      start: Math.max(vaultStart, radialStart + 0.028),
+      duration: 0.024,
       colorVariation: rand() * 2 - 1,
     }));
     parts.push(part({
@@ -202,8 +204,8 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       finalRotation: [0.28, yaw, 0],
       material: 'travertine',
       lane: index % 3,
-      start: Math.max(0.50 + index * (0.07 / 24), vaultStart + 0.032),
-      duration: 0.028,
+      start: Math.max(0.48 + index * (0.14 / 24), vaultStart + 0.030),
+      duration: 0.024,
       colorVariation: rand() * 2 - 1,
     }));
   }

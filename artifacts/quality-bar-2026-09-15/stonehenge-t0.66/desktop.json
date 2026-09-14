@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/stonehenge/0.66",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/quality-bar-2026-09-15/stonehenge-t0.66/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 185,
+    "colorBuckets": 97,
+    "metrics": {
+      "colorBuckets": 116,
+      "colorEntropyBits": 3.27,
+      "edgeDensity": 0.091,
+      "luminance": {
+        "mean": 74.8,
+        "p5": 57.7,
+        "p95": 102.9,
+        "contrast": 45.2
+      },
+      "dominantColorShare": 0.389,
+      "nonBackgroundShare": 0.611
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 76,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 99796,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 37,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 76,
+        "triangles": 99796,
+        "points": 0,
+        "lines": 0,
+        "geometries": 37,
+        "textures": 16
+      },
+      "camera": {
+        "position": [
+          -65.56891092728513,
+          29.030913322919833,
+          -79.43487731467002
+        ],
+        "direction": [
+          0.6172211333112663,
+          -0.2833458930932211,
+          0.7339980772871011
+        ],
+        "fov": 35,
+        "aspect": 1.7777777777777777,
+        "near": 0.5
+      },
+      "scene": "stonehenge-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

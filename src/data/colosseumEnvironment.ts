@@ -71,18 +71,18 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
       bays: COLOSSEUM_CONSTRUCTION.bays,
     },
     ecology: {
-      tufts: 640,
-      pines: 120,
-      insulae: 140,
-      aqueductPiers: 16,
+      tufts: 820,
+      pines: 160,
+      insulae: 190,
+      aqueductPiers: 20,
       description:
         'Valley herbs, grove-scale umbrella pines on Palatine and Caelian, ' +
         'roofed brick insulae on the hills, and a Claudian-aqueduct arcade to the east.',
     },
     site: {
-      wagons: 10,
-      timberStocks: 22,
-      mixingTubs: 12,
+      wagons: 18,
+      timberStocks: 48,
+      mixingTubs: 28,
     },
     exclusions: [
       'modern tourism',

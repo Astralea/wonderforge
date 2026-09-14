@@ -186,10 +186,10 @@ export function colosseumCraneRigAt(part: ColosseumPart, state: ColosseumPartSta
 }
 
 const SCAFFOLD_WINDOWS = [
-  { storey: 0, raiseFrom: 0.08, raiseUntil: 0.16, strikeFrom: 0.52, strikeUntil: 0.6 },
-  { storey: 1, raiseFrom: 0.48, raiseUntil: 0.56, strikeFrom: 0.68, strikeUntil: 0.76 },
-  { storey: 2, raiseFrom: 0.64, raiseUntil: 0.72, strikeFrom: 0.84, strikeUntil: 0.92 },
-  { storey: 3, raiseFrom: 0.8, raiseUntil: 0.86, strikeFrom: 0.94, strikeUntil: 0.995 },
+  { storey: 0, raiseFrom: 0.06, raiseUntil: 0.12, strikeFrom: 0.40, strikeUntil: 0.48 },
+  { storey: 1, raiseFrom: 0.28, raiseUntil: 0.34, strikeFrom: 0.58, strikeUntil: 0.66 },
+  { storey: 2, raiseFrom: 0.49, raiseUntil: 0.55, strikeFrom: 0.76, strikeUntil: 0.84 },
+  { storey: 3, raiseFrom: 0.70, raiseUntil: 0.76, strikeFrom: 0.90, strikeUntil: 0.98 },
 ] as const;
 
 export const COLOSSEUM_SCAFFOLD_STATIONS = 20;

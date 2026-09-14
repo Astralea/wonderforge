@@ -19,13 +19,15 @@ interface ShotKeyframe {
 
 /** Looking out of the Siq (+Z toward the west-facing facade at the origin). */
 const SHOTS: ShotKeyframe[] = [
-  { t: 0, azimuth: -1.52, pitchDeg: 12, radius: 40, target: [0.2, 20.5, 1.0] },
-  { t: 0.16, azimuth: -1.55, pitchDeg: 11.5, radius: 42, target: [0.4, 19.2, 0.9] },
-  { t: 0.38, azimuth: -1.58, pitchDeg: 11, radius: 44, target: [0.1, 16.4, 0.8] },
-  { t: 0.58, azimuth: -1.56, pitchDeg: 10.5, radius: 46, target: [-0.2, 14.2, 0.7] },
-  { t: 0.78, azimuth: -1.53, pitchDeg: 10, radius: 50, target: [0.2, 13.4, 0.6] },
-  { t: 0.92, azimuth: -1.5, pitchDeg: 9.5, radius: 54, target: [0, 14.6, 0.7] },
-  { t: 1, azimuth: -1.48, pitchDeg: 9, radius: 58, target: [0, 15.2, 0.8] },
+  // Wide Siq stand-off with pitch just under half-FOV so the dry blue zenith
+  // remains readable above the gorge walls.
+  { t: 0, azimuth: -1.42, pitchDeg: 16.8, radius: 56, target: [0.4, 16.5, -2.0] },
+  { t: 0.16, azimuth: -1.44, pitchDeg: 16.6, radius: 58, target: [0.3, 15.8, -1.5] },
+  { t: 0.38, azimuth: -1.46, pitchDeg: 16.4, radius: 60, target: [0.1, 15.0, -1.0] },
+  { t: 0.58, azimuth: -1.44, pitchDeg: 16.2, radius: 62, target: [0.0, 14.6, -0.6] },
+  { t: 0.78, azimuth: -1.40, pitchDeg: 15.8, radius: 64, target: [0.2, 15.0, -0.2] },
+  { t: 0.92, azimuth: -1.36, pitchDeg: 15.4, radius: 66, target: [0.0, 15.6, 0.2] },
+  { t: 1, azimuth: -1.32, pitchDeg: 15.0, radius: 68, target: [0.0, 16.2, 0.4] },
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;

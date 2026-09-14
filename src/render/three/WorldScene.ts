@@ -303,16 +303,19 @@ export class WorldScene {
       light.sun.azimuth = sun.azimuth;
       light.sun.elevation = sun.elevation;
       light.sun.color = riftSky.sunTint;
-      light.sky = riftSky.horizon;
+      // Bias the clear/background toward zenith blue so the Siq never reads as a black void.
+      light.sky = riftSky.zenith;
       light.fog = riftSky.horizon;
       light.ambient.skyColor = riftSky.zenith;
-      this.pipeline.setAtmosphere(riftSky.haze);
-      light.ambient.intensity = Math.min(0.64, light.ambient.intensity + 0.14);
+      // Keep haze low so the Siq still reads as open air under a dry blue sky.
+      this.pipeline.setAtmosphere(Math.min(0.09, riftSky.haze * 0.65));
+      light.ambient.intensity = Math.min(0.78, light.ambient.intensity + 0.28);
+      light.sun.intensity = Math.max(light.sun.intensity, 1.15);
       if (sun.elevation < 24) {
         const dusk = Math.min(1, (24 - sun.elevation) / 16);
-        light.ambient.intensity = Math.min(0.68, light.ambient.intensity + dusk * 0.1);
-        light.sun.intensity *= 1 - dusk * 0.12;
-        this.pipeline.setShadowSoftness(dusk * 0.55);
+        light.ambient.intensity = Math.min(0.82, light.ambient.intensity + dusk * 0.08);
+        light.sun.intensity *= 1 - dusk * 0.08;
+        this.pipeline.setShadowSoftness(dusk * 0.4);
       } else {
         this.pipeline.setShadowSoftness(0);
       }

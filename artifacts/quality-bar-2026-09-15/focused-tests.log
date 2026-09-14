@@ -1,0 +1,20 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/colosseum-construction.test.ts tests/colosseum-world.test.ts tests/stonehenge-construction.test.ts tests/stonehenge-world.test.ts tests/petra-construction.test.ts tests/petra-world.test.ts tests/wonder-progress-story.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/wonder-progress-story.test.ts (3 tests) 9ms
+ ✓ tests/colosseum-construction.test.ts (11 tests) 56ms
+ ✓ tests/stonehenge-construction.test.ts (12 tests) 91ms
+ ✓ tests/colosseum-world.test.ts (7 tests) 22ms
+ ✓ tests/petra-construction.test.ts (7 tests) 15ms
+ ✓ tests/stonehenge-world.test.ts (7 tests) 8ms
+ ✓ tests/petra-world.test.ts (6 tests) 5ms
+
+ Test Files  7 passed (7)
+      Tests  53 passed (53)
+   Start at  04:11:49
+   Duration  719ms (transform 153ms, setup 47ms, collect 310ms, tests 205ms, environment 0ms, prepare 186ms)
+

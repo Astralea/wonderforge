@@ -53,6 +53,11 @@ The movie compresses a decade (and Domitian's attic) into one minute. It
 constructs the intended complete four-storey amphitheatre, not the ruined
 modern silhouette.
 
+**Progression (quality bar):** the exterior arcade silhouette must keep rising
+through BUILD. Storeys overlap on the clock so the camera never holds a finished
+ground arcade while only invisible inner vaults advance. Scaffold stacks track
+the working storey and strike after it seats.
+
 ## Additive physical contract
 
 One world unit is approximately one metre.

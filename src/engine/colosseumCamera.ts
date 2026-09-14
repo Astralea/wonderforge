@@ -18,14 +18,14 @@ interface ShotKeyframe {
 }
 
 const SHOTS: ShotKeyframe[] = [
-  { t: 0, azimuth: 0.08, pitchDeg: 12, radius: 492, target: [14, 16, 2] },
-  { t: 0.16, azimuth: 0.26, pitchDeg: 12, radius: 500, target: [11, 17, 1] },
-  { t: 0.32, azimuth: 0.42, pitchDeg: 12.1, radius: 512, target: [7, 19, -1] },
-  { t: 0.48, azimuth: 0.58, pitchDeg: 12, radius: 528, target: [3, 21, -2] },
-  { t: 0.62, azimuth: 0.74, pitchDeg: 11.7, radius: 546, target: [1, 22, -1] },
-  { t: 0.78, azimuth: 0.96, pitchDeg: 11.3, radius: 568, target: [0, 24, 0] },
-  { t: 0.9, azimuth: 1.1, pitchDeg: 11, radius: 588, target: [0, 26, 0] },
-  { t: 1, azimuth: 1.22, pitchDeg: 10.8, radius: 608, target: [0, 27, 0] },
+  { t: 0, azimuth: 0.08, pitchDeg: 12, radius: 492, target: [14, 14, 2] },
+  { t: 0.16, azimuth: 0.26, pitchDeg: 12.8, radius: 478, target: [11, 18, 1] },
+  { t: 0.32, azimuth: 0.42, pitchDeg: 13.4, radius: 470, target: [7, 24, -1] },
+  { t: 0.48, azimuth: 0.58, pitchDeg: 14.2, radius: 488, target: [3, 30, -2] },
+  { t: 0.62, azimuth: 0.74, pitchDeg: 14.6, radius: 520, target: [1, 36, -1] },
+  { t: 0.78, azimuth: 0.96, pitchDeg: 13.8, radius: 560, target: [0, 40, 0] },
+  { t: 0.9, azimuth: 1.1, pitchDeg: 12.6, radius: 588, target: [0, 43, 0] },
+  { t: 1, azimuth: 1.22, pitchDeg: 12, radius: 608, target: [0, 45, 0] },
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;

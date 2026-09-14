@@ -70,7 +70,7 @@ export const PETRA_SKY: PetraSkyDescription = {
       cloudShadow: '#8aa0b0',
       cloudOpacity: 0.22,
       haze: 0.11,
-      fogStretch: 1.46,
+      fogStretch: 1.18,
     },
     {
       t: 0.22,
@@ -83,7 +83,7 @@ export const PETRA_SKY: PetraSkyDescription = {
       cloudShadow: '#7e96a6',
       cloudOpacity: 0.26,
       haze: 0.13,
-      fogStretch: 1.34,
+      fogStretch: 1.12,
     },
     {
       t: 0.5,
@@ -96,7 +96,7 @@ export const PETRA_SKY: PetraSkyDescription = {
       cloudShadow: '#8098a8',
       cloudOpacity: 0.24,
       haze: 0.14,
-      fogStretch: 1.22,
+      fogStretch: 1.08,
     },
     {
       t: 0.72,
@@ -109,7 +109,7 @@ export const PETRA_SKY: PetraSkyDescription = {
       cloudShadow: '#748a9c',
       cloudOpacity: 0.26,
       haze: 0.16,
-      fogStretch: 1.28,
+      fogStretch: 1.10,
     },
     {
       t: 0.9,
@@ -122,7 +122,7 @@ export const PETRA_SKY: PetraSkyDescription = {
       cloudShadow: '#5e7388',
       cloudOpacity: 0.22,
       haze: 0.13,
-      fogStretch: 1.38,
+      fogStretch: 1.14,
     },
   ],
 };

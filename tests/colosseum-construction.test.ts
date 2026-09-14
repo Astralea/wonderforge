@@ -272,8 +272,8 @@ describe('Colosseum typed construction plan (Spec 12)', () => {
   });
 
   it('climbs scaffold poles instead of riding a rising deck', () => {
-    const raiseA = 0.1;
-    const raiseB = 0.13;
+    const raiseA = 0.07;
+    const raiseB = 0.105;
     const labourA = colosseumLabourAt(activeColosseumOperationsAt(COLOSSEUM_CONSTRUCTION, raiseA), raiseA);
     const labourB = colosseumLabourAt(activeColosseumOperationsAt(COLOSSEUM_CONSTRUCTION, raiseB), raiseB);
     expect(labourA.crews.some((crew) => crew.role === 'deck-mason')).toBe(false);
