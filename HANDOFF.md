@@ -1,3 +1,11 @@
+## Public Cloudflare Pages — 2026-09-20
+
+Owner asked to publish the four On site films. Direct-upload Pages project
+`wonderforge` (`wrangler.toml`, `npx wrangler pages deploy dist`). Sydney
+Opera House stays In production. No ChatGPT host.
+
+---
+
 ## Sydney Opera House returned to In production — 2026-09-20
 
 Owner: BGM and narration are fine; the seated harbour mesh is still too
