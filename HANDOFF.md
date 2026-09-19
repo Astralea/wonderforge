@@ -1,3 +1,15 @@
+## Sydney Opera House returned to In production — 2026-09-20
+
+Owner: BGM and narration are fine; the seated harbour mesh is still too
+low to publish. Spec 01 lists Sydney Opera House under **In production**
+again. The id stays `sydney-opera-house`. `#/debug/wonder/sydney-opera-house/:t`
+still authors the typed scene. Gallery and `#/wonder/sydney-opera-house`
+do not open it.
+
+Verified: catalog tests. No public deployment in this pass.
+
+---
+
 ## Colosseum midground and background — 2026-09-19
 
 Owner: Palatine and Caelian still read as empty tan slopes. Dawn fog started
