@@ -21,6 +21,21 @@ Civilization VI.
 `endsAtNight` wonders (Civ VI rule: wonders that are lit end their movie at
 night): `colosseum`, `eiffel-tower`, `sydney-opera-house`.
 
+## Gallery publication
+
+The typed catalog still holds all ten ids. The home gallery is two
+chronological blocks (Spec 05):
+
+**On site** (playable): Pyramids of Giza, Stonehenge, Colosseum, Eiffel Tower.
+
+**In production** (listed, not a control): Petra, Chichen Itza, Angkor Wat,
+Forbidden City, Machu Picchu, Sydney Opera House. Do not add a second
+explanatory sentence under that heading.
+
+Never rename an id. Authoring `#/debug/wonder/:id/:t` may still render any
+typed scene. Gallery clicks, prev/next, and `#/wonder/:id` only open On site
+ids.
+
 ## Data model (canonical schema)
 
 Implemented in `src/data/types.ts`. Every wonder MUST conform:
@@ -48,7 +63,7 @@ interface Wonder {
   completedYear: number;    // negative = BC
   endsAtNight: boolean;     // movie ends in night lighting
   quote: Quote;             // the Civ VI narrator quote where known
-  description: string;      // 1–2 sentences
+  description: string;      // optional; empty omits the About paragraph
   facts: string[];          // 3 verifiable facts
   palette: WonderPalette;
   structure: StructureSpec; // procedural build recipe, see Spec 02

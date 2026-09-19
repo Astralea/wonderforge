@@ -53,21 +53,20 @@ TRACKS = {
         "speed": 0.92,
         "beats": {
             "quarry": (
-                "The Quarry. Blocks are won from the plateau itself; "
-                "the fine white casing crosses the river from Tura."
+                "The quarry. Stone comes from the plateau; white casing stone "
+                "arrives from Tura."
             ),
             "roads": (
-                "The Roads. Sledges run on wetted roads — water on the sand "
-                "eases the haul."
+                "The haul. Water on the sand helps crews pull the loaded sledges."
             ),
             "ramps": (
-                "The Ramps. Ramps of earth and brick rise with the working face, "
-                "course by course."
+                "Raising the stone. In this reconstruction, ramps carry stones "
+                "to each new level."
             ),
             "masons": (
                 "The Masons. Every casing stone is dressed, levered, and seated by hand."
             ),
-            "horizon": "The Horizon. One building day stands for three reigns.",
+            "horizon": "The three pyramids. The film shows three reigns in a single day.",
         },
     },
     "stonehenge": {
@@ -76,20 +75,24 @@ TRACKS = {
         "speed": 0.92,
         "beats": {
             "sarsens": (
-                "The Sarsens. Sarsen faces were dressed with hammerstones "
-                "before the haul."
+                "Shaping the stones. Hammerstones shape the faces of the great "
+                "sarsen stones."
             ),
             "bluestones": (
                 "The Bluestones. The smaller bluestones were transported from "
                 "the Preseli Hills in Wales, over 200 km away."
             ),
             "pits": (
-                "The Pits. Each upright is rotated into a ramp-sided pit, "
-                "then packed with chalk rubble."
+                "Raising the uprights. Here, each upright tips into a sloping "
+                "pit before rubble secures its base."
             ),
             "lintels": (
-                "The Lintels. Timber platforms are a likely way the lintels "
-                "were raised into place."
+                "Lifting the lintels. The film uses timber platforms to raise "
+                "the lintels."
+            ),
+            "axis": (
+                "Solstice alignment. The stones align with the midsummer "
+                "sunrise and midwinter sunset."
             ),
         },
     },
@@ -98,25 +101,21 @@ TRACKS = {
         "prefix": "colosseum-bill",
         "speed": 1.2,
         "beats": {
-            "lake": (
-                "The Lake. The amphitheatre stands on Nero's drained lake "
-                "between Palatine and Caelian."
+            "valley": (
+                "Work begins on the drained floor between the Palatine and "
+                "Caelian hills."
             ),
             "stone": (
-                "The Stone. Load-bearing piers are Tivoli travertine hauled "
-                "twenty kilometres into Rome."
+                "Load-bearing piers are Tivoli travertine hauled twenty "
+                "kilometres into Rome."
             ),
             "cranes": (
-                "The Cranes. Treadwheel cranes of the Haterii type raise "
-                "dressed blocks to each working storey."
+                "In this reconstruction, treadwheel cranes lift blocks to "
+                "each new level."
             ),
-            "vaults": (
-                "The Vaults. Timber centering carries opus caementicium "
-                "vaults over the radial walls."
-            ),
+            "vaults": "Timber supports hold the vaults during construction.",
             "orders": (
-                "The Orders. Eighty arched bays stack three classical orders "
-                "under a fourth attic storey."
+                "Three tiers of arches rise beneath the solid upper wall."
             ),
         },
     },
@@ -168,12 +167,12 @@ TRACKS = {
                 "The Beacon. Electric lanterns crown the 312-metre iron lace "
                 "on the 1889 opening night."
             ),
-            "lift-prepared": "At the foot of each pylon, a lifting frame takes the weight of the iron.",
-            "lift-later": "One member settles into place, while the other crews continue around the tower.",
-            "joint-prepared": "Up close, workers align the plates and tighten the bolts that hold the joint.",
-            "joint-later": "Around them, many hands repeat the work, joining the four pylons into one tower.",
-            "relay-prepared": "Winches lift the longer members from platform to platform, toward the narrowing summit.",
-            "relay-later": "The work rises above Paris, until the tower’s iron lattice reaches the sky.",
+            "lift-prepared": "A lifting frame raises an iron section from the ground.",
+            "lift-later": "Crews work on all four legs of the tower.",
+            "joint-prepared": "A crane turns the next iron section and lowers it into position.",
+            "joint-later": "The four legs will meet at the first platform.",
+            "relay-prepared": "An iron section arrives at the first platform, ready for the next lift.",
+            "relay-later": "The frame narrows above the second platform.",
         },
     },
 }

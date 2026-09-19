@@ -53,8 +53,8 @@ function createTerrain(): PlaneGeometry {
     const broken = 0.5 + 0.5 * Math.sin(x * 0.173 - z * 0.119 + Math.sin(x * 0.061) * 1.9);
     const grazed = Math.pow(0.5 + 0.5 * Math.sin(x * 0.31 + z * 0.27), 5);
     color.copy(turf)
-      .lerp(deep, 0.08 + broken * 0.14)
-      .lerp(pale, 0.08 + broad * 0.12 + grazed * 0.07 + Math.max(0, y) * 0.002);
+      .lerp(deep, 0.14 + broken * 0.22)
+      .lerp(pale, 0.12 + broad * 0.18 + grazed * 0.1 + Math.max(0, y) * 0.004);
     colors[index * 3] = color.r;
     colors[index * 3 + 1] = color.g;
     colors[index * 3 + 2] = color.b;
@@ -232,13 +232,21 @@ export class StonehengeEnvironment {
     this.instanced.push(bank);
     this.group.add(bank);
 
-    const holeGeometry = new CylinderGeometry(1, 1, 0.045, 16);
-    const holeMaterial = new MeshStandardMaterial({ color: '#716f61', roughness: 1 });
+    const holeGeometry = new CylinderGeometry(1, 0.78, 0.38, 16);
+    const holeMaterial = new MeshStandardMaterial({ color: '#5a564c', roughness: 1 });
     const holes = new InstancedMesh(holeGeometry, holeMaterial, STONEHENGE_ENVIRONMENT.henge.aubreyHoles);
     holes.name = 'stonehenge-aubrey-hole-ring';
     for (let index = 0; index < holes.count; index += 1) {
       const angle = STONEHENGE_CONSTRUCTION.axisRadians + (index / holes.count) * TAU;
-      matrixAt(holes, index, new Vector3(Math.cos(angle) * 44, 0.022, Math.sin(angle) * 44), new Vector3(0.55, 1, 0.55), angle, matrix, quaternion);
+      matrixAt(
+        holes,
+        index,
+        new Vector3(Math.cos(angle) * 44, -0.14, Math.sin(angle) * 44),
+        new Vector3(0.7, 1, 0.7),
+        angle,
+        matrix,
+        quaternion,
+      );
     }
     holes.instanceMatrix.needsUpdate = true;
     holes.receiveShadow = true;
@@ -247,14 +255,14 @@ export class StonehengeEnvironment {
     this.instanced.push(holes);
     this.group.add(holes);
 
-    const holeRimGeometry = new RingGeometry(0.63, 1, 16);
+    const holeRimGeometry = new RingGeometry(0.72, 1.08, 16);
     holeRimGeometry.rotateX(-Math.PI / 2);
-    const holeRimMaterial = new MeshStandardMaterial({ color: '#d8d2be', roughness: 1 });
+    const holeRimMaterial = new MeshStandardMaterial({ color: '#b7b19c', roughness: 1 });
     const holeRims = new InstancedMesh(holeRimGeometry, holeRimMaterial, STONEHENGE_ENVIRONMENT.henge.aubreyHoles);
     holeRims.name = 'stonehenge-aubrey-hole-chalk-rims';
     for (let index = 0; index < holeRims.count; index += 1) {
       const angle = STONEHENGE_CONSTRUCTION.axisRadians + (index / holeRims.count) * TAU;
-      matrixAt(holeRims, index, new Vector3(Math.cos(angle) * 44, 0.052, Math.sin(angle) * 44), new Vector3(0.86, 0.86, 0.86), angle, matrix, quaternion);
+      matrixAt(holeRims, index, new Vector3(Math.cos(angle) * 44, 0.02, Math.sin(angle) * 44), new Vector3(0.78, 1, 0.78), angle, matrix, quaternion);
     }
     holeRims.instanceMatrix.needsUpdate = true;
     holeRims.receiveShadow = true;
@@ -440,22 +448,25 @@ export class StonehengeEnvironment {
     const trunkGeometry = new CylinderGeometry(0.18, 0.28, 3.8, 6);
     const crownGeometry = new IcosahedronGeometry(1, 1);
     const crownMaterial = new MeshStandardMaterial({ color: '#41533c', roughness: 1, flatShading: true });
-    const treeCount = STONEHENGE_ENVIRONMENT.ecology.treeClusters * 5;
+    const treeCount = STONEHENGE_ENVIRONMENT.ecology.treeClusters * 7;
     const trunks = new InstancedMesh(trunkGeometry, materials.wood, treeCount);
     const crowns = new InstancedMesh(crownGeometry, crownMaterial, treeCount);
     trunks.name = 'stonehenge-distant-tree-trunks';
     crowns.name = 'stonehenge-distant-tree-mosaic';
     let treeCursor = 0;
     for (let cluster = 0; cluster < STONEHENGE_ENVIRONMENT.ecology.treeClusters; cluster += 1) {
-      const clusterAngle = random() * TAU;
-      const clusterRadius = 360 + random() * 120;
-      for (let member = 0; member < 5; member += 1) {
-        const x = Math.cos(clusterAngle) * clusterRadius + (random() - 0.5) * 11;
-        const z = Math.sin(clusterAngle) * clusterRadius + (random() - 0.5) * 11;
+      const lobe = cluster % 3;
+      const clusterAngle = lobe === 0 ? 3.7 + (random() - 0.5) * 0.7
+        : lobe === 1 ? 0.65 + (random() - 0.5) * 0.7
+          : 4.9 + (random() - 0.5) * 0.6;
+      const clusterRadius = 310 + random() * 140;
+      for (let member = 0; member < 7; member += 1) {
+        const x = Math.cos(clusterAngle) * clusterRadius + (random() - 0.5) * 16;
+        const z = Math.sin(clusterAngle) * clusterRadius + (random() - 0.5) * 16;
         const ground = stonehengeTerrainHeightAt(x, z);
-        const height = 3.2 + random() * 2.4;
-        matrixAt(trunks, treeCursor, new Vector3(x, ground + height * 0.5, z), new Vector3(0.8, height / 3.8, 0.8), random() * TAU, matrix, quaternion);
-        matrixAt(crowns, treeCursor, new Vector3(x, ground + height + 1.3, z), new Vector3(1.35 + random(), 1.1 + random() * 0.75, 1.35 + random()), random() * TAU, matrix, quaternion);
+        const height = 4.4 + random() * 3.2;
+        matrixAt(trunks, treeCursor, new Vector3(x, ground + height * 0.5, z), new Vector3(0.9, height / 3.8, 0.9), random() * TAU, matrix, quaternion);
+        matrixAt(crowns, treeCursor, new Vector3(x, ground + height + 1.6, z), new Vector3(1.7 + random() * 0.9, 1.4 + random() * 0.9, 1.7 + random() * 0.9), random() * TAU, matrix, quaternion);
         treeCursor += 1;
       }
     }

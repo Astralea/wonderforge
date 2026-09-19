@@ -14,8 +14,7 @@ export const colosseum: Wonder = {
     text: 'While the Colosseum stands, Rome shall stand; when the Colosseum falls, Rome shall fall; when Rome falls, the world shall fall.',
     author: 'Saint Bede',
   },
-  description:
-    'The Flavian Amphitheatre — eighty arched entrances, four storeys of travertine, and the roar of fifty thousand Romans.',
+  description: '',
   facts: [
     'It held an estimated 50,000–80,000 spectators — the largest amphitheatre ever built.',
     'Completed in 80 AD under Emperor Titus after roughly a decade of construction.',

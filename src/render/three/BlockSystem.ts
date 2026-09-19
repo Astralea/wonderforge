@@ -1,9 +1,12 @@
 import {
   BoxGeometry,
   Color,
+  CylinderGeometry,
   Group,
   InstancedMesh,
   Matrix4,
+  Mesh,
+  MeshStandardMaterial,
   Quaternion,
   Vector3,
 } from 'three';
@@ -12,8 +15,14 @@ import type {
   ConstructionBlock,
   CoreFillCell,
   GizaConstructionPlan,
+  MonumentId,
+  MonumentPlan,
 } from '../../data/constructionTypes';
 import { activeConstructionStatesAt, type ActiveConstructionState } from '../../engine/construction';
+import {
+  gizaCoreOccupancyVolume,
+  type GizaCoreOccupancyVolume,
+} from '../../engine/gizaOccupancy';
 import type { MaterialLibrary } from './MaterialLibrary';
 
 interface SettledBatch {
@@ -22,9 +31,15 @@ interface SettledBatch {
 }
 
 interface CoreBatch {
-  monument: 'khufu' | 'khafre' | 'menkaure';
+  monument: Exclude<MonumentId, 'temple'>;
   cells: CoreFillCell[];
   mesh: InstancedMesh;
+}
+
+interface CoreOccupancy {
+  monument: Exclude<MonumentId, 'temple'>;
+  mesh: Mesh;
+  lastKey: string;
 }
 
 function upperBound(blocks: ConstructionBlock[], t: number): number {
@@ -57,6 +72,8 @@ export class BlockSystem {
   private readonly settled: SettledBatch[] = [];
   private readonly activeBatches = new Map<BlockMaterial, InstancedMesh>();
   private readonly coreBatches: CoreBatch[] = [];
+  private readonly occupancies: CoreOccupancy[] = [];
+  private readonly occupancyMaterial: MeshStandardMaterial;
 
   constructor(
     private readonly plan: GizaConstructionPlan,
@@ -115,6 +132,14 @@ export class BlockSystem {
       this.group.add(active);
     }
 
+    this.occupancyMaterial = materials.block['core-limestone'].clone();
+    this.occupancyMaterial.transparent = false;
+    this.occupancyMaterial.opacity = 1;
+    this.occupancyMaterial.depthWrite = true;
+    this.occupancyMaterial.polygonOffset = true;
+    this.occupancyMaterial.polygonOffsetFactor = 1;
+    this.occupancyMaterial.polygonOffsetUnits = 1;
+
     for (const monument of ['khufu', 'khafre', 'menkaure'] as const) {
       const cells = plan.coreCells.filter((cell) => cell.monument === monument);
       const core = new InstancedMesh(this.geometry, materials.block['core-limestone'], cells.length);
@@ -125,6 +150,15 @@ export class BlockSystem {
       core.frustumCulled = false; // per-frame instances; see settled note
       this.coreBatches.push({ monument, cells, mesh: core });
       this.group.add(core);
+
+      const occupancy = new Mesh(placeholderOccupancyGeometry(), this.occupancyMaterial);
+      occupancy.name = `${monument}-core-occupancy`;
+      occupancy.castShadow = true;
+      occupancy.receiveShadow = true;
+      occupancy.visible = false;
+      occupancy.frustumCulled = false;
+      this.occupancies.push({ monument, mesh: occupancy, lastKey: '' });
+      this.group.add(occupancy);
     }
   }
 
@@ -142,11 +176,13 @@ export class BlockSystem {
       }
       if (activeCourse < 0) {
         batch.mesh.count = 0;
+        this.hideOccupancy(batch.monument);
         continue;
       }
-      // Retain the active working deck plus three complete supporting courses.
-      // Deeper cells remain in the pure construction plan but are culled once
-      // permanently occluded by exterior masonry.
+      this.updateOccupancy(this.plan.monuments[batch.monument], activeCourse);
+      // Keep the working deck plus three supporting courses as visible rubble.
+      // Deeper fill is a gapless occupancy frustum so casing joints cannot
+      // transmit the key light onto the far inner face.
       const minimumVisibleCourse = Math.max(0, activeCourse - 3);
       let cursor = 0;
       for (const cell of batch.cells) {
@@ -171,6 +207,31 @@ export class BlockSystem {
       batch.mesh.instanceMatrix.needsUpdate = true;
       if (batch.mesh.instanceColor) batch.mesh.instanceColor.needsUpdate = true;
     }
+  }
+
+  private hideOccupancy(monument: Exclude<MonumentId, 'temple'>): void {
+    const occupancy = this.occupancies.find((entry) => entry.monument === monument);
+    if (!occupancy) return;
+    occupancy.mesh.visible = false;
+    occupancy.lastKey = '';
+  }
+
+  private updateOccupancy(monument: MonumentPlan, activeCourse: number): void {
+    const occupancy = this.occupancies.find((entry) => entry.monument === monument.id);
+    if (!occupancy) return;
+    const volume = gizaCoreOccupancyVolume(monument, activeCourse);
+    if (!volume) {
+      this.hideOccupancy(monument.id);
+      return;
+    }
+    const key = occupancyKey(volume);
+    if (occupancy.lastKey !== key) {
+      occupancy.mesh.geometry.dispose();
+      occupancy.mesh.geometry = occupancyGeometry(volume);
+      occupancy.lastKey = key;
+    }
+    occupancy.mesh.position.set(volume.x, volume.y, volume.z);
+    occupancy.mesh.visible = true;
   }
 
   update(t: number): ActiveConstructionState[] {
@@ -202,5 +263,35 @@ export class BlockSystem {
 
   dispose(): void {
     this.geometry.dispose();
+    this.occupancyMaterial.dispose();
+    for (const occupancy of this.occupancies) occupancy.mesh.geometry.dispose();
   }
+}
+
+function occupancyKey(volume: GizaCoreOccupancyVolume): string {
+  return `${volume.height.toFixed(4)}:${volume.bottomWidth.toFixed(4)}:${volume.topWidth.toFixed(4)}`;
+}
+
+function occupancyGeometry(volume: GizaCoreOccupancyVolume): CylinderGeometry {
+  // 4-sided cylinder vertices sit on the axes. Rotate 45° and use the
+  // circumscribed radius so the faces stay axis-aligned with the casing.
+  const geometry = new CylinderGeometry(
+    (volume.topWidth / 2) * Math.SQRT2,
+    (volume.bottomWidth / 2) * Math.SQRT2,
+    volume.height,
+    4,
+  );
+  geometry.rotateY(Math.PI / 4);
+  return geometry;
+}
+
+function placeholderOccupancyGeometry(): CylinderGeometry {
+  return occupancyGeometry({
+    height: 1,
+    bottomWidth: 1,
+    topWidth: 1,
+    x: 0,
+    y: 0,
+    z: 0,
+  });
 }

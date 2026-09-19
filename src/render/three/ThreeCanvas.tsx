@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import type { Wonder } from '../../data/types';
 import { usePlaybackStore } from '../../store/playback';
 import { WorldScene } from './WorldScene';
-import { EiffelLoading } from './EiffelLoading';
+import { WonderArrival } from './WonderArrival';
+import { arrivalStageFor } from './wonderArrivalDrawings';
 import { eiffelFilmEditSourceTAt } from '../../engine/eiffelFilmEdit';
 
 export type SceneMode = 'cinematic' | 'ambient';
@@ -17,7 +18,7 @@ export function ThreeCanvas({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [loadPercent, setLoadPercent] = useState(0);
   const [assetError, setAssetError] = useState(false);
-  const [loadStage, setLoadStage] = useState('Preparing Paris');
+  const [loadStage, setLoadStage] = useState(() => arrivalStageFor(wonder.id));
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -27,7 +28,7 @@ export function ThreeCanvas({
     let cancelled = false;
     let startupFrame = 0;
     let stopWorld: (() => void) | undefined;
-    setLoadStage('Preparing Paris');
+    setLoadStage(arrivalStageFor(wonder.id));
     if (mode === 'cinematic') usePlaybackStore.setState({ assetsReady: false });
     canvas.dataset.assets = 'loading';
     const startWorld = () => {
@@ -86,8 +87,7 @@ export function ThreeCanvas({
           }
         }
 
-        if (wonder.id === 'eiffel-tower')
-          setLoadStage(world.loadStage ?? 'Preparing Paris');
+        setLoadStage(world.loadStage ?? arrivalStageFor(wonder.id));
         setLoadPercent(
           sceneReady
             ? 100
@@ -153,11 +153,9 @@ export function ThreeCanvas({
     };
     // Two frame boundaries give the SVG a real paint before CPU-heavy terrain
     // and model initialization. No timer invents or advances loading progress.
-    if (wonder.id === 'eiffel-tower') {
-      startupFrame = requestAnimationFrame(() => {
-        if (!cancelled) startupFrame = requestAnimationFrame(startSafely);
-      });
-    } else startSafely();
+    startupFrame = requestAnimationFrame(() => {
+      if (!cancelled) startupFrame = requestAnimationFrame(startSafely);
+    });
     return () => {
       cancelled = true;
       cancelAnimationFrame(startupFrame);
@@ -171,58 +169,22 @@ export function ThreeCanvas({
         ref={canvasRef}
         className="block h-full w-full"
         role="img"
-        aria-label={`${wonder.name} physical construction diorama`}
+        aria-label={`Animated construction of ${wonder.name}`}
       />
-      {!assetError &&
-        loadPercent < 100 &&
-        (wonder.id === 'eiffel-tower' ? (
-          <EiffelLoading percent={loadPercent} stage={loadStage} />
-        ) : (
-          <div
-            className="absolute inset-0 z-30 grid place-items-center bg-[#14100c]/90 px-8 text-parchment"
-            aria-live="polite"
-          >
-            <div className="w-full max-w-xs">
-              <p className="mb-3 text-[10px] tracking-[.3em] text-gold uppercase">
-                Preparing your journey
-              </p>
-              <p className="font-display text-xl">{wonder.name}</p>
-              <div className="mt-7 flex items-center justify-between text-sm text-parchment/75">
-                <span className="motion-safe:animate-pulse">
-                  Preparing scene
-                </span>
-                <span className="tabular-nums">{loadPercent}%</span>
-              </div>
-              <div
-                role="progressbar"
-                aria-label={`Loading ${wonder.name}`}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={loadPercent}
-                className="mt-3 h-1 overflow-hidden rounded-full bg-parchment/15"
-              >
-                <div
-                  className="h-full rounded-full bg-gold transition-[width] duration-300 motion-reduce:transition-none"
-                  style={{ width: `${loadPercent}%` }}
-                />
-              </div>
-              <p className="mt-3 text-xs text-parchment/50">
-                Models, city and construction details
-              </p>
-            </div>
-          </div>
-        ))}
+      {!assetError && loadPercent < 100 && (
+        <WonderArrival wonder={wonder} percent={loadPercent} stage={loadStage} />
+      )}
       {assetError && (
         <div
           role="alert"
           className="absolute inset-0 z-20 grid place-content-center gap-3 bg-black/70 p-6 text-center text-parchment"
         >
-          <p>The {wonder.name} model could not be loaded.</p>
+          <p>We couldn’t load this scene.</p>
           <button
-            className="min-h-11 rounded border border-parchment/40 px-4"
+            className="min-h-11 cursor-pointer rounded border border-parchment/40 px-4"
             onClick={() => window.location.reload()}
           >
-            Reload scene
+            Reload page
           </button>
         </div>
       )}

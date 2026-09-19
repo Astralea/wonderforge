@@ -61,8 +61,14 @@ async function parseGlb(url: string): Promise<Group> {
   return gltf.scene;
 }
 
-export async function loadEiffelParisCity(shouldDiscard?: () => boolean): Promise<Group> {
-  const source = await parseGlb(EIFFEL_PARIS_CITY_GLB);
+export async function loadEiffelParisCity(
+  shouldDiscard?: () => boolean,
+  onStep?: () => void,
+): Promise<Group> {
+  const buffer = await readGlbBuffer(EIFFEL_PARIS_CITY_GLB);
+  onStep?.();
+  const source = (await new GLTFLoader().parseAsync(buffer, '')).scene;
+  onStep?.();
   // Navigation can dispose the owner while fetch/GLTF decoding is pending.
   // Avoid analysing and repartitioning a city that will never be displayed.
   if (shouldDiscard?.()) {
@@ -501,6 +507,7 @@ export async function loadEiffelParisCity(shouldDiscard?: () => boolean): Promis
   });
   for (const geometry of sourceGeometries) geometry.dispose();
   for (const sourceMaterial of sourceMaterials) sourceMaterial.dispose();
+  onStep?.();
   return city;
 }
 

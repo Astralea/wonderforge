@@ -14,10 +14,9 @@ export const eiffelTower: Wonder = {
     text: 'I ought to be jealous of the tower. She is more famous than I am.',
     author: 'Gustave Eiffel',
   },
-  description:
-    'Eighteen thousand pieces of puddled iron, riveted into the iron lace that taught the modern world to look up.',
+  description: '',
   facts: [
-    'It stands 330 m tall today — broadcast antennas added about 18 m to the original 312 m.',
+    'The tower opened at 312 metres in 1889. Today, including its antennas, it reaches 330 metres.',
     'The tower was assembled from 18,038 iron parts joined by roughly 2.5 million rivets.',
     'It was the tallest structure on Earth until the Chrysler Building surpassed it in 1930.',
   ],

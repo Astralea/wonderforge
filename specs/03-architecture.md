@@ -41,6 +41,7 @@ src/
     petraConstruction.ts       # top-down carve + Siq spoil haul graph
     colosseumConstruction.ts   # wagon haul + treadwheel crane graph
     sydneyConstruction.ts      # trolley haul + tower-crane graph
+    sydneyHarbourLots.ts       # Circular Quay / 1966 CBD / Kirribilli lots
     eiffelConstruction.ts      # wagon haul + creeper-crane graph
     camera.ts
     daynight.ts

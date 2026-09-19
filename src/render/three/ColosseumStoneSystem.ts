@@ -39,12 +39,45 @@ function setTransform(
 function stoneColor(material: ColosseumPart['material'], variation: number, target: Color): Color {
   if (material === 'tuff') target.set('#a8895c');
   else if (material === 'pozzolana') target.set('#8a7a68');
+  else if (material === 'timber') target.set('#6a4a30');
   else target.set('#d8c4a0');
   target.offsetHSL(variation * 0.01, variation * 0.018, variation * 0.035);
   return target;
 }
 
+function createCaveaSeatGeometry(steps = 12): BufferGeometry {
+  const shape = new Shape();
+  shape.moveTo(-0.5, -0.5);
+  for (let i = 0; i < steps; i += 1) {
+    const x0 = -0.5 + i / steps;
+    const x1 = -0.5 + (i + 1) / steps;
+    const y1 = -0.5 + (i + 1) / steps;
+    shape.lineTo(x0, y1);
+    shape.lineTo(x1, y1);
+  }
+  shape.lineTo(0.5, -0.5);
+  shape.closePath();
+  const geometry = new ExtrudeGeometry(shape, { depth: 1, bevelEnabled: false, steps: 1, curveSegments: 1 });
+  geometry.translate(0, 0, -0.5);
+  geometry.rotateY(-Math.PI / 2);
+  geometry.computeBoundingBox();
+  const box = geometry.boundingBox!;
+  geometry.translate(
+    -(box.min.x + box.max.x) / 2,
+    -(box.min.y + box.max.y) / 2,
+    -(box.min.z + box.max.z) / 2,
+  );
+  geometry.scale(
+    1 / Math.max(1e-6, box.max.x - box.min.x),
+    1 / Math.max(1e-6, box.max.y - box.min.y),
+    1 / Math.max(1e-6, box.max.z - box.min.z),
+  );
+  geometry.computeVertexNormals();
+  return geometry;
+}
+
 export function createColosseumPartGeometry(kind: ColosseumPartKind): BufferGeometry {
+  if (kind === 'seat') return createCaveaSeatGeometry();
   if (kind !== 'arch') return new BoxGeometry(1, 1, 1, 2, 2, 2);
   const shape = new Shape();
   shape.moveTo(-0.5, -0.5);
@@ -84,7 +117,7 @@ export class ColosseumStoneSystem {
     const matrix = new Matrix4();
     const quaternion = new Quaternion();
     const color = new Color();
-    const kinds: ColosseumPartKind[] = ['block', 'arch', 'wedge'];
+    const kinds: ColosseumPartKind[] = ['block', 'arch', 'wedge', 'seat', 'plank'];
     this.batches = kinds.map((kind) => {
       const parts = plan.parts.filter((part) => part.kind === kind);
       const geometry = createColosseumPartGeometry(kind);
@@ -109,6 +142,8 @@ export class ColosseumStoneSystem {
       block: this.createActiveMesh('block', travertine),
       arch: this.createActiveMesh('arch', travertine),
       wedge: this.createActiveMesh('wedge', travertine),
+      seat: this.createActiveMesh('seat', travertine),
+      plank: this.createActiveMesh('plank', travertine),
     };
   }
 
@@ -145,7 +180,7 @@ export class ColosseumStoneSystem {
     }
 
     const operations = activeColosseumOperationsAt(this.plan, t);
-    const cursors: Record<ColosseumPartKind, number> = { block: 0, arch: 0, wedge: 0 };
+    const cursors: Record<ColosseumPartKind, number> = { block: 0, arch: 0, wedge: 0, seat: 0, plank: 0 };
     for (const operation of operations) {
       const kind = operation.part.kind;
       const mesh = this.activeMeshes[kind];
@@ -162,7 +197,7 @@ export class ColosseumStoneSystem {
       mesh.setColorAt(index, stoneColor(operation.part.material, operation.part.colorVariation, color));
       cursors[kind] += 1;
     }
-    for (const kind of ['block', 'arch', 'wedge'] as const) {
+    for (const kind of ['block', 'arch', 'wedge', 'seat', 'plank'] as const) {
       const mesh = this.activeMeshes[kind];
       mesh.count = cursors[kind];
       mesh.instanceMatrix.needsUpdate = true;

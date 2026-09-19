@@ -17,7 +17,7 @@
 .eiffel-arrival-panel {
   position: relative;
   z-index: 1;
-  width: min(19rem, 100%);
+  width: min(22rem, 100%);
   text-align: center;
 }
 .eiffel-arrival-place {
@@ -32,6 +32,7 @@
   aspect-ratio: 160 / 246;
   height: min(31vh, 15.4rem);
   width: auto;
+  max-width: 100%;
   margin: auto;
 }
 .eiffel-arrival-tower {
@@ -124,12 +125,6 @@
   color: #f4d596;
   min-width: 3ch;
 }
-.eiffel-arrival-caption {
-  margin: 1.4rem 0 0;
-  color: #a9b8c7;
-  font-size: 0.75rem;
-  letter-spacing: 0.035em;
-}
 @media (max-height: 500px) {
   .eiffel-arrival {
     padding: 1rem;
@@ -139,8 +134,5 @@
   }
   .eiffel-arrival-title {
     margin-top: 0.4rem;
-  }
-  .eiffel-arrival-caption {
-    margin-top: 0.7rem;
   }
 }

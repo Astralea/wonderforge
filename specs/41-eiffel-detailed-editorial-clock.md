@@ -21,8 +21,9 @@ Eiffel's displayed and spoken cue windows use the selected edition's viewer
 clock. Detailed source-film boundaries pass through the editorial inverse;
 the six existing cinematic cue windows remain unchanged. Compressed chapter
 cues retain at least eight viewer seconds, extending beyond their source end
-where necessary so the local narration plays in full. Local Adam clip IDs,
-text and audio bytes stay intact. Narration elapsed time is measured in real
+where necessary so the local narration plays in full. Local Adam clip IDs
+stay intact. Displayed story sentences follow Spec 46; spoken bytes require
+a regeneration pass before the spoken track is treated as current. Narration elapsed time is measured in real
 edition seconds, including source-clock holds, rather than normalized legacy
 production time. Explicit seeks within a sentence restart its existing local
 clip at the new elapsed position; ordinary ticks never restart it. Existing

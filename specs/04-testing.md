@@ -75,8 +75,9 @@ Each frame must show:
 - human-scale stones, at least one causally supported moving operation during
   BUILD, and no course-sized slabs;
 - readable foreground, construction site, greenbelt/city, distant desert, sky;
-- no see-through pyramid silhouette, floating working lid, or background prop
-  that appears to rotate in lockstep with the camera;
+- no see-through pyramid silhouette, floating working lid, backlight through
+  the casing, or background prop that appears to rotate in lockstep with the
+  camera;
 - no camera/cloud intersection or screen-filling cloud edge at any mobile
   checkpoint;
 - stable camera framing with no near/far clipping or mobile crop;
@@ -146,19 +147,24 @@ grow. At least one wagon or crane operation must read during BUILD. The camera e
 arc with holds; it does not complete a full orbit in one minute. Hoisted
 stones climb a rope beside the facade; scaffolding and centering raise
 before they work and strike after.
-Eighty arched bays must read as an ellipse, not a circle of boxes. Parts
-keep `[1,1,1]` scale; none first appear at the seat; vaults wait on
-centering and piers. The camera holds far enough that the oval sits in
-the valley. Portrait framing must keep the south arcade and one
+Eighty arched bays must read as an ellipse, not a circle of boxes. From the
+hold, the interior is a stadium: podium wall, stepped ima/media/summa
+cavea, and a timber deck over sand — not a see-through hoop onto the far
+arcade. Parts keep `[1,1,1]` scale; none first appear at the seat; vaults
+wait on centering and piers; cavea wedges wait on their vault. The camera holds close enough that the 188 m ellipse is
+the subject, with valley still readable around it. Portrait framing must keep the south arcade and one
 mechanism without exposing a terrain or sky-dome edge.
 Target budgets match the Stonehenge row in this spec. Pure contact probes:
 hauled bottoms meet the shared valley sampler plus engine-owned wagon-bed
 height within 3 cm; seated parts match the authored transform. Browser
 diagnostics must name `colosseum-reference`. Audio lookup is Colosseum-owned
 or silent, never another wonder's score. The upper sky must stay a
-Mediterranean blue, not a brown studio void. Nero's remaining lake and the
-Tiber glint must show the shared water recipe (ripple and sky glitter), never
-a flat blue disc.
+Mediterranean blue, not a brown studio void. The working oval has **no
+standing water**: no Nero-lake disc and no mid-ground Tiber plane. Hills
+read as brick insulae with hip roofs, umbrella-pine ridges, and an arched
+aqueduct, not cones or cubes on a brown slab. The far valley must fog into
+the sky with no hard tablet horizon. Palatine/Caelian lots must read as a
+neighbourhood at the cinematic hold, not a handful of Monopoly houses.
 
 ### Sydney Opera House replication acceptance
 
@@ -167,8 +173,11 @@ At desktop 1440×900 and mobile 390×844, capture `t = 0.12, 0.32, 0.58, 0.78,
 
 Each sweep must show Bennelong Point in the harbour, Farm Cove water to the
 east with ripple and a sun-glitter path from the harbour sky (never a plastic
-blue fill), Circular Quay sheds south, and the Harbour Bridge as western
-backdrop.
+blue fill), Circular Quay sheds south, a compressed 1966 CBD and Kirribilli
+terraces, Botanic Garden canopy south-east of the point, and the Harbour Bridge
+as a connected western arch over water — pylons on Dawes Point and Milsons
+Point, never a dirt pad under the span. The far water rim fogs into the sky;
+no square earth tablet.
 The podium seats before any sail skin. Early frames must read as **modern
 civil plant**: yellow Favelle-style tower cranes, a yard crawler crane,
 bulldozers and dump trucks on the point/yard — never ancient sleds or

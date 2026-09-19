@@ -80,14 +80,14 @@ export function CaptionBeatIndex({
     {compact && (
       <button ref={toggleRef} type="button" aria-expanded={expanded} aria-controls={navId}
         onClick={() => setNavigationOpen(!expanded)}
-        className="eiffel-chapters-toggle min-h-11 px-3 text-xs tracking-widest text-parchment uppercase focus-visible:outline-2 focus-visible:outline-gold">
+        className="eiffel-chapters-toggle min-h-11 cursor-pointer px-3 text-xs tracking-widest text-parchment uppercase focus-visible:outline-2 focus-visible:outline-gold">
         {expanded ? 'Close chapters' : 'Chapters'}
       </button>
     )}
     <nav
       id={navId}
       ref={navRef}
-      aria-label="Construction beats"
+      aria-label="Film chapters"
       data-testid="caption-beat-index"
       data-expanded={expanded}
       className={`max-w-[19rem] ${compact ? 'eiffel-compact-index-nav' : ''} ${isEiffel ? 'max-h-[18dvh] overflow-y-auto pr-2 md:max-h-[min(22rem,32dvh)]' : ''} ${isEiffel && edit === 'cinematic' ? 'eiffel-short-beats' : ''}`}
@@ -121,10 +121,10 @@ export function CaptionBeatIndex({
               <button
                 type="button"
                 aria-current={current ? 'true' : undefined}
-                aria-label={`Jump to ${beat.kicker}`}
+                aria-label={`${prefersReducedMotion() ? 'Show' : 'Play from'} ${beat.kicker}`}
                 aria-describedby={`${beat.id}-sentence`}
                 onClick={() => jumpTo(beat.from)}
-                className="group flex w-full items-start gap-3 rounded-none py-1.5 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+                className="group flex w-full cursor-pointer items-start gap-3 rounded-none py-1.5 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
               >
                 <span
                   className="relative mt-1.5 grid h-3 w-3 shrink-0 place-items-center"

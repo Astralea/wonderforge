@@ -85,8 +85,9 @@ export function createSydneyEnvironmentPlan(): SydneyEnvironmentPlan {
       tileStacks: 18,
       castingBeds: 10,
       description:
-        'Harbour water, fig trees on the point, Circular Quay sheds, an on-site ' +
-        'precast yard, Höganäs tile palettes, and a western Harbour Bridge silhouette.',
+        'Harbour water, fig trees, Circular Quay warehouses, a compressed 1966 ' +
+        'CBD and Kirribilli terraces, Höganäs tile palettes, and a western Harbour ' +
+        'Bridge whose arch spans water between Dawes Point and Milsons Point.',
     },
     site: {
       towerCranes: 2,

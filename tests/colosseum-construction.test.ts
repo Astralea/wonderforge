@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   COLOSSEUM_A,
+  COLOSSEUM_ARENA_A,
+  COLOSSEUM_ARENA_B,
+  COLOSSEUM_B,
   COLOSSEUM_BAYS,
   COLOSSEUM_CONSTRUCTION,
   COLOSSEUM_HEIGHT,
@@ -40,6 +43,15 @@ describe('Colosseum typed construction plan (Spec 12)', () => {
     expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'arcade')).toHaveLength(COLOSSEUM_BAYS * 3);
     expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'attic')).toHaveLength(COLOSSEUM_BAYS);
     expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'foundation')).toHaveLength(16);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'inner-arcade')).toHaveLength(COLOSSEUM_BAYS * 2);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'podium')).toHaveLength(COLOSSEUM_BAYS);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'radial')).toHaveLength(COLOSSEUM_BAYS);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'vault')).toHaveLength(COLOSSEUM_BAYS);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'cavea')).toHaveLength(COLOSSEUM_BAYS * 3);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'arena')).toHaveLength(16);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.id.startsWith('cavea-ima-'))).toHaveLength(COLOSSEUM_BAYS);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.id.startsWith('cavea-media-'))).toHaveLength(COLOSSEUM_BAYS);
+    expect(COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.id.startsWith('cavea-summa-'))).toHaveLength(COLOSSEUM_BAYS);
   });
 
   it('keeps unique finite parts at final size', () => {
@@ -77,6 +89,8 @@ describe('Colosseum typed construction plan (Spec 12)', () => {
       expect(colosseumPartStateAt(part, route, 1).position).toEqual(part.finalPosition);
     }
     expect(seatedColosseumCountAt(COLOSSEUM_CONSTRUCTION, 1)).toBe(COLOSSEUM_CONSTRUCTION.parts.length);
+    expect(seatedColosseumCountAt(COLOSSEUM_CONSTRUCTION, 0)).toBe(0);
+    expect(seatedColosseumCountAt(COLOSSEUM_CONSTRUCTION, 0.08)).toBe(0);
   });
 
   it('keeps phase boundaries continuous without scaling', () => {
@@ -115,6 +129,45 @@ describe('Colosseum typed construction plan (Spec 12)', () => {
     const vault = COLOSSEUM_CONSTRUCTION.parts.find((part) => part.id === 'vault-0')!;
     const arcade = COLOSSEUM_CONSTRUCTION.parts.find((part) => part.id === `arcade-0-${vault.bay}`)!;
     expect(vault.start).toBeGreaterThan(arcade.start + arcade.duration);
+  });
+
+  it('fills the amphitheatre bowl so the interior is not an empty hoop', () => {
+    const ima = COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.id.startsWith('cavea-ima-'));
+    const media = COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.id.startsWith('cavea-media-'));
+    const summa = COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.id.startsWith('cavea-summa-'));
+    const podium = COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'podium');
+    const arena = COLOSSEUM_CONSTRUCTION.parts.filter((part) => part.group === 'arena');
+    for (const part of [...ima, ...media, ...summa]) {
+      expect(part.kind).toBe('seat');
+      expect(part.finalRotation[0]).toBe(0);
+      const radius = Math.hypot(part.finalPosition[0], part.finalPosition[2]);
+      expect(colosseumInsideArena(part.finalPosition[0], part.finalPosition[2], 1)).toBe(false);
+      expect((part.finalPosition[0] / COLOSSEUM_A) ** 2 + (part.finalPosition[2] / COLOSSEUM_B) ** 2).toBeLessThan(1);
+      expect(radius).toBeGreaterThan(20);
+    }
+    for (const part of podium) {
+      expect(colosseumInsideArena(part.finalPosition[0], part.finalPosition[2], 1)).toBe(false);
+      expect(Math.hypot(part.finalPosition[0], part.finalPosition[2])).toBeLessThan(50);
+    }
+    for (const part of arena) {
+      expect(part.kind).toBe('plank');
+      expect(part.material).toBe('timber');
+      expect(colosseumInsideArena(part.finalPosition[0], part.finalPosition[2], 1.02)).toBe(true);
+      expect(part.start + part.duration).toBeLessThanOrEqual(0.86);
+    }
+    const vault = COLOSSEUM_CONSTRUCTION.parts.find((part) => part.id === 'vault-0')!;
+    const cavea = COLOSSEUM_CONSTRUCTION.parts.find((part) => part.id === 'cavea-ima-0')!;
+    expect(cavea.start).toBeGreaterThan(vault.start + vault.duration);
+    for (let sample = 0; sample < 16; sample += 1) {
+      const theta = (sample / 16) * Math.PI * 2;
+      const x = ((COLOSSEUM_ARENA_A + 52) / 2) * Math.cos(theta);
+      const z = ((COLOSSEUM_ARENA_B + 36) / 2) * Math.sin(theta);
+      const nearest = ima.reduce((best, part) => {
+        const d = Math.hypot(part.finalPosition[0] - x, part.finalPosition[2] - z);
+        return d < best.d ? { d, part } : best;
+      }, { d: Infinity, part: ima[0]! });
+      expect(nearest.d).toBeLessThan(8);
+    }
   });
 
   it('keeps hauled wagons on the outer ring instead of chord through the arena', () => {

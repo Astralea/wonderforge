@@ -37,6 +37,7 @@ LOCATION = "global"
 MOVIE_SECONDS = 60.0
 AMBIENT_SOURCE_SECONDS = 30.0
 LOOP_CROSSFADE = 3.0
+AMBIENT_TAKES = 3
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ARTIFACT_ROOT = ROOT / "artifacts" / "soundtrack"
@@ -70,8 +71,9 @@ pulse, timber and stone contact, sober documentary tone.
         ambient_prompt="""
 A 30-second instrumental ambient bed for the Flavian amphitheatre valley:
 warm dusty air, distant timber and stone, no beat and no climax so it can
-loop. Instrumental only; no vocals; no Gregorian, operatic, or gladiator-epic
-shorthand.
+sequence with other quiet variations of the same place. Instrumental only;
+no vocals; no Gregorian, operatic, or gladiator-epic shorthand. Make this
+take melodically distinct from a previous pass of the same brief.
 """.strip(),
     ),
     "petra": WonderBrief(
@@ -240,18 +242,18 @@ def extract_audio(response: object) -> tuple[bytes, list[str]]:
     return audio, text_parts
 
 
-def generate(brief: WonderBrief, role: str, client: genai.Client, directory: pathlib.Path) -> pathlib.Path:
+def generate(brief: WonderBrief, role: str, client: genai.Client, dest: pathlib.Path) -> pathlib.Path:
     model = "lyria-3-pro-preview" if role == "cinematic" else "lyria-3-clip-preview"
     prompt = brief.cinematic_prompt if role == "cinematic" else brief.ambient_prompt
-    print(f"generating {brief.slug} {role} with {model}:", flush=True)
+    print(f"generating {brief.slug} {role} -> {dest.name} with {model}:", flush=True)
     response = client.models.generate_content(
         model=model,
         contents=prompt,
         config=types.GenerateContentConfig(response_modalities=["AUDIO", "TEXT"]),
     )
     audio, notes = extract_audio(response)
-    path = directory / f"{role}-generated.mp3"
-    path.write_bytes(audio)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(audio)
     metadata = {
         "wonder": brief.slug,
         "role": role,
@@ -259,14 +261,15 @@ def generate(brief: WonderBrief, role: str, client: genai.Client, directory: pat
         "location": LOCATION,
         "prompt": prompt,
         "model_text": notes,
+        "file": dest.name,
         "provenance": "Google Lyria 3 via Gen AI SDK on Vertex AI; SynthID and C2PA enabled by model default.",
     }
-    (directory / f"{role}-generation.json").write_text(
+    dest.with_suffix(".json").write_text(
         json.dumps(metadata, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    print(f"  {path}  {path.stat().st_size / 1_000_000:.2f} MB", flush=True)
-    return path
+    print(f"  {dest}  {dest.stat().st_size / 1_000_000:.2f} MB", flush=True)
+    return dest
 
 
 def measure_lufs(path: pathlib.Path) -> float:
@@ -301,28 +304,75 @@ def encode(source: pathlib.Path, destination: pathlib.Path, role: str) -> None:
     )
 
 
-def assemble(brief: WonderBrief, directory: pathlib.Path) -> None:
-    cinematic = directory / "cinematic-generated.mp3"
-    ambient = directory / "ambient-generated.mp3"
-    for path in (cinematic, ambient):
-        if not path.exists():
-            sys.exit(f"missing {path}; generate before using --assemble")
+def duration_seconds(path: pathlib.Path) -> float:
+    result = run([
+        "ffprobe", "-v", "error", "-show_entries", "format=duration",
+        "-of", "default=noprint_wrappers=1:nokey=1", str(path),
+    ])
+    return float(result.stdout.strip())
 
-    movie_raw = directory / "cinematic-delivery.wav"
+
+def ambient_take_paths(directory: pathlib.Path) -> list[pathlib.Path]:
+    numbered = sorted(directory.glob("ambient-generated-[0-9][0-9].mp3"))
+    if numbered:
+        return numbered
+    legacy = directory / "ambient-generated.mp3"
+    return [legacy] if legacy.exists() else []
+
+
+def concat_ambient_takes(takes: list[pathlib.Path], dest: pathlib.Path) -> None:
+    if len(takes) == 1:
+        run([
+            "ffmpeg", "-v", "error", "-y", "-i", str(takes[0]),
+            "-ar", "48000", "-ac", "2", str(dest),
+        ])
+        return
+    inputs: list[str] = []
+    for take in takes:
+        inputs.extend(["-i", str(take)])
+    filters: list[str] = []
+    current = "[0:a]"
+    for index in range(1, len(takes)):
+        label = f"[a{index}]"
+        filters.append(
+            f"{current}[{index}:a]acrossfade=d={LOOP_CROSSFADE}:c1=tri:c2=tri{label}"
+        )
+        current = label
     run([
-        "ffmpeg", "-v", "error", "-y", "-i", str(cinematic),
-        "-af",
-        f"afade=t=in:st=0:d=1.8,apad=whole_dur={MOVIE_SECONDS},"
-        f"atrim=0:{MOVIE_SECONDS},afade=t=out:st={MOVIE_SECONDS - 1.4}:d=1.4",
-        "-ar", "48000", "-ac", "2", str(movie_raw),
+        "ffmpeg", "-v", "error", "-y", *inputs,
+        "-filter_complex", ";".join(filters),
+        "-map", current, "-ar", "48000", "-ac", "2", str(dest),
     ])
 
-    loop_point = AMBIENT_SOURCE_SECONDS - LOOP_CROSSFADE
+
+def assemble(brief: WonderBrief, directory: pathlib.Path) -> None:
+    cinematic = directory / "cinematic-generated.mp3"
+    takes = ambient_take_paths(directory)
+    if cinematic.exists():
+        movie_raw = directory / "cinematic-delivery.wav"
+        run([
+            "ffmpeg", "-v", "error", "-y", "-i", str(cinematic),
+            "-af",
+            f"afade=t=in:st=0:d=1.8,apad=whole_dur={MOVIE_SECONDS},"
+            f"atrim=0:{MOVIE_SECONDS},afade=t=out:st={MOVIE_SECONDS - 1.4}:d=1.4",
+            "-ar", "48000", "-ac", "2", str(movie_raw),
+        ])
+        print("encoding cinematic delivery:", flush=True)
+        encode(movie_raw, PUBLIC_AUDIO / f"{brief.slug}-cinematic.mp3", "cinematic")
+    if not takes:
+        if not cinematic.exists():
+            sys.exit(f"missing ambient takes in {directory}")
+        return
+
+    joined = directory / "ambient-joined.wav"
+    concat_ambient_takes(takes, joined)
+    source_seconds = duration_seconds(joined)
+    loop_point = max(source_seconds - LOOP_CROSSFADE, LOOP_CROSSFADE + 1)
     ambient_raw = directory / "ambient-delivery.wav"
     run([
-        "ffmpeg", "-v", "error", "-y", "-i", str(ambient),
+        "ffmpeg", "-v", "error", "-y", "-i", str(joined),
         "-filter_complex",
-        f"[0:a]atrim={loop_point}:{AMBIENT_SOURCE_SECONDS},asetpts=PTS-STARTPTS[tail];"
+        f"[0:a]atrim={loop_point}:{source_seconds},asetpts=PTS-STARTPTS[tail];"
         f"[0:a]atrim=0:{LOOP_CROSSFADE},asetpts=PTS-STARTPTS[head];"
         f"[tail][head]acrossfade=d={LOOP_CROSSFADE}:c1=qsin:c2=qsin[xf];"
         f"[0:a]atrim={LOOP_CROSSFADE}:{loop_point},asetpts=PTS-STARTPTS[mid];"
@@ -330,15 +380,17 @@ def assemble(brief: WonderBrief, directory: pathlib.Path) -> None:
         "-map", "[out]", "-ar", "48000", "-ac", "2", str(ambient_raw),
     ])
 
-    print("encoding delivery files:", flush=True)
-    encode(movie_raw, PUBLIC_AUDIO / f"{brief.slug}-cinematic.mp3", "cinematic")
-    encode(ambient_raw, PUBLIC_AUDIO / f"{brief.slug}-ambient-loop.mp3", "ambient")
+    print("encoding ambient delivery:", flush=True)
+    dest = PUBLIC_AUDIO / f"{brief.slug}-ambient-loop.mp3"
+    encode(ambient_raw, dest, "ambient")
+    print(f"  ambient loop {duration_seconds(dest):.3f}s from {len(takes)} takes", flush=True)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--wonder", choices=sorted(BRIEFS), default="stonehenge")
     parser.add_argument("--role", choices=("all", "cinematic", "ambient"), default="all")
+    parser.add_argument("--takes", type=int, default=AMBIENT_TAKES, help="Lyria clip takes for the ambient bed")
     parser.add_argument("--assemble", action="store_true", help="reuse cached generated MP3s")
     args = parser.parse_args()
 
@@ -348,9 +400,15 @@ def main() -> None:
     if not args.assemble:
         with genai.Client(enterprise=True, project=PROJECT, location=LOCATION) as client:
             if args.role in ("all", "cinematic"):
-                generate(brief, "cinematic", client, directory)
+                generate(brief, "cinematic", client, directory / "cinematic-generated.mp3")
             if args.role in ("all", "ambient"):
-                generate(brief, "ambient", client, directory)
+                for index in range(1, max(1, args.takes) + 1):
+                    generate(
+                        brief,
+                        "ambient",
+                        client,
+                        directory / f"ambient-generated-{index:02d}.mp3",
+                    )
     assemble(brief, directory)
 
 

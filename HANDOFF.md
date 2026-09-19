@@ -1,3 +1,635 @@
+## Colosseum midground and background — 2026-09-19
+
+Owner: Palatine and Caelian still read as empty tan slopes. Dawn fog started
+inside the near hills (`near = radius * 1.7`), and the street-lot grids were
+too thin to hold a neighbourhood.
+
+Spec 12 now keeps midground fabric readable: fog starts beyond Palatine and
+Caelian. Those rises get denser courtyard insulae; Quirinal, Viminal, and
+Janiculum are a farther city ring with pines. A valley-foot ring of insulae
+wraps the oval outside the working floor. Claudian aqueduct stays off the
+north opening.
+
+Verified: Colosseum world tests, typecheck, build (`main-DJwnCTGh.js`). Browser
+QA `#/debug/wonder/colosseum/0` and `0.86` (captures in
+`artifacts/colosseum-fabric-2026-09-19/`). Opening shows neighbourhoods on
+both rises plus a valley-foot ring; late film has city wrapping the oval.
+No public deployment, push, or visibility change.
+
+---
+
+## Sydney Blender sails — 2026-09-18
+
+Owner: the harbour pass still read as a beige cube city and a lumpy white
+mass. Wikimedia SE harbour photos show nested spherical-triangle shells on a
+pink granite podium, Bridge as a steel through-arch over water, and Farm Cove
+in the foreground.
+
+Blender (connected 5.2.1 LTS) authored polar lunes of the 75 m Utzon sphere,
+tipped at the foot, exported as `public/models/sydney/sail-*.glb` plus a
+harbour kit (podium with monumental steps, windowed 1966 office, gabled shed,
+Moreton Bay fig). The renderer loads those GLBs; Spec 13 still forbids
+Firaxis/Anno/commercial Opera House meshes. Camera hold stays over Farm Cove
+so the CBD does not fill the frame.
+
+Verified: Sydney tests + typecheck + build (`main-DynaySvr.js`). Browser QA
+`#/debug/wonder/sydney-opera-house/0.58` and `1` (captures in
+`artifacts/sydney-harbour-2026-09-18/t058-kit` and `t1-kit`, reference photo
+in `reference/southeast-view.jpg`). Mid-film now reads as overlapping white
+sails on a granite podium rather than a CAD blob. No public deployment, push,
+or visibility change.
+
+---
+
+## Sydney harbour overhaul — 2026-09-18
+
+Owner: Sydney still read as a toy on a square dirt tablet — a tan plane
+beyond a small water disc, a Bridge sitting on a mud pad, lollipop figs,
+and a CAD sail blob.
+
+Spec 13 now requires harbour fabric: water covers every non-land sample,
+the Bridge arch spans water between Dawes Point and Milsons Point, Farm
+Cove stays open to the east, and Circular Quay / a compressed 1966 CBD /
+Kirribilli lots come from one engine list. Sail skins are Utzon vaults
+cut from the 75 m sphere with Höganäs chevrons, not latitude cards.
+
+The peninsula sampler no longer raises a rectangle under the whole Bridge.
+Water is a 1.6 km disc; cinematic fog eats the far rim. Environment
+instances gabled sheds, sandstone office slabs, hip-roof terraces, and
+spreading figs. Workboats are hull, cabin, and mast.
+
+Verified: 219 files / 1,173 tests (`npx vitest run --maxWorkers=2`),
+typecheck, build (`main-BAUDbaJ-.js`). Browser QA
+`#/debug/wonder/sydney-opera-house/0.12`, `0.58`, `1` desktop and `0.58`
+portrait (captures in `artifacts/sydney-harbour-2026-09-18/`). Opening
+reads as a harbour site with plant; mid-film shows tiled vaults on the
+podium; night is a lit house on dark water. The finished shells still
+read more as a clustered vault than two nested halls — next pass. No
+public deployment, push, or visibility change.
+
+---
+
+## Arrival silhouette on every wonder — 2026-09-18
+
+Owner: only Eiffel used the original silhouette loader; every other
+cinematic and the homepage Giza ambient still showed a generic gold bar.
+
+Spec 05 now requires an original monument drawing for all ten catalog ids.
+Eiffel keeps the nine-system categories (City through Summit). The others
+show one pending noun — Plateau, Downs, Valley, Siq, Terrace, Ridge,
+Causeway, Axis, Harbour — then Starting film…. Shared `WonderArrival`
+paints the hollow outline, measured fill, and SVG wave waterline. ThreeCanvas
+waits two animation frames before constructing the world so the SVG can
+paint. Non-Eiffel progress stays 0 until the first ready frame.
+
+Verified: 219 files / 1,172 tests (`npx vitest run --maxWorkers=2`),
+typecheck, build (`main-CMb4UaHe.js`). Browser QA of the loaders on
+Colosseum, Stonehenge, Eiffel, and the in-production debug routes (captures
+in `artifacts/arrival-loader-2026-09-18/`). Homepage Giza uses the same
+pyramid overlay until ready. No public deployment, push, or visibility
+change.
+
+---
+
+## Colosseum opening, voice, and Rome fabric — 2026-09-18
+
+Owner: the first Bill clip named a lake the camera never showed, and it
+spoke the kicker plus body while the overlay showed body only. The movie
+also opened on a haul-ring of pale slabs, arena sand, and Tivoli stocks.
+Hill fabric still read as a packed toy village.
+
+Spec 12 now opens from the **north** onto an empty drained floor. The first
+caption is `colosseum-valley` — work begins between Palatine and Caelian —
+and Bill speaks that body line. Foundations wait until t ≈ 0.11; arena sand
+waits for the timber deck; the slab haul ring stays off. Rome lots skip
+streets; the Blender insula is a courtyard block with hip-roof wings,
+windows, and a court floor. Spoken clips regenerated; unused lake MP3
+removed.
+
+Verified: 219 files / 1,171 tests (`npx vitest run --maxWorkers=2`),
+typecheck, build (`main-CYzoTJo2.js`). Browser QA
+`#/debug/wonder/colosseum/0`, `0.16`, `0.86` and cinematic first caption
+(captures in `artifacts/colosseum-opening-2026-09-18/`). Empty oval at t=0;
+on-screen body matches the new Bill clip; hill insulae read as courtyard
+street lots. No public deployment, push, or visibility change.
+
+---
+
+## Stonehenge solstice sun — 2026-09-18
+
+Owner: the axis caption named midsummer sunrise / midwinter sunset, but the
+sun path missed the Heel Stone line and the disc sat above the cinematic
+frame. Spec 10 now owns a visible solstice sun: NE dawn, south noon, SW hold
+from the caption through the reveal, with long axis-aligned shadows.
+
+The sky dome draws a Giza-style disc that punches the humid horizon mix. The
+directional shadow volume covers the ring, Heel Stone, and the ~70 m throw.
+The solstice camera hold drops to ~10° so the disc sits on the downs above
+the avenue while the uprights throw toward the Heel Stone.
+
+Verified: stonehenge-world tests; typecheck; build (`main-Fq7b5EFY.js`);
+219 files / 1,170 tests from the prior full run plus the axis contract.
+Browser QA `#/debug/wonder/stonehenge/0.82` and `1` (desktop + portrait in
+`artifacts/stonehenge-solstice-2026-09-18/`). No public deployment, push, or
+visibility change.
+
+---
+
+
+
+Owner: the Vertex W still carried a glow-cloud and sparkle-rays above the
+Great Wall. Knockout now punches haze connected to the dark field and
+small leftover islands, then clips anything above the W roof line. Letter
+interiors (Colosseum arena, Sydney C) stay. Title plate PNG regenerated.
+
+Verified: wordmark-knockout + ui tests. Local preview 5589 serves the new
+`/brand/wonderforge-wordmark.png`. No public deployment, push, or visibility
+change.
+
+---
+
+
+
+Owner: Palatine/Caelian read as a tan tablet with Monopoly cubes, cone
+roofs, and lollipop trees. Spec 12 now requires authored street-lot fabric:
+hip-roof insulae, palace wings, umbrella-pine ridges, olive hill colour,
+and a sky dome that fog-blends fully into scene fog.
+
+Blender kit `public/models/colosseum-rome/rome-kit.glb` (insula, palace-wing,
+umbrella-pine, cypress) instances on deterministic lots in
+`src/engine/colosseumRomeLots.ts`. Procedural hip-roof fallback first;
+the GLB upgrades geometry when loaded. Far sparse city rings were rejected —
+they read as scatter on the slab. Fog near stays beyond the 700 m hill
+neighbourhoods so those lots stay readable; far fog eats the valley before
+the plane can silhouette.
+
+Verified: 218 files / 1,166 tests (`npx vitest run --maxWorkers=2`),
+typecheck, build (`main-Cg0q37cu.js`). Browser QA
+`#/debug/wonder/colosseum/0.86` (capture in
+`artifacts/colosseum-rome-2026-09-18/`). Hip roofs and umbrella pines read
+on both rises; the drained valley still reads as a floor, not a packed
+Hirosaki garden. No public deployment, push, or visibility change.
+
+---
+
+
+
+Owner: Eiffel arrival sat on 8/10 (City still one bucket while Paris
+streets parsed) and the cinematic cue became audible over the silhouette,
+then sought back to t=0 on the first ready frame.
+
+City now reports palace / streets / traffic / entrance (plus street-mesh
+prep) and Ironwork reports kit fetch / parse / batch so the fill can leave
+80% during the long remaining system. Catalog `openWonder` marks assets
+unready before play; `primeSoundtrack` unlocks then pauses unless the bed
+was already audible; the hook starts the score on the first ready frame and
+keeps a film that has already begun if readiness flickers.
+
+Verified: 218 files / 1,165 tests (`npx vitest run --maxWorkers=2`), typecheck,
+build (`main-CJh9scCU.js`). Browser QA on `#/wonder/eiffel-tower`. No public
+deployment, push, or visibility change.
+
+---
+
+## Colosseum interior bowl — 2026-09-17
+
+Owner: the live Colosseum was an outer arcade hoop. You could see through to
+the far wall; the stadium interior was twenty-four pitched boxes. Spec 12
+now follows the Giza-style layered pipeline for the monument itself:
+foundation → podium wall → inner/intermediate ambulacra → radial tuff
+walls → vaults → stepped ima / media / summa cavea → timber arena deck
+over sand. No exposed Domitianic hypogeum.
+
+Inventory: 80 podium bays, 160 inner-arcade arches, 80 radials, 80 vaults,
+240 stepped cavea wedges (seat geometry), 16 timber arena sectors. Peak
+active operations stay ≤24. Cavea is ExtrudeGeometry stairs, not a tilted
+box.
+
+Verified: colosseum-construction + colosseum-world + wonders tests,
+typecheck, build (`main-CuNZrN5d.js`). Browser QA on
+`#/debug/wonder/colosseum/0.86` and `1.0` (captures in
+`artifacts/colosseum-interior-2026-09-17/`). The hold shows a seating bowl
+and arena, not a hollow wall ring. No public deployment, push, or
+visibility change.
+
+---
+
+## Title-plate lockup knockout — 2026-09-17
+
+
+Owner: the Vertex lockup on the live title plate still looked boxed. First
+ship used mix-blend `lighten`, then a whole-frame luma punch — both left a
+dark rectangle. CSS `width: 124%` with negative margins cropped the W and
+E. Compact/cinematic headers used the same picture; typeset WonderForge
+read better there.
+
+Fix: `scripts/knockout-wordmark.mjs` flood-fills the original v3 painting
+from the edges through dark field (`luma < 48`) into true alpha, feathered
+5 px, leaving enclosed letter interiors (Colosseum arena, Sydney C). The
+PNG is shown at 100% on the title plate only. Catalog back control and
+cinematic letterbox are Cinzel **WonderForge** again.
+
+Verified: `tests/ui.test.tsx` 34/34, typecheck, build
+(`main-CUrcuhUe.js` / `main-DLzTGGIw.css`). Browser QA on
+http://127.0.0.1:5589: title plate shows full W…E over Giza with no
+boxed field; catalog and cinematic letterbox are Cinzel WonderForge.
+No public deployment, push, or visibility change.
+
+---
+
+## Colosseum scale, soundtrack, and valley overhaul — 2026-09-17
+
+
+Owner: Colosseum music/narration were silent after a gallery click, and
+the new Palatine/Caelian/Esquiline rises read taller than the 48 m facade
+(tiny oval under volcanoes). Same autoplay trap would hit every Ready
+cinematic; Petra has no cue (In production, silent by spec).
+
+Soundtrack: `openWonder` and Play/Replay now `primeSoundtrack` inside the
+click. `useSoundtrack` reuses that `HTMLAudioElement` (refcount so two
+hooks do not layer or retire the live bed). The hook does **not** pause a
+already-playing bed when `ThreeCanvas` flips `assetsReady` false. Narration
+stays default-off except Eiffel (Spec 05); Bill clips exist and match the
+caption bodies. Turning narration on, or a saved ON preference, primes
+all five Colosseum beats in the same gesture.
+
+Valley: Palatine 26 m / Caelian 20 m / Esquiline 14 m / Aventine 12 m,
+centres > 300 m off the oval, flatten 140–220 m, crests below the facade
+even with ~10 m pines. Camera 292–388 m (~14–16°) so the 188 m ellipse
+holds ~28–33° of the frame. Claudian aqueduct sits south-east along the
+Caelian, not in the east opening foreground. Stonehenge tree mosaic
+310–450 m (was 175–305 m).
+
+Verified: `npx vitest run --maxWorkers=2` 218 files / 1,160 tests,
+typecheck, build (`main-sZbLDNaS.js`). Browser QA on Vite
+http://127.0.0.1:5590: debug `#/debug/wonder/colosseum/0.45` and `0.86`
+show the ellipse as the subject with hill groves as backdrop (captures
+in `artifacts/colosseum-overhaul-2026-09-17/`); Stonehenge `0.86` keeps
+trees on the far downs. Gallery → Colosseum then Play: 
+`/audio/colosseum-cinematic.mp3` playing at volume 0.68, Bill
+`colosseum-bill-*.mp3` playing on caption beats. No public deployment,
+push or visibility change.
+
+---
+
+## Illustrated wordmark in the live app — 2026-09-17
+
+
+Owner: the Vertex WONDER/FORGE lockup lived only under `artifacts/`. Spec 05
+now ships it as the brand: title-plate heading, catalog back control, and
+cinematic letterbox (`/brand/wonderforge-wordmark.png`, dark field punched
+to alpha). Colosseum/Stonehenge were not at Giza quality; this pass moves
+insulae onto Palatine/Caelian lots with storey relief, and gives Stonehenge
+offset downs plus a tree-line inside the fog. They are still not the Giza
+bar.
+
+Verified: ui + colosseum-world + stonehenge-world/construction tests,
+typecheck, build. Live at https://wonderforge.localhost/#/. Served bundle
+`main-gn5DDsLJ.js` / `main-BKTv3fxc.css` on 5589. Browser QA: title plate
+shows the monument letters over Giza; catalog uses the same lockup as the
+back control. No public deployment, push or visibility change.
+
+---
+
+## Catalog glyphs draw at pen speed — 2026-09-17
+
+Owner: the hover glyph was a uniform 0.82 s sweep per stroke with a
+70 ms index stagger, so short ticks and long arcs took the same time,
+pyramid/Eiffel flanks drew up-and-over (one side descending), the
+first ~70 ms of hover showed nothing, and leaving rewound the stroke.
+Spec 05 now: strokes are typed data (`GLYPH_STROKES` in
+`src/ui/WonderGlyph.tsx`: `d`, build stage, weight); the pure planner
+`src/ui/wonderGlyphTiming.ts` measures each path (M L H V Q A Z) and
+sets `--wg-d`/`--wg-t` per stroke so duration ∝ length (96 u/s,
+clamped 140–460 ms) and stages start in order with 45% overlap.
+Symmetric forms (Giza flanks, Eiffel legs, Angkor spires) are split so
+both sides rise to the apex. A dotted plan underdrawing (`.wg-plan`,
+opacity 0.22) appears at once; fresh ink is `--wg-hot` and cools to
+`--wg-ink` 0.75 s after landing (absolute tone colors via
+`color-mix(var(--color-gold))` — Chrome cannot interpolate SVG paint to
+`currentColor` and rendered it transparent); the svg scales up from a
+ground-anchored origin. Leaving fades opacity 0.18 s, then a 0 s
+delayed transition resets dashoffset (no rewind). `WonderGlyph` takes
+`tone="quiet"` for In-production rows instead of a text-color class.
+Whole-glyph builds run 546 ms (Giza) to 1214 ms (Sydney).
+
+Verified: 218 files / 1,156 tests, typecheck, build. Browser QA on a
+temporary `vite` dev server at http://127.0.0.1:5590 (stopped after):
+rest slots empty; Stonehenge focus samples at 1× show ground + footings
+done by 450 ms, great trilithon still drawing at 750 ms, complete at
+1050 ms; ink starts hot (oklab L 0.85, opaque) and cools to gold/0.8;
+blur fades then snaps offsets to 1 by 340 ms. 6× CDP frames of Giza
+mid-build show the dotted plan with both small-pyramid flanks rising
+together. Reduced-motion emulation: focus completes instantly, no
+transform, blur clears instantly. No public deployment, push or
+visibility change.
+
+---
+
+## Giza pyramids are opaque solids — 2026-09-17
+
+Owner: Khufu/Khafre/Menkaure read as hollow shells; backlight lit the inner
+face of the far casing. Specs 06/07/08/04 now keep a **gapless occupancy
+frustum** inside each seated pyramid (matching slope, inset 1.35 m, opaque
+core limestone, shadow-casting). The working deck still shows four courses of
+human-scale core cells; buried volume is no longer culled to empty air.
+
+Verified: `tests/giza-pyramid-solidity.test.ts` plus construction tests,
+typecheck, build. Live at
+https://wonderforge.localhost/#/debug/wonder/pyramids-of-giza/1. Served
+bundle `main-Bl8wGdjQ.js` on 5589. Desktop captures in
+`artifacts/giza-solidity-2026-09-17/`: t=0.45 working deck is a filled
+platform; t=1 ensemble is three opaque masses with dark shade faces, no
+through-light. No public deployment, push or visibility change.
+
+---
+
+## Colosseum valley first AAA layer — 2026-09-17
+
+Owner: Colosseum’s background/mid-ground were a brown slab with a
+mismatched water disc; Giza/Eiffel get form, then material, then light.
+Specs 12/04 now keep **no standing water** in the oval (drained silt
+scar only; no Nero lake, no mid-ground Tiber). Hills are Palatine /
+Caelian silhouettes with umbrella pines, cypress, roofed insulae, far
+fabric, and a Claudian aqueduct with arched spans. Lighting: cooler
+hemisphere fill, stronger raking key, shadow volume covering the 188 m
+ellipse.
+
+Verified: colosseum-world + colosseum-construction tests, typecheck,
+build. Live at https://wonderforge.localhost/#/debug/wonder/colosseum/0.86.
+Served bundle `main-GJDbgY9u.js` on 5589. Browser QA: t=0 shows the
+east aqueduct, pine-crowned Palatine, drained scar, no pool; t=0.86
+keeps the complete ellipse under raking sun. Stonehenge parity is not
+this pass. No public deployment, push or visibility change.
+
+---
+
+## Homepage stays on Giza; richer catalog glyphs — 2026-09-17
+
+Owner: Colosseum is too thin as a title-plate orbit. Specs 00/05/14/40
+now keep the homepage diorama on **Pyramids of Giza** and ignore a
+leftover `wf-home-wonder` pick (including Colosseum). Catalog glyphs
+are denser architectural line drawings: Stonehenge is a sarsen
+horseshoe of trilithons; the Colosseum is a three-storey arcade with
+the ruined wing. Empty-until-hover is unchanged.
+
+Verified: home-wonder, wonder-glyph, and ui tests, typecheck, build.
+Live at https://wonderforge.localhost/#/. Served bundle
+`main-ro2bY6mi.js` / `main-CDR5jRfw.css` on 5589. Browser QA: title
+plate loads Giza (`sessionStorage` `pyramids-of-giza`); hover builds
+Giza, Stonehenge, Colosseum, and Eiffel as distinct silhouettes. No
+public deployment, push or visibility change.
+
+---
+
+## Catalog glyphs empty until they build — 2026-09-17
+
+Owner: idle catalog icons were already drawings. Spec 05 now keeps the
+slot empty until hover or focus; then the gold line drawing builds
+stroke by stroke (`pathLength` 1, dashoffset 1 → 0, staggered
+`--wg-i`). Leave the row and it clears. Reduced motion shows the
+complete drawing instantly on hover. In-production rows stay
+non-controls with quieter glyphs.
+
+Verified: 217 files / 1,143 tests, typecheck, build. Live at
+https://wonderforge.localhost/#/. Served bundle `main-B8EDvdld.js` /
+`main-CtcdPRc2.css` on 5589. Browser QA: rest slots are empty
+(dashoffset `1px`); Giza hover draws three pyramids (`0px`) while
+Stonehenge stays empty; Eiffel hover draws the tower after Giza
+clears. No public deployment, push or visibility change.
+
+---
+
+## Catalog On site and hover glyphs — 2026-09-17
+
+Owner: “Watch now” still named the medium on the site index. Specs
+00/01/05 now use **On site** (not Watch now / Experience now). Each
+catalog row has a trailing gold line-drawing of that monument; the
+construction loop is paused until hover or focus. Reduced motion keeps
+the still. In-production rows stay non-controls with quieter glyphs.
+
+Verified: 217 files / 1,143 tests, typecheck, build. Live at
+https://wonderforge.localhost/#/. Served bundle `main-Et8fq85t.js` /
+`main-Dprs5U-C.css` on 5589. Browser QA: ON SITE heading, glyphs on
+every row, Giza hover runs only that glyph. No public deployment, push
+or visibility change.
+
+---
+
+## Title plate has no 解说 — 2026-09-16
+
+Owner: the homepage sat inside a live yard and then explained itself
+(“Short films about how monuments were built.”). Specs 00/05 now keep
+the title plate to brand **WonderForge** and **Choose a site**. No slogan
+and no medium sentence. Caption voice stays in the movie.
+
+Verified: 216 files / 1,141 tests, typecheck, build. Live at
+https://wonderforge.localhost/#/. Served bundle `main-BuNQ4_hb.js` /
+`main-CWiNkPhZ.css` on 5589. Browser QA: title plate is name + CTA over
+the diorama; that sentence is gone; homepage loads ambient music only,
+not `/audio/narration/`. No public deployment, push or visibility change.
+
+---
+
+## Title CTA stays on the site — 2026-09-16
+
+Owner: “Browse films” named the medium from inside a live yard. Specs
+00/05 now use **Choose a site**: the visitor is already standing in a
+construction picture, and the button opens an index of other sites.
+Catalog headings and the factual supporting sentence are unchanged.
+
+Verified: 216 files / 1,141 tests, typecheck, build. Live title plate
+on https://wonderforge.localhost/#/. Served bundle `main-C4vKXSoP.js` /
+`main-UtHFnuLK.css` on 5589. Browser QA: CHOOSE A SITE opens the catalog
+and the wordmark returns to the same label; “Browse films” is gone. No
+public deployment, push or visibility change.
+
+---
+
+## Homepage session wonder and longer ambient beds — 2026-09-16
+
+Owner: the title screen always orbited Giza under a ~30 s Egyptian Lyria
+cell, so the homepage felt like one desert cue on a short loop. Specs
+00/05/40/14 now pick one Watch-now film per tab session and assemble
+each ambient bed from three Lyria clip takes.
+
+Home calls `readHomeWonderId()` (`sessionStorage` key `wf-home-wonder`,
+seeded with `crypto.getRandomValues` + `mulberry32`, never
+`Math.random()`). Only Ready ids: Giza, Stonehenge, Colosseum, Eiffel.
+Title/catalog and a return from a movie keep that picture and its own
+ambient file. In-production entries are never staged. Non-Giza ambient
+cameras freeze a completed reveal (`t ≈ 0.86` / Eiffel `0.92`) and spin
+azimuth continuously; they no longer wrap cinematic `t` every 90 s.
+Homepage may show the compact loader until the first ready frame.
+
+Ambient loops regenerated with `scripts/generate-soundtrack.py --takes 3`
+(Lyria 3 Clip on Vertex). Encoded lengths: Giza 83.26 s, Stonehenge
+77.75 s, Colosseum 83.32 s, Eiffel 83.32 s. Previous ~30 s files are
+under `artifacts/soundtrack/ambient-backup-2026-09-16/`. Sydney stays
+on its short loop (not a Watch-now home stage).
+
+Verified: 216 files / 1,141 tests, typecheck, build. Live at
+https://wonderforge.localhost/#/. Served bundle `main-Dt6lP6-5.js` /
+`main-UtHFnuLK.css` on 5589. Browser QA: session picks Giza, Colosseum,
+Stonehenge, and Eiffel with matching `/audio/*-ambient-loop.mp3`; Eiffel
+home shows the arrival loader then a completed Champ de Mars orbit;
+catalog keeps the same diorama. No public deployment, push or visibility
+change.
+
+---
+
+## UI copy Pass 1 (revised) and caption Pass 2 — 2026-09-16
+
+Owner: the 16 September editorial brief was updated: delete the slogan,
+use fewer words, and drop promotional filler. Specs 00/01/05/41/46 now
+prescribe that opening. Catalog gating, ids, clocks, and readiness
+accounting are unchanged.
+
+Pass 1 (complete): brand is the page heading; “Short films about how
+monuments were built.”; Browse films; Watch now / In production with no
+extra sentence; player/accessibility names; loading “Loading {name}…”
+with Eiffel nouns City…Summit then Starting film…; metadata title
+WonderForge. No replacement slogan.
+
+Pass 2 (text complete, audio not regenerated): Eiffel six-caption script
+matched to the pictures; selected Giza/Colosseum captions; About
+introductions omitted for the four playable films; Eiffel height fact.
+Generator inputs and metadata match the new sentences. Existing MP3s
+still speak the previous lines. Do not treat narration as accepted until
+an authorized ElevenLabs run is listened to at 1×.
+
+Pass 3 (not started): quotation timing, film-time display, narration-at-1×
+help, caption typography, narrow-screen wordmark, catalog reachability.
+
+Verified: 215 files / 1,137 tests, typecheck, build. Live copy on
+https://wonderforge.localhost/#/. Served bundle `main-Tdr664yV.js` /
+`main-UtHFnuLK.css` on 5589. No public deployment, push or visibility change.
+
+---
+
+## UI copy Pass 1 and caption Pass 2 — 2026-09-16
+
+Owner: public copy mixed a film invitation with engineering and status
+language, and several Eiffel captions described omitted worker/freight
+action. Specs 00/01/05/41/46 now prescribe visitor-facing labels.
+Headline kept. Catalog gating, ids, clocks, and readiness accounting are
+unchanged.
+
+Pass 1 (complete): opening sentence, Explore the films, Watch now / In
+production with “These films are still being made.”, player/accessibility
+names, loading/recovery, metadata. Eiffel load stages use stable keys with
+display labels.
+
+Pass 2 (text complete, audio not regenerated): Eiffel six-caption script
+and selected Giza/Stonehenge/Colosseum captions; restrained descriptions;
+Eiffel height fact. Generator inputs and `stonehenge-axis` beat list are
+updated. Existing MP3s still speak the previous sentences. Do not treat
+narration as accepted until an authorized ElevenLabs run is listened to
+at 1×.
+
+Pass 3 (not started): quotation timing, film-time display, narration-at-1×
+help, caption typography, narrow-screen wordmark, catalog reachability.
+
+Verified: 215 files / 1,137 tests, typecheck, build. Live copy on
+https://wonderforge.localhost/#/. Served bundle `main-DdBAM7TI.js` /
+`main-CpuiTfh7.css` on 5589. No public deployment, push or visibility change.
+
+---
+
+## Catalog Ready / In progress — 2026-09-16
+
+Owner: unpublished wonders stayed clickable in one ten-row index. The gallery
+is now two chronological blocks. Ready (Giza, Stonehenge, Colosseum, Eiffel)
+opens a movie. In progress (Petra, Chichen Itza, Angkor Wat, Forbidden City,
+Machu Picchu, Sydney) is dashed, full-opacity, not a control. Prev/next and
+`#/wonder/:id` only open Ready ids. Read specs/01-wonder-catalog.md and
+specs/05-ui.md.
+
+Verified: 215 files / 1,137 tests, typecheck, build. Live catalog on
+https://wonderforge.localhost/#/. Served bundle `main-BC_Q0p0K.js` /
+`main-CpuiTfh7.css` on 5589. No public deployment, push or visibility change.
+
+---
+
+## Stonehenge Aubrey pits and Colosseum valley — 2026-09-16
+
+Owner: Stonehenge's outer white dots were the 56 Aubrey holes drawn as pale
+discs on the turf. They are recessed pit mouths with a low chalk lip. The
+Colosseum sat on a 640 m square while the camera held at 490–600 m, so the
+valley read as a tiny tablet. The drained floor now outruns every cinematic
+hold and meets the fogged horizon. Read specs/10-stonehenge-reference-scene.md
+and specs/12-colosseum-reference-scene.md.
+
+Verified: 215 files / 1,135 tests, typecheck, build. Debug frames
+`#/debug/wonder/stonehenge/0.32` and `#/debug/wonder/colosseum/0.78` on
+https://wonderforge.localhost/. Served bundle `main-CiT2QfPH.js` /
+`main-Bsa90Cs-.css` on 5589. No public deployment, push or visibility change.
+
+---
+
+## Ambient stack and catalog disclaimer — 2026-09-16
+
+Owner: Enter then back stacked another Giza bed each time; the catalog
+footer named Firaxis/2K and called the site a fan-made homage. Clicking
+title/catalog chrome can emit pause/canplay; recovering those called
+`play()` on an already-running loop and stacked decoders. After the bed
+starts, looping ambient no longer retriggers from those events; a second
+bed for the same cue is retired. The catalog has no legal footer. Read
+specs/05-ui.md and specs/40-native-speed-soundtrack.md.
+
+Verified: 215 files / 1,134 tests, typecheck, build. Live Enter/back on
+https://wonderforge.localhost/#/ added zero extra `play()` calls; catalog
+has no Firaxis/fan-made copy. Served bundle `main-B4LPzegn.js` /
+`main-Bsa90Cs-.css` on 5589. No public deployment, push or visibility
+change.
+
+---
+
+## Pointer cursor on clickable chrome — 2026-09-16
+
+Owner: homepage and cinematic buttons still showed the default arrow.
+Every clickable chrome control now uses the pointer (hand) cursor: title
+CTA, catalog wordmark and rows, soundtrack/narration, cinematic wordmark,
+beat index, transport, speed, seek, facts close, scene reload. The canvas
+stays the default cursor. Read specs/05-ui.md.
+
+Verified: 215 files / 1,131 tests, typecheck, build. Live cursors on
+https://wonderforge.localhost/#/ and `#/wonder/petra` all `pointer`. Served
+bundle `main-D93fSoVd.js` / `main-DQWIsICw.css` on 5589.
+No public deployment, push or visibility change.
+
+---
+
+## Homepage ambient loop wrap — 2026-09-16
+
+Owner: Giza home music sometimes sounded like two phrases playing at once.
+Native `loop` can emit pause/canplay at the wrap; the recovery path called
+`play()` again and stacked a second decoder. Loop wraps are ignored; mid-loop
+policy pauses still recover. Read specs/40-native-speed-soundtrack.md.
+
+Verified: 214 files / 1,128 tests, typecheck, build. Served bundle
+`main-CnAO6Dui.js` / `main-B_oS5uq_.css` on 5589. Local URL:
+https://wonderforge.localhost/#/
+No public deployment, push or visibility change.
+
+---
+
+## Homepage Giza loader — 2026-09-15
+
+Owner: visiting `#/` also showed the Pyramids loading overlay. Spec 05 Home
+allows only the title/catalog plates and soundtrack over the ambient Giza
+diorama; the cinematic scene-prep indicator was mounted for every canvas,
+and its `z-30` stacking sat above the title plate during Giza construction.
+
+Ambient/home no longer mounts that overlay. Cinematic Giza still uses the
+generic “Preparing your journey” bar; Eiffel still uses the tower arrival.
+Read specs/05-ui.md. Verified: 214 files / 1,127 tests, typecheck, build.
+Served bundle `main-CXL5pAYD.js` / `main-B_oS5uq_.css` on 5589. Local URL:
+https://wonderforge.localhost/#/
+No public deployment, push or visibility change.
+
+---
+
 ## Eiffel night streets and morning ending — 2026-09-14
 
 Read specs/47-eiffel-night-to-sunrise.md and

@@ -11,7 +11,7 @@ import {
   Vector3,
   type BufferGeometry,
 } from 'three';
-import { SYDNEY_SPHERE_RADIUS, SYDNEY_SAILS } from '../../data/sydneyConstruction';
+import { SYDNEY_SAILS } from '../../data/sydneyConstruction';
 import type { SydneySailDef } from '../../data/sydneyConstruction';
 import type { SydneyConstructionPlan, SydneyPart, SydneyPartKind } from '../../data/sydneyTypes';
 import {
@@ -21,6 +21,10 @@ import {
 } from '../../engine/sydneyConstruction';
 import type { MaterialLibrary } from './MaterialLibrary';
 import { injectMaterialRecipe } from './proceduralDetail';
+import { createSailGeometry } from './sydneySails';
+import { loadSydneySailGeometries } from './sydneyKit';
+
+export { createSailGeometry } from './sydneySails';
 
 /**
  * Set instance transform for blocks and ribs (dimensions used as scale).
@@ -47,11 +51,11 @@ function setSailTransform(
   mesh: InstancedMesh,
   index: number,
   position: readonly [number, number, number],
-  rotation: readonly [number, number, number],
+  _rotation: readonly [number, number, number],
   matrix: Matrix4,
   quaternion: Quaternion,
 ): void {
-  quaternion.setFromEuler(new Euler(rotation[0], rotation[1], rotation[2], 'YXZ'));
+  quaternion.identity();
   matrix.compose(new Vector3(...position), quaternion, new Vector3(1, 1, 1));
   mesh.setMatrixAt(index, matrix);
 }
@@ -82,45 +86,10 @@ export function createSydneyPartGeometry(kind: SydneyPartKind): BufferGeometry {
   return geometry;
 }
 
-/**
- * Build a full-size spherical cap geometry for one sail definition.
- * The geometry is centred at the sail's finalPosition in world space;
- * the renderer places it with scale [1,1,1], applying only position + rotation.
- *
- * Utzon's constraint: all sails are sections of ONE sphere of radius ~75 m.
- * phiStart/phiLength define latitude, thetaHalf the azimuthal half-width.
- */
-export function createSailGeometry(sail: SydneySailDef): BufferGeometry {
-  const { centre, phiStart, phiLength, thetaHalf } = sail.sphere;
-  const thetaStart = -thetaHalf;
-  const thetaLength = thetaHalf * 2;
-  // Build the cap around the sphere centre
-  const geom = new SphereGeometry(
-    SYDNEY_SPHERE_RADIUS,
-    32,   // widthSegments — enough for a smooth curve
-    18,   // heightSegments
-    thetaStart + Math.PI / 2,  // SphereGeometry theta is around Y; we orient via sail rotation
-    thetaLength,
-    phiStart,
-    phiLength,
-  );
-  // Translate so the geometry centroid is at origin; the instance matrix will
-  // place it at sail.position.
-  geom.computeBoundingBox();
-  const box = geom.boundingBox!;
-  const c = new Vector3();
-  box.getCenter(c);
-  geom.translate(
-    centre[0] - c.x,
-    centre[1] - c.y,
-    centre[2] - c.z,
-  );
-  geom.computeVertexNormals();
-  return geom;
-}
-
 export class SydneyStoneSystem {
   readonly group = new Group();
+  readonly ready: Promise<void>;
+  private disposed = false;
   private readonly geometries: BufferGeometry[] = [];
   private readonly localMaterials: MeshStandardMaterial[] = [];
 
@@ -213,6 +182,36 @@ export class SydneyStoneSystem {
       const mesh = this.makeActiveMesh(`sail-active-${def.id}`, geom, tile);
       this.activeSailMeshes.push({ def, mesh });
     }
+
+    this.ready = this.upgradeSails();
+  }
+
+  private adoptGeometry(mesh: InstancedMesh, next: BufferGeometry | null): void {
+    if (!next) return;
+    const previous = mesh.geometry;
+    mesh.geometry = next;
+    const index = this.geometries.indexOf(previous);
+    if (index >= 0) this.geometries.splice(index, 1);
+    previous.dispose();
+    this.geometries.push(next);
+  }
+
+  private async upgradeSails(): Promise<void> {
+    try {
+      const sails = await loadSydneySailGeometries();
+      if (this.disposed) {
+        for (const geometry of sails) geometry.dispose();
+        return;
+      }
+      for (const batch of this.sailBatches) {
+        this.adoptGeometry(batch.mesh, sails[batch.def.id] ?? null);
+      }
+      for (const slot of this.activeSailMeshes) {
+        this.adoptGeometry(slot.mesh, sails[slot.def.id] ?? null);
+      }
+    } catch {
+      /* Procedural vaults already instance the sails. */
+    }
   }
 
   private makeActiveMesh(name: string, geometry: BufferGeometry, material: MeshStandardMaterial): InstancedMesh {
@@ -247,6 +246,7 @@ export class SydneyStoneSystem {
       batch.mesh.count = cursor;
       batch.mesh.instanceMatrix.needsUpdate = true;
       if (batch.mesh.instanceColor) batch.mesh.instanceColor.needsUpdate = true;
+      if (batch.parts[0]?.kind === 'block') batch.mesh.visible = t < 0.17;
     }
 
     // --- Update settled sail batches ---
@@ -302,6 +302,7 @@ export class SydneyStoneSystem {
   }
 
   dispose(): void {
+    this.disposed = true;
     for (const geometry of this.geometries) geometry.dispose();
     for (const { mesh } of this.scaledBatches) mesh.dispose();
     for (const { mesh } of this.sailBatches) mesh.dispose();

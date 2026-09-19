@@ -19,16 +19,16 @@ export interface EiffelChapterCaption {
 type CaptionCopy = Pick<EiffelChapterCaption, 'id' | 'kicker' | 'text'>;
 export const EIFFEL_CHAPTER_CAPTION_COPY: Record<EiffelFilmInsertion['id'], readonly [CaptionCopy, CaptionCopy]> = {
   'ground-lift': [
-    { id: 'eiffel-lift-prepared', kicker: 'At the foot of the tower', text: 'At the foot of each pylon, a lifting frame takes the weight of the iron.' },
-    { id: 'eiffel-lift-later', kicker: 'Work around the tower', text: 'One member settles into place, while the other crews continue around the tower.' },
+    { id: 'eiffel-lift-prepared', kicker: 'The first lift', text: 'A lifting frame raises an iron section from the ground.' },
+    { id: 'eiffel-lift-later', kicker: 'The four legs', text: 'Crews work on all four legs of the tower.' },
   ],
   'joint-campaign': [
-    { id: 'eiffel-joint-prepared', kicker: 'An iron joint', text: 'Up close, workers align the plates and tighten the bolts that hold the joint.' },
-    { id: 'eiffel-joint-later', kicker: 'Four pylons, one tower', text: 'Around them, many hands repeat the work, joining the four pylons into one tower.' },
+    { id: 'eiffel-joint-prepared', kicker: 'Aligning the iron', text: 'A crane turns the next iron section and lowers it into position.' },
+    { id: 'eiffel-joint-later', kicker: 'The lower structure', text: 'The four legs will meet at the first platform.' },
   ],
   'long-load-first-floor': [
-    { id: 'eiffel-relay-prepared', kicker: 'From platform to platform', text: 'Winches lift the longer members from platform to platform, toward the narrowing summit.' },
-    { id: 'eiffel-relay-later', kicker: 'Above Paris', text: 'The work rises above Paris, until the tower’s iron lattice reaches the sky.' },
+    { id: 'eiffel-relay-prepared', kicker: 'The first platform', text: 'An iron section arrives at the first platform, ready for the next lift.' },
+    { id: 'eiffel-relay-later', kicker: 'The upper tower', text: 'The frame narrows above the second platform.' },
   ],
 };
 
@@ -98,7 +98,8 @@ export function eiffelNavigationBeatsForEdit(edit: EiffelFilmEdit): readonly Cap
   const entries = EIFFEL_FILM_INSERTIONS.map((entry, i) => {
     const cue = EIFFEL_CHAPTER_CAPTIONS[i * 2]!;
     const copy = EIFFEL_CHAPTER_CAPTION_COPY[entry.id][0];
-    return { id: `eiffel-index-${entry.id}`, kicker: copy.kicker, text: copy.text, sourceSeconds: cue.fromSeconds };
+    const kicker = entry.id === 'long-load-first-floor' ? 'Arriving at the platform' : copy.kicker;
+    return { id: `eiffel-index-${entry.id}`, kicker, text: copy.text, sourceSeconds: cue.fromSeconds };
   });
   const milestone = (id: string, kicker: string, text: string, productionT: number) => ({
     id: `eiffel-index-${id}`, kicker, text, sourceSeconds: eiffelFilmTimeForProduction(productionT) * EIFFEL_FILM_DURATION,
@@ -111,9 +112,9 @@ export function eiffelNavigationBeatsForEdit(edit: EiffelFilmEdit): readonly Cap
     milestone('first-platform', 'The first platform', 'The first platform joins the four rising pylons.', .285),
     milestone('second-platform', 'The second platform', 'The next platform supports the narrower tower above.', .41),
     milestone('upper-platform', 'The upper platform', 'The upper deck and summit rise above the city.', .63),
-    { id: 'eiffel-index-second-floor-relay', kicker: 'Receiving on the second floor', text: 'The long member transfers from the first-floor cart to the upper receiving hoist.', sourceSeconds: EIFFEL_FILM_FIRST_FLOOR_END_SECONDS },
-    { id: 'eiffel-index-summit', kicker: 'The final summit lift', text: 'The last mast assembly moves into place above the completed upper deck.', sourceSeconds: EIFFEL_FILM_STAGE63_FINAL_WAVE_START_SECONDS },
-    { id: 'eiffel-index-completed', kicker: 'The completed tower', text: 'The final assembly is seated; the finished iron tower stands above Paris.', sourceSeconds: EIFFEL_FILM_STAGE63_FINAL_WAVE_END_SECONDS },
+    { id: 'eiffel-index-second-floor-relay', kicker: 'The second-floor lift', text: 'The long member transfers from the first-floor cart to the upper receiving hoist.', sourceSeconds: EIFFEL_FILM_FIRST_FLOOR_END_SECONDS },
+    { id: 'eiffel-index-summit', kicker: 'Installing the mast', text: 'The last mast assembly moves into place above the completed upper deck.', sourceSeconds: EIFFEL_FILM_STAGE63_FINAL_WAVE_START_SECONDS },
+    { id: 'eiffel-index-completed', kicker: 'The completed tower', text: 'The last section is in place.', sourceSeconds: EIFFEL_FILM_STAGE63_FINAL_WAVE_END_SECONDS },
   ].sort((a, b) => a.sourceSeconds - b.sourceSeconds);
   return sourceBeats.map((beat, i) => ({
     id: beat.id, kicker: beat.kicker, text: beat.text, place: 'lower-right',

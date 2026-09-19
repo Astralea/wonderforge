@@ -1,0 +1,26 @@
+/* Illustrated WONDER / FORGE lockup (Spec 05). The PNG is a flood-fill
+   knockout of the painted dark field — true alpha, shown at full frame. */
+
+.brand-mark {
+  display: block;
+  pointer-events: none;
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.brand-mark--hero {
+  width: min(46rem, 88vw);
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.45));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark--hero {
+    filter: none;
+  }
+}

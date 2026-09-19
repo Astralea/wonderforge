@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import {act,cleanup,renderHook} from '@testing-library/react';
 import {afterEach,expect,it,vi} from 'vitest';
-import {useSoundtrack} from '../src/ui/useSoundtrack';
+import {useSoundtrack,primeSoundtrack} from '../src/ui/useSoundtrack';
 import {trackFor} from '../src/data/soundtrack';
 import {createInitialState,usePlaybackStore} from '../src/store/playback';
 import {useAudioStore} from '../src/store/audio';
@@ -56,6 +56,50 @@ it('keeps BGM at native speed without tick-driven seeks at 1x, 2x or 4x',()=>{
   act(()=>state.tick(1000000));expect(audio.paused).toBe(true);expect(audio.currentTime).toBe(20);
 });
 
+it('does not restart a looping ambient bed on a native loop wrap',()=>{
+  vi.stubGlobal('Audio',AudioDouble);
+  renderHook(()=>useSoundtrack('pyramids-of-giza','ambient'));
+  const audio=instances[0]!;
+  expect(audio.loop).toBe(true);
+  expect(audio.play).toHaveBeenCalledTimes(1);
+  audio.currentTime=0;audio.paused=true;
+  act(()=>{audio.dispatchEvent(new Event('pause'));audio.dispatchEvent(new Event('canplay'));});
+  expect(audio.play).toHaveBeenCalledTimes(1);
+  audio.currentTime=12;audio.paused=true;
+  act(()=>audio.dispatchEvent(new Event('pause')));
+  expect(audio.play).toHaveBeenCalledTimes(1);
+  audio.currentTime=29.5;audio.paused=true;
+  act(()=>audio.dispatchEvent(new Event('ended')));
+  expect(audio.currentTime).toBe(0);
+  expect(audio.play).toHaveBeenCalledTimes(2);
+});
+
+it('does not layer another ambient decoder when title/catalog chrome is clicked',()=>{
+  vi.stubGlobal('Audio',AudioDouble);
+  renderHook(()=>useSoundtrack('pyramids-of-giza','ambient'));
+  const audio=instances[0]!;
+  expect(instances).toHaveLength(1);
+  expect(audio.play).toHaveBeenCalledTimes(1);
+  audio.paused=false;
+  act(()=>{
+    window.dispatchEvent(new Event('pointerdown'));
+    audio.dispatchEvent(new Event('pause'));
+    audio.dispatchEvent(new Event('canplay'));
+  });
+  expect(instances).toHaveLength(1);
+  expect(audio.play).toHaveBeenCalledTimes(1);
+});
+
+it('shares one ambient bed across duplicate mounts instead of layering decoders',()=>{
+  vi.stubGlobal('Audio',AudioDouble);
+  const first=renderHook(()=>useSoundtrack('pyramids-of-giza','ambient'));
+  renderHook(()=>useSoundtrack('pyramids-of-giza','ambient'));
+  expect(instances).toHaveLength(1);
+  expect(instances[0]!.play).toHaveBeenCalled();
+  expect(instances[0]!.removeAttribute).not.toHaveBeenCalled();
+  first.unmount();
+  expect(instances[0]!.src).toBe(trackFor('pyramids-of-giza','ambient')!.src);
+});
 it('cancels denied autoplay across ticks, pause and late promise rejection', async()=>{
   const rejections: Array<(error: Error)=>void> = [];
   class DeniedAudio extends AudioDouble {
@@ -264,4 +308,48 @@ it('also retries a pre-metadata NotSupportedError before the media error event a
   expect(audio.load).toHaveBeenCalledTimes(1);
   window.dispatchEvent(new Event('pointerdown'));
   expect(audio.play).toHaveBeenCalledTimes(1);
+});
+
+it('reuses a bed primed inside the catalog click instead of constructing a second decoder',()=>{
+  vi.stubGlobal('Audio',AudioDouble);
+  usePlaybackStore.setState({...createInitialState(),wonderId:'colosseum',status:'idle',assetsReady:true});
+  primeSoundtrack('colosseum','cinematic');
+  expect(instances).toHaveLength(1);
+  const primed=instances[0]!;
+  expect(primed.src).toBe(trackFor('colosseum','cinematic')!.src);
+  expect(primed.play).toHaveBeenCalledTimes(1);
+  usePlaybackStore.setState({status:'playing',assetsReady:true});
+  renderHook(()=>useSoundtrack('colosseum','cinematic'));
+  expect(instances).toHaveLength(1);
+  expect(primed.paused).toBe(false);
+});
+
+it('does not pause a primed cinematic bed when the canvas marks assets unready',()=>{
+  vi.stubGlobal('Audio',AudioDouble);
+  usePlaybackStore.setState({...createInitialState(),wonderId:'colosseum',status:'playing',assetsReady:true});
+  primeSoundtrack('colosseum','cinematic');
+  const primed=instances[0]!;
+  renderHook(()=>useSoundtrack('colosseum','cinematic'));
+  expect(primed.paused).toBe(false);
+  primed.pause.mockClear();
+  act(()=>usePlaybackStore.setState({assetsReady:false,status:'playing'}));
+  expect(instances).toHaveLength(1);
+  expect(primed.paused).toBe(false);
+  expect(primed.pause).not.toHaveBeenCalled();
+});
+
+it('keeps the cinematic cue silent until the first ready frame',()=>{
+  vi.stubGlobal('Audio',AudioDouble);
+  usePlaybackStore.setState({...createInitialState(),wonderId:'eiffel-tower',status:'idle',assetsReady:true});
+  primeSoundtrack('eiffel-tower','cinematic');
+  const primed=instances[0]!;
+  expect(primed.paused).toBe(true);
+  usePlaybackStore.setState({status:'playing',assetsReady:false});
+  renderHook(()=>useSoundtrack('eiffel-tower','cinematic'));
+  expect(primed.paused).toBe(true);
+  expect(primed.play).toHaveBeenCalledTimes(1);
+  act(()=>usePlaybackStore.setState({assetsReady:true}));
+  expect(primed.paused).toBe(false);
+  expect(primed.play).toHaveBeenCalledTimes(2);
+  expect(primed.currentTime).toBe(0);
 });

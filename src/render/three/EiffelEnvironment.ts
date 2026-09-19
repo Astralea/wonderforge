@@ -158,6 +158,10 @@ export class EiffelEnvironment {
   parisSource: 'blender' | 'procedural' = 'procedural';
   lifeSource: 'blender' | 'static' = 'static';
   entranceSource: 'blender' | 'missing' = 'missing';
+  private readonly cityPartsDone = new Set<'palais' | 'streets' | 'traffic' | 'entrance'>();
+  private streetPrep = 0;
+  private static readonly CITY_PARTS = 4;
+  private static readonly STREET_PREP_STEPS = 3;
   private readonly geometries: Array<{ dispose(): void }> = [];
   private readonly materials: MeshStandardMaterial[] = [];
   private readonly streetLights: EiffelStreetLights | null;
@@ -460,11 +464,29 @@ export class EiffelEnvironment {
       source.visible=false;this.staticTreeBatches.push(batch);this.group.add(batch);
     }
     this.ready = Promise.all([
-      palaisReady,
-      this.rebuiltTower ? this.mountParisCity(roof) : Promise.resolve(),
-      this.rebuiltTower ? this.mountParisTraffic() : Promise.resolve(),
-      this.rebuiltTower ? this.mountPhotoEntrance() : Promise.resolve(),
+      palaisReady.finally(() => this.noteCityPart('palais')),
+      (this.rebuiltTower ? this.mountParisCity(roof) : Promise.resolve()).finally(() => this.noteCityPart('streets')),
+      (this.rebuiltTower ? this.mountParisTraffic() : Promise.resolve()).finally(() => this.noteCityPart('traffic')),
+      (this.rebuiltTower ? this.mountPhotoEntrance() : Promise.resolve()).finally(() => this.noteCityPart('entrance')),
     ]).then(() => { this.createFallbackScatter = null; });
+  }
+
+  get loadFraction(): number {
+    const streetShare = this.cityPartsDone.has('streets')
+      ? 0
+      : this.streetPrep / EiffelEnvironment.STREET_PREP_STEPS;
+    return Math.min(1, (this.cityPartsDone.size + streetShare) / EiffelEnvironment.CITY_PARTS);
+  }
+
+  private noteCityPart(part: 'palais' | 'streets' | 'traffic' | 'entrance'): void {
+    this.cityPartsDone.add(part);
+  }
+
+  private noteStreetPrep(): void {
+    this.streetPrep = Math.min(
+      EiffelEnvironment.STREET_PREP_STEPS,
+      this.streetPrep + 1,
+    );
   }
 
   private createTerrain(material: MeshStandardMaterial): Mesh {
@@ -777,7 +799,10 @@ export class EiffelEnvironment {
 
   private async mountParisCity(roof: MeshStandardMaterial): Promise<void> {
     try {
-      const city = await loadEiffelParisCity(() => this.disposed);
+      const city = await loadEiffelParisCity(
+        () => this.disposed,
+        () => this.noteStreetPrep(),
+      );
       if (this.disposed) {
         this.disposeParisAsset(city);
         return;

@@ -84,12 +84,12 @@ void main() {
   gl_FragColor = vec4(color, 1.0);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
-  float fogBlend = 1.0 - smoothstep(0.0, 0.042, elevation);
-  gl_FragColor.rgb = mix(gl_FragColor.rgb, uFogColor, fogBlend * 0.58);
+  float fogBlend = 1.0 - smoothstep(-0.04, 0.22, elevation);
+  gl_FragColor.rgb = mix(gl_FragColor.rgb, uFogColor, fogBlend);
 }
 `;
 
-const VALLEY_FOG_NEUTRALIZER = new Color('#cbb49a');
+const VALLEY_FOG_NEUTRALIZER = new Color('#c7b499');
 
 export class ColosseumSkyDome {
   readonly mesh: Mesh;

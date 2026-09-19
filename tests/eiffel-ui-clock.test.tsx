@@ -76,10 +76,10 @@ it('navigation follows actual platform schedule ranges and remains available in 
   render(<CaptionBeatIndex wonder={wonder} onHoldChrome={() => {}} />);
   seekSource(EIFFEL_FILM_FIRST_FLOOR_END_SECONDS + 20);
   expect(screen.getByTestId('caption-beat-index')).toBeInTheDocument();
-  expect(screen.getByRole('button', { name: 'Jump to Receiving on the second floor' })).toHaveAttribute('aria-current', 'true');
-  fireEvent.click(screen.getByRole('button', { name: 'Jump to The first platform' }));
+  expect(screen.getByRole('button', { name: 'Play from The second-floor lift' })).toHaveAttribute('aria-current', 'true');
+  fireEvent.click(screen.getByRole('button', { name: 'Play from The first platform' }));
   expect(usePlaybackStore.getState().t).toBeCloseTo(beats.find(beat => beat.id === 'eiffel-index-first-platform')!.from, 12);
-  expect(screen.getByRole('button', { name: 'Jump to The first platform' })).toHaveAttribute('aria-current', 'true');
+  expect(screen.getByRole('button', { name: 'Play from The first platform' })).toHaveAttribute('aria-current', 'true');
 });
 
 it('keeps the quote and opening-night voice out of unfinished frames, then shows them sequentially', () => {
@@ -109,7 +109,7 @@ it('caps the mobile index and scrolls only its own viewport when the active chap
   expect(nav).toHaveClass('max-h-[18dvh]', 'md:max-h-[min(22rem,32dvh)]');
   Object.defineProperty(nav, 'clientHeight', { value: 120 });
   vi.spyOn(nav, 'getBoundingClientRect').mockReturnValue({ top: 50 } as DOMRect);
-  const target = screen.getByRole('button', { name: 'Jump to Receiving on the second floor' });
+  const target = screen.getByRole('button', { name: 'Play from The second-floor lift' });
   vi.spyOn(target, 'getBoundingClientRect').mockImplementation(() => ({ top: 350 - nav.scrollTop, height: 30 } as DOMRect));
   const pageScroll = vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
   seekSource(EIFFEL_FILM_FIRST_FLOOR_END_SECONDS + 10);

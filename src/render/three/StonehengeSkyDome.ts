@@ -6,7 +6,7 @@ import {
   SphereGeometry,
   Vector3,
 } from 'three';
-import type { StonehengeSkySample } from '../../data/stonehengeSky';
+import { STONEHENGE_SKY, type StonehengeSkySample } from '../../data/stonehengeSky';
 import { deriveSceneFogColor } from './RenderPipeline';
 
 const VERTEX_SHADER = /* glsl */ `
@@ -27,6 +27,10 @@ uniform vec3 uHorizon;
 uniform vec3 uFogColor;
 uniform vec3 uSunDirection;
 uniform vec3 uSunTint;
+uniform float uSunDiscCos;
+uniform float uSunDiscIntensity;
+uniform float uHaloStrength;
+uniform float uWideHaloStrength;
 uniform vec3 uCloudTint;
 uniform vec3 uCloudShadow;
 uniform float uCloudOpacity;
@@ -91,14 +95,19 @@ void main() {
   color *= 0.982 + (detail - 0.5) * 0.026;
 
   float cosSun = dot(dir, uSunDirection);
-  float halo = pow(max(0.0, cosSun), 24.0);
-  float disc = smoothstep(0.99972, 0.9999, cosSun);
-  color += uSunTint * (halo * 0.13 + disc * 1.9);
+  float tightGlow = pow(clamp(cosSun, 0.0, 1.0), 620.0);
+  float wideGlow = pow(clamp(cosSun, 0.0, 1.0), 4.4);
+  float disc = smoothstep(uSunDiscCos - 0.00045, uSunDiscCos + 0.00045, cosSun);
+  float sunTerm = tightGlow * uHaloStrength + wideGlow * uWideHaloStrength + disc * uSunDiscIntensity;
+  color += uSunTint * sunTerm;
 
   gl_FragColor = vec4(color, 1.0);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
   float fogBlend = 1.0 - smoothstep(0.0, 0.038, elevation);
+  // Keep the disc and its scatter lobe out of the humid horizon mix so the
+  // solstice sun still reads when it sits on the avenue.
+  fogBlend *= 1.0 - smoothstep(0.12, 0.78, sunTerm);
   gl_FragColor.rgb = mix(gl_FragColor.rgb, uFogColor, fogBlend * 0.72);
 }
 `;
@@ -113,6 +122,7 @@ export class StonehengeSkyDome {
   private readonly fogScratch = new Color();
 
   constructor() {
+    const { sunDisc } = STONEHENGE_SKY;
     this.material = new ShaderMaterial({
       vertexShader: VERTEX_SHADER,
       fragmentShader: FRAGMENT_SHADER,
@@ -125,6 +135,12 @@ export class StonehengeSkyDome {
         uFogColor: { value: new Color('#aeb8ae') },
         uSunDirection: { value: new Vector3(0, 1, 0) },
         uSunTint: { value: new Color('#fff4e0') },
+        uSunDiscCos: {
+          value: Math.cos((sunDisc.angularRadiusDegrees * Math.PI) / 180),
+        },
+        uSunDiscIntensity: { value: sunDisc.intensity },
+        uHaloStrength: { value: sunDisc.haloStrength },
+        uWideHaloStrength: { value: sunDisc.wideHaloStrength },
         uCloudTint: { value: new Color('#f0eee7') },
         uCloudShadow: { value: new Color('#8196a5') },
         uCloudOpacity: { value: 0.42 },
@@ -146,6 +162,11 @@ export class StonehengeSkyDome {
     (uniforms.uFogColor!.value as Color).copy(this.fogScratch);
     (uniforms.uSunDirection!.value as Vector3).copy(sunDirection);
     (uniforms.uSunTint!.value as Color).set(sky.sunTint);
+    const lowSun = Math.min(1, Math.max(0, 1 - sunDirection.y / 0.55));
+    uniforms.uWideHaloStrength!.value =
+      STONEHENGE_SKY.sunDisc.wideHaloStrength * (0.42 + 0.9 * lowSun);
+    uniforms.uSunDiscIntensity!.value =
+      STONEHENGE_SKY.sunDisc.intensity * (1 + lowSun * 0.28);
     (uniforms.uCloudTint!.value as Color).set(sky.cloudTint);
     (uniforms.uCloudShadow!.value as Color).set(sky.cloudShadow);
     uniforms.uCloudOpacity!.value = sky.cloudOpacity;

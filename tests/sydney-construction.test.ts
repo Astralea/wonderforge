@@ -229,5 +229,6 @@ describe('Sydney Opera House typed construction plan (Spec 13)', () => {
     const seaward = sydneyPeninsulaShoreAt(0, 1.04);
     expect(sydneyTerrainHeightAt(seaward.x, seaward.z)).toBe(SYDNEY_WATER_Y);
     expect(sydneyTerrainHeightAt(-40, -248)).toBeGreaterThan(8);
+    expect(sydneyTerrainHeightAt(-268, 18)).toBe(SYDNEY_WATER_Y);
   });
 });

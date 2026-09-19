@@ -6,7 +6,9 @@ import { SoundToggle } from './SoundToggle';
 import { EIFFEL_FILM_STAGE63_FINAL_WAVE_END_SECONDS } from '../engine/eiffelFilm';
 import { sampleEiffelFilmEdit } from '../engine/eiffelFilmEdit';
 import { useAudioStore } from '../store/audio';
+import { prefersReducedMotion } from './a11y';
 import { primeNarrationAudio } from './narrationAudio';
+import { primeSoundtrack } from './useSoundtrack';
 
 const PHASE_LABELS: Record<Phase, string> = {
   intro: 'Site preparation',
@@ -15,7 +17,7 @@ const PHASE_LABELS: Record<Phase, string> = {
 };
 
 const iconButton =
-  'grid min-h-11 min-w-11 place-items-center rounded-full text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold';
+  'grid min-h-11 min-w-11 cursor-pointer place-items-center rounded-full text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold';
 
 /** Spec 05 §Cinematic view: transport controls + scrubber. */
 export function TransportBar({
@@ -39,6 +41,7 @@ export function TransportBar({
   const progress = Math.round(t * 100);
   const film = wonderId === 'eiffel-tower' ? sampleEiffelFilmEdit(eiffelEdit, t) : null;
   const start = (restarting = false) => {
+    if (!prefersReducedMotion()) primeSoundtrack(wonderId, 'cinematic');
     if (useAudioStore.getState().voiceEnabled) primeNarrationAudio(wonderId);
     if (restarting) replay(); else play();
   };
@@ -69,7 +72,7 @@ export function TransportBar({
             />
             <input
               type="range"
-              aria-label="Seek"
+              aria-label="Film position"
               min={0}
               max={1}
               step={0.001}
@@ -85,7 +88,7 @@ export function TransportBar({
           </button>
           {status === 'complete' ? (
             <button
-              aria-label="Replay"
+              aria-label="Replay film"
               onClick={() => start(true)}
               className={`${iconButton} text-gold`}
             >
@@ -106,7 +109,7 @@ export function TransportBar({
           <SoundToggle />
           <CaptionVoiceToggle wonderId={wonderId} />
           <button
-            aria-label="Wonder facts"
+            aria-label="About this wonder"
             aria-pressed={factsOpen}
             onClick={onToggleFacts}
             className={iconButton}
@@ -122,9 +125,9 @@ export function TransportBar({
               <button
                 key={value}
                 aria-pressed={speed === value}
-                aria-label={`${value}× speed`}
+                aria-label={`Playback speed: ${value} times`}
                 onClick={() => setSpeed(value)}
-                className={`min-h-11 min-w-11 rounded-full font-display text-xs tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-gold ${
+                className={`min-h-11 min-w-11 cursor-pointer rounded-full font-display text-xs tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-gold ${
                   speed === value
                     ? 'bg-gold/90 text-umber-950'
                     : 'text-parchment/70 hover:bg-white/10 hover:text-parchment'

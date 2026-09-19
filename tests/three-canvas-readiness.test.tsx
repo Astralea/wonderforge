@@ -11,7 +11,7 @@ import { eiffelFilmEditSourceTAt } from '../src/engine/eiffelFilmEdit';
 const scene = vi.hoisted(() => ({
   ready: Promise.resolve(),
   loadProgress: 0,
-  loadStage: 'Preparing Paris',
+  loadStage: 'City',
   update: vi.fn(),
   resize: vi.fn(),
   dispose: vi.fn(),
@@ -30,7 +30,7 @@ beforeEach(() => {
     reject = rej;
   });
   scene.loadProgress = 0;
-  scene.loadStage = 'Preparing Paris';
+  scene.loadStage = 'City';
   vi.mocked(WorldScene).mockClear();
   scene.update.mockClear();
   scene.dispose.mockClear();
@@ -107,12 +107,12 @@ describe('async scene readiness', () => {
     expect(WorldScene).not.toHaveBeenCalled();
   });
   it('fills the Eiffel outline from measured readiness and announces the pending stage', () => {
-    const view = render(<EiffelLoading percent={0} stage="Preparing Paris" />);
+    const view = render(<EiffelLoading percent={0} stage="City" />);
     expect(screen.getByTestId('eiffel-loading-fill').getAttribute('transform')).toBe(
       'translate(0 224)',
     );
     view.rerender(
-      <EiffelLoading percent={50} stage="Preparing the upper platforms" />,
+      <EiffelLoading percent={50} stage="Upper platforms" />,
     );
     expect(screen.getByTestId('eiffel-loading-fill').getAttribute('transform')).toBe(
       'translate(0 120)',
@@ -121,10 +121,10 @@ describe('async scene readiness', () => {
       screen.getByRole('progressbar').getAttribute('aria-valuetext'),
     ).toContain('50% prepared');
     expect(screen.getByRole('status').textContent).toContain(
-      'Preparing the upper platforms',
+      'Upper platforms',
     );
     view.rerender(
-      <EiffelLoading percent={100} stage="Preparing the first view" />,
+      <EiffelLoading percent={100} stage="Starting film…" />,
     );
     expect(screen.getByTestId('eiffel-loading-fill').getAttribute('transform')).toBe(
       'translate(0 0)',
@@ -150,9 +150,9 @@ describe('async scene readiness', () => {
     await act(async () => reject(new Error('asset fetch failed')));
     expect(screen.queryByRole('progressbar')).toBeNull();
     expect(screen.getByRole('alert').textContent).toContain(
-      'Eiffel Tower model could not be loaded',
+      'We couldn’t load this scene.',
     );
-    expect(screen.getByRole('button', { name: 'Reload scene' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Reload page' })).toBeTruthy();
   });
   it('maps a short edit once for construction and light while passing its own camera clock', () => {
     usePlaybackStore.setState({
@@ -182,6 +182,30 @@ describe('async scene readiness', () => {
       <ThreeCanvas wonder={getWonder('pyramids-of-giza')} mode="cinematic" />,
     );
     act(() => frame(performance.now()));
+    act(() => frame(performance.now()));
+    act(() => frame(performance.now()));
     expect(scene.update).toHaveBeenLastCalledWith(0.58, 0.58, 0.58);
+  });
+  it('shows the Giza arrival silhouette on ambient home until the world is ready', () => {
+    render(
+      <ThreeCanvas wonder={getWonder('pyramids-of-giza')} mode="ambient" />,
+    );
+    expect(screen.getByTestId('wonder-arrival')).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Loading Pyramids of Giza…' })).toBeTruthy();
+    expect(screen.getByText('Plateau')).toBeTruthy();
+    expect(screen.getByText('Giza · c. 2560 BC')).toBeTruthy();
+    expect(screen.queryByTestId('eiffel-arrival')).toBeNull();
+    expect(screen.queryByTestId('scene-loading')).toBeNull();
+  });
+  it('keeps cinematic Giza on the arrival silhouette until the world is ready', () => {
+    render(
+      <ThreeCanvas wonder={getWonder('pyramids-of-giza')} mode="cinematic" />,
+    );
+    expect(screen.getByTestId('wonder-arrival')).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Loading Pyramids of Giza…' })).toBeTruthy();
+    expect(screen.queryByText('Loading…')).toBeNull();
+    expect(screen.getByRole('progressbar').getAttribute('aria-label')).toBe(
+      'Loading Pyramids of Giza',
+    );
   });
 });

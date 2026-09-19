@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { WONDERS, getWonder } from '../data';
+import { catalogReady, getWonder } from '../data';
 import { WonderCanvas } from '../render/WonderCanvas';
 import { usePlaybackStore } from '../store/playback';
 import { useUiStore } from '../store/ui';
@@ -39,8 +39,9 @@ export function CinematicView() {
   useSoundtrack(wonderId, 'cinematic');
 
   const go = (delta: number) => {
-    const index = WONDERS.findIndex((w) => w.id === wonderId);
-    const next = WONDERS[(index + delta + WONDERS.length) % WONDERS.length]!;
+    const ready = catalogReady();
+    const index = ready.findIndex((w) => w.id === wonderId);
+    const next = ready[(index + delta + ready.length) % ready.length]!;
     setFactsOpen(false);
     openWonder(next.id);
   };
@@ -171,7 +172,8 @@ export function CinematicView() {
       >
         <button
           onClick={closeWonder}
-          className="flex min-h-11 items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
+          aria-label="WonderForge, back to films"
+          className="flex min-h-11 cursor-pointer items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
         >
           WonderForge
         </button>

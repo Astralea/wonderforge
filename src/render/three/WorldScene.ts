@@ -18,9 +18,12 @@ import { sydneyCinematicShotAt } from '../../engine/sydneyCamera';
 import { eiffelCinematicShotAt } from '../../engine/eiffelCamera';
 import { eiffelFilmShotAt, sampleEiffelFilm } from '../../engine/eiffelFilm';
 import { eiffelFilmEditShotAt, sampleEiffelFilmEdit, type EiffelFilmEdit } from '../../engine/eiffelFilmEdit';
+import { applyColosseumShadow } from './colosseumShadow';
+import { applyStonehengeShadow } from './stonehengeShadow';
 import { ColosseumWorld } from './ColosseumWorld';
 import { EiffelWorld } from './EiffelWorld';
 import { EIFFEL_CAMERA_NEAR } from './eiffelRenderPrecision';
+import { arrivalStageFor } from './wonderArrivalDrawings';
 import { GizaWorld } from './GizaWorld';
 import { LegacyWorld } from './LegacyWorld';
 import { createMaterialLibrary, type MaterialLibrary } from './MaterialLibrary';
@@ -80,12 +83,14 @@ export class WorldScene {
     }
   }
 
-  get loadStage(): string { return this.eiffel?.loadStage ?? 'Preparing scene'; }
+  get loadStage(): string {
+    return this.eiffel?.loadStage ?? arrivalStageFor(this.wonder.id);
+  }
 
   get loadProgress(): number { return this.eiffel?.loadProgress ?? 0; }
 
   get ready(): Promise<void> {
-    return this.eiffel?.ready ?? Promise.resolve();
+    return this.eiffel?.ready ?? this.colosseum?.ready ?? this.sydney?.ready ?? Promise.resolve();
   }
 
   resize(width: number, height: number): void {
@@ -152,18 +157,19 @@ export class WorldScene {
     this.pipeline.camera.updateProjectionMatrix();
   }
 
-  private updateStonehengeCamera(t: number, fogStretch = 1): void {
+  private updateStonehengeCamera(t: number, fogStretch = 1, orbitElapsed?: number): void {
     const shot = stonehengeCinematicShotAt(t, this.aspect);
     if (this.pipeline.scene.fog instanceof Fog) {
-      this.pipeline.scene.fog.near = shot.radius * 3.2 * fogStretch;
-      this.pipeline.scene.fog.far = shot.radius * 7.6 * fogStretch;
+      this.pipeline.scene.fog.near = shot.radius * 1.85 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 5.4 * fogStretch;
     }
+    const azimuth = shot.azimuth + ((orbitElapsed ?? 0) / 110) * Math.PI * 2;
     const target = new Vector3(...shot.target);
     const horizontal = Math.cos(shot.pitch) * shot.radius;
     this.pipeline.camera.position.set(
-      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.x + Math.cos(azimuth) * horizontal,
       target.y + Math.sin(shot.pitch) * shot.radius,
-      target.z + Math.sin(shot.azimuth) * horizontal,
+      target.z + Math.sin(azimuth) * horizontal,
     );
     this.pipeline.camera.fov = shot.fov;
     this.pipeline.camera.lookAt(target);
@@ -188,18 +194,19 @@ export class WorldScene {
     this.pipeline.camera.updateProjectionMatrix();
   }
 
-  private updateColosseumCamera(t: number, fogStretch = 1): void {
+  private updateColosseumCamera(t: number, fogStretch = 1, orbitElapsed?: number): void {
     const shot = colosseumCinematicShotAt(t, this.aspect);
     if (this.pipeline.scene.fog instanceof Fog) {
-      this.pipeline.scene.fog.near = shot.radius * 1.85 * fogStretch;
-      this.pipeline.scene.fog.far = shot.radius * 4.6 * fogStretch;
+      this.pipeline.scene.fog.near = shot.radius * 0.92 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 3.6 * fogStretch;
     }
+    const azimuth = shot.azimuth + ((orbitElapsed ?? 0) / 110) * Math.PI * 2;
     const target = new Vector3(...shot.target);
     const horizontal = Math.cos(shot.pitch) * shot.radius;
     this.pipeline.camera.position.set(
-      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.x + Math.cos(azimuth) * horizontal,
       target.y + Math.sin(shot.pitch) * shot.radius,
-      target.z + Math.sin(shot.azimuth) * horizontal,
+      target.z + Math.sin(azimuth) * horizontal,
     );
     this.pipeline.camera.fov = shot.fov;
     this.pipeline.camera.lookAt(target);
@@ -209,8 +216,8 @@ export class WorldScene {
   private updateSydneyCamera(t: number, fogStretch = 1): void {
     const shot = sydneyCinematicShotAt(t, this.aspect);
     if (this.pipeline.scene.fog instanceof Fog) {
-      this.pipeline.scene.fog.near = shot.radius * 1.7 * fogStretch;
-      this.pipeline.scene.fog.far = shot.radius * 4.4 * fogStretch;
+      this.pipeline.scene.fog.near = shot.radius * 0.92 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 2.18 * fogStretch;
     }
     const target = new Vector3(...shot.target);
     const horizontal = Math.cos(shot.pitch) * shot.radius;
@@ -224,7 +231,7 @@ export class WorldScene {
     this.pipeline.camera.updateProjectionMatrix();
   }
 
-  private updateEiffelCamera(t: number, fogStretch = 1, filmMode = false, editCamera?: { edit: EiffelFilmEdit; t: number }): void {
+  private updateEiffelCamera(t: number, fogStretch = 1, filmMode = false, editCamera?: { edit: EiffelFilmEdit; t: number }, orbitElapsed?: number): void {
     const film = editCamera ? sampleEiffelFilmEdit(editCamera.edit, editCamera.t) : sampleEiffelFilm(t);
     const shot = editCamera ? eiffelFilmEditShotAt(editCamera.edit, editCamera.t, this.aspect) : filmMode ? eiffelFilmShotAt(t, this.aspect) : eiffelCinematicShotAt(t, this.aspect);
     this.pipeline.setEiffelShadowFrame(editCamera?.edit === 'cinematic'
@@ -236,12 +243,13 @@ export class WorldScene {
       this.pipeline.scene.fog.near = atmosphereRadius * 1.05 * fogStretch;
       this.pipeline.scene.fog.far = atmosphereRadius * 2.7 * fogStretch;
     }
+    const azimuth = shot.azimuth + ((orbitElapsed ?? 0) / 130) * Math.PI * 2;
     const target = new Vector3(...shot.target);
     const horizontal = Math.cos(shot.pitch) * shot.radius;
     this.pipeline.camera.position.set(
-      target.x + Math.cos(shot.azimuth) * horizontal,
+      target.x + Math.cos(azimuth) * horizontal,
       target.y + Math.sin(shot.pitch) * shot.radius,
-      target.z + Math.sin(shot.azimuth) * horizontal,
+      target.z + Math.sin(azimuth) * horizontal,
     );
     // Centimetre-separated Paris panes need depth precision at city distances.
     this.pipeline.camera.near = EIFFEL_CAMERA_NEAR;
@@ -287,14 +295,13 @@ export class WorldScene {
       // Target data owns the humid aerial perspective. Keep it below the old
       // global wash so the blue upper dome survives the cinematic grade.
       this.pipeline.setAtmosphere(downlandSky.haze);
-      // Low-sun fill: dusk/dawn key is warm and raking; a cooler, brighter
-      // hemisphere and a slightly softer key keep turf/timber/sarsen from
-      // collapsing into one inked family. No extra post pass.
+      // Low-sun fill: dusk/dawn key is warm and raking. Keep the key strong
+      // enough that the solstice throw on the turf stays a hard axis line.
       if (sun.elevation < 22) {
         const dusk = Math.min(1, (22 - sun.elevation) / 18);
-        light.ambient.intensity = Math.min(0.58, light.ambient.intensity + 0.08 + dusk * 0.14);
-        light.sun.intensity *= 1 - dusk * 0.26;
-        this.pipeline.setShadowSoftness(dusk);
+        light.ambient.intensity = Math.min(0.5, light.ambient.intensity + 0.05 + dusk * 0.1);
+        light.sun.intensity *= 1 - dusk * 0.1;
+        this.pipeline.setShadowSoftness(dusk * 0.28);
       } else {
         this.pipeline.setShadowSoftness(0);
       }
@@ -327,13 +334,18 @@ export class WorldScene {
       light.sky = valleySky.horizon;
       light.fog = valleySky.horizon;
       light.ambient.skyColor = valleySky.zenith;
-      this.pipeline.setAtmosphere(valleySky.haze);
-      light.ambient.intensity = Math.min(0.62, light.ambient.intensity + 0.12);
+      this.pipeline.setAtmosphere(valleySky.haze * 0.82);
+      // Cooler fill keeps shaded brick and travertine from collapsing into
+      // one dusty family; the key stays warm and a hair stronger so the
+      // arcade reads in raking sun.
+      light.ambient.skyColor = '#c4d0da';
+      light.ambient.intensity = Math.min(0.74, light.ambient.intensity + 0.22);
+      light.sun.intensity = Math.max(light.sun.intensity, 1.18);
       if (sun.elevation < 22) {
         const dusk = Math.min(1, (22 - sun.elevation) / 16);
-        light.ambient.intensity = Math.min(0.66, light.ambient.intensity + dusk * 0.1);
-        light.sun.intensity *= 1 - dusk * 0.14;
-        this.pipeline.setShadowSoftness(dusk * 0.5);
+        light.ambient.intensity = Math.min(0.8, light.ambient.intensity + dusk * 0.1);
+        light.sun.intensity *= 1 - dusk * 0.1;
+        this.pipeline.setShadowSoftness(dusk * 0.4);
       } else {
         this.pipeline.setShadowSoftness(0);
       }
@@ -394,6 +406,8 @@ export class WorldScene {
       this.pipeline.setEnvironmentNeutralizers();
     }
     const sunDirection = this.pipeline.updateLight(light);
+    if (this.colosseum) applyColosseumShadow(this.pipeline.sun, sunDirection);
+    if (this.stonehenge) applyStonehengeShadow(this.pipeline.sun, sunDirection);
     // Deterministic detail time (water ripple), phased from playback t.
     updateMaterialDetailTime(this.materials, motionT);
     const waterSky = sky ?? valleySky ?? harbourSky ?? parisSky;
@@ -476,19 +490,19 @@ export class WorldScene {
       this.updateAmbientCamera(elapsedSeconds);
       this.giza.update(1, light, sunDirection, sky);
     } else if (this.stonehenge) {
-      this.updateStonehengeCamera((elapsedSeconds / 90) % 1, downlandSky?.fogStretch);
+      this.updateStonehengeCamera(0.86, downlandSky?.fogStretch, elapsedSeconds);
       this.stonehenge.update(1, light, sunDirection, downlandSky!);
     } else if (this.petra) {
       this.updatePetraCamera((elapsedSeconds / 90) % 1, riftSky?.fogStretch);
       this.petra.update(1, light, sunDirection, riftSky!);
     } else if (this.colosseum) {
-      this.updateColosseumCamera((elapsedSeconds / 90) % 1, valleySky?.fogStretch);
+      this.updateColosseumCamera(0.86, valleySky?.fogStretch, elapsedSeconds);
       this.colosseum.update(1, light, sunDirection, valleySky!);
     } else if (this.sydney) {
       this.updateSydneyCamera((elapsedSeconds / 90) % 1, harbourSky?.fogStretch);
       this.sydney.update(1, light, sunDirection, harbourSky!);
     } else if (this.eiffel) {
-      this.updateEiffelCamera((elapsedSeconds / 90) % 1, parisSky?.fogStretch);
+      this.updateEiffelCamera(0.92, parisSky?.fogStretch, false, undefined, elapsedSeconds);
       this.eiffel.update(1, light, sunDirection, parisSky!);
     } else if (this.legacy) {
       this.updateLegacyCamera((elapsedSeconds / 90) % 1);

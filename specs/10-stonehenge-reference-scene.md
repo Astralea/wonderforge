@@ -49,13 +49,15 @@ Visual tokens:
 
 The sky is a subject, not a background clear color. Stonehenge owns a typed
 Salisbury Plain sky/light description with a blue upper dome, pale humid
-horizon, readable low sun, and broad broken cloud families. At every desktop
+horizon, a visible solstice sun disc, and broad broken cloud families. At every desktop
 and portrait checkpoint, a materially visible portion of blue sky must survive
 the fog and grade; the open grassland must never read as a sealed grey studio.
 Dawn humidity is a thin horizon band: sarsen edges, haul crews, and the downs
 silhouette stay readable at t = 0.12. Dusk warmth may not collapse sarsen,
-timber, turf, and sky into one dark family. The sun/sky relationship remains
-legible because the monument's solstitial alignment is part of its identity.
+timber, turf, and sky into one dark family. The sun is the alignment, not a
+tint: it rises on the NE avenue (midsummer sunrise), culminates south, and
+holds low on the SW horizon (midwinter sunset) through the axis caption and
+reveal so the Heel Stone, horseshoe, disc, and stone shadows share one line.
 
 Avoid the generic “green plane plus grey blocks” look. Ground identity comes
 from rolling chalk downland, pale ditch cuts, trampled haul lanes, dressing
@@ -84,8 +86,9 @@ applied exactly once. Lintel guide rails remain beneath the soffit during the
 final settle until joint contact.
 
 Signature shot: late in BUILD, the camera looks down the NE–SW axis while the
-tall central trilithon lintel rises above a dense timber crib. The reveal keeps
-that axis readable in low warm light.
+tall central trilithon lintel rises above a dense timber crib. The solstice
+caption and reveal hold that same axis: a low visible sun sits on the SW
+horizon, and the uprights throw long raking shadows toward the Heel Stone.
 
 Desktop composition:
 
@@ -154,11 +157,17 @@ The pure state graph is:
 
 ## World layers and camera
 
-1. Playback-driven sky gradient, low sun, sparse cloud bands, cool aerial haze.
-2. Fixed rolling chalk downs with a sparse hazel/maple/ash/elm tree mosaic.
+1. Playback-driven sky gradient, a readable solstice sun disc, sparse cloud
+   bands, and cool aerial haze. Humid horizon fog must not erase the disc.
+2. Fixed rolling chalk downs with a sparse hazel/maple/ash/elm tree mosaic
+   on offset NW/SE/SW lobes — never a circular ridge around the henge. Fog
+   starts after the tree-line so the horizon is landscape, not a pale wall.
 3. Grazed open grassland, shrubs, cattle silhouettes, and distant earthworks.
 4. Circular bank/ditch, Aubrey-hole marks, source/dressing yards, haul scars,
    timber stocks, prepared pits, chalk spoil, and working clearances.
+   The 56 Aubrey holes are recessed pit mouths in the inner bank circuit —
+   damp chalk cuts with a low spoil lip — never a ring of pale discs or
+   white dots sitting on the turf.
 5. Settled/active stone settings.
 6. Sledges, skids, A-frames, cribs, ropes, levers, crews, and chalk dust.
 7. Foreground ditch cut, grass clumps, hammerstones, antler picks, and chips.
@@ -189,8 +198,10 @@ The camera path is target-specific and pure. It orbits about one turn with
 authored holds on an upright raise, an outer-circle crib lift, and the central
 trilithon. The path is a high-angle construction shot, not an eye-level walk:
 mechanism holds sit at an 85–95 m radius with a ~16° look-down so the open
-plain stays in frame; the reveal widens past 110 m. Pitch stays just under
-half the vertical FOV so the sky remains visible. The outer-lintel
+plain stays in frame. The solstice caption and reveal widen past 110 m and
+drop pitch to ~9–11° so the sun disc sits on the SW horizon above the downs
+while the axis shadows still read. Pitch stays under half the vertical FOV so
+the sky remains visible. The outer-lintel
 wave begins on the camera-facing south-west arc so its crib, rope, and crew
 are not hidden behind seated uprights. Radius widens for portrait aspect;
 framing derives from site plus monument bounds. Fog begins behind the working
@@ -219,8 +230,11 @@ checkpoint.
   visual policy. Credential probe on 2026-08-26 reported Tripo, Gemini, and
   ElevenLabs keys missing; this scene needs no new runtime asset.
 - One directional shadow light. Existing ACES/sRGB pipeline and DPR caps stay.
-  Dawn/dusk raise hemisphere fill and soften the key/shadow grade; no new post
-  pass.
+  Dawn/dusk raise hemisphere fill without washing out the axis-aligned shadow
+  shafts; no new post pass. The shadow volume covers the ring, the Heel Stone,
+  and the long solstice throw on the turf. The sky dome draws a stylized sun
+  disc and halo on the typed path so the alignment is a light in the sky, not
+  only a caption.
 - Target worst-frame budgets: ≤120 calls desktop / ≤95 mobile, ≤180k / ≤120k
   triangles, ≤80 / ≤60 geometries, ≤16 textures, and no new post pass.
 - Mobile first reductions: fewer distant grass/shrub instances and no cloud
@@ -262,13 +276,20 @@ checkpoint.
   zenith above a pale horizon at dawn, build, and reveal checkpoints. Dawn
   haze stays a horizon band (readable silhouettes at t = 0.12); dusk samples
   keep sarsen/timber/turf/sky as separate value families.
+- The sun path is the monument axis: dawn azimuth matches `axisRadians` (NE
+  midsummer sunrise), noon is south, and from the solstice caption through the
+  reveal the sun holds low on the opposite axis (SW midwinter sunset). Ground
+  shadow direction of a vertical stone lies along that axis at those holds.
+  The camera looks down the same axis during the caption so the disc, Heel
+  Stone, and shadow line can be read together.
 - Near-field herb tufts and trampled chalk chips occupy the camera-facing
   ditch lip and working floor; they are instanced, deterministic, and do not
   sit on stone sockets. Grazed tufts stay shorter than 0.12 m.
 - Distant downs are a green rolling horizon beyond the working floor, not a
   fog-white hillside or a raised ring inside the 200 m radius.
 - Mechanism-hold camera radius is 85–95 m on desktop (wider in portrait);
-  the reveal is ≥ 110 m. Holds are high-angle (~16°), not eye-level.
+  the reveal is ≥ 110 m. Mechanism holds are high-angle (~16°). The solstice
+  hold is ~9–11° so the sun disc clears the downs ridge.
 - Production dispatch selects `StonehengeWorld`; all other fallback IDs remain
   functional.
 - Browser evidence and budgets meet Spec 04.

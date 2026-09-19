@@ -128,6 +128,20 @@ describe('Eiffel deferred environment fallback', () => {
     environments.splice(environments.indexOf(environment), 1);
   });
 
+  it('advances city load fraction while streets are still pending', async () => {
+    const { city, life } = deferredAssets();
+    const environment = make();
+    expect(environment.loadFraction).toBe(0);
+    await vi.waitFor(() => {
+      expect(environment.loadFraction).toBeGreaterThan(0);
+    });
+    expect(environment.loadFraction).toBeLessThan(1);
+    city.resolve(new Group());
+    life.resolve(lifeAsset());
+    await environment.ready;
+    expect(environment.loadFraction).toBe(1);
+  });
+
   it('preserves the eager legacy environment and all its matrices and colors', async () => {
     const environment = make(false); checkOriginal(environment, false); await environment.ready;
     expect(environment.group.getObjectByName('eiffel-ecole-militaire')!.visible).toBe(true);

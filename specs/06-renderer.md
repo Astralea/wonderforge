@@ -33,6 +33,8 @@ handles overlap; transparency is limited to dust, water, clouds, and sky.
 - Each pyramid course also contains deterministic, human-scale core-fill cells.
   The core is a real stacked volume, never a single floating top slab, and a
   visible cell above the foundation must overlap support in the course below.
+  Deeply buried cells may collapse to an opaque occupancy frustum so the
+  casing cannot transmit the key light.
 - Settled stones are `InstancedMesh` batches by material and monument.
 - Active stones use a small reusable mesh pool so transforms and contact effects
   update without reallocating GPU resources.

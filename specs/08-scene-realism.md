@@ -24,6 +24,8 @@ The plateau fills the frame. It is not a floating island on an empty gradient.
 - The pyramid interior is a solid, course-supported rubble/limestone core. At
   every construction checkpoint, exposed working surfaces have visible
   substrate beneath them; the renderer never synthesizes a course-wide lid.
+  The finished mass is opaque: the sun must not illuminate the inner face of
+  the far casing or shine through the joints.
 - Khufu has the greatest base and height; Khafre is slightly smaller and stands
   on higher ground; Menkaure is unambiguously smaller.
 - Khafre's surviving upper casing is a separate lighter material layer.

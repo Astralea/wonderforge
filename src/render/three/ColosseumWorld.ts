@@ -24,6 +24,10 @@ export class ColosseumWorld {
     this.group.add(this.sky.mesh, this.environment.group, this.stones.group, this.work.group);
   }
 
+  get ready(): Promise<void> {
+    return this.environment.ready;
+  }
+
   update(t: number, light: LightState, sunDirection: Vector3, sky: ColosseumSkySample): void {
     const active = this.stones.update(t);
     this.work.update(active, t);

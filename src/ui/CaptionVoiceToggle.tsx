@@ -24,10 +24,10 @@ export function CaptionVoiceToggle({
 
   return (
     <button
-      aria-label={voiceEnabled ? 'Disable narration' : 'Enable narration'}
+      aria-label={voiceEnabled ? 'Turn narration off' : 'Turn narration on'}
       aria-pressed={voiceEnabled}
       onClick={onClick}
-      className={`flex min-h-11 items-center gap-2 rounded-full px-3 text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold ${className}`}
+      className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-full px-3 text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold ${className}`}
     >
       {voiceEnabled ? <Mic size={18} /> : <MicOff size={18} />}
       <span className="font-display text-[10px] tracking-[0.12em] uppercase">

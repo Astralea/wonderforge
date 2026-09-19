@@ -19,14 +19,14 @@ interface ShotKeyframe {
 
 /** Giza-like harbour panorama; east Farm Cove opening; linear azimuth. */
 const SHOTS: ShotKeyframe[] = [
-  { t: 0, azimuth: 0.06, pitchDeg: 22.8, radius: 528, target: [2, 8, 16] },
-  { t: 0.16, azimuth: 0.22, pitchDeg: 22.4, radius: 552, target: [2, 9, 12] },
-  { t: 0.32, azimuth: 0.4, pitchDeg: 22.0, radius: 578, target: [1, 10, 8] },
-  { t: 0.48, azimuth: 0.58, pitchDeg: 21.6, radius: 604, target: [1, 11, 5] },
-  { t: 0.64, azimuth: 0.76, pitchDeg: 21.2, radius: 632, target: [0, 12, 3] },
-  { t: 0.8, azimuth: 0.94, pitchDeg: 20.8, radius: 658, target: [0, 13, 2] },
-  { t: 0.92, azimuth: 1.06, pitchDeg: 20.4, radius: 682, target: [0, 14, 1] },
-  { t: 1, azimuth: 1.14, pitchDeg: 20.0, radius: 698, target: [0, 14, 0] },
+  { t: 0, azimuth: 0.08, pitchDeg: 21.4, radius: 540, target: [4, 10, 4] },
+  { t: 0.16, azimuth: 0.22, pitchDeg: 21.0, radius: 562, target: [3, 11, 2] },
+  { t: 0.32, azimuth: 0.36, pitchDeg: 20.6, radius: 586, target: [2, 12, 1] },
+  { t: 0.48, azimuth: 0.50, pitchDeg: 20.4, radius: 610, target: [1, 13, 0] },
+  { t: 0.64, azimuth: 0.62, pitchDeg: 20.2, radius: 636, target: [0, 14, -1] },
+  { t: 0.8, azimuth: 0.74, pitchDeg: 20.0, radius: 662, target: [0, 15, -2] },
+  { t: 0.92, azimuth: 0.82, pitchDeg: 19.8, radius: 682, target: [0, 16, -2] },
+  { t: 1, azimuth: 0.88, pitchDeg: 19.6, radius: 698, target: [0, 16, -2] },
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;

@@ -57,19 +57,20 @@ const giza: WonderSoundtrack = {
     wonderId: 'pyramids-of-giza',
     role: 'ambient',
     src: '/audio/giza-ambient-loop.mp3',
-    duration: 29.768229,
+    duration: 83.2645,
     loop: true,
     volume: 0.4,
     description:
-      'Seamless Giza hero bed: warm sustained strings, sparse arched harp, ' +
-      'and a distant reed flute without a beat or climax.',
+      'Longer Giza hero bed assembled from three Lyria clip takes: warm ' +
+      'sustained strings, sparse arched harp, and a distant reed flute without ' +
+      'a beat or climax.',
     prompt:
       'Calm ambient ancient Egyptian desert atmosphere for a slowly orbiting ' +
       'title screen, even and seamless with no percussion.',
-    model: 'lyria-002',
+    model: 'lyria-3-clip-preview',
     provenance:
-      'Generated with Google Lyria 002 on Vertex AI using project ADC, ' +
-      'assembled and level-matched locally with ffmpeg; SynthID watermarked.',
+      'Three Google Lyria 3 Clip takes on Vertex AI, equal-power crossfaded ' +
+      'and loop-folded locally with ffmpeg; SynthID watermarked.',
   },
 };
 
@@ -101,20 +102,19 @@ const stonehenge: WonderSoundtrack = {
     wonderId: 'stonehenge',
     role: 'ambient',
     src: '/audio/stonehenge-ambient-loop.mp3',
-    duration: 27,
+    duration: 77.752667,
     loop: true,
     volume: 0.36,
     description:
-      'Open-air Stonehenge ambience with low wind, occasional wood/stone ' +
-      'resonance and distant breath tone, folded into a quiet continuous loop.',
+      'Longer open-air Stonehenge ambience assembled from three Lyria clip ' +
+      'takes: low wind, occasional wood/stone resonance and distant breath tone.',
     prompt:
       'Instrumental prehistoric acoustic ambience on exposed chalk grassland: ' +
       'wind, sparse breath tone, distant wood and stone resonance, no climax.',
     model: 'lyria-3-clip-preview',
     provenance:
-      'Generated for Stonehenge with Google Gen AI SDK and Lyria 3 Clip on ' +
-      'Vertex AI using project ADC; locally loop-folded and level-matched. ' +
-      'This is respectful speculative scoring, not a claimed reconstruction.',
+      'Three Google Lyria 3 Clip takes on Vertex AI, equal-power crossfaded ' +
+      'and loop-folded locally with ffmpeg. Speculative scoring, not a claimed reconstruction.',
   },
 };
 
@@ -146,20 +146,19 @@ const colosseum: WonderSoundtrack = {
     wonderId: 'colosseum',
     role: 'ambient',
     src: '/audio/colosseum-ambient-loop.mp3',
-    duration: 26.775521,
+    duration: 83.31675,
     loop: true,
     volume: 0.38,
     description:
-      'Warm dusty valley ambience for the Flavian amphitheatre: distant timber ' +
-      'and stone, no beat and no climax, folded into a quiet continuous loop.',
+      'Longer Flavian valley ambience assembled from three Lyria clip takes: ' +
+      'warm dusty air, distant timber and stone, no beat and no climax.',
     prompt:
       'Instrumental ambient bed for the Flavian amphitheatre valley: warm dusty ' +
       'air, distant timber and stone, no beat and no climax.',
     model: 'lyria-3-clip-preview',
     provenance:
-      'Generated for the Colosseum with Google Gen AI SDK and Lyria 3 Clip on ' +
-      'Vertex AI using project ADC; locally loop-folded and level-matched. ' +
-      'This is respectful speculative scoring, not reconstructed Roman music.',
+      'Three Google Lyria 3 Clip takes on Vertex AI, equal-power crossfaded ' +
+      'and loop-folded locally with ffmpeg. Speculative scoring, not reconstructed Roman music.',
   },
 };
 
@@ -237,20 +236,19 @@ const eiffel: WonderSoundtrack = {
     wonderId: 'eiffel-tower',
     role: 'ambient',
     src: '/audio/eiffel-tower-ambient-loop.mp3',
-    duration: 27,
+    duration: 83.31675,
     loop: true,
     volume: 0.38,
     description:
-      'Temperate Champ de Mars ambience beside the Seine in 1889: salon-string ' +
-      'warmth, faint civic brass far off, folded into a quiet loop.',
+      'Longer Champ de Mars ambience assembled from three Lyria clip takes: ' +
+      'salon-string warmth, faint civic brass far off, no beat and no climax.',
     prompt:
       'Instrumental ambient bed for the Champ de Mars in 1889: temperate Paris ' +
       'air, salon strings, faint civic brass, no beat and no climax.',
     model: 'lyria-3-clip-preview',
     provenance:
-      'Generated for the Eiffel Tower with Google Gen AI SDK and Lyria 3 Clip ' +
-      'on Vertex AI using project ADC; locally loop-folded and level-matched. ' +
-      'Speculative scoring, not a copy of Civilization VI audio.',
+      'Three Google Lyria 3 Clip takes on Vertex AI, equal-power crossfaded ' +
+      'and loop-folded locally with ffmpeg. Speculative scoring, not a copy of Civilization VI audio.',
   },
 };
 

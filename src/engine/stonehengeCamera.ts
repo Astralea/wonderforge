@@ -23,9 +23,9 @@ const SHOTS: ShotKeyframe[] = [
   { t: 0.32, azimuth: 2.62, pitchDeg: 16.5, radius: 94, target: [1, 2.5, 2] },
   { t: 0.58, azimuth: 3.82, pitchDeg: 16, radius: 96, target: [8, 2.4, 4] },
   { t: 0.68, azimuth: 4.03, pitchDeg: 16.5, radius: 92, target: [-10, 2.9, -13] },
-  { t: 0.78, azimuth: 5.28, pitchDeg: 16.5, radius: 94, target: [-2, 3.2, -2] },
-  { t: 0.92, azimuth: 6.53, pitchDeg: 14, radius: 114, target: [0, 2.9, 0] },
-  { t: 1, azimuth: Math.PI * 2 + Math.PI / 4, pitchDeg: 13, radius: 120, target: [0, 2.8, 0] },
+  { t: 0.78, azimuth: Math.PI * 2 + Math.PI / 4, pitchDeg: 10.2, radius: 112, target: [0, 2.55, 0] },
+  { t: 0.92, azimuth: Math.PI * 2 + Math.PI / 4, pitchDeg: 9.6, radius: 116, target: [0, 2.45, 0] },
+  { t: 1, azimuth: Math.PI * 2 + Math.PI / 4, pitchDeg: 9.2, radius: 122, target: [0, 2.35, 0] },
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;

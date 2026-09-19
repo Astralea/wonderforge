@@ -38,6 +38,16 @@ export class EiffelKitSystem {
   private readonly shadowCenter = new Vector3(0, 156, 0);
   private disposed = false;
   private lastT = 1;
+  private kitStepsDone = 0;
+  private readonly kitStepTotal = 3;
+
+  get loadFraction(): number {
+    return this.kitStepsDone / this.kitStepTotal;
+  }
+
+  private noteKitStep(): void {
+    this.kitStepsDone = Math.min(this.kitStepTotal, this.kitStepsDone + 1);
+  }
 
   /** At overview distance fine lattice shadows submit the whole tower to the
    * broad sun frustum. Use the existing major-iron tier for short-film views
@@ -61,9 +71,11 @@ export class EiffelKitSystem {
     const [pieceBytes, compactBytes, manifest] = await Promise.all([
       responses[0]!.arrayBuffer(), responses[1]!.arrayBuffer(), responses[2]!.json() as Promise<EiffelKitManifest>,
     ]);
+    this.noteKitStep();
     if (manifest.schemaVersion !== 2) throw new Error('Unsupported Eiffel construction kit');
     const loader = new GLTFLoader();
     const gltfs = await Promise.all([loader.parseAsync(pieceBytes, ''), loader.parseAsync(compactBytes, '')]);
+    this.noteKitStep();
     const importedMaterials = new Set<MeshStandardMaterial>();
     for (const gltf of gltfs) gltf.scene.traverse(object => {
       if (!(object instanceof Mesh)) return;
@@ -149,6 +161,7 @@ export class EiffelKitSystem {
     this.group.userData.majorShadowSources = majorShadowSources.size;
     this.group.userData.kitPieces = partIndices.size;
     this.group.userData.ready = true;
+    this.noteKitStep();
     this.update(this.lastT);
   }
 

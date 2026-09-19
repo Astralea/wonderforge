@@ -14,8 +14,7 @@ export const stonehenge: Wonder = {
     text: 'Can you imagine trying to talk six hundred people into helping you drag a fifty-ton stone eighteen miles across the countryside and muscle it into an upright position, and then saying, “Right, lads! Another twenty like that … and then we can party!”',
     author: 'Bill Bryson',
   },
-  description:
-    'A ring of standing stones on Salisbury Plain, raised over a thousand years by people who left no written word behind.',
+  description: '',
   facts: [
     'An average circle sarsen weighs around 25 tonnes; the great trilithon uprights exceed 30 tonnes and once stood over 7 m above ground.',
     'The smaller bluestones were transported from the Preseli Hills in Wales, over 200 km away.',
