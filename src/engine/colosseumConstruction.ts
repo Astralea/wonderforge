@@ -98,35 +98,52 @@ function outerRingPoint(theta: number, pad = 22): [number, number] {
   return ellipsePoint(COLOSSEUM_A + pad, COLOSSEUM_B + pad, theta);
 }
 
-function haulPose(part: ColosseumPart, route: ColosseumRoute, local: number): Vec3 {
-  const source = sourcePose(part);
-  const staged = stagingPose(part);
-  const eased = easeInOutQuad(local);
-  const roadX = route.road[0];
-  const roadZ = route.road[2] + (part.lane - 1) * 2.1;
-  const roadTheta = 0.04;
-  const bay = bayTheta(part.bay);
-  let x: number;
-  let z: number;
-  if (eased < 0.34) {
-    const p = easeInOutQuad(eased / 0.34);
-    x = lerp(source[0], roadX, p);
-    z = lerp(source[2], roadZ, p);
-  } else if (eased < 0.82) {
-    const p = easeInOutQuad((eased - 0.34) / 0.48);
-    const theta = roadTheta + shortestAngleDelta(roadTheta, bay) * p;
-    [x, z] = outerRingPoint(theta);
-    z += (part.lane - 1) * 1.4;
-  } else {
-    const p = easeInOutQuad((eased - 0.82) / 0.18);
-    const [ox, oz] = outerRingPoint(bay);
-    x = lerp(ox, staged[0], p);
-    z = lerp(oz + (part.lane - 1) * 1.4, staged[2], p);
+type RoutePoint = readonly [number, number];
+const haulPaths = new WeakMap<ColosseumPart, { points: RoutePoint[]; times: number[] }>();
+
+/** Cubic Hermite joins share their derivative, including the road/ellipse entry. */
+function haulPath(part: ColosseumPart, route: ColosseumRoute, progress: number): { x: number; z: number; yaw: number } {
+  let path = haulPaths.get(part);
+  if (!path) {
+    const source = sourcePose(part), staged = stagingPose(part);
+    const points: RoutePoint[] = [[source[0], source[2]], [route.road[0], route.road[2] + (part.lane - 1) * 2.1]];
+    const times = [0, .25];
+    const start = .04, delta = shortestAngleDelta(start, bayTheta(part.bay));
+    for (let i = 0; i <= 12; i++) {
+      const [x, z] = outerRingPoint(start + delta * i / 12);
+      points.push([x, z + (part.lane - 1) * 1.4]);
+      times.push(.34 + .48 * i / 12);
+    }
+    points.push([staged[0], staged[2]]); times.push(1);
+    path = { points, times }; haulPaths.set(part, path);
   }
-  const ontoWagon = easeInOutQuad(clamp(local / 0.12));
-  const offWagon = 1 - easeInOutQuad(clamp((local - 0.86) / 0.14));
+  const { points, times } = path;
+  let i = 0;
+  while (i < times.length - 2 && progress > times[i + 1]!) i++;
+  const span = times[i + 1]! - times[i]!, u = clamp((progress - times[i]!) / span);
+  const tangent = (at: number, axis: number) => {
+    const before = Math.max(0, at - 1), after = Math.min(points.length - 1, at + 1);
+    return (points[after]![axis]! - points[before]![axis]!) / (times[after]! - times[before]!);
+  };
+  const values = [0, 1].map(axis => {
+    const a = points[i]![axis]!, b = points[i + 1]![axis]!;
+    const m0 = tangent(i, axis) * span, m1 = tangent(i + 1, axis) * span;
+    return {
+      value: (2*u**3 - 3*u*u + 1)*a + (u**3 - 2*u*u + u)*m0 + (-2*u**3 + 3*u*u)*b + (u**3 - u*u)*m1,
+      slope: (6*u*u - 6*u)*a + (3*u*u - 4*u + 1)*m0 + (-6*u*u + 6*u)*b + (3*u*u - 2*u)*m1,
+    };
+  });
+  return { x: values[0]!.value, z: values[1]!.value, yaw: Math.atan2(values[0]!.slope, values[1]!.slope) };
+}
+
+function haulPose(part: ColosseumPart, route: ColosseumRoute, local: number): { position: Vec3; yaw: number } {
+  const { x, z, yaw } = haulPath(part, route, easeInOutQuad(local));
+  const ontoWagon = easeInOutQuad(clamp(local / .12));
+  const offWagon = 1 - easeInOutQuad(clamp((local - .86) / .14));
   const lift = COLOSSEUM_WAGON_BED * Math.min(ontoWagon, offWagon);
-  return [x, colosseumTerrainHeightAt(x, z) + colosseumVerticalHalfExtent(part.dimensions) + lift, z];
+  const departureYaw = shortestAngleDelta(0, yaw) * ontoWagon;
+  const alignedYaw = departureYaw + shortestAngleDelta(departureYaw, part.finalRotation[1]) * (1 - offWagon);
+  return { position: [x, colosseumTerrainHeightAt(x, z) + colosseumVerticalHalfExtent(part.dimensions) + lift, z], yaw: alignedYaw };
 }
 
 export function colosseumInsideArena(x: number, z: number, margin = 1.08): boolean {
@@ -173,15 +190,21 @@ export function colosseumCraneRigAt(part: ColosseumPart, state: ColosseumPartSta
   const staged = stagingPose(part);
   const half = colosseumVerticalHalfExtent(part.dimensions);
   const hook: Vec3 = [state.position[0], state.position[1] + half, state.position[2]];
-  const deckY = colosseumWorkingDeckY(part, staged[0], staged[2]);
-  const boomY = Math.max(hook[1] + 0.9, deckY + 7.5);
-  const boomTip: Vec3 = [state.position[0], boomY, state.position[2]];
-  const mastTop: Vec3 = [staged[0], boomY, staged[2]];
-  const base: Vec3 = [staged[0], deckY, staged[2]];
-  const yaw = Math.atan2(state.position[0] - staged[0], state.position[2] - staged[2]) || state.rotation[1];
-  const lateralX = Math.cos(yaw);
-  const lateralZ = -Math.sin(yaw);
-  const treadwheel: Vec3 = [base[0] - Math.sin(yaw) * 1.6 + lateralX * 1.2, deckY + 2.1, base[2] - Math.cos(yaw) * 1.6 + lateralZ * 1.2];
+  // Station is authored from the destination, never from the animated hook.
+  // A transverse offset leaves a nonzero jib radius at the loading floor.
+  const stationYaw = part.finalRotation[1];
+  const baseX = staged[0] + Math.cos(stationYaw) * 6;
+  const baseZ = staged[2] - Math.sin(stationYaw) * 6;
+  const deckY = Math.max(colosseumTerrainHeightAt(baseX, baseZ) + .42, colosseumWorkingDeckY(part, baseX, baseZ));
+  const mastY = Math.max(part.finalPosition[1] + half + hoistClearance(part) + 1.2, staged[1] + half + 1.2, deckY + 7.5);
+  const base: Vec3 = [baseX, deckY, baseZ];
+  const mastTop: Vec3 = [baseX, mastY, baseZ];
+  const reach = Math.max(Math.hypot(staged[0] - baseX, staged[2] - baseZ), Math.hypot(part.finalPosition[0] - baseX, part.finalPosition[2] - baseZ));
+  const jibLength = reach + 1.5;
+  const radius = Math.hypot(hook[0] - baseX, hook[2] - baseZ);
+  const boomTip: Vec3 = [hook[0], mastY + Math.sqrt(Math.max(0, jibLength ** 2 - radius ** 2)), hook[2]];
+  const yaw = Math.atan2(hook[0] - baseX, hook[2] - baseZ);
+  const treadwheel: Vec3 = [baseX - Math.sin(stationYaw) * 1.6 + Math.cos(stationYaw) * 1.2, deckY + 2.1, baseZ - Math.cos(stationYaw) * 1.6 - Math.sin(stationYaw) * 1.2];
   return { base, mastTop, boomTip, hook, yaw, treadwheel };
 }
 
@@ -210,7 +233,7 @@ export function colosseumScaffoldStackHeightAt(t: number): number {
     if (factor <= 0) continue;
     const rise = window.storey === 3 ? 8.4 : COLOSSEUM_STOREY_HEIGHT;
     const base = window.storey <= 0 ? 0 : COLOSSEUM_FOUNDATION_HEIGHT + window.storey * COLOSSEUM_STOREY_HEIGHT;
-    height = Math.max(height, base + rise * factor);
+    height = Math.max(height, t >= window.strikeFrom ? (base + rise) * factor : base + rise * factor);
   }
   return height;
 }
@@ -259,12 +282,15 @@ export interface ColosseumScaffoldBay {
 }
 
 export function colosseumScaffoldsAt(t: number): ColosseumScaffoldBay[] {
-  const raw = colosseumScaffoldStackHeightAt(t);
-  if (raw < COLOSSEUM_SCAFFOLD_SEGMENT * 0.5) return [];
-  const segmentCount = Math.max(1, Math.floor(raw / COLOSSEUM_SCAFFOLD_SEGMENT));
-  const height = segmentCount * COLOSSEUM_SCAFFOLD_SEGMENT;
   const bays: ColosseumScaffoldBay[] = [];
   for (let station = 0; station < COLOSSEUM_SCAFFOLD_STATIONS; station += 1) {
+    // Each station strikes on its own clock, all the way down to ground.
+    const raw = t >= .9
+      ? colosseumScaffoldStackHeightAt(.899999) * (1 - clamp((t - .9 - station * .0008) / .084))
+      : colosseumScaffoldStackHeightAt(t);
+    const segmentCount = Math.floor(raw / COLOSSEUM_SCAFFOLD_SEGMENT);
+    if (segmentCount < 1) continue;
+    const height = segmentCount * COLOSSEUM_SCAFFOLD_SEGMENT;
     const theta = (station / COLOSSEUM_SCAFFOLD_STATIONS) * Math.PI * 2 - Math.PI / 2;
     const [x, z] = ellipsePoint(COLOSSEUM_A + 7.4, COLOSSEUM_B + 6.6, theta);
     const footY = colosseumTerrainHeightAt(x, z);
@@ -368,12 +394,12 @@ export function colosseumPartStateAt(
     };
   }
   if (phase === 'hauled') {
-    const position = haulPose(part, route, local);
+    const { position, yaw } = haulPose(part, route, local);
     return {
       phase,
       visible: true,
       position,
-      rotation: [0, Math.atan2(position[0] - COLOSSEUM_QUARRY[0], position[2] - COLOSSEUM_QUARRY[2]), 0],
+      rotation: [0, yaw, 0],
       scale: [1, 1, 1],
       support: 'wagon-bed',
       mechanism: 'wagon',

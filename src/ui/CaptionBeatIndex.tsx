@@ -46,7 +46,7 @@ export function CaptionBeatIndex({
   const currentBeatId = beats.find(beat => captionBeatProgressAt(beat, t) === 'current')?.id ?? null;
 
   useEffect(() => {
-    if (!isEiffel || !currentBeatId) return;
+    if (!currentBeatId) return;
     const nav = navRef.current;
     const button = nav?.querySelector<HTMLElement>('[aria-current="true"]');
     if (!nav || !button || nav.clientHeight <= 0) return;
@@ -55,7 +55,7 @@ export function CaptionBeatIndex({
     const bottom = top + box.height;
     if (top < nav.scrollTop) nav.scrollTop = Math.max(0, top);
     else if (bottom > nav.scrollTop + nav.clientHeight) nav.scrollTop = bottom - nav.clientHeight;
-  }, [currentBeatId, isEiffel]);
+  }, [currentBeatId, expanded]);
 
   const jumpTo = (from: number) => {
     if (compact && expanded) {
@@ -90,7 +90,7 @@ export function CaptionBeatIndex({
       aria-label="Film chapters"
       data-testid="caption-beat-index"
       data-expanded={expanded}
-      className={`max-w-[19rem] ${compact ? 'eiffel-compact-index-nav' : ''} ${isEiffel ? 'max-h-[18dvh] overflow-y-auto pr-2 md:max-h-[min(22rem,32dvh)]' : ''} ${isEiffel && edit === 'cinematic' ? 'eiffel-short-beats' : ''}`}
+      className={`max-w-[19rem] ${compact ? 'eiffel-compact-index-nav' : ''} max-h-[18dvh] overflow-y-auto pr-2 md:max-h-[min(22rem,32dvh)] ${isEiffel && edit === 'cinematic' ? 'eiffel-short-beats' : ''}`}
       onPointerEnter={() => onHoldChrome(true)}
       onPointerLeave={() => onHoldChrome(false)}
       onFocusCapture={() => onHoldChrome(true)}

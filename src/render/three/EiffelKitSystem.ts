@@ -1,17 +1,18 @@
 import { BatchedMesh, Box3, Group, Matrix4, Mesh, MeshStandardMaterial, Quaternion, Vector3, type BufferGeometry } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import type { EiffelKitManifest, EiffelKitPart } from '../../data/eiffelKitTypes';
+import { decodeEiffelKitRuntime, type EiffelKitRuntime } from '../../data/eiffelKitRuntime';
 import type { RigidPose } from '../../engine/eiffelRigid';
 import { injectMaterialRecipe } from './proceduralDetail';
 
 export const EIFFEL_KIT_ASSET = '/models/eiffel-construction-kit/tower-kit.glb';
 export const EIFFEL_KIT_SEATED_ASSET = '/models/eiffel-construction-kit/tower-kit-seated.glb';
-export const EIFFEL_KIT_MANIFEST = '/models/eiffel-construction-kit/tower-kit.manifest.json';
+export const EIFFEL_KIT_MANIFEST = '/models/eiffel-construction-kit/tower-kit.runtime.json';
 export type EiffelKitState = { readonly phase: 'queued' } | { readonly phase: 'seated' } | { readonly phase: 'moving'; readonly pose: RigidPose };
 export type EiffelKitSampler = (part: EiffelKitPart, t: number) => EiffelKitState;
 const SEATED: EiffelKitState = { phase: 'seated' };
 const UNIT_SCALE = new Vector3(1, 1, 1);
-const COLORS: Record<string, string> = { iron: '#b78362', 'dark-iron': '#825641', deck: '#867157', masonry: '#c4b39a', gold: '#bc9560', roof: '#524f4b', window: '#66818b' };
+const COLORS: Record<string, string> = { iron: '#966044', 'dark-iron': '#684331', deck: '#867157', masonry: '#c4b39a', gold: '#bc9560', roof: '#524f4b', window: '#66818b' };
 interface DrawMember { readonly matrix: Matrix4; readonly part: number; readonly source: number; instance?: number }
 interface Batch { readonly mesh: BatchedMesh; readonly role: string; readonly shadowLod: 'major' | 'fine'; readonly compact: DrawMember[]; readonly pieces: DrawMember[]; readonly triangles: number }
 
@@ -69,7 +70,7 @@ export class EiffelKitSystem {
     const responses = await Promise.all([EIFFEL_KIT_ASSET, EIFFEL_KIT_SEATED_ASSET, EIFFEL_KIT_MANIFEST].map(url => fetch(url)));
     if (responses.some(response => !response.ok)) throw new Error('Eiffel construction kit assets could not be loaded');
     const [pieceBytes, compactBytes, manifest] = await Promise.all([
-      responses[0]!.arrayBuffer(), responses[1]!.arrayBuffer(), responses[2]!.json() as Promise<EiffelKitManifest>,
+      responses[0]!.arrayBuffer(), responses[1]!.arrayBuffer(), responses[2]!.json().then(data => decodeEiffelKitRuntime(data as EiffelKitRuntime)),
     ]);
     this.noteKitStep();
     if (manifest.schemaVersion !== 2) throw new Error('Unsupported Eiffel construction kit');
@@ -140,7 +141,8 @@ export class EiffelKitSystem {
     const roleMaterials = new Map<string, MeshStandardMaterial>();
     for (const record of records.values()) {
       if (!roleMaterials.has(record.role)) {
-        const material = new MeshStandardMaterial({ color: COLORS[record.role] ?? COLORS.iron, roughness: record.role === 'masonry' ? .92 : .57, metalness: record.role === 'masonry' ? 0 : .18 });
+        const iron = record.role === 'iron' || record.role === 'dark-iron';
+        const material = new MeshStandardMaterial({ color: COLORS[record.role] ?? COLORS.iron, roughness: record.role === 'masonry' ? .92 : iron ? .72 : .57, metalness: record.role === 'masonry' ? 0 : iron ? .08 : .18 });
         if (!['masonry', 'window', 'roof'].includes(record.role)) injectMaterialRecipe(material, 'puddled-iron');
         roleMaterials.set(record.role, material); this.materials.add(material);
       }

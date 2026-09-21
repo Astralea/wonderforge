@@ -1,0 +1,10 @@
+{
+  "preview": "http://127.0.0.1:5590",
+  "entry": "/assets/main-Ag9Y1IzO.js",
+  "modelUrl": "http://127.0.0.1:5590/models/colosseum-rome/neronian-aqueduct.glb",
+  "status": 200,
+  "bytes": 23604,
+  "magic": "glTF",
+  "matchesSource": true,
+  "sha256": "d2ef59ddc56e73412ca3302f1e5abe1919dbf6d71750f85c5451b089aa90b47d"
+}

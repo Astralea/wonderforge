@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/pyramids-of-giza/0.45",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/giza-solidity-2026-09-17/t045/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "drawingBuffer": {
+      "width": 1440,
+      "height": 900
+    },
+    "alphaPixels": 4102,
+    "variance": 191,
+    "colorBuckets": 80,
+    "metrics": {
+      "colorBuckets": 86,
+      "colorEntropyBits": 4.89,
+      "edgeDensity": 0.159,
+      "luminance": {
+        "mean": 150.4,
+        "p5": 110.5,
+        "p95": 174.3,
+        "contrast": 63.8
+      },
+      "dominantColorShare": 0.116,
+      "nonBackgroundShare": 0.884
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 160,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 258028,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 77,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 160,
+        "triangles": 258028,
+        "points": 0,
+        "lines": 8,
+        "geometries": 77,
+        "textures": 16
+      },
+      "camera": {
+        "position": [
+          -59.31152367334171,
+          68.66063470368066,
+          -94.25985691743077
+        ],
+        "direction": [
+          0.511454998145053,
+          -0.4701211521315063,
+          0.7193051419189139
+        ],
+        "fov": 35,
+        "aspect": 1.6,
+        "near": 0.5
+      },
+      "scene": "giza-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

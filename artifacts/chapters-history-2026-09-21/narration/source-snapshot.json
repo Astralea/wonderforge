@@ -1,0 +1,185 @@
+[
+  {
+    "wonderId": "pyramids-of-giza",
+    "voice": {
+      "provider": "ElevenLabs",
+      "name": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "model": "eleven_multilingual_v2",
+      "description": "Expressive mature English gentleman with a traditional British RP accent."
+    },
+    "speed": 0.92,
+    "beats": [
+      {
+        "id": "giza-khufu",
+        "from": 0.07,
+        "until": 0.19,
+        "place": "lower-right",
+        "kicker": "Khufu's pyramid",
+        "text": "Khufu's tomb rises first, built from limestone quarried on this plateau."
+      },
+      {
+        "id": "giza-roads",
+        "from": 0.215,
+        "until": 0.335,
+        "place": "upper-right",
+        "kicker": "The haul",
+        "text": "In this reconstruction, damp sand eases the passage of loaded sledges."
+      },
+      {
+        "id": "giza-ramps",
+        "from": 0.36,
+        "until": 0.48,
+        "place": "lower-right",
+        "kicker": "Raising the stone",
+        "text": "Here, ramps and levers raise each stone into place."
+      },
+      {
+        "id": "giza-khafre",
+        "from": 0.545,
+        "until": 0.675,
+        "place": "upper-right",
+        "kicker": "Khafre's pyramid",
+        "text": "Khafre, Khufu's son, builds the second great pyramid on higher ground."
+      },
+      {
+        "id": "giza-casing",
+        "from": 0.7,
+        "until": 0.82,
+        "place": "lower-right",
+        "kicker": "White limestone",
+        "text": "White casing stone came by water from the quarries at Tura."
+      },
+      {
+        "id": "giza-menkaure",
+        "from": 0.845,
+        "until": 0.935,
+        "place": "upper-right",
+        "kicker": "Menkaure's pyramid",
+        "text": "Menkaure's pyramid follows: three royal tombs, three separate reigns."
+      }
+    ]
+  },
+  {
+    "wonderId": "stonehenge",
+    "voice": {
+      "provider": "ElevenLabs",
+      "name": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "model": "eleven_multilingual_v2",
+      "description": "Warm, kind, mature British narrator with a steady delivery."
+    },
+    "speed": 0.92,
+    "beats": [
+      {
+        "id": "stonehenge-earthwork",
+        "from": 0.07,
+        "until": 0.19,
+        "place": "lower-right",
+        "kicker": "Before the stones",
+        "text": "An earthwork enclosure stood here centuries before the great stone circle."
+      },
+      {
+        "id": "stonehenge-sarsens",
+        "from": 0.215,
+        "until": 0.335,
+        "place": "upper-right",
+        "kicker": "Shaping the sarsens",
+        "text": "Hammerstones shaped the sarsens; their joints echo skilled woodworking."
+      },
+      {
+        "id": "stonehenge-pits",
+        "from": 0.36,
+        "until": 0.48,
+        "place": "lower-right",
+        "kicker": "Raising the uprights",
+        "text": "Here, ropes raise the uprights; rubble secures their bases."
+      },
+      {
+        "id": "stonehenge-lintels",
+        "from": 0.505,
+        "until": 0.625,
+        "place": "upper-right",
+        "kicker": "Across the uprights",
+        "text": "The film uses timber platforms to raise the stone lintels."
+      },
+      {
+        "id": "stonehenge-bluestones",
+        "from": 0.65,
+        "until": 0.77,
+        "place": "lower-right",
+        "kicker": "Stones from Wales",
+        "text": "Many smaller bluestones came from the Preseli Hills in Wales."
+      },
+      {
+        "id": "stonehenge-axis",
+        "from": 0.795,
+        "until": 0.915,
+        "place": "lower-right",
+        "kicker": "The solstice axis",
+        "text": "The axis marks midsummer sunrise and midwinter sunset."
+      }
+    ]
+  },
+  {
+    "wonderId": "colosseum",
+    "voice": {
+      "provider": "ElevenLabs",
+      "name": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "model": "eleven_multilingual_v2",
+      "description": "Professional British female narrator with a refined accent."
+    },
+    "speed": 0.92,
+    "beats": [
+      {
+        "id": "colosseum-valley",
+        "from": 0.07,
+        "until": 0.18,
+        "place": "lower-right",
+        "kicker": "Nero's former lake",
+        "text": "Vespasian builds an amphitheatre on the site of Nero's lake."
+      },
+      {
+        "id": "colosseum-stone",
+        "from": 0.2,
+        "until": 0.3,
+        "place": "upper-right",
+        "kicker": "Travertine from Tivoli",
+        "text": "The load-bearing piers are built from travertine quarried near Tivoli."
+      },
+      {
+        "id": "colosseum-cranes",
+        "from": 0.32,
+        "until": 0.43,
+        "place": "lower-right",
+        "kicker": "Lifting the blocks",
+        "text": "In this reconstruction, treadwheel cranes raise the heavy stone blocks."
+      },
+      {
+        "id": "colosseum-vaults",
+        "from": 0.465,
+        "until": 0.565,
+        "place": "upper-right",
+        "kicker": "Under the vaults",
+        "text": "Here, timber supports hold the vaults while the concrete sets."
+      },
+      {
+        "id": "colosseum-seating",
+        "from": 0.585,
+        "until": 0.685,
+        "place": "lower-right",
+        "kicker": "Supporting the seating",
+        "text": "Vaulted passages support the tiers of seating."
+      },
+      {
+        "id": "colosseum-titus",
+        "from": 0.805,
+        "until": 0.94,
+        "place": "lower-right",
+        "kicker": "From Vespasian to Titus",
+        "text": "Construction began under Vespasian. Titus opened the amphitheatre in AD 80."
+      }
+    ]
+  }
+]

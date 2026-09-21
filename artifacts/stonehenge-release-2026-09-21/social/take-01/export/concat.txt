@@ -1,0 +1,4 @@
+file '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/stonehenge-release-2026-09-21/social/take-01/export/01-pyramids-of-giza.mp4'
+file '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/stonehenge-release-2026-09-21/social/take-01/export/02-eiffel-tower.mp4'
+file '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/stonehenge-release-2026-09-21/social/take-01/export/03-colosseum.mp4'
+file '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/stonehenge-release-2026-09-21/social/take-01/export/04-stonehenge.mp4'

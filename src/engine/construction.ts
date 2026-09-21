@@ -5,6 +5,7 @@ import type {
   UnitScale,
   Vec3,
 } from '../data/constructionTypes';
+import { gizaCarrierPoint, gizaRampSurfaceYAt, gizaSledPoseAt } from './gizaRampSupport';
 import { clamp, easeInOutQuad, easeOutCubic } from './easing';
 
 export const CONSTRUCTION_PHASES = [
@@ -32,6 +33,10 @@ export interface ConstructionState {
   phaseProgress: number;
   position: Vec3;
   yaw: number;
+  /** Local X rotation, shared by the rigid stone and sled. */
+  pitch: number;
+  /** Runner lower-plane origin, before carrier/stone offsets. */
+  groundPosition: Vec3;
   scale: UnitScale;
   support: ConstructionSupport;
   mechanism: 'none' | 'sled' | 'cribbing';
@@ -39,7 +44,7 @@ export interface ConstructionState {
   supportY: number;
   /** Ground/ramp/deck surface below any temporary carrier. */
   groundY: number;
-  /** Height occupied by the sled or crib between groundY and supportY. */
+  /** Carrier thickness along its local up axis (pitched on an incline). */
   carrierHeight: number;
   /**
    * Height of the sled bed under the block, already included in `position`.
@@ -94,7 +99,9 @@ function pathPoints(block: ConstructionBlock, route: ConstructionRoute): Vec3[] 
   const quarrySurface = surface(quarry);
   const dressingSurface = surface(dressing);
   const queueSurface = surface(roadQueue);
-  const footSurface = surface(rampFoot);
+  const footSurface: Vec3 = route.rampSurface
+    ? [...route.rampSurface.foot]
+    : surface(rampFoot);
   const seatSurface: Vec3 = [
     block.finalPosition[0],
     block.finalPosition[1] - halfHeight,
@@ -163,15 +170,19 @@ export function constructionStateAt(
   const sledLift = phase === 'loaded' || phase === 'hauled' || phase === 'queued' || phase === 'raised'
     ? carrierHeight
     : 0;
+  const yaw = phase === 'aligned' || phase === 'seated'
+    ? block.finalYaw
+    : yawAlong(points[rawPhase]!, points[rawPhase + 1]!, block.finalYaw);
+  const pose = phase === 'raised' && route.rampSurface
+    ? gizaSledPoseAt(route, surfacePosition[0], surfacePosition[2], yaw, block.dimensions[2] * 1.65, t)
+    : { pitch: 0, ground: surfacePosition };
+  const pitch = pose.pitch;
+  const groundPosition = pose.ground;
   const position: Vec3 = complete
     ? [...block.finalPosition]
-    : [
-        surfacePosition[0],
-        surfacePosition[1] + block.dimensions[1] * 0.5 + carrierHeight,
-        surfacePosition[2],
-      ];
-  const supportY = position[1] - block.dimensions[1] * 0.5;
-  const groundY = supportY - carrierHeight;
+    : gizaCarrierPoint(groundPosition, yaw, pitch, block.dimensions[1] * 0.5 + carrierHeight);
+  const supportY = position[1] - Math.cos(pitch) * block.dimensions[1] * 0.5;
+  const groundY = groundPosition[1];
   const mechanism: ConstructionState['mechanism'] = sledLift > 0
     ? 'sled'
     : carrierHeight > 0
@@ -179,9 +190,6 @@ export function constructionStateAt(
       : 'none';
   let support = SUPPORTS[phase];
   if (phase === 'seated' && !complete) support = 'cribbing';
-  const yaw = phase === 'aligned' || phase === 'seated'
-    ? block.finalYaw
-    : yawAlong(points[rawPhase]!, points[rawPhase + 1]!, block.finalYaw);
   const contactDust =
     (phase === 'hauled' && phaseProgress > 0.08 && phaseProgress < 0.94) ||
     (phase === 'seated' && phaseProgress > 0.72);
@@ -191,6 +199,8 @@ export function constructionStateAt(
     phaseProgress,
     position,
     yaw,
+    pitch,
+    groundPosition,
     scale: [1, 1, 1],
     support,
     mechanism,
@@ -202,6 +212,28 @@ export function constructionStateAt(
     visible: t >= block.start,
     crewOperationId: `operation:${block.id}`,
   };
+}
+
+/** Feet and rope hands sample their own horizontal contact, never the load origin. */
+export function gizaOperationGroundYAt(
+  operation: ActiveConstructionState,
+  x: number,
+  z: number,
+  t: number,
+): number {
+  const { block, route, state } = operation;
+  if (state.phase === 'raised' && route.rampSurface) {
+    return gizaRampSurfaceYAt(route.rampSurface, x, z, t);
+  }
+  const points = pathPoints(block, route);
+  const phaseIndex = CONSTRUCTION_PHASES.indexOf(state.phase);
+  const a = points[phaseIndex]!;
+  const b = points[phaseIndex + 1]!;
+  const dx = b[0] - a[0]; const dz = b[2] - a[2];
+  const lengthSquared = dx * dx + dz * dz;
+  if (lengthSquared < 1e-8) return state.groundY;
+  const through = clamp(((x - a[0]) * dx + (z - a[2]) * dz) / lengthSquared);
+  return lerp(a[1], b[1], through);
 }
 
 export function activeConstructionStatesAt(

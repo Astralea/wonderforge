@@ -1,3 +1,523 @@
+## Public announcement and owner pause — 2026-09-21 (latest)
+
+The owner reports posting the release on X:
+https://x.com/auracanvas/status/2101919244527260018
+The web reader returned HTTP 403, so the published post was not independently
+inspected; the draft and selected Moon-v2 montage were reviewed beforehand.
+
+The owner wants to pause WonderForge at this release and return to the
+opera-house scene when more token allowance is available. Do not treat the
+earlier remaining-polish lists as an instruction to continue implementation
+now. Keep the current four-film release and private repository as they are.
+Any later opera-house work should begin with the then-current spec and scope.
+Three.js forum Showcase was suggested as one optional additional sharing
+venue; no forum post or other broadcast was authorized or performed.
+
+Current production, narration and upload-video details follow below.
+
+## Colosseum narration returns to construction — 2026-09-21 (preceding)
+
+The owner rejected the sky-only final narration. The earlier assistant chapter
+rewrite introduced it; the historical review missed relevance to construction.
+Read `artifacts/colosseum-narration-repair-2026-09-21/REPORT.md`, the final
+`CHAPTER-SCRIPTS.md` and its historian/browser/deployment evidence.
+
+Colosseum now has six chapters. The first four are unchanged; seating now says
+“Vaulted passages support the tiers of seating.” The final line is
+“Construction began under Vespasian. Titus opened the amphitheatre in AD 80.”
+It runs in film .805–.94, after work finishes at .8. Remove the retired
+`colosseum-moonrise` active caption/voice binding; preserve the visual Moon and
+quiet final hold. Specs 12/49/50 require construction relevance as well as
+factual accuracy. Atmosphere alone cannot justify a narrated chapter; there is
+no quota. Stonehenge's documented design alignment remains a valid subject.
+
+Only the two changed lines were regenerated with selected ElevenLabs Andrea
+Williams, Multilingual v2, speed .92. Encoded durations: seating 3.250794 s,
+final 6.176508 s; both meet existing loudness and tail contracts. Sixteen other
+current historical audio hashes are unchanged; all old files and before-state
+manifests are preserved. Current Giza/Stonehenge/Colosseum bindings total 18.
+
+**245 files / 1,313 tests pass**, 214.80 s, two workers; typecheck/build/diff-check
+pass. All 12 desktop/portrait Colosseum natural voice plays, six chapter entries,
+new caption placement, reverse/completed seeks, replay and narration-free final
+hold pass. Media output was muted for programmatic verification; do not claim
+subjective listening or physical-device performance.
+
+Stable `https://wonderforge.pages.dev/` now serves byte-verified `main-DI8gduTV.js`,
+deployment `76d1ae23-24fc-444a-88bb-56192c80df08`, immutable URL
+`https://76d1ae23.wonderforge.pages.dev/`. All 18 selected narration hashes and
+the unchanged NASA Moon image/social metadata pass public HTTP verification.
+Both new recordings also pass public natural playback on desktop and portrait,
+with correct six-entry menus and an un-narrated final hold; zero errors.
+No commit/push, visibility change or Twitter post. The music-only Moon-v2
+montage linked below remains the upload file; it contains no narration.
+
+## Colosseum lunar surface repaired and deployed — 2026-09-21 (preceding)
+
+The owner requested a recognizable lunar surface before uploading the release.
+Read `artifacts/colosseum-moon-surface-2026-09-21/REPORT.md` and its visual,
+research, deployment and social evidence. This supersedes the public bundle and
+upload-video locations in the preceding entry; earlier evidence is preserved.
+
+Colosseum's projected Moon sphere now uses the unchanged 139,068-byte NASA
+1024×512 lunar map, spherical albedo projection, tilted surface orientation and
+bounded reflected brightness. Broad maria are visible at native desktop and
+portrait sizes, with the solar-looking halo removed. The camera, Moon/Sun sky
+positions, apparent sizes, near-full waning phase and film clock are unchanged.
+The surface is a mean-nearside approximation, not full date-specific libration.
+Preserve the compact local asset, source metadata/Info credit, ready/fallback
+and late-load disposal contracts. Specs 00/12 record the exception to procedural
+assets and its scope. No Meshy model or runtime NASA request is involved.
+
+**245 files / 1,313 tests pass**, two workers, 224.01 s; typecheck/build/diff-check
+pass. Nine Moon comparisons and three pixel-identical daytime captures pass.
+Desktop/portrait reverse seeking, normal closing playback, image loading and
+Info credit checks pass. A failed-image fallback and leaving a pending image
+via browser hash navigation also pass. Public Moon crops are pixel-identical to
+the accepted candidate. This is host-browser QA, not physical-phone acceptance.
+
+Stable `https://wonderforge.pages.dev/` now serves `main-D06KFf-n.js` and
+`/assets/lroc-color-poles-1k-RRPljFYe.jpg`, both verified byte-for-byte.
+Production deployment `a4441d6d-aac3-4670-8f1a-8b81f1e03e04`, immutable URL
+`https://a4441d6d.wonderforge.pages.dev/`. All 19 selected narration hashes and
+social/media checks remain valid. Existing production branch was used for a
+direct upload from the dirty workspace. No commit/push; repository stays PRIVATE.
+
+Use `artifacts/colosseum-moon-surface-2026-09-21/social/wonderforge-four-films-20s-moon-v2.mp4`
+for the announcement. Only Colosseum 54–59 s was recaptured from the public new
+bundle; the other three clips and instrumental AAC are preserved byte-for-byte.
+20.000 s, 600 frames, 1080p30 H.264/AAC, 18,290,183 bytes; SHA-256
+`3e9ded3a44efe80b3a78eeaa7f41a91f1cf8f40249f37a9b2450b9ca43b6cc0b`.
+Decoded Moon crops and contact sheet pass. Browser playback reaches 20 s with
+600 decoded frames, zero media errors/corruption, and 2 dropped display frames
+in the shared-GPU check. No new subjective audio review or Twitter post claimed.
+
+## Stonehenge fixed, production deployed, montage exported — 2026-09-21 (preceding)
+
+The owner authorized the small Stonehenge repair, Cloudflare update and a
+20-second montage. Read `artifacts/stonehenge-release-2026-09-21/REPORT.md`.
+This supersedes the pending Sun fix and stale-public-bundle status below.
+
+Stonehenge's 35° FOV camera now eases a 2.3° pitch correction into t=.68–.78.
+The full Sun clears the 6vh letterbox with at least 1.95vh extra room; preserve
+the solar direction/radius, solstice bearing and unchanged 42° portrait shot.
+The spec and new solar-rim/stone-envelope/continuity regressions document the
+contract. Eighteen final production captures cover five sizes, including 1080p.
+
+**242 files / 1,302 tests pass**, two workers, 205.07 s; typecheck/build/diff-check
+pass. Public `https://wonderforge.pages.dev/` now serves `main-BR6Phg3M.js`,
+byte-identical to the checked dist. Production deployment
+`72a758be-1b8c-4c2a-a875-3373786bb6db` has immutable URL
+`https://72a758be.wonderforge.pages.dev/`. This was direct upload from the dirty
+workspace on existing production branch `wonders/quality-colosseum-stonehenge-petra`.
+The displayed Git base 84f1767 does not include all uploaded changes. No commit
+or push was made; preserve existing work. Repository remains PRIVATE.
+
+Post-deployment HTTP checks verify all 19 selected narration hashes/content
+types, OG/Twitter metadata, social-image/sample-model bytes and cache headers.
+All 8 public desktop/portrait film checks pass: launch, ready render, pause,
+pointer seek, play, endpoint reverse, chapters and home. Historical first-clip
+decode/progression matches the selected voices. Zero browser/asset/media errors.
+Public Stonehenge final screenshots show the complete Sun at both sizes.
+This remains host-browser viewport emulation, not physical-phone acceptance.
+
+The montage was captured AFTER deployment from the exact public bundle's own
+renderer: Giza 27–32 s, Eiffel 18–23 s, Colosseum 54–59 s, Stonehenge 55–60 s. The export
+is `artifacts/stonehenge-release-2026-09-21/social/take-01/export/wonderforge-four-films-20s.mp4`:
+20.000 s, 600 frames, 1920×1080, 30 fps, H264/yuv420p, AAC stereo, 18,285,094 bytes.
+It uses the existing Stonehenge instrumental score 40–60 s with fades and no
+narration; raw rendered PNGs and capture provenance are retained. Read the
+social report/validation for final visual and media checks. The contact sheet
+passes visual inspection; the final MP4 plays to its natural 20-second end with
+600 decoded frames, zero dropped/corrupted frames and zero media errors. A
+byte-identical delivery copy is at `social/wonderforge-four-films-20s.mp4` under
+the same release directory. Draft tweet:
+`artifacts/stonehenge-release-2026-09-21/TWITTER-POST.txt`. No Twitter post made.
+
+## Four-film release review — 2026-09-21 (preceding review)
+
+Read `artifacts/review-board/release-2026-09-21/RELEASE-REVIEW.md` before a public
+announcement. This was a read-only application review; the current candidate is
+still `main-D8RR7sSY.js`, with 1,299 tests/typecheck/build passing from the exact
+preceding build. No application edits, deploy, push or Twitter post were made.
+
+Recommendation: first public preview after a small Stonehenge ending-camera
+correction and deployment of the reviewed candidate. The desktop Sun disc is
+clipped by the permanent 6vh top letterbox at .8 through1; do not confuse the
+previous caption-clearance acceptance with full-disc framing. Geometry, source
+references and camera-only correction guidance are in the Giza/Stonehenge role
+report. Preserve solar direction, solstice axis and the portrait composition.
+Other findings (broad Colosseum worksite, Giza haze/ramp material, Eiffel dense
+closeups and large download) are preview-level polish, not a call for a new
+scene rebuild. The full formal Spec04 visual gate is not yet passed.
+
+Actual public `https://wonderforge.pages.dev/` still serves `main-DJwnCTGh.js`;
+it lacks all three newly selected voice IDs and the local social metadata.
+A public-link check after deployment remains necessary. GitHub API confirms the
+repository is PRIVATE. The dist scan found no configured credentials or source
+maps, but delivered JS/models/audio are public, and unused authoring assets plus
+debug views remain in the package. Curate deployment copies if those should be
+excluded; preserve originals in the workspace.
+
+New review evidence includes complete 1× desktop runs of all four films,
+complete portrait Colosseum/Eiffel runs, Giza/Stonehenge portrait checkpoints,
+320px controls, reduced-motion idle, actual served assets, and repository
+visibility. Physical-phone/X embedded-browser behavior and subjective listening
+are not certified. `ANNOUNCEMENT-DRAFT.md` is a draft only.
+
+## Selected historical narrations completed — 2026-09-21 (latest)
+
+The owner increased the ElevenLabs API key allowance to 2,000,000. Generation
+succeeded; this supersedes all blocked/partial narration statuses below.
+**All 19 chapters have actual, measured selected-voice recordings:** Charles for
+Giza (6), Oliver for Stonehenge (6), Andrea Williams for Colosseum (7). The owner
+selected the three voices; the per-film mapping is the agent recommendation.
+Multilingual v2, speed 0.92. Sydney/Alice and Eiffel/Adam remain unchanged.
+
+Read `artifacts/chapters-history-2026-09-21/REPORT.md`, `CHAPTER-SCRIPTS.md`, the
+`narration/manifest.json`, and `specs/50-historical-film-chapters.md` for exact
+text, IDs, sources and measured delivery. Two overlong Oliver lines were
+shortened; chapter windows stayed fixed. Minimum encoded tail is 0.477 seconds.
+Prior takes and files are preserved, including the overlong originals.
+
+Historical narration mastering now checks encoded loudness rather than trusting
+the old filter target. It applies constant gain with an oversampled peak limiter
+to the original raw takes, compensates limiter delay, and measures/corrects the
+result. Final loudness -16.27 to -16.01 LUFS, max true peak -2.08 dBTP. No new
+synthesis was needed for mastering. Recipe `measured-limiter-v1` participates in
+asset identity; keep raw-request caching separate so mastering changes do not
+spend ElevenLabs credits again. Typed metadata, file hashes and tests pin the
+actual voice, text, duration and delivered audio measurements.
+
+Verification: **241 files / 1,299 tests pass** with two workers (225.74 s);
+typecheck, build, Python syntax and diff-check pass. Final production preview
+5590 serves `main-D8RR7sSY.js`; dev5589 remains available. The existing large
+bundle warning remains. Browser evidence in the current report's `browser/`:
+all 19 served hashes verified, all 38 desktop/portrait clip plays end naturally
+before their chapter ends, controls/seek pass for all six film/viewport pairs,
+zero browser/network/media errors or rejected play. Runtime scheduling leaves
+at least about 0.36 s in observed plays; the >=0.4 s contract is measured encoded
+duration. Browser output was muted; this is transport/decode acceptance, not a
+subjective listening assessment or physical-phone performance claim.
+
+Final Stonehenge ending captions inspected at both sizes; Sun and monument
+remain clear. All 19 listening-page controls load correct metadata, fit both
+viewports and have no errors. Listen locally:
+http://127.0.0.1:5589/artifacts/chapters-history-2026-09-21/listen.html
+The earlier selected-voice panel links to these completed recordings.
+
+Original Giza narration provenance is confirmed from ElevenLabs history:
+George, Multilingual v2, speed 0.92. Vertex/Lyria supplied background music.
+No commit, push, deployment, publication or visibility change was performed.
+
+## Owner-selected voices — 2026-09-21 (earlier blocked attempt)
+
+This supersedes the George/Daniel/Bill choices and2-of19audio status below.
+Owner supplied3ElevenLabs voices; configured assignment is Charles→Giza,
+Oliver→Stonehenge, Andrea Williams→Colosseum. ExactIDs and evidence:
+`artifacts/chapters-history-2026-09-21/REPORT.md` and `selection.json`.
+An optional mapping question was asked; this is the recommended agent assignment
+unless the owner supplies a different mapping. Delivery speed restored to0.92.
+
+**All19new selected-voice clips are blocked.** Actual retry reportsAPIkey
+“Mighty Himalayan Wolf” limit20,000, only9creditsremaining. Account balance is
+sufficient (last verified231,122). User asked to raise that key’s limit to22,000
+at ElevenLabs API Keys. Do not confuse this with needing to buy credits. No
+other provider or credential used. Runtime currently binds0newclips and stays
+silent for these3films; all previous files/rawtakes/manifests are preserved.
+
+Generator now reads typed voice assignments, preserves voice identity in cache
+validation/runtimebindings, sanitizes voice filenames, and uses an explicit
+asset schema so an empty generated list still typechecks. Narration/UI tests
+pin Charles/Oliver/Andrea names/IDs and requireall19clips with0.4stailmargin.
+Typecheck/build/diff-check/Python syntax pass; focusedtests51pass/8expected
+missing-audiofailures. Production5590 bundle`main-Ckt9D-XE.js`; dev5589 active.
+
+Original Giza recording was directly retrieved fromElevenLabs history: George,
+Multilingualv2, speed0.92. Vertex/Lyria suppliedbackgroundmusic. A playable
+comparison panel and selectedvoicepreviews live at
+`http://127.0.0.1:5589/artifacts/voice-review-2026-09-21/selected.html`.
+All3selectedpreviewplayers verifieddesktop/mobile; not new film narration.
+Resumegeneration+durationfits+all19browserplayback+fulltest/typecheck/build once
+keyallowanceavailable. No commit/push/deploy/publication.
+
+## Historical chapters and Colosseum moonrise — 2026-09-20 (latest)
+
+This entry supersedes the Jun10 crescent-moonset schedule below, preserving all
+existing housing/aqueduct/compass/render assets. Local work only; no push/deploy.
+Production preview5590: `main-CmV5abji.js`; dev5589 remains available.
+
+Read `artifacts/chapters-history-2026-09-20/REPORT.md` and `specs/50-historical-film-chapters.md`.
+Giza now has6 authored chapters, Stonehenge6 and Colosseum7. No universal number
+or inherited5-beat schedule remains. Source-backed text and measured film windows
+are in `src/data/captions.ts`; titles/quotes yield to those actual windows and
+all chapter indices scroll. Stonehenge's portrait axis caption sits below the Sun.
+
+**Outstanding:17 of19 narration clips await ElevenLabs key allowance.** Only
+Giza roads and ramps were generated before the key hit its20,000-credit cap
+(37remaining). User asked asynchronously to raise allowance about2,000credits;
+no answer received at this checkpoint. Old takes stay on disk but cannot speak
+changed captions. Do not mark this completed or weaken narration coverage tests.
+`scripts/generate-historical-narration.py` resumes raw caches, exports actual
+captions, speaks body only, measures each normalized take and writes typed
+content-addressed bindings. Main narration generator delegates these3films.
+
+Colosseum is now JulianAD80-Jun21,04:00–20:09UT1. `colosseumFilmAt` remaps work
+to finish by film.8 while Sun is above horizon; sky/camera/captions retain film
+clock. Sunset→Moonrise separation22m26s. EndMoon99.09%waninggibbous,10.23°high.
+Camera travelsSW→W→NW, finalbearing121.61°, pitch4°; Moon stays clear of header.
+Sources/geometry checks in `artifacts/colosseum-moonrise-2026-09-20/`.
+
+Verification: typecheck/build/diff-check pass; fullsuite with2workers has1,291
+passing/6failing tests (all missing narration, documented in report). Default
+parallel suite hit extra heavy Eiffel/Paris timeouts, resolved with2workers.
+All19chapter desktop+mobile visual/menu checks done; two generated voices tested
+for real browser decode/pause/resume/ended (muted, no auditory claim). Continuous
+Colosseum ending/reverse/replay/home checks pass on bothviewports. CPU3,601×7
+mapped-film budget149429desktop/107242portraitmax. No physicalphone/FPS claim.
+
+## Colosseum astronomical sky and unmirrored compass — 2026-09-20
+
+Owner rejected copying Stonehenge's centered solstitial Sun. This entry
+**supersedes the sun-hold/camera instructions immediately below**; preserve
+that earlier pass's housing/city/aqueduct assets. Implemented locally; no
+commit, push, deploy, publication or visibility change.
+
+Final bundle`main-4VdPjiiz.js` at production preview5590; dev5589 also running.
+Evidence:`artifacts/colosseum-celestial-2026-09-20/REPORT.md`, source manifest,
+JPL provenance, final production captures and review notes. Read that report
+for exact sources, assumptions, limitations, reproduction and validation.
+
+Preserve these contracts:
+- One monotone C1 clock, Julian AD80-Jun10 03:00–22:15 UT1, drives both Sun
+  and Moon. Representative date, not a dedication/weather claim. Offline
+  topocentric JPL DE441 airless positions; phase/bright limb from Moon-to-Sun
+  range vector. Physical horizon crossings; no monthly cycle in one evening.
+- Pure data stays+X east/+Y up/+Z north. Renderer reflects the Colosseum
+  content root and camera Z once; renderer celestial angle=compass−90.
+  Sky remains outside the reflected content. City culling uses mesh world
+  matrices. Do not fix parity by independently flipping a Moon graphic.
+- Sun/Moon share2.4× presentation angular enlargement. Night fill/exposure,
+  clouds and lunar albedo are authored. Ancient Earth rotation is estimated;
+  numerical interpolation errors do not imply absolute historical accuracy.
+- Camera travels southwest→south→southeast, then keeps its closing bearing
+  while pulling back at6° pitch. Sunrise, sunset and late crescent descent
+  are visible; daylight Moonrise is calculated but off-camera. No sun hold.
+- Existing sky shader draws both bodies. Solar halo fades across horizon;
+  atmospheric foreground radiance remains in front of the Moon's unlit side.
+  One shadow caster switches Sun→Moon, while solar effects track the actual
+  Sun independently. Colosseum disables sampled lens streak; others default
+  unchanged. Shadow depth1200m and small world-space bias fix long foreground
+  cutoff. Cheap separate foot-to-hip shadow silhouettes retain crew contact.
+- Late climbers use station-keyed retained scaffold bays and continuous
+  descents, not the global stack or compacted array indexes. Three cavea
+  bands remain, with4groupedsteps per band on portrait/12desktop, exact bounds.
+
+Verification:238files/1,278tests pass; final affected35tests pass; typecheck,
+build and diff-check pass. CPU3,601times×7aspects peaks174030desktop/118631
+portrait (180k/120k budgets). Fourteen production realMetal captures and actual
+UI continuous/reverse/replay/home checks pass, zero browser errors. Independent
+final visual review accepts the scoped celestial change with no remaining
+blocker (`review/FINAL-VISUAL-REVIEW.md`). Home keeps
+no loader. Phone checks are emulated, not hardware/FPS acceptance. Broader
+smooth floor/road ends, pine repetition and simple materials remain art debt.
+
+## Colosseum city variety and sun-led ending — 2026-09-20
+
+Owner asked to repair repetitive housing/flat far Rome and make sunlight a
+major ending beat, inspired by Stonehenge. Implemented and verified locally.
+Full evidence: `artifacts/colosseum-sun-city-2026-09-20/REPORT.md`; final served
+bundle `main-B0qUFHwR.js` at production preview5590 (dev5589 remains available).
+
+Preserve: four original Blender housing forms and typed shared dimensions,
+485 residences with restrained <19m heights, connected Velia/Palatine lanes,
+rotated footprint clearance and terrain foundations, original37 Caelian
+transforms, corrected +X-east/+Z-north sun ENE→south→WNW, east-side camera
+ending southeast at10.2° pitch, low4.8° western sun fully framed in last6s.
+Sky/fog share one neutralizer; one sun vector drives all light/shadow/weather.
+Western relief is explicitly authored, unnamed compression. Specs12/49 updated.
+Original sources: `scripts/generate-colosseum-housing-variants.py`, typed
+`src/data/colosseumHousing.ts`, versioned .blend plus inspection image under
+the evidence folder. `context.manifest.json` and `housing.manifest.json`
+contain current geometry/placement/hash/provenance; old evidence retained.
+
+Verification:232files/1242tests pass(211.34s); typecheck/build/diff-check pass.
+CPU3601frames×4aspects: max173324desktop/118819portrait (budgets180k/120k).
+Eight production realMetal captures, zero errors. Continuous last-quarter
+UI playback, forward/reverse seek, same canvas, replay/back-home/no-loader
+all pass on desktop and emulated portrait. No physical-phone/FPS claim.
+Independent historian and visual-director reviews accept the scoped changes.
+Remaining broad floor/road-end simplification, simple wall materials and pine
+repetition are recorded; do not claim fullAAA release readiness. Portrait
+conservative triangle headroom is only~1k. No deployment/push/visibility change.
+
+## Connected Caelian context, pipeline repair and Eiffel icon — 2026-09-20
+
+Owner rejected the isolated aqueduct, asked to inspect/update the existing scene
+pipeline, and separately rejected the Eiffel icon summit. Both changes are
+implemented locally; no deployment or push.
+
+**Pipeline:** Spec07 already forbade disconnected props, but Specs10–14 pointed
+to an absent `wonderforge-scene-builder` skill. Spec49 now supplies the maintained
+entry: evidence/compass → connected context plan → whole-scene blockout →
+Blender kit/manifest → deterministic engine/Three.js → numerical and full-film
+acceptance. AGENTS and old scene-spec links point to it. Require named utility
+endpoints, access, shared footprints and whole-scene acceptance before treating
+asset detail as finished. This does not recreate the missing skill verbatim.
+
+**Rome:** `colosseumUrbanContext.ts` typed data and pure engine functions join
+the relocated original28-pier Blender arcade to a compressed Claudian precinct
+on the western Caelian. Added grounded terrace, north stair/approach, schematic
+temple/portico, streets and37 smaller original-Blender courtyard fronts with
+shared footprint exclusion and level foundations. Corrected Aventine/Quirinal/
+Viminal compass positions; added Velia/Oppian relief without changing the
+working floor inside140m. The near arcade now continues upstream through a
+one-draw,2,766-triangle silhouette tier;230 bays were necessary to hide the
+terminal boundary at320×844 too. Exact plots, temple elevation/columns,
+precinct scale and straight distant route are explicitly authored compression.
+No Colosseum supply, functioning Neronian fountain, exact AD80 restoration
+state or later Palatine bridge is claimed.
+
+**Eiffel icons:** only Eiffel's catalog/arrival drawing changed: compact1889
+gallery/campanile/lantern, short flagstaff and refined taper/platforms. Actual
+24/32/38.4px and loading0/50/100 checks, six alpha probes and clean desktop/mobile
+browser hover/focus/wave/reduced-motion checks passed. Other nine entries and
+shared timing remain unchanged. Home still has no loader; film600ms minimum
+remains. Read `artifacts/eiffel-icon-recut-2026-09-20/REPORT.md`.
+
+**Frozen-source checks:**230 files /1,232 tests pass (230.39s); typecheck/build
+pass. Local production http://127.0.0.1:5590/ serves `main-Boi6IwOt.js`.
+3,601-frame sweeps at1.6/16:9/390×844 peak160,744/162,394/118,656 submitted
+triangles including shadows, within180k/120k. Production Chromium captured
+t=0,.58,.86,1 at1280×720 and390×844, real Apple M2 Ultra Metal, zero console/page
+errors. Actual captured peaks102 calls/145,936 triangles desktop and82/103,605
+mobile. These mobile checks are emulation, not phone hardware performance.
+Forward/reverse seek, same-canvas replay and return to a loader-free catalog
+also passed. CUA remains unavailable; the project's Playwright inspector works.
+
+Read-only historian/visual-director review accepts the isolated-arcade repair;
+portrait late shots crop the receiving precinct, while showing continuous
+upstream/urban fabric. Remaining broader Rome debt: repetitive houses, empty
+gaps elsewhere, ochre atmosphere, schematic precinct, long diagonal far arcade;
+temporal shimmer is not independently visually accepted. Do not claim full
+Rome/AAA release readiness from this scoped pass. Existing dirty work/evidence
+is preserved. Report, relationship/asset manifest, plan and before/after frames:
+`artifacts/rome-context-2026-09-20/REPORT.md`.
+
+---
+
+## Blender aqueduct and ten-icon redraw — 2026-09-20
+
+Owner requested a better Roman aqueduct with Blender models, then explicitly
+expanded hover/catalog and loading icon improvements to all ten wonders.
+Both are implemented locally. The broader Rome city layout remains a separate
+future pass, grounded by the prior history review. No deployment or push.
+
+Aqueduct: original `public/models/colosseum-rome/neronian-aqueduct.glb` (23,604 B),
+editable source and inspection render in `artifacts/colosseum-aqueduct-2026-09-20/`.
+Reproduce with `scripts/blender_colosseum_aqueduct.py` in background Blender;
+the owner's connected desktop scene is untouched. Corrects a 90-degree span
+orientation error, alternating unsupported tops and absent channel. Neronian
+7.75 m clear spans / 2.30 × 2.10 m piers, shared continuous grade, grounded
+variable-height supports, closed terminal spandrels. Original Blender kit has
+desktop/portrait arch meshes, one shared brick material, 4 main draws, no remote
+shadow pass. `ColosseumAqueduct.ts` owns loading/fallback/LOD/disposal;
+`aqueductMaterial.ts` adds filtered straight/radial brickwork without textures.
+Spec 12 records historical basis and authored dimensions/route limits.
+
+Ten SVG icon families updated in WonderGlyph and wonderArrivalDrawings;
+WonderArrival now supports even-odd architectural holes for surfaces and wave
+clipping. No timing/CSS/reduced-motion changes. Homepage still has no loader;
+films retain the 600 ms minimum. See `artifacts/colosseum-icon-2026-09-20/ICON-REPORT.md`
+and all-ten size/loading contact sheets. 24 independent SVG alpha checks pass.
+
+Final frozen-source verification: **227 files / 1,218 tests passed**, 217.64 s;
+typecheck and production build passed. Production entry `main-Ag9Y1IzO.js`;
+local preview http://127.0.0.1:5590/ serves matching model bytes. Full 3,601-frame
+CPU sweep per viewport peaks at 179,824 desktop / 119,916 portrait triangles,
+including shadow casters; these are not GPU/FPS measurements.
+
+Browser acceptance is still pending: CUA returned no surfaces and native-pipe
+startup failure. Need desktop/mobile in-film composition, GPU shader compile,
+orbit shimmer, live icon hover/wave and renderer telemetry after reconnection.
+Blender inspection and SVG rasterization do not substitute for browser QA.
+Read `artifacts/colosseum-aqueduct-2026-09-20/REPAIR-REPORT.md` and its validation
+logs. Recommend finishing this review before Twitter promotion; no full-city
+rebuild is required for a clearly scoped preview. Existing prior dirty work
+and generated evidence preserved.
+
+---
+
+## Homepage without loading animation and Rome research — 2026-09-20
+
+Latest owner correction: homepage ambient must show no loading animation.
+ThreeCanvas now renders arrival only in cinematic mode and bypasses its
+presentation timer for ambient. Title/catalog stays available while the world
+prepares. Cinematic retains the 600 ms readiness-capped fill plus the 100 ms
+completed frame. Reduced-motion ambient paints initially and when ready,
+without spinning a hidden loading timer; failure recovery remains.
+
+Specs 05/48 updated first. Regression checks cover no loader before/during/after
+ambient readiness, no playback-gate mutation, reduced-motion readiness repaint,
+and the retained cinematic minimum. Full suite: 226 files / 1,210 tests passed
+(216.12 s), typecheck and build passed. New production entry:
+`main-DgHQ6sM_.js`. Preview on http://127.0.0.1:5590/ serves the rebuilt output.
+Logs: `artifacts/home-no-loader-2026-09-20/validation/`.
+CUA still returns no surfaces with a native-pipe startup failure, so no new
+desktop/mobile browser acceptance. No deployment or push.
+
+Owner also asked whether Sydney was updated and why Colosseum looks too empty.
+Sydney has earlier shell/harbour work but remains In production; this correction
+does not change it. Read-only historian review confirms the central-Rome
+lakebed location, surrounding imperial/civic terrain, and later-monument
+exclusions. Existing Rome has generic lot kinds, a broad uniform clearance,
+missing Velia/Oppian definition, and reversed compass placement of several far
+hills. City reconstruction is not implemented by this research pass.
+Read `artifacts/home-no-loader-2026-09-20/rome-history-review.md` for sources,
+code evidence and proposed direction before any city rebuild.
+
+---
+
+## Four-film repair and minimum arrival — 2026-09-20
+
+Owner accepted the public-release audit repair recommendation, then requested
+an arrival animation of at least 600 ms. Spec 48 records scope and acceptance.
+
+Implemented shared physical ramp support and <=15-degree terminal routes for
+Giza; rigid Stonehenge butt/rope/bearing and grounded crib repairs; continuous
+Colosseum haul, fixed crane/support, progressive scaffold strike, horizon,
+portrait framing and geometry/shadow budgets; lossless Eiffel runtime assets,
+safer higher load-view camera and darker iron. Shared mobile Chapters,
+quote/reveal safe areas, About quotes, endpoint Replay and disposal are fixed.
+
+Arrival now caps its fill by real preparation and a 600 ms presentation ramp,
+shows 100% for 100 ms, then releases playback. Slow loads stay real; failure and
+reduced-motion completion stop RAF. The Paris reader handles raw gzip and
+fetch-decoded GLB (Vite sets Content-Encoding: gzip). `prebuild` regenerates
+runtime assets via `npm run prepare:assets`; keep both authoring originals.
+
+Current production build: `main-Bgtdl_tC.js`, local preview
+http://127.0.0.1:5590/ (loopback only). Dev preview remains on 5589. Typecheck and
+build passed; the final frozen-source suite passed 226 files / 1,209 tests. No deployment,
+push, visibility change or post in this repair pass. The earlier public build
+remains unchanged.
+
+**Final visual acceptance is outstanding.** CUA lost its browser/native
+connection during Eiffel review and returned no available surfaces after
+reset. Root requested reconnection. Accepted current 390×844 captures verify
+Stonehenge solstice caption/fill and Colosseum horizon/framing; final Giza
+routes, Eiffel camera/material, Colosseum shadow pass and production desktop
+checks are pending. Last viewport override 1440×900; reset after reconnection.
+Do not convert CPU geometry/contact tests into claims of physical-phone FPS,
+continuous visual causality, audio validation or social crawler readiness.
+
+Read `artifacts/public-film-repair-2026-09-20/REPAIR-REPORT.md` for evidence,
+remaining checks, exact checkpoints, byte counts and scoped delegate notes.
+All work is uncommitted. Pre-existing dirty narration manifest and earlier
+untracked artifacts were preserved. No source/artifact deletion.
+
+---
+
 ## Public Cloudflare Pages — 2026-09-20
 
 Owner asked to publish the four On site films. Direct-upload Pages project

@@ -1,16 +1,18 @@
 import { Fog, Vector3 } from 'three';
 import type { Wonder } from '../../data/types';
 import { gizaSunStateAt, sampleGizaSky } from '../../data/gizaSky';
-import { colosseumSunStateAt, sampleColosseumSky } from '../../data/colosseumSky';
+import { sampleColosseumSky } from '../../data/colosseumSky';
 import { samplePetraSky, petraSunStateAt } from '../../data/petraSky';
 import { sampleStonehengeSky, stonehengeSunStateAt } from '../../data/stonehengeSky';
 import { sampleSydneySky, sydneySunStateAt } from '../../data/sydneySky';
 import { sampleEiffelSky, eiffelSunStateAt } from '../../data/eiffelSky';
 import { cameraStateAt } from '../../engine/camera';
-import { lightStateAt } from '../../engine/daynight';
+import { lightStateAt, lerpColor } from '../../engine/daynight';
+import { colosseumLightState } from '../../engine/colosseumLighting';
 import { sampleEiffelCinematicAtmosphere } from '../../engine/eiffelCinematicAtmosphere';
 import { clamp } from '../../engine/easing';
 import { gizaAmbientOrbitAt, gizaCinematicShotAt } from '../../engine/gizaCamera';
+import { colosseumFilmAt } from '../../engine/colosseumFilm';
 import { colosseumCinematicShotAt } from '../../engine/colosseumCamera';
 import { petraCinematicShotAt } from '../../engine/petraCamera';
 import { stonehengeCinematicShotAt } from '../../engine/stonehengeCamera';
@@ -37,6 +39,7 @@ import { readRendererDiagnostics } from './diagnostics';
 
 export class WorldScene {
   private readonly pipeline: RenderPipeline;
+  private celestialDiagnostics?: Record<string, unknown>;
   private readonly materials: MaterialLibrary;
   private readonly giza?: GizaWorld;
   private readonly stonehenge?: StonehengeWorld;
@@ -66,6 +69,9 @@ export class WorldScene {
       this.petra = new PetraWorld(this.materials);
       this.pipeline.scene.add(this.petra.group);
     } else if (this.worldKind === 'colosseum') {
+      // Fine distant roof lines and the quiet sky should not crawl under grain.
+      this.pipeline.setFilmGrain(0.008);
+      this.pipeline.setLensStreakEnabled(false);
       this.colosseum = new ColosseumWorld(this.materials);
       this.pipeline.scene.add(this.colosseum.group);
     } else if (this.worldKind === 'sydney') {
@@ -201,12 +207,12 @@ export class WorldScene {
       this.pipeline.scene.fog.far = shot.radius * 3.6 * fogStretch;
     }
     const azimuth = shot.azimuth + ((orbitElapsed ?? 0) / 110) * Math.PI * 2;
-    const target = new Vector3(...shot.target);
+    const target = new Vector3(shot.target[0], shot.target[1], -shot.target[2]);
     const horizontal = Math.cos(shot.pitch) * shot.radius;
     this.pipeline.camera.position.set(
       target.x + Math.cos(azimuth) * horizontal,
       target.y + Math.sin(shot.pitch) * shot.radius,
-      target.z + Math.sin(azimuth) * horizontal,
+      target.z - Math.sin(azimuth) * horizontal,
     );
     this.pipeline.camera.fov = shot.fov;
     this.pipeline.camera.lookAt(target);
@@ -291,7 +297,10 @@ export class WorldScene {
       light.sun.color = downlandSky.sunTint;
       light.sky = downlandSky.horizon;
       light.fog = downlandSky.horizon;
-      light.ambient.skyColor = downlandSky.zenith;
+      // Broad neutral skylight keeps the stone faces readable against the
+      // solstice backlight; the authored key still owns the long axis shadows.
+      light.ambient.skyColor = '#c5cdd4';
+      light.ambient.intensity = Math.max(0.64, light.ambient.intensity + 0.2);
       // Target data owns the humid aerial perspective. Keep it below the old
       // global wash so the blue upper dome survives the cinematic grade.
       this.pipeline.setAtmosphere(downlandSky.haze);
@@ -299,7 +308,7 @@ export class WorldScene {
       // enough that the solstice throw on the turf stays a hard axis line.
       if (sun.elevation < 22) {
         const dusk = Math.min(1, (22 - sun.elevation) / 18);
-        light.ambient.intensity = Math.min(0.5, light.ambient.intensity + 0.05 + dusk * 0.1);
+        light.ambient.intensity = Math.min(0.8, light.ambient.intensity + dusk * 0.12);
         light.sun.intensity *= 1 - dusk * 0.1;
         this.pipeline.setShadowSoftness(dusk * 0.28);
       } else {
@@ -327,28 +336,19 @@ export class WorldScene {
         this.pipeline.setShadowSoftness(0);
       }
     } else if (valleySky) {
-      const sun = colosseumSunStateAt(lightT);
-      light.sun.azimuth = sun.azimuth;
-      light.sun.elevation = sun.elevation;
-      light.sun.color = valleySky.sunTint;
-      light.sky = valleySky.horizon;
-      light.fog = valleySky.horizon;
-      light.ambient.skyColor = valleySky.zenith;
+      Object.assign(light, colosseumLightState(valleySky));
       this.pipeline.setAtmosphere(valleySky.haze * 0.82);
-      // Cooler fill keeps shaded brick and travertine from collapsing into
-      // one dusty family; the key stays warm and a hair stronger so the
-      // arcade reads in raking sun.
-      light.ambient.skyColor = '#c4d0da';
-      light.ambient.intensity = Math.min(0.74, light.ambient.intensity + 0.22);
-      light.sun.intensity = Math.max(light.sun.intensity, 1.18);
-      if (sun.elevation < 22) {
-        const dusk = Math.min(1, (22 - sun.elevation) / 16);
-        light.ambient.intensity = Math.min(0.8, light.ambient.intensity + dusk * 0.1);
-        light.sun.intensity *= 1 - dusk * 0.1;
-        this.pipeline.setShadowSoftness(dusk * 0.4);
-      } else {
-        this.pipeline.setShadowSoftness(0);
-      }
+      this.pipeline.setShadowSoftness(clamp((22 - valleySky.astronomy.sun.elevationDegrees) / 16) * .4);
+      this.celestialDiagnostics = {
+        t: valleySky.t,
+        julianDayUt1: valleySky.astronomy.julianDayUt1,
+        calendar: 'Julian', timeScale: 'UT1', angularScale: 2.4,
+        sun: valleySky.astronomy.sun, moon: valleySky.astronomy.moon,
+        key: light.keyLight ? 'moon' : 'sun',
+        constructionT: colosseumFilmAt(lightT).constructionT,
+        workComplete: colosseumFilmAt(lightT).constructionT === 1,
+        keyVisibility: (light.keyLight ?? light.sun).visibility,
+      };
     } else if (harbourSky) {
       const sun = sydneySunStateAt(lightT);
       light.sun.azimuth = sun.azimuth;
@@ -397,7 +397,9 @@ export class WorldScene {
     } else if (riftSky) {
       this.pipeline.setEnvironmentNeutralizers('#cbb49a', '#efe6d8', '#a35c38');
     } else if (valleySky) {
-      this.pipeline.setEnvironmentNeutralizers('#cbb49a', '#efe6d8', '#9a5a42');
+      const night = clamp(-valleySky.astronomy.sun.elevationDegrees / 12);
+      this.pipeline.setEnvironmentNeutralizers(valleySky.fogNeutralizer,
+        lerpColor('#dbe5ef', '#8a9bb5', night), lerpColor('#727767', '#4a566b', night));
     } else if (harbourSky) {
       this.pipeline.setEnvironmentNeutralizers('#3a7a9c', '#d8e6f0', '#8a7a6a');
     } else if (parisSky) {
@@ -406,7 +408,7 @@ export class WorldScene {
       this.pipeline.setEnvironmentNeutralizers();
     }
     const sunDirection = this.pipeline.updateLight(light);
-    if (this.colosseum) applyColosseumShadow(this.pipeline.sun, sunDirection);
+    if (this.colosseum) applyColosseumShadow(this.pipeline.sun, this.pipeline.keyLightDirection);
     if (this.stonehenge) applyStonehengeShadow(this.pipeline.sun, sunDirection);
     // Deterministic detail time (water ripple), phased from playback t.
     updateMaterialDetailTime(this.materials, motionT);
@@ -426,6 +428,7 @@ export class WorldScene {
     window.__WONDERFORGE_RENDERER__ = diagnostics;
     window.__THREE_GAME_DIAGNOSTICS__ = {
       renderer: diagnostics,
+      ...(this.colosseum ? { colosseumCelestial: this.celestialDiagnostics } : {}),
       ...(this.eiffel ? {eiffelLongLoad:this.eiffel.longLoadDiagnostics,eiffelCrowd:this.eiffel.crowdDiagnostics,eiffelLighting:this.eiffel.lightingDiagnostics,eiffelGroundPlant:this.eiffel.groundPlantDiagnostics} : {}),
       camera: {
         position: this.pipeline.camera.position.toArray(),
@@ -466,7 +469,7 @@ export class WorldScene {
       this.petra.update(constructionT, light, sunDirection, riftSky!);
     } else if (this.colosseum) {
       this.updateColosseumCamera(cameraT, valleySky?.fogStretch);
-      this.colosseum.update(constructionT, light, sunDirection, valleySky!);
+      this.colosseum.update(colosseumFilmAt(constructionT).constructionT, light, sunDirection, valleySky!, this.pipeline.camera);
     } else if (this.sydney) {
       this.updateSydneyCamera(cameraT, harbourSky?.fogStretch);
       this.sydney.update(constructionT, light, sunDirection, harbourSky!);
@@ -497,7 +500,7 @@ export class WorldScene {
       this.petra.update(1, light, sunDirection, riftSky!);
     } else if (this.colosseum) {
       this.updateColosseumCamera(0.86, valleySky?.fogStretch, elapsedSeconds);
-      this.colosseum.update(1, light, sunDirection, valleySky!);
+      this.colosseum.update(1, light, sunDirection, valleySky!, this.pipeline.camera);
     } else if (this.sydney) {
       this.updateSydneyCamera((elapsedSeconds / 90) % 1, harbourSky?.fogStretch);
       this.sydney.update(1, light, sunDirection, harbourSky!);

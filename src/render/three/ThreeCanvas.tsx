@@ -5,6 +5,7 @@ import { WorldScene } from './WorldScene';
 import { WonderArrival } from './WonderArrival';
 import { arrivalStageFor } from './wonderArrivalDrawings';
 import { eiffelFilmEditSourceTAt } from '../../engine/eiffelFilmEdit';
+import { arrivalProgress, ARRIVAL_COMPLETE_HOLD_MS } from '../../engine/arrivalProgress';
 
 export type SceneMode = 'cinematic' | 'ambient';
 
@@ -17,6 +18,7 @@ export function ThreeCanvas({
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [loadPercent, setLoadPercent] = useState(0);
+  const [arrivalVisible, setArrivalVisible] = useState(mode === 'cinematic');
   const [assetError, setAssetError] = useState(false);
   const [loadStage, setLoadStage] = useState(() => arrivalStageFor(wonder.id));
 
@@ -25,6 +27,8 @@ export function ThreeCanvas({
     if (!canvas) return;
     setAssetError(false);
     setLoadPercent(0);
+    setArrivalVisible(mode === 'cinematic');
+    let arrivalStarted = 0;
     let cancelled = false;
     let startupFrame = 0;
     let stopWorld: (() => void) | undefined;
@@ -34,11 +38,15 @@ export function ThreeCanvas({
     const startWorld = () => {
       if (cancelled) return;
       let sceneReady = false;
+      let arrivalDone = mode === 'ambient';
+      let completedAt: number | undefined;
+      let displayedProgress = 0;
       const world = new WorldScene(canvas, wonder);
       const reducedMotion = window.matchMedia(
         '(prefers-reduced-motion: reduce)',
       ).matches;
       let disposed = false;
+      let failed = false;
       let frame = 0;
       let scheduled = false;
       let insideFrame = false;
@@ -46,12 +54,13 @@ export function ThreeCanvas({
       let ambientElapsed = 0;
 
       const requestFrame = () => {
-        if (disposed || scheduled) return;
+        if (disposed || failed || scheduled) return;
         scheduled = true;
         frame = requestAnimationFrame(paint);
       };
 
       const paint = (now: number) => {
+        if (disposed || failed) return;
         scheduled = false;
         insideFrame = true;
         const delta = Math.min(100, Math.max(0, now - lastNow));
@@ -87,17 +96,24 @@ export function ThreeCanvas({
           }
         }
 
-        setLoadStage(world.loadStage ?? arrivalStageFor(wonder.id));
-        setLoadPercent(
-          sceneReady
-            ? 100
-            : Math.min(99, Math.floor((world.loadProgress ?? 0) * 100)),
-        );
+        if (!arrivalDone) {
+          displayedProgress = Math.max(displayedProgress, arrivalProgress(now - arrivalStarted, world.loadProgress ?? 0, sceneReady));
+          setLoadStage(sceneReady ? 'Starting film…' : world.loadStage ?? arrivalStageFor(wonder.id));
+          setLoadPercent(displayedProgress);
+          if (displayedProgress === 100) {
+            if (completedAt === undefined) completedAt = now;
+            else if (now - completedAt >= ARRIVAL_COMPLETE_HOLD_MS) {
+              arrivalDone = true;
+              setArrivalVisible(false);
+              if (mode === 'cinematic') usePlaybackStore.setState({ assetsReady: true });
+            }
+          }
+        }
         insideFrame = false;
         if (
-          !sceneReady ||
+          !arrivalDone ||
           (mode === 'ambient' && !reducedMotion) ||
-          usePlaybackStore.getState().status === 'playing'
+          (mode === 'cinematic' && !reducedMotion && usePlaybackStore.getState().status === 'playing')
         ) {
           requestFrame();
         }
@@ -121,13 +137,15 @@ export function ThreeCanvas({
           sceneReady = true;
           canvas.dataset.assets = 'ready';
           lastNow = performance.now();
-          if (mode === 'cinematic')
-            usePlaybackStore.setState({ assetsReady: true });
           requestFrame();
         })
         .catch((error: unknown) => {
           if (disposed) return;
           sceneReady = true;
+          arrivalDone = true;
+          failed = true;
+          cancelAnimationFrame(frame);
+          scheduled = false;
           canvas.dataset.assets = 'error';
           setAssetError(true);
           console.error('WonderForge asset loading failed', error);
@@ -151,9 +169,10 @@ export function ThreeCanvas({
         console.error('WonderForge scene initialization failed', error);
       }
     };
-    // Two frame boundaries give the SVG a real paint before CPU-heavy terrain
-    // and model initialization. No timer invents or advances loading progress.
-    startupFrame = requestAnimationFrame(() => {
+    // Paint the homepage title or cinematic arrival before CPU-heavy scene work.
+    // Only cinematic arrival uses the readiness-capped minimum presentation.
+    startupFrame = requestAnimationFrame((now) => {
+      arrivalStarted = now;
       if (!cancelled) startupFrame = requestAnimationFrame(startSafely);
     });
     return () => {
@@ -171,7 +190,7 @@ export function ThreeCanvas({
         role="img"
         aria-label={`Animated construction of ${wonder.name}`}
       />
-      {!assetError && loadPercent < 100 && (
+      {mode === 'cinematic' && !assetError && arrivalVisible && (
         <WonderArrival wonder={wonder} percent={loadPercent} stage={loadStage} />
       )}
       {assetError && (

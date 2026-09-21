@@ -1,0 +1,23 @@
+{
+  "bundle": "main-4VdPjiiz.js",
+  "files": {
+    "src/data/colosseumSky.ts": "190429f514317b2cd49ea9af2c317573c4cd95b08b7316d90383eaba0c558692",
+    "src/data/colosseumEphemeris.ts": "fec7d04cea8c0a96b0ea374e8a54ff103260b77cc7444e87a87dc075b3121eaa",
+    "src/data/colosseumEphemeris.generated.ts": "08b92143ffdfb45bf2d0a5db94b8ca6c604ac96615e56b198c71e71ccc0fc636",
+    "src/engine/colosseumAstronomy.ts": "d8353b439ca7874794f9466bd63fed4cb8db08ee66797aefbc6e117046e405d0",
+    "src/engine/colosseumCelestialClock.ts": "3c124d377f8a339f53d44bedff0acd1c54739acc5929022017215defa375e3e1",
+    "src/engine/colosseumLighting.ts": "cbfe810272a698d7867f390c55631a8a288ab056de1456e42761f87bc9d61629",
+    "src/engine/colosseumCamera.ts": "b88a2d9cad5376ff5daa702a6c47b9189eea748e18432a69bf24961ba4ce9b5b",
+    "src/engine/colosseumCrew.ts": "e885808ead153c83652cf1dc6b8a1dbe257326916a8e22078f6a8d446d12870f",
+    "src/engine/daynight.ts": "15eee017f3864621099ec8d080cda83e549d69fa026d8302400b7f2abeb94ab8",
+    "src/render/three/ColosseumSkyDome.ts": "fb09d44d992d700796a63b21012b43d4d5bbb859cc9f2c69b7353d96195b6001",
+    "src/render/three/ColosseumWorld.ts": "0ebc0d095e29be18b9f586bceb13229e9d420fdcaf0b616a078fa8da66529ef7",
+    "src/render/three/ColosseumEnvironment.ts": "4bfc058eddaa67fac475c98e7130a4632812d44618ab3541214a84f00d0f8358",
+    "src/render/three/ColosseumWorkSystem.ts": "ba37bb2bc3e22aea3c1479d1741d9f0cc86b7406dc8fa36dab9aa74daa7f4e29",
+    "src/render/three/ColosseumStoneSystem.ts": "6cc3ff215ba2f21e867175394302ecbd3049cca16e42f36b2d47ab2a3522aa62",
+    "src/render/three/colosseumShadow.ts": "6d211472860356bcee2289ed7aefa9f634815ff51d1368f41e67701017a24464",
+    "src/render/three/WorldScene.ts": "490b77515dcb2da0832403813200e6960b82f009f7d7d8f2424ef954806030f0",
+    "src/render/three/RenderPipeline.ts": "d78093721aff8bfde78c2e1e67a97c4d25b5bfce16dddb8cdd0b741f5c95bb70",
+    "src/render/three/diagnostics.ts": "2cbfe996fbecfdefcc959dfa6ec279de3e630b6c64bf8159f74cc3897b1f5c83"
+  }
+}

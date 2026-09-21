@@ -1,0 +1,49 @@
+{
+  "renderer": "librsvg",
+  "scale": 4,
+  "passed": 6,
+  "probes": [
+    {
+      "label": "Open campanile",
+      "x": 80,
+      "y": 25,
+      "expected": 0,
+      "alpha": 0
+    },
+    {
+      "label": "Campanile frame",
+      "x": 74.8,
+      "y": 26.5,
+      "expected": 255,
+      "alpha": 255
+    },
+    {
+      "label": "Lantern",
+      "x": 80,
+      "y": 16,
+      "expected": 255,
+      "alpha": 255
+    },
+    {
+      "label": "Gallery",
+      "x": 80,
+      "y": 33,
+      "expected": 255,
+      "alpha": 255
+    },
+    {
+      "label": "Open lower arch",
+      "x": 80,
+      "y": 210,
+      "expected": 0,
+      "alpha": 0
+    },
+    {
+      "label": "Foot",
+      "x": 42,
+      "y": 220,
+      "expected": 255,
+      "alpha": 255
+    }
+  ]
+}

@@ -172,15 +172,21 @@ describe('cinematic view', () => {
     render(<CinematicView />);
   }
 
-  it('shows the title card first, then the quote once construction begins', () => {
+  it('keeps construction clear, preserves the full quote in facts, and shows it at the reveal', () => {
     openWonder();
     const w = getWonder('pyramids-of-giza');
     expect(screen.getByText(new RegExp(w.location))).toBeInTheDocument();
     expect(screen.queryByText(w.quote.text)).not.toBeInTheDocument();
 
     act(() => usePlaybackStore.getState().seek(0.5));
+    expect(screen.queryByTestId('cinematic-title-card')).not.toBeInTheDocument();
+    expect(screen.queryByText(w.quote.text)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'About this wonder' }));
     expect(screen.getByText(w.quote.text)).toBeInTheDocument();
     expect(screen.getByText(new RegExp(w.quote.author))).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Close information panel' }));
+    act(() => usePlaybackStore.getState().seek(captionsFor(w).at(-1)!.until + 0.005));
+    expect(screen.getByText(w.quote.text)).toBeInTheDocument();
   });
 
   it('transport: play/pause toggles, scrubber seeks', () => {
@@ -274,39 +280,43 @@ describe('cinematic view', () => {
     vi.useFakeTimers();
     try {
       openWonder(); // status 'playing', speed 1
+      const beats = captionsFor(getWonder('pyramids-of-giza'));
+      const haul = beats.find(beat => beat.id === 'giza-roads')!;
+      const raising = beats.find(beat => beat.id === 'giza-ramps')!;
+      const final = beats.at(-1)!;
       const index = screen.getByRole('navigation', { name: /film chapters/i });
       // Captions show even while chrome is visible so turning narration on
       // or moving the pointer does not hide the line.
-      act(() => usePlaybackStore.getState().seek(0.24));
-      expect(within(screen.getByTestId('live-caption')).getByText('The quarry')).toBeInTheDocument();
-      expect(within(index).getByText('The quarry')).toBeInTheDocument();
+      act(() => usePlaybackStore.getState().seek((haul.from + haul.until) / 2));
+      expect(within(screen.getByTestId('live-caption')).getByText(haul.kicker)).toBeInTheDocument();
+      expect(within(index).getByText(haul.kicker)).toBeInTheDocument();
 
       act(() => usePlaybackStore.getState().pause());
-      expect(within(screen.getByTestId('live-caption')).getByText('The quarry')).toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText(haul.kicker)).toBeInTheDocument();
       act(() => usePlaybackStore.getState().play());
 
-      // The gap between beats (0.46–0.50) shows nothing in the live caption;
+      // The gap between the haul and raising shows no live caption;
       // the index still lists finished and upcoming titles.
-      act(() => usePlaybackStore.getState().seek(0.48));
+      act(() => usePlaybackStore.getState().seek((haul.until + raising.from) / 2));
       expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
-      expect(within(index).getByText('The quarry')).toBeInTheDocument();
-      expect(within(index).getByText('Raising the stone')).toBeInTheDocument();
+      expect(within(index).getByText(haul.kicker)).toBeInTheDocument();
+      expect(within(index).getByText(raising.kicker)).toBeInTheDocument();
 
       // The reveal stays clean of a live caption; the index keeps the last face.
-      act(() => usePlaybackStore.getState().seek(0.95));
+      act(() => usePlaybackStore.getState().seek(final.until + 0.005));
       expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
-      expect(within(index).getByText('The three pyramids')).toBeInTheDocument();
+      expect(within(index).getByText(final.kicker)).toBeInTheDocument();
 
       // At 2× the read time would compress past honesty: no live captions.
       fireEvent.click(screen.getByRole('button', { name: 'Playback speed: 2 times' }));
-      act(() => usePlaybackStore.getState().seek(0.54));
+      act(() => usePlaybackStore.getState().seek((raising.from + raising.until) / 2));
       expect(screen.queryByTestId('live-caption')).not.toBeInTheDocument();
-      expect(within(index).getByText('Raising the stone')).toBeInTheDocument();
+      expect(within(index).getByText(raising.kicker)).toBeInTheDocument();
 
       // Back at 1× the same window shows the caption again.
       fireEvent.click(screen.getByRole('button', { name: 'Playback speed: 1 times' }));
-      act(() => usePlaybackStore.getState().seek(0.54));
-      expect(within(screen.getByTestId('live-caption')).getByText('Raising the stone')).toBeInTheDocument();
+      act(() => usePlaybackStore.getState().seek((raising.from + raising.until) / 2));
+      expect(within(screen.getByTestId('live-caption')).getByText(raising.kicker)).toBeInTheDocument();
     } finally {
       vi.useRealTimers();
     }
@@ -346,13 +356,13 @@ describe('cinematic view', () => {
   it('caption beat index: titles stay listed and a click seeks to that face', () => {
     openWonder();
     const index = screen.getByRole('navigation', { name: /film chapters/i });
-    expect(within(index).getByRole('button', { name: /play from the quarry/i })).toBeInTheDocument();
-    expect(within(index).getByRole('button', { name: /play from raising the stone/i })).toBeInTheDocument();
-    expect(within(index).getByRole('button', { name: /play from the three pyramids/i })).toBeInTheDocument();
+    const beats = captionsFor(getWonder('pyramids-of-giza'));
+    for (const beat of beats) expect(within(index).getByRole('button', { name: `Play from ${beat.kicker}` })).toBeInTheDocument();
+    const raising = beats.find(beat => beat.id === 'giza-ramps')!;
 
     fireEvent.click(screen.getByRole('button', { name: /pause/i }));
     fireEvent.click(within(index).getByRole('button', { name: /play from raising the stone/i }));
-    expect(usePlaybackStore.getState().t).toBeCloseTo(0.5, 5);
+    expect(usePlaybackStore.getState().t).toBeCloseTo(raising.from, 5);
     expect(usePlaybackStore.getState().status).toBe('playing');
     expect(within(index).getByRole('button', { name: /play from raising the stone/i })).toHaveAttribute(
       'aria-current',
@@ -360,7 +370,7 @@ describe('cinematic view', () => {
     );
   });
 
-  it('caption voice: Giza uses bundled George clips and stops them when turned off', () => {
+  it('caption voice: Giza uses bundled Charles clips and stops them when turned off', () => {
     const speak = vi.fn();
     const cancel = vi.fn();
     Object.defineProperty(window, 'speechSynthesis', {
@@ -382,7 +392,7 @@ describe('cinematic view', () => {
       act(() => {
         vi.advanceTimersByTime(2600);
       });
-      expect(within(screen.getByTestId('live-caption')).getByText('The quarry')).toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText(captionsFor(getWonder('pyramids-of-giza')).find(beat => beat.id === 'giza-roads')!.kicker)).toBeInTheDocument();
       expect(speak).not.toHaveBeenCalled();
 
       const play = vi.mocked(HTMLMediaElement.prototype.play);
@@ -413,7 +423,7 @@ describe('cinematic view', () => {
     }
   });
 
-  it('caption voice: Stonehenge uses bundled Daniel clips, not browser speech', () => {
+  it('caption voice: Stonehenge uses bundled Oliver clips, not browser speech', () => {
     const speak = vi.fn();
     const cancel = vi.fn();
     Object.defineProperty(window, 'speechSynthesis', {
@@ -434,7 +444,7 @@ describe('cinematic view', () => {
       act(() => {
         vi.advanceTimersByTime(2600);
       });
-      expect(within(screen.getByTestId('live-caption')).getByText('Shaping the stones')).toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText(captionsFor(getWonder('stonehenge')).find(beat => beat.id === 'stonehenge-sarsens')!.kicker)).toBeInTheDocument();
       expect(speak).not.toHaveBeenCalled();
 
       const play = vi.mocked(HTMLMediaElement.prototype.play);
@@ -454,12 +464,13 @@ describe('cinematic view', () => {
     vi.useFakeTimers();
     const descriptor = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'currentTime');
     try {
-      openWonder('stonehenge');
-      act(() => usePlaybackStore.getState().seek(0.22));
+      const beat = captionsFor(getWonder('pyramids-of-giza')).find(candidate => candidate.id === 'giza-roads')!;
+      openWonder('pyramids-of-giza');
+      act(() => usePlaybackStore.getState().seek(beat.from + 0.005));
       act(() => {
         vi.advanceTimersByTime(2600);
       });
-      expect(within(screen.getByTestId('live-caption')).getByText('Shaping the stones')).toBeInTheDocument();
+      expect(within(screen.getByTestId('live-caption')).getByText(beat.kicker)).toBeInTheDocument();
 
       Object.defineProperty(HTMLMediaElement.prototype, 'currentTime', {
         configurable: true,
@@ -478,7 +489,7 @@ describe('cinematic view', () => {
         await Promise.resolve();
         await Promise.resolve();
       });
-      expect(play.mock.calls.length).toBeGreaterThanOrEqual(STONEHENGE_NARRATION.length + 1);
+      expect(play.mock.calls.length).toBeGreaterThanOrEqual(GIZA_NARRATION.length + 1);
     } finally {
       vi.useRealTimers();
       if (descriptor) {
@@ -711,19 +722,29 @@ describe('cinematic view', () => {
     expect(within(controls).getByRole('slider', { name: 'Film position' })).toHaveClass('h-12');
   });
 
-  it('restores normal layout outside short-film caption windows and preserves Detailed and other wonders', () => {
+  it('retains compact chapter access outside Eiffel captions and on every other film', () => {
     openWonder('eiffel-tower');
     const scene = screen.getByTestId('wonder-canvas').closest('section')!;
     act(() => usePlaybackStore.getState().seek(74 / 180));
     expect(scene).toHaveClass('eiffel-story-focus');
     act(() => usePlaybackStore.getState().seek(88 / 180));
     expect(scene).not.toHaveClass('eiffel-story-focus');
-    expect(screen.queryByRole('button', { name: 'Chapters' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Chapters' })).toHaveAttribute('aria-expanded', 'false');
     act(() => { usePlaybackStore.getState().setEiffelEdit('detailed'); usePlaybackStore.getState().seek(74 / 180); });
     expect(scene).not.toHaveClass('eiffel-story-focus');
     fireEvent.click(screen.getByRole('button', { name: 'Next wonder' }));
     expect(scene).not.toHaveClass('eiffel-story-focus');
-    expect(screen.queryByRole('button', { name: 'Chapters' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Chapters' })).toHaveAttribute('aria-expanded', 'false');
+  });
+
+  it('restores captions when switching films with the chapter drawer open', () => {
+    openWonder('eiffel-tower');
+    fireEvent.click(screen.getByRole('button', { name: 'Chapters' }));
+    const section = screen.getByTestId('wonder-canvas').closest('section')!;
+    expect(section).toHaveAttribute('data-chapters-open', 'true');
+    fireEvent.click(screen.getByRole('button', { name: 'Next wonder' }));
+    expect(section).toHaveAttribute('data-chapters-open', 'false');
+    expect(screen.getByRole('button', { name: 'Chapters' })).toHaveAttribute('aria-expanded', 'false');
   });
 });
 

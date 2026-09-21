@@ -1,0 +1,506 @@
+[
+  {
+    "wonderId": "pyramids-of-giza",
+    "captionId": "giza-khufu",
+    "captionText": "Khufu's tomb rises first, built from limestone quarried on this plateau.",
+    "src": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+    "duration": 4.318912,
+    "volume": 1,
+    "voiceName": "Charles",
+    "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "ca7d473d889aefa102dc845d00e2eb0fbfecf954622f34a226e5363fac6aceb8",
+    "bytes": 70261,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.22,
+      "truePeakDbtp": -2.23,
+      "gainDb": 8.84
+    }
+  },
+  {
+    "wonderId": "pyramids-of-giza",
+    "captionId": "giza-roads",
+    "captionText": "In this reconstruction, damp sand eases the passage of loaded sledges.",
+    "src": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+    "duration": 4.365351,
+    "volume": 1,
+    "voiceName": "Charles",
+    "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "b49c4af435c2eb2c4c0f0049201c66685ab4d873b62695b553b32b2e358c885d",
+    "bytes": 71097,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.21,
+      "truePeakDbtp": -2.33,
+      "gainDb": 11.18
+    }
+  },
+  {
+    "wonderId": "pyramids-of-giza",
+    "captionId": "giza-ramps",
+    "captionText": "Here, ramps and levers raise each stone into place.",
+    "src": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+    "duration": 3.529433,
+    "volume": 1,
+    "voiceName": "Charles",
+    "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "d429133b8f2eadfb8a612cbc6101adc3b894afd26c540e0d9ddbc4349fcb5b36",
+    "bytes": 57722,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.27,
+      "truePeakDbtp": -2.39,
+      "gainDb": 5.74
+    }
+  },
+  {
+    "wonderId": "pyramids-of-giza",
+    "captionId": "giza-khafre",
+    "captionText": "Khafre, Khufu's son, builds the second great pyramid on higher ground.",
+    "src": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+    "duration": 4.551111,
+    "volume": 1,
+    "voiceName": "Charles",
+    "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.8,
+    "sha256": "5a56e24c3266699d782e9c29eeb86baca93c528e0c46aefa0b4c2c55d224aae4",
+    "bytes": 74022,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.24,
+      "truePeakDbtp": -2.35,
+      "gainDb": 7.55
+    }
+  },
+  {
+    "wonderId": "pyramids-of-giza",
+    "captionId": "giza-casing",
+    "captionText": "White casing stone came by water from the quarries at Tura.",
+    "src": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+    "duration": 3.436553,
+    "volume": 1,
+    "voiceName": "Charles",
+    "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "a1e07d6eb458e907252b87b2f3e2a96565912d7352f71c20a996bf9d9c46125c",
+    "bytes": 56050,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.21,
+      "truePeakDbtp": -2.29,
+      "gainDb": 9.8
+    }
+  },
+  {
+    "wonderId": "pyramids-of-giza",
+    "captionId": "giza-menkaure",
+    "captionText": "Menkaure's pyramid follows: three royal tombs, three separate reigns.",
+    "src": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+    "duration": 4.92263,
+    "volume": 1,
+    "voiceName": "Charles",
+    "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 5.4,
+    "sha256": "56206b095d6d37eb641488a9d9122f0b264215eeec9c190148b69f7ecac53649",
+    "bytes": 79874,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.27,
+      "truePeakDbtp": -2.28,
+      "gainDb": 10.06
+    }
+  },
+  {
+    "wonderId": "stonehenge",
+    "captionId": "stonehenge-earthwork",
+    "captionText": "An earthwork enclosure stood here centuries before the great stone circle.",
+    "src": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+    "duration": 5.10839,
+    "volume": 1,
+    "voiceName": "Oliver",
+    "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "a83d8863bccb95baa5628137f342580b023cdb3cff28793415cda9da3ca3a972",
+    "bytes": 82799,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.18,
+      "truePeakDbtp": -2.36,
+      "gainDb": 6.77
+    }
+  },
+  {
+    "wonderId": "stonehenge",
+    "captionId": "stonehenge-sarsens",
+    "captionText": "Hammerstones shaped the sarsens; their joints echo skilled woodworking.",
+    "src": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+    "duration": 5.34059,
+    "volume": 1,
+    "voiceName": "Oliver",
+    "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "3098f0a4490a16b44124f13b8f9a17930ea275e743bb2563d35a95961f6a2b45",
+    "bytes": 86561,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.08,
+      "truePeakDbtp": -2.37,
+      "gainDb": 8.96
+    }
+  },
+  {
+    "wonderId": "stonehenge",
+    "captionId": "stonehenge-pits",
+    "captionText": "Here, ropes raise the uprights; rubble secures their bases.",
+    "src": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+    "duration": 4.92263,
+    "volume": 1,
+    "voiceName": "Oliver",
+    "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "c848f083c648018ab85baff52d0844c777d94fe553a8c2b7fd0b3af5e990d9b1",
+    "bytes": 79874,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.23,
+      "truePeakDbtp": -2.4,
+      "gainDb": 7.36
+    }
+  },
+  {
+    "wonderId": "stonehenge",
+    "captionId": "stonehenge-lintels",
+    "captionText": "The film uses timber platforms to raise the stone lintels.",
+    "src": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+    "duration": 4.086712,
+    "volume": 1,
+    "voiceName": "Oliver",
+    "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "1cac09eac5b4d4961e5801cfdd878c10843a3d127bf3dd2bb81742917405b965",
+    "bytes": 66499,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.15,
+      "truePeakDbtp": -2.37,
+      "gainDb": 6.75
+    }
+  },
+  {
+    "wonderId": "stonehenge",
+    "captionId": "stonehenge-bluestones",
+    "captionText": "Many smaller bluestones came from the Preseli Hills in Wales.",
+    "src": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+    "duration": 4.504671,
+    "volume": 1,
+    "voiceName": "Oliver",
+    "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "a49c0bd947f7f518dd49817667f269b6812be0d3da70524def0cc71430a7ee1b",
+    "bytes": 73186,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.06,
+      "truePeakDbtp": -2.19,
+      "gainDb": 7.32
+    }
+  },
+  {
+    "wonderId": "stonehenge",
+    "captionId": "stonehenge-axis",
+    "captionText": "The axis marks midsummer sunrise and midwinter sunset.",
+    "src": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+    "duration": 4.87619,
+    "volume": 1,
+    "voiceName": "Oliver",
+    "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 7.2,
+    "sha256": "bcedbd042ccde64ed7d49907d84d1ba117e85121505c6ccef9f5f146affeaf6f",
+    "bytes": 79038,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.18,
+      "truePeakDbtp": -2.08,
+      "gainDb": 9.55
+    }
+  },
+  {
+    "wonderId": "colosseum",
+    "captionId": "colosseum-valley",
+    "captionText": "Vespasian builds an amphitheatre on the site of Nero's lake.",
+    "src": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+    "duration": 4.504671,
+    "volume": 1,
+    "voiceName": "Andrea Williams",
+    "voiceId": "dcWyhLms5IOM9o93xsQu",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 6.6,
+    "sha256": "2f9d55d4a8f6d9c375f6d76cd018845728607a188081b4f5a4948f6245f233f2",
+    "bytes": 73186,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.01,
+      "truePeakDbtp": -2.33,
+      "gainDb": 4.74
+    }
+  },
+  {
+    "wonderId": "colosseum",
+    "captionId": "colosseum-stone",
+    "captionText": "The load-bearing piers are built from travertine quarried near Tivoli.",
+    "src": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+    "duration": 4.458231,
+    "volume": 1,
+    "voiceName": "Andrea Williams",
+    "voiceId": "dcWyhLms5IOM9o93xsQu",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 6.0,
+    "sha256": "ed6ee008ad1081ccb45e95aba517f4ca751d8300d7dd52212ff168b0c99ec76c",
+    "bytes": 72351,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.03,
+      "truePeakDbtp": -2.33,
+      "gainDb": 5.21
+    }
+  },
+  {
+    "wonderId": "colosseum",
+    "captionId": "colosseum-cranes",
+    "captionText": "In this reconstruction, treadwheel cranes raise the heavy stone blocks.",
+    "src": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+    "duration": 5.24771,
+    "volume": 1,
+    "voiceName": "Andrea Williams",
+    "voiceId": "dcWyhLms5IOM9o93xsQu",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 6.6,
+    "sha256": "6fce52deea3045df05723d4b6401b8657f309aae5c561ee921d5d962f0aee1b7",
+    "bytes": 84889,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.19,
+      "truePeakDbtp": -2.39,
+      "gainDb": 5.45
+    }
+  },
+  {
+    "wonderId": "colosseum",
+    "captionId": "colosseum-vaults",
+    "captionText": "Here, timber supports hold the vaults while the concrete sets.",
+    "src": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+    "duration": 4.040272,
+    "volume": 1,
+    "voiceName": "Andrea Williams",
+    "voiceId": "dcWyhLms5IOM9o93xsQu",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 6.0,
+    "sha256": "29fe01d49708db374d81da3c1d00db40cfa9344f7f59ba199356c8ca2270a5ea",
+    "bytes": 65663,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.1,
+      "truePeakDbtp": -2.39,
+      "gainDb": 6.09
+    }
+  },
+  {
+    "wonderId": "colosseum",
+    "captionId": "colosseum-seating",
+    "captionText": "Vaulted passages support the tiers of seating.",
+    "src": "/audio/narration/colosseum-seating-andrea-williams-b573382ff478.mp3",
+    "duration": 3.250794,
+    "volume": 1,
+    "voiceName": "Andrea Williams",
+    "voiceId": "dcWyhLms5IOM9o93xsQu",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 6.0,
+    "sha256": "f9fb4608abb54a1b0ef0c801b20319565d3d889da1c3c02c34022df06430670a",
+    "bytes": 53124,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.19,
+      "truePeakDbtp": -2.35,
+      "gainDb": 6.85
+    }
+  },
+  {
+    "wonderId": "colosseum",
+    "captionId": "colosseum-titus",
+    "captionText": "Construction began under Vespasian. Titus opened the amphitheatre in AD 80.",
+    "src": "/audio/narration/colosseum-titus-andrea-williams-7d51658da8cd.mp3",
+    "duration": 6.176508,
+    "volume": 1,
+    "voiceName": "Andrea Williams",
+    "voiceId": "dcWyhLms5IOM9o93xsQu",
+    "provider": "ElevenLabs",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "windowSeconds": 8.1,
+    "sha256": "9f41ed66ed4c98b1944dd841c441467b5765912039847fe9c1b58d8c13204034",
+    "bytes": 99936,
+    "mastering": {
+      "version": "measured-limiter-v1",
+      "integratedLufs": -16.06,
+      "truePeakDbtp": -2.38,
+      "gainDb": 5.34
+    }
+  }
+]

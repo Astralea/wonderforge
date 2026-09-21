@@ -1,0 +1,708 @@
+{
+  "createdAt": "2026-09-21T05:25:43.811Z",
+  "source": "https://wonderforge.pages.dev",
+  "bundle": "main-D06KFf-n.js",
+  "originalBundle": "main-BR6Phg3M.js",
+  "originalFinal": {
+    "file": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/wonderforge-four-films-20s.mp4",
+    "bytes": 18285094,
+    "sha256": "403ee7f1df242a0b9d83104feb19ed34b9cd1bdebc7d2123056fd029c1339e47"
+  },
+  "final": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+  "bytes": 18290183,
+  "sha256": "3e9ded3a44efe80b3a78eeaa7f41a91f1cf8f40249f37a9b2450b9ca43b6cc0b",
+  "checks": {
+    "durationExactly20": true,
+    "width1920": true,
+    "height1080": true,
+    "h264": true,
+    "yuv420p": true,
+    "fps30": true,
+    "frames600": true,
+    "aac": true,
+    "stereo": true,
+    "rate48000": true,
+    "audioBitstreamIdentical": true,
+    "threeOriginalClipsIdentical": true
+  },
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640029",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1088,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 41,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 4,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 307200,
+        "duration": "20.000000",
+        "bit_rate": "7129110",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "600",
+        "nb_read_frames": "600",
+        "extradata_size": 50,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.102 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 960000,
+        "duration": "20.000000",
+        "bit_rate": "177263",
+        "nb_frames": "939",
+        "nb_read_frames": "938",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "20.000000",
+      "size": "18290183",
+      "bit_rate": "7316073",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "title": "WonderForge — Four films, Moon surface update",
+        "artist": "WonderForge",
+        "encoder": "Lavf62.12.102",
+        "comment": "Actual WonderForge renderer. Original Giza/Eiffel/Stonehenge clips and AAC score reused. Colosseum54–59s re-recorded from deployed Moon surface update. Lunar imagery: NASA Scientific Visualization Studio; https://svs.gsfc.nasa.gov/4720/"
+      }
+    }
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "seconds": 0,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0000.png"
+    },
+    {
+      "frame": 75,
+      "seconds": 2.5,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0075.png"
+    },
+    {
+      "frame": 149,
+      "seconds": 4.966666666666667,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0149.png"
+    },
+    {
+      "frame": 150,
+      "seconds": 5,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0150.png"
+    },
+    {
+      "frame": 225,
+      "seconds": 7.5,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0225.png"
+    },
+    {
+      "frame": 299,
+      "seconds": 9.966666666666667,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0299.png"
+    },
+    {
+      "frame": 300,
+      "seconds": 10,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0300.png"
+    },
+    {
+      "frame": 375,
+      "seconds": 12.5,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0375.png"
+    },
+    {
+      "frame": 449,
+      "seconds": 14.966666666666667,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0449.png"
+    },
+    {
+      "frame": 450,
+      "seconds": 15,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0450.png"
+    },
+    {
+      "frame": 525,
+      "seconds": 17.5,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0525.png"
+    },
+    {
+      "frame": 599,
+      "seconds": 19.966666666666665,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0599.png"
+    },
+    {
+      "frame": 555,
+      "seconds": 18.5,
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0555.png"
+    }
+  ],
+  "clips": [
+    "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/01-pyramids-of-giza.mp4",
+    "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/02-eiffel-tower.mp4",
+    "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/03-colosseum.mp4",
+    "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/04-stonehenge.mp4"
+  ],
+  "reuse": [
+    {
+      "file": "01-pyramids-of-giza.mp4",
+      "original": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/01-pyramids-of-giza.mp4",
+      "copy": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/01-pyramids-of-giza.mp4",
+      "bytes": 6375463,
+      "sha256": "07ed55400e6ca5dab595ec2b73ffd3593e6b1a7dd85dcbe9fcedb837a891e75c",
+      "identical": true,
+      "sourceBundle": "main-BR6Phg3M.js",
+      "sourceBase": "https://wonderforge.pages.dev"
+    },
+    {
+      "file": "02-eiffel-tower.mp4",
+      "original": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/02-eiffel-tower.mp4",
+      "copy": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/02-eiffel-tower.mp4",
+      "bytes": 5961791,
+      "sha256": "17248d9de5f55f1935114eedf5fd99515fd8e1e9eb2fb93686e520de5f01b711",
+      "identical": true,
+      "sourceBundle": "main-BR6Phg3M.js",
+      "sourceBase": "https://wonderforge.pages.dev"
+    },
+    {
+      "file": "04-stonehenge.mp4",
+      "original": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/04-stonehenge.mp4",
+      "copy": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/04-stonehenge.mp4",
+      "bytes": 3493894,
+      "sha256": "c607f80a26287f5f7d619af6b3c9efc67704720c7ba484b4076c794f5a7db13e",
+      "identical": true,
+      "sourceBundle": "main-BR6Phg3M.js",
+      "sourceBase": "https://wonderforge.pages.dev"
+    }
+  ],
+  "audio": {
+    "original": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/wonderforge-four-films-20s.mp4",
+    "oldAudioHash": "0,a,SHA256=6955e34cf8eac6d9c1e0405cd493c88bcc56e0f2fbbdf2c1b40ed747fc769f8f",
+    "newAudioHash": "0,a,SHA256=6955e34cf8eac6d9c1e0405cd493c88bcc56e0f2fbbdf2c1b40ed747fc769f8f",
+    "description": "Accepted20s Stonehenge40–60s excerpt with0.6s in/0.9s out; AAC packets copied unchanged."
+  },
+  "moon": {
+    "credit": "NASA's Scientific Visualization Studio",
+    "source": "https://svs.gsfc.nasa.gov/4720/",
+    "original": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg",
+    "width": 1024,
+    "height": 512,
+    "bytes": 139068,
+    "sha256": "b246064f217f8d479df78c49c7c8595a8f5fbda008a72fd539978d2e121e0109",
+    "interpretation": "2019 aesthetic color map. Authored mean near-side presentation; no date-exact libration claim."
+  },
+  "publicMoonAsset": [
+    {
+      "url": "https://wonderforge.pages.dev/assets/lroc-color-poles-1k-RRPljFYe.jpg",
+      "status": 200,
+      "sha256": "b246064f217f8d479df78c49c7c8595a8f5fbda008a72fd539978d2e121e0109",
+      "bytes": 139068,
+      "headers": {
+        "date": "Mon, 21 Sep 2026 05:24:00 GMT",
+        "content-type": "image/jpeg",
+        "content-length": "139068",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=31536000, immutable",
+        "etag": "\"9006167ce7cc25bab6a30b5fccf97b5f\"",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xTWBmMAPjb3gMMrmr7gtnoknRfYhF6vDCQgOM8L9Sc8jBkPfySxtzy%2Fn62dt5USwaXOl6I%2Brm7dxoLlYrgzSVzsCKAEPXi6lwWMPdk0V6p3m7h5xnHpcCDWi%2BteXwf9vUtjuGYtgUFtaxVvV%2FrKhIxKqaD4%3D\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "a3e6a41dd95168d3-NRT",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-framerate",
+        "30",
+        "-start_number",
+        "0",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/colosseum/%04d.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/colosseum/label.png",
+        "-filter_complex",
+        "[0:v][1:v]overlay=0:0:shortest=1,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p[v]",
+        "-map",
+        "[v]",
+        "-an",
+        "-frames:v",
+        "150",
+        "-r",
+        "30",
+        "-fps_mode",
+        "cfr",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "slow",
+        "-crf",
+        "18",
+        "-profile:v",
+        "high",
+        "-level:v",
+        "4.1",
+        "-pix_fmt",
+        "yuv420p",
+        "-colorspace",
+        "bt709",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-color_range",
+        "tv",
+        "-maxrate",
+        "16M",
+        "-bufsize",
+        "32M",
+        "-g",
+        "60",
+        "-keyint_min",
+        "30",
+        "-video_track_timescale",
+        "15360",
+        "-movflags",
+        "+faststart",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/03-colosseum.mp4"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/concat.txt",
+        "-i",
+        "artifacts/stonehenge-release-2026-09-21/social/take-01/export/wonderforge-four-films-20s.mp4",
+        "-map",
+        "0:v:0",
+        "-map",
+        "1:a:0",
+        "-c:v",
+        "copy",
+        "-c:a",
+        "copy",
+        "-t",
+        "20",
+        "-movflags",
+        "+faststart",
+        "-metadata",
+        "title=WonderForge — Four films, Moon surface update",
+        "-metadata",
+        "comment=Actual WonderForge renderer. Original Giza/Eiffel/Stonehenge clips and AAC score reused. Colosseum54–59s re-recorded from deployed Moon surface update. Lunar imagery: NASA Scientific Visualization Studio; https://svs.gsfc.nasa.gov/4720/",
+        "-metadata",
+        "artist=WonderForge",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4"
+      ]
+    },
+    {
+      "cmd": "ffprobe",
+      "args": [
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_streams",
+        "-show_format",
+        "-of",
+        "json",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/stonehenge-release-2026-09-21/social/take-01/export/wonderforge-four-films-20s.mp4",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-f",
+        "streamhash",
+        "-hash",
+        "sha256",
+        "-"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-f",
+        "streamhash",
+        "-hash",
+        "sha256",
+        "-"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,0)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0000.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,75)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0075.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,149)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0149.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,150)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0150.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,225)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0225.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,299)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0299.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,300)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0300.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,375)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0375.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,449)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0449.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,450)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0450.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,525)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0525.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,599)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0599.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,555)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/frame-0555.png"
+      ]
+    },
+    {
+      "cmd": "ffmpeg",
+      "args": [
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+        "-vf",
+        "select=eq(n\\,555)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "-q:v",
+        "2",
+        "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-thumbnail-moon-v2.jpg"
+      ]
+    }
+  ],
+  "scope": "Actual public Colosseum Moon texture capture plus preserved other film/audio clips. Technical/keyframe review; no auditory-quality claim."
+}

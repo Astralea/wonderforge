@@ -1,0 +1,14 @@
+{
+  "manifest": {
+    "originalBytes": 24613451,
+    "runtimeBytes": 5559468,
+    "runtimeGzipBytes": 649197
+  },
+  "paris": {
+    "originalBytes": 14298216,
+    "gzipBytes": 5019070,
+    "decodedSha256": "078be15f73c6bcb811440fb789165ce655bb22beb92901a2937b20a9858f90af",
+    "originalSha256": "078be15f73c6bcb811440fb789165ce655bb22beb92901a2937b20a9858f90af"
+  },
+  "note": "Local artifact byte counts, not current public HTTP or cold browser timing."
+}

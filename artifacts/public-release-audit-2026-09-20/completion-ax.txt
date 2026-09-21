@@ -1,0 +1,44 @@
+Browser tab: 1736594913, Title: "WonderForge", URL: "https://wonderforge.pages.dev/#/wonder/eiffel-tower".
+0 AXWebArea WonderForge, URL: wonderforge.pages.dev/#/wonder/eiffel-tower
+	1 container
+		2 container
+			3 image Animated construction of Eiffel Tower
+			4 button WonderForge, back to films
+			5 container Film chapters
+				6 content list
+					43 button Play from The first lift
+						44 text THE FIRST LIFT
+						45 text A lifting frame raises an iron section from the ground.
+					46 button Play from The four legs
+						47 text THE FOUR LEGS
+						48 text Crews work on all four legs of the tower.
+					49 button Play from Aligning the iron
+						50 text ALIGNING THE IRON
+						51 text A crane turns the next iron section and lowers it into position.
+					52 button Play from The lower structure
+						53 text THE LOWER STRUCTURE
+						54 text The four legs will meet at the first platform.
+					55 button Play from The first platform
+						56 text THE FIRST PLATFORM
+						57 text An iron section arrives at the first platform, ready for the next lift.
+					58 button Play from The upper tower
+						59 text THE UPPER TOWER
+						60 text The frame narrows above the second platform.
+			22 container Cinematic controls
+				23 text COMPLETE 3 min film
+				24 container
+					25 slider (settable, integer) Description: Film position, Value: 1
+				26 button Previous wonder
+				27 button Replay film
+				28 button Next wonder
+				29 checkbox Description: Mute soundtrack, Value: 1
+				30 checkbox Description: Turn narration off, Value: 1
+				31 checkbox Description: About this wonder, Value: 0
+				32 container Playback speed
+					33 checkbox Description: Playback speed: 1 times, Value: 0
+					34 checkbox Description: Playback speed: 2 times, Value: 0
+					35 checkbox Description: Playback speed: 4 times, Value: 1
+			61 container
+				62 text “ I ought to be jealous of the tower. She is more famous than I am. ” —  GUSTAVE EIFFEL Eiffel Tower
+
+The focused UI element is 27 button Replay film

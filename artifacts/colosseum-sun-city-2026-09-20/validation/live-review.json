@@ -1,0 +1,1538 @@
+[
+  {
+    "mode": "desktop",
+    "errors": [],
+    "shots": [
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 102,
+            "triangles": 148091,
+            "points": 0,
+            "lines": 0,
+            "geometries": 46,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              351.96467125764394,
+              93.62304633634957,
+              -99.93994957485798
+            ],
+            "direction": [
+              -0.9456925593856983,
+              -0.18318883053832663,
+              0.2685282768881665
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.22,
+        "diagnostics": {
+          "renderer": {
+            "calls": 96,
+            "triangles": 84621,
+            "points": 0,
+            "lines": 0,
+            "geometries": 46,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              290.4358116840298,
+              92.03373379119495,
+              107.74558143058368
+            ],
+            "direction": [
+              -0.9064222369030183,
+              -0.2524915770151579,
+              -0.33859523325665297
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 102,
+            "triangles": 148091,
+            "points": 0,
+            "lines": 0,
+            "geometries": 46,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              351.96467125764394,
+              93.62304633634957,
+              -99.93994957485798
+            ],
+            "direction": [
+              -0.9456925593856983,
+              -0.18318883053832663,
+              0.2685282768881665
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 1,
+        "diagnostics": {
+          "renderer": {
+            "calls": 70,
+            "triangles": 127122,
+            "points": 0,
+            "lines": 0,
+            "geometries": 46,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              362.5864674784352,
+              93.45017861543491,
+              -132.3543924695339
+            ],
+            "direction": [
+              -0.9245264982305423,
+              -0.17708474031958327,
+              0.3374785160799379
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      }
+    ],
+    "continuous": [
+      {
+        "t": 0.76,
+        "renderer": {
+          "calls": 103,
+          "triangles": 133090,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.766,
+        "renderer": {
+          "calls": 103,
+          "triangles": 140894,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.77,
+        "renderer": {
+          "calls": 105,
+          "triangles": 141918,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.774,
+        "renderer": {
+          "calls": 105,
+          "triangles": 142758,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.778,
+        "renderer": {
+          "calls": 105,
+          "triangles": 144334,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.783,
+        "renderer": {
+          "calls": 105,
+          "triangles": 149538,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.787,
+        "renderer": {
+          "calls": 105,
+          "triangles": 152886,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.791,
+        "renderer": {
+          "calls": 105,
+          "triangles": 152952,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.795,
+        "renderer": {
+          "calls": 105,
+          "triangles": 154074,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.799,
+        "renderer": {
+          "calls": 105,
+          "triangles": 157186,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.804,
+        "renderer": {
+          "calls": 106,
+          "triangles": 158134,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.808,
+        "renderer": {
+          "calls": 106,
+          "triangles": 159948,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.812,
+        "renderer": {
+          "calls": 106,
+          "triangles": 160346,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.816,
+        "renderer": {
+          "calls": 106,
+          "triangles": 158880,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.821,
+        "renderer": {
+          "calls": 106,
+          "triangles": 158723,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.825,
+        "renderer": {
+          "calls": 106,
+          "triangles": 158919,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.829,
+        "renderer": {
+          "calls": 106,
+          "triangles": 161095,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.833,
+        "renderer": {
+          "calls": 106,
+          "triangles": 161807,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.838,
+        "renderer": {
+          "calls": 106,
+          "triangles": 162484,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.842,
+        "renderer": {
+          "calls": 106,
+          "triangles": 158898,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.846,
+        "renderer": {
+          "calls": 104,
+          "triangles": 154132,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.85,
+        "renderer": {
+          "calls": 104,
+          "triangles": 153692,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.855,
+        "renderer": {
+          "calls": 102,
+          "triangles": 147454,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.859,
+        "renderer": {
+          "calls": 102,
+          "triangles": 148528,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.863,
+        "renderer": {
+          "calls": 102,
+          "triangles": 146229,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.867,
+        "renderer": {
+          "calls": 97,
+          "triangles": 142585,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.871,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141349,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.876,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141382,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.88,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141558,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.884,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141638,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.888,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141638,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.893,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141651,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.897,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141719,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.901,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141709,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.905,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141549,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.91,
+        "renderer": {
+          "calls": 83,
+          "triangles": 141275,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.914,
+        "renderer": {
+          "calls": 83,
+          "triangles": 140839,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.918,
+        "renderer": {
+          "calls": 83,
+          "triangles": 140295,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.922,
+        "renderer": {
+          "calls": 83,
+          "triangles": 139895,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.926,
+        "renderer": {
+          "calls": 83,
+          "triangles": 139361,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.931,
+        "renderer": {
+          "calls": 83,
+          "triangles": 136691,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.935,
+        "renderer": {
+          "calls": 83,
+          "triangles": 136245,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.939,
+        "renderer": {
+          "calls": 83,
+          "triangles": 135769,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.943,
+        "renderer": {
+          "calls": 83,
+          "triangles": 135282,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.948,
+        "renderer": {
+          "calls": 83,
+          "triangles": 134812,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.952,
+        "renderer": {
+          "calls": 83,
+          "triangles": 134569,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.956,
+        "renderer": {
+          "calls": 83,
+          "triangles": 134031,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.96,
+        "renderer": {
+          "calls": 83,
+          "triangles": 133551,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.964,
+        "renderer": {
+          "calls": 83,
+          "triangles": 133080,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.969,
+        "renderer": {
+          "calls": 83,
+          "triangles": 132714,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.973,
+        "renderer": {
+          "calls": 83,
+          "triangles": 132251,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.977,
+        "renderer": {
+          "calls": 83,
+          "triangles": 131830,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.981,
+        "renderer": {
+          "calls": 77,
+          "triangles": 129974,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.986,
+        "renderer": {
+          "calls": 77,
+          "triangles": 128967,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.99,
+        "renderer": {
+          "calls": 77,
+          "triangles": 128020,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.994,
+        "renderer": {
+          "calls": 70,
+          "triangles": 127122,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 0.998,
+        "renderer": {
+          "calls": 70,
+          "triangles": 127122,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      },
+      {
+        "t": 1,
+        "renderer": {
+          "calls": 70,
+          "triangles": 127122,
+          "points": 0,
+          "lines": 0,
+          "geometries": 47,
+          "textures": 16
+        }
+      }
+    ],
+    "replayValue": 0.007,
+    "home": {
+      "hash": "#/",
+      "overflow": false,
+      "loader": false
+    }
+  },
+  {
+    "mode": "mobile",
+    "errors": [],
+    "shots": [
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 86,
+            "triangles": 100969,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              490.4678826481484,
+              120.45231666169762,
+              -139.26777163399396
+            ],
+            "direction": [
+              -0.9456925593856983,
+              -0.18318883053832663,
+              0.2685282768881665
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.22,
+        "diagnostics": {
+          "renderer": {
+            "calls": 80,
+            "triangles": 42831,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              476.99606336253527,
+              144.00166908324422,
+              177.43541180073382
+            ],
+            "direction": [
+              -0.9064222369030185,
+              -0.25249157701515795,
+              -0.33859523325665275
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 86,
+            "triangles": 100969,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              490.4678826481484,
+              120.45231666169762,
+              -139.26777163399396
+            ],
+            "direction": [
+              -0.9456925593856983,
+              -0.18318883053832663,
+              0.2685282768881665
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 1,
+        "diagnostics": {
+          "renderer": {
+            "calls": 54,
+            "triangles": 79789,
+            "points": 0,
+            "lines": 0,
+            "geometries": 43,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              483.976962852137,
+              116.7014368450905,
+              -176.66538228251588
+            ],
+            "direction": [
+              -0.9245264982305422,
+              -0.1770847403195833,
+              0.3374785160799383
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      }
+    ],
+    "continuous": [
+      {
+        "t": 0.76,
+        "renderer": {
+          "calls": 88,
+          "triangles": 91670,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.766,
+        "renderer": {
+          "calls": 88,
+          "triangles": 97256,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.77,
+        "renderer": {
+          "calls": 90,
+          "triangles": 97150,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.774,
+        "renderer": {
+          "calls": 90,
+          "triangles": 98064,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.778,
+        "renderer": {
+          "calls": 90,
+          "triangles": 99562,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.783,
+        "renderer": {
+          "calls": 90,
+          "triangles": 101762,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.787,
+        "renderer": {
+          "calls": 90,
+          "triangles": 104919,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.791,
+        "renderer": {
+          "calls": 90,
+          "triangles": 104623,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.795,
+        "renderer": {
+          "calls": 90,
+          "triangles": 105955,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.799,
+        "renderer": {
+          "calls": 90,
+          "triangles": 105705,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.803,
+        "renderer": {
+          "calls": 90,
+          "triangles": 106482,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.808,
+        "renderer": {
+          "calls": 90,
+          "triangles": 108244,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.812,
+        "renderer": {
+          "calls": 90,
+          "triangles": 108901,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.816,
+        "renderer": {
+          "calls": 90,
+          "triangles": 108605,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.82,
+        "renderer": {
+          "calls": 90,
+          "triangles": 108174,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.825,
+        "renderer": {
+          "calls": 90,
+          "triangles": 110095,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.829,
+        "renderer": {
+          "calls": 90,
+          "triangles": 110461,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.833,
+        "renderer": {
+          "calls": 90,
+          "triangles": 111743,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.837,
+        "renderer": {
+          "calls": 90,
+          "triangles": 112292,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.842,
+        "renderer": {
+          "calls": 90,
+          "triangles": 108539,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.846,
+        "renderer": {
+          "calls": 88,
+          "triangles": 106559,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.85,
+        "renderer": {
+          "calls": 88,
+          "triangles": 106926,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.854,
+        "renderer": {
+          "calls": 88,
+          "triangles": 102300,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.858,
+        "renderer": {
+          "calls": 86,
+          "triangles": 102023,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.863,
+        "renderer": {
+          "calls": 86,
+          "triangles": 99489,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.867,
+        "renderer": {
+          "calls": 82,
+          "triangles": 96794,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.871,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95711,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.876,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95472,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.88,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95430,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.884,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95389,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.888,
+        "renderer": {
+          "calls": 67,
+          "triangles": 95367,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.892,
+        "renderer": {
+          "calls": 67,
+          "triangles": 95330,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.896,
+        "renderer": {
+          "calls": 67,
+          "triangles": 95244,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.901,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95890,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.905,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95698,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.909,
+        "renderer": {
+          "calls": 68,
+          "triangles": 95324,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.913,
+        "renderer": {
+          "calls": 68,
+          "triangles": 94804,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.917,
+        "renderer": {
+          "calls": 68,
+          "triangles": 94287,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.922,
+        "renderer": {
+          "calls": 68,
+          "triangles": 93690,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.926,
+        "renderer": {
+          "calls": 67,
+          "triangles": 93198,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.93,
+        "renderer": {
+          "calls": 67,
+          "triangles": 90994,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.935,
+        "renderer": {
+          "calls": 67,
+          "triangles": 90482,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.939,
+        "renderer": {
+          "calls": 67,
+          "triangles": 89918,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.943,
+        "renderer": {
+          "calls": 67,
+          "triangles": 89423,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.947,
+        "renderer": {
+          "calls": 67,
+          "triangles": 88867,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.951,
+        "renderer": {
+          "calls": 67,
+          "triangles": 88366,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.956,
+        "renderer": {
+          "calls": 67,
+          "triangles": 87768,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.96,
+        "renderer": {
+          "calls": 67,
+          "triangles": 87176,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.964,
+        "renderer": {
+          "calls": 67,
+          "triangles": 86548,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.968,
+        "renderer": {
+          "calls": 67,
+          "triangles": 85986,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.973,
+        "renderer": {
+          "calls": 67,
+          "triangles": 85424,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.977,
+        "renderer": {
+          "calls": 67,
+          "triangles": 84885,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.981,
+        "renderer": {
+          "calls": 61,
+          "triangles": 83209,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.985,
+        "renderer": {
+          "calls": 61,
+          "triangles": 81874,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.99,
+        "renderer": {
+          "calls": 61,
+          "triangles": 80793,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.993,
+        "renderer": {
+          "calls": 61,
+          "triangles": 79953,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 0.998,
+        "renderer": {
+          "calls": 54,
+          "triangles": 79802,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      },
+      {
+        "t": 1,
+        "renderer": {
+          "calls": 54,
+          "triangles": 79789,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 5
+        }
+      }
+    ],
+    "replayValue": 0.006,
+    "home": {
+      "hash": "#/",
+      "overflow": false,
+      "loader": false
+    }
+  }
+]

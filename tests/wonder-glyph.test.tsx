@@ -79,28 +79,42 @@ describe('glyph pen timing (Spec 05)', () => {
     }
   });
 
-  it('never draws a single line downward: flanks and legs rise to the apex', () => {
-    const single = /^M(-?[\d.]+) (-?[\d.]+) L(-?[\d.]+) (-?[\d.]+)$/;
+  it('draws independent straight or curved flanks upward toward the apex', () => {
+    const straightFlank = /^M[\d.]+ [\d.]+ L[\d.]+ [\d.]+$/;
+    const risingFlank = /^M[\d.]+ [\d.]+(?: [LQ][\d. ]+)+$/;
     let checked = 0;
-    for (const strokes of Object.values(GLYPH_STROKES)) {
+    for (const [id, strokes] of Object.entries(GLYPH_STROKES)) {
       for (const stroke of strokes) {
-        const m = single.exec(stroke.d);
-        if (!m) continue;
+        const isFlank = straightFlank.test(stroke.d)
+          || (id === 'eiffel-tower' && risingFlank.test(stroke.d));
+        if (stroke.stage === 0 || !isFlank) continue;
         checked += 1;
-        expect(Number(m[4]), stroke.d).toBeLessThanOrEqual(Number(m[2]));
+        const segments = stroke.d.match(/[MLQ][^MLQ]*/g)!;
+        let previousY = Number(segments[0].slice(1).trim().split(/\s+/)[1]);
+        for (const segment of segments.slice(1)) {
+          const points = segment.slice(1).trim().split(/\s+/).map(Number);
+          const endY = points[points.length - 1];
+          expect(endY, stroke.d).toBeLessThanOrEqual(previousY);
+          if (segment[0] === 'Q') {
+            // A rising endpoint alone does not prevent a curve dipping down.
+            expect(points[1], stroke.d).toBeLessThanOrEqual(previousY);
+            expect(points[1], stroke.d).toBeGreaterThanOrEqual(endY);
+          }
+          previousY = endY;
+        }
       }
     }
-    // Giza (6), Eiffel (4), Angkor (2) split flanks.
+    // Pyramid ridges/flanks and Eiffel legs remain independent rising strokes.
     expect(checked).toBeGreaterThanOrEqual(12);
   });
 
   it('splits pyramid flanks so both sides rise together', () => {
     const giza = GLYPH_STROKES['pyramids-of-giza'];
-    const great = giza.filter((s) => s.d.endsWith('L16 8'));
+    const great = giza.filter((s) => s.weight === 'heavy' && s.d.endsWith('L17 7.4'));
     expect(great).toHaveLength(2);
     expect(great[0].stage).toBe(great[1].stage);
     const eiffel = GLYPH_STROKES['eiffel-tower'];
-    const legs = eiffel.filter((s) => /^M[\d.]+ 29 L/.test(s.d));
+    const legs = eiffel.filter((s) => s.weight === 'heavy' && /^M[\d.]+ 28\.5 L/.test(s.d));
     expect(legs).toHaveLength(2);
     expect(legs[0].stage).toBe(legs[1].stage);
   });
@@ -129,7 +143,9 @@ describe('catalog wonder glyphs (Spec 05)', () => {
     const strokes = container.querySelectorAll('.wg-build');
     expect(strokes.length).toBeGreaterThanOrEqual(6);
     const d = [...strokes].map((node) => node.getAttribute('d') ?? '').join(' ');
-    expect(d).toMatch(/V8\.6|V9/);
+    // Two closed low lintels and one closed tall lintel retain real stone thickness.
+    expect((d.match(/Z/g) ?? []).length).toBeGreaterThanOrEqual(3);
+    expect((d.match(/M/g) ?? []).length).toBeGreaterThanOrEqual(10);
   });
 
   it('draws the Colosseum as stacked arcades with a ruined wing', () => {
@@ -137,8 +153,32 @@ describe('catalog wonder glyphs (Spec 05)', () => {
     const strokes = container.querySelectorAll('.wg-build');
     expect(strokes.length).toBeGreaterThanOrEqual(6);
     const d = [...strokes].map((node) => node.getAttribute('d') ?? '').join(' ');
-    expect(d).toMatch(/Q8\.4 19\.6/);
-    expect(d).toMatch(/L29\.2 26\.6/);
+    // Three rows carry complete arch openings; the outer wall steps down on the right.
+    const arcades = GLYPH_STROKES.colosseum.filter((stroke) => (stroke.d.match(/Q/g) ?? []).length >= 4);
+    expect(arcades).toHaveLength(3);
+    const wall = GLYPH_STROKES.colosseum.find((stroke) => stroke.weight === 'heavy')!;
+    expect((wall.d.match(/L/g) ?? []).length).toBeGreaterThanOrEqual(6);
+    expect(d).toContain('Q16 30.1');
+  });
+
+  it('keeps the full family inside the small viewBox with a bounded SVG cost', () => {
+    for (const wonder of WONDERS) {
+      const strokes = GLYPH_STROKES[wonder.id];
+      expect(strokes.length, wonder.id).toBeLessThanOrEqual(12);
+      for (const stroke of strokes) {
+        expect(pathLength(stroke.d), wonder.id).toBeGreaterThan(0);
+        // All artwork uses absolute coordinates; control points stay inside
+        // the 32-unit frame as well as the visible contour.
+        expect(stroke.d, wonder.id).not.toMatch(/[aclhmqstv]/);
+        const coordinates = stroke.d.match(/-?\d*\.?\d+/g)!.map(Number);
+        expect(Math.min(...coordinates), wonder.id).toBeGreaterThanOrEqual(1);
+        expect(Math.max(...coordinates), wonder.id).toBeLessThanOrEqual(31);
+      }
+      const { container } = render(<WonderGlyph id={wonder.id} />);
+      expect(container.querySelector('svg')?.getAttribute('viewBox')).toBe('0 0 32 32');
+      expect(container.querySelectorAll('filter,image,foreignObject')).toHaveLength(0);
+      expect(container.querySelectorAll('path')).toHaveLength(strokes.length * 2);
+    }
   });
 
   it('carries per-stroke pen timing and a dotted plan under the ink', () => {

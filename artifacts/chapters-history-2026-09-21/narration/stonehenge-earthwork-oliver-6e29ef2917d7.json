@@ -1,0 +1,22 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-earthwork",
+  "captionText": "An earthwork enclosure stood here centuries before the great stone circle.",
+  "src": "/audio/narration/stonehenge-earthwork-oliver-6e29ef2917d7.mp3",
+  "duration": 5.10839,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "4b145a3570c0b701e7aa5570062a585d30db689742b139bd4a4962e0eb835602",
+  "bytes": 82799
+}

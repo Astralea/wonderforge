@@ -1,0 +1,125 @@
+ M AGENTS.md
+ M HANDOFF.md
+ M artifacts/eiffel-upper-material-chain-2026-09-08/narration/manifest.json
+ M index.html
+ M package.json
+ M public/_headers
+ M specs/02-animation-engine.md
+ M specs/05-ui.md
+ M specs/07-scene-decomposition.md
+ M specs/08-scene-realism.md
+ M specs/10-stonehenge-reference-scene.md
+ M specs/11-petra-reference-scene.md
+ M specs/12-colosseum-reference-scene.md
+ M specs/13-sydney-opera-house-reference-scene.md
+ M specs/14-eiffel-tower-reference-scene.md
+ M src/data/colosseumEnvironment.ts
+ M src/data/constructionTypes.ts
+ M src/data/gizaConstruction.ts
+ M src/data/stonehengeConstruction.ts
+ M src/engine/colosseumCamera.ts
+ M src/engine/colosseumConstruction.ts
+ M src/engine/colosseumRomeLots.ts
+ M src/engine/colosseumTerrain.ts
+ M src/engine/construction.ts
+ M src/engine/eiffelFilm.ts
+ M src/engine/gizaCamera.ts
+ M src/engine/stonehengeCamera.ts
+ M src/engine/stonehengeConstruction.ts
+ M src/render/three/BlockSystem.ts
+ M src/render/three/ColosseumEnvironment.ts
+ M src/render/three/ColosseumSkyDome.ts
+ M src/render/three/ColosseumStoneSystem.ts
+ M src/render/three/ColosseumWorkSystem.ts
+ M src/render/three/ColosseumWorld.ts
+ M src/render/three/EiffelKitSystem.ts
+ M src/render/three/Environment.ts
+ M src/render/three/RenderPipeline.ts
+ M src/render/three/StonehengeEnvironment.ts
+ M src/render/three/StonehengeStoneSystem.ts
+ M src/render/three/StonehengeWorkSystem.ts
+ M src/render/three/ThreeCanvas.tsx
+ M src/render/three/WonderArrival.tsx
+ M src/render/three/WorkerSystem.ts
+ M src/render/three/WorldScene.ts
+ M src/render/three/colosseumRome.ts
+ M src/render/three/eiffelParis.ts
+ M src/render/three/wonderArrivalDrawings.ts
+ M src/store/playback.ts
+ M src/ui/CaptionLayer.tsx
+ M src/ui/CinematicView.tsx
+ M src/ui/FactsPanel.tsx
+ M src/ui/QuoteOverlay.tsx
+ M src/ui/WonderGlyph.tsx
+ M src/ui/eiffelCinematicLayout.css
+ M tests/construction.test.ts
+ M tests/eiffel-environment-startup.test.ts
+ M tests/eiffel-kit-renderer.test.ts
+ M tests/eiffel-loading.test.tsx
+ M tests/eiffel-ui-clock.test.tsx
+ M tests/giza-camera.test.ts
+ M tests/paris-load-cancellation.test.ts
+ M tests/playback.test.ts
+ M tests/stonehenge-world.test.ts
+ M tests/three-canvas-readiness.test.tsx
+ M tests/ui.test.tsx
+ M tests/wonder-glyph.test.tsx
+?? artifacts/arrival-loader-2026-09-18/
+?? artifacts/colosseum-aqueduct-2026-09-20/
+?? artifacts/colosseum-fabric-2026-09-19/
+?? artifacts/colosseum-icon-2026-09-20/
+?? artifacts/colosseum-interior-2026-09-17/
+?? artifacts/colosseum-opening-2026-09-18/
+?? artifacts/colosseum-overhaul-2026-09-17/
+?? artifacts/colosseum-rome-2026-09-18/
+?? artifacts/eiffel-icon-recut-2026-09-20/
+?? artifacts/giza-solidity-2026-09-17/
+?? artifacts/home-no-loader-2026-09-20/
+?? artifacts/preview-quality-2026-09-15/
+?? artifacts/public-film-repair-2026-09-20/
+?? artifacts/public-release-audit-2026-09-20/
+?? artifacts/rome-context-2026-09-20/
+?? artifacts/soundtrack/ambient-backup-2026-09-16/
+?? artifacts/soundtrack/colosseum/
+?? artifacts/soundtrack/eiffel-tower/ambient-delivery.wav
+?? artifacts/soundtrack/eiffel-tower/ambient-generated-01.json
+?? artifacts/soundtrack/eiffel-tower/ambient-generated-01.mp3
+?? artifacts/soundtrack/eiffel-tower/ambient-generated-02.json
+?? artifacts/soundtrack/eiffel-tower/ambient-generated-02.mp3
+?? artifacts/soundtrack/eiffel-tower/ambient-generated-03.json
+?? artifacts/soundtrack/eiffel-tower/ambient-generated-03.mp3
+?? artifacts/soundtrack/eiffel-tower/ambient-joined.wav
+?? artifacts/soundtrack/pyramids-of-giza/
+?? artifacts/soundtrack/stonehenge/
+?? artifacts/stonehenge-solstice-2026-09-18/
+?? artifacts/sydney-harbour-2026-09-18/
+?? artifacts/sydney-ready-2026-09-20/
+?? artifacts/ui-editorial-review-2026-09-16/
+?? artifacts/vertex-wordmark/
+?? artifacts/wordmark-worlds-2026-09-17/
+?? public/models/colosseum-rome/neronian-aqueduct.glb
+?? public/models/eiffel-construction-kit/tower-kit.runtime.json
+?? public/models/paris-1889/paris-city.glb.gz
+?? scripts/blender_colosseum_aqueduct.py
+?? scripts/prepare-eiffel-runtime.mjs
+?? specs/48-public-film-repair.md
+?? specs/49-scene-authoring-pipeline.md
+?? src/data/colosseumAqueduct.ts
+?? src/data/colosseumUrbanContext.ts
+?? src/data/eiffelKitRuntime.ts
+?? src/engine/arrivalProgress.ts
+?? src/engine/colosseumAqueduct.ts
+?? src/engine/colosseumUrbanContext.ts
+?? src/engine/gizaRampSupport.ts
+?? src/render/three/ColosseumAqueduct.ts
+?? src/render/three/ColosseumUrbanContext.ts
+?? src/render/three/aqueductMaterial.ts
+?? tests/arrival-progress.test.ts
+?? tests/colosseum-aqueduct.test.ts
+?? tests/colosseum-repair.test.ts
+?? tests/colosseum-urban-context.test.ts
+?? tests/eiffel-load-view-camera.test.ts
+?? tests/eiffel-runtime-assets.test.ts
+?? tests/giza-ramp-contact.test.ts
+?? tests/render-pipeline-disposal.test.ts
+?? tests/stonehenge-rendered-support.test.ts

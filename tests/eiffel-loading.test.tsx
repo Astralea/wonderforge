@@ -91,3 +91,44 @@ it('fills every catalog silhouette from measured readiness with a live waterline
     expect(screen.queryByTestId(waveId)).toBeNull();
   }
 });
+
+it('uses identical architectural cutouts for the arrival surface and its animated wave', () => {
+  for (const id of ['colosseum', 'petra', 'chichen-itza', 'eiffel-tower']) {
+    cleanup();
+    const wonder = WONDERS.find(wonder => wonder.id === id)!;
+    const drawing = WONDER_ARRIVAL_DRAWINGS[id];
+    const { container } = render(<WonderArrival wonder={wonder} percent={50} stage="Valley" />);
+    const surface = container.querySelector('.eiffel-arrival-surface')!;
+    const monumentClip = container.querySelector('clipPath path')!;
+    expect(surface.getAttribute('fill-rule'), id).toBe('evenodd');
+    expect(monumentClip.getAttribute('clip-rule'), id).toBe('evenodd');
+    expect(surface.getAttribute('d'), id).toBe(drawing.outline);
+    expect(monumentClip.getAttribute('d'), id).toBe(drawing.outline);
+    // These are actual closed holes, not dark painted overlays that a
+    // rising gold waterline could cover.
+    expect((drawing.outline.match(/Z/g) ?? []).length, id).toBeGreaterThanOrEqual(2);
+  }
+  const colosseum = WONDER_ARRIVAL_DRAWINGS.colosseum;
+  expect((colosseum.outline.match(/Z/g) ?? []).length).toBeGreaterThanOrEqual(14);
+});
+
+it('keeps every arrival fill bounded, monotone, and complete at 100 percent', () => {
+  for (const wonder of WONDERS) {
+    cleanup();
+    const drawing = WONDER_ARRIVAL_DRAWINGS[wonder.id];
+    const isEiffel = wonder.id === 'eiffel-tower';
+    const fillId = isEiffel ? 'eiffel-loading-fill' : 'wonder-arrival-fill';
+    const view = render(<WonderArrival wonder={wonder} percent={0} stage="Ground" />);
+    let previous = Infinity;
+    for (const progress of [0, 25, 50, 75, 99, 100]) {
+      view.rerender(<WonderArrival wonder={wonder} percent={progress} stage="Ground" />);
+      const y = Number(screen.getByTestId(fillId).getAttribute('transform')!.match(/translate\(0 ([\d.]+)\)/)![1]);
+      expect(y, wonder.id).toBeLessThanOrEqual(previous);
+      expect(y, wonder.id).toBeGreaterThanOrEqual(drawing.fillTop);
+      expect(y, wonder.id).toBeLessThanOrEqual(drawing.viewBox[1]);
+      previous = y;
+    }
+    expect(previous, wonder.id).toBe(drawing.fillTop);
+    expect(view.container.querySelectorAll('filter,image,foreignObject')).toHaveLength(0);
+  }
+});

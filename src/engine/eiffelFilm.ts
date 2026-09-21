@@ -343,7 +343,10 @@ function eiffelFilmChapterShotAt(rawT: number, aspect: number, film: EiffelFilmS
   const wideTarget: [number,number,number] = [49.5,13,-48];
   const detailTarget: [number,number,number] = [sample.payload.pose.position[0],sample.payload.pose.position[1]+.8,sample.payload.pose.position[2]];
   const target = wideTarget.map((v,i)=>v+(detailTarget[i]!-v)*close) as [number,number,number];
-  const azimuth = filmAzimuth, pitch=(24-19*close)*Math.PI/180, fov=42;
+  // Stay below the falsework through hoisting, then look down on the raised
+  // load as it turns and traverses into its receiving joint.
+  const elevated = shotEase((film.pilotSeconds-26)/4);
+  const azimuth = filmAzimuth, pitch=(24-19*close+11*close*elevated)*Math.PI/180, fov=42;
   const safeAspect=Number.isFinite(aspect)&&aspect>0?aspect:16/9;
   const ca=Math.cos(azimuth),sa=Math.sin(azimuth),cp=Math.cos(pitch),sp=Math.sin(pitch),ty=Math.tan(fov*Math.PI/360),tx=ty*safeAspect;
   const fit = (points: readonly RigidVec3[], aim: RigidVec3, minimum: number) => {
@@ -411,7 +414,9 @@ export function eiffelJointCampaignShotAt(seconds: number,aspect=16/9,azimuth=-1
   const wideTarget:RigidVec3=[49.5,13,-49],loadTarget:RigidVec3=[sample.payload.pose.position[0],sample.payload.pose.position[1]+.8,sample.payload.pose.position[2]],joint=jointPoint(jointSupport.joint);
   const detailTarget=loadTarget.map((value,index)=>value+((joint[index]!+(index===1?.2:0))-value)*fastening) as unknown as RigidVec3;
   const target=wideTarget.map((value,index)=>value+(detailTarget[index]!-value)*close) as [number,number,number];
-  const pitch=(24-19*close+20*fastening*close)*Math.PI/180,fov=42,safeAspect=Number.isFinite(aspect)&&aspect>0?aspect:16/9;
+  // Keep the detailed fastening view at 25 degrees while lifting the load
+  // view to 16 degrees; the bounds fit below follows the new pitch.
+  const pitch=(24-8*close+9*fastening*close)*Math.PI/180,fov=42,safeAspect=Number.isFinite(aspect)&&aspect>0?aspect:16/9;
   const ca=Math.cos(azimuth),sa=Math.sin(azimuth),cp=Math.cos(pitch),sp=Math.sin(pitch),ty=Math.tan(fov*Math.PI/360),tx=ty*safeAspect;
   const fit=(points:readonly RigidVec3[],aim:RigidVec3,minimum:number)=>{let radius=minimum;for(const p of points){const dx=p[0]-aim[0],dy=p[1]-aim[1],dz=p[2]-aim[2],radial=ca*dx+sa*dz,depth=cp*radial+sp*dy;radius=Math.max(radius,depth+Math.abs(-sa*dx+ca*dz)/(tx*.86),depth+Math.abs(-sp*radial+cp*dy)/(ty*.79));}return radius;};
   const handoffEnvelope=[...eiffelJointCampaignShotPointsAt(81.999),...eiffelJointCampaignShotPointsAt(82.001)];

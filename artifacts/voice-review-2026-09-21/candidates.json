@@ -1,0 +1,128 @@
+[
+  {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George - Warm, Captivating Storyteller",
+    "category": "premade",
+    "description": "Warm resonance that instantly captivates listeners.",
+    "labels": {
+      "age": "middle_aged",
+      "accent": "british",
+      "gender": "male",
+      "use_case": "narrative_story",
+      "descriptive": "mature",
+      "language": "en"
+    },
+    "preview_url": "https://api.us.elevenlabs.io/v1/voices/JBFqnCBsd6RMkjVDRZzb/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJwcmVtYWRlIiwiZmlsZW5hbWUiOiJlNjIwNmQxYS0wNzIxLTQ3ODctYWFmYi0wNmE2ZTcwNWNhYzUubXAzIiwidGltZXN0YW1wIjoxNzg5OTE2NDAwMDAwMDAwfQ%3D%3D",
+    "localPreview": "george-official-preview.mp3",
+    "duration": 3.390113,
+    "sha256": "4b92fc2ed3a0f2a5106694cbfb3098c12316ea17a6ace93500e0176588365c0c"
+  },
+  {
+    "voice_id": "nPczCjzI2devNBz1zQrb",
+    "name": "Brian - Deep, Resonant and Comforting",
+    "category": "premade",
+    "description": "Middle-aged man with a resonant and comforting tone. Great for narrations and advertisements.",
+    "labels": {
+      "age": "middle_aged",
+      "accent": "american",
+      "gender": "male",
+      "use_case": "social_media",
+      "descriptive": "classy",
+      "language": "en"
+    },
+    "preview_url": "https://api.us.elevenlabs.io/v1/voices/nPczCjzI2devNBz1zQrb/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJwcmVtYWRlIiwiZmlsZW5hbWUiOiIyZGQzZTcyYy00ZmQzLTQyZjEtOTNlYS1hYmM1ZDRlNWFhMWQubXAzIiwidGltZXN0YW1wIjoxNzg5OTE2NDAwMDAwMDAwfQ%3D%3D",
+    "localPreview": "brian-official-preview.mp3",
+    "duration": 5.433469,
+    "sha256": "504e87a80d98d538d02550071f74706c1c5ff6cf0f1b4dfe50794752f80ce818"
+  },
+  {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "name": "Lily - Velvety Actress",
+    "category": "premade",
+    "description": "Velvety British female voice delivers news and narrations with warmth and clarity.",
+    "labels": {
+      "age": "middle_aged",
+      "accent": "british",
+      "gender": "female",
+      "use_case": "informative_educational",
+      "descriptive": "confident",
+      "language": "en"
+    },
+    "preview_url": "https://storage.googleapis.com/eleven-public-prod/premade/voices/pFZP5JQG7iQjIQuC4Bku/89b68b35-b3dd-4348-a84a-a3c13a3c2b30.mp3",
+    "localPreview": "lily-official-preview.mp3",
+    "duration": 3.065034,
+    "sha256": "96524626a49f543d3c9968be070f22178418c2d360cc159a338355d048263c42"
+  },
+  {
+    "voice_id": "onwK4e9ZLuTAKqWW03F9",
+    "name": "Daniel - Steady Broadcaster",
+    "category": "premade",
+    "description": "A strong voice perfect for delivering a professional broadcast or news story.",
+    "labels": {
+      "age": "middle_aged",
+      "accent": "british",
+      "gender": "male",
+      "use_case": "informative_educational",
+      "descriptive": "formal",
+      "language": "en"
+    },
+    "preview_url": "https://api.us.elevenlabs.io/v1/voices/onwK4e9ZLuTAKqWW03F9/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJwcmVtYWRlIiwiZmlsZW5hbWUiOiI3ZWVlMDIzNi0xYTcyLTRiODYtYjMwMy01ZGNhZGMwMDdiYTkubXAzIiwidGltZXN0YW1wIjoxNzg5OTE2NDAwMDAwMDAwfQ%3D%3D",
+    "localPreview": "daniel-official-preview.mp3",
+    "duration": 5.746875,
+    "sha256": "bcc2f573556d5beb6408d1fe691aa5b7fb1cf16da1f52259cb35cf42cdbab666"
+  },
+  {
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "name": "Bill - Wise, Mature, Balanced",
+    "category": "premade",
+    "description": "Friendly and comforting voice ready to narrate your stories.",
+    "labels": {
+      "age": "old",
+      "accent": "american",
+      "gender": "male",
+      "use_case": "advertisement",
+      "descriptive": "crisp",
+      "language": "en"
+    },
+    "preview_url": "https://storage.googleapis.com/eleven-public-prod/premade/voices/pqHfZKP75CvOlQylNhV4/d782b3ff-84ba-4029-848c-acf01285524d.mp3",
+    "localPreview": "bill-official-preview.mp3",
+    "duration": 5.479909,
+    "sha256": "14c66bd91dcd9aa0a33acdf1fba30d34d86e35a9b2811029ed101def4212640b"
+  },
+  {
+    "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+    "name": "Alice - Clear, Engaging Educator",
+    "category": "premade",
+    "description": "Clear and engaging, friendly woman with a British accent suitable for e-learning.",
+    "labels": {
+      "age": "middle_aged",
+      "accent": "british",
+      "gender": "female",
+      "use_case": "informative_educational",
+      "descriptive": "professional",
+      "language": "en"
+    },
+    "preview_url": "https://storage.googleapis.com/eleven-public-prod/premade/voices/Xb7hH8MSUJpSbSDYk0k2/d10f7534-11f6-41fe-a012-2de1e482d336.mp3",
+    "localPreview": "alice-official-preview.mp3",
+    "duration": 3.482993,
+    "sha256": "99b32eed7f2b367fdc45de6cb8cb1072944024cd1d860c55d10eb366d65f3ac5"
+  },
+  {
+    "voice_id": "cjVigY5qzO86Huf0OWal",
+    "name": "Eric - Smooth, Trustworthy",
+    "category": "premade",
+    "description": "A smooth tenor pitch from a man in his 40s - perfect for agentic use cases.",
+    "labels": {
+      "age": "middle_aged",
+      "accent": "american",
+      "gender": "male",
+      "use_case": "conversational",
+      "descriptive": "classy",
+      "language": "en"
+    },
+    "preview_url": "https://storage.googleapis.com/eleven-public-prod/premade/voices/cjVigY5qzO86Huf0OWal/d098fda0-6456-4030-b3d8-63aa048c9070.mp3",
+    "localPreview": "eric-official-preview.mp3",
+    "duration": 2.275556,
+    "sha256": "3605747825208c871654572c9c487278269e37ac485dc90a6a451b0a60058a91"
+  }
+]

@@ -1,7 +1,7 @@
 # Spec 13 — Sydney Opera House Replication Scene
 
 The Sydney Opera House is the fourth forward test of the Giza pipeline and of
-`.agents/skills/wonderforge-scene-builder/`. It preserves the stable
+[Spec 49’s scene authoring pipeline](49-scene-authoring-pipeline.md). It preserves the stable
 `sydney-opera-house` ID but replaces the legacy silhouette with typed,
 deterministic **additive modern construction**: a harbour podium first, then
 Utzon spherical-section shells assembled from on-site precast ribs, lifted by

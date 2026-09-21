@@ -1,0 +1,810 @@
+[
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0",
+    "mode": "desktop",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-0/desktop.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "drawingBuffer": {
+        "width": 1280,
+        "height": 720
+      },
+      "alphaPixels": 4096,
+      "variance": 198,
+      "colorBuckets": 64,
+      "metrics": {
+        "colorBuckets": 66,
+        "colorEntropyBits": 4.2,
+        "edgeDensity": 0.07,
+        "luminance": {
+          "mean": 71,
+          "p5": 29.1,
+          "p95": 160.6,
+          "contrast": 131.6
+        },
+        "dominantColorShare": 0.206,
+        "nonBackgroundShare": 0.794
+      },
+      "renderBudget": {
+        "tier": "desktop",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 36,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 58936,
+            "limit": 750000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 40,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 16,
+            "limit": 60,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 36,
+          "triangles": 58936,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            16.575637846093773,
+            86.18529694408056,
+            326.03496975725
+          ],
+          "direction": [
+            -0.049308842863754095,
+            -0.23853345757858094,
+            -0.9698816565081767
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0",
+    "mode": "mobile",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-0/mobile.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "drawingBuffer": {
+        "width": 526,
+        "height": 1139
+      },
+      "alphaPixels": 4098,
+      "variance": 201,
+      "colorBuckets": 76,
+      "metrics": {
+        "colorBuckets": 88,
+        "colorEntropyBits": 4.74,
+        "edgeDensity": 0.082,
+        "luminance": {
+          "mean": 71.5,
+          "p5": 13.6,
+          "p95": 165.8,
+          "contrast": 152.2
+        },
+        "dominantColorShare": 0.14,
+        "nonBackgroundShare": 0.86
+      },
+      "renderBudget": {
+        "tier": "mobile",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 22,
+            "limit": 150,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 31991,
+            "limit": 300000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 37,
+            "limit": 200,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 5,
+            "limit": 40,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 22,
+          "triangles": 31991,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            30.29958238972136,
+            152.57541590618172,
+            595.9784787659399
+          ],
+          "direction": [
+            -0.04930884286375408,
+            -0.23853345757858083,
+            -0.9698816565081768
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0.58",
+    "mode": "desktop",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-0.58/desktop.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "drawingBuffer": {
+        "width": 1280,
+        "height": 720
+      },
+      "alphaPixels": 4096,
+      "variance": 210,
+      "colorBuckets": 115,
+      "metrics": {
+        "colorBuckets": 142,
+        "colorEntropyBits": 5.26,
+        "edgeDensity": 0.252,
+        "luminance": {
+          "mean": 99.4,
+          "p5": 41.3,
+          "p95": 153.9,
+          "contrast": 112.5
+        },
+        "dominantColorShare": 0.092,
+        "nonBackgroundShare": 0.908
+      },
+      "renderBudget": {
+        "tier": "desktop",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 102,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 116968,
+            "limit": 750000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 43,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 16,
+            "limit": 60,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 102,
+          "triangles": 116968,
+          "points": 0,
+          "lines": 0,
+          "geometries": 43,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -180.86257711479323,
+            118.59598941091525,
+            265.87215575857806
+          ],
+          "direction": [
+            0.5405472828057424,
+            -0.27844378609757786,
+            -0.7939003042164523
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0.58",
+    "mode": "mobile",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-0.58/mobile.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "drawingBuffer": {
+        "width": 526,
+        "height": 1139
+      },
+      "alphaPixels": 4098,
+      "variance": 207,
+      "colorBuckets": 114,
+      "metrics": {
+        "colorBuckets": 138,
+        "colorEntropyBits": 5.54,
+        "edgeDensity": 0.248,
+        "luminance": {
+          "mean": 94.5,
+          "p5": 24,
+          "p95": 155.5,
+          "contrast": 131.5
+        },
+        "dominantColorShare": 0.088,
+        "nonBackgroundShare": 0.912
+      },
+      "renderBudget": {
+        "tier": "mobile",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 71,
+            "limit": 150,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 95363,
+            "limit": 300000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 41,
+            "limit": 200,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 5,
+            "limit": 40,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 71,
+          "triangles": 95363,
+          "points": 0,
+          "lines": 0,
+          "geometries": 41,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -315.31254563357606,
+            187.85312836229872,
+            463.33845390536476
+          ],
+          "direction": [
+            0.5405472828057423,
+            -0.2784437860975779,
+            -0.7939003042164521
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0.86",
+    "mode": "desktop",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-0.86/desktop.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "drawingBuffer": {
+        "width": 1280,
+        "height": 720
+      },
+      "alphaPixels": 4096,
+      "variance": 221,
+      "colorBuckets": 101,
+      "metrics": {
+        "colorBuckets": 113,
+        "colorEntropyBits": 4.88,
+        "edgeDensity": 0.181,
+        "luminance": {
+          "mean": 80.3,
+          "p5": 28.3,
+          "p95": 149.3,
+          "contrast": 120.9
+        },
+        "dominantColorShare": 0.164,
+        "nonBackgroundShare": 0.836
+      },
+      "renderBudget": {
+        "tier": "desktop",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 102,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 145936,
+            "limit": 750000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 44,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 16,
+            "limit": 60,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 102,
+          "triangles": 145936,
+          "points": 0,
+          "lines": 0,
+          "geometries": 44,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -288.712995574705,
+            122.5314995199449,
+            215.67504519687134
+          ],
+          "direction": [
+            0.7757418684589777,
+            -0.2498167162482648,
+            -0.5794964726404365
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0.86",
+    "mode": "mobile",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-0.86/mobile.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "drawingBuffer": {
+        "width": 526,
+        "height": 1139
+      },
+      "alphaPixels": 4098,
+      "variance": 220,
+      "colorBuckets": 102,
+      "metrics": {
+        "colorBuckets": 120,
+        "colorEntropyBits": 5.31,
+        "edgeDensity": 0.201,
+        "luminance": {
+          "mean": 78.4,
+          "p5": 15.3,
+          "p95": 151.3,
+          "contrast": 135.9
+        },
+        "dominantColorShare": 0.122,
+        "nonBackgroundShare": 0.878
+      },
+      "renderBudget": {
+        "tier": "mobile",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 82,
+            "limit": 150,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 103605,
+            "limit": 300000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 40,
+            "limit": 200,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 5,
+            "limit": 40,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 103605,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -426.5554943751874,
+            166.9217300978022,
+            318.646465307925
+          ],
+          "direction": [
+            0.7757418684589777,
+            -0.24981671624826476,
+            -0.5794964726404365
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/1",
+    "mode": "desktop",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-1/desktop.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "drawingBuffer": {
+        "width": 1280,
+        "height": 720
+      },
+      "alphaPixels": 4096,
+      "variance": 224,
+      "colorBuckets": 87,
+      "metrics": {
+        "colorBuckets": 105,
+        "colorEntropyBits": 4.75,
+        "edgeDensity": 0.146,
+        "luminance": {
+          "mean": 77.2,
+          "p5": 19.9,
+          "p95": 149.3,
+          "contrast": 129.3
+        },
+        "dominantColorShare": 0.145,
+        "nonBackgroundShare": 0.855
+      },
+      "renderBudget": {
+        "tier": "desktop",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 70,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 125174,
+            "limit": 750000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 44,
+            "limit": 300,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 16,
+            "limit": 60,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 70,
+          "triangles": 125174,
+          "points": 0,
+          "lines": 0,
+          "geometries": 44,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -334.233879573538,
+            124.21947484302642,
+            183.2845905118151
+          ],
+          "direction": [
+            0.8522327940727961,
+            -0.23514211310259003,
+            -0.4673408299651598
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/1",
+    "mode": "mobile",
+    "state": null,
+    "seed": null,
+    "screenshotPath": "artifacts/rome-context-2026-09-20/after-1/mobile.png",
+    "gpu": {
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "vendor": "Google Inc. (Apple)",
+      "softwareRendered": false
+    },
+    "result": {
+      "ok": true,
+      "reason": "nonblank",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "drawingBuffer": {
+        "width": 526,
+        "height": 1139
+      },
+      "alphaPixels": 4098,
+      "variance": 220,
+      "colorBuckets": 93,
+      "metrics": {
+        "colorBuckets": 99,
+        "colorEntropyBits": 5.33,
+        "edgeDensity": 0.168,
+        "luminance": {
+          "mean": 77.4,
+          "p5": 11.4,
+          "p95": 151.1,
+          "contrast": 139.7
+        },
+        "dominantColorShare": 0.079,
+        "nonBackgroundShare": 0.921
+      },
+      "renderBudget": {
+        "tier": "mobile",
+        "note": "starting-point budget; adjust per game and document overrides",
+        "rows": [
+          {
+            "metric": "calls",
+            "actual": 51,
+            "limit": 150,
+            "ok": true
+          },
+          {
+            "metric": "triangles",
+            "actual": 80645,
+            "limit": 300000,
+            "ok": true
+          },
+          {
+            "metric": "geometries",
+            "actual": 40,
+            "limit": 200,
+            "ok": true
+          },
+          {
+            "metric": "textures",
+            "actual": 5,
+            "limit": 40,
+            "ok": true
+          }
+        ],
+        "withinBudget": true
+      },
+      "diagnostics": {
+        "renderer": {
+          "calls": 51,
+          "triangles": 80645,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -456.887111695594,
+            158.06109696861103,
+            250.54422156156187
+          ],
+          "direction": [
+            0.8522327940727961,
+            -0.23514211310259006,
+            -0.46734082996515947
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  }
+]

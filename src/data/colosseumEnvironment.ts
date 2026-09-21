@@ -62,10 +62,10 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
     layers: COLOSSEUM_CONSTRUCTION.layers.map((layer) => ({ ...layer })),
     terrain: {
       radius: 2200,
-      segments: 128,
+      segments: 64,
       motion: 'static-world-space',
       description:
-        'Drained alluvial valley between Palatine and Caelian, with Quirinal, ' +
+        'Drained alluvial valley between Palatine, Oppian, Velia and Caelian, with Quirinal, ' +
         'Viminal, and Janiculum as a farther city ring, extending past every ' +
         'cinematic hold so the square plane never silhouettes. Olive scrub on ' +
         'the rises; far valley fog meets the sky.',
@@ -86,7 +86,8 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
       description:
         'Olive Palatine and Caelian neighbourhoods of hip-roof insulae and palace ' +
         'wings, a farther Quirinal–Viminal–Janiculum city ring, umbrella-pine ridges, ' +
-        'and a Claudian aqueduct. Hills stay below the 48 m facade. No standing water in the oval.',
+        'and the Neronian watercourse entering the Claudian precinct from the east, ' +
+        'with adjoining streets and courtyard blocks. Hills stay below the 48 m facade. No standing water in the oval.',
     },
     site: {
       wagons: 18,
@@ -101,6 +102,9 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
       'gladiatorial games during construction',
       'standing water in the working oval',
       'mid-ground Tiber pool',
+      'Domitianic aqueduct extension to the Palatine',
+      'Trajan baths',
+      'Arch of Constantine',
     ],
     sources: [
       { title: 'UNESCO Historic Centre of Rome', url: 'https://whc.unesco.org/en/list/91/' },

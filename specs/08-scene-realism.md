@@ -62,7 +62,22 @@ The plateau fills the frame. It is not a floating island on an empty gradient.
 - Quarry release is a short lever/pry operation, never a materialization.
 - Dressed blocks are loaded onto sleds at ground level.
 - Haul teams lean into tensioned ropes; sled and stone move as one unit.
-- Ramp ascent follows the ramp surface. A raised block is visibly supported.
+- Ramp ascent follows a continuous compacted-earth incline with level
+  foot/crest landings, above the retained earthwork. Tall stair tops are not
+  the haul surface. A typed course schedule and surface profile drive both
+  rendered triangles and construction transforms. Sled front/rear contacts
+  determine its rigid pitch on the incline; at the crest the rigid runner
+  rocks over a bearing point without penetrating the surface. The load
+  shares that pitch. Workers sample their own foot positions, including the uphill lead crew. Course transitions
+  happen between delivery tails so a ramp cannot rise through an active sled.
+- Haul gradients stay at or below 15 degrees, including terminal courses.
+  Short southern ramps serve only the low courses. Higher Khufu loads use
+  the extended eastern approach; higher Khafre loads use the western
+  approach. Menkaure uses a western incline and a supply road around the
+  outside of Khafre's earthwork. Drawn roads follow these typed routes;
+  route/earthwork keep-outs exclude other monuments and active ramps. Road
+  embankments and the higher plateau approach foundations extend to the
+  actual ground; a raised road or ramp must not be a floating skin.
 - At the crest, rollers/cribbing and lever teams translate the block into line.
 - Seating is a short gravity-aligned descent onto an available support surface.
 - Workers return without a block; lanes and operation offsets prevent obvious
@@ -106,6 +121,9 @@ verification recipes.
   monument it serves.
 - **Ground contact and scale.** Objects rest on the terrain at a consistent
   human yardstick — one world unit is about one metre, a worker about 1.8.
+- **Static work.** Core fill caches the visible course and ready-cell prefix;
+  unchanged or completed construction does not rewrite its instance buffers.
+  Every scene-owned instance mesh is disposed with its owner.
 - **Instance hygiene.** Placement loops that can reject a candidate set
   `mesh.count` to what they placed; unwritten instances otherwise render at
   the world origin, inside the main monument.

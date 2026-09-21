@@ -3,6 +3,11 @@
 Scene authoring proceeds from the world inward and from logistics to monument.
 The renderer must never receive a flat pile of disconnected decorative parts.
 
+Execute [Spec 49 — Scene authoring pipeline](49-scene-authoring-pipeline.md)
+for research, context layout, Blender assets, integration and film acceptance.
+Layer presence alone is insufficient: roads and infrastructure must connect
+the named districts they belong to, using shared typed placement data.
+
 ## Layer contract
 
 Every production scene declares these layers, far to near:

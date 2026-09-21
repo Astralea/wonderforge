@@ -1,0 +1,206 @@
+[
+  {
+    "mode": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "catalogGlyph": {
+      "x": 489.609375,
+      "y": 417.796875,
+      "width": 38.390625,
+      "height": 38.390625
+    },
+    "catalogInk": [
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      }
+    ],
+    "homeLoaders": 0,
+    "fills": [
+      {
+        "percent": 0,
+        "fill": "translate(0 224)",
+        "rules": "evenodd",
+        "waveCount": 1,
+        "moving": true,
+        "bounds": {
+          "x": 544,
+          "y": 258.90625,
+          "width": 352,
+          "height": 382.1875
+        }
+      },
+      {
+        "percent": 50,
+        "fill": "translate(0 120)",
+        "rules": "evenodd",
+        "waveCount": 1,
+        "moving": true,
+        "bounds": {
+          "x": 544,
+          "y": 258.90625,
+          "width": 352,
+          "height": 382.1875
+        }
+      },
+      {
+        "percent": 100,
+        "fill": "translate(0 0)",
+        "rules": "evenodd",
+        "waveCount": 0,
+        "moving": null,
+        "bounds": {
+          "x": 544,
+          "y": 258.90625,
+          "width": 352,
+          "height": 382.1875
+        }
+      }
+    ],
+    "reducedWave": {
+      "display": "none",
+      "animation": "none"
+    },
+    "errors": []
+  },
+  {
+    "mode": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "catalogGlyph": {
+      "x": 327.609375,
+      "y": 341.796875,
+      "width": 38.390625,
+      "height": 38.390625
+    },
+    "catalogInk": [
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      },
+      {
+        "opacity": "1",
+        "dashoffset": "0px"
+      }
+    ],
+    "homeLoaders": 0,
+    "fills": [
+      {
+        "percent": 0,
+        "fill": "translate(0 224)",
+        "rules": "evenodd",
+        "waveCount": 1,
+        "moving": true,
+        "bounds": {
+          "x": 32,
+          "y": 235.703125,
+          "width": 326,
+          "height": 372.578125
+        }
+      },
+      {
+        "percent": 50,
+        "fill": "translate(0 120)",
+        "rules": "evenodd",
+        "waveCount": 1,
+        "moving": true,
+        "bounds": {
+          "x": 32,
+          "y": 235.703125,
+          "width": 326,
+          "height": 372.578125
+        }
+      },
+      {
+        "percent": 100,
+        "fill": "translate(0 0)",
+        "rules": "evenodd",
+        "waveCount": 0,
+        "moving": null,
+        "bounds": {
+          "x": 32,
+          "y": 235.703125,
+          "width": 326,
+          "height": 372.578125
+        }
+      }
+    ],
+    "reducedWave": {
+      "display": "none",
+      "animation": "none"
+    },
+    "errors": []
+  }
+]

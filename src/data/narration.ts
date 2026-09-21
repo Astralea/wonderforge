@@ -1,3 +1,5 @@
+import { HISTORICAL_NARRATION_ASSETS } from './historicalNarration.generated';
+
 /**
  * Typed prerecorded caption narration (Spec 05 §Caption voice).
  *
@@ -10,7 +12,7 @@
 
 export interface NarrationVoice {
   provider: 'ElevenLabs';
-  name: 'George' | 'Daniel' | 'Bill' | 'Alice' | 'Adam';
+  name: 'George' | 'Daniel' | 'Bill' | 'Alice' | 'Adam' | 'Charles' | 'Oliver' | 'Andrea Williams';
   voiceId: string;
   model: 'eleven_multilingual_v2';
   description: string;
@@ -67,153 +69,43 @@ export const ADAM_NARRATION_VOICE: NarrationVoice = {
   description: 'Narrator American male; distinct from George, Daniel, Bill, and Alice.',
 };
 
-export const GIZA_NARRATION: readonly NarrationClip[] = [
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-quarry',
-    captionText:
-      'Stone comes from the plateau; white casing stone arrives from Tura.',
-    src: '/audio/narration/giza-george-quarry.mp3',
-    duration: 6.780227,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-roads',
-    captionText: 'Water on the sand helps crews pull the loaded sledges.',
-    src: '/audio/narration/giza-george-roads.mp3',
-    duration: 5.944308,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-ramps',
-    captionText: 'In this reconstruction, ramps carry stones to each new level.',
-    src: '/audio/narration/giza-george-ramps.mp3',
-    duration: 5.479909,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-masons',
-    captionText: 'Every casing stone is dressed, levered, and seated by hand.',
-    src: '/audio/narration/giza-george-masons.mp3',
-    duration: 5.24771,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-horizon',
-    captionText: 'The film shows three reigns in a single day.',
-    src: '/audio/narration/giza-george-horizon.mp3',
-    duration: 4.272472,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-];
+/** Owner-selected voice library entries, 2026-09-21. */
+export const CHARLES_NARRATION_VOICE: NarrationVoice = {
+  provider: 'ElevenLabs', name: 'Charles', voiceId: 'zNsotODqUhvbJ5wMG7Ei',
+  model: 'eleven_multilingual_v2',
+  description: 'Expressive mature English gentleman with a traditional British RP accent.',
+};
 
-export const STONEHENGE_NARRATION: readonly NarrationClip[] = [
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-sarsens',
-    captionText: 'Hammerstones shape the faces of the great sarsen stones.',
-    src: '/audio/narration/stonehenge-daniel-sarsens.mp3',
-    duration: 6.269388,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-bluestones',
-    captionText:
-      'The smaller bluestones were transported from the Preseli Hills in Wales, over 200 km away.',
-    src: '/audio/narration/stonehenge-daniel-bluestones.mp3',
-    duration: 8.637823,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-pits',
-    captionText: 'Here, each upright tips into a sloping pit before rubble secures its base.',
-    src: '/audio/narration/stonehenge-daniel-pits.mp3',
-    duration: 7.709025,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-lintels',
-    captionText: 'The film uses timber platforms to raise the lintels.',
-    src: '/audio/narration/stonehenge-daniel-lintels.mp3',
-    duration: 5.572789,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-axis',
-    captionText: 'The stones align with the midsummer sunrise and midwinter sunset.',
-    src: '/audio/narration/stonehenge-daniel-axis.mp3',
-    duration: 6.083628,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-];
+export const OLIVER_NARRATION_VOICE: NarrationVoice = {
+  provider: 'ElevenLabs', name: 'Oliver', voiceId: 'L1aJrPa7pLJEyYlh3Ilq',
+  model: 'eleven_multilingual_v2',
+  description: 'Warm, kind, mature British narrator with a steady delivery.',
+};
 
-export const COLOSSEUM_NARRATION: readonly NarrationClip[] = [
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-valley',
-    captionText:
-      'Work begins on the drained floor between the Palatine and Caelian hills.',
-    src: '/audio/narration/colosseum-bill-valley.mp3',
-    duration: 4.272472,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-stone',
-    captionText: 'Load-bearing piers are Tivoli travertine hauled twenty kilometres into Rome.',
-    src: '/audio/narration/colosseum-bill-stone.mp3',
-    duration: 4.272472,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-cranes',
-    captionText:
-      'In this reconstruction, treadwheel cranes lift blocks to each new level.',
-    src: '/audio/narration/colosseum-bill-cranes.mp3',
-    duration: 3.854512,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-vaults',
-    captionText: 'Timber supports hold the vaults during construction.',
-    src: '/audio/narration/colosseum-bill-vaults.mp3',
-    duration: 2.507755,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-orders',
-    captionText: 'Three tiers of arches rise beneath the solid upper wall.',
-    src: '/audio/narration/colosseum-bill-orders.mp3',
-    duration: 2.972154,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-];
+export const ANDREA_NARRATION_VOICE: NarrationVoice = {
+  provider: 'ElevenLabs', name: 'Andrea Williams', voiceId: 'dcWyhLms5IOM9o93xsQu',
+  model: 'eleven_multilingual_v2',
+  description: 'Professional British female narrator with a refined accent.',
+};
+
+export const HISTORICAL_NARRATION_VOICES: Readonly<Record<string, NarrationVoice>> = {
+  'pyramids-of-giza': CHARLES_NARRATION_VOICE,
+  stonehenge: OLIVER_NARRATION_VOICE,
+  colosseum: ANDREA_NARRATION_VOICE,
+};
+export const HISTORICAL_NARRATION_SPEED = 0.92;
+
+/** Only measured, generated takes are bound. Missing takes remain silent. */
+function historicalNarrationFor(wonderId: string, voice: NarrationVoice): readonly NarrationClip[] {
+  return HISTORICAL_NARRATION_ASSETS.filter(clip => clip.wonderId === wonderId && clip.voiceId === voice.voiceId).map(clip => ({
+    wonderId, captionId: clip.captionId, captionText: clip.captionText,
+    src: clip.src, duration: clip.duration, volume: clip.volume, voice,
+  }));
+}
+
+export const GIZA_NARRATION = historicalNarrationFor('pyramids-of-giza', HISTORICAL_NARRATION_VOICES['pyramids-of-giza']!);
+export const STONEHENGE_NARRATION = historicalNarrationFor('stonehenge', HISTORICAL_NARRATION_VOICES.stonehenge!);
+export const COLOSSEUM_NARRATION = historicalNarrationFor('colosseum', HISTORICAL_NARRATION_VOICES.colosseum!);
 
 export const SYDNEY_NARRATION: readonly NarrationClip[] = [
   {

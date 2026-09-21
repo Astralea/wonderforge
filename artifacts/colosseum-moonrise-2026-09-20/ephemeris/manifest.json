@@ -1,0 +1,147 @@
+{
+  "source": "JPL Horizons / DE441",
+  "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+  "scenario": "moonrise",
+  "documentation": [
+    "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+    "https://ssd.jpl.nasa.gov/horizons/manual.html"
+  ],
+  "observer": {
+    "latitudeDegrees": 41.8902,
+    "longitudeDegreesEast": 12.4922,
+    "altitudeMetres": 25
+  },
+  "calendar": "Julian (Horizons MIXED before1582)",
+  "timeScale": "UT1, not UTC",
+  "coordinates": "Apparent AIRLESS topocentric azimuth/elevation; east/up/north world vectors",
+  "startJulianDay": 1750449.5,
+  "endJulianDay": 1750451.75,
+  "stepMinutes": 5,
+  "rowCount": 649,
+  "limitations": [
+    "Authored representative dates; no dedication date or observed historical weather claim.",
+    "Ancient Earth rotation is reconstructed; JPL TDB-UT1 around9639.4seconds is an estimate. Interpolation accuracy is not absolute historical accuracy.",
+    "No atmospheric refraction, terrain-horizon obstruction or weather extinction in the ephemeris.",
+    "Moon lightDirection uses apparent range vectors at observer time; few-arcsecond difference from Horizons reflection-time phase is measured below.",
+    "Physical angular radii are preserved in data; any presentation enlargement must be declared separately."
+  ],
+  "archives": [
+    {
+      "request": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/grid-jun21-23-sun.request.json",
+      "requestSha256": "03f13da66a17814652cca49b90f4409f24f7191c1d595939c3d72ff52b937107",
+      "response": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/grid-jun21-23-sun.response.json",
+      "responseSha256": "942a7b6d7fb2f6f3499cc4b2e11c6331142ba6b8e7e2b62a328e442ccb6d726e",
+      "rowCount": 649,
+      "target": "10",
+      "independentOffGridQuery": false
+    },
+    {
+      "request": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/grid-jun21-23-moon.request.json",
+      "requestSha256": "6516db67792830575712a02d8d1c28c548835a707b61a26f98dc5a5fff90f48e",
+      "response": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/grid-jun21-23-moon.response.json",
+      "responseSha256": "3a09461bc39a80423bfcff2ad672aaeea528da68512c1984377ef9f4be1c5e7a",
+      "rowCount": 649,
+      "target": "301",
+      "independentOffGridQuery": false
+    },
+    {
+      "request": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/oracle-off-grid-jun21-23-sun.request.json",
+      "requestSha256": "ebfb61c0c7a8216f20e40648450ffedf0f5f439383c668540f2ef64f95373ef6",
+      "response": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/oracle-off-grid-jun21-23-sun.response.json",
+      "responseSha256": "1bf05255d8ac65b67e1dd5ac5f15db1f270d74938978a9174f19ebf0066c4848",
+      "rowCount": 191,
+      "target": "10",
+      "independentOffGridQuery": true
+    },
+    {
+      "request": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/oracle-off-grid-jun21-23-moon.request.json",
+      "requestSha256": "2737f58cb611a49b976b10dfcba50f5e2b265cdb5b4a09778bc3a67b77452578",
+      "response": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/oracle-off-grid-jun21-23-moon.response.json",
+      "responseSha256": "45795820eb5552bef03c6bce53cde6d1bff031afa551d91b0ff88990bc5d0d63",
+      "rowCount": 191,
+      "target": "301",
+      "independentOffGridQuery": true
+    }
+  ],
+  "runtimeData": "src/data/colosseumEphemeris.generated.ts",
+  "runtimeDataSha256": "615d12b8c006e733e67928ed90d546cd91efc8053e77dff157d8d74c5bc1103e",
+  "oracle": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/off-grid-oracle.json",
+  "oracleSha256": "7749e1194500fee246b9ae259d2d51559e4ac640d00a8837ac2b7f5fba4b7791",
+  "validation": {
+    "independentOffGridSamplesPerBody": 191,
+    "maximumErrors": {
+      "sunDirectionDegrees": 0.0012534388247856703,
+      "moonDirectionDegrees": 0.001015297444328008,
+      "illuminatedFractionAbsolute": 1.7419887515468524e-05,
+      "phaseAngleDegrees": 0.00033420440819753594
+    }
+  },
+  "events": {
+    "definition": "Airless centre crosses flat astronomical horizon; interpolated within5min rows.",
+    "sun": [
+      {
+        "event": "rise",
+        "julianDayUt1": 1750449.648914817,
+        "hoursFromStartMidnightUt1": 3.5739556085318327,
+        "azimuthDegrees": 57.38863427905095
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750450.2775482782,
+        "hoursFromStartMidnightUt1": 18.661158677190542,
+        "azimuthDegrees": 302.62723875954737
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750450.6490153442,
+        "hoursFromStartMidnightUt1": 27.576368261128664,
+        "azimuthDegrees": 57.365090633083376
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750451.2777391286,
+        "hoursFromStartMidnightUt1": 42.665739085525274,
+        "azimuthDegrees": 302.64420416855074
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750451.6491395978,
+        "hoursFromStartMidnightUt1": 51.57935034669936,
+        "azimuthDegrees": 57.35176242381323
+      }
+    ],
+    "moon": [
+      {
+        "event": "set",
+        "julianDayUt1": 1750449.6673660767,
+        "hoursFromStartMidnightUt1": 4.016785841435194,
+        "azimuthDegrees": 243.53313549046854
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750450.2931261703,
+        "hoursFromStartMidnightUt1": 19.035028086975217,
+        "azimuthDegrees": 116.40067197205501
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750450.7011354654,
+        "hoursFromStartMidnightUt1": 28.82725116983056,
+        "azimuthDegrees": 243.88955733969053
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750451.3236520481,
+        "hoursFromStartMidnightUt1": 43.76764915511012,
+        "azimuthDegrees": 115.30419232585753
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750451.7372318232,
+        "hoursFromStartMidnightUt1": 53.693563755601645,
+        "azimuthDegrees": 245.46707720323806
+      }
+    ]
+  },
+  "dateParsingEvidence": "artifacts/colosseum-celestial-2026-09-20/ephemeris/manifest.json records the rejected bare80/0080 probes. All accepted requests use explicit AD0080."
+}

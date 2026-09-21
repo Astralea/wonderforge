@@ -17,6 +17,13 @@ export function applyColosseumShadow(sun: DirectionalLight, direction: Vector3):
   camera.bottom = -130;
   camera.top = 130;
   camera.near = 8;
-  camera.far = 560;
+  // Low celestial keys cast long shadows through the portrait foreground.
+  // The old 560m depth cut those shadows off across the visible valley floor.
+  camera.far = 1_200;
+  // Keep receiver offset in metres when extending the depth interval. Large
+  // normalized bias becomes a detached ground shadow under a grazing key.
+  const grazing = Math.max(0, Math.min(1, direction.y / .25));
+  sun.shadow.bias = -(0.004 + .022 * grazing) / (camera.far - camera.near);
+  sun.shadow.normalBias = .003 + .015 * grazing;
   camera.updateProjectionMatrix();
 }

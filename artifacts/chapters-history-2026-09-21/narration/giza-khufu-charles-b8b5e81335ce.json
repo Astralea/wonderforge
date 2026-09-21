@@ -1,0 +1,28 @@
+{
+  "wonderId": "pyramids-of-giza",
+  "captionId": "giza-khufu",
+  "captionText": "Khufu's tomb rises first, built from limestone quarried on this plateau.",
+  "src": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+  "duration": 4.318912,
+  "volume": 1,
+  "voiceName": "Charles",
+  "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "ca7d473d889aefa102dc845d00e2eb0fbfecf954622f34a226e5363fac6aceb8",
+  "bytes": 70261,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.22,
+    "truePeakDbtp": -2.23,
+    "gainDb": 8.84
+  }
+}

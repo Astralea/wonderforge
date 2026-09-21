@@ -29,6 +29,10 @@ export function FactsPanel({
         {wonder.name}
       </h3>
       <p className="mt-1 text-sm text-parchment/60">{wonder.location}</p>
+      <figure className="mt-6 border-l-2 border-gold/40 pl-4">
+        <blockquote className="text-sm leading-relaxed text-parchment/85 italic">{wonder.quote.text}</blockquote>
+        <figcaption className="mt-2 text-xs text-gold/90">— {wonder.quote.author}</figcaption>
+      </figure>
       {wonder.description.trim() ? (
         <p className="mt-6 leading-relaxed text-parchment/85">
           {wonder.description}
@@ -44,6 +48,17 @@ export function FactsPanel({
           </li>
         ))}
       </ul>
+      {wonder.credits?.length ? (
+        <footer className="mt-8 border-t border-white/10 pt-4 text-xs leading-relaxed text-parchment/60">
+          {wonder.credits.map(credit => (
+            <p key={credit.url}>
+              <a href={credit.url} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold">
+                {credit.label}
+              </a>
+            </p>
+          ))}
+        </footer>
+      ) : null}
     </aside>
   );
 }

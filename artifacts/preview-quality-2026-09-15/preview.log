@@ -1,0 +1,70 @@
+  ➜  Local:   http://127.0.0.1:5589/
+
+=== restart ===
+  ➜  Local:   http://127.0.0.1:5589/
+
+=== rebuild restart ===
+  ➜  Local:   http://127.0.0.1:5589/
+
+=== petra fix restart ===
+  ➜  Local:   http://127.0.0.1:5589/
+
+=== massif bright restart ===
+  ➜  Local:   http://127.0.0.1:5589/
+=== home ambient restart ===
+npm warn "127.0.0.1" is being parsed as a normal command line argument.
+npm warn "5589" is being parsed as a normal command line argument.
+npm warn Unknown cli config "--host". This will stop working in the next major version of npm.
+npm warn Unknown cli config "--port". This will stop working in the next major version of npm.
+npm warn Unknown cli config "--strictPort". This will stop working in the next major version of npm.
+Port 4173 is in use, trying another one...
+  ➜  Local:   http://localhost:4174/
+  ➜  Network: use --host to expose
+=== home ambient restart 5589 ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== home ambient restart 5589 after SIGTERM ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== title plate no narration restart ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== catalog glyphs restart ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== catalog glyphs preview restore ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== giza home + richer glyphs ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== giza solid core occupancy ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/
+=== wordmark + world overhaul ===
+
+> wonderforge@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 5589 --strictPort
+
+  ➜  Local:   http://127.0.0.1:5589/

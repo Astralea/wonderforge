@@ -115,6 +115,7 @@ export interface Wonder {
   quote: Quote;
   description: string;      // optional; empty omits the About paragraph
   facts: string[];
+  credits?: readonly { label: string; url: string }[];
   palette: WonderPalette;
   structure: StructureSpec;
 }

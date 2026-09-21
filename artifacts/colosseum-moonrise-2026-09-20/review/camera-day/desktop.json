@@ -1,0 +1,153 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/colosseum/0.5",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/colosseum-moonrise-2026-09-20/review/camera-day/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 199,
+    "colorBuckets": 125,
+    "metrics": {
+      "colorBuckets": 160,
+      "colorEntropyBits": 5.36,
+      "edgeDensity": 0.211,
+      "luminance": {
+        "mean": 135.1,
+        "p5": 46.8,
+        "p95": 169.4,
+        "contrast": 122.7
+      },
+      "dominantColorShare": 0.11,
+      "nonBackgroundShare": 0.89
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 113,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 112415,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 50,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 113,
+        "triangles": 112415,
+        "points": 0,
+        "lines": 0,
+        "geometries": 50,
+        "textures": 16
+      },
+      "colosseumCelestial": {
+        "t": 0.5,
+        "julianDayUt1": 1750450.078718266,
+        "calendar": "Julian",
+        "timeScale": "UT1",
+        "angularScale": 2.4,
+        "sun": {
+          "direction": [
+            -0.6078254648269539,
+            0.778045779767564,
+            -0.1587229312159427
+          ],
+          "azimuthDegrees": 255.36502634816884,
+          "authoringAzimuthDegrees": -165.36502634816884,
+          "elevationDegrees": 51.08199544484156,
+          "distanceKm": 152073209.7368094,
+          "angularRadiusDegrees": 0.262115972,
+          "aboveHorizon": true,
+          "upperLimbAboveHorizon": true,
+          "horizonVisibility": 1
+        },
+        "moon": {
+          "direction": [
+            0.5268828811735532,
+            -0.8026068857763999,
+            0.27967233762130306
+          ],
+          "azimuthDegrees": 62.04039102724556,
+          "authoringAzimuthDegrees": 27.959608972754438,
+          "elevationDegrees": -53.37976767225912,
+          "distanceKm": 411464.11779969995,
+          "angularRadiusDegrees": 0.24193114739536234,
+          "aboveHorizon": false,
+          "upperLimbAboveHorizon": false,
+          "horizonVisibility": 0,
+          "lightDirection": [
+            -0.6076248601345045,
+            0.7781348637992808,
+            -0.15905396281324985
+          ],
+          "illuminatedFraction": 0.9945832651581211,
+          "referenceIlluminatedFraction": 0.9945890531952843,
+          "phaseAngleDegrees": 8.441395991742237,
+          "referencePhaseAngleDegrees": 8.441533165957033,
+          "elongationDegrees": 171.53584668087922,
+          "waxing": false
+        },
+        "key": "sun",
+        "constructionT": 0.625,
+        "workComplete": false,
+        "keyVisibility": 1
+      },
+      "camera": {
+        "position": [
+          -305.49621412240487,
+          109.42720908813325,
+          -14.508291444740237
+        ],
+        "direction": [
+          0.9607724931837274,
+          -0.2735823791504314,
+          0.04548514218856736
+        ],
+        "fov": 35,
+        "aspect": 1.7777777777777777,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

@@ -1,0 +1,146 @@
+{
+  "files": 145,
+  "bytes": 117701820,
+  "groups": {
+    "index.html": 2075,
+    "eiffel-crane.html": 468,
+    "_headers": 339,
+    "favicon.svg": 242,
+    "brand": 1985827,
+    "audio": 35664775,
+    "assets": 3119794,
+    "models": 76928300
+  },
+  "largest": [
+    {
+      "path": "dist/models/eiffel-construction-kit/tower-kit.manifest.json",
+      "bytes": 24613451
+    },
+    {
+      "path": "dist/audio/eiffel-tower-detailed.mp3",
+      "bytes": 15156981
+    },
+    {
+      "path": "dist/models/paris-1889/paris-city.glb",
+      "bytes": 14298216
+    },
+    {
+      "path": "dist/models/eiffel-construction-kit/tower-kit.runtime.json",
+      "bytes": 5559468
+    },
+    {
+      "path": "dist/models/paris-1889/paris-city.glb.gz",
+      "bytes": 5019070
+    },
+    {
+      "path": "dist/models/eiffel-construction-kit/tower-kit.glb",
+      "bytes": 5008836
+    },
+    {
+      "path": "dist/models/paris-1889/paris.manifest.json",
+      "bytes": 3361259
+    },
+    {
+      "path": "dist/audio/eiffel-tower-short.mp3",
+      "bytes": 3276789
+    },
+    {
+      "path": "dist/models/paris-1889/textures/haussmann-facade-v1.png",
+      "bytes": 3104776
+    },
+    {
+      "path": "dist/models/paris-1889/textures/paris-frontages-v2.png",
+      "bytes": 2744654
+    },
+    {
+      "path": "dist/models/eiffel-construction-kit/tower-kit-seated.glb",
+      "bytes": 2538460
+    },
+    {
+      "path": "dist/assets/main-D8RR7sSY.js",
+      "bytes": 2366662
+    },
+    {
+      "path": "dist/models/eiffel/tower-rebuilt.glb",
+      "bytes": 2298268
+    },
+    {
+      "path": "dist/brand/wonderforge-wordmark.png",
+      "bytes": 1985827
+    },
+    {
+      "path": "dist/models/eiffel-second-floor-relay/relay.glb",
+      "bytes": 1580936
+    },
+    {
+      "path": "dist/audio/eiffel-tower-ambient-loop.mp3",
+      "bytes": 1553901
+    },
+    {
+      "path": "dist/audio/colosseum-ambient-loop.mp3",
+      "bytes": 1441869
+    },
+    {
+      "path": "dist/audio/giza-ambient-loop.mp3",
+      "bytes": 1433205
+    },
+    {
+      "path": "dist/audio/stonehenge-ambient-loop.mp3",
+      "bytes": 1162869
+    },
+    {
+      "path": "dist/audio/giza-cinematic.mp3",
+      "bytes": 1158117
+    },
+    {
+      "path": "dist/audio/sydney-opera-house-cinematic.mp3",
+      "bytes": 1093581
+    },
+    {
+      "path": "dist/audio/eiffel-tower-cinematic.mp3",
+      "bytes": 1057149
+    },
+    {
+      "path": "dist/audio/colosseum-cinematic.mp3",
+      "bytes": 1025661
+    },
+    {
+      "path": "dist/audio/stonehenge-cinematic.mp3",
+      "bytes": 912501
+    },
+    {
+      "path": "dist/assets/EiffelGuyenetRig-D_0SROBE.js",
+      "bytes": 677514
+    }
+  ],
+  "maps": [],
+  "privateNamed": [],
+  "symlinks": [],
+  "jsGzip": [
+    {
+      "path": "dist/assets/EiffelGuyenetRig-D_0SROBE.js",
+      "bytes": 677514,
+      "gzipBytes": 174711
+    },
+    {
+      "path": "dist/assets/main-D8RR7sSY.js",
+      "bytes": 2366662,
+      "gzipBytes": 503948
+    },
+    {
+      "path": "dist/assets/eiffelCrane-EolqYlYB.js",
+      "bytes": 26314,
+      "gzipBytes": 7481
+    },
+    {
+      "path": "dist/assets/__vite-browser-external-BIHI7g3E.js",
+      "bytes": 33,
+      "gzipBytes": 53
+    }
+  ],
+  "sensitivePatternHits": [],
+  "absoluteAuthoringPathFiles": [
+    "dist/models/eiffel-guyenet-ne/crane.glb"
+  ],
+  "sourceMapMarkerFiles": []
+}

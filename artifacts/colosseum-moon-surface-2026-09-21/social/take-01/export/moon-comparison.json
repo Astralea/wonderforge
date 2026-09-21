@@ -1,0 +1,35 @@
+{
+  "scope": "Same-position crops of decoded H264 frames, nearest-neighbor5x display; no added image detail.",
+  "frames": [
+    {
+      "frame": 300,
+      "seconds": 10.0,
+      "crop": [
+        810,
+        330,
+        894,
+        414
+      ]
+    },
+    {
+      "frame": 375,
+      "seconds": 12.5,
+      "crop": [
+        917,
+        229,
+        1001,
+        313
+      ]
+    },
+    {
+      "frame": 449,
+      "seconds": 14.966666666666667,
+      "crop": [
+        1046,
+        115,
+        1130,
+        199
+      ]
+    }
+  ]
+}

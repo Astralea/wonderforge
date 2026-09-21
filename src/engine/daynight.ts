@@ -13,6 +13,11 @@ export interface LightState {
     /** Optional light-source visibility during an authored below-horizon transition. */
     visibility?: number;
   };
+  /** Optional shadow-casting source when the visible Sun is not the scene key.
+   * Its angles use the same renderer convention as sun; solar effects still
+   * follow sun. Omit to preserve the standard daylight rig.
+   */
+  keyLight?: LightState['sun'];
   ambient: { skyColor: string; groundColor: string; intensity: number };
   /** Horizon color. */
   sky: string;

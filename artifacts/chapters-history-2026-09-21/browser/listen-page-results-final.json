@@ -1,0 +1,404 @@
+[
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "audios": [
+      {
+        "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+        "duration": 4.318912,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Khufu's pyramid",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+        "duration": 4.365351,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: The haul",
+        "left": 570.65625,
+        "right": 869.328125,
+        "width": 298.671875
+      },
+      {
+        "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+        "duration": 3.529433,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Raising the stone",
+        "left": 929.328125,
+        "right": 1227.984375,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+        "duration": 4.551111,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Khafre's pyramid",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+        "duration": 3.436553,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: White limestone",
+        "left": 570.65625,
+        "right": 869.328125,
+        "width": 298.671875
+      },
+      {
+        "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+        "duration": 4.92263,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Menkaure's pyramid",
+        "left": 929.328125,
+        "right": 1227.984375,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+        "duration": 5.10839,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Before the stones",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+        "duration": 5.34059,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Shaping the sarsens",
+        "left": 570.65625,
+        "right": 869.328125,
+        "width": 298.671875
+      },
+      {
+        "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+        "duration": 4.92263,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Raising the uprights",
+        "left": 929.328125,
+        "right": 1227.984375,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+        "duration": 4.086712,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Across the uprights",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+        "duration": 4.504671,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Stones from Wales",
+        "left": 570.65625,
+        "right": 869.328125,
+        "width": 298.671875
+      },
+      {
+        "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+        "duration": 4.87619,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: The solstice axis",
+        "left": 929.328125,
+        "right": 1227.984375,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+        "duration": 4.504671,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Nero's former lake",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+        "duration": 4.458231,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Travertine from Tivoli",
+        "left": 570.65625,
+        "right": 869.328125,
+        "width": 298.671875
+      },
+      {
+        "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+        "duration": 5.24771,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Lifting the blocks",
+        "left": 929.328125,
+        "right": 1227.984375,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+        "duration": 4.040272,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Under the vaults",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+        "duration": 4.643991,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: A place in the crowd",
+        "left": 570.65625,
+        "right": 869.328125,
+        "width": 298.671875
+      },
+      {
+        "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+        "duration": 4.829751,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Titus opens the arena",
+        "left": 929.328125,
+        "right": 1227.984375,
+        "width": 298.65625
+      },
+      {
+        "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+        "duration": 4.179592,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Moonrise over Rome",
+        "left": 212,
+        "right": 510.65625,
+        "width": 298.65625
+      }
+    ],
+    "errors": [],
+    "networkErrors": [],
+    "failures": []
+  },
+  {
+    "mode": "mobile",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "audios": [
+      {
+        "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+        "duration": 4.318912,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Khufu's pyramid",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+        "duration": 4.365351,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: The haul",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+        "duration": 3.529433,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Raising the stone",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+        "duration": 4.551111,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Khafre's pyramid",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+        "duration": 3.436553,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: White limestone",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+        "duration": 4.92263,
+        "readyState": 4,
+        "error": null,
+        "label": "Pyramids of Giza: Menkaure's pyramid",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+        "duration": 5.10839,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Before the stones",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+        "duration": 5.34059,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Shaping the sarsens",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+        "duration": 4.92263,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Raising the uprights",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+        "duration": 4.086712,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Across the uprights",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+        "duration": 4.504671,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: Stones from Wales",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+        "duration": 4.87619,
+        "readyState": 4,
+        "error": null,
+        "label": "Stonehenge: The solstice axis",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+        "duration": 4.504671,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Nero's former lake",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+        "duration": 4.458231,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Travertine from Tivoli",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+        "duration": 5.24771,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Lifting the blocks",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+        "duration": 4.040272,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Under the vaults",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+        "duration": 4.643991,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: A place in the crowd",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+        "duration": 4.829751,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Titus opens the arena",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      },
+      {
+        "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+        "duration": 4.179592,
+        "readyState": 4,
+        "error": null,
+        "label": "Colosseum: Moonrise over Rome",
+        "left": 46,
+        "right": 344,
+        "width": 298
+      }
+    ],
+    "errors": [],
+    "networkErrors": [],
+    "failures": []
+  }
+]

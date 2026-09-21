@@ -1,0 +1,452 @@
+[
+  {
+    "mode": "desktop",
+    "events": [
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": null
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": null
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000077,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000115
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000021,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000028
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000472,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.011497,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.01486,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.014865
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.877597
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.925434,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.925434,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.014595,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.014606
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.927962,
+        "duration": 4.597551
+      },
+      {
+        "action": "ended",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 4.597551,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000383,
+        "duration": 3.482993
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000058,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000069
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.003875,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.866683
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.9122,
+        "duration": 3.482993
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.007022,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.007038
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.9122,
+        "duration": 3.482993
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.9122,
+        "duration": 3.482993
+      },
+      {
+        "action": "ended",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 3.482993,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 3.482993
+      }
+    ],
+    "errors": [],
+    "scope": "Two generated clips; remaining17 blocked by ElevenLabs key quota. Browser decode/play/ended tested with muted output, no listening claim."
+  },
+  {
+    "mode": "mobile",
+    "events": [
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": null
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": null
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000093,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000135
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.00006,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000076
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.000708,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.01768,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000073,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000078
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.893918
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.944999,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.944999,
+        "duration": 4.597551
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000138,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.00015
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.952819,
+        "duration": 4.597551
+      },
+      {
+        "action": "ended",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 4.597551,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.000457,
+        "duration": 3.482993
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.017615,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.017626
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.017722,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.867842
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0,
+        "duration": 4.597551
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0,
+        "duration": 3.482993
+      },
+      {
+        "action": "play",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.947669,
+        "duration": 3.482993
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.010145,
+        "duration": 4.597551
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-roads-george-c74e6d5d63bc.mp3",
+        "t": 0.010158
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.947669,
+        "duration": 3.482993
+      },
+      {
+        "action": "playing",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 0.947669,
+        "duration": 3.482993
+      },
+      {
+        "action": "ended",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 3.482993,
+        "duration": 3.482993
+      },
+      {
+        "action": "pause",
+        "src": "http://127.0.0.1:5590/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+        "t": 3.482993
+      }
+    ],
+    "errors": [],
+    "scope": "Two generated clips; remaining17 blocked by ElevenLabs key quota. Browser decode/play/ended tested with muted output, no listening claim."
+  }
+]

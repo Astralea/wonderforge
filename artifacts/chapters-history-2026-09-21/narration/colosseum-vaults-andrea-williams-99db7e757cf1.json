@@ -1,0 +1,22 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-vaults",
+  "captionText": "Here, timber supports hold the vaults while the concrete sets.",
+  "src": "/audio/narration/colosseum-vaults-andrea-williams-99db7e757cf1.mp3",
+  "duration": 4.040272,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 6.0,
+  "sha256": "27e305a00b561b70c54242da7e87f4168e4b27a610091763c3a7d33fccf97149",
+  "bytes": 65663
+}

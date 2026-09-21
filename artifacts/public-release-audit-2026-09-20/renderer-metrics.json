@@ -1,0 +1,122 @@
+[
+  {
+    "id": "eiffel-tower",
+    "t": 0.12,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":132,\"triangles\":132820,\"points\":0,\"lines\":0,\"geometries\":95,\"textures\":137}"
+    }
+  },
+  {
+    "id": "eiffel-tower",
+    "t": 0.22,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":165,\"triangles\":131078,\"points\":0,\"lines\":0,\"geometries\":115,\"textures\":151}"
+    }
+  },
+  {
+    "id": "eiffel-tower",
+    "t": 0.58,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":198,\"triangles\":337267,\"points\":0,\"lines\":3,\"geometries\":162,\"textures\":241}"
+    }
+  },
+  {
+    "id": "eiffel-tower",
+    "t": 0.86,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":186,\"triangles\":358587,\"points\":0,\"lines\":3,\"geometries\":162,\"textures\":241}"
+    }
+  },
+  {
+    "id": "eiffel-tower",
+    "t": 0.86,
+    "viewport": "portrait",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":176,\"triangles\":309759,\"points\":0,\"lines\":3,\"geometries\":162,\"textures\":230}"
+    }
+  },
+  {
+    "id": "eiffel-tower",
+    "t": 1,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":90,\"triangles\":268500,\"points\":0,\"lines\":0,\"geometries\":165,\"textures\":241}"
+    }
+  },
+  {
+    "id": "stonehenge",
+    "t": 0.82,
+    "viewport": "portrait",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":58,\"triangles\":133830,\"points\":0,\"lines\":0,\"geometries\":37,\"textures\":5}"
+    }
+  },
+  {
+    "id": "stonehenge",
+    "t": 0.82,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":76,\"triangles\":142258,\"points\":0,\"lines\":0,\"geometries\":37,\"textures\":16}"
+    }
+  },
+  {
+    "id": "colosseum",
+    "t": 0.86,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":103,\"triangles\":1166258,\"points\":0,\"lines\":0,\"geometries\":36,\"textures\":16}"
+    }
+  },
+  {
+    "id": "colosseum",
+    "t": 0.86,
+    "viewport": "portrait",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":88,\"triangles\":1166221,\"points\":0,\"lines\":0,\"geometries\":36,\"textures\":5}"
+    }
+  },
+  {
+    "id": "pyramids-of-giza",
+    "t": 0.62,
+    "viewport": "desktop",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":165,\"triangles\":262100,\"points\":0,\"lines\":8,\"geometries\":83,\"textures\":16}"
+    }
+  },
+  {
+    "id": "pyramids-of-giza",
+    "t": 0.62,
+    "viewport": "portrait",
+    "data": {
+      "assets": "ready",
+      "engine": "three.js r185",
+      "rendererDiagnostics": "{\"calls\":143,\"triangles\":252083,\"points\":0,\"lines\":8,\"geometries\":83,\"textures\":5}"
+    }
+  }
+]

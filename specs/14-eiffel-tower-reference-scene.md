@@ -688,7 +688,7 @@ an authored construction interpretation, not a reproduction of every shop
 drawing, rivet or temporary scaffold.
 
 The Eiffel Tower is the fifth forward test of the Giza pipeline and of
-`.agents/skills/wonderforge-scene-builder/`. It preserves the stable
+[Spec 49’s scene authoring pipeline](49-scene-authoring-pipeline.md). It preserves the stable
 `eiffel-tower` ID but replaces the legacy stacked-box silhouette with typed,
 deterministic **additive industrial construction**: four masonry piers, four
 inward-leaning puddled-iron lattice pylons that meet at the first platform,

@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/colosseum-sun-city-2026-09-20/production-0/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "drawingBuffer": {
+      "width": 1440,
+      "height": 900
+    },
+    "alphaPixels": 4102,
+    "variance": 185,
+    "colorBuckets": 102,
+    "metrics": {
+      "colorBuckets": 118,
+      "colorEntropyBits": 4.67,
+      "edgeDensity": 0.076,
+      "luminance": {
+        "mean": 97.6,
+        "p5": 54.4,
+        "p95": 159.1,
+        "contrast": 104.8
+      },
+      "dominantColorShare": 0.132,
+      "nonBackgroundShare": 0.868
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 38,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 43691,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 42,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 38,
+        "triangles": 43691,
+        "points": 0,
+        "lines": 0,
+        "geometries": 42,
+        "textures": 16
+      },
+      "camera": {
+        "position": [
+          289.6806252883149,
+          89.46080864600079,
+          177.60470155283284
+        ],
+        "direction": [
+          -0.8279157878355646,
+          -0.23853345757858085,
+          -0.5075994856855388
+        ],
+        "fov": 35,
+        "aspect": 1.6,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

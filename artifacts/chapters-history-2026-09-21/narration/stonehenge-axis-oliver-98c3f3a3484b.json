@@ -1,0 +1,22 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-axis",
+  "captionText": "These stones frame midsummer sunrise and, in the opposite direction, midwinter sunset.",
+  "src": "/audio/narration/stonehenge-axis-oliver-98c3f3a3484b.mp3",
+  "duration": 8.777143,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "3db4f96b883869a1d69a6f282fafa66d79314afb6bed0a67df27d4fce64c704e",
+  "bytes": 141314
+}

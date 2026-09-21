@@ -1,0 +1,28 @@
+{
+  "startedAt": "2026-09-21T05:26:04.415Z",
+  "mutedBrowser": true,
+  "auditoryQualityClaim": false,
+  "before": {
+    "duration": 20,
+    "width": 1920,
+    "height": 1080,
+    "canPlay": "probably",
+    "error": null
+  },
+  "playback": {
+    "ended": true,
+    "currentTime": 20,
+    "duration": 20,
+    "quality": {
+      "totalVideoFrames": 600,
+      "droppedVideoFrames": 2,
+      "corruptedVideoFrames": 0
+    },
+    "presentedCallbacks": 597,
+    "decodedAudioBytes": 443631,
+    "decodedVideoBytes": 17822219,
+    "error": null
+  },
+  "errors": [],
+  "finishedAt": "2026-09-21T05:26:25.514Z"
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-20T18:43:37.993513+00:00",
+  "bundle": "main-BR6Phg3M.js",
+  "tests": {
+    "files": 242,
+    "tests": 1302,
+    "durationSeconds": 205.07,
+    "exitCode": 0
+  },
+  "typecheckExitCode": 0,
+  "buildExitCode": 0,
+  "sourceFiles": [
+    {
+      "path": "src/engine/stonehengeCamera.ts",
+      "sha256": "31111e4edf8265e987e135f961e9588a4b91181f7f22e52346e80a274ad924b8"
+    },
+    {
+      "path": "specs/10-stonehenge-reference-scene.md",
+      "sha256": "5be2b3cea6ffcaab3919a5f358ea40ff9955218b8f95541b991e702f9c7d05da"
+    },
+    {
+      "path": "tests/stonehenge-camera-framing.test.ts",
+      "sha256": "0c62270db6313869592503a1499a1d6e8ff341b01fb904895e48bbdb010fd08d"
+    },
+    {
+      "path": "tests/stonehenge-world.test.ts",
+      "sha256": "5cab93ea9b38524dc6112209ead4a52ecdf6847ea71bd3592edd83d5b71f2784"
+    }
+  ]
+}

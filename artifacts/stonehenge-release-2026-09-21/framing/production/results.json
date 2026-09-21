@@ -1,0 +1,947 @@
+[
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "t": 0.68,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/desktop-t0.68.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 107926,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.93038251335108,
+            30.109692853705422,
+            -84.28838210516288
+          ],
+          "direction": [
+            0.604678547708006,
+            -0.2840153447039227,
+            0.7441096276184368
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 54,
+        "top": 0,
+        "right": 1440,
+        "bottom": 54,
+        "left": 0
+      },
+      "caption": {
+        "x": 952,
+        "y": 578,
+        "width": 448,
+        "height": 92,
+        "top": 578,
+        "right": 1400,
+        "bottom": 670,
+        "left": 952
+      }
+    }
+  },
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "t": 0.74,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/desktop-t0.74.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 100038,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            102.98790761313641,
+            22.988461259234928,
+            -24.246225011079723
+          ],
+          "direction": [
+            -0.9656442029413335,
+            -0.1848433585564278,
+            0.1826587148848278
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 54,
+        "top": 0,
+        "right": 1440,
+        "bottom": 54,
+        "left": 0
+      },
+      "caption": {
+        "x": 952,
+        "y": 578,
+        "width": 448,
+        "height": 92,
+        "top": 578,
+        "right": 1400,
+        "bottom": 670,
+        "left": 952
+      }
+    }
+  },
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "t": 0.78,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/desktop-t0.78.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101710,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.68751062468296,
+            18.580222164904946,
+            81.68751062468293
+          ],
+          "direction": [
+            -0.7003959582852556,
+            -0.13744454603714665,
+            -0.7003959582852555
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 54,
+        "top": 0,
+        "right": 1440,
+        "bottom": 54,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "t": 0.86,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/desktop-t0.86.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.608179019753,
+            18.096150180350847,
+            83.60817901975297
+          ],
+          "direction": [
+            -0.7010244653152117,
+            -0.13087932632407495,
+            -0.7010244653152113
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 54,
+        "top": 0,
+        "right": 1440,
+        "bottom": 54,
+        "left": 0
+      },
+      "caption": {
+        "x": 952,
+        "y": 578,
+        "width": 448,
+        "height": 92,
+        "top": 578,
+        "right": 1400,
+        "bottom": 670,
+        "left": 952
+      }
+    }
+  },
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "t": 0.92,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/desktop-t0.92.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.72322050705803,
+            17.798876784238647,
+            84.72322050705799
+          ],
+          "direction": [
+            -0.7013752865766608,
+            -0.1270646086013505,
+            -0.7013752865766605
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 54,
+        "top": 0,
+        "right": 1440,
+        "bottom": 54,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "desktop",
+    "width": 1440,
+    "height": 900,
+    "t": 1,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/desktop-t1.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            89.18297341110734,
+            17.612653272371595,
+            89.1829734111073
+          ],
+          "direction": [
+            -0.7019854485510432,
+            -0.12013683883464711,
+            -0.7019854485510427
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 54,
+        "top": 0,
+        "right": 1440,
+        "bottom": 54,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "1080p",
+    "width": 1920,
+    "height": 1080,
+    "t": 0.78,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/1080p-t0.78.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101710,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            78.48159396400486,
+            17.951098374501278,
+            78.48159396400482
+          ],
+          "direction": [
+            -0.7003959582852557,
+            -0.13744454603714662,
+            -0.7003959582852552
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 64.796875,
+        "top": 0,
+        "right": 1920,
+        "bottom": 64.796875,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "1080p",
+    "width": 1920,
+    "height": 1080,
+    "t": 0.86,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/1080p-t0.86.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            80.32688360459572,
+            17.483541413247462,
+            80.32688360459568
+          ],
+          "direction": [
+            -0.7010244653152117,
+            -0.1308793263240749,
+            -0.7010244653152113
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 64.796875,
+        "top": 0,
+        "right": 1920,
+        "bottom": 64.796875,
+        "left": 0
+      },
+      "caption": {
+        "x": 1432,
+        "y": 747.203125,
+        "width": 448,
+        "height": 92,
+        "top": 747.203125,
+        "right": 1880,
+        "bottom": 839.203125,
+        "left": 1432
+      }
+    }
+  },
+  {
+    "mode": "1080p",
+    "width": 1920,
+    "height": 1080,
+    "t": 0.92,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/1080p-t0.92.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.39816405604397,
+            17.196493146532134,
+            81.39816405604392
+          ],
+          "direction": [
+            -0.7013752865766608,
+            -0.1270646086013505,
+            -0.7013752865766605
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 64.796875,
+        "top": 0,
+        "right": 1920,
+        "bottom": 64.796875,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "1080p",
+    "width": 1920,
+    "height": 1080,
+    "t": 1,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/1080p-t1.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.68288902708048,
+            17.013653571709103,
+            85.68288902708044
+          ],
+          "direction": [
+            -0.7019854485510432,
+            -0.12013683883464711,
+            -0.7019854485510427
+          ],
+          "fov": 35,
+          "aspect": 1.7777777777777777,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 64.796875,
+        "top": 0,
+        "right": 1920,
+        "bottom": 64.796875,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "portrait",
+    "width": 390,
+    "height": 844,
+    "t": 0.78,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/portrait-t0.78.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 59,
+          "triangles": 93282,
+          "points": 0,
+          "lines": 0,
+          "geometries": 36,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            102.38843730773418,
+            28.603473279625078,
+            102.38843730773412
+          ],
+          "direction": [
+            -0.6959313884090681,
+            -0.1770847403195832,
+            -0.6959313884090677
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 50.625,
+        "top": 0,
+        "right": 390,
+        "bottom": 50.625,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "portrait",
+    "width": 390,
+    "height": 844,
+    "t": 0.86,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/portrait-t0.86.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 38,
+          "triangles": 87034,
+          "points": 0,
+          "lines": 0,
+          "geometries": 36,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            104.82438969094372,
+            28.147314211116655,
+            104.82438969094366
+          ],
+          "direction": [
+            -0.6967456933878273,
+            -0.17056048044911137,
+            -0.6967456933878271
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 50.625,
+        "top": 0,
+        "right": 390,
+        "bottom": 50.625,
+        "left": 0
+      },
+      "caption": {
+        "x": 20,
+        "y": 211,
+        "width": 350,
+        "height": 104.6875,
+        "top": 211,
+        "right": 370,
+        "bottom": 315.6875,
+        "left": 20
+      }
+    }
+  },
+  {
+    "mode": "portrait",
+    "width": 390,
+    "height": 844,
+    "t": 0.92,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/portrait-t0.92.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 38,
+          "triangles": 87034,
+          "points": 0,
+          "lines": 0,
+          "geometries": 36,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            106.23915995403063,
+            27.862016077624816,
+            106.23915995403057
+          ],
+          "direction": [
+            -0.6972044840356167,
+            -0.1667687467161022,
+            -0.6972044840356164
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 50.625,
+        "top": 0,
+        "right": 390,
+        "bottom": 50.625,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "portrait",
+    "width": 390,
+    "height": 844,
+    "t": 1,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/portrait-t1.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 38,
+          "triangles": 87034,
+          "points": 0,
+          "lines": 0,
+          "geometries": 36,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            111.86350096292988,
+            27.972627546192296,
+            111.86350096292982
+          ],
+          "direction": [
+            -0.6980107469882711,
+            -0.15988118769183482,
+            -0.6980107469882709
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 50.625,
+        "top": 0,
+        "right": 390,
+        "bottom": 50.625,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "wide",
+    "width": 2560,
+    "height": 1080,
+    "t": 0.78,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/wide-t0.78.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101710,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            78.44434732794863,
+            17.943789156160424,
+            78.44434732794859
+          ],
+          "direction": [
+            -0.7003959582852557,
+            -0.13744454603714662,
+            -0.7003959582852552
+          ],
+          "fov": 35,
+          "aspect": 2.3703703703703702,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 64.796875,
+        "top": 0,
+        "right": 2560,
+        "bottom": 64.796875,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "wide",
+    "width": 2560,
+    "height": 1080,
+    "t": 1,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/wide-t1.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.64222472322726,
+            17.006694337826946,
+            85.64222472322723
+          ],
+          "direction": [
+            -0.7019854485510432,
+            -0.12013683883464712,
+            -0.7019854485510428
+          ],
+          "fov": 35,
+          "aspect": 2.3703703703703702,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 64.796875,
+        "top": 0,
+        "right": 2560,
+        "bottom": 64.796875,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "tablet",
+    "width": 1024,
+    "height": 768,
+    "t": 0.78,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/tablet-t0.78.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101710,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            87.547658445213,
+            19.730207894227622,
+            87.54765844521296
+          ],
+          "direction": [
+            -0.7003959582852557,
+            -0.13744454603714665,
+            -0.7003959582852552
+          ],
+          "fov": 35,
+          "aspect": 1.3333333333333333,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 46.078125,
+        "top": 0,
+        "right": 1024,
+        "bottom": 46.078125,
+        "left": 0
+      },
+      "caption": null
+    }
+  },
+  {
+    "mode": "tablet",
+    "width": 1024,
+    "height": 768,
+    "t": 1,
+    "path": "artifacts/stonehenge-release-2026-09-21/framing/production/tablet-t1.png",
+    "errors": [],
+    "state": {
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            95.58083525396256,
+            18.707574682335192,
+            95.58083525396252
+          ],
+          "direction": [
+            -0.7019854485510432,
+            -0.12013683883464712,
+            -0.701985448551043
+          ],
+          "fov": 35,
+          "aspect": 1.3333333333333333,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      },
+      "scripts": [
+        "http://127.0.0.1:5590/assets/main-BR6Phg3M.js"
+      ],
+      "letterbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 46.078125,
+        "top": 0,
+        "right": 1024,
+        "bottom": 46.078125,
+        "left": 0
+      },
+      "caption": null
+    }
+  }
+]

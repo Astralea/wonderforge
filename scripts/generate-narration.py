@@ -5,9 +5,9 @@ This is the only approved caption-voice path. Do not use browser
 speechSynthesis or Vertex Gemini TTS.
 
 Each authored reference scene keeps a distinct narrator:
-  Giza             George
-  Stonehenge       Daniel
-  Colosseum        Bill
+  Giza             Charles
+  Stonehenge       Oliver
+  Colosseum        Andrea Williams
   Sydney Opera House Alice
   Eiffel Tower     Adam
 
@@ -47,78 +47,6 @@ BASE_SETTINGS = {
 }
 
 TRACKS = {
-    "giza": {
-        "voice_id": "JBFqnCBsd6RMkjVDRZzb",  # George
-        "prefix": "giza-george",
-        "speed": 0.92,
-        "beats": {
-            "quarry": (
-                "The quarry. Stone comes from the plateau; white casing stone "
-                "arrives from Tura."
-            ),
-            "roads": (
-                "The haul. Water on the sand helps crews pull the loaded sledges."
-            ),
-            "ramps": (
-                "Raising the stone. In this reconstruction, ramps carry stones "
-                "to each new level."
-            ),
-            "masons": (
-                "The Masons. Every casing stone is dressed, levered, and seated by hand."
-            ),
-            "horizon": "The three pyramids. The film shows three reigns in a single day.",
-        },
-    },
-    "stonehenge": {
-        "voice_id": "onwK4e9ZLuTAKqWW03F9",  # Daniel: Steady Broadcaster
-        "prefix": "stonehenge-daniel",
-        "speed": 0.92,
-        "beats": {
-            "sarsens": (
-                "Shaping the stones. Hammerstones shape the faces of the great "
-                "sarsen stones."
-            ),
-            "bluestones": (
-                "The Bluestones. The smaller bluestones were transported from "
-                "the Preseli Hills in Wales, over 200 km away."
-            ),
-            "pits": (
-                "Raising the uprights. Here, each upright tips into a sloping "
-                "pit before rubble secures its base."
-            ),
-            "lintels": (
-                "Lifting the lintels. The film uses timber platforms to raise "
-                "the lintels."
-            ),
-            "axis": (
-                "Solstice alignment. The stones align with the midsummer "
-                "sunrise and midwinter sunset."
-            ),
-        },
-    },
-    "colosseum": {
-        "voice_id": "pqHfZKP75CvOlQylNhV4",  # Bill: Wise, Mature, Balanced
-        "prefix": "colosseum-bill",
-        "speed": 1.2,
-        "beats": {
-            "valley": (
-                "Work begins on the drained floor between the Palatine and "
-                "Caelian hills."
-            ),
-            "stone": (
-                "Load-bearing piers are Tivoli travertine hauled twenty "
-                "kilometres into Rome."
-            ),
-            "cranes": (
-                "In this reconstruction, treadwheel cranes lift blocks to "
-                "each new level."
-            ),
-            "vaults": "Timber supports hold the vaults during construction.",
-            "orders": (
-                "Three tiers of arches rise beneath the solid upper wall."
-            ),
-        },
-    },
     "sydney": {
         "voice_id": "Xb7hH8MSUJpSbSDYk0k2",  # Alice: Clear Engaging Educator
         "prefix": "sydney-alice",
@@ -261,12 +189,17 @@ def resolve_name(name: str) -> str:
 
 
 def main() -> None:
-    requested = [resolve_name(name) for name in (sys.argv[1:] or list(TRACKS))]
-    unknown = [name for name in requested if name not in TRACKS]
+    historical = {"giza", "stonehenge", "colosseum"}
+    requested = [resolve_name(name) for name in (sys.argv[1:] or ["giza", "stonehenge", "colosseum", *TRACKS])]
+    unknown = [name for name in requested if name not in TRACKS and name not in historical]
     if unknown:
         raise SystemExit(f"unknown track(s): {', '.join(unknown)}")
+    reviewed = [name for name in requested if name in historical]
+    if reviewed:
+        subprocess.run([sys.executable, str(ROOT / "scripts/generate-historical-narration.py"), *reviewed], check=True)
     for name in requested:
-        generate_track(name)
+        if name not in historical:
+            generate_track(name)
 
 
 if __name__ == "__main__":

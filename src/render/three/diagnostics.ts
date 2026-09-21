@@ -11,6 +11,7 @@ export interface RendererDiagnostics {
 
 export interface ThreeGameDiagnostics {
   /** Plain sampled state and source-node pose snapshots; no writable scene handles. */
+  colosseumCelestial?: Record<string, unknown>;
   eiffelLongLoad?: Record<string, unknown>;
   eiffelCrowd?: Record<string, unknown>;
   camera?: { position: number[]; direction: number[]; fov: number; aspect: number; near: number };

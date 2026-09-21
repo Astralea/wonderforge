@@ -1,0 +1,2151 @@
+{
+  "startedAt": "2026-09-20T16:53:08.997Z",
+  "scope": "Targeted actual UI seeks for visibility; separate from uninterrupted runs. Muted browser; no auditory-quality claim.",
+  "runs": [
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "controls": {
+        "initial": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.173441,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0.672339,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "paused": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.219991,
+            "paused": true,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "resumed": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.175692,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 1.079628,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "off": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.442251,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "onAgain": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.697753,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 1.673308,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "forward": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 35.038176,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 1.060937,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "gap": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.241632,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "muted": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.451083,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": true
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "unmuted": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.627985,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ]
+      },
+      "frames": [
+        {
+          "seconds": 12,
+          "t": 0.067,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-012.png"
+        },
+        {
+          "seconds": 15,
+          "t": 0.083,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-015.png"
+        },
+        {
+          "seconds": 16,
+          "t": 0.089,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-016.png"
+        },
+        {
+          "seconds": 17,
+          "t": 0.094,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-017.png"
+        },
+        {
+          "seconds": 18,
+          "t": 0.1,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-018.png"
+        },
+        {
+          "seconds": 19,
+          "t": 0.106,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-019.png"
+        },
+        {
+          "seconds": 20,
+          "t": 0.111,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-020.png"
+        },
+        {
+          "seconds": 21,
+          "t": 0.117,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-021.png"
+        },
+        {
+          "seconds": 22,
+          "t": 0.122,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-022.png"
+        },
+        {
+          "seconds": 23,
+          "t": 0.128,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-023.png"
+        },
+        {
+          "seconds": 34,
+          "t": 0.189,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-034.png"
+        },
+        {
+          "seconds": 36,
+          "t": 0.2,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-036.png"
+        },
+        {
+          "seconds": 38,
+          "t": 0.211,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-038.png"
+        },
+        {
+          "seconds": 40,
+          "t": 0.222,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-040.png"
+        },
+        {
+          "seconds": 42,
+          "t": 0.233,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-042.png"
+        },
+        {
+          "seconds": 72,
+          "t": 0.4,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-072.png"
+        },
+        {
+          "seconds": 76,
+          "t": 0.422,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-076.png"
+        },
+        {
+          "seconds": 80,
+          "t": 0.444,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/desktop/eiffel-tower/detail/seek-080.png"
+        }
+      ],
+      "errors": [],
+      "mediaErrors": [
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+      ]
+    },
+    {
+      "mode": "mobile",
+      "width": 390,
+      "height": 844,
+      "controls": {
+        "initial": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.175481,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0.651158,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "paused": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.236443,
+            "paused": true,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "resumed": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.182902,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 1.079713,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "off": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.445378,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "onAgain": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.690982,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 1.675539,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "forward": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 35.018807,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 1.062895,
+            "paused": false,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "gap": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.239993,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "muted": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.454821,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": true
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ],
+        "unmuted": [
+          {
+            "src": "",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 0.4,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/eiffel-tower-short.mp3",
+            "time": 0.62059,
+            "paused": false,
+            "ended": false,
+            "volume": 0.68,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-champ.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-iron.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-legs.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-join.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-beacon.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-lift-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-joint-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-prepared.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          },
+          {
+            "src": "http://127.0.0.1:5590/audio/narration/eiffel-adam-relay-later.mp3",
+            "time": 0,
+            "paused": true,
+            "ended": false,
+            "volume": 1,
+            "muted": false
+          }
+        ]
+      },
+      "frames": [
+        {
+          "seconds": 12,
+          "t": 0.067,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-012.png"
+        },
+        {
+          "seconds": 15,
+          "t": 0.083,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-015.png"
+        },
+        {
+          "seconds": 16,
+          "t": 0.089,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-016.png"
+        },
+        {
+          "seconds": 17,
+          "t": 0.094,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-017.png"
+        },
+        {
+          "seconds": 18,
+          "t": 0.1,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-018.png"
+        },
+        {
+          "seconds": 19,
+          "t": 0.106,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-019.png"
+        },
+        {
+          "seconds": 20,
+          "t": 0.111,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-020.png"
+        },
+        {
+          "seconds": 21,
+          "t": 0.117,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-021.png"
+        },
+        {
+          "seconds": 22,
+          "t": 0.122,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-022.png"
+        },
+        {
+          "seconds": 23,
+          "t": 0.128,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-023.png"
+        },
+        {
+          "seconds": 34,
+          "t": 0.189,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-034.png"
+        },
+        {
+          "seconds": 36,
+          "t": 0.2,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-036.png"
+        },
+        {
+          "seconds": 38,
+          "t": 0.211,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-038.png"
+        },
+        {
+          "seconds": 40,
+          "t": 0.222,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-040.png"
+        },
+        {
+          "seconds": 42,
+          "t": 0.233,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-042.png"
+        },
+        {
+          "seconds": 72,
+          "t": 0.4,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-072.png"
+        },
+        {
+          "seconds": 76,
+          "t": 0.422,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-076.png"
+        },
+        {
+          "seconds": 80,
+          "t": 0.444,
+          "path": "artifacts/review-board/release-2026-09-21/colosseum-eiffel/mobile/eiffel-tower/detail/seek-080.png"
+        }
+      ],
+      "errors": [],
+      "mediaErrors": [
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD",
+        "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+      ]
+    }
+  ],
+  "failures": [
+    "desktop no rejected audio",
+    "mobile no rejected audio"
+  ],
+  "finishedAt": "2026-09-20T16:53:59.221Z"
+}

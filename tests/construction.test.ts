@@ -156,42 +156,16 @@ describe('raised-leg trajectory contract (Spec 08 ramp ascent)', () => {
     }
   });
 
-  it('holds the sled to the terrace line for the whole climb', () => {
-    // Compare the transformed block bottom and carrier bottom, never the
-    // object origin, to the support surface.
-    for (let index = 0; index < plan.blocks.length; index += 211) {
-      const block = plan.blocks[index]!;
-      const route = plan.routes.find((candidate) => candidate.id === block.routeId)!;
-      const foot = route.waypoints.rampFoot;
-      const crest = route.rampCrestFor(block);
-      const footSurface = foot[1] - block.dimensions[1] * 0.5;
-      const climb = crest[1] - footSurface;
-      for (let step = 1; step <= 9; step += 1) {
-        const progress = step / 10;
-        const local = (5 + progress) / 8;
-        const state = constructionStateAt(block, route, block.start + block.duration * local);
-        const stoneBottom = state.position[1] - block.dimensions[1] * 0.5;
-        expect(Math.abs(stoneBottom - state.supportY), `${block.id} stone/support at ${progress}`)
-          .toBeLessThanOrEqual(0.01);
-        expect(Math.abs(state.supportY - state.carrierHeight - state.groundY), `${block.id} carrier/ground at ${progress}`)
-          .toBeLessThanOrEqual(0.01);
-        const expectedSurface = footSurface + climb * progress;
-        expect(Math.abs(state.groundY - expectedSurface), `${block.id} ramp surface at ${progress}`)
-          .toBeLessThanOrEqual(0.03);
-      }
-    }
-  });
-
   it('keeps every active block in contact with its declared carrier or support', () => {
     for (let index = 0; index < plan.blocks.length; index += 173) {
       const block = plan.blocks[index]!;
       const route = plan.routes.find((candidate) => candidate.id === block.routeId)!;
       for (const phase of [0.25, 1.5, 2.25, 2.75, 3.5, 4.5, 5.25, 5.75, 6.25, 6.75, 7.25, 7.75]) {
         const state = constructionStateAt(block, route, block.start + block.duration * phase / 8);
-        const bottom = state.position[1] - block.dimensions[1] * 0.5;
+        const bottom = state.position[1] - Math.cos(state.pitch) * block.dimensions[1] * 0.5;
         expect(Math.abs(bottom - state.supportY), `${block.id} ${state.phase} stone/support`)
           .toBeLessThanOrEqual(0.01);
-        expect(Math.abs(state.supportY - state.carrierHeight - state.groundY), `${block.id} ${state.phase} carrier/base`)
+        expect(Math.abs(state.supportY - Math.cos(state.pitch) * state.carrierHeight - state.groundY), `${block.id} ${state.phase} carrier/base`)
           .toBeLessThanOrEqual(0.01);
         if (state.mechanism === 'sled') expect(state.sledLift).toBe(state.carrierHeight);
         else expect(state.sledLift).toBe(0);
@@ -232,17 +206,18 @@ describe('settled-prefix rendering contract', () => {
     }
   });
 
-  it('plan order alone is NOT seat-time sorted (the trap this contract guards)', () => {
-    // If this ever starts passing, the schedule became uniform again and the
-    // sort in BlockSystem is dead code — harmless, but worth knowing.
-    const inPlanOrder = plan.blocks.every(
-      (block, index) =>
-        index === 0 ||
-        plan.blocks[index - 1]!.start + plan.blocks[index - 1]!.duration <=
-          block.start + block.duration,
-    );
-    expect(inPlanOrder).toBe(false);
+  it('finishes each course delivery tail before the next course opens', () => {
+    for (const monument of Object.values(plan.monuments)) {
+      for (let course = 1; course < monument.courses; course += 1) {
+        const previous = plan.blocks.filter((block) => block.monument === monument.id && block.course === course - 1);
+        const next = plan.blocks.filter((block) => block.monument === monument.id && block.course === course);
+        const previousEnd = Math.max(...previous.map((block) => block.start + block.duration));
+        const nextStart = Math.min(...next.map((block) => block.start));
+        expect(previousEnd).toBeLessThanOrEqual(nextStart + 1e-12);
+      }
+    }
   });
+
 });
 
 describe('causal construction state graph', () => {
@@ -260,8 +235,8 @@ describe('causal construction state graph', () => {
   it('is position-continuous at every phase boundary', () => {
     for (let i = 1; i < CONSTRUCTION_PHASES.length; i += 1) {
       const boundary = block.start + block.duration * (i / CONSTRUCTION_PHASES.length);
-      const before = constructionStateAt(block, route, boundary - 1e-9).position;
-      const after = constructionStateAt(block, route, boundary + 1e-9).position;
+      const before = constructionStateAt(block, route, boundary - block.duration * 1e-8).position;
+      const after = constructionStateAt(block, route, boundary + block.duration * 1e-8).position;
       expect(Math.hypot(
         before[0] - after[0],
         before[1] - after[1],

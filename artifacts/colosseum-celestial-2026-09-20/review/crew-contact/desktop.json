@@ -1,0 +1,151 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/colosseum/0.06",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/colosseum-celestial-2026-09-20/review/crew-contact/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "drawingBuffer": {
+      "width": 1440,
+      "height": 900
+    },
+    "alphaPixels": 4102,
+    "variance": 242,
+    "colorBuckets": 85,
+    "metrics": {
+      "colorBuckets": 96,
+      "colorEntropyBits": 4.38,
+      "edgeDensity": 0.045,
+      "luminance": {
+        "mean": 93.8,
+        "p5": 58.4,
+        "p95": 154.1,
+        "contrast": 95.8
+      },
+      "dominantColorShare": 0.185,
+      "nonBackgroundShare": 0.815
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 45,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 31781,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 42,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 45,
+        "triangles": 31781,
+        "points": 0,
+        "lines": 0,
+        "geometries": 42,
+        "textures": 16
+      },
+      "colosseumCelestial": {
+        "t": 0.06,
+        "julianDayUt1": 1750438.6556081325,
+        "calendar": "Julian",
+        "timeScale": "UT1",
+        "angularScale": 2.4,
+        "sun": {
+          "direction": [
+            0.8639155077217664,
+            0.024877600937483983,
+            0.5030219681976502
+          ],
+          "azimuthDegrees": 59.78954146617531,
+          "authoringAzimuthDegrees": 30.210458533824692,
+          "elevationDegrees": 1.425528606015616,
+          "distanceKm": 152193704.10309476,
+          "angularRadiusDegrees": 0.2619084463047595,
+          "aboveHorizon": true,
+          "upperLimbAboveHorizon": true,
+          "horizonVisibility": 1
+        },
+        "moon": {
+          "direction": [
+            0.2423946155310723,
+            -0.5380042707889009,
+            0.8073389963171894
+          ],
+          "azimuthDegrees": 16.711803993274884,
+          "authoringAzimuthDegrees": 73.28819600672512,
+          "elevationDegrees": -32.54788398044894,
+          "distanceKm": 369085.9783607893,
+          "angularRadiusDegrees": 0.26970963171077345,
+          "aboveHorizon": false,
+          "upperLimbAboveHorizon": false,
+          "horizonVisibility": 0,
+          "lightDirection": [
+            0.8645885569283791,
+            0.026220557755888548,
+            0.5017958843787711
+          ],
+          "illuminatedFraction": 0.1997078877777313,
+          "referenceIlluminatedFraction": 0.19973177238731385,
+          "phaseAngleDegrees": 126.91175110819641,
+          "referencePhaseAngleDegrees": 126.91175784277915,
+          "elongationDegrees": 52.97715104622201,
+          "waxing": true
+        },
+        "key": "sun",
+        "keyVisibility": 1
+      },
+      "camera": {
+        "position": [
+          -294.246262847179,
+          74.51150967073117,
+          167.68527893767526
+        ],
+        "direction": [
+          0.8525631307157139,
+          -0.1948763432200436,
+          -0.4849322828987618
+        ],
+        "fov": 35,
+        "aspect": 1.6,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

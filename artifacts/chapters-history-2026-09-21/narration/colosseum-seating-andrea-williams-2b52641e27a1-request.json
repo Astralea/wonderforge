@@ -1,0 +1,13 @@
+{
+  "text": "Vaulted passages support the tiers of seating.",
+  "provider": "ElevenLabs",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  }
+}

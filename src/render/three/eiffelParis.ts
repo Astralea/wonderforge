@@ -37,7 +37,18 @@ export const EIFFEL_PARIS_LIFE_ROOTS: readonly EiffelParisPrototypeKind[] = [
 ];
 export const EIFFEL_PARIS_CITY_CELL_SIZE = 104;
 
+/** Some static hosts set Content-Encoding for .gz and fetch has already
+ * decompressed it. File fixtures and other hosts return the gzip bytes. */
+export async function decodeParisCityBuffer(buffer: ArrayBuffer): Promise<ArrayBuffer> {
+  if (buffer.byteLength >= 4 && new DataView(buffer).getUint32(0, true) === 0x46546c67) return buffer;
+  return new Response(new Blob([buffer]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+}
+
 async function readGlbBuffer(url: string): Promise<ArrayBuffer> {
+  if (url === EIFFEL_PARIS_CITY_GLB && typeof DecompressionStream !== 'undefined') {
+    const compressed = await readGlbBuffer(`${url}.gz`);
+    return decodeParisCityBuffer(compressed);
+  }
   try {
     const response = await fetch(url);
     if (response.ok) return await response.arrayBuffer();

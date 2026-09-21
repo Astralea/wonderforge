@@ -1,5 +1,6 @@
 import {
   BoxGeometry,
+  Euler,
   CylinderGeometry,
   Group,
   InstancedMesh,
@@ -12,6 +13,8 @@ import {
 import type { StonehengeConstructionPlan, StonehengeStone } from '../../data/stonehengeTypes';
 import {
   stonehengeVerticalHalfExtent,
+  stonehengeLintelStagingPosition,
+  stonehengePointFromPose,
   type ActiveStonehengeOperation,
 } from '../../engine/stonehengeConstruction';
 import { stonehengeTerrainHeightAt } from '../../engine/stonehengeTerrain';
@@ -20,13 +23,16 @@ import type { MaterialLibrary } from './MaterialLibrary';
 
 const MAX_OPERATIONS = 20;
 const WORKERS_PER_OPERATION = 3;
-const MAX_CRIB_LOGS = 720;
+const MAX_CRIB_LOGS = 2048;
 const MAX_PITS = 120;
 const MAX_RUBBLE = 800;
 const MAX_DUST = MAX_OPERATIONS * 3;
 const ROPE_SEGMENTS = 4;
 const MAX_ROPE_CYLINDERS = MAX_OPERATIONS * 4 * ROPE_SEGMENTS;
-const CRIB_LOG_HEIGHT = 0.22;
+const CRIB_LOG_HEIGHT = 0.16;
+const GUIDE_HEIGHT = 0.08;
+const LEVER_LENGTH = 0.4;
+const LEVER_HEIGHT = 0.1;
 const UP = new Vector3(0, 1, 0);
 const YAW_AXIS = new Vector3(0, 1, 0);
 const LEAN_AXIS = new Vector3(1, 0, 0);
@@ -116,6 +122,7 @@ export class StonehengeWorkSystem {
   private readonly frameLogs: InstancedMesh;
   private readonly cribLogs: InstancedMesh;
   private readonly guideBeams: InstancedMesh;
+  private readonly levers: InstancedMesh;
   private readonly pits: InstancedMesh;
   private readonly packingRubble: InstancedMesh;
   private readonly dust: InstancedMesh;
@@ -144,6 +151,10 @@ export class StonehengeWorkSystem {
     this.frameLogs = new InstancedMesh(this.poleGeometry, this.timberMaterial, MAX_OPERATIONS * 3);
     this.cribLogs = new InstancedMesh(this.boxGeometry, this.timberMaterial, MAX_CRIB_LOGS);
     this.guideBeams = new InstancedMesh(this.boxGeometry, this.timberMaterial, MAX_OPERATIONS * 2);
+    this.levers = new InstancedMesh(this.boxGeometry, this.timberMaterial, MAX_OPERATIONS * 2);
+    this.cribLogs.name = 'stonehenge-work-cribs';
+    this.guideBeams.name = 'stonehenge-work-guides';
+    this.levers.name = 'stonehenge-work-levers';
     this.pitMaterial = materials.whitewash.clone();
     this.pitMaterial.color.set('#6c6759');
     this.pitMaterial.roughness = 1;
@@ -161,6 +172,7 @@ export class StonehengeWorkSystem {
     this.ropeMaterial.color.set('#7a5a32');
     this.ropeMaterial.roughness = 1;
     this.ropes = new InstancedMesh(this.ropeSegmentGeometry, this.ropeMaterial, MAX_ROPE_CYLINDERS);
+    this.ropes.name = 'stonehenge-work-ropes';
 
     for (const mesh of [
       this.bodies,
@@ -172,6 +184,7 @@ export class StonehengeWorkSystem {
       this.frameLogs,
       this.cribLogs,
       this.guideBeams,
+      this.levers,
       this.pits,
       this.packingRubble,
       this.ropes,
@@ -191,6 +204,7 @@ export class StonehengeWorkSystem {
       this.frameLogs,
       this.cribLogs,
       this.guideBeams,
+      this.levers,
       this.bodies,
       this.heads,
       this.legs,
@@ -213,6 +227,7 @@ export class StonehengeWorkSystem {
     let frameCursor = 0;
     let cribCursor = 0;
     let guideCursor = 0;
+    let leverCursor = 0;
     let pitCursor = 0;
     let rubbleCursor = 0;
     let dustCursor = 0;
@@ -231,7 +246,7 @@ export class StonehengeWorkSystem {
       const supportY = position.y - stonehengeVerticalHalfExtent(stone, state.rotation);
       const hauling = state.mechanism === 'sled';
       const raising = state.mechanism === 'a-frame';
-      const cribbing = state.mechanism === 'timber-crib';
+      const cribbing = state.mechanism === 'timber-crib' || state.mechanism === 'guide-rails';
 
       if (hauling || state.mechanism === 'skids') {
         const carrierHeight = Math.max(0.04, state.sledLift);
@@ -279,7 +294,7 @@ export class StonehengeWorkSystem {
         this.frameLogs.setMatrixAt(frameCursor, matrix);
         frameCursor += 1;
 
-        const stoneTop = position.clone().sub(heel).multiplyScalar(2).add(heel);
+        const stoneTop = new Vector3(...stonehengePointFromPose([0, stone.dimensions[1] * 0.5, 0], state.position, state.rotation));
         for (const side of [-1, 1] as const) {
           from.copy(stoneTop);
           to.copy(apex).addScaledVector(lateral, side * 0.28);
@@ -288,45 +303,50 @@ export class StonehengeWorkSystem {
       }
 
       if (cribbing) {
-        const layers = Math.max(1, Math.min(22, Math.round(state.cribHeight / CRIB_LOG_HEIGHT)));
-        const span = Math.max(stone.dimensions[0], stone.dimensions[2]) * 1.08;
-        for (let layer = 0; layer < layers && cribCursor + 3 <= MAX_CRIB_LOGS; layer += 1) {
-          const y = state.cribHeight - CRIB_LOG_HEIGHT * 0.5 - (layers - 1 - layer) * CRIB_LOG_HEIGHT;
-          if (y < 0.06) continue;
-          const alongLength = layer % 2 === 0;
-          for (let index = 0; index < 3; index += 1) {
-            const offset = (index - 1) * 0.36;
-            const log = position.clone().addScaledVector(alongLength ? forward : lateral, offset);
-            log.y = y;
-            compose(
-              matrix,
-              log,
-              yaw + (alongLength ? 0 : Math.PI / 2),
-              new Vector3(span, CRIB_LOG_HEIGHT * 0.9, 0.22),
-              quaternion,
-            );
-            this.cribLogs.setMatrixAt(cribCursor, matrix);
-            cribCursor += 1;
+        const staging = new Vector3(...stonehengeLintelStagingPosition(stone));
+        const base = staging.clone().lerp(new Vector3(...stone.finalPosition), 0.5);
+        const baseY = stonehengeTerrainHeightAt(base.x, base.z);
+        // A fixed footprint spans the entire traverse, between the uprights.
+        // Layers grow from the earth rather than following the lifted stone.
+        const spanX = 0.94;
+        const spanZ = stone.dimensions[2] + 1.55;
+        const layers = Math.max(1, Math.floor((state.cribHeight - baseY - GUIDE_HEIGHT - LEVER_HEIGHT + 1e-8) / CRIB_LOG_HEIGHT));
+        for (let layer = 0; layer < layers && cribCursor + 2 <= MAX_CRIB_LOGS; layer += 1) {
+          const alongX = layer % 2 === 0;
+          for (const side of [-1, 1] as const) {
+            const log = base.clone().addScaledVector(alongX ? forward : lateral, side * (alongX ? spanZ * 0.36 : 0.35));
+            log.y = baseY + (layer + 0.5) * CRIB_LOG_HEIGHT;
+            compose(matrix, log, yaw, alongX
+              ? new Vector3(spanX, CRIB_LOG_HEIGHT, 0.22)
+              : new Vector3(0.22, CRIB_LOG_HEIGHT, spanZ), quaternion);
+            this.cribLogs.setMatrixAt(cribCursor++, matrix);
           }
+        }
+        const stackTop = baseY + layers * CRIB_LOG_HEIGHT;
+        const guideTop = stackTop + GUIDE_HEIGHT;
+        // A rigid bar rocks about each guide rail. Its fixed length fills
+        // the remaining sub-layer height; no timber changes dimensions.
+        const rise = state.cribHeight - guideTop - LEVER_HEIGHT * 0.5;
+        const angle = Math.asin(Math.min(1, rise / Math.hypot(LEVER_LENGTH, LEVER_HEIGHT * 0.5)))
+          - Math.atan2(LEVER_HEIGHT * 0.5, LEVER_LENGTH);
+        for (const side of [-1, 1] as const) {
+          const guide = base.clone().addScaledVector(lateral, side * 0.35);
+          guide.y = stackTop + GUIDE_HEIGHT * 0.5;
+          compose(matrix, guide, yaw, new Vector3(0.22, GUIDE_HEIGHT, spanZ), quaternion);
+          this.guideBeams.setMatrixAt(guideCursor++, matrix);
+          const pivot = position.clone().addScaledVector(lateral, side * 0.35);
+          pivot.y = guideTop + LEVER_HEIGHT * 0.5;
+          const lever = pivot.clone().addScaledVector(lateral, -side * LEVER_LENGTH * Math.cos(angle) * 0.5);
+          lever.y += LEVER_LENGTH * Math.sin(angle) * 0.5;
+          quaternion.setFromEuler(new Euler(0, yaw, -side * angle, 'YXZ'));
+          matrix.compose(lever, quaternion, new Vector3(LEVER_LENGTH, LEVER_HEIGHT, 0.22));
+          this.levers.setMatrixAt(leverCursor++, matrix);
         }
         from.copy(position).addScaledVector(lateral, -stone.dimensions[0] * 0.42);
         to.copy(position).addScaledVector(lateral, stone.dimensions[0] * 0.42);
         from.y = state.cribHeight + 0.04;
         to.y = state.cribHeight + 0.04;
         ropeCursor = setRopeRun(this.ropes, ropeCursor, from, to, state.ropeTension, 0.045, matrix, quaternion);
-      }
-
-      if (state.mechanism === 'guide-rails') {
-        for (const side of [-1, 1] as const) {
-          const guide = new Vector3(
-            stone.finalPosition[0],
-            state.cribHeight - 0.08,
-            stone.finalPosition[2],
-          ).addScaledVector(lateral, side * stone.dimensions[2] * 0.58);
-          compose(matrix, guide, stone.finalRotation[1], new Vector3(stone.dimensions[0] * 1.18, 0.16, 0.14), quaternion);
-          this.guideBeams.setMatrixAt(guideCursor, matrix);
-          guideCursor += 1;
-        }
       }
 
       if (state.phase === 'packed' || (stone.role === 'upright' && state.packingFill > 0)) {
@@ -362,7 +382,7 @@ export class StonehengeWorkSystem {
         }
         const worker = workersAt.clone().addScaledVector(forward, along).addScaledVector(lateral, side);
         const bob = Math.sin(t * 170 + bodyCursor * 1.9) * 0.04;
-        worker.y = groundY;
+        worker.y = stonehengeTerrainHeightAt(worker.x, worker.z);
         compose(matrix, new Vector3(worker.x, worker.y + 0.98 + bob, worker.z), yaw, new Vector3(1.28, 1.12, 1.28), quaternion, lean);
         this.bodies.setMatrixAt(bodyCursor, matrix);
         const headForward = lean * 0.55;
@@ -376,7 +396,7 @@ export class StonehengeWorkSystem {
         this.heads.setMatrixAt(bodyCursor, matrix);
         for (const legSide of [-1, 1] as const) {
           const leg = worker.clone().addScaledVector(lateral, legSide * 0.12);
-          leg.y = groundY + 0.31;
+          leg.y = worker.y + 0.31;
           compose(matrix, leg, yaw + Math.sin(t * 170 + bodyCursor) * 0.26 * legSide, new Vector3(1, 1, 1), quaternion);
           this.legs.setMatrixAt(legCursor, matrix);
           legCursor += 1;
@@ -441,6 +461,7 @@ export class StonehengeWorkSystem {
       [this.frameLogs, frameCursor],
       [this.cribLogs, cribCursor],
       [this.guideBeams, guideCursor],
+      [this.levers, leverCursor],
       [this.pits, pitCursor],
       [this.packingRubble, rubbleCursor],
       [this.dust, dustCursor],
@@ -535,7 +556,7 @@ export class StonehengeWorkSystem {
   dispose(): void {
     for (const mesh of [
       this.bodies, this.heads, this.legs, this.arms, this.sledDecks, this.sledRunners,
-      this.frameLogs, this.cribLogs, this.guideBeams, this.pits,
+      this.frameLogs, this.cribLogs, this.guideBeams, this.levers, this.pits,
       this.packingRubble, this.dust, this.ropes,
     ]) mesh.dispose();
     this.workerBodyGeometry.dispose();

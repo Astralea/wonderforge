@@ -1,0 +1,248 @@
+{
+  "asset": "public/models/colosseum-rome/housing-variants.glb",
+  "source": "artifacts/colosseum-sun-city-2026-09-20/blender/colosseum-housing-variants-v1.blend",
+  "script": "scripts/generate-colosseum-housing-variants.py",
+  "shared_dimensions": "src/data/colosseumHousing.ts",
+  "provenance": "Original authored Blender meshes; no downloads, image generation or external models. Schematic compressed residential forms, not surveyed ancient Rome.",
+  "blender": "5.2.1 LTS",
+  "runtime_axes": "+X east, +Y up, +Z north; one unit is one metre",
+  "footprint": {
+    "half_width": 5.5,
+    "half_depth": 4.6,
+    "clearance_radius": 7.4
+  },
+  "variants": [
+    {
+      "id": "courtyard",
+      "label": "Low open courtyard house",
+      "triangles": 92,
+      "runtime_bounds": {
+        "min": [
+          -5.25,
+          0,
+          -4.224999904632568
+        ],
+        "max": [
+          5.25,
+          5.449999809265137,
+          4.224999904632568
+        ]
+      },
+      "wings": [
+        {
+          "x": 0,
+          "z": -2.95,
+          "width": 10,
+          "depth": 2.1,
+          "height": 4.3,
+          "roof": 1.15
+        },
+        {
+          "x": 0,
+          "z": 2.95,
+          "width": 10,
+          "depth": 2.1,
+          "height": 4.3,
+          "roof": 1.15
+        },
+        {
+          "x": -3.95,
+          "z": 0,
+          "width": 2.1,
+          "depth": 3.8,
+          "height": 4.3,
+          "roof": 1.05
+        },
+        {
+          "x": 3.95,
+          "z": 0,
+          "width": 2.1,
+          "depth": 3.8,
+          "height": 4.3,
+          "roof": 1.05
+        }
+      ]
+    },
+    {
+      "id": "stepped",
+      "label": "Stepped upper-storey court",
+      "triangles": 90,
+      "runtime_bounds": {
+        "min": [
+          -5.25,
+          0,
+          -4.224999904632568
+        ],
+        "max": [
+          5.25,
+          10.199999809265137,
+          4.224999904632568
+        ]
+      },
+      "wings": [
+        {
+          "x": -1.8,
+          "z": -2.2,
+          "width": 6.4,
+          "depth": 3.6,
+          "height": 6.2,
+          "roof": 1.25
+        },
+        {
+          "x": 3.2,
+          "z": -2.2,
+          "width": 3.6,
+          "depth": 3.6,
+          "height": 8.8,
+          "roof": 1.4
+        },
+        {
+          "x": -3.2,
+          "z": 1.8,
+          "width": 3.6,
+          "depth": 4.4,
+          "height": 4.4,
+          "roof": 1.1
+        }
+      ]
+    },
+    {
+      "id": "frontage",
+      "label": "Joined street frontage with ground-floor shops",
+      "triangles": 80,
+      "runtime_bounds": {
+        "min": [
+          -5.25,
+          0,
+          -4.224999904632568
+        ],
+        "max": [
+          5.25,
+          8,
+          4.224999904632568
+        ]
+      },
+      "wings": [
+        {
+          "x": -2.5,
+          "z": 0,
+          "width": 5,
+          "depth": 7.8,
+          "height": 6.7,
+          "roof": 1.3
+        },
+        {
+          "x": 2.5,
+          "z": 0,
+          "width": 5,
+          "depth": 7.8,
+          "height": 5.1,
+          "roof": 1.25
+        }
+      ]
+    },
+    {
+      "id": "corner",
+      "label": "Tall corner house with lower adjoining wings",
+      "triangles": 98,
+      "runtime_bounds": {
+        "min": [
+          -5.25,
+          0,
+          -4.224999904632568
+        ],
+        "max": [
+          5.25,
+          12.149999618530273,
+          4.224999904632568
+        ]
+      },
+      "wings": [
+        {
+          "x": -3,
+          "z": 2,
+          "width": 4,
+          "depth": 4,
+          "height": 10.8,
+          "roof": 1.35
+        },
+        {
+          "x": 2,
+          "z": 2,
+          "width": 6,
+          "depth": 4,
+          "height": 7.4,
+          "roof": 1.3
+        },
+        {
+          "x": -3,
+          "z": -2,
+          "width": 4,
+          "depth": 4,
+          "height": 5.2,
+          "roof": 1.1
+        }
+      ]
+    }
+  ],
+  "bytes": 59848,
+  "sha256": "7b6d409fe283a08075794f98d150079996f2ad20364f0b8b8036e765290d631e",
+  "runtime": {
+    "placement": "Shared typed street axes, staggered district blocks, rotated complete-footprint exclusion; original37Caelian transforms retained.",
+    "support": "Level retaining bases from production terrain samples; no building or foundation enters worksite, watercourse or named streets.",
+    "palette": "Single material albedo; restrained plaster, brick and terracotta with light weathering tints; terrain base material white.",
+    "compact": "Portrait preserves roof silhouette and building walls, omits subpixel windows and buried/covered body faces; bounded pine/cypress/trunk tiers. Grass is three blades.",
+    "counts": {
+      "insula": 485,
+      "palace": 27,
+      "pine": 118,
+      "cypress": 61
+    },
+    "byDistrict": {
+      "caelian-watercourse": 37,
+      "velia-palatine-lane": 66,
+      "velia-north-lane": 11,
+      "palatine": 52,
+      "caelian": 22,
+      "esquiline": 51,
+      "aventine": 56,
+      "quirinal": 51,
+      "viminal": 42,
+      "janiculum": 44,
+      "velia": 29,
+      "oppian": 24
+    },
+    "variants": [
+      {
+        "id": "courtyard",
+        "instances": 132,
+        "fullBodyTriangles": 68,
+        "compactBodyTriangles": 34,
+        "roofTriangles": 24
+      },
+      {
+        "id": "stepped",
+        "instances": 95,
+        "fullBodyTriangles": 72,
+        "compactBodyTriangles": 26,
+        "roofTriangles": 18
+      },
+      {
+        "id": "frontage",
+        "instances": 188,
+        "fullBodyTriangles": 68,
+        "compactBodyTriangles": 18,
+        "roofTriangles": 12
+      },
+      {
+        "id": "corner",
+        "instances": 70,
+        "fullBodyTriangles": 80,
+        "compactBodyTriangles": 26,
+        "roofTriangles": 18
+      }
+    ],
+    "verification": "Focused4files/30tests and TypeScript check pass; root owns complete production/browser verification report."
+  },
+  "inspection": "artifacts/colosseum-sun-city-2026-09-20/blender/housing-variants-inspection.png"
+}

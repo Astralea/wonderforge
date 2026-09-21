@@ -38,6 +38,12 @@ export function CinematicView() {
 
   useSoundtrack(wonderId, 'cinematic');
 
+  useEffect(() => {
+    setChaptersOpen(false);
+    setFactsOpen(false);
+    chromeHeldRef.current = false;
+  }, [wonderId]);
+
   const go = (delta: number) => {
     const ready = catalogReady();
     const index = ready.findIndex((w) => w.id === wonderId);
@@ -143,7 +149,7 @@ export function CinematicView() {
     : 'pointer-events-none opacity-0';
 
   return (
-    <section className={`fixed inset-0 overflow-hidden bg-umber-950 ${storyFocus ? 'eiffel-story-focus' : ''}`} data-chapters-open={chaptersOpen}>
+    <section className={`cinematic-view fixed inset-0 overflow-hidden bg-umber-950 ${storyFocus ? 'eiffel-story-focus' : ''}`} data-chapters-open={chaptersOpen}>
       <div className="absolute inset-0">
         <WonderCanvas wonder={wonder} mode="cinematic" />
       </div>
@@ -185,8 +191,9 @@ export function CinematicView() {
           className="absolute left-0 top-[calc(6vh+1rem)] flex flex-col items-start px-5"
         >
           <CaptionBeatIndex
+            key={wonderId}
             wonder={wonder}
-            compact={storyFocus}
+            compact
             onExpandedChange={setChaptersOpen}
             onHoldChrome={(held) => holdChromeRef.current(held)}
           />

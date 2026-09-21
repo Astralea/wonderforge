@@ -1,0 +1,28 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-stone",
+  "captionText": "The load-bearing piers are built from travertine quarried near Tivoli.",
+  "src": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+  "duration": 4.458231,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 6.0,
+  "sha256": "ed6ee008ad1081ccb45e95aba517f4ca751d8300d7dd52212ff168b0c99ec76c",
+  "bytes": 72351,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.03,
+    "truePeakDbtp": -2.33,
+    "gainDb": 5.21
+  }
+}

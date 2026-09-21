@@ -78,7 +78,8 @@ export const usePlaybackStore = create<PlaybackState>((set, get) => ({
 
   seek: (t) => {
     const { status } = get();
-    set({ seekRevision: get().seekRevision + 1, t: clamp(t), status: status === 'complete' ? 'paused' : status });
+    const nextT = clamp(t);
+    set({ seekRevision: get().seekRevision + 1, t: nextT, status: nextT >= 1 ? 'complete' : status === 'complete' ? 'paused' : status });
   },
 
   setSpeed: (speed) => {

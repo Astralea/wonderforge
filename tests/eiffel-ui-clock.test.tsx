@@ -121,11 +121,13 @@ it('caps the mobile index and scrolls only its own viewport when the active chap
   pageScroll.mockRestore();
 });
 
-it('aligns all six Cinematic navigation windows with the revised work passages and preserves other wonders’ quotes', () => {
+it('aligns all six Cinematic navigation windows and reserves other wonders’ quotes for the reveal', () => {
   expect(eiffelNavigationBeatsForEdit('cinematic').map(beat => beat.from * 180)).toEqual([15, 24, 34, 44, 72, 144]);
   expect(eiffelFactCaptionsForEdit(captionsFor(wonder), 'cinematic')).toEqual([]);
   const giza = getWonder('pyramids-of-giza');
   render(<QuoteOverlay wonder={giza} />);
   act(() => usePlaybackStore.getState().seek(.2));
+  expect(screen.queryByText(giza.quote.text)).not.toBeInTheDocument();
+  act(() => usePlaybackStore.getState().seek(.94));
   expect(screen.getByText(giza.quote.text)).toBeInTheDocument();
 });

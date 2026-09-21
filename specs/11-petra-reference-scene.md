@@ -1,7 +1,7 @@
 # Spec 11 — Petra Replication Scene
 
 Petra is the second forward test of the Giza pipeline and of
-`.agents/skills/wonderforge-scene-builder/`. It preserves the stable `petra`
+[Spec 49’s scene authoring pipeline](49-scene-authoring-pipeline.md). It preserves the stable `petra`
 ID but replaces the legacy silhouette with typed, deterministic **subtractive**
 construction: Al-Khazneh (the Treasury) is carved from living sandstone, not
 assembled from hauled blocks.
@@ -151,7 +151,7 @@ fallback IDs stay unchanged. Target: ≤120 desktop / ≤95 mobile draw calls,
 ## Acceptance
 
 See Spec 04 §Petra replication acceptance and
-`.agents/skills/wonderforge-scene-builder/references/acceptance.md`.
+[Spec 49’s film acceptance gate](49-scene-authoring-pipeline.md#5-verify-relationships-then-review-the-film).
 The movie is not done when the finished facade looks correct. Scrubbing must
 keep the descending face, covering-cell removal, and Siq haul causally
 legible.

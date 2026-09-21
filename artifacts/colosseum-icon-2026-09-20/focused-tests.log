@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+···································
+
+ Test Files  4 passed (4)
+      Tests  35 passed (35)
+   Start at  18:26:45
+   Duration  944ms (transform 292ms, setup 40ms, collect 711ms, tests 323ms, environment 603ms, prepare 130ms)
+

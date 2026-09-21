@@ -1,0 +1,263 @@
+{
+  "url": "https://wonderforge.pages.dev/",
+  "bundle": "/assets/main-D06KFf-n.js",
+  "bundleSha256": "5f804dab4cf8a8394ccf6c14b5f8a13a4e824db8625351044b0c560e54de7d96",
+  "bundleBytesMatch": true,
+  "narrationAssetsVerified": 19,
+  "narration": [
+    {
+      "wonderId": "pyramids-of-giza",
+      "captionId": "giza-khufu",
+      "src": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+      "voiceName": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "sha256": "ca7d473d889aefa102dc845d00e2eb0fbfecf954622f34a226e5363fac6aceb8",
+      "bytes": 70261
+    },
+    {
+      "wonderId": "pyramids-of-giza",
+      "captionId": "giza-roads",
+      "src": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+      "voiceName": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "sha256": "b49c4af435c2eb2c4c0f0049201c66685ab4d873b62695b553b32b2e358c885d",
+      "bytes": 71097
+    },
+    {
+      "wonderId": "pyramids-of-giza",
+      "captionId": "giza-ramps",
+      "src": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+      "voiceName": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "sha256": "d429133b8f2eadfb8a612cbc6101adc3b894afd26c540e0d9ddbc4349fcb5b36",
+      "bytes": 57722
+    },
+    {
+      "wonderId": "pyramids-of-giza",
+      "captionId": "giza-khafre",
+      "src": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+      "voiceName": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "sha256": "5a56e24c3266699d782e9c29eeb86baca93c528e0c46aefa0b4c2c55d224aae4",
+      "bytes": 74022
+    },
+    {
+      "wonderId": "pyramids-of-giza",
+      "captionId": "giza-casing",
+      "src": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+      "voiceName": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "sha256": "a1e07d6eb458e907252b87b2f3e2a96565912d7352f71c20a996bf9d9c46125c",
+      "bytes": 56050
+    },
+    {
+      "wonderId": "pyramids-of-giza",
+      "captionId": "giza-menkaure",
+      "src": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+      "voiceName": "Charles",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+      "sha256": "56206b095d6d37eb641488a9d9122f0b264215eeec9c190148b69f7ecac53649",
+      "bytes": 79874
+    },
+    {
+      "wonderId": "stonehenge",
+      "captionId": "stonehenge-earthwork",
+      "src": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+      "voiceName": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "sha256": "a83d8863bccb95baa5628137f342580b023cdb3cff28793415cda9da3ca3a972",
+      "bytes": 82799
+    },
+    {
+      "wonderId": "stonehenge",
+      "captionId": "stonehenge-sarsens",
+      "src": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+      "voiceName": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "sha256": "3098f0a4490a16b44124f13b8f9a17930ea275e743bb2563d35a95961f6a2b45",
+      "bytes": 86561
+    },
+    {
+      "wonderId": "stonehenge",
+      "captionId": "stonehenge-pits",
+      "src": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+      "voiceName": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "sha256": "c848f083c648018ab85baff52d0844c777d94fe553a8c2b7fd0b3af5e990d9b1",
+      "bytes": 79874
+    },
+    {
+      "wonderId": "stonehenge",
+      "captionId": "stonehenge-lintels",
+      "src": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+      "voiceName": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "sha256": "1cac09eac5b4d4961e5801cfdd878c10843a3d127bf3dd2bb81742917405b965",
+      "bytes": 66499
+    },
+    {
+      "wonderId": "stonehenge",
+      "captionId": "stonehenge-bluestones",
+      "src": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+      "voiceName": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "sha256": "a49c0bd947f7f518dd49817667f269b6812be0d3da70524def0cc71430a7ee1b",
+      "bytes": 73186
+    },
+    {
+      "wonderId": "stonehenge",
+      "captionId": "stonehenge-axis",
+      "src": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+      "voiceName": "Oliver",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+      "sha256": "bcedbd042ccde64ed7d49907d84d1ba117e85121505c6ccef9f5f146affeaf6f",
+      "bytes": 79038
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-valley",
+      "src": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "2f9d55d4a8f6d9c375f6d76cd018845728607a188081b4f5a4948f6245f233f2",
+      "bytes": 73186
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-stone",
+      "src": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "ed6ee008ad1081ccb45e95aba517f4ca751d8300d7dd52212ff168b0c99ec76c",
+      "bytes": 72351
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-cranes",
+      "src": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "6fce52deea3045df05723d4b6401b8657f309aae5c561ee921d5d962f0aee1b7",
+      "bytes": 84889
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-vaults",
+      "src": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "29fe01d49708db374d81da3c1d00db40cfa9344f7f59ba199356c8ca2270a5ea",
+      "bytes": 65663
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-seating",
+      "src": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "8ae19fceba0e8f8d52a7cd31b38422469118cd8e0c5f6a521fb904ee3850f264",
+      "bytes": 75276
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-titus",
+      "src": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "cb0ac3ab8928137bb0fa5bbccb5de4811b5d5374dc98f992b9b0684893c42f67",
+      "bytes": 78202
+    },
+    {
+      "wonderId": "colosseum",
+      "captionId": "colosseum-moonrise",
+      "src": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+      "voiceName": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu",
+      "sha256": "0bc3c5716f5a87125b4377fa6f789bcfac94af0146e555186f7cfdf8d0b66b2e",
+      "bytes": 67753
+    }
+  ],
+  "socialMetadataVerified": true,
+  "socialImageBytesMatch": true,
+  "sampleModel": "/models/sydney/sail-8.glb",
+  "sampleModelBytesMatch": true,
+  "homeHeaders": {
+    "link": "<https://fonts.googleapis.com>; rel=preconnect",
+    "date": "Mon, 21 Sep 2026 05:23:07 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-content-type-options": "nosniff",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pUHvmmsGXonjPKPKrgVibZNbws0o4vWgLY5oRme0JcoyXxnRbrObv74GkivATw3Sdkc1RQIGrXPIQDfJO5vYyBh99Ok6evUSS1SHEiESwpw6HDfTieub2VZSFW5cHYJmvp%2Fz2%2FWFhV%2BCOsFp3laGnM%2BBE%2Fo%3D\"}]}",
+    "server": "cloudflare",
+    "cf-ray": "a3e6a2d10b05db13-NRT",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "bundleHeaders": {
+    "date": "Mon, 21 Sep 2026 05:23:08 GMT",
+    "content-type": "application/javascript",
+    "content-length": "2370100",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=31536000, immutable",
+    "etag": "\"33e2486081814ef2d01bd5f4bfc00ffb\"",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-content-type-options": "nosniff",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VsHk4ZssQClP%2FIeTdc25ZmR%2Bw2wMLch6wCezDMGqV5mHGJw2qcn8BDwpq5rENQik%2F9BG%2FyeVBMDJ2aDCL5WRX%2BamdWOX10ZWJ472JKefIwqNa0phXmHjdFAHeQd9ZB644pNeGBmPZxI77NkogHPLjIXJSzg%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a3e6a2d348e18dea-NRT",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "socialImageHeaders": {
+    "date": "Mon, 21 Sep 2026 05:23:09 GMT",
+    "content-type": "image/png",
+    "content-length": "1985827",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "etag": "\"fac455a55476dc7d29f7292b0e62fc37\"",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-content-type-options": "nosniff",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=g9h5g%2BPAOCs9DMsX9hZHaxoeIzgdF4XmxzCdSQdIi7iBgUmu3qYu7sw9p0fTM41eze%2FdxxWSeaydg3jvkmHjQm3VJPowji6NZaeraW%2FkIzzMIWEwa1JJst0Lwl6d1OrMkHdGsHa1MwwPZQp8t26RrhUjNfM%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a3e6a2df4e25d779-NRT",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "modelHeaders": {
+    "date": "Mon, 21 Sep 2026 05:23:09 GMT",
+    "content-type": "model/gltf-binary",
+    "content-length": "14744",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "etag": "\"6a2531c9fd59f89d8aa6fae386dd442a\"",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-content-type-options": "nosniff",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XhOvdf7qf2YBypYV0KMDbmzSmhOi3msPLPuKnKNmCEWk5%2FTAR2Kj%2FgGdI5PjOL%2FrEQTKuQ87m1jeEBtG9IO1BmxAVHROgdyUrQJYMrPxSWhhdE%2Fswfuh3TDOzcuV333Uqe2T2Us3CvsMx7Ae8qw%2BpMUzh6E%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a3e6a2e14d73e3a7-NRT",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "lunarImage": "/assets/lroc-color-poles-1k-RRPljFYe.jpg",
+  "lunarImageSha256": "b246064f217f8d479df78c49c7c8595a8f5fbda008a72fd539978d2e121e0109",
+  "lunarImageBytesMatch": true,
+  "lunarImageBytes": 139068,
+  "lunarCreditIncluded": true,
+  "lunarImageHeaders": {
+    "date": "Mon, 21 Sep 2026 05:23:10 GMT",
+    "content-type": "image/jpeg",
+    "content-length": "139068",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=31536000, immutable",
+    "etag": "\"9006167ce7cc25bab6a30b5fccf97b5f\"",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "x-content-type-options": "nosniff",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8smRwrDGwpaIhn8bsswXflX3qcYMDm8vs%2BDICiS0aoiAG4oZxlanQH%2B%2BtZyFkcmpR%2B67%2FNT%2Bkg8MaBawIF8bAfjS5uwAVVLz85mKB6RROtwz9iLYIa9goM6vMtwt9NJdw0Ttu4oq9cj%2FcSkww6VuB8UX49s%3D\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a3e6a2e1e9bbdb4c-NRT",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  }
+}

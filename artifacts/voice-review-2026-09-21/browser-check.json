@@ -1,0 +1,142 @@
+[
+  {
+    "mode": "desktop",
+    "samples": [
+      {
+        "label": "Original Giza narration by George",
+        "duration": 6.780227,
+        "currentTime": 0.098762,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "New Giza narration by George",
+        "duration": 4.597551,
+        "currentTime": 0.357725,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "George official voice preview",
+        "duration": 3.390113,
+        "currentTime": 0.357429,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Brian official voice preview",
+        "duration": 5.433469,
+        "currentTime": 0.349762,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Lily official voice preview",
+        "duration": 3.065034,
+        "currentTime": 0.333595,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Daniel official voice preview",
+        "duration": 5.746875,
+        "currentTime": 0.356514,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Bill official voice preview",
+        "duration": 5.479909,
+        "currentTime": 0.351385,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Alice official voice preview",
+        "duration": 3.482993,
+        "currentTime": 0.355416,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Eric official voice preview",
+        "duration": 2.275556,
+        "currentTime": 0.339492,
+        "paused": false,
+        "readyState": 4
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "mode": "mobile",
+    "samples": [
+      {
+        "label": "Original Giza narration by George",
+        "duration": 6.780227,
+        "currentTime": 0.168812,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "New Giza narration by George",
+        "duration": 4.597551,
+        "currentTime": 0.349055,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "George official voice preview",
+        "duration": 3.390113,
+        "currentTime": 0.335576,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Brian official voice preview",
+        "duration": 5.433469,
+        "currentTime": 0.341561,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Lily official voice preview",
+        "duration": 3.065034,
+        "currentTime": 0.343738,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Daniel official voice preview",
+        "duration": 5.746875,
+        "currentTime": 0.351504,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Bill official voice preview",
+        "duration": 5.479909,
+        "currentTime": 0.361236,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Alice official voice preview",
+        "duration": 3.482993,
+        "currentTime": 0.344976,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "label": "Eric official voice preview",
+        "duration": 2.275556,
+        "currentTime": 0.347603,
+        "paused": false,
+        "readyState": 4
+      }
+    ],
+    "overflow": false,
+    "errors": []
+  }
+]

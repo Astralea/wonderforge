@@ -1,0 +1,24 @@
+{
+  "selectedVoices": [
+    {
+      "wonderId": "pyramids-of-giza",
+      "name": "Charles - Expressive, Mature and Clear",
+      "voiceId": "zNsotODqUhvbJ5wMG7Ei"
+    },
+    {
+      "wonderId": "stonehenge",
+      "name": "Oliver - Clean, British and Steady",
+      "voiceId": "L1aJrPa7pLJEyYlh3Ilq"
+    },
+    {
+      "wonderId": "colosseum",
+      "name": "Andrea Williams",
+      "voiceId": "dcWyhLms5IOM9o93xsQu"
+    }
+  ],
+  "mapping": "Agent-recommended assignment; user selected the three voices without specifying per-film mapping.",
+  "generationStatus": "Complete: all 19 selected-voice recordings generated and measured, with at least 0.4 seconds of tail in each chapter.",
+  "model": "eleven_multilingual_v2",
+  "speed": 0.92,
+  "allowanceUpdate": "Owner reported raising the API key limit to 2,000,000; generation succeeded."
+}

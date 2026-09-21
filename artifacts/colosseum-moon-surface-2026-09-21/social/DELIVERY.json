@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-09-21T05:27:10.402Z",
+  "files": [
+    {
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/wonderforge-four-films-20s-moon-v2.mp4",
+      "source": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-four-films-20s-moon-v2.mp4",
+      "bytes": 18290183,
+      "sha256": "3e9ded3a44efe80b3a78eeaa7f41a91f1cf8f40249f37a9b2450b9ca43b6cc0b",
+      "byteIdentical": true
+    },
+    {
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/wonderforge-thumbnail-moon-v2.jpg",
+      "source": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/wonderforge-thumbnail-moon-v2.jpg",
+      "bytes": 114450,
+      "sha256": "216989138b760fd812e48a9790472d90ab77dafbf283b10514b37e5be253ce8a",
+      "byteIdentical": true
+    },
+    {
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/contact-sheet.jpg",
+      "source": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/contact-sheet.jpg",
+      "bytes": 336860,
+      "sha256": "c963764ac212f2e0d4dd6b0a922b0d0ee425174cb9838d85fc0695326a276018",
+      "byteIdentical": true
+    },
+    {
+      "file": "artifacts/colosseum-moon-surface-2026-09-21/social/moon-comparison.jpg",
+      "source": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/moon-comparison.jpg",
+      "bytes": 157068,
+      "sha256": "dff0227d14a5add13ab80b39f7f3d4325db27c2de67823dc329a11b8aa38df9e",
+      "byteIdentical": true
+    }
+  ],
+  "originalMontagePreserved": "artifacts/stonehenge-release-2026-09-21/social/wonderforge-four-films-20s.mp4",
+  "sourceBundle": "main-D06KFf-n.js",
+  "deployment": "a4441d6d-aac3-4670-8f1a-8b81f1e03e04"
+}

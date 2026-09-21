@@ -1,0 +1,144 @@
+{
+  "observer": {
+    "latitudeDegrees": 41.8902,
+    "longitudeDegreesEast": 12.4922,
+    "altitudeMetres": 25
+  },
+  "calendar": "Julian",
+  "timeScale": "UT1",
+  "source": "JPL Horizons DE441",
+  "selection": "Jun21 recommended; Jun22 alternate; Jun20 rejected because moonrise precedes sunset.",
+  "definition": "Airless body-centre horizon crossings, linearly interpolated from10-minute candidate probe; final grid will refine.",
+  "bodies": {
+    "sun": [
+      {
+        "event": "rise",
+        "date": "0080-Jun-20",
+        "julianDayUt1": 1750448.64882427,
+        "hourUt1": 3.5717824827879667,
+        "azimuthDegrees": 57.416074539826,
+        "illuminatedFraction": 1.0,
+        "waxing": false
+      },
+      {
+        "event": "set",
+        "date": "0080-Jun-20",
+        "julianDayUt1": 1750449.277338186,
+        "hourUt1": 18.656116465106606,
+        "azimuthDegrees": 302.60100613376545,
+        "illuminatedFraction": 1.0,
+        "waxing": false
+      },
+      {
+        "event": "rise",
+        "date": "0080-Jun-21",
+        "julianDayUt1": 1750449.6489005247,
+        "hourUt1": 3.573612593114376,
+        "azimuthDegrees": 57.38217166806393,
+        "illuminatedFraction": 1.0,
+        "waxing": false
+      },
+      {
+        "event": "set",
+        "date": "0080-Jun-21",
+        "julianDayUt1": 1750450.277549309,
+        "hourUt1": 18.66118341498077,
+        "azimuthDegrees": 302.6277035857778,
+        "illuminatedFraction": 1.0,
+        "waxing": false
+      },
+      {
+        "event": "rise",
+        "date": "0080-Jun-22",
+        "julianDayUt1": 1750450.6490005539,
+        "hourUt1": 3.5760132931172848,
+        "azimuthDegrees": 57.3584043662093,
+        "illuminatedFraction": 1.0,
+        "waxing": false
+      },
+      {
+        "event": "set",
+        "date": "0080-Jun-22",
+        "julianDayUt1": 1750451.2777393018,
+        "hourUt1": 18.665743242949247,
+        "azimuthDegrees": 302.6442822986501,
+        "illuminatedFraction": 1.0,
+        "waxing": false
+      }
+    ],
+    "moon": [
+      {
+        "event": "set",
+        "date": "0080-Jun-20",
+        "julianDayUt1": 1750448.6362520112,
+        "hourUt1": 3.2700482681393623,
+        "azimuthDegrees": 244.41527708653737,
+        "illuminatedFraction": 0.9917546159208888,
+        "waxing": true
+      },
+      {
+        "event": "rise",
+        "date": "0080-Jun-20",
+        "julianDayUt1": 1750449.259806267,
+        "hourUt1": 18.235350407660007,
+        "azimuthDegrees": 116.26808973167755,
+        "illuminatedFraction": 0.9983915777826082,
+        "waxing": true
+      },
+      {
+        "event": "set",
+        "date": "0080-Jun-21",
+        "julianDayUt1": 1750449.6673637705,
+        "hourUt1": 4.016730492934585,
+        "azimuthDegrees": 243.53203374721355,
+        "illuminatedFraction": 0.9983806112698127,
+        "waxing": false
+      },
+      {
+        "event": "rise",
+        "date": "0080-Jun-21",
+        "julianDayUt1": 1750450.2931312644,
+        "hourUt1": 19.035150345414877,
+        "azimuthDegrees": 116.40312983437339,
+        "illuminatedFraction": 0.9915044188164017,
+        "waxing": false
+      },
+      {
+        "event": "set",
+        "date": "0080-Jun-22",
+        "julianDayUt1": 1750450.7011345702,
+        "hourUt1": 4.827229684218764,
+        "azimuthDegrees": 243.8891260118631,
+        "illuminatedFraction": 0.986146992687381,
+        "waxing": false
+      },
+      {
+        "event": "rise",
+        "date": "0080-Jun-22",
+        "julianDayUt1": 1750451.3236607425,
+        "hourUt1": 19.76785781979561,
+        "azimuthDegrees": 115.30843924676549,
+        "illuminatedFraction": 0.9661147241953885,
+        "waxing": false
+      }
+    ]
+  },
+  "archives": [
+    {
+      "path": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/probe-june20-22-sun.response.json",
+      "sha256": "b58c45918f1cc60a39683ac29a29c26f54ff5856c9dcf2a610399b98280cc937"
+    },
+    {
+      "path": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/probe-june20-22-sun.request.json",
+      "sha256": "d854fc3bcd344ef85be8a4d0b647b0e23c8c2e74e0fb956e14a7ea59dbe43ee1"
+    },
+    {
+      "path": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/probe-june20-22-moon.response.json",
+      "sha256": "01dcf6f0e05c25bb0c24d1f26c0502f5b9d89a8549adbba70028e2e82b8bb287"
+    },
+    {
+      "path": "artifacts/colosseum-moonrise-2026-09-20/ephemeris/probe-june20-22-moon.request.json",
+      "sha256": "bc8ecd6cb6cc9d388cfa1760f2e1d39b960d46fb501ca518260ff0a44be72c34"
+    }
+  ]
+}

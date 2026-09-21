@@ -1,0 +1,49 @@
+{
+  "browser": "Chrome through CUA",
+  "server": "http://127.0.0.1:5589/",
+  "build": "development source during repair",
+  "observations": [
+    {
+      "wonder": "stonehenge",
+      "time": 0.82,
+      "viewport": [
+        390,
+        844
+      ],
+      "calls": 55,
+      "triangles": 90878,
+      "capture": "stonehenge-solstice-portrait.png",
+      "result": "Caption and quote collision removed; neutral fill applied and visually checked with reload."
+    },
+    {
+      "wonder": "colosseum",
+      "time": 0.86,
+      "viewport": [
+        390,
+        844
+      ],
+      "calls": 83,
+      "triangles": 125787,
+      "capture": "colosseum-late-portrait.png",
+      "result": "Continuous horizon and full ellipse visible. Counts precede final shadow optimizations; not final cost evidence."
+    }
+  ],
+  "otherChecks": [
+    "Homepage rendered",
+    "Four On site and six In production entries observed",
+    "Catalog entry and previous/next navigation",
+    "Native range seeks update scene and caption",
+    "Eiffel runtime manifest reached readiness; Paris source was not verified before disconnection. Subsequent HTTP checks found and fixed double decoding on gzip hosts."
+  ],
+  "interruption": "CUA execution timed out during Eiffel camera comparison. After reset, inventory returned no apps/browsers and Sky Computer Use native pipe startup failed. Reconnection requested from user.",
+  "remaining": [
+    "Final production desktop and portrait captures for all four films",
+    "Eiffel revised camera/material A/B and 320px framing",
+    "Final GPU costs",
+    "Continuous normal-speed operation and audio review",
+    "Physical phone and Twitter in-app browser",
+    "Cold-cache browser timings",
+    "Live social crawler preview"
+  ],
+  "console": "Anonymous jw ReferenceError and browser-extension QuickPro errors observed; no clean-console certification."
+}

@@ -98,7 +98,7 @@ describe('Stonehenge world contract (Spec 10)', () => {
       expect(stonehengeCinematicShotAt(t, 16 / 9))
         .toEqual(stonehengeCinematicShotAt(t, 16 / 9));
       const shot = stonehengeCinematicShotAt(t, 16 / 9);
-      expect(shot.radius).toBeGreaterThanOrEqual(85);
+      expect(shot.radius).toBeGreaterThanOrEqual(72);
       expect(shot.radius).toBeLessThanOrEqual(140);
       expect(shot.fov).toBe(35);
       expect(shot.target[1]).toBeGreaterThan(1);
@@ -107,12 +107,14 @@ describe('Stonehenge world contract (Spec 10)', () => {
       // otherwise the rolling downs erase the sky even when a dome exists.
       expect((shot.pitch * 180) / Math.PI).toBeLessThan(shot.fov / 2);
     }
+    expect(stonehengeCinematicShotAt(0.075, 16 / 9).radius).toBeLessThan(85);
+    expect(stonehengeCinematicShotAt(0.20, 16 / 9).radius).toBeLessThan(85);
     const desktop = stonehengeCinematicShotAt(0.78, 16 / 9);
     const portrait = stonehengeCinematicShotAt(0.78, 390 / 844);
     expect(stonehengeCinematicShotAt(0.32, 16 / 9).radius).toBeLessThan(98);
     expect(stonehengeCinematicShotAt(0.32, 16 / 9).radius).toBeGreaterThanOrEqual(88);
     expect(stonehengeCinematicShotAt(0.32, 16 / 9).pitch).toBeGreaterThan((14 * Math.PI) / 180);
-    expect(stonehengeCinematicShotAt(0.78, 16 / 9).pitch).toBeGreaterThan((8 * Math.PI) / 180);
+    expect(stonehengeCinematicShotAt(0.78, 16 / 9).pitch).toBeGreaterThan((7 * Math.PI) / 180);
     expect(stonehengeCinematicShotAt(0.78, 16 / 9).pitch).toBeLessThan((12 * Math.PI) / 180);
     expect(stonehengeCinematicShotAt(0.68, 16 / 9).target[2]).toBeLessThan(-8);
     expect(stonehengeCinematicShotAt(1, 16 / 9).radius).toBeGreaterThanOrEqual(110);

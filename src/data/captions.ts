@@ -26,105 +26,108 @@ export interface CaptionBeat {
   text: string;
 }
 
-/**
- * Giza's authored track, written against the shot schedule: foundation and
- * quarry beats early, roads mid-build, ramps as they rise, the masons as the
- * casing climbs — and the horizon note closes before the reveal (the
- * ensemble blend starts at t = 0.88; no caption may cross it).
- */
+/** Giza follows the three successive royal monuments; see Spec 50 for evidence. */
 const GIZA_CAPTIONS: CaptionBeat[] = [
   {
-    id: 'giza-quarry',
-    from: 0.18,
-    // George's measured read is 6.78 s; keep the full line audible before the
-    // next beat while retaining more than the required 0.03 reading gap.
-    until: 0.305,
-    place: 'lower-right',
-    kicker: 'The quarry',
-    text: 'Stone comes from the plateau; white casing stone arrives from Tura.',
+    "id": "giza-khufu",
+    "from": 0.07,
+    "until": 0.19,
+    "place": "lower-right",
+    "kicker": "Khufu's pyramid",
+    "text": "Khufu's tomb rises first, built from limestone quarried on this plateau."
   },
   {
-    id: 'giza-roads',
-    from: 0.34,
-    until: 0.46,
-    place: 'upper-right',
-    kicker: 'The haul',
-    text: 'Water on the sand helps crews pull the loaded sledges.',
+    "id": "giza-roads",
+    "from": 0.215,
+    "until": 0.335,
+    "place": "upper-right",
+    "kicker": "The haul",
+    "text": "In this reconstruction, damp sand eases the passage of loaded sledges."
   },
   {
-    id: 'giza-ramps',
-    from: 0.5,
-    until: 0.61,
-    place: 'upper-left',
-    kicker: 'Raising the stone',
-    text: 'In this reconstruction, ramps carry stones to each new level.',
+    "id": "giza-ramps",
+    "from": 0.36,
+    "until": 0.48,
+    "place": "lower-right",
+    "kicker": "Raising the stone",
+    "text": "Here, ramps and levers raise each stone into place."
   },
   {
-    id: 'giza-masons',
-    from: 0.64,
-    until: 0.75,
-    place: 'lower-right',
-    kicker: 'The Masons',
-    text: 'Every casing stone is dressed, levered, and seated by hand.',
+    "id": "giza-khafre",
+    "from": 0.545,
+    "until": 0.675,
+    "place": "upper-right",
+    "kicker": "Khafre's pyramid",
+    "text": "Khafre, Khufu's son, builds the second great pyramid on higher ground."
   },
   {
-    id: 'giza-horizon',
-    from: 0.78,
-    until: 0.865,
-    place: 'upper-left',
-    kicker: 'The three pyramids',
-    text: 'The film shows three reigns in a single day.',
+    "id": "giza-casing",
+    "from": 0.7,
+    "until": 0.82,
+    "place": "lower-right",
+    "kicker": "White limestone",
+    "text": "White casing stone came by water from the quarries at Tura."
   },
+  {
+    "id": "giza-menkaure",
+    "from": 0.845,
+    "until": 0.935,
+    "place": "upper-right",
+    "kicker": "Menkaure's pyramid",
+    "text": "Menkaure's pyramid follows: three royal tombs, three separate reigns."
+  }
 ];
 
-/**
- * Stonehenge's authored track, written against Spec 10's mechanism holds:
- * dressing and sarsen weight early, the Preseli haul as bluestones move,
- * ramp-sided pits as uprights turn, timber cribs at the lintel hold, and
- * the solstitial axis before the reveal. Crib/A-frame wording stays in
- * the "likely / movie's reading" register — those methods are authored.
- */
+/** Stonehenge follows visible mechanisms, then the solstice axis; see Spec 50. */
 const STONEHENGE_CAPTIONS: CaptionBeat[] = [
   {
-    id: 'stonehenge-sarsens',
-    from: 0.152,
-    until: 0.264,
-    place: 'lower-right',
-    kicker: 'Shaping the stones',
-    text: 'Hammerstones shape the faces of the great sarsen stones.',
+    "id": "stonehenge-earthwork",
+    "from": 0.07,
+    "until": 0.19,
+    "place": "lower-right",
+    "kicker": "Before the stones",
+    "text": "An earthwork enclosure stood here centuries before the great stone circle."
   },
   {
-    id: 'stonehenge-bluestones',
-    from: 0.294,
-    until: 0.445,
-    place: 'upper-right',
-    kicker: 'The Bluestones',
-    text: 'The smaller bluestones were transported from the Preseli Hills in Wales, over 200 km away.',
+    "id": "stonehenge-sarsens",
+    "from": 0.215,
+    "until": 0.335,
+    "place": "upper-right",
+    "kicker": "Shaping the sarsens",
+    "text": "Hammerstones shaped the sarsens; their joints echo skilled woodworking."
   },
   {
-    id: 'stonehenge-pits',
-    from: 0.475,
-    until: 0.611,
-    place: 'upper-left',
-    kicker: 'Raising the uprights',
-    text: 'Here, each upright tips into a sloping pit before rubble secures its base.',
+    "id": "stonehenge-pits",
+    "from": 0.36,
+    "until": 0.48,
+    "place": "lower-right",
+    "kicker": "Raising the uprights",
+    "text": "Here, ropes raise the uprights; rubble secures their bases."
   },
   {
-    id: 'stonehenge-lintels',
-    from: 0.641,
-    until: 0.741,
-    place: 'lower-right',
-    kicker: 'Lifting the lintels',
-    text: 'The film uses timber platforms to raise the lintels.',
+    "id": "stonehenge-lintels",
+    "from": 0.505,
+    "until": 0.625,
+    "place": "upper-right",
+    "kicker": "Across the uprights",
+    "text": "The film uses timber platforms to raise the stone lintels."
   },
   {
-    id: 'stonehenge-axis',
-    from: 0.771,
-    until: 0.88,
-    place: 'upper-left',
-    kicker: 'Solstice alignment',
-    text: 'The stones align with the midsummer sunrise and midwinter sunset.',
+    "id": "stonehenge-bluestones",
+    "from": 0.65,
+    "until": 0.77,
+    "place": "lower-right",
+    "kicker": "Stones from Wales",
+    "text": "Many smaller bluestones came from the Preseli Hills in Wales."
   },
+  {
+    "id": "stonehenge-axis",
+    "from": 0.795,
+    "until": 0.915,
+    "place": "lower-right",
+    "kicker": "The solstice axis",
+    "text": "The axis marks midsummer sunrise and midwinter sunset."
+  }
 ];
 
 /**
@@ -177,45 +180,53 @@ const PETRA_CAPTIONS: CaptionBeat[] = [
 
 const COLOSSEUM_CAPTIONS: CaptionBeat[] = [
   {
-    id: 'colosseum-valley',
-    from: 0.152,
-    until: 0.264,
-    place: 'lower-right',
-    kicker: 'The valley',
-    text: 'Work begins on the drained floor between the Palatine and Caelian hills.',
+    "id": "colosseum-valley",
+    "from": 0.07,
+    "until": 0.18,
+    "place": "lower-right",
+    "kicker": "Nero's former lake",
+    "text": "Vespasian builds an amphitheatre on the site of Nero's lake."
   },
   {
-    id: 'colosseum-stone',
-    from: 0.294,
-    until: 0.445,
-    place: 'upper-right',
-    kicker: 'The Stone',
-    text: 'Load-bearing piers are Tivoli travertine hauled twenty kilometres into Rome.',
+    "id": "colosseum-stone",
+    "from": 0.2,
+    "until": 0.3,
+    "place": "upper-right",
+    "kicker": "Travertine from Tivoli",
+    "text": "The load-bearing piers are built from travertine quarried near Tivoli."
   },
   {
-    id: 'colosseum-cranes',
-    from: 0.475,
-    until: 0.611,
-    place: 'upper-left',
-    kicker: 'Lifting the blocks',
-    text: 'In this reconstruction, treadwheel cranes lift blocks to each new level.',
+    "id": "colosseum-cranes",
+    "from": 0.32,
+    "until": 0.43,
+    "place": "lower-right",
+    "kicker": "Lifting the blocks",
+    "text": "In this reconstruction, treadwheel cranes raise the heavy stone blocks."
   },
   {
-    id: 'colosseum-vaults',
-    from: 0.641,
-    until: 0.741,
-    place: 'lower-right',
-    kicker: 'The vaults',
-    text: 'Timber supports hold the vaults during construction.',
+    "id": "colosseum-vaults",
+    "from": 0.465,
+    "until": 0.565,
+    "place": "upper-right",
+    "kicker": "Under the vaults",
+    "text": "Here, timber supports hold the vaults while the concrete sets."
   },
   {
-    id: 'colosseum-orders',
-    from: 0.771,
-    until: 0.88,
-    place: 'upper-left',
-    kicker: 'The outer walls',
-    text: 'Three tiers of arches rise beneath the solid upper wall.',
+    "id": "colosseum-seating",
+    "from": 0.585,
+    "until": 0.685,
+    "place": "lower-right",
+    "kicker": "Supporting the seating",
+    "text": "Vaulted passages support the tiers of seating."
   },
+  {
+    "id": "colosseum-titus",
+    "from": 0.805,
+    "until": 0.94,
+    "place": "lower-right",
+    "kicker": "From Vespasian to Titus",
+    "text": "Construction began under Vespasian. Titus opened the amphitheatre in AD 80."
+  }
 ];
 
 const SYDNEY_CAPTIONS: CaptionBeat[] = [

@@ -1,0 +1,268 @@
+{
+  "url": "https://wonderforge.pages.dev/#/wonder/colosseum",
+  "capturedAt": "2026-09-21T05:24:28.023Z",
+  "results": [
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "t": 1,
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/public/desktop-t1.png",
+      "cropPath": "artifacts/colosseum-moon-surface-2026-09-21/visual/public/desktop-t1-moon-crop.png",
+      "state": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 77,
+            "triangles": 111736,
+            "points": 0,
+            "lines": 0,
+            "geometries": 52,
+            "textures": 18
+          },
+          "colosseumCelestial": {
+            "t": 1,
+            "julianDayUt1": 1750450.3395833333,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.6422668435337379,
+                -0.21808056222211933,
+                0.734802129881299
+              ],
+              "azimuthDegrees": 318.84434102256955,
+              "authoringAzimuthDegrees": -228.84434102256955,
+              "elevationDegrees": -12.596320150936691,
+              "distanceKm": 152076035.5300001,
+              "angularRadiusDegrees": 0.262111111,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0
+            },
+            "moon": {
+              "direction": [
+                0.7763778647140902,
+                0.17752785823808642,
+                -0.6047489319803615
+              ],
+              "azimuthDegrees": 127.9163207140507,
+              "authoringAzimuthDegrees": -37.9163207140507,
+              "elevationDegrees": 10.225797530148345,
+              "distanceKm": 405179.02859964845,
+              "angularRadiusDegrees": 0.24568394420021297,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1,
+              "lightDirection": [
+                -0.6426543293534848,
+                -0.21798335992471668,
+                0.734492115518713
+              ],
+              "illuminatedFraction": 0.9909120186998195,
+              "referenceIlluminatedFraction": 0.9909203399998113,
+              "phaseAngleDegrees": 10.940731336345205,
+              "referencePhaseAngleDegrees": 10.940880000114442,
+              "elongationDegrees": 169.03029588934047,
+              "waxing": false
+            },
+            "key": "moon",
+            "constructionT": 1,
+            "workComplete": true,
+            "keyVisibility": 0.9927229835079159
+          },
+          "camera": {
+            "position": [
+              -346.81902492393016,
+              52.47505640127511,
+              -213.39729027499493
+            ],
+            "direction": [
+              0.8496163050615033,
+              -0.0697564737441253,
+              0.5227677960093025
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "scripts": [
+          "https://wonderforge.pages.dev/assets/main-D06KFf-n.js"
+        ],
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureDimensions": [
+          1024,
+          512
+        ]
+      },
+      "errors": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/assets/lroc-color-poles-1k-RRPljFYe.jpg",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=31536000, immutable",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "etag": "\"9006167ce7cc25bab6a30b5fccf97b5f\"",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IC341u43gOVcdPrUmAfeI9ZLx4NIEeCcmXbwj7bgVqQWNoF4yX8VOfkLL4v7WJx%2FkKYK5J0IcDpiud2AgdfwNVgagJYC%2F%2FLqnreNC80xhMwfgCkW2TExoR8CGt1eCrjl92GqoJP5v5du%2BPDb%2BrL5xh3Jy5A%3D\"}]}",
+            "x-content-type-options": "nosniff",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "cf-ray": "a3e6a4af9bffd4ab-NRT",
+            "access-control-allow-origin": "*",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "content-length": "139068",
+            "server-timing": "cfExtPri",
+            "date": "Mon, 21 Sep 2026 05:24:23 GMT",
+            "content-type": "image/jpeg",
+            "server": "cloudflare",
+            "priority": "u=3,i"
+          }
+        }
+      ],
+      "checks": {
+        "expectedBundle": true,
+        "cameraIdentical": true,
+        "moonIdentical": true,
+        "surfaceReady": true,
+        "imageHttp200": true,
+        "zeroErrors": true,
+        "changedCropChannels": 0,
+        "maxCropChannelDelta": 0
+      }
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "t": 1,
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/public/portrait-t1.png",
+      "cropPath": "artifacts/colosseum-moon-surface-2026-09-21/visual/public/portrait-t1-moon-crop.png",
+      "state": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 58,
+            "triangles": 72452,
+            "points": 0,
+            "lines": 0,
+            "geometries": 48,
+            "textures": 7
+          },
+          "colosseumCelestial": {
+            "t": 1,
+            "julianDayUt1": 1750450.3395833333,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.6422668435337379,
+                -0.21808056222211933,
+                0.734802129881299
+              ],
+              "azimuthDegrees": 318.84434102256955,
+              "authoringAzimuthDegrees": -228.84434102256955,
+              "elevationDegrees": -12.596320150936691,
+              "distanceKm": 152076035.5300001,
+              "angularRadiusDegrees": 0.262111111,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0
+            },
+            "moon": {
+              "direction": [
+                0.7763778647140902,
+                0.17752785823808642,
+                -0.6047489319803615
+              ],
+              "azimuthDegrees": 127.9163207140507,
+              "authoringAzimuthDegrees": -37.9163207140507,
+              "elevationDegrees": 10.225797530148345,
+              "distanceKm": 405179.02859964845,
+              "angularRadiusDegrees": 0.24568394420021297,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1,
+              "lightDirection": [
+                -0.6426543293534848,
+                -0.21798335992471668,
+                0.734492115518713
+              ],
+              "illuminatedFraction": 0.9909120186998195,
+              "referenceIlluminatedFraction": 0.9909203399998113,
+              "phaseAngleDegrees": 10.940731336345205,
+              "referencePhaseAngleDegrees": 10.940880000114442,
+              "elongationDegrees": 169.03029588934047,
+              "waxing": false
+            },
+            "key": "moon",
+            "constructionT": 1,
+            "workComplete": true,
+            "keyVisibility": 0.9927229835079159
+          },
+          "camera": {
+            "position": [
+              -459.5171320822652,
+              61.72796563355961,
+              -282.74028751104515
+            ],
+            "direction": [
+              0.8496163050615034,
+              -0.06975647374412532,
+              0.5227677960093026
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "scripts": [
+          "https://wonderforge.pages.dev/assets/main-D06KFf-n.js"
+        ],
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureDimensions": [
+          1024,
+          512
+        ]
+      },
+      "errors": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/assets/lroc-color-poles-1k-RRPljFYe.jpg",
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=31536000, immutable",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "etag": "\"9006167ce7cc25bab6a30b5fccf97b5f\"",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2BHCmuN54C8aZVI7Mo%2FZ6nBlHWg9Kfl1gGsYXYSkHRi75FXZdzMxo1gpAbXoHp7%2FQpFzxO5FGnPpJOp4%2BukpvT%2BE9TW10se%2F3G1C%2FTvadaKTX4%2FnFtnOxMzXlAvnr0JqlGx5WRvDMxPRABesFj9pbkOTYMRI%3D\"}]}",
+            "x-content-type-options": "nosniff",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "cf-ray": "a3e6a4bfcb2ee38a-NRT",
+            "access-control-allow-origin": "*",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "content-length": "139068",
+            "server-timing": "cfExtPri",
+            "date": "Mon, 21 Sep 2026 05:24:26 GMT",
+            "content-type": "image/jpeg",
+            "server": "cloudflare",
+            "priority": "u=3,i"
+          }
+        }
+      ],
+      "checks": {
+        "expectedBundle": true,
+        "cameraIdentical": true,
+        "moonIdentical": true,
+        "surfaceReady": true,
+        "imageHttp200": true,
+        "zeroErrors": true,
+        "changedCropChannels": 0,
+        "maxCropChannelDelta": 0
+      }
+    }
+  ]
+}

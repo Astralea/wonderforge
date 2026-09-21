@@ -1,0 +1,21 @@
+{
+  "status": "local implementation verified; final browser visual acceptance blocked",
+  "tests": {
+    "files": 226,
+    "passed": 1209,
+    "durationSeconds": 194.07,
+    "log": "test-frozen-source.log"
+  },
+  "typecheck": "passed",
+  "build": "passed with prebuild asset generation",
+  "main": "main-Bgtdl_tC.js",
+  "preview": "http://127.0.0.1:5590/",
+  "deployed": false,
+  "sha256": {
+    "dist/index.html": "5c17b86243213a4085ee5e34a3e64a869b29b5f02acc5e04e61956012e6b4a31",
+    "dist/assets/main-Bgtdl_tC.js": "c0f38b0c253d501641d29e3a07ee462618936f5a9e1eec7f1cd06d4cb08fd7d8",
+    "dist/assets/main-D4FZz0Lk.css": "65569ea6be645911ee4a23d862696f1ce0fa0ab095ae315da10b14d7fb994a73",
+    "dist/models/eiffel-construction-kit/tower-kit.runtime.json": "bc0a4af11cededec336de8b45c88c7533dde9934e743ef2087655cfcc26ce237",
+    "dist/models/paris-1889/paris-city.glb.gz": "b2d0350edba8bb20b76a8f8564f70d39ea3aefe51404bfc97bbe45195182a70e"
+  }
+}

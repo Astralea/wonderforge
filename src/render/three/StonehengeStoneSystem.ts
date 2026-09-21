@@ -74,7 +74,7 @@ export function createStonehengeStoneGeometry(role: StonehengeStoneRole, unworke
       // and chipped ends rather than a machine-perfect cuboid silhouette.
       const crown = (1 - Math.min(1, x * x * 4)) * 0.028;
       const endWear = Math.max(0, Math.abs(x) - 0.38) * 0.035;
-      position.setY(index, y + crown - endWear + edgeWeather * 0.25);
+      position.setY(index, y < 0 ? -0.5 : y + crown - endWear + edgeWeather * 0.25);
     } else if (Math.abs(y) < 0.49) {
       position.setY(index, y + faceWeather * 0.007);
     }
@@ -108,7 +108,7 @@ export function createStonehengeStoneGeometry(role: StonehengeStoneRole, unworke
 }
 
 function stoneColor(material: StonehengeMaterial, variation: number, target: Color): Color {
-  target.set(material === 'sarsen' ? '#85877f' : '#4c606a');
+  target.set(material === 'sarsen' ? '#a2a397' : '#637781');
   target.offsetHSL(
     variation * 0.006,
     variation * 0.012,

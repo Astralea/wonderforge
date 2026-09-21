@@ -5,7 +5,9 @@ import {
   ConeGeometry,
   CylinderGeometry,
   Float32BufferAttribute,
+  IcosahedronGeometry,
   Matrix4,
+  PlaneGeometry,
   Mesh,
   Quaternion,
   SphereGeometry,
@@ -14,10 +16,11 @@ import {
 } from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { COLOSSEUM_HOUSING, COLOSSEUM_HOUSING_GLB, colosseumHousingById, type ColosseumHousingId } from '../../data/colosseumHousing';
 
 export const COLOSSEUM_ROME_KIT_GLB = '/models/colosseum-rome/rome-kit.glb';
 
-export type ColosseumRomeRole = 'brick' | 'tile' | 'foliage' | 'timber' | 'stone' | 'void';
+export type ColosseumRomeRole = 'brick' | 'plaster' | 'tile' | 'foliage' | 'timber' | 'stone' | 'void';
 
 export interface ColosseumRomeKit {
   insula: Object3D;
@@ -27,27 +30,28 @@ export interface ColosseumRomeKit {
 }
 
 export const ROME_ROLE_COLOR: Record<ColosseumRomeRole, Color> = {
-  brick: new Color('#8a5a46'),
-  tile: new Color('#7a3a28'),
+  brick: new Color('#a27e65'),
+  plaster: new Color('#c9bea7'),
+  tile: new Color('#a4664b'),
   foliage: new Color('#3a5a34'),
   timber: new Color('#5a3c24'),
-  stone: new Color('#9a8a72'),
+  stone: new Color('#b5aa93'),
   void: new Color('#1c1612'),
 };
 
-async function readKitBuffer(): Promise<ArrayBuffer> {
+async function readKitBuffer(path = COLOSSEUM_ROME_KIT_GLB): Promise<ArrayBuffer> {
   try {
-    const response = await fetch(COLOSSEUM_ROME_KIT_GLB);
+    const response = await fetch(path);
     if (response.ok) return await response.arrayBuffer();
   } catch {
     /* Vitest may expose fetch without a preview server. */
   }
   if (typeof process === 'undefined' || !process.versions?.node) {
-    throw new Error(`Colosseum Rome kit missing: ${COLOSSEUM_ROME_KIT_GLB}`);
+    throw new Error(`Colosseum Rome kit missing: ${path}`);
   }
   const { readFileSync } = await import('node:fs');
   const { resolve } = await import('node:path');
-  const file = resolve(process.cwd(), `public${COLOSSEUM_ROME_KIT_GLB}`);
+  const file = resolve(process.cwd(), `public${path}`);
   const buffer = readFileSync(file);
   return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
 }
@@ -69,8 +73,15 @@ export async function loadColosseumRomeKit(): Promise<ColosseumRomeKit> {
   };
 }
 
+export async function loadColosseumHousingKit(): Promise<Record<ColosseumHousingId, Object3D>> {
+  const gltf = await new GLTFLoader().parseAsync(await readKitBuffer(COLOSSEUM_HOUSING_GLB), '');
+  return Object.fromEntries(COLOSSEUM_HOUSING.map(profile =>
+    [profile.id, findNamed(gltf.scene, `housing-${profile.id}`)])) as Record<ColosseumHousingId, Object3D>;
+}
+
 export function paintRole(name: string): ColosseumRomeRole {
   const n = name.toLowerCase();
+  if (n.includes('plaster')) return 'plaster';
   if (n.includes('roof') || n.includes('tile')) return 'tile';
   if (n.includes('crown') || n.includes('foliage')) return 'foliage';
   if (n.includes('trunk') || n.includes('timber')) return 'timber';
@@ -109,6 +120,39 @@ function prepareGeometry(geometry: BufferGeometry): BufferGeometry {
   return asNonIndexed(geometry);
 }
 
+/** Runtime detail tier: preserve authored silhouettes and openings, discard
+ * the ten hidden/back faces of tiny recessed window boxes and course strips. */
+function simplifyRomePiece(source: BufferGeometry, name: string, role: ColosseumRomeRole): BufferGeometry {
+  source.computeBoundingBox();
+  const box = source.boundingBox!;
+  const center = box.getCenter(new Vector3()), size = box.getSize(new Vector3());
+  if (name.includes('pine-crown')) {
+    const crown = new IcosahedronGeometry(1, 0);
+    crown.computeBoundingBox();
+    const extents = crown.boundingBox!.getSize(new Vector3());
+    crown.scale(size.x / extents.x, size.y / extents.y, size.z / extents.z).translate(center.x, center.y, center.z);
+    source.dispose();
+    return crown;
+  }
+  const planar = role === 'void' || name.includes('course-') || name.includes('court-');
+  if (!planar) return source;
+  const expanded = asNonIndexed(source);
+  const positions = expanded.getAttribute('position'), normals = expanded.getAttribute('normal');
+  const axis = name.includes('court-') ? 1 : size.x < size.z ? 0 : 2;
+  const sign = axis === 1 ? 1 : Math.sign(axis === 0 ? center.x : center.z) || 1;
+  const vertices: number[] = [];
+  for (let i = 0; i < positions.count; i += 3) {
+    const n = axis === 0 ? normals.getX(i) : axis === 1 ? normals.getY(i) : normals.getZ(i);
+    if (n * sign < .9) continue;
+    for (let j = 0; j < 3; j++) vertices.push(positions.getX(i+j), positions.getY(i+j), positions.getZ(i+j));
+  }
+  if (vertices.length === 0) return expanded;
+  const flat = new BufferGeometry();
+  flat.setAttribute('position', new Float32BufferAttribute(vertices, 3));
+  flat.computeVertexNormals(); expanded.dispose();
+  return flat;
+}
+
 export function flattenRomeRole(root: Object3D, role: ColosseumRomeRole): BufferGeometry | null {
   const pieces: BufferGeometry[] = [];
   root.updateWorldMatrix(true, true);
@@ -116,8 +160,9 @@ export function flattenRomeRole(root: Object3D, role: ColosseumRomeRole): Buffer
   root.traverse((object) => {
     if (!(object instanceof Mesh)) return;
     if (paintRole(object.name) !== role) return;
-    const geometry = object.geometry.clone();
+    let geometry = object.geometry.clone();
     geometry.applyMatrix4(inverse.clone().multiply(object.matrixWorld));
+    geometry = simplifyRomePiece(geometry, object.name, role);
     colorGeometry(geometry, ROME_ROLE_COLOR[role]);
     pieces.push(prepareGeometry(geometry));
   });
@@ -298,4 +343,70 @@ export function lotMatrix(x: number, y: number, z: number, yaw: number, scale: n
     new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), yaw),
     new Vector3(scale, scale, scale),
   );
+}
+
+/** Shared authored dimensions keep the offline fallback legible too. */
+export function createProceduralHousing(id: ColosseumHousingId, part: 'body' | 'roof', detail: 'full' | 'compact' = 'full'): BufferGeometry {
+  const profile = colosseumHousingById(id);
+  const pieces: BufferGeometry[] = [];
+  if (part === 'body') pieces.push(colorGeometry(new BoxGeometry(10.5, .24, 8.45).translate(0, .12, 0), ROME_ROLE_COLOR.stone));
+  for (let i = 0; i < profile.wings.length; i++) {
+    const wing = profile.wings[i]!;
+    if (part === 'roof') {
+      const hw = (wing.width + .42) / 2, hd = (wing.depth + .42) / 2, ridge = Math.min(hw, hd) * .42;
+      const vertices = [[-hw,0,-hd],[hw,0,-hd],[hw,0,hd],[-hw,0,hd],[-ridge,wing.roof,0],[ridge,wing.roof,0]];
+      const triangles = [0,5,1,0,4,5,1,5,2,2,4,3,2,5,4,3,4,0];
+      const roof = new BufferGeometry();
+      roof.setAttribute('position', new Float32BufferAttribute(triangles.flatMap(index => vertices[index]!), 3));
+      roof.computeVertexNormals(); roof.translate(wing.x, wing.height, wing.z);
+      pieces.push(colorGeometry(roof, ROME_ROLE_COLOR.tile));
+      continue;
+    }
+    const role = id === 'corner' && i === 0 ? 'brick' : 'plaster';
+    pieces.push(colorGeometry(new BoxGeometry(wing.width, wing.height, wing.depth)
+      .translate(wing.x, wing.height / 2, wing.z), ROME_ROLE_COLOR[role]));
+    if (detail === 'compact') continue;
+    for (const side of [-1, 1]) {
+      const faceZ = wing.z + side * (wing.depth / 2 + .015);
+      if (Math.abs(faceZ) < 3.85) continue;
+      const levels = Math.max(1, Math.round(wing.height / 3));
+      for (let level = 0; level < levels; level++) for (const offset of [-.24, .24]) {
+        const height = level ? 1.3 : id === 'frontage' ? 2.25 : 1.5;
+        const width = id === 'frontage' && level === 0 ? 1.2 : .75;
+        const opening = new PlaneGeometry(width, height);
+        if (side < 0) opening.rotateY(Math.PI);
+        opening.translate(wing.x + wing.width * offset, 1.25 + level * 2.7, faceZ);
+        pieces.push(colorGeometry(opening, ROME_ROLE_COLOR.void));
+      }
+    }
+  }
+  return mergeColored(pieces);
+}
+
+/** Portrait tier removes faces covered by tiled roofs or earth and the
+ * subpixel plinth edge; retains each wall and the exposed courtyard floor. */
+export function compactHousingBody(source: BufferGeometry): BufferGeometry {
+  const expanded = source.index ? source.toNonIndexed() : source;
+  const positions = expanded.getAttribute('position');
+  const normals = expanded.getAttribute('normal');
+  const colors = expanded.getAttribute('color');
+  const keptPositions: number[] = [], keptNormals: number[] = [], keptColors: number[] = [];
+  for (let i = 0; i < positions.count; i += 3) {
+    const stone = Math.abs(colors.getX(i) - ROME_ROLE_COLOR.stone.r) < .001 &&
+      Math.abs(colors.getY(i) - ROME_ROLE_COLOR.stone.g) < .001;
+    const y = normals.getY(i);
+    if (stone ? y < .9 : Math.abs(y) > .9) continue;
+    for (let j = 0; j < 3; j++) {
+      keptPositions.push(positions.getX(i+j),positions.getY(i+j),positions.getZ(i+j));
+      keptNormals.push(normals.getX(i+j),normals.getY(i+j),normals.getZ(i+j));
+      keptColors.push(colors.getX(i+j),colors.getY(i+j),colors.getZ(i+j));
+    }
+  }
+  const result = new BufferGeometry();
+  result.setAttribute('position', new Float32BufferAttribute(keptPositions,3));
+  result.setAttribute('normal', new Float32BufferAttribute(keptNormals,3));
+  result.setAttribute('color', new Float32BufferAttribute(keptColors,3));
+  if (expanded !== source) expanded.dispose();
+  source.dispose();
+  return result;
 }

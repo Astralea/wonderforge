@@ -1,4 +1,5 @@
 import { Info, Pause, Play, RotateCcw, SkipBack, SkipForward } from 'lucide-react';
+import { COLOSSEUM_WORK_END } from '../engine/colosseumFilm';
 import { phaseAt, type Phase } from '../engine/timeline';
 import { PLAYBACK_SPEEDS, usePlaybackStore } from '../store/playback';
 import { CaptionVoiceToggle } from './CaptionVoiceToggle';
@@ -56,7 +57,7 @@ export function TransportBar({
         <div className="mb-2 w-full">
           <div className="mb-1 flex items-center justify-between gap-3 text-[10px] tracking-[0.16em] text-parchment/60 uppercase md:text-xs">
             <span className="min-w-0 flex-1 truncate">
-              {film && film.seconds >= EIFFEL_FILM_STAGE63_FINAL_WAVE_END_SECONDS ? 'Complete' : film?.chapter === 'ground-lift' ? 'Ground delivery' : film?.chapter === 'joint-campaign' ? 'Deliver and connect' : PHASE_LABELS[phaseAt(film?.productionT ?? t)]}
+              {(wonderId === 'colosseum' && t >= COLOSSEUM_WORK_END) || (film && film.seconds >= EIFFEL_FILM_STAGE63_FINAL_WAVE_END_SECONDS) ? 'Complete' : film?.chapter === 'ground-lift' ? 'Ground delivery' : film?.chapter === 'joint-campaign' ? 'Deliver and connect' : PHASE_LABELS[phaseAt(film?.productionT ?? t)]}
             </span>
             {film && eiffelEdit === 'cinematic' && (
               <span className="shrink-0 tracking-normal normal-case">3 min film</span>

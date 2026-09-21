@@ -1,0 +1,24 @@
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-valley","ended":true,"remainingFilmSeconds":1.98}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-stone","ended":true,"remainingFilmSeconds":1.439999999999998}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-cranes","ended":true,"remainingFilmSeconds":1.200000000000001}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-vaults","ended":true,"remainingFilmSeconds":1.799999999999995}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-seating","ended":true,"remainingFilmSeconds":2.5800000000000023}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-titus","ended":true,"remainingFilmSeconds":1.799999999999995}
+FAIL desktop: natural completion exposes Replay
+{"completed":"desktop/colosseum","failures":1}
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Chapters', exact: true })[22m
+
+    at /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/colosseum-narration-repair-2026-09-21/browser/review.mjs:85:83 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'Chapters', exact: true })"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.4.0

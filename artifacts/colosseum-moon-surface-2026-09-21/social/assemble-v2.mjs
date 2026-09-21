@@ -1,0 +1,30 @@
+import {readFile,writeFile,mkdir,access,copyFile} from 'node:fs/promises';
+import {spawn} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const root='artifacts/colosseum-moon-surface-2026-09-21/social',take=process.argv[2]??'take-01',dir=`${root}/${take}`,out=`${dir}/export`;
+const original='artifacts/stonehenge-release-2026-09-21/social/take-01',oldFinal=`${original}/export/wonderforge-four-films-20s.mp4`,oldCapture=JSON.parse(await readFile(`${original}/capture-report.json`,'utf8'));
+const capture=JSON.parse(await readFile(`${dir}/capture-report.json`,'utf8')),shot=capture.shots[0];
+if(capture.shots.length!==1||shot.id!=='colosseum'||shot.frames.length!==150||shot.errors.length||shot.failed.length||shot.largestCameraDelta>1e-8)throw new Error('Need one complete verified public Colosseum take.');
+const final=`${out}/wonderforge-four-films-20s-moon-v2.mp4`;
+try{await access(final);throw new Error('Refusing to overwrite preserved v2 export.');}catch(e){if(e.code!=='ENOENT')throw e;}
+await mkdir(out,{recursive:true});const commands=[];
+const run=async(cmd,args)=>{commands.push({cmd,args});return await new Promise((resolve,reject)=>{const p=spawn(cmd,args,{stdio:['ignore','pipe','pipe']});let stdout='',stderr='';p.stdout.on('data',b=>stdout+=b);p.stderr.on('data',b=>stderr+=b);p.on('exit',code=>code?reject(new Error(`${cmd} failed ${code}: ${stderr}`)):resolve({stdout,stderr}));});};
+const sha=b=>createHash('sha256').update(b).digest('hex'),reuse=[];
+const clips=[];for(const file of['01-pyramids-of-giza.mp4','02-eiffel-tower.mp4','03-colosseum.mp4','04-stonehenge.mp4']){
+ const target=`${out}/${file}`;clips.push(target);if(file.startsWith('03-'))continue;
+ const src=`${original}/export/${file}`,before=await readFile(src);await copyFile(src,target);const after=await readFile(target);if(sha(before)!==sha(after))throw new Error('Reused clip changed');reuse.push({file,original:src,copy:target,bytes:before.length,sha256:sha(before),identical:true,sourceBundle:oldCapture.expectedBundle,sourceBase:oldCapture.base});
+}
+console.log('Encoding only Colosseum54–59s');
+await run('ffmpeg',['-hide_banner','-loglevel','error','-framerate','30','-start_number','0','-i',`${dir}/colosseum/%04d.png`,'-loop','1','-framerate','30','-i',`${dir}/colosseum/label.png`,'-filter_complex','[0:v][1:v]overlay=0:0:shortest=1,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p[v]','-map','[v]','-an','-frames:v','150','-r','30','-fps_mode','cfr','-c:v','libx264','-preset','slow','-crf','18','-profile:v','high','-level:v','4.1','-pix_fmt','yuv420p','-colorspace','bt709','-color_primaries','bt709','-color_trc','bt709','-color_range','tv','-maxrate','16M','-bufsize','32M','-g','60','-keyint_min','30','-video_track_timescale','15360','-movflags','+faststart',clips[2]]);
+await writeFile(`${out}/concat.txt`,clips.map(p=>`file '${process.cwd()}/${p}'`).join('\n')+'\n');
+// Copy the previously accepted AAC packets unchanged, including its approved
+// 40–60s instrumental excerpt and fades. Other three video clips also copy.
+await run('ffmpeg',['-hide_banner','-loglevel','error','-f','concat','-safe','0','-i',`${out}/concat.txt`,'-i',oldFinal,'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','copy','-t','20','-movflags','+faststart','-metadata','title=WonderForge — Four films, Moon surface update','-metadata','comment=Actual WonderForge renderer. Original Giza/Eiffel/Stonehenge clips and AAC score reused. Colosseum54–59s re-recorded from deployed Moon surface update. Lunar imagery: NASA Scientific Visualization Studio; https://svs.gsfc.nasa.gov/4720/','-metadata','artist=WonderForge',final]);
+const probe=JSON.parse((await run('ffprobe',['-v','error','-count_frames','-show_streams','-show_format','-of','json',final])).stdout),video=probe.streams.find(s=>s.codec_type==='video'),audio=probe.streams.find(s=>s.codec_type==='audio');
+const audioHash=async p=>(await run('ffmpeg',['-hide_banner','-loglevel','error','-i',p,'-map','0:a:0','-c','copy','-f','streamhash','-hash','sha256','-'])).stdout.trim();
+const oldAudioHash=await audioHash(oldFinal),newAudioHash=await audioHash(final);
+const checks={durationExactly20:Math.abs(Number(probe.format.duration)-20)<.0001,width1920:video.width===1920,height1080:video.height===1080,h264:video.codec_name==='h264',yuv420p:video.pix_fmt==='yuv420p',fps30:video.avg_frame_rate==='30/1',frames600:Number(video.nb_read_frames)===600,aac:audio.codec_name==='aac',stereo:audio.channels===2,rate48000:audio.sample_rate==='48000',audioBitstreamIdentical:oldAudioHash===newAudioHash,threeOriginalClipsIdentical:reuse.every(x=>x.identical)};
+const frames=[];for(const frame of[0,75,149,150,225,299,300,375,449,450,525,599,555]){const seconds=frame/30,p=`${out}/frame-${String(frame).padStart(4,'0')}.png`;await run('ffmpeg',['-hide_banner','-loglevel','error','-i',final,'-vf',`select=eq(n\\,${frame})`,'-fps_mode','vfr','-frames:v','1',p]);frames.push({frame,seconds,file:p});}
+await run('ffmpeg',['-hide_banner','-loglevel','error','-i',final,'-vf','select=eq(n\\,555)','-fps_mode','vfr','-frames:v','1','-q:v','2',`${out}/wonderforge-thumbnail-moon-v2.jpg`]);
+const bytes=await readFile(final),oldBytes=await readFile(oldFinal),report={createdAt:new Date().toISOString(),source:capture.base,bundle:capture.expectedBundle,originalBundle:oldCapture.expectedBundle,originalFinal:{file:oldFinal,bytes:oldBytes.length,sha256:sha(oldBytes)},final,bytes:bytes.length,sha256:sha(bytes),checks,probe,frames,clips,reuse,audio:{original:oldFinal,oldAudioHash,newAudioHash,description:'Accepted20s Stonehenge40–60s excerpt with0.6s in/0.9s out; AAC packets copied unchanged.'},moon:capture.moon,publicMoonAsset:shot.moonAsset,commands,scope:'Actual public Colosseum Moon texture capture plus preserved other film/audio clips. Technical/keyframe review; no auditory-quality claim.'};
+await writeFile(`${out}/validation.json`,JSON.stringify(report,null,2));console.log(JSON.stringify({final,bytes:bytes.length,checks}));if(Object.values(checks).some(v=>!v))process.exitCode=1;

@@ -111,7 +111,7 @@ describe('Eiffel deferred environment fallback', () => {
     // Browser readers cannot silently recover from the workstation's public/ directory.
     vi.stubGlobal('process', { ...process, versions: { ...process.versions, node: undefined } });
     const environment = make(); await environment.ready;
-    expect(fetch).toHaveBeenCalledWith('/models/paris-1889/paris-city.glb');
+    expect(fetch).toHaveBeenCalledWith('/models/paris-1889/paris-city.glb.gz');
     expect(environment.parisSource).toBe('procedural'); expect(environment.lifeSource).toBe('blender');
     expect(scatter(environment, 'houses')!.visible).toBe(true);
     expect(scatter(environment, 'barges')!.visible).toBe(false);

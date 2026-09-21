@@ -79,7 +79,7 @@ export function WonderArrival({
                   <rect x="0" y="0" width={width} height={height} />
                 </clipPath>
                 <clipPath id={monumentClipId}>
-                  <path d={drawing.outline} />
+                  <path d={drawing.outline} clipRule={drawing.fillRule} />
                 </clipPath>
               </defs>
               <ellipse
@@ -95,7 +95,7 @@ export function WonderArrival({
                 <path d={drawing.extra} />
               </g>
               <g clipPath={`url(#${fillClipId})`} className="eiffel-arrival-filled">
-                <path d={drawing.outline} className="eiffel-arrival-surface" />
+                <path d={drawing.outline} fillRule={drawing.fillRule} className="eiffel-arrival-surface" />
                 <path d={drawing.outline} />
                 <path d={drawing.detail} />
                 <path d={drawing.extra} />

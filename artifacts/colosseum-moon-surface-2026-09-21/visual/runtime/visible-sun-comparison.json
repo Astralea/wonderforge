@@ -1,0 +1,170 @@
+{
+  "results": [
+    {
+      "label": "before-public",
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/runtime/before-public-sun-t0.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 37,
+          "triangles": 29374,
+          "points": 0,
+          "lines": 0,
+          "geometries": 42,
+          "textures": 16
+        },
+        "colosseumCelestial": {
+          "t": 0,
+          "julianDayUt1": 1750449.6666666667,
+          "calendar": "Julian",
+          "timeScale": "UT1",
+          "angularScale": 2.4,
+          "sun": {
+            "direction": [
+              0.8771609463657262,
+              0.0714482208752493,
+              0.4748513724362026
+            ],
+            "azimuthDegrees": 61.57108623086026,
+            "authoringAzimuthDegrees": 28.42891376913974,
+            "elevationDegrees": 4.097172472365999,
+            "distanceKm": 152083237.22999692,
+            "angularRadiusDegrees": 0.2620986110000062,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1
+          },
+          "moon": {
+            "direction": [
+              -0.8939125991449235,
+              0.0028421582021554924,
+              -0.44823229159301015
+            ],
+            "azimuthDegrees": 243.3695579051498,
+            "authoringAzimuthDegrees": -153.3695579051498,
+            "elevationDegrees": 0.16284388893094554,
+            "distanceKm": 406183.0620020451,
+            "angularRadiusDegrees": 0.24507666699876754,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 0.8894009949784571,
+            "lightDirection": [
+              0.8772131508349174,
+              0.07125095101489091,
+              0.47478457218168973
+            ],
+            "illuminatedFraction": 0.998381578997058,
+            "referenceIlluminatedFraction": 0.9983828999997496,
+            "phaseAngleDegrees": 4.6112173774444685,
+            "referencePhaseAngleDegrees": 4.611300000359863,
+            "elongationDegrees": 175.3764802995688,
+            "waxing": false
+          },
+          "key": "sun",
+          "constructionT": 0,
+          "workComplete": false,
+          "keyVisibility": 1
+        },
+        "camera": {
+          "position": [
+            -316.23597176394065,
+            66.75800634052354,
+            136.8476382294751
+          ],
+          "direction": [
+            0.9038117528374775,
+            -0.1736481776669304,
+            -0.3911145942378027
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    },
+    {
+      "label": "candidate",
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/runtime/candidate-sun-t0.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 37,
+          "triangles": 29374,
+          "points": 0,
+          "lines": 0,
+          "geometries": 42,
+          "textures": 18
+        },
+        "colosseumCelestial": {
+          "t": 0,
+          "julianDayUt1": 1750449.6666666667,
+          "calendar": "Julian",
+          "timeScale": "UT1",
+          "angularScale": 2.4,
+          "sun": {
+            "direction": [
+              0.8771609463657262,
+              0.0714482208752493,
+              0.4748513724362026
+            ],
+            "azimuthDegrees": 61.57108623086026,
+            "authoringAzimuthDegrees": 28.42891376913974,
+            "elevationDegrees": 4.097172472365999,
+            "distanceKm": 152083237.22999692,
+            "angularRadiusDegrees": 0.2620986110000062,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1
+          },
+          "moon": {
+            "direction": [
+              -0.8939125991449235,
+              0.0028421582021554924,
+              -0.44823229159301015
+            ],
+            "azimuthDegrees": 243.3695579051498,
+            "authoringAzimuthDegrees": -153.3695579051498,
+            "elevationDegrees": 0.16284388893094554,
+            "distanceKm": 406183.0620020451,
+            "angularRadiusDegrees": 0.24507666699876754,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 0.8894009949784571,
+            "lightDirection": [
+              0.8772131508349174,
+              0.07125095101489091,
+              0.47478457218168973
+            ],
+            "illuminatedFraction": 0.998381578997058,
+            "referenceIlluminatedFraction": 0.9983828999997496,
+            "phaseAngleDegrees": 4.6112173774444685,
+            "referencePhaseAngleDegrees": 4.611300000359863,
+            "elongationDegrees": 175.3764802995688,
+            "waxing": false
+          },
+          "key": "sun",
+          "constructionT": 0,
+          "workComplete": false,
+          "keyVisibility": 1
+        },
+        "camera": {
+          "position": [
+            -316.23597176394065,
+            66.75800634052354,
+            136.8476382294751
+          ],
+          "direction": [
+            0.9038117528374775,
+            -0.1736481776669304,
+            -0.3911145942378027
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "colosseum-reference"
+      }
+    }
+  ],
+  "changedChannels": 0,
+  "maxChannelDelta": 0
+}

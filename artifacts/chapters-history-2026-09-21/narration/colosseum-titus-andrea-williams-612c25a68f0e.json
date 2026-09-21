@@ -1,0 +1,28 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-titus",
+  "captionText": "In AD 80, Titus inaugurates the new amphitheatre.",
+  "src": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+  "duration": 4.829751,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 6.0,
+  "sha256": "cb0ac3ab8928137bb0fa5bbccb5de4811b5d5374dc98f992b9b0684893c42f67",
+  "bytes": 78202,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.06,
+    "truePeakDbtp": -2.35,
+    "gainDb": 5.42
+  }
+}

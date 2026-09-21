@@ -1,0 +1,34 @@
+[
+  {
+    "file": "lroc_color_2k.jpg",
+    "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+    "bytes": 457942,
+    "sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170"
+  },
+  {
+    "file": "lroc_color_poles_1k.jpg",
+    "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg",
+    "bytes": 139068,
+    "sha256": "b246064f217f8d479df78c49c7c8595a8f5fbda008a72fd539978d2e121e0109"
+  },
+  {
+    "file": "moon-orientation.request.json",
+    "bytes": 1097,
+    "sha256": "90e641cf72b6ae01c8def9a13d59b086c51743fa7ed914196fd6cc52ad2f84d2"
+  },
+  {
+    "file": "moon-orientation.response.json",
+    "bytes": 12412,
+    "sha256": "3dd9af003059d3343a36b822b194e1741156b90aff442da809da28c7176764ad"
+  },
+  {
+    "file": "moon-endpoint.request.json",
+    "bytes": 1095,
+    "sha256": "e946e36028ecc3265f710bdaae700c6664b26959be9d2e32b9c90eb034dedc1f"
+  },
+  {
+    "file": "moon-endpoint.response.json",
+    "bytes": 11618,
+    "sha256": "5da3080022186c696642538c420bc26df0e9090044f2c727b22a101f5a554c1f"
+  }
+]

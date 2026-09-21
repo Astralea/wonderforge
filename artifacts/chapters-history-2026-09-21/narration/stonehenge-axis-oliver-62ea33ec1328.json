@@ -1,0 +1,22 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-axis",
+  "captionText": "The axis marks midsummer sunrise and midwinter sunset.",
+  "src": "/audio/narration/stonehenge-axis-oliver-62ea33ec1328.mp3",
+  "duration": 4.87619,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "185ab5e674b565afaaef6e02e2fd9cc2f76cced440638a6eaa984c00a4d3c82a",
+  "bytes": 79038
+}

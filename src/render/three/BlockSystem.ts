@@ -2,6 +2,7 @@ import {
   BoxGeometry,
   Color,
   CylinderGeometry,
+  Euler,
   Group,
   InstancedMesh,
   Matrix4,
@@ -34,6 +35,8 @@ interface CoreBatch {
   monument: Exclude<MonumentId, 'temple'>;
   cells: CoreFillCell[];
   mesh: InstancedMesh;
+  courseStarts: number[];
+  lastKey: string;
 }
 
 interface CoreOccupancy {
@@ -141,14 +144,20 @@ export class BlockSystem {
     this.occupancyMaterial.polygonOffsetUnits = 1;
 
     for (const monument of ['khufu', 'khafre', 'menkaure'] as const) {
-      const cells = plan.coreCells.filter((cell) => cell.monument === monument);
+      const cells = plan.coreCells.filter((cell) => cell.monument === monument).sort((a, b) => a.readyAt - b.readyAt);
+      const courseStarts: number[] = [];
+      for (const block of plan.blocks) {
+        if (block.monument === monument) {
+          courseStarts[block.course] = Math.min(courseStarts[block.course] ?? Infinity, block.start);
+        }
+      }
       const core = new InstancedMesh(this.geometry, materials.block['core-limestone'], cells.length);
       core.name = `${monument}-supported-stacked-core-fill`;
       core.castShadow = true;
       core.receiveShadow = true;
       core.count = 0;
       core.frustumCulled = false; // per-frame instances; see settled note
-      this.coreBatches.push({ monument, cells, mesh: core });
+      this.coreBatches.push({ monument, cells, mesh: core, courseStarts, lastKey: '' });
       this.group.add(core);
 
       const occupancy = new Mesh(placeholderOccupancyGeometry(), this.occupancyMaterial);
@@ -168,12 +177,24 @@ export class BlockSystem {
     const color = new Color();
     const axis = new Vector3(0, 1, 0);
     for (const batch of this.coreBatches) {
-      let activeCourse = -1;
-      for (const block of this.plan.blocks) {
-        if (block.monument === batch.monument && block.start <= t) {
-          activeCourse = Math.max(activeCourse, block.course);
-        }
+      let courseLow = 0;
+      let courseHigh = batch.courseStarts.length;
+      while (courseLow < courseHigh) {
+        const mid = (courseLow + courseHigh) >>> 1;
+        if (batch.courseStarts[mid]! <= t) courseLow = mid + 1;
+        else courseHigh = mid;
       }
+      const activeCourse = courseLow - 1;
+      let cellLow = 0;
+      let cellHigh = batch.cells.length;
+      while (cellLow < cellHigh) {
+        const mid = (cellLow + cellHigh) >>> 1;
+        if (batch.cells[mid]!.readyAt <= t) cellLow = mid + 1;
+        else cellHigh = mid;
+      }
+      const key = `${activeCourse}:${cellLow}`;
+      if (batch.lastKey === key) continue;
+      batch.lastKey = key;
       if (activeCourse < 0) {
         batch.mesh.count = 0;
         this.hideOccupancy(batch.monument);
@@ -245,7 +266,7 @@ export class BlockSystem {
       const material = operation.block.material;
       const batch = this.activeBatches.get(material)!;
       const cursor = cursors.get(material) ?? 0;
-      rotation.setFromAxisAngle(new Vector3(0, 1, 0), operation.state.yaw);
+      rotation.setFromEuler(new Euler(operation.state.pitch, operation.state.yaw, 0, 'YXZ'));
       matrix.compose(
         new Vector3(...operation.state.position),
         rotation,
@@ -262,6 +283,9 @@ export class BlockSystem {
   }
 
   dispose(): void {
+    for (const batch of this.settled) batch.mesh.dispose();
+    for (const batch of this.coreBatches) batch.mesh.dispose();
+    for (const mesh of this.activeBatches.values()) mesh.dispose();
     this.geometry.dispose();
     this.occupancyMaterial.dispose();
     for (const occupancy of this.occupancies) occupancy.mesh.geometry.dispose();

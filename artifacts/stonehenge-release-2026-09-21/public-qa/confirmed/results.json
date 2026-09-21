@@ -1,0 +1,2358 @@
+{
+  "startedAt": "2026-09-20T18:46:41.696Z",
+  "origin": "https://wonderforge.pages.dev",
+  "expectedBundle": "main-BR6Phg3M.js",
+  "scope": "Public production launch, render and real click/keyboard transport smoke checks. Browser audio output is muted. Not full-film playback, subjective listening, phone performance, Stonehenge composition, or served-asset hash acceptance.",
+  "homes": [
+    {
+      "mode": "desktop",
+      "scripts": [
+        "/assets/main-BR6Phg3M.js"
+      ],
+      "readyNames": [
+        "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+        "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+        "IIIColosseumRome, Italy · Classical Era · 80 AD",
+        "IVEiffel TowerParis, France · Industrial Era · 1889"
+      ],
+      "pageErrors": [],
+      "httpFailures": []
+    },
+    {
+      "mode": "portrait",
+      "scripts": [
+        "/assets/main-BR6Phg3M.js"
+      ],
+      "readyNames": [
+        "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+        "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+        "IIIColosseumRome, Italy · Classical Era · 80 AD",
+        "IVEiffel TowerParis, France · Industrial Era · 1889"
+      ],
+      "pageErrors": [],
+      "httpFailures": []
+    }
+  ],
+  "runs": [
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "wonderId": "pyramids-of-giza",
+      "controls": {
+        "pausedAt": 0.008,
+        "seekTo": 0.418,
+        "playAdvancedTo": 0.426,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "narration": {
+        "captionId": "giza-khufu",
+        "src": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+        "expectedVoice": {
+          "provider": "ElevenLabs",
+          "name": "Charles",
+          "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+          "model": "eleven_multilingual_v2",
+          "description": "Expressive mature English gentleman with a traditional British RP accent."
+        },
+        "expectedDuration": 4.318912,
+        "actualDuration": 4.318912,
+        "currentTime": 0.131807,
+        "paused": false,
+        "volume": 1,
+        "visibleCaption": "Khufu's tomb rises first, built from limestone quarried on this plateau."
+      },
+      "render": {
+        "canvas": {
+          "width": 1440,
+          "height": 900,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 167,
+          "triangles": 150474,
+          "points": 0,
+          "lines": 4,
+          "geometries": 92,
+          "textures": 16
+        },
+        "filmPosition": "0.075"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEp2i0VBuxM.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/giza-cinematic.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dv21TpG1Lsw.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 200
+        }
+      ],
+      "narrationRequests": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 200
+        }
+      ],
+      "mediaEvents": [
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.07
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "time": 0,
+          "duration": 4.551111,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "time": 0,
+          "duration": 4.365351,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": 4.318912,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "time": 0,
+          "duration": 3.436553,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "time": 0,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "time": 0,
+          "duration": 3.529433,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "time": 0.000009,
+          "duration": 4.551111,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "time": 0.00004,
+          "duration": 4.365351,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": 4.318912,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "time": 0,
+          "duration": 3.436553,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "time": 0,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "time": 0,
+          "duration": 3.529433,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        }
+      ]
+    },
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "wonderId": "stonehenge",
+      "controls": {
+        "pausedAt": 0.005,
+        "seekTo": 0.418,
+        "playAdvancedTo": 0.426,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "finalFrame": {
+        "t": 1,
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        }
+      },
+      "narration": {
+        "captionId": "stonehenge-earthwork",
+        "src": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+        "expectedVoice": {
+          "provider": "ElevenLabs",
+          "name": "Oliver",
+          "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+          "model": "eleven_multilingual_v2",
+          "description": "Warm, kind, mature British narrator with a steady delivery."
+        },
+        "expectedDuration": 5.10839,
+        "actualDuration": 5.10839,
+        "currentTime": 0.132218,
+        "paused": false,
+        "volume": 1,
+        "visibleCaption": "An earthwork enclosure stood here centuries before the great stone circle."
+      },
+      "render": {
+        "canvas": {
+          "width": 1440,
+          "height": 900,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 60,
+          "triangles": 53493,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "filmPosition": "0.074"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/stonehenge-cinematic.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 206
+        }
+      ],
+      "narrationRequests": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 206
+        }
+      ],
+      "mediaEvents": [
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.07
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": 5.10839,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "time": 0,
+          "duration": 5.34059,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": 5.10839,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "time": 0.000005,
+          "duration": 5.34059,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "time": 0,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "time": 0,
+          "duration": 4.87619,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "time": 0,
+          "duration": 4.086712,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "time": 0.000108,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "time": 0,
+          "duration": 4.87619,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "time": 0,
+          "duration": 4.086712,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "time": 0.000003,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        }
+      ]
+    },
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "wonderId": "colosseum",
+      "controls": {
+        "pausedAt": 0.006,
+        "seekTo": 0.418,
+        "playAdvancedTo": 0.426,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "narration": {
+        "captionId": "colosseum-valley",
+        "src": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+        "expectedVoice": {
+          "provider": "ElevenLabs",
+          "name": "Andrea Williams",
+          "voiceId": "dcWyhLms5IOM9o93xsQu",
+          "model": "eleven_multilingual_v2",
+          "description": "Professional British female narrator with a refined accent."
+        },
+        "expectedDuration": 4.504671,
+        "actualDuration": 4.504671,
+        "currentTime": 0.127993,
+        "paused": false,
+        "volume": 1,
+        "visibleCaption": "Vespasian builds an amphitheatre on the site of Nero's lake."
+      },
+      "render": {
+        "canvas": {
+          "width": 1440,
+          "height": 900,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 52,
+          "triangles": 34106,
+          "points": 0,
+          "lines": 0,
+          "geometries": 52,
+          "textures": 16
+        },
+        "filmPosition": "0.075"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/colosseum-cinematic.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/colosseum-rome/neronian-aqueduct.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/colosseum-rome/rome-kit.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/colosseum-rome/housing-variants.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "status": 200
+        }
+      ],
+      "narrationRequests": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "status": 200
+        }
+      ],
+      "mediaEvents": [
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.07
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "time": 0,
+          "duration": 4.458231,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "time": 0,
+          "duration": 5.24771,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "time": 0,
+          "duration": 4.643991,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "time": 0,
+          "duration": 4.040272,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "time": 0,
+          "duration": 4.829751,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "time": 0,
+          "duration": 4.179592,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "time": 0,
+          "duration": 4.458231,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "time": 0,
+          "duration": 5.24771,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "time": 0,
+          "duration": 4.643991,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "time": 0,
+          "duration": 4.040272,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "time": 0,
+          "duration": 4.829751,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "time": 0,
+          "duration": 4.179592,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        }
+      ]
+    },
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "wonderId": "eiffel-tower",
+      "controls": {
+        "pausedAt": 0.001,
+        "seekTo": 0.418,
+        "playAdvancedTo": 0.421,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "render": {
+        "canvas": {
+          "width": 1440,
+          "height": 900,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 90,
+          "triangles": 268500,
+          "points": 0,
+          "lines": 0,
+          "geometries": 138,
+          "textures": 203
+        },
+        "filmPosition": "0.999"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/giza-ambient-loop.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/eiffel-tower-short.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/steam-drive.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/closed-sling.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-historic-flag/flag.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-joint-campaign/cart.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-historic-flag/flag.manifest.json",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-second-floor-relay/relay.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/paris-1889/paris-life.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel/palais-trocadero.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/paris-1889/photo-entrance.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/paris-1889/paris-city.glb.gz",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-construction-kit/tower-kit.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-construction-kit/tower-kit-seated.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-guyenet-ne/crane.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/onward.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/receiver-driven.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/bridge.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/carrier.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-joint-campaign/support.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-joint-campaign/splice.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-guyenet-ne/crane.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-construction-kit/tower-kit.runtime.json",
+          "status": 200
+        },
+        {
+          "url": "blob:https://wonderforge.pages.dev/048b1e6b-4a14-45f0-a072-31cf15afc0e7",
+          "status": 200
+        }
+      ],
+      "narrationRequests": [],
+      "mediaEvents": []
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "wonderId": "pyramids-of-giza",
+      "controls": {
+        "pausedAt": 0.007,
+        "seekTo": 0.415,
+        "playAdvancedTo": 0.423,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "narration": {
+        "captionId": "giza-khufu",
+        "src": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+        "expectedVoice": {
+          "provider": "ElevenLabs",
+          "name": "Charles",
+          "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+          "model": "eleven_multilingual_v2",
+          "description": "Expressive mature English gentleman with a traditional British RP accent."
+        },
+        "expectedDuration": 4.318912,
+        "actualDuration": 4.318912,
+        "currentTime": 0.124473,
+        "paused": false,
+        "volume": 1,
+        "visibleCaption": "Khufu's tomb rises first, built from limestone quarried on this plateau."
+      },
+      "render": {
+        "canvas": {
+          "width": 390,
+          "height": 844,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 144,
+          "triangles": 149405,
+          "points": 0,
+          "lines": 5,
+          "geometries": 92,
+          "textures": 5
+        },
+        "filmPosition": "0.075"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/giza-cinematic.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEp2i0VBuxM.woff2",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 200
+        }
+      ],
+      "narrationRequests": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 200
+        }
+      ],
+      "mediaEvents": [
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": 4.318912,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0.00004,
+          "duration": 4.318912,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "time": 0,
+          "duration": 4.365351,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "time": 0,
+          "duration": 3.529433,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "time": 0,
+          "duration": 4.551111,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+          "time": 0.000201,
+          "duration": 4.365351,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "time": 0,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-ramps-charles-a658cc161bf2.mp3",
+          "time": 0.000122,
+          "duration": 3.529433,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "time": 0,
+          "duration": 3.436553,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "time": 0,
+          "duration": 4.551111,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "time": 0,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "time": 0,
+          "duration": 3.436553,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0,
+          "duration": 4.318912,
+          "paused": true,
+          "volume": 1,
+          "filmT": 0.07
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/giza-khufu-charles-b8b5e81335ce.mp3",
+          "time": 0.010082,
+          "duration": 4.318912,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.072,
+          "error": null
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "wonderId": "stonehenge",
+      "controls": {
+        "pausedAt": 0.004,
+        "seekTo": 0.415,
+        "playAdvancedTo": 0.423,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "finalFrame": {
+        "t": 1,
+        "renderer": {
+          "calls": 38,
+          "triangles": 87034,
+          "points": 0,
+          "lines": 0,
+          "geometries": 36,
+          "textures": 5
+        }
+      },
+      "narration": {
+        "captionId": "stonehenge-earthwork",
+        "src": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+        "expectedVoice": {
+          "provider": "ElevenLabs",
+          "name": "Oliver",
+          "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+          "model": "eleven_multilingual_v2",
+          "description": "Warm, kind, mature British narrator with a steady delivery."
+        },
+        "expectedDuration": 5.10839,
+        "actualDuration": 5.10839,
+        "currentTime": 0.128069,
+        "paused": false,
+        "volume": 1,
+        "visibleCaption": "An earthwork enclosure stood here centuries before the great stone circle."
+      },
+      "render": {
+        "canvas": {
+          "width": 390,
+          "height": 844,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 48,
+          "triangles": 57226,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 5
+        },
+        "filmPosition": "0.075"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/giza-ambient-loop.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/stonehenge-cinematic.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 206
+        }
+      ],
+      "narrationRequests": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-casing-charles-bf625cba4c77.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+          "status": 206
+        }
+      ],
+      "mediaEvents": [
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "time": 0,
+          "duration": 5.34059,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-sarsens-oliver-5d7626e82ab6.mp3",
+          "time": 0.000034,
+          "duration": 5.34059,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "time": 0,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": 5.10839,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+          "time": 0.000119,
+          "duration": 4.92263,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "time": 0,
+          "duration": 4.086712,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0.000069,
+          "duration": 5.10839,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "time": 0,
+          "duration": 4.086712,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "time": 0,
+          "duration": 4.87619,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0,
+          "duration": 5.10839,
+          "paused": true,
+          "volume": 1,
+          "filmT": 0.07
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-earthwork-oliver-f55b0c3c557e.mp3",
+          "time": 0.010713,
+          "duration": 5.10839,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.071,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/stonehenge-axis-oliver-29c960e29e17.mp3",
+          "time": 0.000195,
+          "duration": 4.87619,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.071,
+          "error": null
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "wonderId": "colosseum",
+      "controls": {
+        "pausedAt": 0.006,
+        "seekTo": 0.415,
+        "playAdvancedTo": 0.423,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "narration": {
+        "captionId": "colosseum-valley",
+        "src": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+        "expectedVoice": {
+          "provider": "ElevenLabs",
+          "name": "Andrea Williams",
+          "voiceId": "dcWyhLms5IOM9o93xsQu",
+          "model": "eleven_multilingual_v2",
+          "description": "Professional British female narrator with a refined accent."
+        },
+        "expectedDuration": 4.504671,
+        "actualDuration": 4.504671,
+        "currentTime": 0.12374,
+        "paused": false,
+        "volume": 1,
+        "visibleCaption": "Vespasian builds an amphitheatre on the site of Nero's lake."
+      },
+      "render": {
+        "canvas": {
+          "width": 390,
+          "height": 844,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 37,
+          "triangles": 21921,
+          "points": 0,
+          "lines": 0,
+          "geometries": 48,
+          "textures": 5
+        },
+        "filmPosition": "0.075"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/giza-ambient-loop.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/colosseum-cinematic.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/colosseum-rome/neronian-aqueduct.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/colosseum-rome/housing-variants.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/colosseum-rome/rome-kit.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "status": 206
+        }
+      ],
+      "narrationRequests": [
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+          "status": 206
+        }
+      ],
+      "mediaEvents": [
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "time": 0,
+          "duration": null,
+          "paused": true,
+          "volume": 0,
+          "filmT": 0.999
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "time": 0,
+          "duration": 4.458231,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "time": 0,
+          "duration": 5.24771,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "time": 0,
+          "duration": 4.040272,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "time": 0,
+          "duration": 4.643991,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "time": 0,
+          "duration": 4.179592,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0.000113,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-stone-andrea-williams-94e1c6741d5e.mp3",
+          "time": 0.000012,
+          "duration": 4.458231,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "loadedmetadata",
+          "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "time": 0,
+          "duration": 4.829751,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+          "time": 0,
+          "duration": 5.24771,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-vaults-andrea-williams-cdd0f9e6b26d.mp3",
+          "time": 0,
+          "duration": 4.040272,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+          "time": 0,
+          "duration": 4.643991,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-moonrise-andrea-williams-39a53e324108.mp3",
+          "time": 0,
+          "duration": 4.179592,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-titus-andrea-williams-612c25a68f0e.mp3",
+          "time": 0,
+          "duration": 4.829751,
+          "paused": false,
+          "volume": 0,
+          "filmT": 0.999,
+          "error": null
+        },
+        {
+          "action": "play-call",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": true,
+          "volume": 1,
+          "filmT": 0.07
+        },
+        {
+          "action": "playing",
+          "path": "/audio/narration/colosseum-valley-andrea-williams-99457a4af860.mp3",
+          "time": 0,
+          "duration": 4.504671,
+          "paused": false,
+          "volume": 1,
+          "filmT": 0.072,
+          "error": null
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "wonderId": "eiffel-tower",
+      "controls": {
+        "pausedAt": 0.001,
+        "seekTo": 0.415,
+        "playAdvancedTo": 0.418,
+        "endpointBeforeReverse": 1,
+        "reverseSeek": 0.999
+      },
+      "render": {
+        "canvas": {
+          "width": 390,
+          "height": 844,
+          "assets": "ready"
+        },
+        "renderer": {
+          "calls": 80,
+          "triangles": 224005,
+          "points": 0,
+          "lines": 0,
+          "geometries": 139,
+          "textures": 194
+        },
+        "filmPosition": "0.999"
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "abortedRequests": [],
+      "responses": [
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/giza-ambient-loop.mp3",
+          "status": 206
+        },
+        {
+          "url": "https://wonderforge.pages.dev/audio/eiffel-tower-short.mp3",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel/palais-trocadero.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-historic-flag/flag.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/favicon.svg",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/paris-1889/paris-life.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/receiver-driven.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/onward-mobile.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/paris-1889/photo-entrance.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/carrier.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-historic-flag/flag.manifest.json",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-joint-campaign/support.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-joint-campaign/cart.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/bridge-mobile.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-joint-campaign/splice.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-guyenet-ne/crane.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/steam-drive.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-guyenet-ne/crane.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/paris-1889/paris-city.glb.gz",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-construction-kit/tower-kit-seated.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-construction-kit/tower-kit.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-construction-kit/tower-kit.runtime.json",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-long-load-first-floor/closed-sling-mobile.glb",
+          "status": 200
+        },
+        {
+          "url": "https://wonderforge.pages.dev/models/eiffel-second-floor-relay/relay.glb",
+          "status": 200
+        },
+        {
+          "url": "blob:https://wonderforge.pages.dev/61755687-75c9-477c-a9c5-a11ae0bc4df3",
+          "status": 200
+        }
+      ],
+      "narrationRequests": [],
+      "mediaEvents": []
+    }
+  ],
+  "failures": [],
+  "finishedAt": "2026-09-20T18:47:38.889Z"
+}

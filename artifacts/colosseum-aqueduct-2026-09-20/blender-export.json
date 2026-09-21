@@ -1,0 +1,52 @@
+{
+  "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/colosseum-aqueduct-2026-09-20/neronian-aqueduct.blend",
+  "glb": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/public/models/colosseum-rome/neronian-aqueduct.glb",
+  "bytes": 23604,
+  "parts": {
+    "aqueduct-pier": {
+      "triangles": 12,
+      "vertices": 24
+    },
+    "aqueduct-impost": {
+      "triangles": 12,
+      "vertices": 24
+    },
+    "aqueduct-arch": {
+      "triangles": 118,
+      "vertices": 236
+    },
+    "aqueduct-archPortrait": {
+      "triangles": 60,
+      "vertices": 120
+    },
+    "aqueduct-channel": {
+      "triangles": 48,
+      "vertices": 96
+    }
+  },
+  "plan": {
+    "glb": "/models/colosseum-rome/neronian-aqueduct.glb",
+    "pierCount": 28,
+    "clearSpan": 7.75,
+    "pierWidth": 2.3,
+    "depth": 2.1,
+    "archRise": 3.875,
+    "spandrelTop": 4.65,
+    "channelHeight": 1.8,
+    "capHeight": 0.22,
+    "capDepth": 2.55,
+    "springingHeight": 25.2,
+    "grade": 0.001,
+    "start": [
+      140,
+      -260
+    ],
+    "direction": [
+      0.9191450300180578,
+      -0.39391929857916763
+    ],
+    "desktopSegments": 10,
+    "portraitSegments": 7
+  },
+  "render": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/colosseum-aqueduct-2026-09-20/aqueduct-blender-inspection.png"
+}

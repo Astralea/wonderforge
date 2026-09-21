@@ -80,7 +80,8 @@ function stone(input: StoneInput): StonehengeStone {
     material: input.material,
     dimensions: input.dimensions,
     finalPosition: input.finalPosition,
-    finalRotation: [0, input.finalYaw, 0],
+    // Authored XZ angles turn +X toward +Z; Three.js Y yaw turns the opposite way.
+    finalRotation: [0, -input.finalYaw, 0],
     scale: [1, 1, 1],
     embedDepth: input.embedDepth ?? 0,
     supportIds: input.supportIds ?? [],

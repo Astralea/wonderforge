@@ -1,0 +1,16 @@
+[
+  {
+    "scenario": "failed-image",
+    "passed": true,
+    "errors": [],
+    "expectedNetworkFailures": [
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "scenario": "leave-during-image",
+    "passed": true,
+    "errors": [],
+    "expectedNetworkFailures": []
+  }
+]

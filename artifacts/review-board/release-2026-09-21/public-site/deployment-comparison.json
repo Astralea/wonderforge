@@ -1,0 +1,15 @@
+{
+  "url": "https://wonderforge.pages.dev/",
+  "liveScript": "/assets/main-DJwnCTGh.js",
+  "localScript": "/assets/main-D8RR7sSY.js",
+  "liveHtmlSha256": "93626e4242f29a5f8e5efc6731b0f73e5ffc9425411aaff0b2a1bcf24e6eaa1f",
+  "localHtmlSha256": "3764e9b57e34e831925d266e1ca6efd9f9af829e7a7c4b2479dfa65458043197",
+  "liveScriptBytes": 2208182,
+  "liveIncludesSelectedVoiceIds": {
+    "zNsotODqUhvbJ5wMG7Ei": false,
+    "L1aJrPa7pLJEyYlh3Ilq": false,
+    "dcWyhLms5IOM9o93xsQu": false
+  },
+  "liveIncludesOG": false,
+  "localIncludesOG": true
+}

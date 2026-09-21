@@ -17,7 +17,7 @@ export const stonehenge: Wonder = {
   description: '',
   facts: [
     'An average circle sarsen weighs around 25 tonnes; the great trilithon uprights exceed 30 tonnes and once stood over 7 m above ground.',
-    'The smaller bluestones were transported from the Preseli Hills in Wales, over 200 km away.',
+    'Many of the smaller bluestones came from the Preseli Hills in Wales, over 200 km away.',
     'The monument is aligned to the summer solstice sunrise and winter solstice sunset.',
   ],
   palette: { ground: '#66794a', primary: '#8d8d84', accent: '#5c6a70', sky: '#7895ad' },

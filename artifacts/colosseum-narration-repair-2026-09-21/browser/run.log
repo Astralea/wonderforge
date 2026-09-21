@@ -1,0 +1,15 @@
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-valley","ended":true,"remainingFilmSeconds":1.98}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-stone","ended":true,"remainingFilmSeconds":1.379999999999998}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-cranes","ended":true,"remainingFilmSeconds":1.2600000000000011}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-vaults","ended":true,"remainingFilmSeconds":1.859999999999995}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-seating","ended":true,"remainingFilmSeconds":2.5800000000000023}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-titus","ended":true,"remainingFilmSeconds":1.799999999999995}
+{"completed":"desktop/colosseum","failures":0}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-valley","ended":true,"remainingFilmSeconds":1.98}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-stone","ended":true,"remainingFilmSeconds":1.439999999999998}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-cranes","ended":true,"remainingFilmSeconds":1.2600000000000011}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-vaults","ended":true,"remainingFilmSeconds":1.859999999999995}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-seating","ended":true,"remainingFilmSeconds":2.6400000000000023}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-titus","ended":true,"remainingFilmSeconds":1.7399999999999949}
+{"completed":"mobile/colosseum","failures":0}
+{"assetCount":6,"clipViewportRuns":12,"failures":[]}

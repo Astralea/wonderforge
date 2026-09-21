@@ -1,0 +1,22 @@
+[
+  {
+    "path": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/01-pyramids-of-giza.mp4",
+    "bytes": 6375463,
+    "sha256": "07ed55400e6ca5dab595ec2b73ffd3593e6b1a7dd85dcbe9fcedb837a891e75c"
+  },
+  {
+    "path": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/02-eiffel-tower.mp4",
+    "bytes": 5961791,
+    "sha256": "17248d9de5f55f1935114eedf5fd99515fd8e1e9eb2fb93686e520de5f01b711"
+  },
+  {
+    "path": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/04-stonehenge.mp4",
+    "bytes": 3493894,
+    "sha256": "c607f80a26287f5f7d619af6b3c9efc67704720c7ba484b4076c794f5a7db13e"
+  },
+  {
+    "path": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/wonderforge-four-films-20s.mp4",
+    "bytes": 18285094,
+    "sha256": "403ee7f1df242a0b9d83104feb19ed34b9cd1bdebc7d2123056fd029c1339e47"
+  }
+]

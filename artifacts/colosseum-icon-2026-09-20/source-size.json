@@ -1,0 +1,7 @@
+{
+  "scope": "Source modules, not network payload",
+  "beforeBytes": 14902,
+  "afterBytes": 22943,
+  "beforeGzipBytes": 5078,
+  "afterGzipBytes": 7502
+}

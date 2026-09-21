@@ -1,0 +1,2909 @@
+{
+  "sun": [
+    {
+      "label": "before-public",
+      "t": 0.02,
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/runtime/before-public-sun-t0.02.png",
+      "state": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 37,
+            "triangles": 28985,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 16
+          },
+          "colosseumCelestial": {
+            "t": 0.02,
+            "julianDayUt1": 1750449.6846093524,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                0.9012671856704668,
+                0.146155430056857,
+                0.4078676872449342
+              ],
+              "azimuthDegrees": 65.65091132310187,
+              "authoringAzimuthDegrees": 24.349088676898134,
+              "elevationDegrees": 8.404193306881998,
+              "distanceKm": 152082521.8478103,
+              "angularRadiusDegrees": 0.2620999075631888,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1
+            },
+            "moon": {
+              "direction": [
+                -0.9216059020173548,
+                -0.07098324375185007,
+                -0.3815808439547814
+              ],
+              "azimuthDegrees": 247.50853442862186,
+              "authoringAzimuthDegrees": -157.50853442862186,
+              "elevationDegrees": -4.070463429419128,
+              "distanceKm": 406661.8337672171,
+              "angularRadiusDegrees": 0.24478814764669038,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0,
+              "lightDirection": [
+                0.9013295229118972,
+                0.14595627031471356,
+                0.40780124850621785
+              ],
+              "illuminatedFraction": 0.9983201010308838,
+              "referenceIlluminatedFraction": 0.9983216728327415,
+              "phaseAngleDegrees": 4.698031019782591,
+              "referencePhaseAngleDegrees": 4.698064634682983,
+              "elongationDegrees": 175.28942072825777,
+              "waxing": false
+            },
+            "key": "sun",
+            "constructionT": 0.024999999999999998,
+            "workComplete": false,
+            "keyVisibility": 1
+          },
+          "camera": {
+            "position": [
+              -317.8053091981324,
+              67.62956460956423,
+              131.4634577578564
+            ],
+            "direction": [
+              0.9096600456335502,
+              -0.17601104430972542,
+              -0.3762163123243957
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "scripts": [
+          "https://wonderforge.pages.dev/assets/main-BR6Phg3M.js"
+        ]
+      }
+    },
+    {
+      "label": "before-public",
+      "t": 0.4,
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/runtime/before-public-sun-t0.4.png",
+      "state": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 107,
+            "triangles": 84786,
+            "points": 0,
+            "lines": 0,
+            "geometries": 49,
+            "textures": 16
+          },
+          "colosseumCelestial": {
+            "t": 0.4,
+            "julianDayUt1": 1750450,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.20979907310218754,
+                0.9316805270025472,
+                -0.29657333752331555
+              ],
+              "azimuthDegrees": 215.275986666,
+              "authoringAzimuthDegrees": -125.275986666,
+              "elevationDegrees": 68.69831225599997,
+              "distanceKm": 152073288.62,
+              "angularRadiusDegrees": 0.262115833,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1
+            },
+            "moon": {
+              "direction": [
+                0.11146273224633997,
+                -0.9170377804576721,
+                0.3829069972375107
+              ],
+              "azimuthDegrees": 16.23007182599997,
+              "authoringAzimuthDegrees": 73.76992817400003,
+              "elevationDegrees": -66.496796818,
+              "distanceKm": 412194.273,
+              "angularRadiusDegrees": 0.241502639,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0,
+              "lightDirection": [
+                -0.20953815023852648,
+                0.9316627187162598,
+                -0.2968136488587479
+              ],
+              "illuminatedFraction": 0.9956888147328808,
+              "referenceIlluminatedFraction": 0.9956936,
+              "phaseAngleDegrees": 7.529454613219711,
+              "referencePhaseAngleDegrees": 7.5297,
+              "elongationDegrees": 172.4501955087623,
+              "waxing": false
+            },
+            "key": "sun",
+            "constructionT": 0.5,
+            "workComplete": false,
+            "keyVisibility": 1
+          },
+          "camera": {
+            "position": [
+              -311.89837396846355,
+              106.65186434035792,
+              18.325610907300398
+            ],
+            "direction": [
+              0.9615201586751673,
+              -0.2689198206152657,
+              -0.05622378981832177
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "scripts": [
+          "https://wonderforge.pages.dev/assets/main-BR6Phg3M.js"
+        ]
+      }
+    },
+    {
+      "label": "candidate",
+      "t": 0.02,
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/runtime/candidate-sun-t0.02.png",
+      "state": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 37,
+            "triangles": 28985,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 18
+          },
+          "colosseumCelestial": {
+            "t": 0.02,
+            "julianDayUt1": 1750449.6846093524,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                0.9012671856704668,
+                0.146155430056857,
+                0.4078676872449342
+              ],
+              "azimuthDegrees": 65.65091132310187,
+              "authoringAzimuthDegrees": 24.349088676898134,
+              "elevationDegrees": 8.404193306881998,
+              "distanceKm": 152082521.8478103,
+              "angularRadiusDegrees": 0.2620999075631888,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1
+            },
+            "moon": {
+              "direction": [
+                -0.9216059020173548,
+                -0.07098324375185007,
+                -0.3815808439547814
+              ],
+              "azimuthDegrees": 247.50853442862186,
+              "authoringAzimuthDegrees": -157.50853442862186,
+              "elevationDegrees": -4.070463429419128,
+              "distanceKm": 406661.8337672171,
+              "angularRadiusDegrees": 0.24478814764669038,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0,
+              "lightDirection": [
+                0.9013295229118972,
+                0.14595627031471356,
+                0.40780124850621785
+              ],
+              "illuminatedFraction": 0.9983201010308838,
+              "referenceIlluminatedFraction": 0.9983216728327415,
+              "phaseAngleDegrees": 4.698031019782591,
+              "referencePhaseAngleDegrees": 4.698064634682983,
+              "elongationDegrees": 175.28942072825777,
+              "waxing": false
+            },
+            "key": "sun",
+            "constructionT": 0.024999999999999998,
+            "workComplete": false,
+            "keyVisibility": 1
+          },
+          "camera": {
+            "position": [
+              -317.8053091981324,
+              67.62956460956423,
+              131.4634577578564
+            ],
+            "direction": [
+              0.9096600456335502,
+              -0.17601104430972542,
+              -0.3762163123243957
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "scripts": [
+          "http://127.0.0.1:5590/assets/main-D06KFf-n.js"
+        ]
+      }
+    },
+    {
+      "label": "candidate",
+      "t": 0.4,
+      "path": "artifacts/colosseum-moon-surface-2026-09-21/visual/runtime/candidate-sun-t0.4.png",
+      "state": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 107,
+            "triangles": 84786,
+            "points": 0,
+            "lines": 0,
+            "geometries": 49,
+            "textures": 18
+          },
+          "colosseumCelestial": {
+            "t": 0.4,
+            "julianDayUt1": 1750450,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.20979907310218754,
+                0.9316805270025472,
+                -0.29657333752331555
+              ],
+              "azimuthDegrees": 215.275986666,
+              "authoringAzimuthDegrees": -125.275986666,
+              "elevationDegrees": 68.69831225599997,
+              "distanceKm": 152073288.62,
+              "angularRadiusDegrees": 0.262115833,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1
+            },
+            "moon": {
+              "direction": [
+                0.11146273224633997,
+                -0.9170377804576721,
+                0.3829069972375107
+              ],
+              "azimuthDegrees": 16.23007182599997,
+              "authoringAzimuthDegrees": 73.76992817400003,
+              "elevationDegrees": -66.496796818,
+              "distanceKm": 412194.273,
+              "angularRadiusDegrees": 0.241502639,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0,
+              "lightDirection": [
+                -0.20953815023852648,
+                0.9316627187162598,
+                -0.2968136488587479
+              ],
+              "illuminatedFraction": 0.9956888147328808,
+              "referenceIlluminatedFraction": 0.9956936,
+              "phaseAngleDegrees": 7.529454613219711,
+              "referencePhaseAngleDegrees": 7.5297,
+              "elongationDegrees": 172.4501955087623,
+              "waxing": false
+            },
+            "key": "sun",
+            "constructionT": 0.5,
+            "workComplete": false,
+            "keyVisibility": 1
+          },
+          "camera": {
+            "position": [
+              -311.89837396846355,
+              106.65186434035792,
+              18.325610907300398
+            ],
+            "direction": [
+              0.9615201586751673,
+              -0.2689198206152657,
+              -0.05622378981832177
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "scripts": [
+          "http://127.0.0.1:5590/assets/main-D06KFf-n.js"
+        ]
+      }
+    }
+  ],
+  "checks": [
+    {
+      "mode": "desktop",
+      "first": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 77,
+            "triangles": 110511,
+            "points": 0,
+            "lines": 0,
+            "geometries": 52,
+            "textures": 18
+          },
+          "colosseumCelestial": {
+            "t": 0.9,
+            "julianDayUt1": 1750450.3000006212,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.7832152228083928,
+                -0.08546101953723316,
+                0.6158492744989281
+              ],
+              "azimuthDegrees": 308.17829305339757,
+              "authoringAzimuthDegrees": -218.17829305339757,
+              "elevationDegrees": -4.902535810032626,
+              "distanceKm": 152075727.3020635,
+              "angularRadiusDegrees": 0.26211161137513056,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0
+            },
+            "moon": {
+              "direction": [
+                0.882420402103061,
+                0.027713031871139715,
+                -0.4696447825929522
+              ],
+              "azimuthDegrees": 118.02295262925043,
+              "authoringAzimuthDegrees": -28.022952629250426,
+              "elevationDegrees": 1.5880430807044357,
+              "distanceKm": 406136.450317202,
+              "angularRadiusDegrees": 0.245104786991906,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1,
+              "lightDirection": [
+                -0.7835154147745705,
+                -0.08531112262265671,
+                0.6154881048139719
+              ],
+              "illuminatedFraction": 0.9914074971967168,
+              "referenceIlluminatedFraction": 0.9914155120024212,
+              "phaseAngleDegrees": 10.637421893350751,
+              "referencePhaseAngleDegrees": 10.637524973885714,
+              "elongationDegrees": 169.33433251651513,
+              "waxing": false
+            },
+            "key": "moon",
+            "constructionT": 1,
+            "workComplete": true,
+            "keyVisibility": 0.8705866736879143
+          },
+          "camera": {
+            "position": [
+              -332.829035557579,
+              52.04517928559868,
+              -204.7892682023588
+            ],
+            "direction": [
+              0.8496163050615033,
+              -0.0697564737441253,
+              0.5227677960093025
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureWidth": 1024,
+        "textureHeight": 512
+      },
+      "reverse": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 77,
+            "triangles": 110511,
+            "points": 0,
+            "lines": 0,
+            "geometries": 52,
+            "textures": 18
+          },
+          "colosseumCelestial": {
+            "t": 0.9,
+            "julianDayUt1": 1750450.3000006212,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.7832152228083928,
+                -0.08546101953723316,
+                0.6158492744989281
+              ],
+              "azimuthDegrees": 308.17829305339757,
+              "authoringAzimuthDegrees": -218.17829305339757,
+              "elevationDegrees": -4.902535810032626,
+              "distanceKm": 152075727.3020635,
+              "angularRadiusDegrees": 0.26211161137513056,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0
+            },
+            "moon": {
+              "direction": [
+                0.882420402103061,
+                0.027713031871139715,
+                -0.4696447825929522
+              ],
+              "azimuthDegrees": 118.02295262925043,
+              "authoringAzimuthDegrees": -28.022952629250426,
+              "elevationDegrees": 1.5880430807044357,
+              "distanceKm": 406136.450317202,
+              "angularRadiusDegrees": 0.245104786991906,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1,
+              "lightDirection": [
+                -0.7835154147745705,
+                -0.08531112262265671,
+                0.6154881048139719
+              ],
+              "illuminatedFraction": 0.9914074971967168,
+              "referenceIlluminatedFraction": 0.9914155120024212,
+              "phaseAngleDegrees": 10.637421893350751,
+              "referencePhaseAngleDegrees": 10.637524973885714,
+              "elongationDegrees": 169.33433251651513,
+              "waxing": false
+            },
+            "key": "moon",
+            "constructionT": 1,
+            "workComplete": true,
+            "keyVisibility": 0.8705866736879143
+          },
+          "camera": {
+            "position": [
+              -332.829035557579,
+              52.04517928559868,
+              -204.7892682023588
+            ],
+            "direction": [
+              0.8496163050615033,
+              -0.0697564737441253,
+              0.5227677960093025
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureWidth": 1024,
+        "textureHeight": 512
+      },
+      "reverseExact": true,
+      "day": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 107,
+            "triangles": 84786,
+            "points": 0,
+            "lines": 0,
+            "geometries": 52,
+            "textures": 18
+          },
+          "colosseumCelestial": {
+            "t": 0.4,
+            "julianDayUt1": 1750450,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.20979907310218754,
+                0.9316805270025472,
+                -0.29657333752331555
+              ],
+              "azimuthDegrees": 215.275986666,
+              "authoringAzimuthDegrees": -125.275986666,
+              "elevationDegrees": 68.69831225599997,
+              "distanceKm": 152073288.62,
+              "angularRadiusDegrees": 0.262115833,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1
+            },
+            "moon": {
+              "direction": [
+                0.11146273224633997,
+                -0.9170377804576721,
+                0.3829069972375107
+              ],
+              "azimuthDegrees": 16.23007182599997,
+              "authoringAzimuthDegrees": 73.76992817400003,
+              "elevationDegrees": -66.496796818,
+              "distanceKm": 412194.273,
+              "angularRadiusDegrees": 0.241502639,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0,
+              "lightDirection": [
+                -0.20953815023852648,
+                0.9316627187162598,
+                -0.2968136488587479
+              ],
+              "illuminatedFraction": 0.9956888147328808,
+              "referenceIlluminatedFraction": 0.9956936,
+              "phaseAngleDegrees": 7.529454613219711,
+              "referencePhaseAngleDegrees": 7.5297,
+              "elongationDegrees": 172.4501955087623,
+              "waxing": false
+            },
+            "key": "sun",
+            "constructionT": 0.5,
+            "workComplete": false,
+            "keyVisibility": 1
+          },
+          "camera": {
+            "position": [
+              -311.89837396846355,
+              106.65186434035792,
+              18.325610907300398
+            ],
+            "direction": [
+              0.9615201586751673,
+              -0.2689198206152657,
+              -0.05622378981832177
+            ],
+            "fov": 35,
+            "aspect": 1.6,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureWidth": 1024,
+        "textureHeight": 512
+      },
+      "playback": [
+        {
+          "t": 0.8655083333333335,
+          "moon": {
+            "direction": [
+              0.9014513243236546,
+              -0.013267648494048975,
+              -0.43267710752773536
+            ],
+            "azimuthDegrees": 115.63999703899742,
+            "authoringAzimuthDegrees": -25.63999703899742,
+            "elevationDegrees": -0.7602025670238122,
+            "distanceKm": 406398.52627307567,
+            "angularRadiusDegrees": 0.24494673118952237,
+            "aboveHorizon": false,
+            "upperLimbAboveHorizon": false,
+            "horizonVisibility": 0,
+            "lightDirection": [
+              -0.8121082484662286,
+              -0.047498900034046804,
+              0.5815703287382099
+            ],
+            "illuminatedFraction": 0.9915390125134712,
+            "referenceIlluminatedFraction": 0.9915469128885493,
+            "phaseAngleDegrees": 10.555467916057179,
+            "referencePhaseAngleDegrees": 10.555591497030854,
+            "elongationDegrees": 169.41648352242507,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8698100000000001,
+          "moon": {
+            "direction": [
+              0.8995951970676948,
+              -0.008872483714234311,
+              -0.4366345845732746
+            ],
+            "azimuthDegrees": 115.89044533649508,
+            "authoringAzimuthDegrees": -25.890445336495077,
+            "elevationDegrees": -0.5083625405714391,
+            "distanceKm": 406370.4146971852,
+            "angularRadiusDegrees": 0.24496364567149717,
+            "aboveHorizon": false,
+            "upperLimbAboveHorizon": false,
+            "horizonVisibility": 0,
+            "lightDirection": [
+              -0.8092285143624203,
+              -0.051583334965373005,
+              0.5852250602090106
+            ],
+            "illuminatedFraction": 0.9915249567987421,
+            "referenceIlluminatedFraction": 0.9915328440854118,
+            "phaseAngleDegrees": 10.564256753292284,
+            "referencePhaseAngleDegrees": 10.564392246130108,
+            "elongationDegrees": 169.40767354005473,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8740000000000002,
+          "moon": {
+            "direction": [
+              0.8976578949407286,
+              -0.0043913435954015135,
+              -0.4406711015621591
+            ],
+            "azimuthDegrees": 116.14697909724407,
+            "authoringAzimuthDegrees": -26.14697909724407,
+            "elevationDegrees": -0.2516062630710059,
+            "distanceKm": 406341.7534208214,
+            "angularRadiusDegrees": 0.24498091554903895,
+            "aboveHorizon": false,
+            "upperLimbAboveHorizon": false,
+            "horizonVisibility": 0,
+            "lightDirection": [
+              -0.8062471162973359,
+              -0.055740647509800255,
+              0.5889469990393178
+            ],
+            "illuminatedFraction": 0.9915106178552189,
+            "referenceIlluminatedFraction": 0.9915184997123346,
+            "phaseAngleDegrees": 10.57321524697402,
+            "referencePhaseAngleDegrees": 10.573364037963747,
+            "elongationDegrees": 169.39869349750288,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8782083333333337,
+          "moon": {
+            "direction": [
+              0.8955334608027328,
+              0.00038582579354878036,
+              -0.44499401312954434
+            ],
+            "azimuthDegrees": 116.42295784742225,
+            "authoringAzimuthDegrees": -26.422957847422254,
+            "elevationDegrees": 0.022106190146091224,
+            "distanceKm": 406311.20064831065,
+            "angularRadiusDegrees": 0.24499937578727055,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 0.5573638948422571,
+            "lightDirection": [
+              -0.8030051875571665,
+              -0.060160374758974344,
+              0.5929278185961083
+            ],
+            "illuminatedFraction": 0.9914952777865886,
+            "referenceIlluminatedFraction": 0.9915032077289343,
+            "phaseAngleDegrees": 10.58279090949269,
+            "referencePhaseAngleDegrees": 10.582925765943527,
+            "elongationDegrees": 169.38909480021942,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.882481666666667,
+          "moon": {
+            "direction": [
+              0.8931815974895939,
+              0.005569545306265991,
+              -0.449661666223638
+            ],
+            "azimuthDegrees": 116.72242626405381,
+            "authoringAzimuthDegrees": -26.72242626405381,
+            "elevationDegrees": 0.3191130896763328,
+            "distanceKm": 406278.047978334,
+            "angularRadiusDegrees": 0.24501940690508703,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7994456590016059,
+              -0.06495312867471316,
+              0.5972166519604544
+            ],
+            "illuminatedFraction": 0.9914786725115767,
+            "referenceIlluminatedFraction": 0.9914866144695573,
+            "phaseAngleDegrees": 10.593146701021674,
+            "referencePhaseAngleDegrees": 10.593301152072847,
+            "elongationDegrees": 169.37871411010843,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.886676666666667,
+          "moon": {
+            "direction": [
+              0.8907631679519594,
+              0.010756121093887003,
+              -0.4543404939901383
+            ],
+            "azimuthDegrees": 117.02419904581058,
+            "authoringAzimuthDegrees": -27.024199045810576,
+            "elevationDegrees": 0.616292226567555,
+            "distanceKm": 406244.87893944426,
+            "angularRadiusDegrees": 0.24503941754642009,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7958169537213654,
+              -0.06973721578648455,
+              0.6015081852344119
+            ],
+            "illuminatedFraction": 0.9914620293814929,
+            "referenceIlluminatedFraction": 0.9914699900993846,
+            "phaseAngleDegrees": 10.603516067990377,
+            "referencePhaseAngleDegrees": 10.603663613077252,
+            "elongationDegrees": 169.36831981538398,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8907683333333336,
+          "moon": {
+            "direction": [
+              0.888308503304376,
+              0.015881429477441797,
+              -0.458972529847803
+            ],
+            "azimuthDegrees": 117.324560072341,
+            "authoringAzimuthDegrees": -27.324560072341,
+            "elevationDegrees": 0.90997713680161,
+            "distanceKm": 406212.10550307867,
+            "angularRadiusDegrees": 0.24505915941955256,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7921644079242623,
+              -0.07445357441071165,
+              0.6057493013412989
+            ],
+            "illuminatedFraction": 0.9914455490278504,
+            "referenceIlluminatedFraction": 0.9914535412860155,
+            "phaseAngleDegrees": 10.613774150089089,
+            "referencePhaseAngleDegrees": 10.613884590649604,
+            "elongationDegrees": 169.3580370755636,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.894996666666667,
+          "moon": {
+            "direction": [
+              0.8856781168255305,
+              0.02126532950680246,
+              -0.46381252585214744
+            ],
+            "azimuthDegrees": 117.6401826321669,
+            "authoringAzimuthDegrees": -27.640182632166898,
+            "elevationDegrees": 1.2185054800525117,
+            "distanceKm": 406177.6720111743,
+            "angularRadiusDegrees": 0.2450799012673436,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7882812050783715,
+              -0.07940444210588202,
+              0.6101702027254725
+            ],
+            "illuminatedFraction": 0.9914282788971378,
+            "referenceIlluminatedFraction": 0.9914362592996023,
+            "phaseAngleDegrees": 10.624513317577208,
+            "referencePhaseAngleDegrees": 10.62462328599319,
+            "elongationDegrees": 169.34727210813602,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8991500000000004,
+          "moon": {
+            "direction": [
+              0.8829843186904083,
+              0.026609805749441787,
+              -0.46864764075455734
+            ],
+            "azimuthDegrees": 117.95731547054157,
+            "authoringAzimuthDegrees": -27.957315470541573,
+            "elevationDegrees": 1.5248095475261048,
+            "distanceKm": 406143.50346524996,
+            "angularRadiusDegrees": 0.24510052746953412,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7843372013589621,
+              -0.08430131917982137,
+              0.6145798907781906
+            ],
+            "illuminatedFraction": 0.991411053480837,
+            "referenceIlluminatedFraction": 0.9914190635244973,
+            "phaseAngleDegrees": 10.635214002008532,
+            "referencePhaseAngleDegrees": 10.635316197292507,
+            "elongationDegrees": 169.33654571206208,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9034633333333336,
+          "moon": {
+            "direction": [
+              0.8800796461693499,
+              0.03224582576959376,
+              -0.47372990524017894
+            ],
+            "azimuthDegrees": 118.29272366119886,
+            "authoringAzimuthDegrees": -28.292723661198863,
+            "elevationDegrees": 1.847870051716055,
+            "distanceKm": 406107.4664312938,
+            "angularRadiusDegrees": 0.2451222908794767,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7801176877965755,
+              -0.08945849055044124,
+              0.6192039822670404
+            ],
+            "illuminatedFraction": 0.9913929026950342,
+            "referenceIlluminatedFraction": 0.9914009175390758,
+            "phaseAngleDegrees": 10.646478036195784,
+            "referencePhaseAngleDegrees": 10.64660161999315,
+            "elongationDegrees": 169.32525462363074,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9075683333333335,
+          "moon": {
+            "direction": [
+              0.8772086024220069,
+              0.037685205311707874,
+              -0.4786281365919097
+            ],
+            "azimuthDegrees": 118.61804608096531,
+            "authoringAzimuthDegrees": -28.618046080965314,
+            "elevationDegrees": 2.159714615633874,
+            "distanceKm": 406072.6839161537,
+            "angularRadiusDegrees": 0.24514329941672103,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7759791639618419,
+              -0.09442660448369897,
+              0.6236505058626668
+            ],
+            "illuminatedFraction": 0.9913753817050351,
+            "referenceIlluminatedFraction": 0.9913833834092662,
+            "phaseAngleDegrees": 10.657340068367041,
+            "referencePhaseAngleDegrees": 10.657485533599555,
+            "elongationDegrees": 169.3143665109485,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9119550000000002,
+          "moon": {
+            "direction": [
+              0.8740141803524946,
+              0.0435639370456376,
+              -0.48394358755111183
+            ],
+            "azimuthDegrees": 118.97339614414989,
+            "authoringAzimuthDegrees": -28.973396144149888,
+            "elevationDegrees": 2.4968199078134066,
+            "distanceKm": 406035.106711165,
+            "angularRadiusDegrees": 0.24516600280043815,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7714103911560506,
+              -0.09977840577822855,
+              0.6284666086251715
+            ],
+            "illuminatedFraction": 0.9913563730818178,
+            "referenceIlluminatedFraction": 0.9913643910119466,
+            "phaseAngleDegrees": 10.669111987530055,
+            "referencePhaseAngleDegrees": 10.669222408347576,
+            "elongationDegrees": 169.30256632488656,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9162383333333335,
+          "moon": {
+            "direction": [
+              0.870778645967576,
+              0.04939894710100517,
+              -0.48918738102304593
+            ],
+            "azimuthDegrees": 119.3264740242463,
+            "authoringAzimuthDegrees": -29.326474024246295,
+            "elevationDegrees": 2.831503577420459,
+            "distanceKm": 405997.7882849269,
+            "angularRadiusDegrees": 0.24518854983529234,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.766817639357288,
+              -0.10508609147107227,
+              0.633204249314429
+            ],
+            "illuminatedFraction": 0.9913375481760063,
+            "referenceIlluminatedFraction": 0.9913455294074536,
+            "phaseAngleDegrees": 10.680757492595273,
+            "referencePhaseAngleDegrees": 10.680878456068038,
+            "elongationDegrees": 169.29089287339394,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9204133333333336,
+          "moon": {
+            "direction": [
+              0.8674935343536762,
+              0.05513862774635224,
+              -0.4943831505874937
+            ],
+            "azimuthDegrees": 119.6787449296445,
+            "authoringAzimuthDegrees": -29.678744929644495,
+            "elevationDegrees": 3.1608136600659367,
+            "distanceKm": 405961.11014835566,
+            "angularRadiusDegrees": 0.24521067413368594,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7621897447503734,
+              -0.11028494854875177,
+              0.6378902908188524
+            ],
+            "illuminatedFraction": 0.9913189239749399,
+            "referenceIlluminatedFraction": 0.9913269570259898,
+            "phaseAngleDegrees": 10.692266500408577,
+            "referencePhaseAngleDegrees": 10.692389083436131,
+            "elongationDegrees": 169.27935623912907,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9245233333333337,
+          "moon": {
+            "direction": [
+              0.8641444263689249,
+              0.06087368483559478,
+              -0.49954860110909977
+            ],
+            "azimuthDegrees": 120.03154630588301,
+            "authoringAzimuthDegrees": -30.031546305883012,
+            "elevationDegrees": 3.489962896101957,
+            "distanceKm": 405924.44206247514,
+            "angularRadiusDegrees": 0.2452327895979281,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7575046079649356,
+              -0.115474002660339,
+              0.642536009591283
+            ],
+            "illuminatedFraction": 0.9913003388599375,
+            "referenceIlluminatedFraction": 0.991308387077482,
+            "phaseAngleDegrees": 10.703739162063654,
+            "referencePhaseAngleDegrees": 10.703900770972668,
+            "elongationDegrees": 169.26785605224683,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.928681666666667,
+          "moon": {
+            "direction": [
+              0.8606272255949432,
+              0.0667405738958754,
+              -0.5048430195227025
+            ],
+            "azimuthDegrees": 120.39584083159167,
+            "authoringAzimuthDegrees": -30.39584083159167,
+            "elevationDegrees": 3.8267977537340814,
+            "distanceKm": 405886.941893179,
+            "angularRadiusDegrees": 0.245255457456138,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7526188047752095,
+              -0.12076664940551865,
+              0.647286915586975
+            ],
+            "illuminatedFraction": 0.9912812751677711,
+            "referenceIlluminatedFraction": 0.9912893451983332,
+            "phaseAngleDegrees": 10.715494638011025,
+            "referencePhaseAngleDegrees": 10.715662389208376,
+            "elongationDegrees": 169.2560723742926,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9331250000000003,
+          "moon": {
+            "direction": [
+              0.8567241042505674,
+              0.07308815839639436,
+              -0.510570201146019
+            ],
+            "azimuthDegrees": 120.79309817542679,
+            "authoringAzimuthDegrees": -30.793098175426792,
+            "elevationDegrees": 4.191380313024751,
+            "distanceKm": 405846.37057826447,
+            "angularRadiusDegrees": 0.24528002498962062,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7472354865450013,
+              -0.12647820470134055,
+              0.6524127461840251
+            ],
+            "illuminatedFraction": 0.9912606094914054,
+            "referenceIlluminatedFraction": 0.9912687006064952,
+            "phaseAngleDegrees": 10.728223584556062,
+            "referencePhaseAngleDegrees": 10.728377580999583,
+            "elongationDegrees": 169.24331289567448,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9372600000000003,
+          "moon": {
+            "direction": [
+              0.852955536331406,
+              0.0790711364606923,
+              -0.5159598903213489
+            ],
+            "azimuthDegrees": 121.17009216779695,
+            "authoringAzimuthDegrees": -31.170092167796952,
+            "elevationDegrees": 4.535176638147189,
+            "distanceKm": 405808.1217197272,
+            "angularRadiusDegrees": 0.24530315798117183,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7420738902967222,
+              -0.13184946405003273,
+              0.6572229912058825
+            ],
+            "illuminatedFraction": 0.9912411112594994,
+            "referenceIlluminatedFraction": 0.9912492020172388,
+            "phaseAngleDegrees": 10.740219778227168,
+            "referencePhaseAngleDegrees": 10.74037501681,
+            "elongationDegrees": 169.2312879358259,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9414083333333336,
+          "moon": {
+            "direction": [
+              0.8490323099852243,
+              0.085133172110651,
+              -0.5214369373256292
+            ],
+            "azimuthDegrees": 121.55634943603064,
+            "authoringAzimuthDegrees": -31.556349436030644,
+            "elevationDegrees": 4.883682827548276,
+            "distanceKm": 405769.3887051041,
+            "angularRadiusDegrees": 0.24532653015096686,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7367363273277001,
+              -0.13727282600106722,
+              0.6620995055408007
+            ],
+            "illuminatedFraction": 0.9912212776685703,
+            "referenceIlluminatedFraction": 0.9912293885766089,
+            "phaseAngleDegrees": 10.752408729841742,
+            "referencePhaseAngleDegrees": 10.752543545415998,
+            "elongationDegrees": 169.21906975393955,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9456050000000004,
+          "moon": {
+            "direction": [
+              0.8449244618340188,
+              0.09134874019516843,
+              -0.5270275718207249
+            ],
+            "azimuthDegrees": 121.95414236655358,
+            "authoringAzimuthDegrees": -31.954142366553583,
+            "elevationDegrees": 5.241203870338002,
+            "distanceKm": 405729.64408875606,
+            "angularRadiusDegrees": 0.2453505212220495,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7311839551913579,
+              -0.1428248970981784,
+              0.6670615207307471
+            ],
+            "illuminatedFraction": 0.9912009488929582,
+            "referenceIlluminatedFraction": 0.9912090465920165,
+            "phaseAngleDegrees": 10.764887848436437,
+            "referencePhaseAngleDegrees": 10.765035540072619,
+            "elongationDegrees": 169.20656072318064,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9497716666666672,
+          "moon": {
+            "direction": [
+              0.8406895769049163,
+              0.09757019422904235,
+              -0.5326547591841642
+            ],
+            "azimuthDegrees": 122.35804760507051,
+            "authoringAzimuthDegrees": -32.35804760507051,
+            "elevationDegrees": 5.59926853621994,
+            "distanceKm": 405689.90649772703,
+            "angularRadiusDegrees": 0.24537455444807574,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7254973876103749,
+              -0.14835783166812835,
+              0.6720442651739935
+            ],
+            "illuminatedFraction": 0.9911804852571995,
+            "referenceIlluminatedFraction": 0.9911886476587065,
+            "phaseAngleDegrees": 10.777435331265954,
+            "referencePhaseAngleDegrees": 10.777556264656036,
+            "elongationDegrees": 169.19398315623215,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9541166666666675,
+          "moon": {
+            "direction": [
+              0.8361197384756949,
+              0.10414900744172575,
+              -0.5385691851380275
+            ],
+            "azimuthDegrees": 122.78676970644511,
+            "authoringAzimuthDegrees": -32.786769706445114,
+            "elevationDegrees": 5.978139463747066,
+            "distanceKm": 405647.8359416779,
+            "angularRadiusDegrees": 0.24539999870952886,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7194004306146043,
+              -0.1542008582040353,
+              0.6772629590939261
+            ],
+            "illuminatedFraction": 0.9911588631183914,
+            "referenceIlluminatedFraction": 0.9911670368131623,
+            "phaseAngleDegrees": 10.790677496340331,
+            "referencePhaseAngleDegrees": 10.790815540350229,
+            "elongationDegrees": 169.18070925930934,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9582583333333342,
+          "moon": {
+            "direction": [
+              0.8315959341487206,
+              0.11046530070069396,
+              -0.5442845024878278
+            ],
+            "azimuthDegrees": 123.2049864707231,
+            "authoringAzimuthDegrees": -33.2049864707231,
+            "elevationDegrees": 6.34213880178974,
+            "distanceKm": 405607.5026253236,
+            "angularRadiusDegrees": 0.24542439301067617,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7134037619654587,
+              -0.15978323713537446,
+              0.6822934775769673
+            ],
+            "illuminatedFraction": 0.991137968593818,
+            "referenceIlluminatedFraction": 0.9911461524349362,
+            "phaseAngleDegrees": 10.803458805937371,
+            "referencePhaseAngleDegrees": 10.80356752244681,
+            "elongationDegrees": 169.16789731109523,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9626183333333338,
+          "moon": {
+            "direction": [
+              0.8266707540197321,
+              0.11720557519229262,
+              -0.5503438176197598
+            ],
+            "azimuthDegrees": 123.6531036927347,
+            "authoringAzimuthDegrees": -33.6531036927347,
+            "elevationDegrees": 6.730855660395613,
+            "distanceKm": 405564.3992362229,
+            "angularRadiusDegrees": 0.24545046834772602,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7069156252694986,
+              -0.1657323453153497,
+              0.6876067833188585
+            ],
+            "illuminatedFraction": 0.9911156849917317,
+            "referenceIlluminatedFraction": 0.9911238269742831,
+            "phaseAngleDegrees": 10.817073378689194,
+            "referencePhaseAngleDegrees": 10.81719885327965,
+            "elongationDegrees": 169.15425012111672,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9666900000000002,
+          "moon": {
+            "direction": [
+              0.8218981550503714,
+              0.12354099989916849,
+              -0.5560764732199244
+            ],
+            "azimuthDegrees": 124.0813341553025,
+            "authoringAzimuthDegrees": -34.0813341553025,
+            "elevationDegrees": 7.096508169812483,
+            "distanceKm": 405523.9512432327,
+            "angularRadiusDegrees": 0.24547501266789065,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7006674377755081,
+              -0.17129542555203048,
+              0.6926204002381486
+            ],
+            "illuminatedFraction": 0.9910945960035074,
+            "referenceIlluminatedFraction": 0.9911027867539264,
+            "phaseAngleDegrees": 10.829942504360073,
+            "referencePhaseAngleDegrees": 10.830037781246752,
+            "elongationDegrees": 169.14135015158115,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.97096,
+          "moon": {
+            "direction": [
+              0.8167273110683065,
+              0.1302704517314208,
+              -0.5621264170636578
+            ],
+            "azimuthDegrees": 124.53835166278805,
+            "authoringAzimuthDegrees": -34.538351662788045,
+            "elevationDegrees": 7.485220961255713,
+            "distanceKm": 405480.91829562985,
+            "angularRadiusDegrees": 0.2455011159240988,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6939379937140978,
+              -0.17719587674171738,
+              0.6978908812599479
+            ],
+            "illuminatedFraction": 0.9910721995731961,
+            "referenceIlluminatedFraction": 0.9910803884163126,
+            "phaseAngleDegrees": 10.843592946674203,
+            "referencePhaseAngleDegrees": 10.843706375119089,
+            "elongationDegrees": 169.12766701089203,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9752000000000001,
+          "moon": {
+            "direction": [
+              0.811401774893714,
+              0.1369937771701488,
+              -0.5682075894565175
+            ],
+            "azimuthDegrees": 125.00274571703306,
+            "authoringAzimuthDegrees": -35.002745717033065,
+            "elevationDegrees": 7.8739262066228335,
+            "distanceKm": 405437.9966459454,
+            "angularRadiusDegrees": 0.24552704152754617,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6870492244488067,
+              -0.18305979151831403,
+              0.7031731478900233
+            ],
+            "illuminatedFraction": 0.9910496658891633,
+            "referenceIlluminatedFraction": 0.9910578941118896,
+            "phaseAngleDegrees": 10.857309930842323,
+            "referencePhaseAngleDegrees": 10.857444155442714,
+            "elongationDegrees": 169.11391715534643,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9792366666666668,
+          "moon": {
+            "direction": [
+              0.8061662941777779,
+              0.1434699188497793,
+              -0.5740316093360246
+            ],
+            "azimuthDegrees": 125.45280950922307,
+            "authoringAzimuthDegrees": -35.45280950922307,
+            "elevationDegrees": 8.248685605822425,
+            "distanceKm": 405396.5876978739,
+            "angularRadiusDegrees": 0.2455520688155284,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6803156889148035,
+              -0.18869781877311492,
+              0.7082116185199483
+            ],
+            "illuminatedFraction": 0.9910279468397174,
+            "referenceIlluminatedFraction": 0.9910361674222268,
+            "phaseAngleDegrees": 10.87051483533767,
+            "referencePhaseAngleDegrees": 10.870700088157506,
+            "elongationDegrees": 169.10068062172712,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9834283333333332,
+          "moon": {
+            "direction": [
+              0.8005385964516006,
+              0.1502326321782067,
+              -0.5801449058813746
+            ],
+            "azimuthDegrees": 125.93058947644664,
+            "authoringAzimuthDegrees": -35.93058947644664,
+            "elevationDegrees": 8.640408169699082,
+            "distanceKm": 405353.4148335568,
+            "angularRadiusDegrees": 0.2455782582094031,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6731188633977625,
+              -0.19455484897482916,
+              0.7134839917464763
+            ],
+            "illuminatedFraction": 0.9910051102268452,
+            "referenceIlluminatedFraction": 0.9910133582699373,
+            "phaseAngleDegrees": 10.88438213383802,
+            "referencePhaseAngleDegrees": 10.884535147742927,
+            "elongationDegrees": 169.0867800943554,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9877516666666664,
+          "moon": {
+            "direction": [
+              0.794538914448234,
+              0.15727972270624177,
+              -0.586490411049379
+            ],
+            "azimuthDegrees": 126.43295972356572,
+            "authoringAzimuthDegrees": -36.432959723565716,
+            "elevationDegrees": 9.049036708665259,
+            "distanceKm": 405308.3742439518,
+            "angularRadiusDegrees": 0.24560557292735075,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6654904054169997,
+              -0.20064172005880582,
+              0.7189335299384505
+            ],
+            "illuminatedFraction": 0.9909812599403367,
+            "referenceIlluminatedFraction": 0.9909895013425112,
+            "phaseAngleDegrees": 10.898846365680331,
+            "referencePhaseAngleDegrees": 10.8989925999403,
+            "elongationDegrees": 169.07228121393922,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9920483333333331,
+          "moon": {
+            "direction": [
+              0.7883650448153041,
+              0.1643314762740338,
+              -0.5928538791464221
+            ],
+            "azimuthDegrees": 126.94332210273865,
+            "authoringAzimuthDegrees": -36.94332210273865,
+            "elevationDegrees": 9.458400777638174,
+            "distanceKm": 405263.3363578128,
+            "angularRadiusDegrees": 0.24563286774316426,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6576857445065893,
+              -0.20670379616449078,
+              0.7243776653956151
+            ],
+            "illuminatedFraction": 0.9909572501571504,
+            "referenceIlluminatedFraction": 0.9909655005630835,
+            "phaseAngleDegrees": 10.913388196483556,
+            "referencePhaseAngleDegrees": 10.913506012441218,
+            "elongationDegrees": 169.05770454149194,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9961916666666665,
+          "moon": {
+            "direction": [
+              0.782211581455784,
+              0.17118431374213772,
+              -0.5990333651517874
+            ],
+            "azimuthDegrees": 127.44561890607935,
+            "authoringAzimuthDegrees": -37.445618906079346,
+            "elevationDegrees": 9.85668469158911,
+            "distanceKm": 405219.5608332881,
+            "angularRadiusDegrees": 0.24565939128287306,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6499501205047814,
+              -0.21257186203439996,
+              0.7296424085310886
+            ],
+            "illuminatedFraction": 0.9909338136452515,
+            "referenceIlluminatedFraction": 0.990942089682041,
+            "phaseAngleDegrees": 10.92756438026105,
+            "referencePhaseAngleDegrees": 10.927685880088807,
+            "elongationDegrees": 169.0434943927371,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 1,
+          "moon": {
+            "direction": [
+              0.7763778647140902,
+              0.17752785823808642,
+              -0.6047489319803615
+            ],
+            "azimuthDegrees": 127.9163207140507,
+            "authoringAzimuthDegrees": -37.9163207140507,
+            "elevationDegrees": 10.225797530148345,
+            "distanceKm": 405179.02859964845,
+            "angularRadiusDegrees": 0.24568394420021297,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6426543293534848,
+              -0.21798335992471668,
+              0.734492115518713
+            ],
+            "illuminatedFraction": 0.9909120186998195,
+            "referenceIlluminatedFraction": 0.9909203399998113,
+            "phaseAngleDegrees": 10.940731336345205,
+            "referencePhaseAngleDegrees": 10.940880000114442,
+            "elongationDegrees": 169.03029588934047,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        }
+      ],
+      "errors": [],
+      "responses": [
+        {
+          "url": "http://127.0.0.1:5590/assets/lroc-color-poles-1k-RRPljFYe.jpg",
+          "status": 200,
+          "headers": {
+            "cache-control": "no-cache",
+            "etag": "W/\"139068-1789967615920\"",
+            "connection": "keep-alive",
+            "access-control-allow-origin": "http://127.0.0.1:5590",
+            "content-length": "139068",
+            "keep-alive": "timeout=5",
+            "date": "Mon, 21 Sep 2026 05:17:24 GMT",
+            "content-type": "image/jpeg",
+            "vary": "Origin",
+            "last-modified": "Mon, 21 Sep 2026 05:13:35 GMT"
+          }
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "first": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 58,
+            "triangles": 72452,
+            "points": 0,
+            "lines": 0,
+            "geometries": 48,
+            "textures": 7
+          },
+          "colosseumCelestial": {
+            "t": 0.9,
+            "julianDayUt1": 1750450.3000006212,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.7832152228083928,
+                -0.08546101953723316,
+                0.6158492744989281
+              ],
+              "azimuthDegrees": 308.17829305339757,
+              "authoringAzimuthDegrees": -218.17829305339757,
+              "elevationDegrees": -4.902535810032626,
+              "distanceKm": 152075727.3020635,
+              "angularRadiusDegrees": 0.26211161137513056,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0
+            },
+            "moon": {
+              "direction": [
+                0.882420402103061,
+                0.027713031871139715,
+                -0.4696447825929522
+              ],
+              "azimuthDegrees": 118.02295262925043,
+              "authoringAzimuthDegrees": -28.022952629250426,
+              "elevationDegrees": 1.5880430807044357,
+              "distanceKm": 406136.450317202,
+              "angularRadiusDegrees": 0.245104786991906,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1,
+              "lightDirection": [
+                -0.7835154147745705,
+                -0.08531112262265671,
+                0.6154881048139719
+              ],
+              "illuminatedFraction": 0.9914074971967168,
+              "referenceIlluminatedFraction": 0.9914155120024212,
+              "phaseAngleDegrees": 10.637421893350751,
+              "referencePhaseAngleDegrees": 10.637524973885714,
+              "elongationDegrees": 169.33433251651513,
+              "waxing": false
+            },
+            "key": "moon",
+            "constructionT": 1,
+            "workComplete": true,
+            "keyVisibility": 0.8705866736879143
+          },
+          "camera": {
+            "position": [
+              -459.5171320822652,
+              62.44671563355961,
+              -282.74028751104515
+            ],
+            "direction": [
+              0.8496163050615034,
+              -0.06975647374412532,
+              0.5227677960093026
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureWidth": 1024,
+        "textureHeight": 512
+      },
+      "reverse": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 58,
+            "triangles": 72452,
+            "points": 0,
+            "lines": 0,
+            "geometries": 48,
+            "textures": 7
+          },
+          "colosseumCelestial": {
+            "t": 0.9,
+            "julianDayUt1": 1750450.3000006212,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.7832152228083928,
+                -0.08546101953723316,
+                0.6158492744989281
+              ],
+              "azimuthDegrees": 308.17829305339757,
+              "authoringAzimuthDegrees": -218.17829305339757,
+              "elevationDegrees": -4.902535810032626,
+              "distanceKm": 152075727.3020635,
+              "angularRadiusDegrees": 0.26211161137513056,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0
+            },
+            "moon": {
+              "direction": [
+                0.882420402103061,
+                0.027713031871139715,
+                -0.4696447825929522
+              ],
+              "azimuthDegrees": 118.02295262925043,
+              "authoringAzimuthDegrees": -28.022952629250426,
+              "elevationDegrees": 1.5880430807044357,
+              "distanceKm": 406136.450317202,
+              "angularRadiusDegrees": 0.245104786991906,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1,
+              "lightDirection": [
+                -0.7835154147745705,
+                -0.08531112262265671,
+                0.6154881048139719
+              ],
+              "illuminatedFraction": 0.9914074971967168,
+              "referenceIlluminatedFraction": 0.9914155120024212,
+              "phaseAngleDegrees": 10.637421893350751,
+              "referencePhaseAngleDegrees": 10.637524973885714,
+              "elongationDegrees": 169.33433251651513,
+              "waxing": false
+            },
+            "key": "moon",
+            "constructionT": 1,
+            "workComplete": true,
+            "keyVisibility": 0.8705866736879143
+          },
+          "camera": {
+            "position": [
+              -459.5171320822652,
+              62.44671563355961,
+              -282.74028751104515
+            ],
+            "direction": [
+              0.8496163050615034,
+              -0.06975647374412532,
+              0.5227677960093026
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureWidth": 1024,
+        "textureHeight": 512
+      },
+      "reverseExact": true,
+      "day": {
+        "diagnostics": {
+          "renderer": {
+            "calls": 84,
+            "triangles": 60941,
+            "points": 0,
+            "lines": 0,
+            "geometries": 48,
+            "textures": 7
+          },
+          "colosseumCelestial": {
+            "t": 0.4,
+            "julianDayUt1": 1750450,
+            "calendar": "Julian",
+            "timeScale": "UT1",
+            "angularScale": 2.4,
+            "sun": {
+              "direction": [
+                -0.20979907310218754,
+                0.9316805270025472,
+                -0.29657333752331555
+              ],
+              "azimuthDegrees": 215.275986666,
+              "authoringAzimuthDegrees": -125.275986666,
+              "elevationDegrees": 68.69831225599997,
+              "distanceKm": 152073288.62,
+              "angularRadiusDegrees": 0.262115833,
+              "aboveHorizon": true,
+              "upperLimbAboveHorizon": true,
+              "horizonVisibility": 1
+            },
+            "moon": {
+              "direction": [
+                0.11146273224633997,
+                -0.9170377804576721,
+                0.3829069972375107
+              ],
+              "azimuthDegrees": 16.23007182599997,
+              "authoringAzimuthDegrees": 73.76992817400003,
+              "elevationDegrees": -66.496796818,
+              "distanceKm": 412194.273,
+              "angularRadiusDegrees": 0.241502639,
+              "aboveHorizon": false,
+              "upperLimbAboveHorizon": false,
+              "horizonVisibility": 0,
+              "lightDirection": [
+                -0.20953815023852648,
+                0.9316627187162598,
+                -0.2968136488587479
+              ],
+              "illuminatedFraction": 0.9956888147328808,
+              "referenceIlluminatedFraction": 0.9956936,
+              "phaseAngleDegrees": 7.529454613219711,
+              "referencePhaseAngleDegrees": 7.5297,
+              "elongationDegrees": 172.4501955087623,
+              "waxing": false
+            },
+            "key": "sun",
+            "constructionT": 0.5,
+            "workComplete": false,
+            "keyVisibility": 1
+          },
+          "camera": {
+            "position": [
+              -489.3466628440018,
+              156.28094552222916,
+              28.70169632510981
+            ],
+            "direction": [
+              0.961520158675167,
+              -0.2689198206152657,
+              -0.056223789818321754
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        },
+        "surfaceStatus": "ready",
+        "surfaceReady": 1,
+        "textureWidth": 1024,
+        "textureHeight": 512
+      },
+      "playback": [
+        {
+          "t": 0.8656772333333335,
+          "moon": {
+            "direction": [
+              0.9013803436056288,
+              -0.013098059744126384,
+              -0.43283012486694794
+            ],
+            "azimuthDegrees": 115.64966161838504,
+            "authoringAzimuthDegrees": -25.64966161838504,
+            "elevationDegrees": -0.7504850029557302,
+            "distanceKm": 406397.4415375077,
+            "angularRadiusDegrees": 0.24494738386514195,
+            "aboveHorizon": false,
+            "upperLimbAboveHorizon": false,
+            "horizonVisibility": 0,
+            "lightDirection": [
+              -0.8119977043220319,
+              -0.047656541725254666,
+              0.5817117690115434
+            ],
+            "illuminatedFraction": 0.9915384695579492,
+            "referenceIlluminatedFraction": 0.9915463700185508,
+            "phaseAngleDegrees": 10.555807552707856,
+            "referencePhaseAngleDegrees": 10.55593108971715,
+            "elongationDegrees": 169.41614306845682,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8698055666666666,
+          "moon": {
+            "direction": [
+              0.8995971691976112,
+              -0.008877110706734283,
+              -0.4366304273377485
+            ],
+            "azimuthDegrees": 115.89018170190343,
+            "authoringAzimuthDegrees": -25.89018170190343,
+            "elevationDegrees": -0.5086276581543311,
+            "distanceKm": 406370.4442908918,
+            "angularRadiusDegrees": 0.24496362786523052,
+            "aboveHorizon": false,
+            "upperLimbAboveHorizon": false,
+            "horizonVisibility": 0,
+            "lightDirection": [
+              -0.8092315621843188,
+              -0.05157903629831536,
+              0.5852212246486487
+            ],
+            "illuminatedFraction": 0.9915249715782335,
+            "referenceIlluminatedFraction": 0.9915328588959664,
+            "phaseAngleDegrees": 10.564247515684313,
+            "referencePhaseAngleDegrees": 10.56438298137784,
+            "elongationDegrees": 169.40768279988222,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8740005666666664,
+          "moon": {
+            "direction": [
+              0.8976576211878777,
+              -0.004390721983061906,
+              -0.4406716653970254
+            ],
+            "azimuthDegrees": 116.14701500897098,
+            "authoringAzimuthDegrees": -26.147015008970982,
+            "elevationDegrees": -0.2515706469640914,
+            "distanceKm": 406341.7494450457,
+            "angularRadiusDegrees": 0.24498091795123553,
+            "aboveHorizon": false,
+            "upperLimbAboveHorizon": false,
+            "horizonVisibility": 0,
+            "lightDirection": [
+              -0.806246696850813,
+              -0.05574122278982172,
+              0.5889475187986183
+            ],
+            "illuminatedFraction": 0.9915106158569258,
+            "referenceIlluminatedFraction": 0.9915184977224172,
+            "phaseAngleDegrees": 10.573216494917896,
+            "referencePhaseAngleDegrees": 10.573365282213688,
+            "elongationDegrees": 169.39869224655627,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8782255666666664,
+          "moon": {
+            "direction": [
+              0.8955243476988677,
+              0.0004061204995446863,
+              -0.44501233437361876
+            ],
+            "azimuthDegrees": 116.4241302661485,
+            "authoringAzimuthDegrees": -26.424130266148495,
+            "elevationDegrees": 0.023268991237295984,
+            "distanceKm": 406311.07085554936,
+            "angularRadiusDegrees": 0.24499945420913205,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 0.560372375738205,
+            "lightDirection": [
+              -0.8029913363336945,
+              -0.06017914509962569,
+              0.5929446721812297
+            ],
+            "illuminatedFraction": 0.9914952126921565,
+            "referenceIlluminatedFraction": 0.9915031427662947,
+            "phaseAngleDegrees": 10.582831524848254,
+            "referencePhaseAngleDegrees": 10.58296638559848,
+            "elongationDegrees": 169.3890540871852,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8824838999999998,
+          "moon": {
+            "direction": [
+              0.8931803382050871,
+              0.005572292518926225,
+              -0.44966413354850704
+            ],
+            "azimuthDegrees": 116.72258497949991,
+            "authoringAzimuthDegrees": -26.722584979499914,
+            "elevationDegrees": 0.3192704958097686,
+            "distanceKm": 406278.03040758084,
+            "angularRadiusDegrees": 0.24501941752148168,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7994437610519961,
+              -0.06495566783134196,
+              0.5972189164214601
+            ],
+            "illuminatedFraction": 0.9914786637228606,
+            "referenceIlluminatedFraction": 0.9914866056752109,
+            "phaseAngleDegrees": 10.59315217940785,
+            "referencePhaseAngleDegrees": 10.593306650976837,
+            "elongationDegrees": 169.37870861855436,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8867405666666665,
+          "moon": {
+            "direction": [
+              0.8907255059103977,
+              0.010835525721883371,
+              -0.45441243876350523
+            ],
+            "azimuthDegrees": 117.02885184181162,
+            "authoringAzimuthDegrees": -27.028851841811615,
+            "elevationDegrees": 0.6208420417745082,
+            "distanceKm": 406244.37121068087,
+            "angularRadiusDegrees": 0.24503972338913735,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7957606943584843,
+              -0.06981030912989566,
+              0.6015741334642735
+            ],
+            "illuminatedFraction": 0.9914617737754213,
+            "referenceIlluminatedFraction": 0.9914697352730193,
+            "phaseAngleDegrees": 10.603675243117118,
+            "referencePhaseAngleDegrees": 10.603821957299859,
+            "elongationDegrees": 169.36816025754538,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8907738999999998,
+          "moon": {
+            "direction": [
+              0.8883051038452803,
+              0.015888458457353004,
+              -0.4589788659298754
+            ],
+            "azimuthDegrees": 117.32497205582763,
+            "authoringAzimuthDegrees": -27.32497205582763,
+            "elevationDegrees": 0.9103799185052558,
+            "distanceKm": 406212.0605538641,
+            "angularRadiusDegrees": 0.24505918649580058,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.792159369168318,
+              -0.07446004034682562,
+              0.6057550959178153
+            ],
+            "illuminatedFraction": 0.9914455264522298,
+            "referenceIlluminatedFraction": 0.9914535187262439,
+            "phaseAngleDegrees": 10.613788195405995,
+            "referencePhaseAngleDegrees": 10.613898608859628,
+            "elongationDegrees": 169.35802299649427,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8952105666666663,
+          "moon": {
+            "direction": [
+              0.8855424716684165,
+              0.02154005097548592,
+              -0.46405878622795754
+            ],
+            "azimuthDegrees": 117.65629134892754,
+            "authoringAzimuthDegrees": -27.65629134892754,
+            "elevationDegrees": 1.2342494671769717,
+            "distanceKm": 406175.9147026438,
+            "angularRadiusDegrees": 0.24508095982469708,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7880817843090382,
+              -0.0796569727005575,
+              0.6103948459320946
+            ],
+            "illuminatedFraction": 0.9914273988647266,
+            "referenceIlluminatedFraction": 0.9914353773157991,
+            "phaseAngleDegrees": 10.625060265002675,
+            "referencePhaseAngleDegrees": 10.625171333835274,
+            "elongationDegrees": 169.34672384712107,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.8993605666666662,
+          "moon": {
+            "direction": [
+              0.8828450066250879,
+              0.026882763916775715,
+              -0.46889445644125866
+            ],
+            "azimuthDegrees": 117.97355455051616,
+            "authoringAzimuthDegrees": -27.973554550516155,
+            "elevationDegrees": 1.540454495462122,
+            "distanceKm": 406141.7584230381,
+            "angularRadiusDegrees": 0.24510158133176568,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7841340651167898,
+              -0.08455117692222888,
+              0.6148047384369153
+            ],
+            "illuminatedFraction": 0.9914101734439815,
+            "referenceIlluminatedFraction": 0.9914181848309129,
+            "phaseAngleDegrees": 10.635760408232448,
+            "referencePhaseAngleDegrees": 10.635862677866221,
+            "elongationDegrees": 169.3359979931053,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9036172333333325,
+          "moon": {
+            "direction": [
+              0.8799740088839696,
+              0.032448654739596385,
+              -0.4739122582232557
+            ],
+            "azimuthDegrees": 118.30479870146235,
+            "authoringAzimuthDegrees": -28.304798701462346,
+            "elevationDegrees": 1.8594973803647847,
+            "distanceKm": 406106.1692706499,
+            "angularRadiusDegrees": 0.24512307425801136,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.779964849438811,
+              -0.08964401334678382,
+              0.6193696670898363
+            ],
+            "illuminatedFraction": 0.9913922502966721,
+            "referenceIlluminatedFraction": 0.9914002643705003,
+            "phaseAngleDegrees": 10.64688268296511,
+            "referencePhaseAngleDegrees": 10.647007841165363,
+            "elongationDegrees": 169.32484900526785,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9076022333333326,
+          "moon": {
+            "direction": [
+              0.8771843701315651,
+              0.03773025885911555,
+              -0.4786689966598144
+            ],
+            "azimuthDegrees": 118.6207681238281,
+            "authoringAzimuthDegrees": -28.6207681238281,
+            "elevationDegrees": 2.1622978309080305,
+            "distanceKm": 406072.39598996076,
+            "angularRadiusDegrees": 0.24514347337587636,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7759443723316761,
+              -0.09446763631012427,
+              0.6236875794312237
+            ],
+            "illuminatedFraction": 0.9913752358741079,
+            "referenceIlluminatedFraction": 0.9913832378846414,
+            "phaseAngleDegrees": 10.65743042945328,
+            "referencePhaseAngleDegrees": 10.657575464547424,
+            "elongationDegrees": 169.31427593282373,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9118905666666661,
+          "moon": {
+            "direction": [
+              0.8740619657098218,
+              0.043476877305524526,
+              -0.4838651064493521
+            ],
+            "azimuthDegrees": 118.9681310595754,
+            "authoringAzimuthDegrees": -28.9681310595754,
+            "elevationDegrees": 2.4918270215690344,
+            "distanceKm": 406035.6633346224,
+            "angularRadiusDegrees": 0.2451656664998553,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7714784786754829,
+              -0.09969918130550258,
+              0.6283956000701907
+            ],
+            "illuminatedFraction": 0.9913566542836316,
+            "referenceIlluminatedFraction": 0.9913646723424464,
+            "phaseAngleDegrees": 10.668937934598098,
+            "referencePhaseAngleDegrees": 10.669048552420735,
+            "elongationDegrees": 169.3027407956348,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9162138999999994,
+          "moon": {
+            "direction": [
+              0.8707974340108227,
+              0.04936539797514021,
+              -0.4891573227530411
+            ],
+            "azimuthDegrees": 119.32444280720733,
+            "authoringAzimuthDegrees": -29.324442807207333,
+            "elevationDegrees": 2.829579006040697,
+            "distanceKm": 405998.0029262907,
+            "angularRadiusDegrees": 0.2451884201533417,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7668442111968875,
+              -0.10505558654886611,
+              0.633177131211083
+            ],
+            "illuminatedFraction": 0.9913376562837319,
+            "referenceIlluminatedFraction": 0.9913456378922135,
+            "phaseAngleDegrees": 10.680690650583502,
+            "referencePhaseAngleDegrees": 10.680811414924264,
+            "elongationDegrees": 169.29095987576017,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9203172333333324,
+          "moon": {
+            "direction": [
+              0.8675704808376502,
+              0.055005569514666446,
+              -0.4942629341772412
+            ],
+            "azimuthDegrees": 119.6705653274463,
+            "authoringAzimuthDegrees": -29.670565327446297,
+            "elevationDegrees": 3.153178397531036,
+            "distanceKm": 405961.96056923905,
+            "angularRadiusDegrees": 0.24521016122301206,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7622977688663931,
+              -0.11016450777543339,
+              0.6377820104141507
+            ],
+            "illuminatedFraction": 0.9913193556000666,
+            "referenceIlluminatedFraction": 0.9913273877076477,
+            "phaseAngleDegrees": 10.691999912023281,
+            "referencePhaseAngleDegrees": 10.692122099784015,
+            "elongationDegrees": 169.27962346730587,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9244605666666659,
+          "moon": {
+            "direction": [
+              0.864196436061522,
+              0.060785449110368095,
+              -0.4994693675041691
+            ],
+            "azimuthDegrees": 120.02611458374884,
+            "authoringAzimuthDegrees": -30.026114583748836,
+            "elevationDegrees": 3.4848979820688384,
+            "distanceKm": 405925.00643078244,
+            "angularRadiusDegrees": 0.24523244921290882,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7575771214252199,
+              -0.11539419946296671,
+              0.6424648502629373
+            ],
+            "illuminatedFraction": 0.9913006245104998,
+            "referenceIlluminatedFraction": 0.9913086728925213,
+            "phaseAngleDegrees": 10.703562920858522,
+            "referencePhaseAngleDegrees": 10.703723591513931,
+            "elongationDegrees": 169.26803271616475,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9286972333333323,
+          "moon": {
+            "direction": [
+              0.8606137989435951,
+              0.06676263361995084,
+              -0.5048629911372008
+            ],
+            "azimuthDegrees": 120.39722015492225,
+            "authoringAzimuthDegrees": -30.397220154922252,
+            "elevationDegrees": 3.828064508159001,
+            "distanceKm": 405886.8009605417,
+            "angularRadiusDegrees": 0.2452555427964158,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7526002192863757,
+              -0.12078650792706973,
+              0.6473048195656225
+            ],
+            "illuminatedFraction": 0.9912812032821124,
+            "referenceIlluminatedFraction": 0.9912892734851837,
+            "phaseAngleDegrees": 10.715538941615828,
+            "referencePhaseAngleDegrees": 10.71570655798912,
+            "elongationDegrees": 169.2560279643863,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.932807233333332,
+          "moon": {
+            "direction": [
+              0.8570079804113061,
+              0.07263082663017602,
+              -0.5101588816578142
+            ],
+            "azimuthDegrees": 120.7644514187765,
+            "authoringAzimuthDegrees": -30.764451418776503,
+            "elevationDegrees": 4.165107304749607,
+            "distanceKm": 405849.2950261599,
+            "angularRadiusDegrees": 0.24527825412092336,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7476257238591029,
+              -0.1260668750847002,
+              0.6520451825069572
+            ],
+            "illuminatedFraction": 0.9912620970771151,
+            "referenceIlluminatedFraction": 0.9912701887030303,
+            "phaseAngleDegrees": 10.727307810254446,
+            "referencePhaseAngleDegrees": 10.7274610488154,
+            "elongationDegrees": 169.24423086592148,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9370738999999986,
+          "moon": {
+            "direction": [
+              0.8531284600014898,
+              0.07880127442512612,
+              -0.5157152216916445
+            ],
+            "azimuthDegrees": 121.15291597809232,
+            "authoringAzimuthDegrees": -31.152915978092324,
+            "elevationDegrees": 4.519666284982352,
+            "distanceKm": 405809.845064909,
+            "angularRadiusDegrees": 0.24530211808493352,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7423099598769853,
+              -0.13160791843762715,
+              0.6570047787283921
+            ],
+            "illuminatedFraction": 0.991241994862663,
+            "referenceIlluminatedFraction": 0.9912500835752011,
+            "phaseAngleDegrees": 10.739676432078214,
+            "referencePhaseAngleDegrees": 10.739833603358269,
+            "elongationDegrees": 169.23183258537162,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9413488999999985,
+          "moon": {
+            "direction": [
+              0.8490894531253322,
+              0.0850456929408791,
+              -0.5213581597170318
+            ],
+            "azimuthDegrees": 121.55076960763023,
+            "authoringAzimuthDegrees": -31.55076960763023,
+            "elevationDegrees": 4.878652396548953,
+            "distanceKm": 405769.9479537368,
+            "angularRadiusDegrees": 0.2453261926906858,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7368138238709931,
+              -0.1371945985856847,
+              0.6620294790049139
+            ],
+            "illuminatedFraction": 0.9912215636613495,
+            "referenceIlluminatedFraction": 0.991229674653995,
+            "phaseAngleDegrees": 10.752233066863333,
+            "referencePhaseAngleDegrees": 10.752367849487067,
+            "elongationDegrees": 169.21924583804886,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9454655666666651,
+          "moon": {
+            "direction": [
+              0.8450637470710244,
+              0.09114209893827557,
+              -0.5268399958122061
+            ],
+            "azimuthDegrees": 121.94074422840202,
+            "authoringAzimuthDegrees": -31.940744228402025,
+            "elevationDegrees": 5.229314601574212,
+            "distanceKm": 405730.963113204,
+            "angularRadiusDegrees": 0.24534972347835465,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7313716036391655,
+              -0.14264103255044416,
+              0.6668951291044332
+            ],
+            "illuminatedFraction": 0.991201628999294,
+            "referenceIlluminatedFraction": 0.991209723701299,
+            "phaseAngleDegrees": 10.764470586281911,
+            "referencePhaseAngleDegrees": 10.764619935064763,
+            "elongationDegrees": 169.20697898607776,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9497188999999987,
+          "moon": {
+            "direction": [
+              0.8407440932611059,
+              0.0974908458148682,
+              -0.5325832372773878
+            ],
+            "azimuthDegrees": 122.35288969977239,
+            "authoringAzimuthDegrees": -32.35288969977239,
+            "elevationDegrees": 5.594700428680225,
+            "distanceKm": 405690.41363911156,
+            "angularRadiusDegrees": 0.24537424772984734,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7255703648876117,
+              -0.14828729840721347,
+              0.6719810434290153
+            ],
+            "illuminatedFraction": 0.991180746084174,
+            "referenceIlluminatedFraction": 0.9911889079951539,
+            "phaseAngleDegrees": 10.777275493426103,
+            "referencePhaseAngleDegrees": 10.77739647193998,
+            "elongationDegrees": 169.1941433771873,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9540055666666654,
+          "moon": {
+            "direction": [
+              0.8362390611568968,
+              0.10398078916388935,
+              -0.5384164076997343
+            ],
+            "azimuthDegrees": 122.77564826199978,
+            "authoringAzimuthDegrees": -32.77564826199978,
+            "elevationDegrees": 5.968448650191131,
+            "distanceKm": 405648.9093195252,
+            "angularRadiusDegrees": 0.24539934951167416,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7195591025983947,
+              -0.15405210810042347,
+              0.6771282344265436
+            ],
+            "illuminatedFraction": 0.9911594198542134,
+            "referenceIlluminatedFraction": 0.9911675926025435,
+            "phaseAngleDegrees": 10.790336732987367,
+            "referencePhaseAngleDegrees": 10.790476175866276,
+            "elongationDegrees": 169.18105083976903,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9583705666666651,
+          "moon": {
+            "direction": [
+              0.8314712808201364,
+              0.11063768637494892,
+              -0.5444399062568065
+            ],
+            "azimuthDegrees": 123.21641803650493,
+            "authoringAzimuthDegrees": -33.21641803650493,
+            "elevationDegrees": 6.352076688680991,
+            "distanceKm": 405606.4009657855,
+            "angularRadiusDegrees": 0.24542505931379638,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7132390375299623,
+              -0.1599355128439268,
+              0.6824300015933378
+            ],
+            "illuminatedFraction": 0.9911373986352556,
+            "referenceIlluminatedFraction": 0.9911455820014446,
+            "phaseAngleDegrees": 10.803807243763378,
+            "referencePhaseAngleDegrees": 10.803915828610956,
+            "elongationDegrees": 169.1675480382767,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9627955666666651,
+          "moon": {
+            "direction": [
+              0.8264661470821021,
+              0.11747958725192123,
+              -0.5505926391683631
+            ],
+            "azimuthDegrees": 123.67159542382439,
+            "authoringAzimuthDegrees": -33.671595423824385,
+            "elevationDegrees": 6.746664611206148,
+            "distanceKm": 405562.651241345,
+            "angularRadiusDegrees": 0.24545152905167592,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.7066470053033508,
+              -0.16597307505409264,
+              0.6878247947354726
+            ],
+            "illuminatedFraction": 0.9911147725956473,
+            "referenceIlluminatedFraction": 0.9911229177030265,
+            "phaseAngleDegrees": 10.817630462895908,
+            "referencePhaseAngleDegrees": 10.81775369861722,
+            "elongationDegrees": 169.15369170135054,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9669888999999984,
+          "moon": {
+            "direction": [
+              0.8215418234752674,
+              0.12400939193760144,
+              -0.556498610054148
+            ],
+            "azimuthDegrees": 124.11305207867645,
+            "authoringAzimuthDegrees": -34.113052078676446,
+            "elevationDegrees": 7.123553024267432,
+            "distanceKm": 405520.95795937587,
+            "angularRadiusDegrees": 0.24547682902790988,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.700202382880758,
+              -0.17170648172213107,
+              0.6929888218021383
+            ],
+            "illuminatedFraction": 0.9910930374698217,
+            "referenceIlluminatedFraction": 0.991101229708761,
+            "phaseAngleDegrees": 10.830892968266273,
+            "referencePhaseAngleDegrees": 10.830987903934716,
+            "elongationDegrees": 169.14039741041222,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9708755666666649,
+          "moon": {
+            "direction": [
+              0.8168316101951979,
+              0.13013748410855586,
+              -0.5620056546119583
+            ],
+            "azimuthDegrees": 124.52918598283202,
+            "authoringAzimuthDegrees": -34.52918598283202,
+            "elevationDegrees": 7.477537066416191,
+            "distanceKm": 405481.7662703094,
+            "angularRadiusDegrees": 0.24550060372907748,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6940733176268525,
+              -0.17707983634965524,
+              0.6977857560289071
+            ],
+            "illuminatedFraction": 0.991072645307745,
+            "referenceIlluminatedFraction": 0.9910808328214258,
+            "phaseAngleDegrees": 10.843321440682482,
+            "referencePhaseAngleDegrees": 10.84343496686816,
+            "elongationDegrees": 169.1279391677269,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9754572333333313,
+          "moon": {
+            "direction": [
+              0.8110730969844709,
+              0.1374045560819532,
+              -0.5685775402844723
+            ],
+            "azimuthDegrees": 125.03118034178726,
+            "authoringAzimuthDegrees": -35.03118034178726,
+            "elevationDegrees": 7.897686797225949,
+            "distanceKm": 405435.3712046692,
+            "angularRadiusDegrees": 0.2455286273507823,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6866253866037295,
+              -0.18341783910949658,
+              0.7034937631334639
+            ],
+            "illuminatedFraction": 0.9910482894945452,
+            "referenceIlluminatedFraction": 0.9910565181751363,
+            "phaseAngleDegrees": 10.85814723205434,
+            "referencePhaseAngleDegrees": 10.858284471128881,
+            "elongationDegrees": 169.11307784831297,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.979548899999998,
+          "moon": {
+            "direction": [
+              0.8057532138370983,
+              0.14397068273277844,
+              -0.5744860319491198
+            ],
+            "azimuthDegrees": 125.4881145472209,
+            "authoringAzimuthDegrees": -35.4881145472209,
+            "elevationDegrees": 8.277678254761703,
+            "distanceKm": 405393.394354676,
+            "angularRadiusDegrees": 0.24555400595183172,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6797860337537831,
+              -0.18913176650363836,
+              0.7086043488523859
+            ],
+            "illuminatedFraction": 0.9910262557813836,
+            "referenceIlluminatedFraction": 0.9910344803103692,
+            "phaseAngleDegrees": 10.871542312255368,
+            "referencePhaseAngleDegrees": 10.871723418300599,
+            "elongationDegrees": 169.09965068205202,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.983923899999998,
+          "moon": {
+            "direction": [
+              0.7998614412330148,
+              0.15103784043744195,
+              -0.5808693877152058
+            ],
+            "azimuthDegrees": 125.98762232539246,
+            "authoringAzimuthDegrees": -35.987622325392465,
+            "elevationDegrees": 8.687075710020512,
+            "distanceKm": 405348.26723226113,
+            "angularRadiusDegrees": 0.24558138083191086,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6722556271476843,
+              -0.1952517391001544,
+              0.714107225944843
+            ],
+            "illuminatedFraction": 0.9910023914601391,
+            "referenceIlluminatedFraction": 0.9910106386815167,
+            "phaseAngleDegrees": 10.886031914428877,
+            "referencePhaseAngleDegrees": 10.886184734161944,
+            "elongationDegrees": 169.08512636199072,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9879588999999981,
+          "moon": {
+            "direction": [
+              0.7942456476358779,
+              0.1576178048556636,
+              -0.5867967951548019
+            ],
+            "azimuthDegrees": 126.4573673074068,
+            "authoringAzimuthDegrees": -36.4573673074068,
+            "elevationDegrees": 9.068652048097132,
+            "distanceKm": 405306.2179140876,
+            "angularRadiusDegrees": 0.2456068797521492,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6651186667974499,
+              -0.20093254076720965,
+              0.7191962688574075
+            ],
+            "illuminatedFraction": 0.9909801089589345,
+            "referenceIlluminatedFraction": 0.9909883522300221,
+            "phaseAngleDegrees": 10.899543909593534,
+            "referencePhaseAngleDegrees": 10.89968747502193,
+            "elongationDegrees": 169.07158199821419,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9922922333333315,
+          "moon": {
+            "direction": [
+              0.7880086632812384,
+              0.1647343989338011,
+              -0.5932157486122859
+            ],
+            "azimuthDegrees": 126.9725649581107,
+            "authoringAzimuthDegrees": -36.972564958110695,
+            "elevationDegrees": 9.481805515057662,
+            "distanceKm": 405260.7589323996,
+            "angularRadiusDegrees": 0.24563442976922625,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6572365633252519,
+              -0.20704992314819703,
+              0.7246864350550091
+            ],
+            "illuminatedFraction": 0.9909558782224603,
+            "referenceIlluminatedFraction": 0.9909641270479358,
+            "phaseAngleDegrees": 10.914218548091048,
+            "referencePhaseAngleDegrees": 10.914336585130544,
+            "elongationDegrees": 169.05687220111525,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 0.9965522333333318,
+          "moon": {
+            "direction": [
+              0.7816661903119326,
+              0.17178202570689874,
+              -0.5995739341959957
+            ],
+            "azimuthDegrees": 127.48986593538962,
+            "authoringAzimuthDegrees": -37.489865935389616,
+            "elevationDegrees": 9.89144598238729,
+            "distanceKm": 405215.7467713081,
+            "angularRadiusDegrees": 0.24566170169954926,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6492665193487693,
+              -0.2130820481299039,
+              0.7301020665752832
+            ],
+            "illuminatedFraction": 0.9909317604835701,
+            "referenceIlluminatedFraction": 0.9909400430483222,
+            "phaseAngleDegrees": 10.928805423111177,
+            "referencePhaseAngleDegrees": 10.928927439880372,
+            "elongationDegrees": 169.04225037560738,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        },
+        {
+          "t": 1,
+          "moon": {
+            "direction": [
+              0.7763778647140902,
+              0.17752785823808642,
+              -0.6047489319803615
+            ],
+            "azimuthDegrees": 127.9163207140507,
+            "authoringAzimuthDegrees": -37.9163207140507,
+            "elevationDegrees": 10.225797530148345,
+            "distanceKm": 405179.02859964845,
+            "angularRadiusDegrees": 0.24568394420021297,
+            "aboveHorizon": true,
+            "upperLimbAboveHorizon": true,
+            "horizonVisibility": 1,
+            "lightDirection": [
+              -0.6426543293534848,
+              -0.21798335992471668,
+              0.734492115518713
+            ],
+            "illuminatedFraction": 0.9909120186998195,
+            "referenceIlluminatedFraction": 0.9909203399998113,
+            "phaseAngleDegrees": 10.940731336345205,
+            "referencePhaseAngleDegrees": 10.940880000114442,
+            "elongationDegrees": 169.03029588934047,
+            "waxing": false
+          },
+          "surfaceStatus": "ready"
+        }
+      ],
+      "errors": [],
+      "responses": [
+        {
+          "url": "http://127.0.0.1:5590/assets/lroc-color-poles-1k-RRPljFYe.jpg",
+          "status": 200,
+          "headers": {
+            "cache-control": "no-cache",
+            "etag": "W/\"139068-1789967615920\"",
+            "connection": "keep-alive",
+            "access-control-allow-origin": "http://127.0.0.1:5590",
+            "content-length": "139068",
+            "keep-alive": "timeout=5",
+            "date": "Mon, 21 Sep 2026 05:17:35 GMT",
+            "content-type": "image/jpeg",
+            "vary": "Origin",
+            "last-modified": "Mon, 21 Sep 2026 05:13:35 GMT"
+          }
+        }
+      ]
+    }
+  ],
+  "infoButtons": [
+    "WonderForge",
+    "Chapters",
+    "",
+    "",
+    "",
+    "",
+    "Narration off",
+    "",
+    "1×",
+    "2×",
+    "4×"
+  ],
+  "info": {
+    "text": "WONDERFORGE\nCHAPTERS\nCOMPLETE\n100%\nNARRATION OFF\n1×\n2×\n4×\n\nColosseum\n\nCLASSICAL ERA · 80 AD\n\nColosseum\n\nRome, Italy\n\nWhile the Colosseum stands, Rome shall stand; when the Colosseum falls, Rome shall fall; when Rome falls, the world shall fall.\n— Saint Bede\nIt held an estimated 50,000–80,000 spectators — the largest amphitheatre ever built.\nCompleted in 80 AD under Emperor Titus after roughly a decade of construction.\nIts real name is the Flavian Amphitheatre; \"Colosseum\" refers to a colossal statue of Nero that stood nearby.\n\nMoon imagery: NASA's Scientific Visualization Studio",
+    "overflow": false
+  }
+}

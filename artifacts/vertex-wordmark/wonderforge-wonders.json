@@ -1,0 +1,12 @@
+{
+  "model": "gemini-3-pro-image",
+  "project": "project-8b7cf02e-3e1c-451c-9be",
+  "location": "global",
+  "aspectRatio": "16:9",
+  "prompt": "A single cinematic title lockup of the word WONDERFORGE, one line, centered.\nEach letter is built from a real world wonder so the letter-shape and the\nmonument are the same object \u2014 not a caption next to a landmark, not a travel\nposter collage, not monuments sitting on a baseline under type.\n\nLetter map, left to right, all equally scaled as a wordmark:\nW \u2014 Pyramids of Giza: two great casing faces and a smaller third peak form the W.\nO \u2014 Colosseum: the elliptical Flavian arcade seen slightly from above; the arena is the counter.\nN \u2014 Machu Picchu: stone terraces step the diagonal; Huayna Picchu is the right upright.\nD \u2014 Petra, Al-Khazneh: the Treasury carved from rose sandstone; the doorway is the D's bowl.\nE \u2014 Eiffel Tower: three platforms are the three bars; puddled-iron lattice legs.\nR \u2014 Angkor Wat: lotus prangs; the central tower is the upright, galleries the leg.\nF \u2014 Forbidden City: stacked yellow hip-and-gable eaves as the two bars of F.\nO \u2014 Stonehenge: a closed sarsen ring with lintels; the horseshoe reads as O.\nR \u2014 Chichen Itza, El Castillo: the stepped pyramid is the body; the serpent stair is the leg.\nG \u2014 Sydney Opera House: overlapping white shells curl into a G on a harbour podium.\nE \u2014 a second Eiffel lattice E, matching the first, closing the word.\n\nArt direction: Civilization VI world-wonder construction-movie title card.\nMaterials of stone, travertine, iron, timber, and gold light \u2014 not chrome, not\nneon, not plastic. Dark umber ground, warm parchment-gold raking light, thin\ndust in the air. Documentary weight: every solid sits on something. No tourists,\nno flags, no UI, no slogan, no extra words besides WONDERFORGE. No Celtic\nornament, no gladiator pastiche, no modern skyline except the Opera House shells\nand the Eiffel lattice.\n\nWide 16:9 still, sharp, natural color, single word filling the frame with\nmodest side margins.",
+  "files": [
+    "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/vertex-wordmark/wonderforge-wonders.png"
+  ],
+  "generatedAt": "2026-09-16T18:05:44.731876+00:00",
+  "provenance": "Google Gemini image on Vertex AI via google-genai."
+}

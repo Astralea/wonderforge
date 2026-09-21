@@ -1,0 +1,28 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-bluestones",
+  "captionText": "Many smaller bluestones came from the Preseli Hills in Wales.",
+  "src": "/audio/narration/stonehenge-bluestones-oliver-344e69e1e00b.mp3",
+  "duration": 4.504671,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "a49c0bd947f7f518dd49817667f269b6812be0d3da70524def0cc71430a7ee1b",
+  "bytes": 73186,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.06,
+    "truePeakDbtp": -2.19,
+    "gainDb": 7.32
+  }
+}

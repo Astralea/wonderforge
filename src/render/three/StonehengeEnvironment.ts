@@ -427,7 +427,7 @@ export class StonehengeEnvironment {
     this.instanced.push(trampled);
     this.group.add(trampled);
 
-    const shrubGeometry = new IcosahedronGeometry(0.65, 1);
+    const shrubGeometry = new IcosahedronGeometry(0.65, 0);
     const shrubMaterial = new MeshStandardMaterial({ color: '#596b43', roughness: 1, flatShading: true });
     const shrubs = new InstancedMesh(shrubGeometry, shrubMaterial, STONEHENGE_ENVIRONMENT.ecology.shrubs);
     shrubs.name = 'stonehenge-sparse-downland-shrubs';
@@ -439,14 +439,14 @@ export class StonehengeEnvironment {
       matrixAt(shrubs, index, new Vector3(x, stonehengeTerrainHeightAt(x, z) + 0.18, z), new Vector3(0.9 + random() * 0.7, 0.2 + random() * 0.16, 0.9 + random() * 0.7), random() * TAU, matrix, quaternion);
     }
     shrubs.instanceMatrix.needsUpdate = true;
-    shrubs.castShadow = true;
+    shrubs.castShadow = false;
     this.geometries.push(shrubGeometry);
     this.materials.push(shrubMaterial);
     this.instanced.push(shrubs);
     this.group.add(shrubs);
 
     const trunkGeometry = new CylinderGeometry(0.18, 0.28, 3.8, 6);
-    const crownGeometry = new IcosahedronGeometry(1, 1);
+    const crownGeometry = new IcosahedronGeometry(1, 0);
     const crownMaterial = new MeshStandardMaterial({ color: '#41533c', roughness: 1, flatShading: true });
     const treeCount = STONEHENGE_ENVIRONMENT.ecology.treeClusters * 7;
     const trunks = new InstancedMesh(trunkGeometry, materials.wood, treeCount);
@@ -472,8 +472,10 @@ export class StonehengeEnvironment {
     }
     trunks.instanceMatrix.needsUpdate = true;
     crowns.instanceMatrix.needsUpdate = true;
-    trunks.castShadow = true;
-    crowns.castShadow = true;
+    // Hundreds of metres away: silhouette/value carry these crowns. Their
+    // small shadow silhouettes cannot be read from the construction camera.
+    trunks.castShadow = false;
+    crowns.castShadow = false;
     this.geometries.push(trunkGeometry, crownGeometry);
     this.materials.push(crownMaterial);
     this.instanced.push(trunks, crowns);

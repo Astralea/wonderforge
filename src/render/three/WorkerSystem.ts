@@ -14,7 +14,8 @@ import {
   SphereGeometry,
   Vector3,
 } from 'three';
-import type { ActiveConstructionState } from '../../engine/construction';
+import { gizaCarrierPoint } from '../../engine/gizaRampSupport';
+import { gizaOperationGroundYAt, type ActiveConstructionState } from '../../engine/construction';
 import type { MaterialLibrary } from './MaterialLibrary';
 
 const MAX_OPERATIONS = 24;
@@ -72,6 +73,9 @@ export class WorkerSystem {
     this.sleds = new InstancedMesh(this.sledGeometry, materials.wood, MAX_OPERATIONS);
     this.runners = new InstancedMesh(this.sledGeometry, materials.wood, MAX_OPERATIONS * 2);
     this.levers = new InstancedMesh(this.leverGeometry, materials.wood, MAX_OPERATIONS * 3);
+    this.sleds.name = 'giza-sled-decks';
+    this.runners.name = 'giza-sled-runners';
+    this.legs.name = 'giza-worker-legs';
     this.levers.name = 'operation-bound-cribbing-and-levers';
     this.dustMaterial = materials.compactedEarth.clone();
     this.dustMaterial.transparent = true;
@@ -121,19 +125,21 @@ export class WorkerSystem {
       const groundY = state.groundY;
       const isSledPhase = state.mechanism === 'sled';
       const hauling = isSledPhase && state.phase !== 'loaded';
+      const workerSurface = (x: number, z: number): number => gizaOperationGroundYAt(operation, x, z, t);
 
       if (isSledPhase) {
         // Deck directly under the stone and runners down to groundY. Carrier
         // height comes from the same state as the block and is applied once.
         const deckHeight = state.carrierHeight * 0.47;
         const runnerHeight = state.carrierHeight - deckHeight;
-        compose(matrix, new Vector3(blockPosition.x, supportY - deckHeight * 0.5, blockPosition.z), yaw, new Vector3(block.dimensions[0] * 1.2, deckHeight, block.dimensions[2] * 1.35));
+        const deckPosition = gizaCarrierPoint(state.groundPosition, yaw, state.pitch, runnerHeight + deckHeight / 2);
+        compose(matrix, new Vector3(...deckPosition), yaw, new Vector3(block.dimensions[0] * 1.2, deckHeight, block.dimensions[2] * 1.35), state.pitch);
         this.sleds.setMatrixAt(sledCursor, matrix);
         sledCursor += 1;
         for (const side of [-1, 1] as const) {
-          const runnerPosition = blockPosition.clone().addScaledVector(lateral, side * block.dimensions[0] * 0.48);
-          runnerPosition.y = groundY + runnerHeight * 0.5;
-          compose(matrix, runnerPosition, yaw, new Vector3(0.1, runnerHeight, block.dimensions[2] * 1.65));
+          const runnerPosition = new Vector3(...gizaCarrierPoint(state.groundPosition, yaw, state.pitch, runnerHeight / 2))
+            .addScaledVector(lateral, side * block.dimensions[0] * 0.48);
+          compose(matrix, runnerPosition, yaw, new Vector3(0.1, runnerHeight, block.dimensions[2] * 1.65), state.pitch);
           this.runners.setMatrixAt(runnerCursor, matrix);
           runnerCursor += 1;
         }
@@ -153,7 +159,7 @@ export class WorkerSystem {
           .addScaledVector(forward, along)
           .addScaledVector(lateral, side);
         const bob = Math.sin(t * 190 + workerCursor * 1.7) * 0.045;
-        worker.y = groundY;
+        worker.y = workerSurface(worker.x, worker.z);
         compose(matrix, new Vector3(worker.x, worker.y + 0.92 + bob, worker.z), yaw, new Vector3(1, 1, 1), lean);
         this.bodies.setMatrixAt(workerCursor, matrix);
         const headForward = hauling ? 0.18 : 0;
@@ -167,7 +173,7 @@ export class WorkerSystem {
 
         for (const legSide of [-1, 1] as const) {
           const leg = worker.clone().addScaledVector(lateral, legSide * 0.12);
-          leg.y += 0.32;
+          leg.y = workerSurface(leg.x, leg.z) + 0.31;
           const step = Math.sin(t * 190 + workerCursor * 1.7) * 0.32 * legSide;
           compose(matrix, leg, yaw + step, new Vector3(1, 1, 1));
           this.legs.setMatrixAt(legCursor, matrix);
@@ -180,9 +186,9 @@ export class WorkerSystem {
         // A taut line from the stone's front lashing up to the lead crew's
         // hands: rising toward the pullers, never slack behind the sled.
         const ropeStart = blockPosition.clone().addScaledVector(forward, block.dimensions[2] * 0.62);
-        ropeStart.y = supportY + 0.22;
+        ropeStart.y = supportY + 0.22 - Math.sin(state.pitch) * block.dimensions[2] * 0.62;
         const ropeEnd = blockPosition.clone().addScaledVector(forward, block.dimensions[2] * 0.55 + 2.35);
-        ropeEnd.y = groundY + 0.86;
+        ropeEnd.y = workerSurface(ropeEnd.x, ropeEnd.z) + 0.86;
         this.ropePositions.set([
           ropeStart.x, ropeStart.y, ropeStart.z,
           ropeEnd.x, ropeEnd.y, ropeEnd.z,
@@ -239,6 +245,7 @@ export class WorkerSystem {
   }
 
   dispose(): void {
+    for (const item of [this.bodies, this.heads, this.legs, this.sleds, this.runners, this.levers, this.dust]) item.dispose();
     this.bodyGeometry.dispose();
     this.headGeometry.dispose();
     this.legGeometry.dispose();

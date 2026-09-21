@@ -1,0 +1,13 @@
+{
+  "wonder": "giza",
+  "role": "ambient",
+  "model": "lyria-3-clip-preview",
+  "location": "global",
+  "prompt": "A 30-second calm instrumental ambient bed for the Giza plateau: dry wind,\nsparse arched harp, a distant breathy reed tone and low sustained warmth. Even,\nspacious, no strong beat and no climax for a seamless loop. No vocals, lyrics,\nelectronics or modern pop percussion.",
+  "model_text": [
+    "<instrumental>",
+    "Caption: This is a calm, cinematic Ambient instrumental piece designed to evoke the vast, ancient atmosphere of the Giza plateau. The entire track is built upon a bed of a high-fidelity stereo field recording of dry, whistling desert wind, which acts as a primary textural instrument. Providing a constant, unwavering harmonic foundation is a warm analog-style synth pad holding a low, sustained drone—a blend of pure sine and soft saw waves filtered to remove all harsh frequencies, creating a feeling of low-end warmth and stability. Floating sparsely within this expansive soundscape is an arched harp (emulating a Bēn-t instrument), playing a gentle, arpeggiated melodic phrase based on an ancient-sounding pentatonic scale. The harp's performance is delicate and intentionally arrhythmic, with significant space and long decay reverb between each phrase to enhance the sense of openness. Counterpointing the harp are long, breathy tones from a distant reed instrument, akin to a Ney flute, drenched in cavernous reverb to place it far back in the mix. The overall production is extremely spacious and devoid of any strong beat or percussion, with a smooth, even dynamic contour that avoids any climax, making it suitable for seamless looping.\nMosic: 4.5\nBPM: 60.0"
+  ],
+  "file": "ambient-generated-01.mp3",
+  "provenance": "Google Lyria 3 via Gen AI SDK on Vertex AI; SynthID and C2PA enabled by model default."
+}

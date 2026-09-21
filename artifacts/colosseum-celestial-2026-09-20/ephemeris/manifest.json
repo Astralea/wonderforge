@@ -1,0 +1,149 @@
+{
+  "source": "JPL Horizons / DE441",
+  "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+  "documentation": [
+    "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+    "https://ssd.jpl.nasa.gov/horizons/manual.html"
+  ],
+  "observer": {
+    "latitudeDegrees": 41.8902,
+    "longitudeDegreesEast": 12.4922,
+    "altitudeMetres": 25
+  },
+  "calendar": "Julian (Horizons MIXED before1582)",
+  "timeScale": "UT1, not UTC",
+  "coordinates": "Apparent AIRLESS topocentric azimuth/elevation; east/up/north world vectors",
+  "startJulianDay": 1750438.5,
+  "endJulianDay": 1750440.75,
+  "stepMinutes": 5,
+  "rowCount": 649,
+  "limitations": [
+    "Authored representative dates; no dedication date or observed historical weather claim.",
+    "Ancient Earth rotation is reconstructed; JPL TDB-UT1 around9639.7seconds is an estimate. Interpolation accuracy is not absolute historical accuracy.",
+    "No atmospheric refraction, terrain-horizon obstruction or weather extinction in the ephemeris.",
+    "Moon lightDirection uses apparent range vectors at observer time; few-arcsecond difference from Horizons reflection-time phase is measured below.",
+    "Physical angular radii are preserved in data; any presentation enlargement must be declared separately."
+  ],
+  "archives": [
+    {
+      "request": "artifacts/colosseum-celestial-2026-09-20/ephemeris/grid-jun10-12-sun.request.json",
+      "requestSha256": "50641d32ed8d365079a18e253c13cc25af9f5e2b8ca3efb3bf32c7e69f33b268",
+      "response": "artifacts/colosseum-celestial-2026-09-20/ephemeris/grid-jun10-12-sun.response.json",
+      "responseSha256": "49164aa1783a1229cf2f907d100f869677a1e52eb8f41e8db7076d38dfd3073c",
+      "rowCount": 649,
+      "target": "10",
+      "independentOffGridQuery": false
+    },
+    {
+      "request": "artifacts/colosseum-celestial-2026-09-20/ephemeris/grid-jun10-12-moon.request.json",
+      "requestSha256": "bc58a7515eabea84d03555c2524419598649592e231b7fb50bfdc75a987d0ecf",
+      "response": "artifacts/colosseum-celestial-2026-09-20/ephemeris/grid-jun10-12-moon.response.json",
+      "responseSha256": "e7c7c2b5b774927c20351d8bf35d7b13194c1d92579a93219992dc7a03e87843",
+      "rowCount": 649,
+      "target": "301",
+      "independentOffGridQuery": false
+    },
+    {
+      "request": "artifacts/colosseum-celestial-2026-09-20/ephemeris/oracle-off-grid-jun10-12-sun.request.json",
+      "requestSha256": "e741e4b5047caf09c119c67888e009910d44b2fbb5a421e04068218cf6336edd",
+      "response": "artifacts/colosseum-celestial-2026-09-20/ephemeris/oracle-off-grid-jun10-12-sun.response.json",
+      "responseSha256": "f040486c6d9733e43c23995aa9b0982a2442e24603872eb7664836e5f4efca50",
+      "rowCount": 191,
+      "target": "10",
+      "independentOffGridQuery": true
+    },
+    {
+      "request": "artifacts/colosseum-celestial-2026-09-20/ephemeris/oracle-off-grid-jun10-12-moon.request.json",
+      "requestSha256": "8c32656f51b95a5f0a6b1ce4117f3988762cd9883cf80eb4f53f35d8187555c8",
+      "response": "artifacts/colosseum-celestial-2026-09-20/ephemeris/oracle-off-grid-jun10-12-moon.response.json",
+      "responseSha256": "2a92ee17b7252d75ce1309d6786348e3c7aa15e702eb0d4b2ab121177844d0c3",
+      "rowCount": 191,
+      "target": "301",
+      "independentOffGridQuery": true
+    }
+  ],
+  "runtimeData": "src/data/colosseumEphemeris.generated.ts",
+  "runtimeDataSha256": "08b92143ffdfb45bf2d0a5db94b8ca6c604ac96615e56b198c71e71ccc0fc636",
+  "oracle": "artifacts/colosseum-celestial-2026-09-20/ephemeris/off-grid-oracle.json",
+  "oracleSha256": "46a6f44b9f49ffbee537541e6b4ee0b4b8ceb092387caf642fbc4d62e0e704a5",
+  "validation": {
+    "independentOffGridSamplesPerBody": 191,
+    "maximumErrors": {
+      "sunDirectionDegrees": 0.001234200313875069,
+      "moonDirectionDegrees": 0.0007531060513551266,
+      "illuminatedFractionAbsolute": 2.4687128747313825e-05,
+      "phaseAngleDegrees": 0.00032395730319478844
+    }
+  },
+  "events": {
+    "definition": "Airless centre crosses flat astronomical horizon; interpolated within5min rows.",
+    "sun": [
+      {
+        "event": "rise",
+        "julianDayUt1": 1750438.6494086809,
+        "hoursFromJun10MidnightUt1": 3.585808340460062,
+        "azimuthDegrees": 58.310917319710114
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750439.2741154844,
+        "hoursFromJun10MidnightUt1": 18.57877162657678,
+        "azimuthDegrees": 301.7735148640579
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750439.64924194,
+        "hoursFromJun10MidnightUt1": 27.581806557253003,
+        "azimuthDegrees": 58.17803228785529
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750440.2745209872,
+        "hoursFromJun10MidnightUt1": 42.58850369229913,
+        "azimuthDegrees": 301.9005829702905
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750440.649098944,
+        "hoursFromJun10MidnightUt1": 51.57837465405464,
+        "azimuthDegrees": 58.05443861447536
+      }
+    ],
+    "moon": [
+      {
+        "event": "rise",
+        "julianDayUt1": 1750438.8391690892,
+        "hoursFromJun10MidnightUt1": 8.140058141201735,
+        "azimuthDegrees": 71.61267310123364
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750439.4210545132,
+        "hoursFromJun10MidnightUt1": 22.105308316648006,
+        "azimuthDegrees": 285.78543000539577
+      },
+      {
+        "event": "rise",
+        "julianDayUt1": 1750439.8869026827,
+        "hoursFromJun10MidnightUt1": 33.285664385184646,
+        "azimuthDegrees": 76.49685437282639
+      },
+      {
+        "event": "set",
+        "julianDayUt1": 1750440.4474333709,
+        "hoursFromJun10MidnightUt1": 46.73840090073645,
+        "azimuthDegrees": 280.5827340668934
+      }
+    ]
+  },
+  "rejectedProbes": [
+    {
+      "prefix": "probe-june-moon",
+      "reason": "Bare80 was parsed as1980; excluded from generated data."
+    },
+    {
+      "prefix": "probe-ad80-june-moon",
+      "reason": "Bare0080 was ALSO parsed as1980; excluded. Explicit AD0080 fixes it."
+    }
+  ]
+}

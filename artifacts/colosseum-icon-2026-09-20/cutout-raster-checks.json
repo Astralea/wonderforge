@@ -1,0 +1,150 @@
+{
+  "renderer": "librsvg",
+  "checks": 24,
+  "results": [
+    {
+      "id": "colosseum",
+      "mode": "surface",
+      "label": "open bowl",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "surface",
+      "label": "ground arch",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "surface",
+      "label": "middle arch",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "surface",
+      "label": "upper arch",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "surface",
+      "label": "solid pier",
+      "alpha": 255
+    },
+    {
+      "id": "colosseum",
+      "mode": "surface",
+      "label": "solid lower pier",
+      "alpha": 255
+    },
+    {
+      "id": "colosseum",
+      "mode": "wave-clip",
+      "label": "open bowl",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "wave-clip",
+      "label": "ground arch",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "wave-clip",
+      "label": "middle arch",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "wave-clip",
+      "label": "upper arch",
+      "alpha": 0
+    },
+    {
+      "id": "colosseum",
+      "mode": "wave-clip",
+      "label": "solid pier",
+      "alpha": 255
+    },
+    {
+      "id": "colosseum",
+      "mode": "wave-clip",
+      "label": "solid lower pier",
+      "alpha": 255
+    },
+    {
+      "id": "petra",
+      "mode": "surface",
+      "label": "door",
+      "alpha": 0
+    },
+    {
+      "id": "petra",
+      "mode": "surface",
+      "label": "wall",
+      "alpha": 255
+    },
+    {
+      "id": "petra",
+      "mode": "wave-clip",
+      "label": "door",
+      "alpha": 0
+    },
+    {
+      "id": "petra",
+      "mode": "wave-clip",
+      "label": "wall",
+      "alpha": 255
+    },
+    {
+      "id": "chichen-itza",
+      "mode": "surface",
+      "label": "temple door",
+      "alpha": 0
+    },
+    {
+      "id": "chichen-itza",
+      "mode": "surface",
+      "label": "temple wall",
+      "alpha": 255
+    },
+    {
+      "id": "chichen-itza",
+      "mode": "wave-clip",
+      "label": "temple door",
+      "alpha": 0
+    },
+    {
+      "id": "chichen-itza",
+      "mode": "wave-clip",
+      "label": "temple wall",
+      "alpha": 255
+    },
+    {
+      "id": "stonehenge",
+      "mode": "surface",
+      "label": "lintel opening",
+      "alpha": 0
+    },
+    {
+      "id": "stonehenge",
+      "mode": "surface",
+      "label": "upright stone",
+      "alpha": 255
+    },
+    {
+      "id": "stonehenge",
+      "mode": "wave-clip",
+      "label": "lintel opening",
+      "alpha": 0
+    },
+    {
+      "id": "stonehenge",
+      "mode": "wave-clip",
+      "label": "upright stone",
+      "alpha": 255
+    }
+  ]
+}

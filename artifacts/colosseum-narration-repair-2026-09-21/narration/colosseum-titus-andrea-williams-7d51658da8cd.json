@@ -1,0 +1,28 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-titus",
+  "captionText": "Construction began under Vespasian. Titus opened the amphitheatre in AD 80.",
+  "src": "/audio/narration/colosseum-titus-andrea-williams-7d51658da8cd.mp3",
+  "duration": 6.176508,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 8.1,
+  "sha256": "9f41ed66ed4c98b1944dd841c441467b5765912039847fe9c1b58d8c13204034",
+  "bytes": 99936,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.06,
+    "truePeakDbtp": -2.38,
+    "gainDb": 5.34
+  }
+}

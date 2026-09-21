@@ -1,7 +1,7 @@
 # Spec 10 — Stonehenge Replication Scene
 
 Stonehenge is the first forward test of the Giza pipeline and of the project
-skill at `.agents/skills/wonderforge-scene-builder/`. It preserves the stable
+[Spec 49’s scene authoring pipeline](49-scene-authoring-pipeline.md). It preserves the stable
 `stonehenge` ID but replaces the legacy ring-of-boxes fallback with typed,
 deterministic physical construction.
 
@@ -19,6 +19,11 @@ Authoritative anchors:
 - Historic England list entry 1010140: a 30 m outer circle of 30 uprights and
   lintels, graded five-trilithon horseshoe, smaller bluestone settings, ramped
   stone holes, 110 m bank/ditch enclosure, NE–SW axis, and 4.9 m Heel Stone.
+- English Heritage's current [Stones of Stonehenge guide](https://www.english-heritage.org.uk/visit/places/stonehenge/things-to-do/stone-circle/stones-of-stonehenge)
+  and the [2024 Altar Stone provenance study](https://www.nature.com/articles/s41586-024-07652-1)
+  distinguish the Altar Stone's north-eastern Scottish origin from the Welsh
+  bluestones. Caption and catalog copy must say **many** smaller bluestones
+  came from Preseli, rather than giving every bluestone a Welsh origin.
 
 The exact lifting system is not archaeologically settled. This movie authors
 one coherent interpretation: horizontal transport on timber sledges, upright
@@ -85,10 +90,17 @@ the 0.34 m sled/skid bed is present only where timber fills that gap and is
 applied exactly once. Lintel guide rails remain beneath the soffit during the
 final settle until joint contact.
 
-Signature shot: late in BUILD, the camera looks down the NE–SW axis while the
-tall central trilithon lintel rises above a dense timber crib. The solstice
-caption and reveal hold that same axis: a low visible sun sits on the SW
-horizon, and the uprights throw long raking shadows toward the Heel Stone.
+The inner trilithons are built first; their last lintel seats by t = 0.339.
+Outer-circle lintel lifts run from t = 0.48 to 0.7675, overlapping the smaller
+bluestone settings from t = 0.58 to 0.828. This is the film's construction
+staging, not an assertion that the bluestones first arrived after the sarsens.
+The signature ending begins when the camera reaches the NE–SW axis at
+t = 0.78. The last small stones settle into the complete setting while a low
+sun remains visible on the SW horizon and the uprights cast long shadows
+toward the Heel Stone. The solstice caption explains the opposing midsummer
+sunrise and midwinter sunset directions; the quiet final hold preserves the
+completed silhouette. The film does not claim that both solstice alignments
+occur on a single astronomical date.
 
 Desktop composition:
 
@@ -138,7 +150,10 @@ The pure state graph is:
 - `seated` is identical to the authored final transform forever.
 
 No sample may show the centre of a rising stone below its continuous heel arc,
-or show a rope/A-frame that is not bound to the same operation ID.
+or show a rope/A-frame that is not bound to the same operation ID. The actual
+rendered local butt `[0,-height/2,0]` must transform to `heelPosition`; the rope
+attaches to the transformed local head of that same rigid pose. The centre path
+may not substitute a radial direction unrelated to the stone's Euler rotation.
 
 ## Lintel operation
 
@@ -151,7 +166,14 @@ The pure state graph is:
   `cribbed` and `hoisted`; the lintel rises continuously as layers accumulate.
   The crib stands beside the support pair, not four metres out in open air.
 - `aligned` is a short guided traverse onto the seated pair (about a metre),
-  then `seated` lowers onto mortice-and-tenon seats and stops.
+  then `seated` lowers onto mortice-and-tenon seats and stops. A grounded crib
+  spans the traverse beside/between the pair and stays present until joint
+  contact. Fixed-size crossed timber layers accumulate from the ground; no
+  height cap may lift the lowest layer into the air. Fixed guide timbers and
+  pivoting levering bars fill the sub-layer lift distance. Members never grow.
+- Authored XZ angles are converted to Three.js Y-up yaw. Both support centres
+  must lie beneath each final lintel's actual rendered bearing footprint; equal
+  heights alone do not establish support.
 - Outer-circle lintels are individual chord segments with visible joints;
   neither the lintel ring nor any horseshoe is one torus/arc solid.
 
@@ -197,10 +219,17 @@ model supplies it.
 The camera path is target-specific and pure. It orbits about one turn with
 authored holds on an upright raise, an outer-circle crib lift, and the central
 trilithon. The path is a high-angle construction shot, not an eye-level walk:
-mechanism holds sit at an 85–95 m radius with a ~16° look-down so the open
-plain stays in frame. The solstice caption and reveal widen past 110 m and
-drop pitch to ~9–11° so the sun disc sits on the SW horizon above the downs
-while the axis shadows still read. Pitch stays under half the vertical FOV so
+mechanism holds sit at a 72–95 m radius with a ~16° look-down so the open
+plain stays in frame. The solstice caption and reveal widen past 110 m. The
+35° FOV camera drops pitch to 7.9° at t = 0.78, then 7.3° at 0.92 and 6.9°
+at 1; its 2.3° correction eases in over the existing 0.68–0.78 approach.
+Portrait's wider 42° FOV retains its accepted 10.2°→9.6°→9.2° pitch and
+caption layout. The full authored Sun disc must clear the permanent 6vh top
+letterbox plus at least 1.5vh breathing room throughout t = 0.78–1 at desktop,
+wide, tablet and portrait aspects. Keep the solar direction/radius, solstice
+azimuth, target, construction and narration schedule unchanged. The full stone
+setting and Heel Stone remain framed as the axis shadows read below them.
+Pitch stays under half the vertical FOV so
 the sky remains visible. The outer-lintel
 wave begins on the camera-facing south-west arc so its crib, rope, and crew
 are not hidden behind seated uprights. Radius widens for portrait aspect;
@@ -287,9 +316,13 @@ checkpoint.
   sit on stone sockets. Grazed tufts stay shorter than 0.12 m.
 - Distant downs are a green rolling horizon beyond the working floor, not a
   fog-white hillside or a raised ring inside the 200 m radius.
-- Mechanism-hold camera radius is 85–95 m on desktop (wider in portrait);
+- Mechanism-hold camera radius is 72–95 m on desktop (wider in portrait);
   the reveal is ≥ 110 m. Mechanism holds are high-angle (~16°). The solstice
-  hold is ~9–11° so the sun disc clears the downs ridge.
+  hold is ~7–8° for 35° FOV and ~9–11° for portrait's 42° FOV so the full sun
+  disc clears the letterbox and downs ridge. Project the entire solar rim, not
+  only its centre, through the actual camera convention across the closing
+  interval; require 7.5vh total top reservation. Test the complete stone setting
+  for cropping and the approach for continuous position and pitch.
 - Production dispatch selects `StonehengeWorld`; all other fallback IDs remain
   functional.
 - Browser evidence and budgets meet Spec 04.
@@ -300,3 +333,14 @@ clearance protect occupied ground, procedural material recipes provide bounded
 variation, living-site density stays inside budget, and course/support-style
 occupancy tests cover the complete monument. Stonehenge keeps pits, A-frames,
 and cribs; it does not inherit pyramid ramps.
+
+## 2026-09-20 repair verification
+
+Renderer regression checks transform actual stone instance matrices, raycast the
+worked lintel underside over both uprights, and inspect every crib/guide/lever
+instance. Crib bases meet turf, successive layers touch, guide bottoms meet the
+stack, and pivoting bars reach the moving soffit within 3 cm through lift,
+traverse and settle. Existing layers retain fixed dimensions. Camera-near
+construction receives a closer early hold; the solstice/reveal axis is preserved.
+Sarsen midtones are raised within the existing shared rough-material family.
+Distant tree and shrub shadow/mesh cost is reduced before removing scene identity.

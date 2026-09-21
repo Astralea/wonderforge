@@ -55,7 +55,9 @@ require feature or visual parity and should not drive extensive separate work.
 
 ## Non-goals
 
-- No Firaxis/2K assets. Geometry and materials are original and procedural.
+- No Firaxis/2K assets. Geometry and materials are original and procedural,
+  except the credited NASA lunar surface image authorized for Colosseum's Moon
+  in Spec 12. This observational texture does not supply a construction model.
 - No photorealistic digital twin. The target is a tactile, low-poly,
   tilt-shift miniature with physically legible construction.
 - No backend or accounts. The experience remains a static site.

@@ -200,3 +200,28 @@ describe('Giza ambient hero orbit', () => {
     }
   });
 });
+
+
+describe('Giza operation framing', () => {
+  it('brings the south haul surface closer while keeping its endpoints visible', () => {
+    for (const aspect of [16 / 9, 390 / 844]) {
+      const fov = aspect < 0.72 ? GIZA_CAMERA.fov.mobile : GIZA_CAMERA.fov.desktop;
+      const close = gizaCinematicShotAt(0.2, aspect);
+      expect(close.radius).toBeLessThan(gizaCinematicShotAt(0.32, aspect).radius * 0.7);
+      for (const point of [new Vector3(7, 0, 37), new Vector3(7, 3, 12)]) {
+        const ndc = projectAt(0.2, aspect, fov, point);
+        expect(Math.abs(ndc.x)).toBeLessThan(0.9);
+        expect(Math.abs(ndc.y)).toBeLessThan(0.7);
+      }
+    }
+  });
+
+  it('eases into/out of the operation without a target or radius jump', () => {
+    for (const t of [0.08, 0.14, 0.24, 0.30]) {
+      const a = gizaCinematicShotAt(t - 1e-6, 16 / 9);
+      const b = gizaCinematicShotAt(t + 1e-6, 16 / 9);
+      expect(Math.abs(a.radius - b.radius)).toBeLessThan(0.01);
+      expect(new Vector3(...a.target).distanceTo(new Vector3(...b.target))).toBeLessThan(0.01);
+    }
+  });
+});
