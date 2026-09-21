@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/petra/1.0",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/quality-bar-2026-09-15/after/petra-t1.0/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 113,
+    "colorBuckets": 27,
+    "metrics": {
+      "colorBuckets": 32,
+      "colorEntropyBits": 2.57,
+      "edgeDensity": 0.068,
+      "luminance": {
+        "mean": 13.4,
+        "p5": 0,
+        "p95": 48.6,
+        "contrast": 48.6
+      },
+      "dominantColorShare": 0.352,
+      "nonBackgroundShare": 0.648
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 40,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 23600,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 20,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 40,
+        "triangles": 23600,
+        "points": 0,
+        "lines": 0,
+        "geometries": 20,
+        "textures": 16
+      },
+      "camera": {
+        "position": [
+          9.633252686399368,
+          32.55068332830154,
+          -62.89758668089842
+        ],
+        "direction": [
+          -0.1458891035467718,
+          -0.23853345757858102,
+          0.9601136177983973
+        ],
+        "fov": 35,
+        "aspect": 1.7777777777777777,
+        "near": 0.5
+      },
+      "scene": "petra-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

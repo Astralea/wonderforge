@@ -1,0 +1,17 @@
+{
+  "failures": [],
+  "runs": [
+    {
+      "mode": "desktop",
+      "browserErrors": [],
+      "networkErrors": [],
+      "mediaErrors": []
+    },
+    {
+      "mode": "mobile",
+      "browserErrors": [],
+      "networkErrors": [],
+      "mediaErrors": []
+    }
+  ]
+}

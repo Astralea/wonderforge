@@ -1,0 +1,30 @@
+[
+  {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George - Warm, Captivating Storyteller",
+    "model_id": "eleven_multilingual_v2",
+    "text": "The Quarry. Blocks are won from the plateau itself; the fine white casing crosses the river from Tura.",
+    "date_unix": 1787681104,
+    "settings": {
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 0.92,
+      "stability": 0.6
+    }
+  },
+  {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George - Warm, Captivating Storyteller",
+    "model_id": "eleven_multilingual_v2",
+    "text": "The Quarry. Blocks are won from the plateau itself; the fine white casing crosses the river from Tura.",
+    "date_unix": 1787509767,
+    "settings": {
+      "style": 0.25,
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "speed": 0.92,
+      "use_speaker_boost": true
+    }
+  }
+]

@@ -18,9 +18,21 @@ export const COLOSSEUM_BAYS = 80;
 export const COLOSSEUM_STOREY_HEIGHT = 11.5;
 export const COLOSSEUM_ATTIC_HEIGHT = 10.5;
 export const COLOSSEUM_FOUNDATION_HEIGHT = 3.5;
+export const COLOSSEUM_PODIUM_HEIGHT = 4.4;
 export const COLOSSEUM_WAGON_BED = 0.9;
 export const COLOSSEUM_MAX_ACTIVE = 24;
 export const COLOSSEUM_QUARRY: Vec3 = [172, 1.2, 10];
+
+const PODIUM_A = 43.2;
+const PODIUM_B = 25.8;
+const INNER_ARCADE_A = 57.5;
+const INNER_ARCADE_B = 40.5;
+const INTER_ARCADE_A = 74;
+const INTER_ARCADE_B = 60.5;
+
+const CAVEA_IMA = { innerA: 45, innerB: 27.4, outerA: 56.2, outerB: 39.4, height: 13.2, foot: 4.4 };
+const CAVEA_MEDIA = { innerA: 59, innerB: 42, outerA: 72.4, outerB: 58.8, height: 13.6, foot: 17.6 };
+const CAVEA_SUMMA = { innerA: 76, innerB: 62.2, outerA: 91.4, outerB: 75.6, height: 11.8, foot: 31.2 };
 
 const LAYERS: ColosseumLayer[] = [
   { id: 'roman-valley-sky', depth: 0, motion: 'playback-time' },
@@ -49,6 +61,16 @@ export function ellipseYaw(a: number, b: number, theta: number): number {
 
 export function bayTheta(bay: number): number {
   return (bay / COLOSSEUM_BAYS) * Math.PI * 2 - Math.PI / 2;
+}
+
+export function bayWidth(a: number, b: number, theta: number): number {
+  return Math.hypot(a * Math.sin(theta), b * Math.cos(theta)) * ((Math.PI * 2) / COLOSSEUM_BAYS);
+}
+
+export function ellipseRadius(a: number, b: number, theta: number): number {
+  const c = Math.cos(theta);
+  const s = Math.sin(theta);
+  return 1 / Math.hypot(c / a, s / b);
 }
 
 function part(partial: Omit<ColosseumPart, 'scale' | 'routeId'>): ColosseumPart {
@@ -83,16 +105,18 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       finalRotation: [0, yaw, 0],
       material: 'pozzolana',
       lane: segment % 3,
-      start: 0.02 + segment * 0.006,
+      start: 0.11 + segment * 0.007,
       duration: 0.04,
       colorVariation: rand() * 2 - 1,
     }));
   }
 
+  // Continuous exterior silhouette: storeys overlap so the oval keeps rising
+  // instead of freezing on a completed ground arcade while inner vaults fill.
   const storeyWindow = [
-    { storey: 0, origin: 0.16, span: 0.22, duration: 0.032 },
-    { storey: 1, origin: 0.56, span: 0.16, duration: 0.024 },
-    { storey: 2, origin: 0.70, span: 0.12, duration: 0.018 },
+    { storey: 0, origin: 0.12, span: 0.24, duration: 0.030 },
+    { storey: 1, origin: 0.34, span: 0.22, duration: 0.028 },
+    { storey: 2, origin: 0.55, span: 0.18, duration: 0.022 },
   ];
   const arcadeHeight = COLOSSEUM_STOREY_HEIGHT;
   for (const wave of storeyWindow) {
@@ -102,8 +126,7 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       const [nx, nz] = ellipseOutward(COLOSSEUM_A, COLOSSEUM_B, theta);
       const [x, z] = ellipsePoint(COLOSSEUM_A - 1.4, COLOSSEUM_B - 1.2, theta);
       const yaw = ellipseYaw(COLOSSEUM_A, COLOSSEUM_B, theta);
-      const spacing = Math.hypot(COLOSSEUM_A * Math.sin(theta), COLOSSEUM_B * Math.cos(theta))
-        * ((Math.PI * 2) / COLOSSEUM_BAYS);
+      const spacing = bayWidth(COLOSSEUM_A, COLOSSEUM_B, theta);
       parts.push(part({
         id: `arcade-${wave.storey}-${bay}`,
         group: 'arcade',
@@ -135,8 +158,7 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       bay,
       storey: 3,
       dimensions: [
-        Math.hypot(COLOSSEUM_A * Math.sin(theta), COLOSSEUM_B * Math.cos(theta))
-          * ((Math.PI * 2) / COLOSSEUM_BAYS) * 0.94,
+        bayWidth(COLOSSEUM_A, COLOSSEUM_B, theta) * 0.94,
         COLOSSEUM_ATTIC_HEIGHT - 0.4,
         2.9,
       ],
@@ -144,66 +166,177 @@ export function createColosseumConstructionPlan(): ColosseumConstructionPlan {
       finalRotation: [0, yaw, 0],
       material: 'travertine',
       lane: bay % 4,
-      start: 0.84 + bay * (0.10 / COLOSSEUM_BAYS),
-      duration: 0.016,
+      start: 0.74 + bay * (0.12 / COLOSSEUM_BAYS),
+      duration: 0.01,
       colorVariation: rand() * 2 - 1,
     }));
   }
 
-  for (let index = 0; index < 24; index += 1) {
-    const bay = Math.round((index / 24) * COLOSSEUM_BAYS) % COLOSSEUM_BAYS;
+  const innerArcadeWindow = [
+    { storey: 0, a: INNER_ARCADE_A, b: INNER_ARCADE_B, origin: 0.48, span: 0.12, duration: 0.007, depth: 2.7, prefix: 'inner-arcade' },
+    { storey: 0, a: INTER_ARCADE_A, b: INTER_ARCADE_B, origin: 0.5, span: 0.12, duration: 0.007, depth: 2.85, prefix: 'inter-arcade' },
+  ] as const;
+  for (const wave of innerArcadeWindow) {
+    const rise = wave.prefix === 'inner-arcade' ? 8.4 : arcadeHeight - 0.45;
+    const y = wave.prefix === 'inner-arcade'
+      ? COLOSSEUM_FOUNDATION_HEIGHT + rise / 2
+      : COLOSSEUM_FOUNDATION_HEIGHT + wave.storey * arcadeHeight + arcadeHeight / 2;
+    for (let bay = 0; bay < COLOSSEUM_BAYS; bay += 1) {
+      const theta = bayTheta(bay);
+      const [x, z] = ellipsePoint(wave.a, wave.b, theta);
+      const yaw = ellipseYaw(wave.a, wave.b, theta);
+      parts.push(part({
+        id: `${wave.prefix}-${wave.storey}-${bay}`,
+        group: 'inner-arcade',
+        kind: 'arch',
+        bay,
+        storey: wave.storey,
+        dimensions: [bayWidth(wave.a, wave.b, theta) * 0.94, rise, wave.depth],
+        finalPosition: [x, y, z],
+        finalRotation: [0, yaw, 0],
+        material: 'travertine',
+        lane: bay % 4,
+        start: wave.origin + bay * (wave.span / COLOSSEUM_BAYS),
+        duration: wave.duration,
+        colorVariation: rand() * 2 - 1,
+      }));
+    }
+  }
+
+  for (let bay = 0; bay < COLOSSEUM_BAYS; bay += 1) {
     const theta = bayTheta(bay);
-    const [nx, nz] = ellipseOutward(COLOSSEUM_A, COLOSSEUM_B, theta);
-    const midA = (COLOSSEUM_A + COLOSSEUM_ARENA_A) / 2;
-    const midB = (COLOSSEUM_B + COLOSSEUM_ARENA_B) / 2;
-    const [x, z] = ellipsePoint(midA, midB, theta);
     const yaw = ellipseYaw(COLOSSEUM_A, COLOSSEUM_B, theta);
     const arcade = parts.find((entry) => entry.id === `arcade-0-${bay}`)!;
-    const radialStart = 0.405 + index * (0.09 / 24);
+    const [podiumX, podiumZ] = ellipsePoint(PODIUM_A, PODIUM_B, theta);
     parts.push(part({
-      id: `radial-${index}`,
+      id: `podium-${bay}`,
+      group: 'podium',
+      kind: 'block',
+      bay,
+      storey: 0,
+      dimensions: [bayWidth(PODIUM_A, PODIUM_B, theta) * 1.04, COLOSSEUM_PODIUM_HEIGHT, 2.4],
+      finalPosition: [podiumX, COLOSSEUM_PODIUM_HEIGHT / 2, podiumZ],
+      finalRotation: [0, yaw, 0],
+      material: 'travertine',
+      lane: bay % 4,
+      start: Math.max(0.16 + bay * (0.16 / COLOSSEUM_BAYS), 0.08),
+      duration: 0.008,
+      colorVariation: rand() * 2 - 1,
+    }));
+
+    const radialInner = ellipseRadius(PODIUM_A + 1.2, PODIUM_B + 1.1, theta);
+    const radialOuter = ellipseRadius(COLOSSEUM_A - 4.2, COLOSSEUM_B - 3.6, theta);
+    const radialSpan = radialOuter - radialInner;
+    const radialMid = (radialInner + radialOuter) / 2;
+    const radialX = Math.cos(theta) * radialMid;
+    const radialZ = Math.sin(theta) * radialMid;
+    const radialStart = Math.max(0.38 + bay * (0.12 / COLOSSEUM_BAYS), arcade.start + arcade.duration + 0.006);
+    parts.push(part({
+      id: `radial-${bay}`,
       group: 'radial',
       kind: 'block',
       bay,
       storey: 0,
-      dimensions: [2.35, 9.6, 16.5],
-      finalPosition: [x - nx * 2.2, 3.5 + 4.8, z - nz * 2.2],
+      dimensions: [1.85, 9.8, radialSpan],
+      finalPosition: [radialX, COLOSSEUM_FOUNDATION_HEIGHT + 4.9, radialZ],
       finalRotation: [0, yaw, 0],
       material: 'tuff',
-      lane: index % 3,
-      start: Math.max(radialStart, arcade.start + arcade.duration + 0.01),
-      duration: 0.032,
+      lane: bay % 3,
+      start: radialStart,
+      duration: 0.008,
       colorVariation: rand() * 2 - 1,
     }));
-    const vaultStart = 0.48 + index * (0.08 / 24);
+
+    const vaultMid = (
+      ellipseRadius(INNER_ARCADE_A, INNER_ARCADE_B, theta)
+      + ellipseRadius(INTER_ARCADE_A, INTER_ARCADE_B, theta)
+    ) / 2;
+    const vaultX = Math.cos(theta) * vaultMid;
+    const vaultZ = Math.sin(theta) * vaultMid;
+    const vaultStart = Math.max(0.58 + bay * (0.14 / COLOSSEUM_BAYS), radialStart + 0.01);
     parts.push(part({
-      id: `vault-${index}`,
+      id: `vault-${bay}`,
       group: 'vault',
-      kind: 'wedge',
+      kind: 'block',
       bay,
       storey: 0,
-      dimensions: [5.4, 3.1, 13.8],
-      finalPosition: [x - nx * 1.1, 3.5 + 9.6 + 1.55, z - nz * 1.1],
-      finalRotation: [0.18, yaw, 0],
+      dimensions: [bayWidth(INNER_ARCADE_A, INNER_ARCADE_B, theta) * 1.02, 3.2, 14.4],
+      finalPosition: [vaultX, COLOSSEUM_FOUNDATION_HEIGHT + 9.8 + 1.6, vaultZ],
+      finalRotation: [0, yaw, 0],
       material: 'pozzolana',
-      lane: index % 3,
-      start: Math.max(vaultStart, radialStart + 0.034),
-      duration: 0.03,
+      lane: bay % 3,
+      start: vaultStart,
+      duration: 0.008,
       colorVariation: rand() * 2 - 1,
     }));
+
+    const imaArcade = arcade;
+    const mediaArcade = parts.find((entry) => entry.id === `arcade-1-${bay}`)!;
+    const summaArcade = parts.find((entry) => entry.id === `arcade-2-${bay}`)!;
+    const imaStart = Math.max(
+      0.6 + bay * (0.12 / COLOSSEUM_BAYS),
+      vaultStart + 0.01,
+      imaArcade.start + imaArcade.duration + 0.008,
+    );
+    const mediaStart = Math.max(
+      0.76 + bay * (0.08 / COLOSSEUM_BAYS),
+      imaStart + 0.012,
+      mediaArcade.start + mediaArcade.duration + 0.008,
+    );
+    const summaStart = Math.max(
+      0.78 + bay * (0.07 / COLOSSEUM_BAYS),
+      mediaStart + 0.01,
+      summaArcade.start + summaArcade.duration + 0.008,
+    );
+    const maeniana = [
+      { id: 'ima', band: CAVEA_IMA, storey: 0, start: imaStart, material: 'travertine' as const },
+      { id: 'media', band: CAVEA_MEDIA, storey: 1, start: mediaStart, material: 'travertine' as const },
+      { id: 'summa', band: CAVEA_SUMMA, storey: 2, start: summaStart, material: 'timber' as const },
+    ];
+    for (const maenianum of maeniana) {
+      const midA = (maenianum.band.innerA + maenianum.band.outerA) / 2;
+      const midB = (maenianum.band.innerB + maenianum.band.outerB) / 2;
+      const [seatX, seatZ] = ellipsePoint(midA, midB, theta);
+      const radial = ellipseRadius(maenianum.band.outerA, maenianum.band.outerB, theta)
+        - ellipseRadius(maenianum.band.innerA, maenianum.band.innerB, theta);
+      parts.push(part({
+        id: `cavea-${maenianum.id}-${bay}`,
+        group: 'cavea',
+        kind: 'seat',
+        bay,
+        storey: maenianum.storey,
+        dimensions: [bayWidth(midA, midB, theta) * 1.08, maenianum.band.height, radial],
+        finalPosition: [seatX, maenianum.band.foot + maenianum.band.height / 2, seatZ],
+        finalRotation: [0, yaw, 0],
+        material: maenianum.material,
+        lane: bay % 4,
+        start: maenianum.start,
+        duration: 0.006,
+        colorVariation: rand() * 2 - 1,
+      }));
+    }
+  }
+
+  const arenaSectors = 16;
+  for (let sector = 0; sector < arenaSectors; sector += 1) {
+    const theta = ((sector + 0.5) / arenaSectors) * Math.PI * 2 - Math.PI / 2;
+    const yaw = ellipseYaw(COLOSSEUM_ARENA_A, COLOSSEUM_ARENA_B, theta);
+    const [x, z] = ellipsePoint(COLOSSEUM_ARENA_A * 0.5, COLOSSEUM_ARENA_B * 0.5, theta);
+    const radial = ellipseRadius(COLOSSEUM_ARENA_A, COLOSSEUM_ARENA_B, theta) * 0.96;
+    const chord = bayWidth(COLOSSEUM_ARENA_A, COLOSSEUM_ARENA_B, theta) * (COLOSSEUM_BAYS / arenaSectors) * 1.12;
     parts.push(part({
-      id: `cavea-${index}`,
-      group: 'cavea',
-      kind: 'wedge',
-      bay,
-      storey: 1,
-      dimensions: [6.2, 2.15, 11.4],
-      finalPosition: [x - nx * 0.4, 3.5 + 9.6 + 3.1 + 2.4, z - nz * 0.4],
-      finalRotation: [0.28, yaw, 0],
-      material: 'travertine',
-      lane: index % 3,
-      start: Math.max(0.50 + index * (0.07 / 24), vaultStart + 0.032),
-      duration: 0.028,
+      id: `arena-${sector}`,
+      group: 'arena',
+      kind: 'plank',
+      bay: Math.round((sector / arenaSectors) * COLOSSEUM_BAYS) % COLOSSEUM_BAYS,
+      storey: 0,
+      dimensions: [chord, 0.22, radial],
+      finalPosition: [x, 0.24, z],
+      finalRotation: [0, yaw, 0],
+      material: 'timber',
+      lane: sector % 3,
+      start: 0.76 + sector * (0.08 / arenaSectors),
+      duration: 0.01,
       colorVariation: rand() * 2 - 1,
     }));
   }

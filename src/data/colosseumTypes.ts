@@ -4,13 +4,16 @@ export type ColosseumPartGroup =
   | 'foundation'
   | 'arcade'
   | 'attic'
+  | 'inner-arcade'
+  | 'podium'
   | 'radial'
   | 'vault'
-  | 'cavea';
+  | 'cavea'
+  | 'arena';
 
-export type ColosseumPartKind = 'block' | 'arch' | 'wedge';
+export type ColosseumPartKind = 'block' | 'arch' | 'wedge' | 'seat' | 'plank';
 
-export type ColosseumMaterial = 'travertine' | 'tuff' | 'pozzolana';
+export type ColosseumMaterial = 'travertine' | 'tuff' | 'pozzolana' | 'timber';
 
 export type ColosseumRouteId = 'tivoli-east';
 

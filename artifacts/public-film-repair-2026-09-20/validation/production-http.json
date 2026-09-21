@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "contentType": "text/html",
+    "bytes": 2075,
+    "sha256": "5c17b86243213a4085ee5e34a3e64a869b29b5f02acc5e04e61956012e6b4a31"
+  },
+  {
+    "path": "/models/eiffel-construction-kit/tower-kit.runtime.json",
+    "status": 200,
+    "contentType": "application/json",
+    "bytes": 5559468,
+    "sha256": "bc0a4af11cededec336de8b45c88c7533dde9934e743ef2087655cfcc26ce237"
+  },
+  {
+    "path": "/models/paris-1889/paris-city.glb.gz",
+    "status": 200,
+    "contentType": "model/gltf-binary",
+    "bytes": 5019070,
+    "sha256": "b2d0350edba8bb20b76a8f8564f70d39ea3aefe51404bfc97bbe45195182a70e"
+  },
+  {
+    "path": "/brand/wonderforge-wordmark.png",
+    "status": 200,
+    "contentType": "image/png",
+    "bytes": 1985827,
+    "sha256": "f6d244e628781b77d03dac09faf6e58e3bc9cff39cb4eb83838afe584a297d50"
+  }
+]

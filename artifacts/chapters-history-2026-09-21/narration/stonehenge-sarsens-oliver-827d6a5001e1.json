@@ -1,0 +1,22 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-sarsens",
+  "captionText": "Hammerstones shaped the sarsens; their joints echo skilled woodworking.",
+  "src": "/audio/narration/stonehenge-sarsens-oliver-827d6a5001e1.mp3",
+  "duration": 5.34059,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "3791b62a1d3add96addff0d37e7cd6d2e9674f46cd93d3689ee1ef8a0eccedc4",
+  "bytes": 86561
+}

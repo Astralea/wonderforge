@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { WONDERS, getWonder } from '../data';
+import { catalogReady, getWonder } from '../data';
 import { WonderCanvas } from '../render/WonderCanvas';
 import { usePlaybackStore } from '../store/playback';
 import { useUiStore } from '../store/ui';
@@ -38,9 +38,16 @@ export function CinematicView() {
 
   useSoundtrack(wonderId, 'cinematic');
 
+  useEffect(() => {
+    setChaptersOpen(false);
+    setFactsOpen(false);
+    chromeHeldRef.current = false;
+  }, [wonderId]);
+
   const go = (delta: number) => {
-    const index = WONDERS.findIndex((w) => w.id === wonderId);
-    const next = WONDERS[(index + delta + WONDERS.length) % WONDERS.length]!;
+    const ready = catalogReady();
+    const index = ready.findIndex((w) => w.id === wonderId);
+    const next = ready[(index + delta + ready.length) % ready.length]!;
     setFactsOpen(false);
     openWonder(next.id);
   };
@@ -142,7 +149,7 @@ export function CinematicView() {
     : 'pointer-events-none opacity-0';
 
   return (
-    <section className={`fixed inset-0 overflow-hidden bg-umber-950 ${storyFocus ? 'eiffel-story-focus' : ''}`} data-chapters-open={chaptersOpen}>
+    <section className={`cinematic-view fixed inset-0 overflow-hidden bg-umber-950 ${storyFocus ? 'eiffel-story-focus' : ''}`} data-chapters-open={chaptersOpen}>
       <div className="absolute inset-0">
         <WonderCanvas wonder={wonder} mode="cinematic" />
       </div>
@@ -171,7 +178,8 @@ export function CinematicView() {
       >
         <button
           onClick={closeWonder}
-          className="flex min-h-11 items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
+          aria-label="WonderForge, back to films"
+          className="flex min-h-11 cursor-pointer items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
         >
           WonderForge
         </button>
@@ -183,8 +191,9 @@ export function CinematicView() {
           className="absolute left-0 top-[calc(6vh+1rem)] flex flex-col items-start px-5"
         >
           <CaptionBeatIndex
+            key={wonderId}
             wonder={wonder}
-            compact={storyFocus}
+            compact
             onExpandedChange={setChaptersOpen}
             onHoldChrome={(held) => holdChromeRef.current(held)}
           />

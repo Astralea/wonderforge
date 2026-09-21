@@ -13,6 +13,8 @@ import {
 import { SYDNEY_SAILS, SYDNEY_SPHERE_RADIUS } from '../src/data/sydneyConstruction';
 import type { Wonder } from '../src/data/types';
 import { sydneyCinematicShotAt } from '../src/engine/sydneyCamera';
+import { createSydneyHarbourLots, sydneyHarbourLotsOf } from '../src/engine/sydneyHarbourLots';
+import { SYDNEY_BRIDGE, SYDNEY_WATER_Y, sydneyGroundKindAt, sydneyTerrainHeightAt } from '../src/engine/sydneyTerrain';
 import { createMaterialLibrary } from '../src/render/three/MaterialLibrary';
 import { SydneyEnvironment } from '../src/render/three/SydneyEnvironment';
 import { createSydneyPartGeometry, createSailGeometry } from '../src/render/three/SydneyStoneSystem';
@@ -131,20 +133,32 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
     expect(trackFor('sydney-opera-house', 'ambient')?.src).toBe('/audio/sydney-opera-house-ambient-loop.mp3');
   });
 
-  it('creates per-sail full-size geometry from the Utzon 75 m sphere, never a stretched unit shape', () => {
+  it('loads Blender-authored sail skins from the harbour kit', async () => {
+    const { loadSydneySailGeometries } = await import('../src/render/three/sydneyKit');
+    const sails = await loadSydneySailGeometries();
+    expect(sails).toHaveLength(9);
+    for (const geom of sails) {
+      expect(geom.getAttribute('position')!.count).toBeGreaterThan(80);
+      geom.computeBoundingBox();
+      const box = geom.boundingBox!;
+      const h = box.max.y - box.min.y;
+      expect(h).toBeGreaterThan(12);
+      expect(h).toBeLessThan(90);
+      geom.dispose();
+    }
+  });
+
+  it('creates per-sail full-size Utzon vaults from the 75 m sphere, never a stretched unit shape', () => {
     for (const def of SYDNEY_SAILS) {
       const geom = createSailGeometry(def);
-      expect(geom.type).toBe('SphereGeometry');
+      expect(geom.getAttribute('position')!.count).toBeGreaterThan(80);
       geom.computeBoundingBox();
       const box = geom.boundingBox!;
       const w = box.max.x - box.min.x;
       const h = box.max.y - box.min.y;
       const d = box.max.z - box.min.z;
-      // The cap is cut from a 75 m sphere — its extents must be >> 1 m
       expect(Math.max(w, h, d)).toBeGreaterThan(SYDNEY_SPHERE_RADIUS * 0.1);
-      // And should not exceed the sphere diameter (2 × 75)
       expect(Math.max(w, h, d)).toBeLessThan(SYDNEY_SPHERE_RADIUS * 2.1);
-      // No non-uniform grotesque stretching: widest / narrowest < 4
       const dims = [w, h, d].sort((a, b) => a - b);
       expect(dims[2]! / Math.max(1, dims[0]!)).toBeLessThan(8);
       geom.dispose();
@@ -160,7 +174,22 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
     expect(foam).toBeInstanceOf(InstancedMesh);
     expect(foam.count).toBeGreaterThan(24);
     expect(environment.group.getObjectByName('sydney-harbour-bridge-arch')).toBeTruthy();
+    expect(environment.group.getObjectByName('sydney-harbour-bridge-pylon-south')).toBeTruthy();
     expect(environment.group.getObjectByName('sydney-harbour-hulls')).toBeTruthy();
     environment.dispose();
+  });
+
+  it('keeps harbour water under the Bridge span and land only on the pylon abutments', () => {
+    expect(createSydneyHarbourLots()).toEqual(createSydneyHarbourLots());
+    expect(sydneyHarbourLotsOf('office').length).toBeGreaterThan(12);
+    expect(sydneyHarbourLotsOf('shed').length).toBeGreaterThan(6);
+    expect(sydneyHarbourLotsOf('terrace').length).toBeGreaterThan(8);
+    expect(sydneyHarbourLotsOf('fig').length).toBeGreaterThan(20);
+    expect(sydneyTerrainHeightAt(SYDNEY_BRIDGE.x, (SYDNEY_BRIDGE.northZ + SYDNEY_BRIDGE.southZ) / 2)).toBe(SYDNEY_WATER_Y);
+    expect(sydneyTerrainHeightAt(SYDNEY_BRIDGE.x, SYDNEY_BRIDGE.southZ)).toBeGreaterThan(2);
+    expect(sydneyTerrainHeightAt(SYDNEY_BRIDGE.x, SYDNEY_BRIDGE.northZ)).toBeGreaterThan(2);
+    expect(sydneyTerrainHeightAt(520, 520)).toBe(SYDNEY_WATER_Y);
+    expect(sydneyGroundKindAt(0, 0)).toBe('point');
+    expect(sydneyGroundKindAt(8, 230)).toBe('city');
   });
 });

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { WONDERS } from '../src/data';
+import { WONDERS, catalogInProgress, catalogReady, isReadyWonder } from '../src/data';
 import { expandRecipe } from '../src/engine/geometry';
 
 const HEX = /^#[0-9a-f]{6}$/i;
@@ -8,6 +8,25 @@ const KEBAB = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 describe('wonder catalog', () => {
   it('contains exactly 10 wonders', () => {
     expect(WONDERS).toHaveLength(10);
+  });
+
+  it('publishes four Ready films in chronological order and lists the rest as in progress', () => {
+    expect(catalogReady().map((w) => w.id)).toEqual([
+      'pyramids-of-giza',
+      'stonehenge',
+      'colosseum',
+      'eiffel-tower',
+    ]);
+    expect(catalogInProgress().map((w) => w.id)).toEqual([
+      'petra',
+      'chichen-itza',
+      'angkor-wat',
+      'forbidden-city',
+      'machu-picchu',
+      'sydney-opera-house',
+    ]);
+    expect(isReadyWonder('colosseum')).toBe(true);
+    expect(isReadyWonder('petra')).toBe(false);
   });
 
   it('has unique, kebab-case, stable ids', () => {
@@ -21,13 +40,15 @@ describe('wonder catalog', () => {
     expect(new Set(WONDERS.map((w) => w.era)).size).toBeGreaterThanOrEqual(5);
   });
 
-  it('every wonder has complete content: quote, description, facts', () => {
+  it('every wonder has complete content: quote, facts, and a description when shown', () => {
+    const readyIds = new Set(catalogReady().map((w) => w.id));
     for (const w of WONDERS) {
       expect(w.name.length).toBeGreaterThan(0);
       expect(w.location.length).toBeGreaterThan(0);
       expect(w.quote.text.length).toBeGreaterThan(10);
       expect(w.quote.author.length).toBeGreaterThan(0);
-      expect(w.description.length).toBeGreaterThan(20);
+      if (readyIds.has(w.id)) expect(w.description).toBe('');
+      else expect(w.description.length).toBeGreaterThan(20);
       expect(w.facts.length).toBeGreaterThanOrEqual(3);
       for (const f of w.facts) expect(f.length).toBeGreaterThan(10);
     }

@@ -1,0 +1,34 @@
+[
+  {
+    "path": "specs/12-colosseum-reference-scene.md",
+    "sha256": "aa3f2146edd2304b90a6badea2098ccfb9bb78939f7854377a2de330c52501f5"
+  },
+  {
+    "path": "specs/49-scene-authoring-pipeline.md",
+    "sha256": "60cb581094addb4b7247f73b55456e08c89ac80002222e6b68ca8f1c2e7a251b"
+  },
+  {
+    "path": "specs/50-historical-film-chapters.md",
+    "sha256": "dd23e4550b71e294f819d81fe0d56ad6dbff1ddd1b905db9b02da30016e582a0"
+  },
+  {
+    "path": "src/data/captions.ts",
+    "sha256": "31fe75858d6c80acb6a3ecbbedcbb2e10ce40e90b2bbb43f180aecaecfea5ec4"
+  },
+  {
+    "path": "src/data/historicalNarration.generated.ts",
+    "sha256": "33b32cd968a4480bc1c7d2bd9d4ad954a6301f23b7b267b57953f82d41e63acd"
+  },
+  {
+    "path": "tests/historical-chapters.test.ts",
+    "sha256": "f7b92c3ece417fd3e0e48850da337d91922a762983c8e2f06c6c5e6bd7cf2f19"
+  },
+  {
+    "path": "tests/historical-chapter-ui.test.tsx",
+    "sha256": "5afed240d14695731607ffc98dbe126903084d2131ca535a35a609404de76f99"
+  },
+  {
+    "path": "tests/narration.test.ts",
+    "sha256": "dbf7e8df6fdb0873d98b63ce18cfe64119fcf4e654ee0cc07f79793f9829d0e3"
+  }
+]

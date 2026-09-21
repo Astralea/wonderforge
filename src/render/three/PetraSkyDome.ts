@@ -93,7 +93,7 @@ const RIFT_FOG_NEUTRALIZER = new Color('#cbb49a');
 
 export class PetraSkyDome {
   readonly mesh: Mesh;
-  private readonly geometry = new SphereGeometry(1_050, 40, 20);
+  private readonly geometry = new SphereGeometry(1_400, 48, 24);
   private readonly material: ShaderMaterial;
   private readonly fogScratch = new Color();
 

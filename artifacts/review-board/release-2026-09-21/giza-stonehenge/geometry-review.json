@@ -1,0 +1,93 @@
+{
+  "sun": [
+    {
+      "t": 0.8,
+      "cameraPitchDegrees": 10.1758072569728,
+      "expectedPitchDegrees": 10.175510204081633,
+      "sunElevationDegrees": 5.4,
+      "discRadiusDegrees": 1.55,
+      "discTopPx": 10.226728486044035,
+      "discBottomPx": 93.4717821403057,
+      "letterboxBottomPx": 54,
+      "obscuredHeightPx": 43.77327151395596
+    },
+    {
+      "t": 0.867,
+      "cameraPitchDegrees": 9.775174291836764,
+      "expectedPitchDegrees": 9.771979591836732,
+      "sunElevationDegrees": 5.4,
+      "discRadiusDegrees": 1.55,
+      "discTopPx": 21.130565663003676,
+      "discBottomPx": 104.05585426081392,
+      "letterboxBottomPx": 54,
+      "obscuredHeightPx": 32.86943433699632
+    },
+    {
+      "t": 1,
+      "cameraPitchDegrees": 9.200002628124997,
+      "expectedPitchDegrees": 9.2,
+      "sunElevationDegrees": 5.4,
+      "discRadiusDegrees": 1.55,
+      "discTopPx": 36.70513447966301,
+      "discBottomPx": 119.1886398480461,
+      "letterboxBottomPx": 54,
+      "obscuredHeightPx": 17.29486552033699
+    }
+  ],
+  "gizaBounds": [
+    {
+      "t": 0.88,
+      "completedMonumentScreenBoundsNdc": {
+        "khufu": {
+          "minX": 1.7956896154573074,
+          "maxX": 5.83321837550451
+        },
+        "khafre": {
+          "minX": -0.3533734594260691,
+          "maxX": 1.4985467195547804
+        },
+        "menkaure": {
+          "minX": -0.39481548044432485,
+          "maxX": 0.3753733906622315
+        }
+      },
+      "note": "Final stone bounds projected through captured camera; at .88 some Menkaure blocks are not seated yet."
+    },
+    {
+      "t": 0.94,
+      "completedMonumentScreenBoundsNdc": {
+        "khufu": {
+          "minX": 0.8484241554295376,
+          "maxX": 2.2971543810088098
+        },
+        "khafre": {
+          "minX": -0.6792718069802725,
+          "maxX": 0.6158635478996312
+        },
+        "menkaure": {
+          "minX": -1.4372126128739762,
+          "maxX": -0.7934172918107095
+        }
+      },
+      "note": "Final stone bounds projected through captured camera; at .88 some Menkaure blocks are not seated yet."
+    },
+    {
+      "t": 1,
+      "completedMonumentScreenBoundsNdc": {
+        "khufu": {
+          "minX": -0.04929392184809965,
+          "maxX": 0.9586922367505305
+        },
+        "khafre": {
+          "minX": -0.5103608577433959,
+          "maxX": 0.5575865760088317
+        },
+        "menkaure": {
+          "minX": -0.9477992557404062,
+          "maxX": -0.3418854897870458
+        }
+      },
+      "note": "Final stone bounds projected through captured camera; at .88 some Menkaure blocks are not seated yet."
+    }
+  ]
+}

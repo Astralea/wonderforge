@@ -1,0 +1,12 @@
+{
+  "browser": "Chromium",
+  "version": "151.0.7922.34",
+  "mode": "headless",
+  "outputMuted": true,
+  "physicalPhone": false,
+  "sampledViewports": [
+    "1440x900",
+    "390x844"
+  ],
+  "note": "Version read from the same installed browser channel immediately after the smoke run; no additional page was opened."
+}

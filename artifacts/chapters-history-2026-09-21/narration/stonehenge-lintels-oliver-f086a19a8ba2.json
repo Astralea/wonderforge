@@ -1,0 +1,28 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-lintels",
+  "captionText": "The film uses timber platforms to raise the stone lintels.",
+  "src": "/audio/narration/stonehenge-lintels-oliver-f086a19a8ba2.mp3",
+  "duration": 4.086712,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "1cac09eac5b4d4961e5801cfdd878c10843a3d127bf3dd2bb81742917405b965",
+  "bytes": 66499,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.15,
+    "truePeakDbtp": -2.37,
+    "gainDb": 6.75
+  }
+}

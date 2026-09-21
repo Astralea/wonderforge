@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { statSync } from 'node:fs';
 import { join } from 'node:path';
 import { SOUNDTRACK, trackFor } from '../src/data/soundtrack';
+import { catalogReady } from '../src/data';
 import { createInitialState } from '../src/store/playback';
 import { EIFFEL_FILM_DURATION } from '../src/engine/eiffelFilm';
 
@@ -43,6 +44,12 @@ describe('soundtrack description', () => {
     }
   });
 
+  it('gives Watch-now ambient beds more than one thirty-second cell', () => {
+    for (const id of ['pyramids-of-giza', 'stonehenge', 'colosseum', 'eiffel-tower'] as const) {
+      expect(SOUNDTRACK[id]!.ambient.duration).toBeGreaterThan(70);
+    }
+  });
+
   it('serves every cue from the public audio directory', () => {
     for (const track of allTracks) {
       expect(track.src).toMatch(/^\/audio\/[a-z0-9-]+\.mp3$/);
@@ -64,6 +71,9 @@ describe('soundtrack description', () => {
     expect(trackFor('eiffel-tower', 'cinematic')?.id).toBe('eiffel-tower-detailed');
     expect(trackFor('eiffel-tower', 'ambient')?.id).toBe('eiffel-tower-ambient-loop');
     expect(trackFor('petra', 'cinematic')).toBeUndefined();
+    for (const wonder of catalogReady()) {
+      expect(trackFor(wonder.id, 'cinematic')?.src).toMatch(/\.mp3$/);
+    }
     for (const tracks of Object.values(SOUNDTRACK)) {
       if (!tracks) continue;
       for (const [role, track] of Object.entries(tracks)) {

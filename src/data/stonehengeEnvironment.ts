@@ -65,7 +65,7 @@ export function createStonehengeEnvironmentPlan(): StonehengeEnvironmentPlan {
       radius: 560,
       segments: 72,
       motion: 'static-world-space',
-      description: 'Broad fixed rolling chalk downs, flat inside ~210 m, with green horizon ridges beyond the working floor.',
+      description: 'Broad fixed rolling chalk downs. The inner ~90 m stays a working floor; beyond that the horizon is offset NW/SE/SW lobes, never a circular ridge around the henge.',
     },
     henge: {
       ditchDiameter: 110,
@@ -77,9 +77,9 @@ export function createStonehengeEnvironmentPlan(): StonehengeEnvironmentPlan {
       grassTufts: 1000,
       nearHerbTufts: 340,
       shrubs: 110,
-      treeClusters: 12,
+      treeClusters: 24,
       cattle: 9,
-      description: 'Open grazed chalk grassland with sparse hazel, maple, ash and elm mosaics at the distant margins.',
+      description: 'Open grazed chalk grassland with a readable tree-line of hazel, maple, ash and elm mosaics on the offset downs — not a circular ridge or a fog wall.',
     },
     site: {
       dressingChips: 260,

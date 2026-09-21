@@ -290,8 +290,16 @@ export class RenderPipeline {
   private readonly grade: ShaderPass;
   /** Atmosphere inputs for the god-ray pass, set once per frame. */
   private readonly sunDirection = new Vector3(0, 1, 0);
+  private activeKeyDirection?: Vector3;
+  /** Direction of the one shadow-casting key, which may be lunar after sunset.
+   * Solar sky/grade inputs deliberately continue to use sunDirection.
+   */
+  get keyLightDirection(): Vector3 {
+    return this.activeKeyDirection ??= new Vector3(0, 1, 0);
+  }
   private shaftLowSun = 0;
   private sunVisibility = 1;
+  private lensStreakEnabled = true;
   private haze = 0.35;
   private readonly sunWorld = new Vector3();
   private readonly warmTint = new Color('#ffffff');
@@ -403,11 +411,23 @@ export class RenderPipeline {
       Math.sin(elevation),
       Math.cos(elevation) * Math.sin(azimuth),
     ).normalize();
-    this.sun.color.set(light.sun.color);
     const sunVisibility = Math.max(0, Math.min(1, light.sun.visibility ?? 1));
     this.sunVisibility = sunVisibility;
-    this.sun.intensity = (0.72 + light.sun.intensity * 1.72) * sunVisibility;
-    this.sun.position.copy(this.sunTarget).addScaledVector(direction, 145);
+    const key = light.keyLight ?? light.sun;
+    const keyAzimuth = (key.azimuth * Math.PI) / 180;
+    const keyElevation = (key.elevation * Math.PI) / 180;
+    const keyDirection = light.keyLight
+      ? new Vector3(
+        Math.cos(keyElevation) * Math.cos(keyAzimuth),
+        Math.sin(keyElevation),
+        Math.cos(keyElevation) * Math.sin(keyAzimuth),
+      ).normalize()
+      : direction;
+    const keyVisibility = Math.max(0, Math.min(1, key.visibility ?? 1));
+    this.sun.color.set(key.color);
+    this.sun.intensity = (0.72 + key.intensity * 1.72) * keyVisibility;
+    this.sun.position.copy(this.sunTarget).addScaledVector(keyDirection, 145);
+    this.keyLightDirection.copy(keyDirection);
     this.sunDirection.copy(direction);
     if (this.eiffelReflection) this.scene.environmentIntensity = eiffelReflectionIntensity(direction.y);
     // Shafts and warm grade belong to the low sun: full strength near the
@@ -476,6 +496,11 @@ export class RenderPipeline {
     this.grade.uniforms.uGrain!.value = Math.max(0, Math.min(0.1, amount));
   }
 
+  /** Analytical celestial discs can opt out of the sampled horizontal streak. */
+  setLensStreakEnabled(enabled: boolean): void {
+    this.lensStreakEnabled = enabled;
+  }
+
   /** `filmTime` seeds the grade's grain; playback `t` keeps scrubs identical. */
   render(filmTime = 0): void {
     this.grade.uniforms.uGrainTime!.value = filmTime;
@@ -494,7 +519,8 @@ export class RenderPipeline {
       this.haze,
     );
     this.godrays.uniforms.uIntensity!.value = this.bloom.enabled ? shafts : 0;
-    this.godrays.uniforms.uStreak!.value = this.bloom.enabled ? streak * this.sunVisibility : 0;
+    this.godrays.uniforms.uStreak!.value = this.bloom.enabled && this.lensStreakEnabled !== false
+      ? streak * this.sunVisibility : 0;
     // info auto-resets on every internal render() the composer issues, which
     // would leave diagnostics reporting only the final fullscreen quad.
     // Accumulate across the whole frame so the budget numbers stay honest
@@ -512,8 +538,8 @@ export class RenderPipeline {
     this.eiffelReflection?.dispose();
     this.eiffelReflection = undefined;
     this.sun.shadow.map?.dispose();
-    this.godrays.material.dispose();
-    this.bloom.dispose();
+    // The composer owns its targets, but each pass owns its material/quad.
+    for (const pass of this.composer.passes) pass.dispose();
     this.composer.dispose();
     this.renderer.renderLists.dispose();
     this.renderer.dispose();

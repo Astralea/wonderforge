@@ -15,33 +15,64 @@
   padding-bottom: 0.5rem;
 }
 @media (max-width: 767px) {
-  .eiffel-story-focus [data-testid='cinematic-top-chrome'] {
+  .cinematic-view [data-testid='cinematic-top-chrome'] {
     top: 0;
     right: 0.5rem;
     left: auto;
     align-items: flex-end;
     padding-inline: 0;
   }
-  .eiffel-story-focus .eiffel-chapters-toggle {
+  .cinematic-view .eiffel-chapters-toggle {
     display: block;
     height: 6vh;
   }
-  .eiffel-story-focus .eiffel-compact-index-nav:not([data-expanded='true']) {
+  .cinematic-view .eiffel-compact-index-nav:not([data-expanded='true']) {
     display: none;
   }
-  .eiffel-story-focus .eiffel-compact-index-nav[data-expanded='true'] {
+  .cinematic-view .eiffel-compact-index-nav[data-expanded='true'] {
     max-height: min(22rem, 60dvh);
     max-width: calc(100vw - 1rem);
     padding: 0.75rem 1rem;
     background: rgb(20 16 12 / 95%);
   }
-  .eiffel-story-focus[data-chapters-open='true'] .eiffel-chapter-caption {
+  .cinematic-view[data-chapters-open='true'] .eiffel-chapter-caption,
+  .cinematic-view[data-chapters-open='true'] .film-caption,
+  .cinematic-view[data-chapters-open='true'] .cinematic-title-card {
     visibility: hidden;
   }
-  .eiffel-story-focus .eiffel-chapter-caption {
+  .cinematic-view .eiffel-chapter-caption,
+  .cinematic-view .film-caption {
+    top: calc(6vh + 0.75rem);
+    bottom: auto;
+    text-align: left;
+    max-width: none;
     left: 1.25rem;
     right: 1.25rem;
     width: auto;
     padding: 0.6rem 0.8rem;
+  }
+  .cinematic-view .cinematic-title-card {
+    top: calc(6vh + 1rem);
+    bottom: auto;
+    left: 1.25rem;
+    right: 1.25rem;
+  }
+  .cinematic-view .cinematic-title-card p {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .cinematic-view .cinematic-title-card p + p {
+    font-size: 0.7rem;
+  }
+  .cinematic-view .cinematic-quote-text,
+  .cinematic-view .cinematic-quote-author {
+    display: none;
+  }
+}
+
+/* The axis is the subject of this shot: keep its solar disc unobstructed. */
+@media (max-width: 767px) and (orientation: portrait) {
+  .cinematic-view .film-caption[data-caption-id='stonehenge-axis'] {
+    top: 25vh;
   }
 }

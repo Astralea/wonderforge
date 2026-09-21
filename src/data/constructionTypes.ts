@@ -53,7 +53,17 @@ export interface RouteWaypoints {
   alignment: Vec3;
 }
 
+export interface GizaRampSurface {
+  foot: Vec3;
+  crest: Vec3;
+  width: number;
+  /** Course transitions finish before the first ascent begins. */
+  courses: Array<{ start: number; readyAt: number; height: number }>;
+  end: number;
+}
+
 export interface ConstructionRoute {
+  rampSurface?: GizaRampSurface;
   id: string;
   waypoints: RouteWaypoints;
   rampCrestFor(block: ConstructionBlock): Vec3;
@@ -73,7 +83,7 @@ export interface SceneLayer {
 }
 
 /**
- * A terraced working earthwork. Typed here rather than in the renderer so the
+ * A compacted working earthwork. Typed here rather than in the renderer so the
  * same footprint drives both the geometry and the site-clearance rules that
  * keep camp props and scatter from growing through it (Spec 08).
  */

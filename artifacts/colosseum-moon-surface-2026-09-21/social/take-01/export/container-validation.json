@@ -1,0 +1,35 @@
+{
+  "mp4Atoms": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 23728
+    },
+    {
+      "type": "free",
+      "offset": 23760,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 23768,
+      "size": 18266415
+    }
+  ],
+  "faststart": true,
+  "capturedFrames": [
+    {
+      "film": "colosseum",
+      "count": 150,
+      "unique": 150,
+      "firstSourceSecond": 54,
+      "lastSourceSecond": 58.96666666666667
+    }
+  ],
+  "contactSheet": "artifacts/colosseum-moon-surface-2026-09-21/social/take-01/export/contact-sheet.jpg"
+}

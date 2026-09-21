@@ -1,0 +1,13 @@
+{
+  "text": "Here, ramps and levers raise each stone into place.",
+  "provider": "ElevenLabs",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "capture": "production-0/desktop.json",
+    "calls": 38,
+    "triangles": 43691,
+    "budget": 180000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-0/mobile.json",
+    "calls": 22,
+    "triangles": 13932,
+    "budget": 120000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-0.58/desktop.json",
+    "calls": 94,
+    "triangles": 119000,
+    "budget": 180000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-0.58/mobile.json",
+    "calls": 86,
+    "triangles": 85072,
+    "budget": 120000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-0.86/desktop.json",
+    "calls": 103,
+    "triangles": 150448,
+    "budget": 180000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-0.86/mobile.json",
+    "calls": 86,
+    "triangles": 100969,
+    "budget": 120000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-1/desktop.json",
+    "calls": 70,
+    "triangles": 125679,
+    "budget": 180000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "capture": "production-1/mobile.json",
+    "calls": 54,
+    "triangles": 79789,
+    "budget": 120000,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "consoleErrors": [],
+    "pageErrors": []
+  }
+]

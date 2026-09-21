@@ -1,0 +1,82 @@
+{
+  "live": {},
+  "local": [
+    {
+      "mode": "narrow",
+      "width": 320,
+      "height": 844,
+      "reducedMotion": true,
+      "homeLoaders": [],
+      "ready": [
+        "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+        "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+        "IIIColosseumRome, Italy · Classical Era · 80 AD",
+        "IVEiffel TowerParis, France · Industrial Era · 1889"
+      ],
+      "scenes": [
+        {
+          "id": "pyramids-of-giza",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "stonehenge",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "colosseum",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "eiffel-tower",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n3 min film\n50%\nNARRATION ON\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "failures": []
+}

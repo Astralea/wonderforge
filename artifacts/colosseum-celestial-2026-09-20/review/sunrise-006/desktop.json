@@ -1,0 +1,151 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/colosseum/0.06",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/colosseum-celestial-2026-09-20/review/sunrise-006/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 244,
+    "colorBuckets": 81,
+    "metrics": {
+      "colorBuckets": 96,
+      "colorEntropyBits": 4.38,
+      "edgeDensity": 0.043,
+      "luminance": {
+        "mean": 93.6,
+        "p5": 59.1,
+        "p95": 153.9,
+        "contrast": 94.8
+      },
+      "dominantColorShare": 0.182,
+      "nonBackgroundShare": 0.818
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 43,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 32057,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 41,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 43,
+        "triangles": 32057,
+        "points": 0,
+        "lines": 0,
+        "geometries": 41,
+        "textures": 16
+      },
+      "colosseumCelestial": {
+        "t": 0.06,
+        "julianDayUt1": 1750438.6556081325,
+        "calendar": "Julian",
+        "timeScale": "UT1",
+        "angularScale": 2.4,
+        "sun": {
+          "direction": [
+            0.8639155077217664,
+            0.024877600937483983,
+            0.5030219681976502
+          ],
+          "azimuthDegrees": 59.78954146617531,
+          "worldAzimuthDegrees": 30.210458533824692,
+          "elevationDegrees": 1.425528606015616,
+          "distanceKm": 152193704.10309476,
+          "angularRadiusDegrees": 0.2619084463047595,
+          "aboveHorizon": true,
+          "upperLimbAboveHorizon": true,
+          "horizonVisibility": 1
+        },
+        "moon": {
+          "direction": [
+            0.2423946155310723,
+            -0.5380042707889009,
+            0.8073389963171894
+          ],
+          "azimuthDegrees": 16.711803993274884,
+          "worldAzimuthDegrees": 73.28819600672512,
+          "elevationDegrees": -32.54788398044894,
+          "distanceKm": 369085.9783607893,
+          "angularRadiusDegrees": 0.26970963171077345,
+          "aboveHorizon": false,
+          "upperLimbAboveHorizon": false,
+          "horizonVisibility": 0,
+          "lightDirection": [
+            0.8645885569283791,
+            0.026220557755888548,
+            0.5017958843787711
+          ],
+          "illuminatedFraction": 0.1997078877777313,
+          "referenceIlluminatedFraction": 0.19973177238731385,
+          "phaseAngleDegrees": 126.91175110819641,
+          "referencePhaseAngleDegrees": 126.91175784277915,
+          "elongationDegrees": 52.97715104622201,
+          "waxing": true
+        },
+        "key": "sun",
+        "keyVisibility": 1
+      },
+      "camera": {
+        "position": [
+          -282.67616703573816,
+          71.86685160236465,
+          161.10428478831614
+        ],
+        "direction": [
+          0.8525631307157139,
+          -0.1948763432200436,
+          -0.4849322828987618
+        ],
+        "fov": 35,
+        "aspect": 1.7777777777777777,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

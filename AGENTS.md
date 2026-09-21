@@ -20,6 +20,9 @@ and ask before initializing version control or deleting generated evidence.
 
 ## Workflow
 
+Follow `specs/49-scene-authoring-pipeline.md` for scene work: evidence and
+connected context before asset detail; accept the result in the full film.
+
 1. Change the spec first when behavior changes.
 2. Write or extend tests in `tests/`.
 3. Implement until `npm run test && npm run typecheck && npm run build` is green.

@@ -1,3 +1,4 @@
+import { gizaRampKnots } from '../engine/gizaRampSupport';
 import { mulberry32 } from '../engine/random';
 import type {
   BlockMaterial,
@@ -110,22 +111,23 @@ const routes: ConstructionRoute[] = [
   // khufu-south swings south of the earthwork and mounts the foot end-on;
   // khufu-east rounds the south-east corner wide before turning to its foot.
   route('khufu-south', [-55, 0.35, 35], [-45, 0.35, 29], [-29, 0.3, 41], [7, 0.35, 37], [7, 8, 12], [7, 12, 7]),
-  route('khufu-east', [-52, 0.35, 39], [-41, 0.35, 31], [28, 0.3, 47], [43, 0.35, -1], [18, 8, -1], [13, 12, -1]),
+  route('khufu-east', [-52, 0.35, 39], [-41, 0.35, 31], [28, 0.3, 47], [111, 0.35, -1], [18, 8, -1], [13, 12, -1]),
   route('khafre-south', [-59, 0.35, 29], [-50, 0.35, 22], [-42, 0.4, 8], [-38, 1.7, -3], [-38, 9, -22], [-38, 13, -27]),
-  route('khafre-west', [-62, 0.35, 24], [-53, 0.35, 16], [-48, 0.5, 1], [-70, 1.7, -33], [-48, 9, -33], [-43, 13, -33]),
-  route('menkaure-south', [-64, 0.35, 17], [-58, 0.35, 8], [-55, 0.45, -8], [-63, 1.2, -38.5], [-63, 6, -54], [-63, 8, -57]),
+  route('khafre-west', [-62, 0.35, 24], [-53, 0.35, 16], [-48, 0.5, 1], [-133, 1.7, -33], [-48, 9, -33], [-43, 13, -33]),
+  // Preserve this internal route ID; the gentler ascent now approaches from west.
+  route('menkaure-south', [-64, 0.35, 17], [-143, 0.35, 16], [-143, 0.45, -42], [-117, 1.2, -60], [-69, 6, -60], [-66, 8, -60]),
   route('temple-causeway', [-49, 0.35, 42], [-38, 0.35, 35], [-20, 0.25, 27], [1, 0.3, 18], [1, 3.5, 11], [1, 4.5, 7]),
 ];
 
-// Terraced working earthworks. Each rises toward its monument (local +z is the
+// Compacted working earthworks. Each rises toward its monument (local +z is the
 // high end, which every yaw maps to the face side). Kept as data so the
 // renderer and the site-clearance rules share one footprint.
 const ramps: RampPlan[] = [
   { id: 'khufu-south', monument: 'khufu', center: [7, 27], footprint: [30, 22], baseY: 0, yaw: Math.PI },
   { id: 'khufu-east', monument: 'khufu', center: [31, -1], footprint: [12, 26], baseY: 0, yaw: -Math.PI / 2 },
   { id: 'khafre-south', monument: 'khafre', center: [-38, -12], footprint: [26, 20], baseY: 1.35, yaw: Math.PI },
-  { id: 'khafre-west', monument: 'khafre', center: [-60, -33], footprint: [10, 22], baseY: 1.35, yaw: Math.PI / 2 },
-  { id: 'menkaure-south', monument: 'menkaure', center: [-63, -46], footprint: [13, 17], baseY: 0.9, yaw: Math.PI },
+  { id: 'khafre-west', monument: 'khafre', center: [-60, -33], footprint: [6, 22], baseY: 1.35, yaw: Math.PI / 2 },
+  { id: 'menkaure-south', monument: 'menkaure', center: [-63, -46], footprint: [6, 17], baseY: 0.9, yaw: Math.PI },
 ];
 
 const routeIdsByMonument: Record<MonumentPlan['id'], [string, string]> = {
@@ -194,7 +196,11 @@ function pyramidBlocks(monument: MonumentPlan, seed: string): ConstructionBlock[
           finalYaw: yaw,
           scale: [1, 1, 1],
           material: materialFor(monument, course),
-          routeId: routeIds[side % routeIds.length]!,
+          routeId: monument.id === 'khufu' && course > 9
+            ? 'khufu-east'
+            : monument.id === 'khafre' && course > 7
+              ? 'khafre-west'
+              : routeIds[side % routeIds.length]!,
           lane: 0,
           start: 0,
           duration: 0,
@@ -275,7 +281,9 @@ function scheduleBlocks(
   for (const run of runs) {
     const runSpan = (span * run.weight) / totalWeight;
     const count = run.to - run.from;
-    const slot = runSpan / count;
+    // Reserve this course's delivery tail before opening the next course.
+    // Otherwise two different course heights demand the same ramp at once.
+    const slot = runSpan / (count + ACTIVE_SPAN_IN_SLOTS - 1);
     const duration = slot * ACTIVE_SPAN_IN_SLOTS;
     for (let i = run.from; i < run.to; i += 1) {
       scheduled[i] = {
@@ -351,6 +359,31 @@ export function createGizaConstructionPlan(): GizaConstructionPlan {
 
   const blocks = scheduleBlocks(unscheduled, monuments);
 
+  const plannedRoutes: ConstructionRoute[] = routes.map((item) => ({
+    ...item,
+    waypoints: { ...item.waypoints },
+  }));
+  for (const ramp of ramps) {
+    const delivery = plannedRoutes.find((item) => item.id === ramp.id)!;
+    const courseBlocks = blocks.filter((block) => block.monument === ramp.monument);
+    const routeBlocks = blocks.filter((block) => block.routeId === ramp.id);
+    const lastCourse = Math.max(...routeBlocks.map((block) => block.course));
+    delivery.rampSurface = {
+      foot: [delivery.waypoints.rampFoot[0], ramp.baseY, delivery.waypoints.rampFoot[2]],
+      crest: [...delivery.waypoints.rampCrest],
+      width: ramp.footprint[0],
+      courses: Array.from({ length: lastCourse + 1 }, (_, course) => {
+        const first = courseBlocks.find((block) => block.course === course)!;
+        return {
+          start: first.start,
+          readyAt: first.start + first.duration * 0.6,
+          height: first.finalPosition[1] - first.dimensions[1] / 2 - ramp.baseY,
+        };
+      }),
+      end: Math.max(...routeBlocks.map((block) => block.start + block.duration)),
+    };
+  }
+
   return {
     seed: 'wonderforge:giza:v2',
     blocks,
@@ -359,11 +392,24 @@ export function createGizaConstructionPlan(): GizaConstructionPlan {
       ...coreFillCells(monuments.khafre, blocks, 'giza:khafre:core'),
       ...coreFillCells(monuments.menkaure, blocks, 'giza:menkaure:core'),
     ],
-    routes: routes.map((item) => ({
-      ...item,
-      waypoints: { ...item.waypoints },
-    })),
-    ramps: ramps.map((ramp) => ({ ...ramp })),
+    routes: plannedRoutes,
+    ramps: ramps.map((ramp) => {
+      const surface = plannedRoutes.find((item) => item.id === ramp.id)!.rampSurface!;
+      const dx = surface.crest[0] - surface.foot[0];
+      const dz = surface.crest[2] - surface.foot[2];
+      const length = Math.hypot(dx, dz);
+      // The support includes a landing beyond the crest for the lead crew.
+      const knots = gizaRampKnots(surface);
+      const from = knots[0]!;
+      const to = knots[knots.length - 1]!;
+      const center = (from + to) / 2;
+      return {
+        ...ramp,
+        center: [surface.foot[0] + dx * center, surface.foot[2] + dz * center] as [number, number],
+        footprint: [ramp.footprint[0], length * (to - from)] as [number, number],
+        yaw: Math.atan2(dx, dz),
+      };
+    }),
     layers: layers.map((layer) => ({ ...layer })),
     monuments: {
       khufu: { ...monuments.khufu },

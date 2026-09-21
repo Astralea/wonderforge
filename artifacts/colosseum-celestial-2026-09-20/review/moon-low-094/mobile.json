@@ -1,0 +1,151 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/colosseum/0.94",
+  "mode": "mobile",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/colosseum-celestial-2026-09-20/review/moon-low-094/mobile.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "drawingBuffer": {
+      "width": 526,
+      "height": 1139
+    },
+    "alphaPixels": 4098,
+    "variance": 208,
+    "colorBuckets": 25,
+    "metrics": {
+      "colorBuckets": 30,
+      "colorEntropyBits": 2.86,
+      "edgeDensity": 0.095,
+      "luminance": {
+        "mean": 28.5,
+        "p5": 6.8,
+        "p95": 44.5,
+        "contrast": 37.7
+      },
+      "dominantColorShare": 0.426,
+      "nonBackgroundShare": 0.574
+    },
+    "renderBudget": {
+      "tier": "mobile",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 68,
+          "limit": 150,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 90628,
+          "limit": 300000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 42,
+          "limit": 200,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 5,
+          "limit": 40,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 68,
+        "triangles": 90628,
+        "points": 0,
+        "lines": 0,
+        "geometries": 42,
+        "textures": 5
+      },
+      "colosseumCelestial": {
+        "t": 0.94,
+        "julianDayUt1": 1750439.4186314014,
+        "calendar": "Julian",
+        "timeScale": "UT1",
+        "angularScale": 2.4,
+        "sun": {
+          "direction": [
+            -0.2460373092650711,
+            -0.39795502371005037,
+            0.8837971721800977
+          ],
+          "azimuthDegrees": 344.4435087567418,
+          "worldAzimuthDegrees": -254.44350875674178,
+          "elevationDegrees": -23.450399231698764,
+          "distanceKm": 152191520.0601234,
+          "angularRadiusDegrees": 0.261912222,
+          "aboveHorizon": false,
+          "upperLimbAboveHorizon": false,
+          "horizonVisibility": 0
+        },
+        "moon": {
+          "direction": [
+            -0.964805135516003,
+            0.010624585730018378,
+            0.26275115348940414
+          ],
+          "azimuthDegrees": 285.23424940043424,
+          "worldAzimuthDegrees": -195.23424940043424,
+          "elevationDegrees": 0.6087553746739296,
+          "distanceKm": 369285.16017209133,
+          "angularRadiusDegrees": 0.2695641806419667,
+          "aboveHorizon": true,
+          "upperLimbAboveHorizon": true,
+          "horizonVisibility": 1,
+          "lightDirection": [
+            -0.24397118503785295,
+            -0.3984297883218137,
+            0.884155961722286
+          ],
+          "illuminatedFraction": 0.26826775019695426,
+          "referenceIlluminatedFraction": 0.26828876151331216,
+          "phaseAngleDegrees": 117.61089228707137,
+          "referencePhaseAngleDegrees": 117.6107907419458,
+          "elongationDegrees": 62.26591509187275,
+          "waxing": true
+        },
+        "key": "moon",
+        "keyVisibility": 0.34902358389003174
+      },
+      "camera": {
+        "position": [
+          501.42202099293877,
+          78.1758309421332,
+          103.30716926278315
+        ],
+        "direction": [
+          -0.9740633707443302,
+          -0.10452846326765347,
+          -0.20068470330619692
+        ],
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

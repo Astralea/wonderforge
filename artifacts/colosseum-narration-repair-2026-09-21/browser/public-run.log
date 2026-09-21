@@ -1,0 +1,7 @@
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-seating","ended":true,"remainingFilmSeconds":2.5800000000000023}
+{"mode":"desktop","wonder":"colosseum","captionId":"colosseum-titus","ended":true,"remainingFilmSeconds":1.799999999999995}
+{"completed":"desktop/colosseum","failures":0}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-seating","ended":true,"remainingFilmSeconds":2.5800000000000023}
+{"mode":"mobile","wonder":"colosseum","captionId":"colosseum-titus","ended":true,"remainingFilmSeconds":1.799999999999995}
+{"completed":"mobile/colosseum","failures":0}
+{"assetCount":2,"clipViewportRuns":4,"failures":[]}

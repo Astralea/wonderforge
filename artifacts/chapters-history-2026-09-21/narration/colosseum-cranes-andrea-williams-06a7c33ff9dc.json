@@ -1,0 +1,28 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-cranes",
+  "captionText": "In this reconstruction, treadwheel cranes raise the heavy stone blocks.",
+  "src": "/audio/narration/colosseum-cranes-andrea-williams-06a7c33ff9dc.mp3",
+  "duration": 5.24771,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 6.6,
+  "sha256": "6fce52deea3045df05723d4b6401b8657f309aae5c561ee921d5d962f0aee1b7",
+  "bytes": 84889,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.19,
+    "truePeakDbtp": -2.39,
+    "gainDb": 5.45
+  }
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "captionId": "giza-khufu",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.22,
+    "truePeakDbtp": -2.23,
+    "gainDb": 8.84,
+    "duration": 4.318912,
+    "tailSeconds": 2.881088
+  },
+  {
+    "captionId": "giza-roads",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.21,
+    "truePeakDbtp": -2.33,
+    "gainDb": 11.18,
+    "duration": 4.365351,
+    "tailSeconds": 2.834649
+  },
+  {
+    "captionId": "giza-ramps",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.27,
+    "truePeakDbtp": -2.39,
+    "gainDb": 5.74,
+    "duration": 3.529433,
+    "tailSeconds": 3.670567
+  },
+  {
+    "captionId": "giza-khafre",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.24,
+    "truePeakDbtp": -2.35,
+    "gainDb": 7.55,
+    "duration": 4.551111,
+    "tailSeconds": 3.248889
+  },
+  {
+    "captionId": "giza-casing",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.21,
+    "truePeakDbtp": -2.29,
+    "gainDb": 9.8,
+    "duration": 3.436553,
+    "tailSeconds": 3.763447
+  },
+  {
+    "captionId": "giza-menkaure",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.27,
+    "truePeakDbtp": -2.28,
+    "gainDb": 10.06,
+    "duration": 4.92263,
+    "tailSeconds": 0.47737
+  },
+  {
+    "captionId": "stonehenge-earthwork",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.18,
+    "truePeakDbtp": -2.36,
+    "gainDb": 6.77,
+    "duration": 5.10839,
+    "tailSeconds": 2.09161
+  },
+  {
+    "captionId": "stonehenge-sarsens",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.08,
+    "truePeakDbtp": -2.37,
+    "gainDb": 8.96,
+    "duration": 5.34059,
+    "tailSeconds": 1.85941
+  },
+  {
+    "captionId": "stonehenge-pits",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.23,
+    "truePeakDbtp": -2.4,
+    "gainDb": 7.36,
+    "duration": 4.92263,
+    "tailSeconds": 2.27737
+  },
+  {
+    "captionId": "stonehenge-lintels",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.15,
+    "truePeakDbtp": -2.37,
+    "gainDb": 6.75,
+    "duration": 4.086712,
+    "tailSeconds": 3.113288
+  },
+  {
+    "captionId": "stonehenge-bluestones",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.06,
+    "truePeakDbtp": -2.19,
+    "gainDb": 7.32,
+    "duration": 4.504671,
+    "tailSeconds": 2.695329
+  },
+  {
+    "captionId": "stonehenge-axis",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.18,
+    "truePeakDbtp": -2.08,
+    "gainDb": 9.55,
+    "duration": 4.87619,
+    "tailSeconds": 2.32381
+  },
+  {
+    "captionId": "colosseum-valley",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.01,
+    "truePeakDbtp": -2.33,
+    "gainDb": 4.74,
+    "duration": 4.504671,
+    "tailSeconds": 2.095329
+  },
+  {
+    "captionId": "colosseum-stone",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.03,
+    "truePeakDbtp": -2.33,
+    "gainDb": 5.21,
+    "duration": 4.458231,
+    "tailSeconds": 1.541769
+  },
+  {
+    "captionId": "colosseum-cranes",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.19,
+    "truePeakDbtp": -2.39,
+    "gainDb": 5.45,
+    "duration": 5.24771,
+    "tailSeconds": 1.35229
+  },
+  {
+    "captionId": "colosseum-vaults",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.1,
+    "truePeakDbtp": -2.39,
+    "gainDb": 6.09,
+    "duration": 4.040272,
+    "tailSeconds": 1.959728
+  },
+  {
+    "captionId": "colosseum-seating",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.08,
+    "truePeakDbtp": -2.41,
+    "gainDb": 5.42,
+    "duration": 4.643991,
+    "tailSeconds": 1.356009
+  },
+  {
+    "captionId": "colosseum-titus",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.06,
+    "truePeakDbtp": -2.35,
+    "gainDb": 5.42,
+    "duration": 4.829751,
+    "tailSeconds": 1.170249
+  },
+  {
+    "captionId": "colosseum-moonrise",
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.05,
+    "truePeakDbtp": -2.4,
+    "gainDb": 6.03,
+    "duration": 4.179592,
+    "tailSeconds": 0.620408
+  }
+]

@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/wonder-glyph.test.tsx tests/eiffel-loading.test.tsx
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/wonder-glyph.test.tsx (14 tests) 62ms
+ ✓ tests/eiffel-loading.test.tsx (6 tests) 166ms
+
+ Test Files  2 passed (2)
+      Tests  20 passed (20)
+   Start at  19:36:22
+   Duration  722ms (transform 134ms, setup 34ms, collect 371ms, tests 227ms, environment 427ms, prepare 64ms)
+

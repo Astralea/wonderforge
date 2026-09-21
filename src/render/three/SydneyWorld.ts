@@ -24,6 +24,10 @@ export class SydneyWorld {
     this.group.add(this.sky.mesh, this.environment.group, this.stones.group, this.work.group);
   }
 
+  get ready(): Promise<void> {
+    return Promise.all([this.environment.ready, this.stones.ready]).then(() => undefined);
+  }
+
   update(t: number, light: LightState, sunDirection: Vector3, sky: SydneySkySample): void {
     const active = this.stones.update(t, light.emissive);
     this.work.update(active, t);

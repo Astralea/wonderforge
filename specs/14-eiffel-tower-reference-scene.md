@@ -688,7 +688,7 @@ an authored construction interpretation, not a reproduction of every shop
 drawing, rivet or temporary scaffold.
 
 The Eiffel Tower is the fifth forward test of the Giza pipeline and of
-`.agents/skills/wonderforge-scene-builder/`. It preserves the stable
+[Spec 49’s scene authoring pipeline](49-scene-authoring-pipeline.md). It preserves the stable
 `eiffel-tower` ID but replaces the legacy stacked-box silhouette with typed,
 deterministic **additive industrial construction**: four masonry piers, four
 inward-leaning puddled-iron lattice pylons that meet at the first platform,
@@ -1224,10 +1224,13 @@ Never fall back to Giza, Colosseum, or Sydney. The reviewed Lyria 3 cue is
 1889 Paris exposition — salon strings and restrained brass, never accordion
 pastiche, never a generic construction-site pulse. Files:
 `/audio/eiffel-tower-cinematic.mp3` (60 s) and
-`/audio/eiffel-tower-ambient-loop.mp3` (27 s loop). Brief, raw takes, and
+`/audio/eiffel-tower-ambient-loop.mp3` (assembled from three Lyria clip takes).
+Brief, raw takes, and
 Lyria captions: `artifacts/soundtrack/eiffel-tower/`. Generate with
-`scripts/generate-soundtrack.py --wonder eiffel-tower`. Lyria has no seed;
-`--assemble` re-encodes cached takes. Home-hero ambient remains Giza.
+`scripts/generate-soundtrack.py --wonder eiffel-tower --role ambient --takes 3`.
+Lyria has no seed;
+`--assemble` re-encodes cached takes. Homepage ambient is Giza's cue;
+this Eiffel bed plays in the Eiffel movie, not on the title plate.
 
 Caption beats are five authored lines (The Champ, The Iron, The Legs, The
 Join, The Beacon). Caption voice is ElevenLabs only: Adam

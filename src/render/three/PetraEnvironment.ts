@@ -31,16 +31,16 @@ export class PetraEnvironment {
 
   constructor(materials: MaterialLibrary) {
     this.group.name = 'petra-environment';
-    const rose = new MeshStandardMaterial({ color: '#c0774c', roughness: 0.96, vertexColors: true });
-    const shade = new MeshStandardMaterial({ color: '#8a5340', roughness: 0.98, vertexColors: true });
-    const plaza = new MeshStandardMaterial({ color: '#c9a06a', roughness: 0.98, vertexColors: true });
+    const rose = new MeshStandardMaterial({ color: '#e0a070', roughness: 0.88, metalness: 0, vertexColors: true, emissive: '#3a2010', emissiveIntensity: 0.18 });
+    const shade = new MeshStandardMaterial({ color: '#c48960', roughness: 0.9, metalness: 0, vertexColors: true, emissive: '#2a1810', emissiveIntensity: 0.12 });
+    const plaza = new MeshStandardMaterial({ color: '#e0c090', roughness: 0.9, metalness: 0, vertexColors: true });
     injectMaterialRecipe(rose, 'disi-sandstone');
     injectMaterialRecipe(plaza, 'disi-sandstone');
     this.materials.push(rose, shade, plaza);
 
     const floor = this.createFloor(plaza);
-    const west = this.createWall(-22.5, shade);
-    const east = this.createWall(22.5, shade);
+    const west = this.createWall(-32, shade);
+    const east = this.createWall(32, shade);
     const massif = this.createMassif(rose);
     this.group.add(floor, west, east, massif);
 
@@ -95,11 +95,11 @@ export class PetraEnvironment {
   }
 
   private createWall(x: number, material: MeshStandardMaterial): Mesh {
-    const geometry = new BoxGeometry(6.2, 64, 110, 1, 8, 8);
+    const geometry = new BoxGeometry(4.8, 28, 80, 1, 6, 6);
     const position = geometry.getAttribute('position');
     const colors = new Float32Array(position.count * 3);
-    const lit = new Color('#a3664a');
-    const deep = new Color('#5c3328');
+    const lit = new Color('#c4845c');
+    const deep = new Color('#7a4534');
     const color = new Color();
     for (let index = 0; index < position.count; index += 1) {
       const y = position.getY(index);
@@ -117,14 +117,14 @@ export class PetraEnvironment {
     this.geometries.push(geometry);
     const mesh = new Mesh(geometry, material);
     mesh.name = x < 0 ? 'petra-siq-wall-west' : 'petra-siq-wall-east';
-    mesh.position.set(x, 22, -22);
+    mesh.position.set(x, 8, -12);
     mesh.castShadow = true;
     mesh.receiveShadow = true;
     return mesh;
   }
 
   private createMassif(material: MeshStandardMaterial): Mesh {
-    const geometry = new BoxGeometry(48, 72, 22, 4, 6, 2);
+    const geometry = new BoxGeometry(52, 48, 20, 4, 6, 2);
     const position = geometry.getAttribute('position');
     for (let index = 0; index < position.count; index += 1) {
       const y = position.getY(index);
@@ -135,7 +135,7 @@ export class PetraEnvironment {
     this.geometries.push(geometry);
     const mesh = new Mesh(geometry, material);
     mesh.name = 'petra-khubtha-massif';
-    mesh.position.set(0, 28, 16);
+    mesh.position.set(0, 18, 18);
     mesh.castShadow = true;
     mesh.receiveShadow = true;
     return mesh;

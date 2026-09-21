@@ -1,0 +1,67 @@
+[
+  {
+    "path": "specs/00-overview.md",
+    "bytes": 4337,
+    "sha256": "d49d15aabf47cbd9e08bd269bffb03b18cc2db1a21e8703b170902698b0d8ec3"
+  },
+  {
+    "path": "specs/12-colosseum-reference-scene.md",
+    "bytes": 33328,
+    "sha256": "66de02836e7dfe36b6cdcec4ac9880424e3d59869de777b3f17dc9cf41953df8"
+  },
+  {
+    "path": "src/assets/lunar/lroc-color-poles-1k.jpg",
+    "bytes": 139068,
+    "sha256": "b246064f217f8d479df78c49c7c8595a8f5fbda008a72fd539978d2e121e0109"
+  },
+  {
+    "path": "src/data/colosseumMoonSurface.ts",
+    "bytes": 662,
+    "sha256": "452e85c4b52d0056cb84ed333dbb93da2a0174c6fd6de36226b6171b26213a77"
+  },
+  {
+    "path": "src/engine/colosseumMoonSurface.ts",
+    "bytes": 3437,
+    "sha256": "2d8121c9f7bf479e6b057218e2620a07026d417aa2d3c48740079d3c069b3cbf"
+  },
+  {
+    "path": "src/render/three/ColosseumSkyDome.ts",
+    "bytes": 11332,
+    "sha256": "79a0d23f919e2192836b63be80772a39c8925658ad32d57d41aa125a72ff0c6f"
+  },
+  {
+    "path": "src/render/three/ColosseumWorld.ts",
+    "bytes": 2392,
+    "sha256": "c95ce6760d2bd62ec374b427d492a63f46f8efab8a5739ea3135e1958edb2540"
+  },
+  {
+    "path": "src/data/types.ts",
+    "bytes": 3029,
+    "sha256": "d911ba1f142602abd56c506c1c9aeb1f697d749ad719b440442a8fc9da7b1590"
+  },
+  {
+    "path": "src/data/wonders/colosseum.ts",
+    "bytes": 1177,
+    "sha256": "e3de256c86ce738ab4ce548050f1b53eea7b0d48f7ae0387b6ea29bb75cfa78c"
+  },
+  {
+    "path": "src/ui/FactsPanel.tsx",
+    "bytes": 2414,
+    "sha256": "a13be70d4fbe19b2b7b1f6764902750e533e70b23ba3a306e1b5300afbc94536"
+  },
+  {
+    "path": "tests/colosseum-moon-surface.test.ts",
+    "bytes": 3221,
+    "sha256": "a14f3dea93969de1448a9d0b4f3a73c9dcf46c1861f9aada5d6d73cb04eaca4d"
+  },
+  {
+    "path": "tests/colosseum-moon-orientation.test.ts",
+    "bytes": 6327,
+    "sha256": "f8db35cd0d3e51de1f921951df29694a9a30c471796f23fcc73749266e6c0323"
+  },
+  {
+    "path": "tests/wonder-imagery-credit.test.tsx",
+    "bytes": 870,
+    "sha256": "92a5b9f44f817202855e498ffbe98b3f2c2f891be7b00e2ea65f55f444b06619"
+  }
+]

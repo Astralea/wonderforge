@@ -1,0 +1,13 @@
+{
+  "text": "Here, ropes raise the uprights; rubble secures their bases.",
+  "provider": "ElevenLabs",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  }
+}

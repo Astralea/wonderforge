@@ -21,6 +21,10 @@ import { sampleEiffelFilm, EIFFEL_FILM_PILOT_PART_ID, EIFFEL_FILM_SECOND_FLOOR_R
 import { type EiffelEditedFilmSample } from '../../engine/eiffelFilmEdit';
 import { EIFFEL_GROUND_STATION_ERECTION_READY } from '../../engine/eiffelGroundStationErection';
 import { EIFFEL_GROUND_PLANT_PRESENT } from '../../engine/eiffelGroundPlantRetirement';
+import {
+  EIFFEL_LOAD_STAGES,
+  eiffelLoadStageLabel,
+} from './eiffelLoadCopy';
 import { sampleEiffelGroundLiftPilot } from '../../engine/eiffelGroundLiftPilot';
 import {
   createEiffelProductionPlan,
@@ -156,14 +160,20 @@ export class EiffelWorld {
 
   private readiness?: Promise<void>;
   private loadedSystems = 0;
-  private readonly pendingSystems = new Set(['Preparing Paris', 'Assembling the ironwork', 'Preparing the lifting frames', 'Preparing the iron joints', 'Preparing the fastenings', 'Preparing the first platform', 'Preparing the steam winch', 'Preparing the upper platforms', 'Preparing the summit']);
-  get loadStage(): string { return this.pendingSystems.values().next().value ?? 'Preparing the first view'; }
-  get loadProgress(): number { return this.loadedSystems / 10; }
+  private readonly pendingSystems = new Set(EIFFEL_LOAD_STAGES.map((stage) => stage.key));
+  get loadStage(): string {
+    return eiffelLoadStageLabel(this.pendingSystems.values().next().value);
+  }
+  get loadProgress(): number {
+    const city = this.pendingSystems.has('paris') ? this.environment.loadFraction : 0;
+    const iron = this.pendingSystems.has('ironwork') ? this.stones.loadFraction : 0;
+    return (this.loadedSystems + city + iron) / 10;
+  }
 
   get ready(): Promise<void> {
     return this.readiness ??= Promise.all([this.environment.ready, this.stones.ready, this.groundLift.ready, this.jointCampaign.ready, this.jointFastening.ready, this.longLoad.ready, this.longLoadDrive.ready, this.secondFloorRelay.ready, this.historicFlag.ready].map((task, index) => {
-      const label = [...this.pendingSystems][index]!;
-      return task.then(() => { this.loadedSystems += 1; this.pendingSystems.delete(label); });
+      const key = EIFFEL_LOAD_STAGES[index]!.key;
+      return task.then(() => { this.loadedSystems += 1; this.pendingSystems.delete(key); });
     })).then(() => {
       if (!this.stones.manifest)
         throw new Error('Eiffel construction kit manifest missing');

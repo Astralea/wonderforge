@@ -1,0 +1,7640 @@
+{
+  "film": "stonehenge",
+  "mode": "desktop",
+  "scripts": [
+    "http://127.0.0.1:5590/assets/main-D8RR7sSY.js"
+  ],
+  "frames": [
+    {
+      "wallSeconds": 0.273,
+      "t": 0.001,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-00-t0.0010.png"
+    },
+    {
+      "wallSeconds": 2.285,
+      "t": 0.034,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-01-t0.0340.png"
+    },
+    {
+      "wallSeconds": 4.273,
+      "t": 0.067,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-02-t0.0670.png"
+    },
+    {
+      "wallSeconds": 6.285,
+      "t": 0.101,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-03-t0.1010.png"
+    },
+    {
+      "wallSeconds": 8.287,
+      "t": 0.134,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-04-t0.1340.png"
+    },
+    {
+      "wallSeconds": 10.284,
+      "t": 0.167,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-05-t0.1670.png"
+    },
+    {
+      "wallSeconds": 12.286,
+      "t": 0.201,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-06-t0.2010.png"
+    },
+    {
+      "wallSeconds": 14.291,
+      "t": 0.234,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-07-t0.2340.png"
+    },
+    {
+      "wallSeconds": 16.296,
+      "t": 0.267,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-08-t0.2670.png"
+    },
+    {
+      "wallSeconds": 18.306,
+      "t": 0.3,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-09-t0.3000.png"
+    },
+    {
+      "wallSeconds": 20.294,
+      "t": 0.334,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-10-t0.3340.png"
+    },
+    {
+      "wallSeconds": 22.282,
+      "t": 0.367,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-11-t0.3670.png"
+    },
+    {
+      "wallSeconds": 24.274,
+      "t": 0.401,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-12-t0.4010.png"
+    },
+    {
+      "wallSeconds": 26.276,
+      "t": 0.434,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-13-t0.4340.png"
+    },
+    {
+      "wallSeconds": 28.295,
+      "t": 0.467,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-14-t0.4670.png"
+    },
+    {
+      "wallSeconds": 30.301,
+      "t": 0.501,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-15-t0.5010.png"
+    },
+    {
+      "wallSeconds": 32.302,
+      "t": 0.534,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-16-t0.5340.png"
+    },
+    {
+      "wallSeconds": 34.273,
+      "t": 0.567,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-17-t0.5670.png"
+    },
+    {
+      "wallSeconds": 36.279,
+      "t": 0.601,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-18-t0.6010.png"
+    },
+    {
+      "wallSeconds": 38.298,
+      "t": 0.634,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-19-t0.6340.png"
+    },
+    {
+      "wallSeconds": 40.298,
+      "t": 0.667,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-20-t0.6670.png"
+    },
+    {
+      "wallSeconds": 42.267,
+      "t": 0.701,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-21-t0.7010.png"
+    },
+    {
+      "wallSeconds": 44.29,
+      "t": 0.734,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-22-t0.7340.png"
+    },
+    {
+      "wallSeconds": 46.279,
+      "t": 0.767,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-23-t0.7670.png"
+    },
+    {
+      "wallSeconds": 48.294,
+      "t": 0.801,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-24-t0.8010.png"
+    },
+    {
+      "wallSeconds": 50.266,
+      "t": 0.834,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-25-t0.8340.png"
+    },
+    {
+      "wallSeconds": 52.275,
+      "t": 0.867,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-26-t0.8670.png"
+    },
+    {
+      "wallSeconds": 54.286,
+      "t": 0.901,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-27-t0.9010.png"
+    },
+    {
+      "wallSeconds": 56.298,
+      "t": 0.934,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-28-t0.9340.png"
+    },
+    {
+      "wallSeconds": 58.295,
+      "t": 0.967,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-29-t0.9670.png"
+    },
+    {
+      "wallSeconds": 60.266,
+      "t": 1,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/stonehenge/desktop-live-30-t1.0000.png"
+    }
+  ],
+  "timeline": [
+    {
+      "wall": 2417,
+      "t": 0.004,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 46,
+          "triangles": 54686,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            75.81424279005608,
+            30.469433082494497,
+            84.45071481177541
+          ],
+          "direction": [
+            -0.6811247325013436,
+            -0.27563735581699916,
+            -0.6783016636078569
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 2667.400000035763,
+      "t": 0.008,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 46,
+          "triangles": 54686,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            74.73601271848894,
+            30.364696000849413,
+            84.60330301177439
+          ],
+          "direction": [
+            -0.6741247966856349,
+            -0.27563735581699916,
+            -0.6852589339598315
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 2916.5,
+      "t": 0.012,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 46,
+          "triangles": 54686,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            73.03609423327256,
+            30.19986899167456,
+            84.8167186235631
+          ],
+          "direction": [
+            -0.6629652258932818,
+            -0.27563735581699905,
+            -0.6960611735576715
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 3167.400000035763,
+      "t": 0.016,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 46,
+          "triangles": 54686,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            70.43996193280098,
+            29.94872109443302,
+            85.07921189306059
+          ],
+          "direction": [
+            -0.645629546742162,
+            -0.2756373558169991,
+            -0.7121703001752625
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 3417.400000035763,
+      "t": 0.021,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 46,
+          "triangles": 54686,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            66.91289912734283,
+            29.608277562341037,
+            85.31462531961391
+          ],
+          "direction": [
+            -0.6215074674103764,
+            -0.27563735581699916,
+            -0.7333161092130411
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 3666.800000011921,
+      "t": 0.025,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 46,
+          "triangles": 54686,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            62.91875533506822,
+            29.223186571757765,
+            85.41488302225399
+          ],
+          "direction": [
+            -0.5933891115327307,
+            -0.27563735581699916,
+            -0.7562495688544952
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 3917.2000000476837,
+      "t": 0.029,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 56942,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            58.09402720091297,
+            28.757581353942868,
+            85.30292772328102
+          ],
+          "direction": [
+            -0.5582665106134244,
+            -0.27563735581699916,
+            -0.7825359743843886
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 4166.800000011921,
+      "t": 0.033,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 56942,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            52.66557586536788,
+            28.231567435067557,
+            84.87353061438372
+          ],
+          "direction": [
+            -0.517192084712758,
+            -0.27563735581699916,
+            -0.8102693352143374
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 4416.700000047684,
+      "t": 0.037,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 60,
+          "triangles": 57014,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            46.28223383060917,
+            27.607569675943033,
+            83.95557807477617
+          ],
+          "direction": [
+            -0.46669270663821255,
+            -0.27563735581699916,
+            -0.840370136100107
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 4667.200000047684,
+      "t": 0.042,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 50975,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            40.24182196038357,
+            27.00879336562649,
+            82.66863181768024
+          ],
+          "direction": [
+            -0.4165907932958766,
+            -0.2756373558169992,
+            -0.866300270702558
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 4916.200000047684,
+      "t": 0.046,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 50975,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            34.812105557279395,
+            26.461058028740766,
+            81.15392562495592
+          ],
+          "direction": [
+            -0.36949869444633904,
+            -0.2756373558169993,
+            -0.8874090166775771
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 5166.800000011921,
+      "t": 0.05,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 50145,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            30.221741165813693,
+            25.989032229496537,
+            79.59850284333906
+          ],
+          "direction": [
+            -0.32805635393240196,
+            -0.2756373558169992,
+            -0.9035502624219596
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 5416.900000035763,
+      "t": 0.054,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 51475,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            26.523370805222342,
+            25.601494768216547,
+            78.15408630088811
+          ],
+          "direction": [
+            -0.29350285491446015,
+            -0.2756373558169992,
+            -0.9153579202887111
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 5667,
+      "t": 0.058,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 51475,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            23.49103216279061,
+            25.27814273378268,
+            76.83690867828776
+          ],
+          "direction": [
+            -0.2643459978111167,
+            -0.2756373558169992,
+            -0.9241997844186386
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 5917.300000011921,
+      "t": 0.062,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 58,
+          "triangles": 51457,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            21.1184432807571,
+            25.02117289373507,
+            75.71945802043166
+          ],
+          "direction": [
+            -0.24098404017884772,
+            -0.27563735581699916,
+            -0.9305647427542548
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 6166.800000011921,
+      "t": 0.067,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 55,
+          "triangles": 51439,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            19.437431459666083,
+            24.83679169239174,
+            74.87997688981042
+          ],
+          "direction": [
+            -0.22412626959445295,
+            -0.27563735581699916,
+            -0.9347681334726211
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 6417.600000023842,
+      "t": 0.071,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 60,
+          "triangles": 51801,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            18.446232987282468,
+            24.727111246314706,
+            74.365928118583
+          ],
+          "direction": [
+            -0.2140632228127344,
+            -0.27563735581699916,
+            -0.937123783028282
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 6667.800000011921,
+      "t": 0.075,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 60,
+          "triangles": 53493,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            18.100750752753775,
+            24.688707756530242,
+            74.18337925308796
+          ],
+          "direction": [
+            -0.21053384100614275,
+            -0.27563735581699916,
+            -0.9379229978358635
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 6917,
+      "t": 0.079,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 60,
+          "triangles": 54823,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            17.759568030428767,
+            24.709073905271193,
+            74.37126873568323
+          ],
+          "direction": [
+            -0.2063639971951175,
+            -0.2756373558169992,
+            -0.9388492683811747
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 7167,
+      "t": 0.083,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 60,
+          "triangles": 54733,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            16.754594250128427,
+            24.76929967591003,
+            74.91732899288046
+          ],
+          "direction": [
+            -0.19411528672838677,
+            -0.2756373558169991,
+            -0.9414580731697877
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 7416.300000011921,
+      "t": 0.087,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 60,
+          "triangles": 54715,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            14.989005083174513,
+            24.87402590297101,
+            75.8382034834176
+          ],
+          "direction": [
+            -0.1727388418946572,
+            -0.2756373558169992,
+            -0.9456137375160674
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 7666.700000047684,
+      "t": 0.092,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 62,
+          "triangles": 56115,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            12.33054945880493,
+            25.029300263483076,
+            77.1352903409784
+          ],
+          "direction": [
+            -0.14088474118083633,
+            -0.2756373558169991,
+            -0.9508814530637464
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 7918.5,
+      "t": 0.096,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 65,
+          "triangles": 56490,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            8.947849666722188,
+            25.2231097938413,
+            78.63695677335144
+          ],
+          "direction": [
+            -0.10090644705265903,
+            -0.2756373558169992,
+            -0.9559508026156065
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 8166.100000023842,
+      "t": 0.1,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 65,
+          "triangles": 58078,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            5.064231294112013,
+            25.441079310103255,
+            80.16554418128364
+          ],
+          "direction": [
+            -0.05573614317923223,
+            -0.27563735581699916,
+            -0.9596444812646594
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 8417.100000023842,
+      "t": 0.104,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 65,
+          "triangles": 59268,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            1.7777740234794854,
+            25.62225911098617,
+            81.30331139991594
+          ],
+          "direction": [
+            -0.01809125131865042,
+            -0.2756373558169993,
+            -0.9610914393042624
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 8666.700000047684,
+      "t": 0.108,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 65,
+          "triangles": 59168,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -0.8958719092115391,
+            25.76773167507212,
+            82.1274823861013
+          ],
+          "direction": [
+            0.012157381865398517,
+            -0.2756373558169991,
+            -0.9611848137295927
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 8917.200000047684,
+      "t": 0.112,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 65,
+          "triangles": 59150,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -2.6752561465723583,
+            25.8636947609643,
+            82.62684269479381
+          ],
+          "direction": [
+            0.03210660121052471,
+            -0.27563735581699916,
+            -0.9607253583813229
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 9167.100000023842,
+      "t": 0.116,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 67,
+          "triangles": 58070,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -3.746850552114144,
+            25.921184278949088,
+            82.90893396132249
+          ],
+          "direction": [
+            0.044051692726187835,
+            -0.27563735581699916,
+            -0.9602517880463283
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 9417,
+      "t": 0.121,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 67,
+          "triangles": 57188,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.043239590374368,
+            25.93687874658739,
+            82.98158063664252
+          ],
+          "direction": [
+            0.047356304272671616,
+            -0.2756387719812176,
+            -0.9600940827993476
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 9668,
+      "t": 0.125,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 67,
+          "triangles": 59144,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.281947800569356,
+            25.943085563507164,
+            82.92750742239194
+          ],
+          "direction": [
+            0.05039137669709477,
+            -0.27569403730783765,
+            -0.9599236985028946
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 9917,
+      "t": 0.129,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61326,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.965773647529912,
+            25.96087702816062,
+            82.76791684938617
+          ],
+          "direction": [
+            0.059092096058698376,
+            -0.2758525257001427,
+            -0.9593818365219563
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 10166.600000023842,
+      "t": 0.133,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61112,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -6.007296441922151,
+            25.98800881330228,
+            82.51142942284227
+          ],
+          "direction": [
+            0.0723617564410519,
+            -0.2760944294986152,
+            -0.958402651396896
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 10417.100000023842,
+      "t": 0.137,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61094,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -7.358181105787,
+            26.02326926475297,
+            82.15442656930568
+          ],
+          "direction": [
+            0.08960534665962074,
+            -0.27640918917881135,
+            -0.9568536157571448
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 10667.5,
+      "t": 0.141,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 59718,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -9.19239857980009,
+            26.071293860131192,
+            81.62515983808358
+          ],
+          "direction": [
+            0.11307860407681836,
+            -0.27683858756796775,
+            -0.9542398156299132
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 10918.100000023842,
+      "t": 0.146,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 59412,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -11.50068728128828,
+            26.13202258786304,
+            80.88488512614218
+          ],
+          "direction": [
+            0.14272028948692547,
+            -0.2773827338866189,
+            -0.9500998568099847
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 11167.400000035763,
+      "t": 0.15,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61304,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -14.059552863339722,
+            26.199805460331838,
+            79.9651415681803
+          ],
+          "direction": [
+            0.17571751880780828,
+            -0.277991624926044,
+            -0.944374930869623
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 11417.100000023842,
+      "t": 0.154,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61270,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -16.808955267221197,
+            26.273293115897253,
+            78.85692952828583
+          ],
+          "direction": [
+            0.2113414174120188,
+            -0.2786536094553301,
+            -0.9368494923005484
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 11667.400000035763,
+      "t": 0.158,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61252,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -20.117650421783225,
+            26.36283112328764,
+            77.35131750029053
+          ],
+          "direction": [
+            0.2544595049493468,
+            -0.27946279971084365,
+            -0.9258244455179991
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 11916.200000047684,
+      "t": 0.162,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61162,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -23.541310153415814,
+            26.45702778980551,
+            75.58457791714333
+          ],
+          "direction": [
+            0.299381566530449,
+            -0.2803172345705632,
+            -0.9120268228645946
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 12166.800000011921,
+      "t": 0.167,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 60172,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -26.61643695668407,
+            26.543266145227424,
+            73.80445181141815
+          ],
+          "direction": [
+            0.3400180927767955,
+            -0.281102338631469,
+            -0.8974236300657287
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 12417,
+      "t": 0.171,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 59220,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -29.21789702439652,
+            26.61765733013464,
+            72.14545730249856
+          ],
+          "direction": [
+            0.3746261429316685,
+            -0.2817818049389494,
+            -0.8833200254933029
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 12667.200000047684,
+      "t": 0.175,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 60108,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -31.417589687324966,
+            26.681753740354942,
+            70.62550378461063
+          ],
+          "direction": [
+            0.40406786879907386,
+            -0.28236890482856003,
+            -0.8700557217730909
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 12917.100000023842,
+      "t": 0.179,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61548,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -33.25792088045186,
+            26.736334260450057,
+            69.2659370561712
+          ],
+          "direction": [
+            0.4288347211555909,
+            -0.2828700660189174,
+            -0.8579541407801818
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 13167.300000011921,
+      "t": 0.183,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 69,
+          "triangles": 61466,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -34.73664750611184,
+            26.78089297590062,
+            68.11200160633094
+          ],
+          "direction": [
+            0.448830139836022,
+            -0.28328004662503375,
+            -0.8475281238748928
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 13416.100000023842,
+      "t": 0.187,
+      "caption": "Before the stonesAn earthwork enclosure stood here centuries before the great stone circle.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 61650,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -35.86353689031288,
+            26.815309044024374,
+            67.19392777189834
+          ],
+          "direction": [
+            0.4641280036365884,
+            -0.28359722555463096,
+            -0.8391411144128447
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 13666.600000023842,
+      "t": 0.192,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 60826,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -36.67475343359104,
+            26.840347834178207,
+            66.51144290602394
+          ],
+          "direction": [
+            0.4751740912844448,
+            -0.28382826938388234,
+            -0.8328571885206685
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 13916.300000011921,
+      "t": 0.196,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 61912,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -37.15967827758862,
+            26.85542617886387,
+            66.09457321702921
+          ],
+          "direction": [
+            0.4817910308545146,
+            -0.2839675204317547,
+            -0.8289993063495199
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 14168.5,
+      "t": 0.2,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 63110,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -37.32551835120699,
+            26.86060245318479,
+            65.95045048164853
+          ],
+          "direction": [
+            0.48405639578584464,
+            -0.2840153444424451,
+            -0.8276621833937183
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 14419.200000047684,
+      "t": 0.204,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 71,
+          "triangles": 63864,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -37.433903485514996,
+            26.868905332729852,
+            65.94095546746576
+          ],
+          "direction": [
+            0.4850946280168498,
+            -0.28401534470392265,
+            -0.8270541009159595
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 14667.5,
+      "t": 0.208,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 71,
+          "triangles": 64802,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -37.74041733868001,
+            26.892382218957305,
+            65.91329056984966
+          ],
+          "direction": [
+            0.48802612752958957,
+            -0.28401534470392265,
+            -0.8253276820882631
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 14916.900000035763,
+      "t": 0.212,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 71,
+          "triangles": 65604,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -38.27442389326991,
+            26.93327093675313,
+            65.86221445313186
+          ],
+          "direction": [
+            0.49311710753439897,
+            -0.2840153447039227,
+            -0.8222960550979312
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 15166.800000011921,
+      "t": 0.216,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 64752,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -39.012076386155236,
+            26.989729742771356,
+            65.78563601633712
+          ],
+          "direction": [
+            0.5001156968382043,
+            -0.28401534470392265,
+            -0.8180584170759135
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 15416.800000011921,
+      "t": 0.221,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 66120,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -39.99549599587314,
+            27.06496603390916,
+            65.67264967491798
+          ],
+          "direction": [
+            0.509385246864796,
+            -0.2840153447039226,
+            -0.812318874734056
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 15667.900000035763,
+      "t": 0.225,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 67262,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -41.128705215056925,
+            27.151629980077058,
+            65.52696557877508
+          ],
+          "direction": [
+            0.5199810487381793,
+            -0.28401534470392265,
+            -0.8055774282623959
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 15916.700000047684,
+      "t": 0.229,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 69492,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -42.58695526884891,
+            27.263131277240173,
+            65.31497809817604
+          ],
+          "direction": [
+            0.5334820695420968,
+            -0.2840153447039226,
+            -0.796700800457608
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 16169,
+      "t": 0.233,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 70244,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -44.2656214435075,
+            27.39150701579125,
+            65.03656177327164
+          ],
+          "direction": [
+            0.5488384535550742,
+            -0.2840153447039227,
+            -0.7862007605389268
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 16417.600000023842,
+      "t": 0.237,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 72296,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -45.964738637278685,
+            27.521531364505638,
+            64.71695032224537
+          ],
+          "direction": [
+            0.5641814218852118,
+            -0.2840153447039226,
+            -0.7752642176524677
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 16667.100000023842,
+      "t": 0.242,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 72322,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -48.10474498159429,
+            27.685518218833515,
+            64.25966363055934
+          ],
+          "direction": [
+            0.5832206041214482,
+            -0.2840153447039226,
+            -0.7610446839055675
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 16916.30000001192,
+      "t": 0.246,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 71126,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -50.38193025369918,
+            27.86043289662634,
+            63.70503835922129
+          ],
+          "direction": [
+            0.6031334084481184,
+            -0.28401534470392265,
+            -0.745362579947818
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 17166.5,
+      "t": 0.25,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 73364,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -52.70570288130709,
+            28.03953974373994,
+            63.06537892233442
+          ],
+          "direction": [
+            0.6230865943553666,
+            -0.2840153447039227,
+            -0.7287649689079071
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 17416.600000023842,
+      "t": 0.254,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 75322,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -55.51146769465034,
+            28.2568876273735,
+            62.19142921530709
+          ],
+          "direction": [
+            0.646685439985764,
+            -0.28401534470392265,
+            -0.7079076392320758
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 17667.200000047684,
+      "t": 0.258,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 76050,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -58.40781343091424,
+            28.48285282987393,
+            61.16909403118065
+          ],
+          "direction": [
+            0.6704797761464607,
+            -0.28401534470392265,
+            -0.6854138558209222
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 17917.80000001192,
+      "t": 0.262,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 77692,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -61.32928888203551,
+            28.712839589080293,
+            60.009526566932436
+          ],
+          "direction": [
+            0.6938945007907027,
+            -0.28401534470392265,
+            -0.6616991051415542
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 18167.100000023842,
+      "t": 0.267,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 77976,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -64.16157894892834,
+            28.938215874617217,
+            58.756913393156374
+          ],
+          "direction": [
+            0.716026768814109,
+            -0.28401534470392265,
+            -0.6376840521091449
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 18416.600000023842,
+      "t": 0.271,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 76546,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.66883028983374,
+            29.140083522660507,
+            57.537549267600106
+          ],
+          "direction": [
+            0.7351459532188049,
+            -0.28401534470392276,
+            -0.6155450523225142
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 18667.5,
+      "t": 0.275,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 76936,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -69.00973066576046,
+            29.330883686798963,
+            56.30079976191225
+          ],
+          "direction": [
+            0.7525882105871877,
+            -0.2840153447039227,
+            -0.594092811989749
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 18917.200000047684,
+      "t": 0.279,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 78730,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -71.0746087831034,
+            29.50131453493596,
+            55.127229253642895
+          ],
+          "direction": [
+            0.7676396680443605,
+            -0.28401534470392265,
+            -0.5745125098876926
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 19167.600000023842,
+      "t": 0.283,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 78474,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -72.94857820267043,
+            29.657931250045063,
+            53.99183605733895
+          ],
+          "direction": [
+            0.7810223294668703,
+            -0.28401534470392265,
+            -0.5561828879486095
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 19417.80000001192,
+      "t": 0.287,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 79938,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -74.54588290870186,
+            29.793043825448432,
+            52.96878508380239
+          ],
+          "direction": [
+            0.7922161825369286,
+            -0.2840153447039226,
+            -0.5401192498877707
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 19666.600000023842,
+      "t": 0.292,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 76696,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -75.98730887825545,
+            29.9163715135469,
+            51.999969507735386
+          ],
+          "direction": [
+            0.8021454189903873,
+            -0.28401534470392265,
+            -0.5252599458986459
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 19917.100000023842,
+      "t": 0.296,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 78378,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -77.13168854475646,
+            30.01530717543253,
+            51.19876519716524
+          ],
+          "direction": [
+            0.8099095395753795,
+            -0.28401534470392265,
+            -0.5132073866162771
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 20167.30000001192,
+      "t": 0.3,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 77440,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -78.1768317168073,
+            30.106510636764956,
+            50.44135494363626
+          ],
+          "direction": [
+            0.8169064987026222,
+            -0.28401534470392265,
+            -0.5019950760218023
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 20416.900000035763,
+      "t": 0.304,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 79482,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -78.97717605234837,
+            30.176930677622128,
+            49.84425041737574
+          ],
+          "direction": [
+            0.8222028732200088,
+            -0.28401534470392265,
+            -0.4932724594394806
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 20666,
+      "t": 0.308,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 78472,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -79.63594754669002,
+            30.235289248708604,
+            49.34133612431066
+          ],
+          "direction": [
+            0.826521544326958,
+            -0.2840153447039227,
+            -0.4860014616604489
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 20918.100000023842,
+      "t": 0.312,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 80064,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.06812811611233,
+            30.273775835875743,
+            49.005677936707556
+          ],
+          "direction": [
+            0.8293344786524771,
+            -0.28401534470392265,
+            -0.4811856258149614
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 21169.200000047684,
+      "t": 0.317,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 75974,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.31584175498868,
+            30.29590895329806,
+            48.81121142538431
+          ],
+          "direction": [
+            0.8309394568980091,
+            -0.28401534470392265,
+            -0.478408719551341
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 21417.400000035763,
+      "t": 0.32,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 77584,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.37530110435287,
+            30.301206352371363,
+            48.76404718307992
+          ],
+          "direction": [
+            0.8313250778931885,
+            -0.28401530476473535,
+            -0.47773834002022353
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 21666.400000035763,
+      "t": 0.325,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 76358,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.40909147617128,
+            30.300989426965415,
+            48.70142231142353
+          ],
+          "direction": [
+            0.8317059195864752,
+            -0.2840097632106182,
+            -0.47707831403854883
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 21917.200000047684,
+      "t": 0.329,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 77848,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.49623410932658,
+            30.300428422791878,
+            48.539339840036035
+          ],
+          "direction": [
+            0.8326882756288463,
+            -0.28399543373222863,
+            -0.47537020231552396
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 22166.80000001192,
+      "t": 0.333,
+      "caption": "Shaping the sarsensHammerstones shaped the sarsens; their joints echo skilled woodworking.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 76550,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.63615437517205,
+            30.299522850566575,
+            48.27732953052715
+          ],
+          "direction": [
+            0.8342661922347229,
+            -0.28397230881369534,
+            -0.47260940354715275
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 22417.100000023842,
+      "t": 0.337,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 78184,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.82344211488423,
+            30.298301265756933,
+            47.92315449900917
+          ],
+          "direction": [
+            0.8363794687766889,
+            -0.2839411252753749,
+            -0.46887825881157885
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 22667.30000001192,
+      "t": 0.342,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 74334,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -81.06396314166278,
+            30.29671614122532,
+            47.46233638662573
+          ],
+          "direction": [
+            0.8390954625793728,
+            -0.28390068069327923,
+            -0.4640250081413727
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 22917,
+      "t": 0.346,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 75968,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -81.35022082783291,
+            30.294804770636855,
+            46.904832085013965
+          ],
+          "direction": [
+            0.8423310601436415,
+            -0.28385194052739676,
+            -0.45815549868589445
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 23167.600000023842,
+      "t": 0.35,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 74718,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -81.68199413601202,
+            30.29255415961934,
+            46.24583737085631
+          ],
+          "direction": [
+            0.8460856181349665,
+            -0.2837945897149652,
+            -0.45122029833960986
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 23416.400000035763,
+      "t": 0.354,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 76352,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -82.06454079772708,
+            30.289909389521192,
+            45.46798268754722
+          ],
+          "direction": [
+            0.8504211255852052,
+            -0.2837272500026665,
+            -0.44303809854719844
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 23667.80000001192,
+      "t": 0.358,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 75102,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -82.46928845356942,
+            30.28704932393685,
+            44.62270590078657
+          ],
+          "direction": [
+            0.8550162102785016,
+            -0.28365449549133953,
+            -0.4341513645591164
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 23917.900000035763,
+      "t": 0.362,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 76712,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -82.91485469177826,
+            30.28382175099624,
+            43.66382334820601
+          ],
+          "direction": [
+            0.8600849777060073,
+            -0.28357247559770615,
+            -0.4240760335221099
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 24166.30000001192,
+      "t": 0.366,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 75462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -83.37362856787863,
+            30.280404542633796,
+            42.6429943668423
+          ],
+          "direction": [
+            0.8653162983885337,
+            -0.2834857325874151,
+            -0.41335643597571203
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 24419,
+      "t": 0.371,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 77120,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -83.93711721945996,
+            30.276063573152438,
+            41.3381664150317
+          ],
+          "direction": [
+            0.8717606569063113,
+            -0.28337568244382155,
+            -0.3996643337474274
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 24666.600000023842,
+      "t": 0.375,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 75846,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -84.43733562977465,
+            30.272062119831777,
+            40.12771177533139
+          ],
+          "direction": [
+            0.8775011347195919,
+            -0.28327437952583767,
+            -0.38697207195103955
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 24916.600000023842,
+      "t": 0.379,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 77480,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -85.00904439459256,
+            30.267295857995478,
+            38.67669178163414
+          ],
+          "direction": [
+            0.8840879866559455,
+            -0.28315388877140074,
+            -0.371769158382282
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 25167.400000035763,
+      "t": 0.383,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 76254,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -85.60069098385847,
+            30.26211454702864,
+            37.08849193046831
+          ],
+          "direction": [
+            0.8909383395552737,
+            -0.2830231197791674,
+            -0.3551433355434948
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 25417.900000035763,
+      "t": 0.387,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 77864,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -86.15693589737351,
+            30.25697322718144,
+            35.50199719682871
+          ],
+          "direction": [
+            0.8974158134407111,
+            -0.2828935795334,
+            -0.33854996742774474
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 25666.5,
+      "t": 0.392,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 76638,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -86.75180730312523,
+            30.25112902711449,
+            33.68660961453044
+          ],
+          "direction": [
+            0.9043909500779669,
+            -0.28274659359924303,
+            -0.3195799950326943
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 25916.80000001192,
+      "t": 0.396,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 78248,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -87.31045508841477,
+            30.24524436944313,
+            31.84661158839321
+          ],
+          "direction": [
+            0.910996683475388,
+            -0.2825988723820831,
+            -0.3003713035980953
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 26166.5,
+      "t": 0.4,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 76998,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -87.88498489726436,
+            30.238689034373543,
+            29.78377388106023
+          ],
+          "direction": [
+            0.917861121162218,
+            -0.2824346467865376,
+            -0.27885772815792687
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 26417.600000023842,
+      "t": 0.404,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 78632,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -88.41872448677056,
+            30.232006335343833,
+            27.667846569293868
+          ],
+          "direction": [
+            0.9243224019711496,
+            -0.282267587793032,
+            -0.25681336821861084
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 26667.5,
+      "t": 0.408,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 77382,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -88.9291041079394,
+            30.224893369102915,
+            25.40270787478901
+          ],
+          "direction": [
+            0.9306043758128386,
+            -0.28209016641581164,
+            -0.23323943433625688
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 26916.200000047684,
+      "t": 0.412,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 79016,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.4118327512306,
+            30.217237797304126,
+            22.95158124521763
+          ],
+          "direction": [
+            0.9366798548794995,
+            -0.2818996611407424,
+            -0.20775810576642922
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 27166.5,
+      "t": 0.416,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 77766,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.82431831672612,
+            30.209606027986737,
+            20.49634322382053
+          ],
+          "direction": [
+            0.9420295612097953,
+            -0.2817102097085897,
+            -0.18226262247872704
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 27417.5,
+      "t": 0.421,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 79400,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.20322868949987,
+            30.20109925428735,
+            17.7481362890453
+          ],
+          "direction": [
+            0.9471623411797075,
+            -0.281499576061987,
+            -0.15375788801845938
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 27667.100000023842,
+      "t": 0.424,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 78186,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.47051827188798,
+            30.193473139562734,
+            15.276233399847685
+          ],
+          "direction": [
+            0.95102160334062,
+            -0.28131122745377407,
+            -0.12814797418565663
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 27917.5,
+      "t": 0.429,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 78330,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.71244282935363,
+            30.183739855346506,
+            12.113128929841901
+          ],
+          "direction": [
+            0.9549317419787313,
+            -0.2810714891416227,
+            -0.0954158590234162
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 28167.700000047684,
+      "t": 0.433,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 83482,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.84100608094427,
+            30.174313673991804,
+            9.044438387888079
+          ],
+          "direction": [
+            0.957638250140518,
+            -0.280840006911237,
+            -0.063701431584409
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 28417.5,
+      "t": 0.437,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 83626,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.86450093738185,
+            30.164409786353165,
+            5.818346815976293
+          ],
+          "direction": [
+            0.9593439045996748,
+            -0.28059752021569995,
+            -0.03040237418771974
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 28667.100000023842,
+      "t": 0.442,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 82666,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.77554872667056,
+            30.154591275113788,
+            2.6219906862539117
+          ],
+          "direction": [
+            0.9598921716553528,
+            -0.28035785229123156,
+            0.0025482255431477085
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 28917.400000035763,
+      "t": 0.445,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 82810,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.57665165251592,
+            30.144813721311667,
+            -0.5553472936414448
+          ],
+          "direction": [
+            0.9593171453459001,
+            -0.2801198982654312,
+            0.03526268908007135
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 29166.80000001192,
+      "t": 0.45,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 81850,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -90.19919315044619,
+            30.13321623685519,
+            -4.311653225007447
+          ],
+          "direction": [
+            0.9571995426775786,
+            -0.2798385680937742,
+            0.07388782920793213
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 29417,
+      "t": 0.454,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 81792,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.70098904222344,
+            30.122222482546334,
+            -7.854760774258132
+          ],
+          "direction": [
+            0.9537710657728455,
+            -0.27957279083939884,
+            0.11027152269194485
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 29666.80000001192,
+      "t": 0.458,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 80832,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.07768431303418,
+            30.1113850211313,
+            -11.325671649983931
+          ],
+          "direction": [
+            0.9490560746938468,
+            -0.2793116479298042,
+            0.14586833246954156
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 29918.600000023842,
+      "t": 0.462,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 80774,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -88.35965548103964,
+            30.101011169239815,
+            -14.623414279556172
+          ],
+          "direction": [
+            0.9433189939983655,
+            -0.2790624645967862,
+            0.17964803482108893
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 30167.400000035763,
+      "t": 0.467,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 79904,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -87.57897424683892,
+            30.091272415126213,
+            -17.693617177607596
+          ],
+          "direction": [
+            0.9368603741618503,
+            -0.2788292317022558,
+            0.21106136281576404
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 30417.200000047684,
+      "t": 0.47,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 79846,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -86.7855903054869,
+            30.082468545356885,
+            -20.444918786576686
+          ],
+          "direction": [
+            0.9301414025168276,
+            -0.2786189626901158,
+            0.23918286927268234
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 30667,
+      "t": 0.475,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 71,
+          "triangles": 78856,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -85.8180423188336,
+            30.07278354823903,
+            -23.442139323847634
+          ],
+          "direction": [
+            0.9217998248892306,
+            -0.27838827385779086,
+            0.2697870490084049
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 30917.30000001192,
+      "t": 0.479,
+      "caption": "Raising the uprightsHere, ropes raise the uprights; rubble secures their bases.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 71,
+          "triangles": 78918,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -84.80498061972028,
+            30.06355375708534,
+            -26.267043873866434
+          ],
+          "direction": [
+            0.9129395412875214,
+            -0.2781690317958977,
+            0.2986023839547551
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 31166.80000001192,
+      "t": 0.483,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 78750,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -83.74280115553518,
+            30.05463288323163,
+            -28.96574683057015
+          ],
+          "direction": [
+            0.9035462224687288,
+            -0.2779576834174138,
+            0.3261038946282535
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 31418.200000047684,
+      "t": 0.487,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 78692,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -82.69424441119605,
+            30.046422279708388,
+            -31.420085882335336
+          ],
+          "direction": [
+            0.8941930743401109,
+            -0.27776364142346777,
+            0.3510927303510518
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 31667.100000023842,
+      "t": 0.491,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 78476,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -81.65447590648249,
+            30.038753631086408,
+            -33.685297514350076
+          ],
+          "direction": [
+            0.8848555167615545,
+            -0.277582819240909,
+            0.37413699752752505
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 31917.30000001192,
+      "t": 0.496,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 79602,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -80.56222535625355,
+            30.031118592477192,
+            -35.913142928261486
+          ],
+          "direction": [
+            0.8749916801575299,
+            -0.27740318194871366,
+            0.396783359403884
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 32167,
+      "t": 0.5,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 78524,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -79.4363389037957,
+            30.02362863906437,
+            -38.07075576681459
+          ],
+          "direction": [
+            0.8647752198321432,
+            -0.2772273361592758,
+            0.4186989649501182
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 32417.900000035763,
+      "t": 0.504,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 79722,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -78.35560181067711,
+            30.016749516336905,
+            -40.02700051154898
+          ],
+          "direction": [
+            0.8549292289500727,
+            -0.2770661588643467,
+            0.43855485073020306
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 32666.80000001192,
+      "t": 0.508,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 75,
+          "triangles": 78714,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -77.31621613579688,
+            30.010382907882494,
+            -41.814986392026
+          ],
+          "direction": [
+            0.8454290188768706,
+            -0.27691726764195285,
+            0.4566909249400596
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 32917.5,
+      "t": 0.512,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 79720,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -76.29152394227596,
+            30.004317433815004,
+            -43.49759055725436
+          ],
+          "direction": [
+            0.8360373534863514,
+            -0.2767756659587668,
+            0.4737475850161337
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 33167.5,
+      "t": 0.516,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 78834,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -75.27535812272626,
+            29.99848717967467,
+            -45.09522214647724
+          ],
+          "direction": [
+            0.8267016900013945,
+            -0.27663978172739306,
+            0.48993341069441143
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 33417,
+      "t": 0.521,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 80508,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -74.26953354129056,
+            29.992879333896454,
+            -46.61316694470979
+          ],
+          "direction": [
+            0.8174418334194093,
+            -0.2765092892008817,
+            0.5053033365826294
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 33667.40000003576,
+      "t": 0.525,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 79564,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -73.34715414028723,
+            29.987866305373462,
+            -47.95416471025325
+          ],
+          "direction": [
+            0.8089352077083696,
+            -0.2763928097814547,
+            0.5188745941274537
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 33917.10000002384,
+      "t": 0.529,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 81612,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -72.44643194539974,
+            29.983080634864173,
+            -49.21999381110479
+          ],
+          "direction": [
+            0.8006158576912715,
+            -0.2762817638700315,
+            0.531679071777453
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 34167.5,
+      "t": 0.533,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 83356,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -71.61388810759786,
+            29.97874634459657,
+            -50.35409957608924
+          ],
+          "direction": [
+            0.792916269906438,
+            -0.27618131829637416,
+            0.5431460837949011
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 34416.60000002384,
+      "t": 0.537,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 84292,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -70.83743046982234,
+            29.974775963700417,
+            -51.382520408262465
+          ],
+          "direction": [
+            0.7857274841328914,
+            -0.2760894113916004,
+            0.5535403847919648
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 34667.80000001192,
+      "t": 0.542,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 86156,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -70.09452567228273,
+            29.971038133532822,
+            -52.34141987206919
+          ],
+          "direction": [
+            0.7788427557493443,
+            -0.2760029792213385,
+            0.5632284769768953
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 34918.60000002384,
+      "t": 0.546,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 87022,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -69.44087999813401,
+            29.967795996712663,
+            -53.165762439861
+          ],
+          "direction": [
+            0.7727802604498702,
+            -0.27592808101808985,
+            0.5715543396429645
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 35167.5,
+      "t": 0.55,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 88692,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -68.86597878525797,
+            29.96497873665981,
+            -53.876434035942005
+          ],
+          "direction": [
+            0.7674445136332242,
+            -0.27586305207343287,
+            0.5787300709268479
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 35416.60000002384,
+      "t": 0.554,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 87294,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -68.3632158342266,
+            29.96254019512317,
+            -54.48729306386369
+          ],
+          "direction": [
+            0.7627756820424578,
+            -0.27580680526145535,
+            0.5848964566965106
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 35667.90000003576,
+      "t": 0.558,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 87094,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.91051874683264,
+            29.96036388366715,
+            -55.02908158392575
+          ],
+          "direction": [
+            0.7585697936397644,
+            -0.27575663859778055,
+            0.5903644166500707
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 35918.80000001192,
+      "t": 0.562,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 87614,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.51927508361983,
+            29.95849734810798,
+            -55.491192752071484
+          ],
+          "direction": [
+            0.7549333994409148,
+            -0.2757136363601047,
+            0.5950273549456968
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 36167.200000047684,
+      "t": 0.566,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 87260,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.24009574201284,
+            29.95717336648459,
+            -55.81753890393897
+          ],
+          "direction": [
+            0.7523377858741329,
+            -0.2756831470206153,
+            0.5983198629452455
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 36416.700000047684,
+      "t": 0.57,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 88956,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.0277336966192,
+            29.95617058795508,
+            -56.06391251585754
+          ],
+          "direction": [
+            0.750362960949345,
+            -0.27566006182500075,
+            0.6008052572589297
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 36667.30000001192,
+      "t": 0.575,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 87676,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.87765883592006,
+            29.955464153681028,
+            -56.23706181926464
+          ],
+          "direction": [
+            0.7489671446262698,
+            -0.2756438026193034,
+            0.6025518320841311
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 36917,
+      "t": 0.579,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 89348,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.82032719471715,
+            29.955194762779456,
+            -56.3029998028467
+          ],
+          "direction": [
+            0.7484338668805278,
+            -0.2756376031735616,
+            0.6032169250137092
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 37166.700000047684,
+      "t": 0.583,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 89270,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.82224576952373,
+            29.95557882482655,
+            -56.36793133611525
+          ],
+          "direction": [
+            0.7481459276177669,
+            -0.27565475102480236,
+            0.6035661763439079
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 37416.700000047684,
+      "t": 0.587,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 92366,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.84027292849711,
+            29.957276926138405,
+            -56.63625339790445
+          ],
+          "direction": [
+            0.7469950694090097,
+            -0.2757297236662214,
+            0.6049557717433383
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 37666.200000047684,
+      "t": 0.592,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 81,
+          "triangles": 93456,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.87191864269816,
+            29.960283773034405,
+            -57.1128216926812
+          ],
+          "direction": [
+            0.7449412105013963,
+            -0.2758631019686745,
+            0.6074225398097566
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 37917.200000047684,
+      "t": 0.596,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 83,
+          "triangles": 94978,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.91632062166555,
+            29.964560637740803,
+            -57.79392372604693
+          ],
+          "direction": [
+            0.7419839695238625,
+            -0.27605421378287837,
+            0.6109450548308981
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 38166.10000002384,
+      "t": 0.6,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 83,
+          "triangles": 97124,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.97292730973946,
+            29.97011718521148,
+            -58.68465238458844
+          ],
+          "direction": [
+            0.7380773819870896,
+            -0.2763050252820247,
+            0.6155463517908163
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 38417.80000001192,
+      "t": 0.604,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 83,
+          "triangles": 98412,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.03816474917993,
+            29.97667728705996,
+            -59.745023979732814
+          ],
+          "direction": [
+            0.7333683280157379,
+            -0.27660492427898753,
+            0.6210157899184342
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 38667,
+      "t": 0.608,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 100396,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.11542069857254,
+            29.984684876079292,
+            -61.05278439467504
+          ],
+          "direction": [
+            0.727472121932977,
+            -0.2769768016715548,
+            0.6277484871715169
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 38916.700000047684,
+      "t": 0.612,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 98858,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.19786561505553,
+            29.993552517761795,
+            -62.519100520840546
+          ],
+          "direction": [
+            0.7207431586655901,
+            -0.2773964640986582,
+            0.6352798603311062
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 39169,
+      "t": 0.617,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 100938,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.28807393327575,
+            30.003696363285226,
+            -64.22120978830893
+          ],
+          "direction": [
+            0.7127732316493419,
+            -0.27788727846268874,
+            0.643997655828617
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 39416.60000002384,
+      "t": 0.621,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 100406,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.37911952152399,
+            30.014489780829432,
+            -66.06342459036772
+          ],
+          "direction": [
+            0.7039512387250212,
+            -0.2784230610081358,
+            0.6534012952209143
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 39666.80000001192,
+      "t": 0.625,
+      "caption": "Across the uprightsThe film uses timber platforms to raise the stone lintels.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 102298,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.47057777046246,
+            30.026020302611474,
+            -68.06982943155143
+          ],
+          "direction": [
+            0.6941061601988507,
+            -0.27901217220445096,
+            0.6636029280644874
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 39918.10000002384,
+      "t": 0.629,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 101188,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.55496742332689,
+            30.037430011885174,
+            -70.09783401437079
+          ],
+          "direction": [
+            0.6838983614448383,
+            -0.27961373836363757,
+            0.6738688214566517
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 40167.80000001192,
+      "t": 0.633,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 102726,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.64444886009727,
+            30.050589987137844,
+            -72.49518521292725
+          ],
+          "direction": [
+            0.6714899359214258,
+            -0.28033309565893344,
+            0.6859406836123069
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 40417.60000002384,
+      "t": 0.637,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 103534,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.71096716155982,
+            30.061328718796066,
+            -74.5028609537691
+          ],
+          "direction": [
+            0.6608061389403475,
+            -0.28094265647110184,
+            0.6959931540710087
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 40667,
+      "t": 0.641,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 103564,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.76762083092183,
+            30.071365313697083,
+            -76.42586326633162
+          ],
+          "direction": [
+            0.6503164337027456,
+            -0.2815328419782124,
+            0.7055691283948112
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 40916.90000003576,
+      "t": 0.646,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 105524,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.81013146159681,
+            30.079634909696935,
+            -78.04773126063772
+          ],
+          "direction": [
+            0.6412696029053814,
+            -0.282035591177725,
+            0.7136029860493901
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 41167.40000003576,
+      "t": 0.65,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 103332,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.84385408040814,
+            30.086811865139182,
+            -79.4854299988473
+          ],
+          "direction": [
+            0.6330938845632149,
+            -0.28248518518895493,
+            0.7206901230608206
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 41417.80000001192,
+      "t": 0.654,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 105234,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.87026867585023,
+            30.09294834921763,
+            -80.73887836558134
+          ],
+          "direction": [
+            0.6258438537101167,
+            -0.2828802609487434,
+            0.726841267911255
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 41667.10000002384,
+      "t": 0.658,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 103900,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.89082962356079,
+            30.098142801604784,
+            -81.81872701864235
+          ],
+          "direction": [
+            0.6195051870916652,
+            -0.28322299175447135,
+            0.7321188838625646
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 41916.40000003576,
+      "t": 0.662,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 106244,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.90555550744794,
+            30.102156429286566,
+            -82.66574231845718
+          ],
+          "direction": [
+            0.6144722881591442,
+            -0.2834933925193694,
+            0.7362440515768699
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 42166.5,
+      "t": 0.667,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 105188,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.9165575796921,
+            30.105357562827308,
+            -83.34965589804908
+          ],
+          "direction": [
+            0.6103689501927443,
+            -0.2837127482034437,
+            0.7395652920110954
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 42418,
+      "t": 0.67,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 105430,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.92367089402106,
+            30.1075391738347,
+            -83.82019732431208
+          ],
+          "direction": [
+            0.6075250752343212,
+            -0.2838642057562682,
+            0.7418452639546171
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 42666.80000001192,
+      "t": 0.675,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 107534,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.92844620474338,
+            30.109061172238015,
+            -84.15067728526697
+          ],
+          "direction": [
+            0.6055175385450375,
+            -0.283970845172809,
+            0.7434440595002422
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 42916.700000047684,
+      "t": 0.679,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 107540,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.93030514834122,
+            30.10966744570854,
+            -84.28283700231438
+          ],
+          "direction": [
+            0.6047123605632362,
+            -0.28401355205538265,
+            0.7440828335816673
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 43166.60000002384,
+      "t": 0.683,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 109500,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -67.5157198291443,
+            30.100844950460186,
+            -84.63975789785934
+          ],
+          "direction": [
+            0.6002993837332763,
+            -0.2838098636845257,
+            0.7477249568957958
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 43417.10000002384,
+      "t": 0.687,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 108532,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -65.57642425953665,
+            30.059898429774,
+            -86.22833374014984
+          ],
+          "direction": [
+            0.579871204486544,
+            -0.28286413367294055,
+            0.7640270074341493
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 43666.700000047684,
+      "t": 0.691,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 110468,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -62.379624731426965,
+            29.9938014886897,
+            -88.66285881697364
+          ],
+          "direction": [
+            0.5463764848363023,
+            -0.28135509634057737,
+            0.7888675722712338
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 43917.200000047684,
+      "t": 0.695,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 108398,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -57.13775898706544,
+            29.888533762866146,
+            -92.2116462072486
+          ],
+          "direction": [
+            0.4919033204030401,
+            -0.278994582330348,
+            0.8247382290198382
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 44167.30000001192,
+      "t": 0.7,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 109810,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -49.15600844879868,
+            29.733791010443753,
+            -96.70600394732129
+          ],
+          "direction": [
+            0.4099262011809759,
+            -0.27561387835927614,
+            0.869481166927204
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 44417,
+      "t": 0.704,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 109134,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -39.46136883517687,
+            29.551819595364268,
+            -100.9175100283486
+          ],
+          "direction": [
+            0.3117646498262617,
+            -0.27176280949509696,
+            0.910465693199936
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 44668,
+      "t": 0.708,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 108308,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -26.9187674938293,
+            29.321637386643864,
+            -104.64510242665757
+          ],
+          "direction": [
+            0.1868244270566739,
+            -0.26706496688157205,
+            0.9453956509945931
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 44917,
+      "t": 0.712,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 109246,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -12.168739791703407,
+            29.0528679577405,
+            -106.85931373639563
+          ],
+          "direction": [
+            0.04261536473605514,
+            -0.26179769909821443,
+            0.96418146395546
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 45167.700000047684,
+      "t": 0.717,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 108164,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            5.150617917982258,
+            28.732466500496393,
+            -106.71997816337391
+          ],
+          "direction": [
+            -0.1231733351731963,
+            -0.2557881496370577,
+            0.9588538741683019
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 45416.5,
+      "t": 0.721,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 85,
+          "triangles": 110188,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            24.785340665234965,
+            28.352097549487073,
+            -103.04348710315485
+          ],
+          "direction": [
+            -0.30655583188406693,
+            -0.2489846209584872,
+            0.9187111518121605
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 45667.10000002384,
+      "t": 0.725,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 106810,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            46.238041790657064,
+            27.89707441828616,
+            -94.36194666814761
+          ],
+          "direction": [
+            -0.5010301077018796,
+            -0.24125110088112672,
+            0.8311237798907498
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 45917.200000047684,
+      "t": 0.729,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 107682,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            66.13423746746692,
+            27.407699720657995,
+            -80.81911881897642
+          ],
+          "direction": [
+            -0.6749072769185569,
+            -0.23335490148792315,
+            0.7000326117502956
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 46167.700000047684,
+      "t": 0.733,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 99512,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.08988082365124,
+            26.816662092741932,
+            -60.18599293443336
+          ],
+          "direction": [
+            -0.8323369821728922,
+            -0.22431251584970194,
+            0.5068520921733479
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 46416.700000047684,
+      "t": 0.737,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 100132,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            97.6496016165942,
+            26.25325608493619,
+            -37.70232787088708
+          ],
+          "direction": [
+            -0.9283373321808593,
+            -0.2161228685182232,
+            0.30245777123886186
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 46667.10000002384,
+      "t": 0.742,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 79,
+          "triangles": 98508,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            104.34166275703394,
+            25.745436054203,
+            -16.246931105824665
+          ],
+          "direction": [
+            -0.9714451695091993,
+            -0.20905240570734368,
+            0.11221129312691769
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 46917.5,
+      "t": 0.746,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 99516,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            106.79868744526587,
+            25.249400535638152,
+            4.925212904417015
+          ],
+          "direction": [
+            -0.976700622590883,
+            -0.20239754001682536,
+            -0.0713521522150491
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 47166.80000001192,
+      "t": 0.75,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 100170,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            105.79062600138592,
+            24.804995661388357,
+            23.491546302501774
+          ],
+          "direction": [
+            -0.9533661524065408,
+            -0.19662516875187636,
+            -0.22897930574365155
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 47418.80000001192,
+      "t": 0.754,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 98354,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            102.44926823732081,
+            24.400616332272087,
+            39.67789586309533
+          ],
+          "direction": [
+            -0.9115931857415628,
+            -0.19151481929643607,
+            -0.36375807578581965
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 47666.80000001192,
+      "t": 0.758,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 98666,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            98.02069247734468,
+            24.061274929652612,
+            52.53305957734792
+          ],
+          "direction": [
+            -0.8631542085685546,
+            -0.18732314375589476,
+            -0.4689081488349296
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 47917.30000001192,
+      "t": 0.762,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 97794,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            93.2708411059608,
+            23.776876612609843,
+            62.688310552312075
+          ],
+          "direction": [
+            -0.8142223763532208,
+            -0.18387396434419423,
+            -0.5506653131277331
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 48166.90000003576,
+      "t": 0.767,
+      "caption": "Stones from WalesMany smaller bluestones came from the Preseli Hills in Wales.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 83,
+          "triangles": 98094,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.58896706122839,
+            23.536812622203616,
+            70.7671528623737
+          ],
+          "direction": [
+            -0.767645403709671,
+            -0.18100549905499252,
+            -0.6147825172166733
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 48417.30000001192,
+      "t": 0.77,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 102278,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.08317326337678,
+            23.373662321199106,
+            75.9803094831325
+          ],
+          "direction": [
+            -0.7335025444739113,
+            -0.1790776642461816,
+            -0.6556715697805037
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 48666.80000001192,
+      "t": 0.775,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101438,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.2842060212336,
+            23.250920743495243,
+            79.7473136355623
+          ],
+          "direction": [
+            -0.7065965398044172,
+            -0.17763850112985313,
+            -0.6849568547381388
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 48917.40000003576,
+      "t": 0.779,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101572,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.20121069240685,
+            23.20492536834889,
+            81.1237682881804
+          ],
+          "direction": [
+            -0.6962591625918896,
+            -0.1771016283072578,
+            -0.6955991602624018
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 49166.60000002384,
+      "t": 0.783,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101492,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.17003783174043,
+            23.202878872638706,
+            81.17003783174039
+          ],
+          "direction": [
+            -0.6959327771348728,
+            -0.17707382477003053,
+            -0.6959327771348726
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 49417.10000002384,
+      "t": 0.787,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101804,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.18398902870459,
+            23.200297240972652,
+            81.18398902870454
+          ],
+          "direction": [
+            -0.6959387705151889,
+            -0.17702670811946797,
+            -0.6959387705151884
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 49667,
+      "t": 0.792,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 102574,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.20809647280072,
+            23.19583190045696,
+            81.20809647280069
+          ],
+          "direction": [
+            -0.6959491231781164,
+            -0.17694529068393586,
+            -0.6959491231781161
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 49917.700000047684,
+      "t": 0.796,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 102998,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.24296229486836,
+            23.18936413488511,
+            81.24296229486833
+          ],
+          "direction": [
+            -0.6959640873820854,
+            -0.17682753786908414,
+            -0.6959640873820852
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 50167.200000047684,
+      "t": 0.8,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 103382,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.28985768759968,
+            23.180646766068943,
+            81.28985768759964
+          ],
+          "direction": [
+            -0.6959841987198787,
+            -0.17666915481910778,
+            -0.695984198719878
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 50416.40000003576,
+      "t": 0.804,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 103694,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.34710030178121,
+            23.16997787042975,
+            81.34710030178117
+          ],
+          "direction": [
+            -0.6960087228214515,
+            -0.17647582132661707,
+            -0.6960087228214513
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 50667,
+      "t": 0.808,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 102806,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.4134581403852,
+            23.157571433262707,
+            81.41345814038516
+          ],
+          "direction": [
+            -0.6960371181257549,
+            -0.17625169611208977,
+            -0.6960371181257546
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 50917.700000047684,
+      "t": 0.812,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 77,
+          "triangles": 101740,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.49516341847567,
+            23.14223859854986,
+            81.49516341847563
+          ],
+          "direction": [
+            -0.6960720306720786,
+            -0.1759757262581917,
+            -0.6960720306720785
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 51166.5,
+      "t": 0.817,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 100740,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.58362535215583,
+            23.125566879098386,
+            81.58362535215579
+          ],
+          "direction": [
+            -0.6961097679842129,
+            -0.17567692459150935,
+            -0.6961097679842128
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 51416.90000003576,
+      "t": 0.821,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 98154,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.6823741011881,
+            23.10686937435397,
+            81.68237410118806
+          ],
+          "direction": [
+            -0.6961518170369624,
+            -0.1753433639242491,
+            -0.6961518170369623
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 51667,
+      "t": 0.825,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 66,
+          "triangles": 96638,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.79268250044532,
+            23.085874448085583,
+            81.79268250044528
+          ],
+          "direction": [
+            -0.6961986929292803,
+            -0.17497074020282313,
+            -0.69619869292928
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 51917.40000003576,
+      "t": 0.829,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.91484794209042,
+            23.062488941450983,
+            81.91484794209038
+          ],
+          "direction": [
+            -0.6962504899501154,
+            -0.17455804332212507,
+            -0.6962504899501152
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 52167.30000001192,
+      "t": 0.833,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.05105052879699,
+            23.03625052958111,
+            82.05105052879696
+          ],
+          "direction": [
+            -0.6963080929573999,
+            -0.17409790166471953,
+            -0.6963080929573995
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 52416.30000001192,
+      "t": 0.837,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.19434284034799,
+            23.00845757563627,
+            82.19434284034796
+          ],
+          "direction": [
+            -0.6963685286572966,
+            -0.17361377995811347,
+            -0.6963685286572963
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 52667.30000001192,
+      "t": 0.841,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.34417651851405,
+            22.97918884065212,
+            82.344176518514
+          ],
+          "direction": [
+            -0.6964315416019073,
+            -0.17310752647987918,
+            -0.696431541601907
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 52917.90000003576,
+      "t": 0.845,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.50094332378829,
+            22.948339204879616,
+            82.50094332378825
+          ],
+          "direction": [
+            -0.6964972715213035,
+            -0.17257781296203842,
+            -0.6964972715213029
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 53167.30000001192,
+      "t": 0.85,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.68753939721866,
+            22.911317513327788,
+            82.68753939721861
+          ],
+          "direction": [
+            -0.6965752435083475,
+            -0.17194726011941414,
+            -0.6965752435083471
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 53417.10000002384,
+      "t": 0.854,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.85557510717022,
+            22.87769733933909,
+            82.85557510717018
+          ],
+          "direction": [
+            -0.696645213467653,
+            -0.17137938354778004,
+            -0.6966452134676525
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 53667.80000001192,
+      "t": 0.858,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.02372559125168,
+            22.843787643908747,
+            83.02372559125163
+          ],
+          "direction": [
+            -0.6967149976363657,
+            -0.17081107732556108,
+            -0.6967149976363651
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 53917.60000002384,
+      "t": 0.862,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.18309722070049,
+            22.811402160891664,
+            83.18309722070045
+          ],
+          "direction": [
+            -0.6967809228654995,
+            -0.17027240252432493,
+            -0.6967809228654994
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 54166.80000001192,
+      "t": 0.867,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.32802477085359,
+            22.781743824741156,
+            83.32802477085355
+          ],
+          "direction": [
+            -0.6968406910621784,
+            -0.1697825154719182,
+            -0.6968406910621779
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 54418.10000002384,
+      "t": 0.871,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.46480517838967,
+            22.753570992644473,
+            83.46480517838962
+          ],
+          "direction": [
+            -0.6968969402752972,
+            -0.16932013840609147,
+            -0.6968969402752969
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 54667.90000003576,
+      "t": 0.875,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.5879590927755,
+            22.7280538192896,
+            83.58795909277546
+          ],
+          "direction": [
+            -0.6969474536167677,
+            -0.1689038004137491,
+            -0.6969474536167672
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 54917.80000001192,
+      "t": 0.879,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.6960295550296,
+            22.705544011983307,
+            83.69602955502955
+          ],
+          "direction": [
+            -0.6969916771283378,
+            -0.16853843486770115,
+            -0.6969916771283375
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 55166.80000001192,
+      "t": 0.883,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.79549890827744,
+            22.684728317172627,
+            83.7954989082774
+          ],
+          "direction": [
+            -0.6970322957903365,
+            -0.16820213212235582,
+            -0.6970322957903361
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 55417.60000002384,
+      "t": 0.887,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.88758655082215,
+            22.66537414244959,
+            83.8875865508221
+          ],
+          "direction": [
+            -0.697069827321314,
+            -0.16789077305339903,
+            -0.6970698273213134
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 55666.700000047684,
+      "t": 0.892,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.96696522953346,
+            22.6486268021825,
+            83.96696522953341
+          ],
+          "direction": [
+            -0.6971021229958062,
+            -0.16762237389286777,
+            -0.6971021229958058
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 55916.40000003576,
+      "t": 0.896,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.0362908474435,
+            22.633951812612136,
+            84.03629084744345
+          ],
+          "direction": [
+            -0.6971302859997459,
+            -0.1673879585986566,
+            -0.6971302859997455
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 56167.10000002384,
+      "t": 0.9,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.0941371045068,
+            22.621672081637094,
+            84.09413710450676
+          ],
+          "direction": [
+            -0.6971537552587129,
+            -0.16719235346555003,
+            -0.6971537552587127
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 56416.90000003576,
+      "t": 0.904,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.13693135211705,
+            22.612567298873156,
+            84.136931352117
+          ],
+          "direction": [
+            -0.6971710998863778,
+            -0.16704764280419185,
+            -0.6971710998863775
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 56668.40000003576,
+      "t": 0.908,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.17690124257209,
+            22.60404780575215,
+            84.17690124257204
+          ],
+          "direction": [
+            -0.6971872861518722,
+            -0.16691248022953709,
+            -0.6971872861518719
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 56917.200000047684,
+      "t": 0.912,
+      "caption": "The solstice axisThe axis marks midsummer sunrise and midwinter sunset.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.20149592426141,
+            22.598798009560575,
+            84.20149592426137
+          ],
+          "direction": [
+            -0.6971972395019822,
+            -0.16682930936029308,
+            -0.6971972395019816
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 57167,
+      "t": 0.917,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.21579972561373,
+            22.595742201403638,
+            84.21579972561369
+          ],
+          "direction": [
+            -0.6972030258876643,
+            -0.166780938317814,
+            -0.6972030258876638
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 57416.700000047684,
+      "t": 0.921,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.22028860322847,
+            22.594993613565993,
+            84.22028860322844
+          ],
+          "direction": [
+            -0.6972046473177111,
+            -0.1667673814544453,
+            -0.6972046473177109
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 57667,
+      "t": 0.925,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.25082066243502,
+            22.595748489879345,
+            84.25082066243498
+          ],
+          "direction": [
+            -0.6972102878172831,
+            -0.16672021210244042,
+            -0.6972102878172829
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 57916.80000001192,
+      "t": 0.929,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.33357253179531,
+            22.59777387540132,
+            84.33357253179527
+          ],
+          "direction": [
+            -0.697225567124385,
+            -0.16659236806096486,
+            -0.6972255671243848
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 58167.80000001192,
+      "t": 0.933,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.459212475088,
+            22.60079149871023,
+            84.45921247508795
+          ],
+          "direction": [
+            -0.6972487421297568,
+            -0.1663982668087156,
+            -0.6972487421297564
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 58416.80000001192,
+      "t": 0.937,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.63311188226008,
+            22.60485390205901,
+            84.63311188226004
+          ],
+          "direction": [
+            -0.6972807728071289,
+            -0.1661296112888587,
+            -0.6972807728071283
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 58667.700000047684,
+      "t": 0.94,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            84.80109076853746,
+            22.608651978322257,
+            84.80109076853742
+          ],
+          "direction": [
+            -0.6973116622074232,
+            -0.16587010429562407,
+            -0.697311662207423
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 58916.30000001192,
+      "t": 0.946,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.14277297777228,
+            22.615995486717544,
+            85.14277297777224
+          ],
+          "direction": [
+            -0.6973743397604555,
+            -0.165342252577307,
+            -0.6973743397604553
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 59167.5,
+      "t": 0.95,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.47014572819656,
+            22.622550979555854,
+            85.47014572819651
+          ],
+          "direction": [
+            -0.697434198911002,
+            -0.16483651409423336,
+            -0.6974341989110017
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 59417.700000047684,
+      "t": 0.954,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            85.83208200374577,
+            22.629251433612374,
+            85.83208200374573
+          ],
+          "direction": [
+            -0.6975001575998915,
+            -0.1642773882682987,
+            -0.6975001575998913
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 59667.90000003576,
+      "t": 0.958,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            86.24087286283665,
+            22.636128477305913,
+            86.24087286283661
+          ],
+          "direction": [
+            -0.6975743769255515,
+            -0.16364588999989466,
+            -0.6975743769255512
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 59917.40000003576,
+      "t": 0.962,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            86.70363398547799,
+            22.64302936258096,
+            86.70363398547795
+          ],
+          "direction": [
+            -0.6976580392389381,
+            -0.16293103010341975,
+            -0.6976580392389377
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 60166.80000001192,
+      "t": 0.967,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            87.12007450310898,
+            22.648437130686787,
+            87.12007450310894
+          ],
+          "direction": [
+            -0.6977330045123469,
+            -0.1622877346824057,
+            -0.6977330045123467
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 60417.700000047684,
+      "t": 0.971,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            87.47979680460377,
+            22.652496672405913,
+            87.47979680460372
+          ],
+          "direction": [
+            -0.697797513700795,
+            -0.16173206158946318,
+            -0.6977975137007948
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 60666.40000003576,
+      "t": 0.975,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            87.79975133569815,
+            22.65563109128083,
+            87.7997513356981
+          ],
+          "direction": [
+            -0.6978546998110458,
+            -0.16123782404656534,
+            -0.6978546998110452
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 60917.10000002384,
+      "t": 0.979,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.063509090512,
+            22.65787781536412,
+            88.06350909051196
+          ],
+          "direction": [
+            -0.6979017062389369,
+            -0.16083039780328295,
+            -0.6979017062389363
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 61167,
+      "t": 0.983,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.2863240112245,
+            22.65953839320941,
+            88.28632401122445
+          ],
+          "direction": [
+            -0.6979413205117435,
+            -0.16048621823897463,
+            -0.6979413205117434
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 61416.90000003576,
+      "t": 0.987,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.45485436653648,
+            22.660650008277013,
+            88.45485436653644
+          ],
+          "direction": [
+            -0.6979712255124254,
+            -0.16022589276819965,
+            -0.6979712255124251
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 61668.5,
+      "t": 0.992,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.58099896689131,
+            22.661400676435598,
+            88.58099896689127
+          ],
+          "direction": [
+            -0.69799357664841,
+            -0.1600310404737815,
+            -0.6979935766484096
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 61916.80000001192,
+      "t": 0.996,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.65247212300095,
+            22.66179508503013,
+            88.6524721230009
+          ],
+          "direction": [
+            -0.6980062283157935,
+            -0.1599206380199907,
+            -0.6980062283157933
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 62167.10000002384,
+      "t": 1,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.67798248563487,
+            22.661930442795278,
+            88.67798248563483
+          ],
+          "direction": [
+            -0.6980107418025899,
+            -0.1598812329712168,
+            -0.6980107418025897
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    },
+    {
+      "wall": 62417.80000001192,
+      "t": 1,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 56,
+          "triangles": 95462,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.6780117989807,
+            22.66193059669297,
+            88.67801179898066
+          ],
+          "direction": [
+            -0.6980107469882711,
+            -0.15988118769183485,
+            -0.6980107469882709
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "stonehenge-reference"
+      }
+    }
+  ],
+  "errors": [],
+  "completed": true,
+  "replayVisible": true
+}

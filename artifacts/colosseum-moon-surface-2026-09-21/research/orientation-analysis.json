@@ -1,0 +1,116 @@
+{
+  "axes": "renderer: east/up/south",
+  "northPoleOfDate": [
+    0,
+    0.6677052369687991,
+    -0.7444257629370707
+  ],
+  "method": "Scalar horizontal-coordinate projection of the true celestial pole, minus Horizons NP.ang.",
+  "maxSampledFixedPositionAngleAbsoluteErrorDegrees": 0.12300000000002465,
+  "rows": [
+    {
+      "sourceFile": "moon-orientation.txt",
+      "calendarUt1": "0080-Jun-21 19:00:00.000",
+      "julianDayUt1": 1750450.291666667,
+      "azimuthDegrees": 116.058545359,
+      "elevationDegrees": -0.339311035,
+      "subObserverLongitudeEastDegrees": 0.348082,
+      "subObserverLatitudeDegrees": -5.632036,
+      "northPolePositionAngleDegrees": -3.7269999999999754,
+      "lunarNorthClockwiseFromLocalUpDegrees": -41.40157575804052,
+      "fixedBasisClockwiseFromLocalUpDegrees": -41.278575758040496,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.12300000000002465
+    },
+    {
+      "sourceFile": "moon-orientation.txt",
+      "calendarUt1": "0080-Jun-21 19:15:00.000",
+      "julianDayUt1": 1750450.302083333,
+      "azimuthDegrees": 118.518607385,
+      "elevationDegrees": 2.065338189,
+      "subObserverLongitudeEastDegrees": 0.318889,
+      "subObserverLatitudeDegrees": -5.615222,
+      "northPolePositionAngleDegrees": -3.7754999999999654,
+      "lunarNorthClockwiseFromLocalUpDegrees": -40.108860343025746,
+      "fixedBasisClockwiseFromLocalUpDegrees": -40.03436034302571,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.07450000000003465
+    },
+    {
+      "sourceFile": "moon-orientation.txt",
+      "calendarUt1": "0080-Jun-21 19:30:00.000",
+      "julianDayUt1": 1750450.3125,
+      "azimuthDegrees": 121.037662723,
+      "elevationDegrees": 4.415563433,
+      "subObserverLongitudeEastDegrees": 0.287158,
+      "subObserverLatitudeDegrees": -5.59889,
+      "northPolePositionAngleDegrees": -3.822900000000004,
+      "lunarNorthClockwiseFromLocalUpDegrees": -38.71040252133709,
+      "fixedBasisClockwiseFromLocalUpDegrees": -38.68330252133709,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.027099999999995905
+    },
+    {
+      "sourceFile": "moon-orientation.txt",
+      "calendarUt1": "0080-Jun-21 19:45:00.000",
+      "julianDayUt1": 1750450.322916667,
+      "azimuthDegrees": 123.623149828,
+      "elevationDegrees": 6.705243845,
+      "subObserverLongitudeEastDegrees": 0.25296,
+      "subObserverLatitudeDegrees": -5.583095,
+      "northPolePositionAngleDegrees": -3.869199999999978,
+      "lunarNorthClockwiseFromLocalUpDegrees": -37.2034613601332,
+      "fixedBasisClockwiseFromLocalUpDegrees": -37.22266136013317,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.0191999999999779
+    },
+    {
+      "sourceFile": "moon-orientation.txt",
+      "calendarUt1": "0080-Jun-21 20:00:00.000",
+      "julianDayUt1": 1750450.333333333,
+      "azimuthDegrees": 126.282244799,
+      "elevationDegrees": 8.92783063,
+      "subObserverLongitudeEastDegrees": 0.216373,
+      "subObserverLatitudeDegrees": -5.567891,
+      "northPolePositionAngleDegrees": -3.9144000000000005,
+      "lunarNorthClockwiseFromLocalUpDegrees": -35.58509876859862,
+      "fixedBasisClockwiseFromLocalUpDegrees": -35.64949876859862,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.06440000000000046
+    },
+    {
+      "sourceFile": "moon-endpoint.txt",
+      "calendarUt1": "0080-Jun-21 20:09",
+      "julianDayUt1": 1750450.339583333,
+      "azimuthDegrees": 127.915893416,
+      "elevationDegrees": 10.22628523,
+      "subObserverLongitudeEastDegrees": 0.193312,
+      "subObserverLatitudeDegrees": -5.559074,
+      "northPolePositionAngleDegrees": -3.941000000000031,
+      "lunarNorthClockwiseFromLocalUpDegrees": -34.559343877760085,
+      "fixedBasisClockwiseFromLocalUpDegrees": -34.650343877760115,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.09100000000003083
+    },
+    {
+      "sourceFile": "moon-endpoint.txt",
+      "calendarUt1": "0080-Jun-21 20:10",
+      "julianDayUt1": 1750450.340277778,
+      "azimuthDegrees": 128.099259522,
+      "elevationDegrees": 10.368843434,
+      "subObserverLongitudeEastDegrees": 0.190699,
+      "subObserverLatitudeDegrees": -5.558109,
+      "northPolePositionAngleDegrees": -3.94399999999996,
+      "lunarNorthClockwiseFromLocalUpDegrees": -34.44273188939414,
+      "fixedBasisClockwiseFromLocalUpDegrees": -34.5367318893941,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.0939999999999599
+    },
+    {
+      "sourceFile": "moon-orientation.txt",
+      "calendarUt1": "0080-Jun-21 20:15:00.000",
+      "julianDayUt1": 1750450.34375,
+      "azimuthDegrees": 129.021780173,
+      "elevationDegrees": 11.076324446,
+      "subObserverLongitudeEastDegrees": 0.177488,
+      "subObserverLatitudeDegrees": -5.553329,
+      "northPolePositionAngleDegrees": -3.958599999999933,
+      "lunarNorthClockwiseFromLocalUpDegrees": -33.85222347773489,
+      "fixedBasisClockwiseFromLocalUpDegrees": -33.96082347773482,
+      "fixedPositionAngleAbsoluteErrorDegrees": 0.10859999999993297
+    }
+  ]
+}

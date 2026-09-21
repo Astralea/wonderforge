@@ -1,0 +1,267 @@
+{
+  "live": {
+    "url": "https://wonderforge.pages.dev/",
+    "scripts": [
+      "https://wonderforge.pages.dev/assets/main-DJwnCTGh.js"
+    ],
+    "ready": [
+      "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+      "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+      "IIIColosseumRome, Italy · Classical Era · 80 AD",
+      "IVEiffel TowerParis, France · Industrial Era · 1889"
+    ],
+    "inProduction": [
+      "IPetraMa'an, Jordan · Classical Era · c. 100 BC",
+      "IIChichen ItzaYucatán, Mexico · Medieval Era · 900 AD",
+      "IIIAngkor WatSiem Reap, Cambodia · Medieval Era · 1150",
+      "IVForbidden CityBeijing, China · Renaissance Era · 1420",
+      "VMachu PicchuCusco, Peru · Medieval Era · 1450",
+      "VISydney Opera HouseSydney, Australia · Modern Era · 1973"
+    ],
+    "errors": []
+  },
+  "local": [
+    {
+      "mode": "desktop",
+      "width": 1440,
+      "height": 900,
+      "reducedMotion": true,
+      "homeLoaders": [],
+      "ready": [
+        "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+        "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+        "IIIColosseumRome, Italy · Classical Era · 80 AD",
+        "IVEiffel TowerParis, France · Industrial Era · 1889"
+      ],
+      "scenes": [
+        {
+          "id": "pyramids-of-giza",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 272,
+            "y": 691,
+            "width": 896,
+            "height": 135
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "stonehenge",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 272,
+            "y": 691,
+            "width": 896,
+            "height": 135
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "colosseum",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 272,
+            "y": 691,
+            "width": 896,
+            "height": 135
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "eiffel-tower",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 272,
+            "y": 691,
+            "width": 896,
+            "height": 135
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n3 min film\n50%\nNARRATION ON\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": true,
+      "homeLoaders": [],
+      "ready": [
+        "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+        "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+        "IIIColosseumRome, Italy · Classical Era · 80 AD",
+        "IVEiffel TowerParis, France · Industrial Era · 1889"
+      ],
+      "scenes": [
+        {
+          "id": "pyramids-of-giza",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 591.375,
+            "width": 390,
+            "height": 182
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "stonehenge",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 591.375,
+            "width": 390,
+            "height": 182
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "colosseum",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 591.375,
+            "width": 390,
+            "height": 182
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "eiffel-tower",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 591.375,
+            "width": 390,
+            "height": 182
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n3 min film\n50%\nNARRATION ON\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mode": "narrow",
+      "width": 320,
+      "height": 844,
+      "reducedMotion": true,
+      "homeLoaders": [],
+      "ready": [
+        "IPyramids of GizaGiza, Egypt · Ancient Era · c. 2560 BC",
+        "IIStonehengeWiltshire, England · Ancient Era · c. 2500 BC",
+        "IIIColosseumRome, Italy · Classical Era · 80 AD",
+        "IVEiffel TowerParis, France · Industrial Era · 1889"
+      ],
+      "scenes": [
+        {
+          "id": "pyramids-of-giza",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "stonehenge",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "colosseum",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n50%\nNARRATION OFF\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        },
+        {
+          "id": "eiffel-tower",
+          "initial": "1",
+          "after": "1",
+          "seek": "0.5",
+          "box": {
+            "x": 0,
+            "y": 543.375,
+            "width": 320,
+            "height": 230
+          },
+          "overflow": false,
+          "text": "CONSTRUCTION\n3 min film\n50%\nNARRATION ON\n1×\n2×\n4×",
+          "canvasReady": "ready"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "failures": [
+    "desktop/pyramids-of-giza: info dialog missing",
+    "desktop/stonehenge: info dialog missing",
+    "desktop/colosseum: info dialog missing",
+    "desktop/eiffel-tower: info dialog missing",
+    "portrait/pyramids-of-giza: info dialog missing",
+    "portrait/stonehenge: info dialog missing",
+    "portrait/colosseum: info dialog missing",
+    "portrait/eiffel-tower: info dialog missing",
+    "narrow/pyramids-of-giza: info dialog missing",
+    "narrow/stonehenge: info dialog missing",
+    "narrow/colosseum: info dialog missing",
+    "narrow/eiffel-tower: info dialog missing"
+  ]
+}

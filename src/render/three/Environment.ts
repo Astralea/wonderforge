@@ -20,7 +20,7 @@ import {
   TorusGeometry,
   Vector3,
 } from 'three';
-import type { GizaConstructionPlan, MonumentId, Vec3 } from '../../data/constructionTypes';
+import type { GizaConstructionPlan, GizaRampSurface, Vec3 } from '../../data/constructionTypes';
 import {
   haulCorridors,
   isClearOfSiteWorks,
@@ -51,6 +51,7 @@ import {
 } from '../../data/gizaEnvironment';
 import { GIZA_SKY, type CloudLayerDescription, type SkyKeyframe } from '../../data/gizaSky';
 import type { LightState } from '../../engine/daynight';
+import { gizaRampKnots, gizaRampHeightAt, gizaRampProfileAt } from '../../engine/gizaRampSupport';
 import { smoothstep } from '../../engine/easing';
 import { mulberry32 } from '../../engine/random';
 import { gizaWaveHeightAt } from '../../engine/waveField';
@@ -91,6 +92,29 @@ function roadGeometry(points: Vec3[], width: number): BufferGeometry {
       indices.push(base - 2, base - 1, base, base, base - 1, base + 1);
     }
   }
+  const geometry = new BufferGeometry();
+  geometry.setAttribute('position', new Float32BufferAttribute(vertices, 3));
+  geometry.setIndex(indices);
+  geometry.computeVertexNormals();
+  return geometry;
+}
+
+/** Road embankment closes elevated approach ribbons down to the plateau. */
+function groundedRoadGeometry(points: Vec3[], width: number): BufferGeometry {
+  const top = roadGeometry(points, width);
+  const position = top.getAttribute('position');
+  const vertices = Array.from(position.array);
+  const indices = Array.from(top.getIndex()!.array);
+  const count = position.count;
+  for (let i = 0; i < count; i += 1) vertices.push(position.getX(i), -0.08, position.getZ(i));
+  for (let i = 0; i < count - 2; i += 2) {
+    indices.push(i, i + count, i + 2, i + 2, i + count, i + count + 2);
+    indices.push(i + 1, i + 3, i + count + 1, i + 3, i + count + 3, i + count + 1);
+  }
+  indices.push(0, 1, count, 1, count + 1, count);
+  const end = count - 2;
+  indices.push(end, end + count, end + 1, end + 1, end + count, end + count + 1);
+  top.dispose();
   const geometry = new BufferGeometry();
   geometry.setAttribute('position', new Float32BufferAttribute(vertices, 3));
   geometry.setIndex(indices);
@@ -203,22 +227,36 @@ const WAKE_SEGMENTS = 9;
 const WAKE_DT = 0.012;
 
 interface RampVisual {
-  monument: Exclude<MonumentId, 'temple'>;
-  /** World placement (center + yaw), premultiplied onto every local matrix. */
+  surface: GizaRampSurface;
+  mesh: InstancedMesh;
   transform: Matrix4;
-  stepCount: number;
-  bricksAcross: number;
-  maxHeight: number;
   width: number;
   length: number;
-  baseY: number;
-  start: number;
-  end: number;
-  /** First block start of each course, ascending — precomputed so the crest
-   *  can be raised continuously instead of rescanning every block per frame. */
-  courseStarts: number[];
-  courseHeight: number;
-  groundY: number;
+}
+
+/** Normalized earthen prism. Its top knots are the engine's support profile. */
+function rampSurfaceGeometry(surface: GizaRampSurface): BufferGeometry {
+  const knots = gizaRampKnots(surface);
+  const positions: number[] = [];
+  const indices: number[] = [];
+  for (const u of knots) {
+    const y = gizaRampProfileAt(surface, u);
+    positions.push(-0.5, y, u, 0.5, y, u, -0.5, -0.002, u, 0.5, -0.002, u);
+  }
+  for (let i = 0; i < knots.length - 1; i += 1) {
+    const a = i * 4; const b = a + 4;
+    indices.push(a, b, a + 1, a + 1, b, b + 1);
+    indices.push(a, a + 2, b, a + 2, b + 2, b);
+    indices.push(a + 1, b + 1, a + 3, a + 3, b + 1, b + 3);
+    indices.push(a + 2, a + 3, b + 2, a + 3, b + 3, b + 2);
+  }
+  const end = (knots.length - 1) * 4;
+  indices.push(0, 1, 2, 1, 3, 2, end, end + 2, end + 1, end + 1, end + 2, end + 3);
+  const geometry = new BufferGeometry();
+  geometry.setAttribute('position', new Float32BufferAttribute(positions, 3));
+  geometry.setIndex(indices);
+  geometry.computeVertexNormals();
+  return geometry;
 }
 
 export class GizaEnvironment {
@@ -233,7 +271,7 @@ export class GizaEnvironment {
   }> = [];
   private readonly ramps: RampVisual[] = [];
   private rampMeshes: {
-    steps: InstancedMesh;
+    steps: Group;
     brickwork: InstancedMesh;
     retaining: InstancedMesh;
   } | null = null;
@@ -537,32 +575,23 @@ export class GizaEnvironment {
   }
 
   private addRoads(materials: MaterialLibrary): void {
-    // Both haul roads shadow the actual sled chords (gizaConstruction routes):
-    // the southern road swings south of the khufu-south earthwork to its foot,
-    // the eastern road rounds the south-east corner wide to the east ramp foot.
-    const mainRoad = roadGeometry([
-      [-52, 0.05, 30],
-      [-45, 0.06, 30],
-      [-29, 0.08, 41],
-      [7, 0.08, 37],
-    ], 6.4);
-    this.geometries.push(mainRoad);
-    const roadMesh = new Mesh(mainRoad, materials.compactedEarth);
-    roadMesh.receiveShadow = true;
-    roadMesh.name = 'wetted-two-lane-haul-road';
-    this.group.add(roadMesh);
-
-    const eastRoad = roadGeometry([
-      [-41, 0.05, 31],
-      [-5, 0.06, 39.4],
-      [28, 0.07, 47],
-      [43, 0.05, -1],
-    ], 4.8);
-    this.geometries.push(eastRoad);
-    const eastRoadMesh = new Mesh(eastRoad, materials.compactedEarth);
-    eastRoadMesh.receiveShadow = true;
-    eastRoadMesh.name = 'eastern-haul-road';
-    this.group.add(eastRoadMesh);
+    // Every visible road follows the same typed dressing/queue/foot chords
+    // as its load. The extended western/eastern approaches are real roads,
+    // not a sled flying over unmarked desert to a distant ramp.
+    for (const route of this.plan.routes.filter((item) => item.rampSurface)) {
+      const { quarry, dressing, roadQueue, rampFoot } = route.waypoints;
+      const groundPoint = (point: Vec3): Vec3 => [point[0], Math.max(0.02, point[1] - 0.28), point[2]];
+      const points = [groundPoint(quarry), groundPoint(dressing), groundPoint(roadQueue), groundPoint(rampFoot)];
+      points[3]![1] = route.rampSurface!.foot[1] + 0.015;
+      const road = groundedRoadGeometry(points, route.id === 'khufu-south' ? 6.4 : 3.2);
+      this.geometries.push(road);
+      const roadMesh = new Mesh(road, materials.compactedEarth);
+      roadMesh.receiveShadow = true;
+      roadMesh.name = route.id === 'khufu-south'
+        ? 'wetted-two-lane-haul-road'
+        : route.id === 'khufu-east' ? 'eastern-haul-road' : `${route.id}-haul-road`;
+      this.group.add(roadMesh);
+    }
 
     const causeway = roadGeometry([
       [-55, 0.12, -42],
@@ -2847,79 +2876,61 @@ export class GizaEnvironment {
   }
 
   private addRamps(materials: MaterialLibrary): void {
-    const earthwork = new BoxGeometry(1, 1, 1);
-    this.geometries.push(earthwork);
-    // Footprints come from the plan so the same rectangle drives the geometry
-    // and the site-clearance rules that keep camp props out of the earthwork.
-    //
-    // All five earthworks share THREE instanced meshes (terraces, tread
-    // paving, revetment) with world-space matrices — the per-ramp trio used
-    // to cost 15 draw calls where 3 suffice. Per-ramp transforms are baked
-    // into a Matrix4 each ramp premultiplies during the per-frame rebuild.
-    let stepCapacity = 0;
-    let brickCapacity = 0;
-    let retainingCapacity = 0;
-    for (const ramp of this.plan.ramps) {
-      const stepCount = 12;
-      const bricksAcross = Math.max(4, Math.floor(ramp.footprint[0] / 1.05));
-      const retainingCourses = Math.ceil(this.plan.monuments[ramp.monument].height / 0.36);
-      stepCapacity += stepCount;
-      brickCapacity += stepCount * bricksAcross;
-      retainingCapacity += stepCount * retainingCourses * 2 + bricksAcross * retainingCourses;
-    }
-    const steps = new InstancedMesh(earthwork, materials.compactedEarth, stepCapacity);
-    const brickwork = new InstancedMesh(earthwork, materials.compactedEarth, brickCapacity);
-    // Mud-brick revetment, never cityRoof: with the terracotta roof material
-    // these walls read as a giant tiled building, not an earthwork.
-    const retaining = new InstancedMesh(earthwork, materials.revetment, retainingCapacity);
+    const brick = new BoxGeometry(1, 1, 1);
+    this.geometries.push(brick);
+    const steps = new Group();
+    const brickwork = new InstancedMesh(brick, materials.compactedEarth, this.plan.ramps.length);
+    const retaining = new InstancedMesh(brick, materials.revetment, 12_000);
     steps.name = 'ramp-earthwork-terraces';
-    brickwork.name = 'ramp-tread-paving';
+    brickwork.name = 'ramp-grounded-foundations';
     retaining.name = 'ramp-revetment-masonry';
-    for (const item of [steps, brickwork, retaining]) {
+    for (const item of [brickwork, retaining]) {
       item.castShadow = true;
       item.receiveShadow = true;
-      // Per-frame matrices/counts: three's first-render bounding-sphere cache
-      // goes stale and camera-culls the earthwork while its shadow persists
-      // (see BlockSystem). Never cull these.
       item.frustumCulled = false;
       item.count = 0;
     }
     this.rampMeshes = { steps, brickwork, retaining };
     this.group.add(steps, brickwork, retaining);
-
+    let foundationCount = 0;
     for (const ramp of this.plan.ramps) {
-      const monument = ramp.monument;
-      const transform = new Matrix4().compose(
-        new Vector3(ramp.center[0], ramp.baseY, ramp.center[1]),
-        new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), ramp.yaw),
-        new Vector3(1, 1, 1),
-      );
-      const monumentBlocks = this.plan.blocks.filter((block) => block.monument === monument);
-      const start = Math.min(...monumentBlocks.map((block) => block.start));
-      const end = Math.max(...monumentBlocks.map((block) => block.start + block.duration));
-      const monumentPlan = this.plan.monuments[monument];
-      const courseStarts: number[] = [];
-      for (const block of monumentBlocks) {
-        const current = courseStarts[block.course];
-        courseStarts[block.course] =
-          current === undefined ? block.start : Math.min(current, block.start);
+      const surface = this.plan.routes.find((route) => route.id === ramp.id)!.rampSurface!;
+      const dx = surface.crest[0] - surface.foot[0];
+      const dz = surface.crest[2] - surface.foot[2];
+      const geometry = rampSurfaceGeometry(surface);
+      this.geometries.push(geometry);
+      const rampMesh = new InstancedMesh(geometry, materials.compactedEarth, 1);
+      rampMesh.castShadow = true;
+      rampMesh.receiveShadow = true;
+      rampMesh.frustumCulled = false;
+      rampMesh.count = 0;
+      rampMesh.name = `${ramp.id}-continuous-haul-surface`;
+      steps.add(rampMesh);
+      if (surface.foot[1] > 0) {
+        // Khafre/Menkaure stand on raised ground. Their haul embankment is
+        // a grounded, permanent extension of that plateau, not a floating
+        // sloping skin whose underside stops at the monument datum.
+        const foundation = new Matrix4().compose(
+          new Vector3(ramp.center[0], (surface.foot[1] - 0.08) / 2, ramp.center[1]),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), ramp.yaw),
+          new Vector3(ramp.footprint[0], surface.foot[1] + 0.08, ramp.footprint[1]),
+        );
+        brickwork.setMatrixAt(foundationCount++, foundation);
       }
       this.ramps.push({
-        monument,
-        transform,
-        stepCount: 12,
-        bricksAcross: Math.max(4, Math.floor(ramp.footprint[0] / 1.05)),
-        maxHeight: monumentPlan.height,
-        width: ramp.footprint[0],
-        length: ramp.footprint[1],
-        baseY: ramp.baseY,
-        start,
-        end,
-        courseStarts,
-        courseHeight: monumentPlan.height / monumentPlan.courses,
-        groundY: monumentPlan.groundY,
+        surface,
+        mesh: rampMesh,
+        width: surface.width,
+        length: Math.hypot(dx, dz),
+        transform: new Matrix4().compose(
+          new Vector3(...surface.foot),
+          new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), Math.atan2(dx, dz)),
+          new Vector3(1, 1, 1),
+        ),
       });
     }
+    brickwork.count = foundationCount;
+    brickwork.instanceMatrix.needsUpdate = true;
   }
 
   private addClouds(): void {
@@ -3004,142 +3015,58 @@ export class GizaEnvironment {
     }
     this.clouds.visible = light.emissive < 0.8;
     this.updateCampfires(t, light, sky);
-    const rampMeshes = this.rampMeshes!;
-    const rampMatrix = new Matrix4();
-    let rampStepCursor = 0;
-    let rampBrickCursor = 0;
-    let rampRetainingCursor = 0;
-    for (const ramp of this.ramps) {
-      // The crest is raised continuously through each course. Taking the max
-      // over already-started blocks made it jump a whole course height the
-      // instant a course's first stone left the quarry — the whole earthwork
-      // visibly stepped up 42 times per pyramid.
-      let course = -1;
-      for (let index = 0; index < ramp.courseStarts.length; index += 1) {
-        if (ramp.courseStarts[index]! <= t) course = index;
-        else break;
-      }
-      let workingHeight = ramp.groundY + 0.45;
-      if (course >= 0) {
-        const from = ramp.courseStarts[course]!;
-        // The topmost course has no successor to interpolate toward; run it
-        // out to the monument's own end so the crest does not snap to full
-        // height the instant the last course begins.
-        const next = ramp.courseStarts[course + 1] ?? ramp.end;
-        const through = next <= from ? 1 : Math.min(1, (t - from) / (next - from));
-        workingHeight = ramp.groundY + (course + through) * ramp.courseHeight;
-      }
-      const height = Math.min(ramp.maxHeight, Math.max(0.35, workingHeight - ramp.baseY));
+    this.updateRamps(t);
+  }
 
-      // An earthwork is itself built, and dismantled (Spec 08 §Physical
-      // plausibility: nothing large pops into existence). Its bed extends from
-      // the high end — the part any ascent actually needs — outward toward the
-      // foot while the first course, which is laid at ground level and needs
-      // no ramp, goes down. After that it only grows in height.
-      const raiseSpan = Math.min(0.05, (ramp.end - ramp.start) * 0.12);
-      const dismantleSpan = Math.min(0.035, (ramp.end - ramp.start) * 0.09);
-      const raised = smoothstep((t - ramp.start) / raiseSpan);
-      const struck = smoothstep((t - ramp.end) / dismantleSpan);
-      const extent = Math.max(0, raised - struck);
-      if (extent <= 0.001) continue;
+  private lastRampKey = '';
 
-      // Terraces keep their final size and place; only the frontier advances,
-      // with a partial terrace at the tip so the earthwork extends smoothly
-      // instead of in twelve visible jumps. Earth already piled never slides.
-      const fullStepDepth = ramp.length / ramp.stepCount;
-      const activeLength = ramp.length * extent;
-      const activeSteps = Math.min(
-        ramp.stepCount,
-        Math.max(1, Math.ceil(activeLength / fullStepDepth)),
-      );
-      const matrix = rampMatrix;
-      const retainingHeight = 0.36;
-      for (let index = 0; index < activeSteps; index += 1) {
-        // Spec 08: the ramp rises TOWARD the monument. Step 0 sits at local
-        // +z, which every ramp yaw maps to the pyramid side — so the highest
-        // terrace must be at index 0 and the gradient descends outward.
-        const near = fullStepDepth * index;
-        const stepDepth = Math.min(fullStepDepth, activeLength - near);
-        if (stepDepth <= 0.01) break;
-        const centerZ = ramp.length * 0.5 - near - stepDepth * 0.5;
-        // Height profile is fixed against the finished ramp, so extending the
-        // bed adds lower terraces rather than re-cutting the whole gradient.
-        const stepHeight = height * ((ramp.stepCount - index) / ramp.stepCount);
-        matrix.compose(
-          new Vector3(0, stepHeight * 0.5, centerZ),
-          new Quaternion(),
-          new Vector3(ramp.width, stepHeight, stepDepth * 0.96),
-        );
-        matrix.premultiply(ramp.transform);
-        rampMeshes.steps.setMatrixAt(rampStepCursor, matrix);
-        rampStepCursor += 1;
-        const brickWidth = ramp.width / ramp.bricksAcross;
-        for (let across = 0; across < ramp.bricksAcross; across += 1) {
-          const offset = index % 2 === 0 ? 0 : brickWidth * 0.16;
-          const x = -ramp.width * 0.5 + brickWidth * (across + 0.5) + offset;
-          matrix.compose(
-            new Vector3(
-              Math.min(ramp.width * 0.5 - brickWidth * 0.5, x),
-              stepHeight + 0.07,
-              centerZ,
-            ),
-            new Quaternion(),
-            // Near-flush paving: the old 0.9 × 0.82 footprint left a regular
-            // shadow grid that read as terracotta roof tiles from above.
-            new Vector3(brickWidth * 0.97, 0.08, stepDepth * 0.94),
-          );
-          matrix.premultiply(ramp.transform);
-          rampMeshes.brickwork.setMatrixAt(rampBrickCursor, matrix);
-          rampBrickCursor += 1;
-        }
-        const verticalCourses = Math.ceil(stepHeight / retainingHeight);
-        for (let course = 0; course < verticalCourses; course += 1) {
-          for (const side of [-1, 1] as const) {
-            matrix.compose(
-              new Vector3(
-                side * (ramp.width * 0.5 + 0.18),
-                retainingHeight * (course + 0.5),
-                centerZ,
-              ),
-              new Quaternion(),
-              new Vector3(0.42, retainingHeight * 0.96, stepDepth * 0.92),
-            );
+  private updateRamps(t: number): void {
+    const heights = this.ramps.map(({ surface }) => {
+      const start = surface.courses[0]!.start;
+      const strikeSpan = Math.min(0.035, (surface.end - start) * 0.09);
+      const struck = smoothstep((t - surface.end) / strikeSpan);
+      return Math.max(0, gizaRampHeightAt(surface, t) * (1 - struck));
+    });
+    const key = heights.join(':');
+    if (key === this.lastRampKey) return;
+    this.lastRampKey = key;
+    const meshes = this.rampMeshes!;
+    const matrix = new Matrix4();
+    let brickCursor = 0;
+    for (let index = 0; index < this.ramps.length; index += 1) {
+      const ramp = this.ramps[index]!;
+      const height = heights[index]!;
+      ramp.mesh.count = height > 0.0001 ? 1 : 0;
+      if (height <= 0.0001) continue;
+      matrix.makeScale(ramp.width, height, ramp.length).premultiply(ramp.transform);
+      ramp.mesh.setMatrixAt(0, matrix);
+      ramp.mesh.instanceMatrix.needsUpdate = true;
+      // Fixed-size revetment blocks stay below the sloping top. They retain
+      // the compacted earth, never act as tall stairs under a horizontal sled.
+      const segments = 16;
+      const depth = ramp.length / segments;
+      const courseHeight = 0.36;
+      for (let segment = 0; segment < segments; segment += 1) {
+        const lowTop = height * gizaRampProfileAt(ramp.surface, segment / segments);
+        const courses = Math.floor(lowTop / courseHeight);
+        for (let course = 0; course < courses; course += 1) {
+          for (const side of [-1, 1]) {
+            matrix.makeScale(0.32, courseHeight * 0.96, depth * 0.96);
+            matrix.setPosition(side * (ramp.width / 2 + 0.12), (course + 0.5) * courseHeight, (segment + 0.5) * depth);
             matrix.premultiply(ramp.transform);
-            rampMeshes.retaining.setMatrixAt(rampRetainingCursor, matrix);
-            rampRetainingCursor += 1;
+            meshes.retaining.setMatrixAt(brickCursor++, matrix);
           }
         }
       }
-      const frontCourses = Math.ceil(height / retainingHeight);
-      const frontBrickWidth = ramp.width / ramp.bricksAcross;
-      for (let course = 0; course < frontCourses; course += 1) {
-        for (let across = 0; across < ramp.bricksAcross; across += 1) {
-          const stagger = course % 2 === 0 ? 0 : frontBrickWidth * 0.18;
-          const x = Math.min(
-            ramp.width * 0.5 - frontBrickWidth * 0.5,
-            -ramp.width * 0.5 + frontBrickWidth * (across + 0.5) + stagger,
-          );
-          matrix.compose(
-            // The high-end face (local +z, against the pyramid) is retained.
-            new Vector3(x, retainingHeight * (course + 0.5), ramp.length * 0.5 + 0.18),
-            new Quaternion(),
-            new Vector3(frontBrickWidth * 0.96, retainingHeight * 0.96, 0.42),
-          );
-          matrix.premultiply(ramp.transform);
-          rampMeshes.retaining.setMatrixAt(rampRetainingCursor, matrix);
-          rampRetainingCursor += 1;
-        }
-      }
     }
-    rampMeshes.steps.count = rampStepCursor;
-    rampMeshes.steps.instanceMatrix.needsUpdate = true;
-    rampMeshes.brickwork.count = rampBrickCursor;
-    rampMeshes.brickwork.instanceMatrix.needsUpdate = true;
-    rampMeshes.retaining.count = rampRetainingCursor;
-    rampMeshes.retaining.instanceMatrix.needsUpdate = true;
+    meshes.retaining.count = brickCursor;
+    meshes.retaining.instanceMatrix.needsUpdate = true;
   }
 
   dispose(): void {
+    this.group.traverse((object) => {
+      if (object instanceof InstancedMesh) object.dispose();
+    });
     this.sky.dispose();
     for (const geometry of new Set(this.geometries)) geometry.dispose();
     for (const layer of this.cloudLayers) layer.material.dispose();

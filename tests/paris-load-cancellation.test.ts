@@ -1,4 +1,5 @@
 import {afterEach, expect, it, vi} from 'vitest';
+import {gzipSync} from 'node:zlib';
 import {BoxGeometry, Group, Mesh, MeshStandardMaterial, Texture} from 'three';
 import {GLTFLoader, type GLTF} from 'three/addons/loaders/GLTFLoader.js';
 import {loadEiffelParisCity} from '../src/render/three/eiffelParis';
@@ -15,7 +16,7 @@ it('releases a cancelled decoded city before batching, including shared textures
   const geometryDispose = vi.spyOn(geometry, 'dispose');
   const materialDispose = vi.spyOn(material, 'dispose');
   const textureDispose = vi.spyOn(texture, 'dispose');
-  vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ok: true, arrayBuffer: async () => new ArrayBuffer(0)}));
+  vi.stubGlobal('fetch', vi.fn(async () => new Response(new Uint8Array(gzipSync(new Uint8Array())))));
   vi.spyOn(GLTFLoader.prototype, 'parseAsync').mockResolvedValue({scene: source} as GLTF);
   const owner = {disposed: false};
   const pending = loadEiffelParisCity(() => owner.disposed);

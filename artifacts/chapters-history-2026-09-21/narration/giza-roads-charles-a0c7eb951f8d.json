@@ -1,0 +1,28 @@
+{
+  "wonderId": "pyramids-of-giza",
+  "captionId": "giza-roads",
+  "captionText": "In this reconstruction, damp sand eases the passage of loaded sledges.",
+  "src": "/audio/narration/giza-roads-charles-a0c7eb951f8d.mp3",
+  "duration": 4.365351,
+  "volume": 1,
+  "voiceName": "Charles",
+  "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "b49c4af435c2eb2c4c0f0049201c66685ab4d873b62695b553b32b2e358c885d",
+  "bytes": 71097,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.21,
+    "truePeakDbtp": -2.33,
+    "gainDb": 11.18
+  }
+}

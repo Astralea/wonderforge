@@ -23,6 +23,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Spec 05: clickable chrome shows the hand, not the default arrow. */
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']),
+a[href],
+input[type='range'],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+summary {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
 @keyframes quote-in {
   from {
     opacity: 0;

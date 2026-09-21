@@ -1,20 +1,22 @@
-import { useEffect } from 'react';
-import { pyramidsOfGiza } from '../data/wonders/pyramids-of-giza';
+import { useEffect, useState } from 'react';
+import { getWonder } from '../data';
 import { WonderCanvas } from '../render/WonderCanvas';
 import { useUiStore } from '../store/ui';
 import { Gallery } from './Gallery';
 import { Hero } from './Hero';
+import { readHomeWonderId } from './readHomeWonderId';
 import { SoundToggle } from './SoundToggle';
 import { useSoundtrack } from './useSoundtrack';
 
 /** Spec 05 §Home: one viewport; the diorama stays, plates crossfade. */
 export function Home() {
+  const [wonder] = useState(() => getWonder(readHomeWonderId()));
   const plate = useUiStore((s) => s.homePlate);
   const enterCatalog = useUiStore((s) => s.enterCatalog);
   const showTitle = useUiStore((s) => s.showTitle);
   const onCatalog = plate === 'catalog';
 
-  useSoundtrack(pyramidsOfGiza.id, 'ambient');
+  useSoundtrack(wonder.id, 'ambient');
 
   useEffect(() => {
     if (!onCatalog) return;
@@ -34,8 +36,8 @@ export function Home() {
 
   return (
     <div className="relative h-svh overflow-hidden bg-umber-950">
-      <div className="absolute inset-0" aria-hidden>
-        <WonderCanvas wonder={pyramidsOfGiza} mode="ambient" />
+      <div className="absolute inset-0 isolate" aria-hidden>
+        <WonderCanvas wonder={wonder} mode="ambient" />
       </div>
       <div
         className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ${

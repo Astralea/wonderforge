@@ -1,0 +1,38 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-physical-construction-clock.test.ts (5 tests) 16913ms
+   ✓ Eiffel bounded physical construction clock > measures the current stage-63 campaign and reproduces the compact runtime record  8985ms
+   ✓ Eiffel bounded physical construction clock > bounds actual sampled background motion per frame and the representative wave at review speed  7911ms
+ ✓ tests/eiffel-film-edit.test.ts (8 tests) 26324ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1382ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  8478ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3482ms
+   ✓ budgets readable structural rise and retains every seated identity through dense forward and reverse seeks  12733ms
+ ✓ tests/eiffel-progress-story.test.ts (5 tests) 22555ms
+   ✓ cinematic construction story against the actual tower kit > preserves every seated identity over dense forward playback and reverse seeks  7503ms
+ ✓ tests/eiffel-film.test.ts (15 tests) 14907ms
+   ✓ Eiffel main film chapter > binds the lightweight insertion coordinate to the actual production plan and manifest bytes  14866ms
+ ✓ tests/eiffel-delivery-camera.test.ts (7 tests) 15889ms
+   ✓ supported ground delivery camera > keeps the near-frustum clear of all final tower solids and actual falsework while exposing the moving payload at useful pixel scale  12191ms
+   ✓ two-load supported joint campaign camera > frames both real stocks and support during establishes/transfers, each working load, and the supported fastening worker  879ms
+   ✓ two-load supported joint campaign camera > keeps the5m near-frustum outside every final tower solid during both close follows and fastening  2741ms
+ ❯ tests/eiffel-rebuilt-environment.test.ts (10 tests | 2 failed) 20808ms
+   ✓ rebuilt Eiffel environment > keeps the full rotated Seine channel submerged and all four foundation pads level 1ms
+   ✓ rebuilt Eiffel environment > keeps only the procedural quay trees and recovers city scatter on asset failure 117ms
+   ✓ rebuilt Eiffel environment > gives fallback street and side facade windows their authored world-space width 95ms
+   ✓ rebuilt Eiffel environment > centers distant bridges on the rotated Seine 30ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  3872ms
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  3913ms
+   × rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost 7403ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone 5363ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ rebuilt Eiffel environment > uses the real apparent solar radius rather than an oversized graphic disc 0ms
+   ✓ rebuilt Eiffel environment > keeps temperate blue above a restrained neutral river haze 0ms

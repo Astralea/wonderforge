@@ -26,7 +26,8 @@ The Giza eight-phase graph is Giza's. Other wonders author their own
 graphs: Stonehenge splits uprights and lintels, Petra splits remaining rock
 from spoil, and the Colosseum uses a crane-and-wagon graph
 (`quarry → hauled → staged → hoisted → seated`). Caption beat count is
-also per-wonder — Giza's five faces are not a template.
+also per-wonder: choose the number from historical stages and visible action,
+never from a fixed quota.
 
 For a block with event window `[start, end]`, `constructionStateAt(block, t)`
 returns its phase, world transform, carrier/sled relationship, contact state,
@@ -49,7 +50,12 @@ Required invariants:
    permitted.
 9. Giza structural stones are human-scale units. Exterior stones must fit the
    bounds in Spec 08; a whole course, face, tier, or pyramid may not be a part.
-10. A support name is not evidence of contact. At representative phase
+10. Giza courses finish their delivery tail before the next course begins.
+    Its compacted haul surface changes course height only while no sled is
+    ascending it; the shared typed profile has level foot/crest landings.
+    Loads and sleds use the same rigid pitch, and each worker foot samples
+    its own X/Z on that visible surface.
+11. A support name is not evidence of contact. At representative phase
     interiors and boundaries, the transformed stone contact point must match
     the declared terrain, sled deck, ramp/deck, crib, guide, or joint surface
     within 0.03 world units unless a scene documents a tighter exception.
@@ -123,6 +129,10 @@ target, and FOV for a Three.js `PerspectiveCamera`.
   runs a continuous closed orbit — constant azimuth rate, fixed ensemble
   target, constant radius, the same breathing pitch — so the loop has no
   periodic snap.
+- Giza gives the south haul approach an eased operation view during
+  `t=.08–.30`, strongest at `.14–.24`: focus moves toward the ramp and
+  the orbit closes without changing stone or worker scale. The later
+  monument handoffs and ensemble reveal retain their established framing.
 - No camera roll; Y-up world.
 
 ## Day and night

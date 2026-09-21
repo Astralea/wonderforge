@@ -1,0 +1,796 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "elapsedLocalMs": 28045,
+    "idleRafCallbacksOverOneSecond": 0,
+    "modelBytes": 23608997,
+    "modelFiles": [
+      {
+        "path": "/models/eiffel/palais-trocadero.glb",
+        "bytes": 191728
+      },
+      {
+        "path": "/models/paris-1889/paris-city.glb.gz",
+        "bytes": 5019070
+      },
+      {
+        "path": "/models/paris-1889/paris-life.glb",
+        "bytes": 249076
+      },
+      {
+        "path": "/models/paris-1889/photo-entrance.glb",
+        "bytes": 191956
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.glb",
+        "bytes": 5008836
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit-seated.glb",
+        "bytes": 2538460
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.runtime.json",
+        "bytes": 5559468
+      },
+      {
+        "path": "/models/eiffel-guyenet-ne/crane.glb",
+        "bytes": 633892
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/onward.glb",
+        "bytes": 606876
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/receiver-driven.glb",
+        "bytes": 295328
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/bridge.glb",
+        "bytes": 468532
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/carrier.glb",
+        "bytes": 216388
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/closed-sling.glb",
+        "bytes": 500076
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/steam-drive.glb",
+        "bytes": 398956
+      },
+      {
+        "path": "/models/eiffel-second-floor-relay/relay.glb",
+        "bytes": 1580936
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.glb",
+        "bytes": 20200
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.manifest.json",
+        "bytes": 535
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/support.glb",
+        "bytes": 35228
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/splice.glb",
+        "bytes": 38448
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/cart.glb",
+        "bytes": 55008
+      }
+    ],
+    "afterArrow": {
+      "hash": "#/wonder/eiffel-tower",
+      "filmPosition": "0.999",
+      "play": 1
+    },
+    "facts": {
+      "activeLabel": "About this wonder",
+      "closeWidth": 34,
+      "closeHeight": 34,
+      "role": null,
+      "modal": null,
+      "hashAfterEscape": "#/"
+    },
+    "renderer": {
+      "calls": 90,
+      "triangles": 268500,
+      "points": 0,
+      "lines": 0,
+      "geometries": 90,
+      "textures": 123
+    },
+    "responses": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/assets/main-CpKATRXG.css",
+        "status": 200
+      },
+      {
+        "path": "/assets/EiffelGuyenetRig-D_0SROBE.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/main-D8RR7sSY.js",
+        "status": 200
+      },
+      {
+        "path": "/css2",
+        "status": 200
+      },
+      {
+        "path": "/brand/wonderforge-wordmark.png",
+        "status": 200
+      },
+      {
+        "path": "/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7PkRXMw.woff2",
+        "status": 200
+      },
+      {
+        "path": "/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VptvWdUhm8.woff2",
+        "status": 200
+      },
+      {
+        "path": "/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dv21TpG1Lsw.woff2",
+        "status": 200
+      },
+      {
+        "path": "/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEp2i0VBuxM.woff2",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel/palais-trocadero.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/paris-1889/paris-city.glb.gz",
+        "status": 200
+      },
+      {
+        "path": "/models/paris-1889/paris-life.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/paris-1889/photo-entrance.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit-seated.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.runtime.json",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-guyenet-ne/crane.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/onward.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/receiver-driven.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/bridge.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/carrier.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/closed-sling.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/steam-drive.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-second-floor-relay/relay.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.manifest.json",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/support.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/splice.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/cart.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-guyenet-ne/crane.glb",
+        "status": 200
+      },
+      {
+        "path": "http://127.0.0.1:5590/b93f5f0f-0f68-46fd-8754-3f7efed81003",
+        "status": 200
+      }
+    ],
+    "errors": [],
+    "resources": [
+      {
+        "name": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap",
+        "encodedBodySize": 933,
+        "decodedBodySize": 12873,
+        "transferSize": 1233
+      },
+      {
+        "name": "http://127.0.0.1:5590/assets/main-CpKATRXG.css",
+        "encodedBodySize": 9309,
+        "decodedBodySize": 47524,
+        "transferSize": 9609
+      },
+      {
+        "name": "http://127.0.0.1:5590/assets/EiffelGuyenetRig-D_0SROBE.js",
+        "encodedBodySize": 176395,
+        "decodedBodySize": 677514,
+        "transferSize": 176695
+      },
+      {
+        "name": "http://127.0.0.1:5590/assets/main-D8RR7sSY.js",
+        "encodedBodySize": 505284,
+        "decodedBodySize": 2366662,
+        "transferSize": 505584
+      },
+      {
+        "name": "http://127.0.0.1:5590/brand/wonderforge-wordmark.png",
+        "encodedBodySize": 1985827,
+        "decodedBodySize": 1985827,
+        "transferSize": 1986127
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel/palais-trocadero.glb",
+        "encodedBodySize": 191728,
+        "decodedBodySize": 191728,
+        "transferSize": 192028
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/paris-1889/paris-city.glb.gz",
+        "encodedBodySize": 5019070,
+        "decodedBodySize": 14298216,
+        "transferSize": 5019370
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/paris-1889/paris-life.glb",
+        "encodedBodySize": 249076,
+        "decodedBodySize": 249076,
+        "transferSize": 249376
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/paris-1889/photo-entrance.glb",
+        "encodedBodySize": 191956,
+        "decodedBodySize": 191956,
+        "transferSize": 192256
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-construction-kit/tower-kit.glb",
+        "encodedBodySize": 5008836,
+        "decodedBodySize": 5008836,
+        "transferSize": 5009136
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-construction-kit/tower-kit-seated.glb",
+        "encodedBodySize": 2538460,
+        "decodedBodySize": 2538460,
+        "transferSize": 2538760
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-construction-kit/tower-kit.runtime.json",
+        "encodedBodySize": 641932,
+        "decodedBodySize": 5559468,
+        "transferSize": 642232
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-guyenet-ne/crane.glb",
+        "encodedBodySize": 633892,
+        "decodedBodySize": 633892,
+        "transferSize": 634192
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/onward.glb",
+        "encodedBodySize": 606876,
+        "decodedBodySize": 606876,
+        "transferSize": 607176
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/receiver-driven.glb",
+        "encodedBodySize": 295328,
+        "decodedBodySize": 295328,
+        "transferSize": 295628
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/bridge.glb",
+        "encodedBodySize": 468532,
+        "decodedBodySize": 468532,
+        "transferSize": 468832
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/carrier.glb",
+        "encodedBodySize": 216388,
+        "decodedBodySize": 216388,
+        "transferSize": 216688
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/closed-sling.glb",
+        "encodedBodySize": 500076,
+        "decodedBodySize": 500076,
+        "transferSize": 500376
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/steam-drive.glb",
+        "encodedBodySize": 398956,
+        "decodedBodySize": 398956,
+        "transferSize": 399256
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-second-floor-relay/relay.glb",
+        "encodedBodySize": 1580936,
+        "decodedBodySize": 1580936,
+        "transferSize": 1581236
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-historic-flag/flag.glb",
+        "encodedBodySize": 20200,
+        "decodedBodySize": 20200,
+        "transferSize": 20500
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-historic-flag/flag.manifest.json",
+        "encodedBodySize": 535,
+        "decodedBodySize": 535,
+        "transferSize": 835
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-joint-campaign/support.glb",
+        "encodedBodySize": 35228,
+        "decodedBodySize": 35228,
+        "transferSize": 35528
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-joint-campaign/cart.glb",
+        "encodedBodySize": 55008,
+        "decodedBodySize": 55008,
+        "transferSize": 55308
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-guyenet-ne/crane.glb",
+        "encodedBodySize": 633892,
+        "decodedBodySize": 633892,
+        "transferSize": 300
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-joint-campaign/splice.glb",
+        "encodedBodySize": 38448,
+        "decodedBodySize": 38448,
+        "transferSize": 38748
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "elapsedLocalMs": 22877,
+    "idleRafCallbacksOverOneSecond": 0,
+    "modelBytes": 22950793,
+    "modelFiles": [
+      {
+        "path": "/models/eiffel/palais-trocadero.glb",
+        "bytes": 191728
+      },
+      {
+        "path": "/models/paris-1889/paris-city.glb.gz",
+        "bytes": 5019070
+      },
+      {
+        "path": "/models/paris-1889/paris-life.glb",
+        "bytes": 249076
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.glb",
+        "bytes": 5008836
+      },
+      {
+        "path": "/models/paris-1889/photo-entrance.glb",
+        "bytes": 191956
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit-seated.glb",
+        "bytes": 2538460
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.runtime.json",
+        "bytes": 5559468
+      },
+      {
+        "path": "/models/eiffel-guyenet-ne/crane.glb",
+        "bytes": 633892
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/onward-mobile.glb",
+        "bytes": 417304
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/receiver-driven.glb",
+        "bytes": 295328
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/bridge-mobile.glb",
+        "bytes": 335924
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/carrier.glb",
+        "bytes": 216388
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/closed-sling-mobile.glb",
+        "bytes": 164052
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/steam-drive.glb",
+        "bytes": 398956
+      },
+      {
+        "path": "/models/eiffel-second-floor-relay/relay.glb",
+        "bytes": 1580936
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.glb",
+        "bytes": 20200
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.manifest.json",
+        "bytes": 535
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/support.glb",
+        "bytes": 35228
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/cart.glb",
+        "bytes": 55008
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/splice.glb",
+        "bytes": 38448
+      }
+    ],
+    "afterArrow": {
+      "hash": "#/wonder/eiffel-tower",
+      "filmPosition": "0.999",
+      "play": 1
+    },
+    "facts": {
+      "activeLabel": "About this wonder",
+      "closeWidth": 34,
+      "closeHeight": 34,
+      "role": null,
+      "modal": null,
+      "hashAfterEscape": "#/"
+    },
+    "renderer": {
+      "calls": 80,
+      "triangles": 224005,
+      "points": 0,
+      "lines": 0,
+      "geometries": 90,
+      "textures": 112
+    },
+    "responses": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/assets/main-CpKATRXG.css",
+        "status": 200
+      },
+      {
+        "path": "/assets/EiffelGuyenetRig-D_0SROBE.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/main-D8RR7sSY.js",
+        "status": 200
+      },
+      {
+        "path": "/css2",
+        "status": 200
+      },
+      {
+        "path": "/brand/wonderforge-wordmark.png",
+        "status": 200
+      },
+      {
+        "path": "/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VptvWdUhm8.woff2",
+        "status": 200
+      },
+      {
+        "path": "/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7PkRXMw.woff2",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel/palais-trocadero.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/paris-1889/paris-city.glb.gz",
+        "status": 200
+      },
+      {
+        "path": "/models/paris-1889/paris-life.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/paris-1889/photo-entrance.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit-seated.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-construction-kit/tower-kit.runtime.json",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-guyenet-ne/crane.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/onward-mobile.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/receiver-driven.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/bridge-mobile.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/carrier.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/closed-sling-mobile.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-long-load-first-floor/steam-drive.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-second-floor-relay/relay.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-historic-flag/flag.manifest.json",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/support.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/cart.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-guyenet-ne/crane.glb",
+        "status": 200
+      },
+      {
+        "path": "/models/eiffel-joint-campaign/splice.glb",
+        "status": 200
+      },
+      {
+        "path": "http://127.0.0.1:5590/e38e92a4-a3c6-41ed-83f9-cd818810fb52",
+        "status": 200
+      }
+    ],
+    "errors": [],
+    "resources": [
+      {
+        "name": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap",
+        "encodedBodySize": 933,
+        "decodedBodySize": 12873,
+        "transferSize": 1233
+      },
+      {
+        "name": "http://127.0.0.1:5590/assets/main-D8RR7sSY.js",
+        "encodedBodySize": 505284,
+        "decodedBodySize": 2366662,
+        "transferSize": 505584
+      },
+      {
+        "name": "http://127.0.0.1:5590/assets/main-CpKATRXG.css",
+        "encodedBodySize": 9309,
+        "decodedBodySize": 47524,
+        "transferSize": 9609
+      },
+      {
+        "name": "http://127.0.0.1:5590/assets/EiffelGuyenetRig-D_0SROBE.js",
+        "encodedBodySize": 176395,
+        "decodedBodySize": 677514,
+        "transferSize": 176695
+      },
+      {
+        "name": "http://127.0.0.1:5590/brand/wonderforge-wordmark.png",
+        "encodedBodySize": 1985827,
+        "decodedBodySize": 1985827,
+        "transferSize": 1986127
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel/palais-trocadero.glb",
+        "encodedBodySize": 191728,
+        "decodedBodySize": 191728,
+        "transferSize": 192028
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/paris-1889/paris-city.glb.gz",
+        "encodedBodySize": 5019070,
+        "decodedBodySize": 14298216,
+        "transferSize": 5019370
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/paris-1889/paris-life.glb",
+        "encodedBodySize": 249076,
+        "decodedBodySize": 249076,
+        "transferSize": 249376
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/paris-1889/photo-entrance.glb",
+        "encodedBodySize": 191956,
+        "decodedBodySize": 191956,
+        "transferSize": 192256
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-construction-kit/tower-kit.glb",
+        "encodedBodySize": 5008836,
+        "decodedBodySize": 5008836,
+        "transferSize": 5009136
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-construction-kit/tower-kit-seated.glb",
+        "encodedBodySize": 2538460,
+        "decodedBodySize": 2538460,
+        "transferSize": 2538760
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-construction-kit/tower-kit.runtime.json",
+        "encodedBodySize": 641932,
+        "decodedBodySize": 5559468,
+        "transferSize": 642232
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-guyenet-ne/crane.glb",
+        "encodedBodySize": 633892,
+        "decodedBodySize": 633892,
+        "transferSize": 634192
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/onward-mobile.glb",
+        "encodedBodySize": 417304,
+        "decodedBodySize": 417304,
+        "transferSize": 417604
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/receiver-driven.glb",
+        "encodedBodySize": 295328,
+        "decodedBodySize": 295328,
+        "transferSize": 295628
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/bridge-mobile.glb",
+        "encodedBodySize": 335924,
+        "decodedBodySize": 335924,
+        "transferSize": 336224
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/carrier.glb",
+        "encodedBodySize": 216388,
+        "decodedBodySize": 216388,
+        "transferSize": 216688
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/closed-sling-mobile.glb",
+        "encodedBodySize": 164052,
+        "decodedBodySize": 164052,
+        "transferSize": 164352
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-long-load-first-floor/steam-drive.glb",
+        "encodedBodySize": 398956,
+        "decodedBodySize": 398956,
+        "transferSize": 399256
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-second-floor-relay/relay.glb",
+        "encodedBodySize": 1580936,
+        "decodedBodySize": 1580936,
+        "transferSize": 1581236
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-historic-flag/flag.glb",
+        "encodedBodySize": 20200,
+        "decodedBodySize": 20200,
+        "transferSize": 20500
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-historic-flag/flag.manifest.json",
+        "encodedBodySize": 535,
+        "decodedBodySize": 535,
+        "transferSize": 835
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-joint-campaign/support.glb",
+        "encodedBodySize": 35228,
+        "decodedBodySize": 35228,
+        "transferSize": 35528
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-joint-campaign/cart.glb",
+        "encodedBodySize": 55008,
+        "decodedBodySize": 55008,
+        "transferSize": 55308
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-guyenet-ne/crane.glb",
+        "encodedBodySize": 633892,
+        "decodedBodySize": 633892,
+        "transferSize": 300
+      },
+      {
+        "name": "http://127.0.0.1:5590/models/eiffel-joint-campaign/splice.glb",
+        "encodedBodySize": 38448,
+        "decodedBodySize": 38448,
+        "transferSize": 38748
+      }
+    ]
+  }
+]

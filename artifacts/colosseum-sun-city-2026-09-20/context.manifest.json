@@ -1,0 +1,6837 @@
+{
+  "id": "flavian-caelian-context",
+  "dateRange": [
+    70,
+    80
+  ],
+  "compass": "+X east, +Z north",
+  "productionNote": "Original compressed Caelian precinct and street layout; no claim of exact plots, elevations or restoration state. No direct Colosseum water supply is depicted.",
+  "sources": [
+    "https://www.turismoroma.it/en/node/1137",
+    "https://www.sovraintendenzaroma.it/content/acquedotto-neroniano",
+    "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/De_Aquis/Rodgers/1%2A%2A.html#20"
+  ],
+  "assets": [
+    "/models/colosseum-rome/rome-kit.glb",
+    "/models/colosseum-rome/housing-variants.glb",
+    "/models/colosseum-rome/neronian-aqueduct.glb"
+  ],
+  "precinct": {
+    "id": "claudian-precinct",
+    "center": [
+      12,
+      -308
+    ],
+    "width": 118,
+    "depth": 88,
+    "top": 31.91,
+    "northEntryWidth": 18
+  },
+  "watercourse": {
+    "id": "neronian-caelian-branch",
+    "from": "east-caelian-continuation",
+    "to": "claudian-precinct-east-wall",
+    "visibleJoin": [
+      321.4100038954,
+      -394.89000166945715
+    ],
+    "upstream": [
+      2446.0137407821403,
+      -1305.434460335203
+    ],
+    "upstreamKind": "off-scene-continuation",
+    "receiver": [
+      70.94298321547923,
+      -287.54699280663397
+    ],
+    "corridorHalfWidth": 5
+  },
+  "streets": [
+    {
+      "id": "caelian-arcade-street",
+      "width": 7,
+      "points": [
+        [
+          84.73672398739309,
+          -268.4353415039013
+        ],
+        [
+          374.5891092035876,
+          -392.65779231084184
+        ]
+      ]
+    },
+    {
+      "id": "caelian-south-street",
+      "width": 5.5,
+      "points": [
+        [
+          80.92883743446113,
+          -317.9378666920167
+        ],
+        [
+          356.0749021703667,
+          -435.85760872169055
+        ]
+      ]
+    },
+    {
+      "id": "precinct-north-approach",
+      "width": 8,
+      "points": [
+        [
+          12,
+          -226
+        ],
+        [
+          12,
+          -202
+        ],
+        [
+          72,
+          -178
+        ],
+        [
+          142,
+          -153
+        ],
+        [
+          220,
+          -60
+        ],
+        [
+          250,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "caelian-west-link",
+      "width": 6,
+      "points": [
+        [
+          12,
+          -226
+        ],
+        [
+          74,
+          -248
+        ],
+        [
+          84.73672398739309,
+          -268.4353415039013
+        ]
+      ]
+    },
+    {
+      "id": "velia-palatine-lane",
+      "width": 4.5,
+      "points": [
+        [
+          -140,
+          125
+        ],
+        [
+          -202,
+          170
+        ],
+        [
+          -278,
+          185
+        ],
+        [
+          -330,
+          125
+        ],
+        [
+          -405,
+          60
+        ],
+        [
+          -450,
+          -20
+        ],
+        [
+          -540,
+          30
+        ],
+        [
+          -700,
+          90
+        ]
+      ]
+    },
+    {
+      "id": "velia-north-lane",
+      "width": 4,
+      "points": [
+        [
+          -278,
+          185
+        ],
+        [
+          -260,
+          240
+        ],
+        [
+          -220,
+          300
+        ]
+      ]
+    }
+  ],
+  "aqueduct": {
+    "glb": "/models/colosseum-rome/neronian-aqueduct.glb",
+    "pierCount": 28,
+    "clearSpan": 7.75,
+    "pierWidth": 2.3,
+    "depth": 2.1,
+    "archRise": 3.875,
+    "spandrelTop": 4.65,
+    "channelHeight": 1.8,
+    "capHeight": 0.22,
+    "capDepth": 2.55,
+    "springingHeight": 25.2,
+    "grade": 0.001,
+    "start": [
+      72,
+      -288
+    ],
+    "direction": [
+      0.9191450300180578,
+      -0.39391929857916763
+    ],
+    "desktopSegments": 10,
+    "portraitSegments": 7,
+    "continuationBays": 230,
+    "continuationSegments": 3,
+    "length": 271.35
+  },
+  "streetFronts": [
+    {
+      "kind": "insula",
+      "x": 102.3317859905959,
+      "z": -354.3097485941599,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 128.98699186111958,
+      "z": -365.73340825295577,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 155.64219773164325,
+      "z": -377.1570679117516,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 182.29740360216695,
+      "z": -388.5807275705475,
+      "yaw": 3.5464844398748765,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 208.95260947269063,
+      "z": -400.0043872293433,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 235.6078153432143,
+      "z": -411.4280468881392,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 262.26302121373794,
+      "z": -422.851706546935,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 288.9182270842616,
+      "z": -434.2753662057309,
+      "yaw": 3.5464844398748765,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 315.57343295478535,
+      "z": -445.6990258645268,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 342.228638825309,
+      "z": -457.1226855233226,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 71.34346783570138,
+      "z": -375.84400358315435,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 97.99867370622505,
+      "z": -387.26766324195023,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 151.3090854472724,
+      "z": -410.11498255954194,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 177.9642913177961,
+      "z": -421.5386422183378,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 204.61949718831977,
+      "z": -432.96230187713365,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 257.9299089293671,
+      "z": -455.8096211947254,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 284.5851147998908,
+      "z": -467.23328085352125,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 311.2403206704145,
+      "z": -478.65694051231714,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 114.28067138083065,
+      "z": -252.80987599359435,
+      "yaw": 0.4048917862850834,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 140.93587725135433,
+      "z": -264.23353565239023,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 167.591083121878,
+      "z": -275.6571953111861,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 194.24628899240167,
+      "z": -287.08085496998194,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 220.90149486292538,
+      "z": -298.5045146287778,
+      "yaw": 0.4048917862850834,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 247.55670073344905,
+      "z": -309.92817428757365,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 274.21190660397275,
+      "z": -321.35183394636954,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 300.86711247449637,
+      "z": -332.77549360516537,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 327.52231834502004,
+      "z": -344.19915326396125,
+      "yaw": 0.4048917862850834,
+      "scale": 1.4,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 354.17752421554377,
+      "z": -355.62281292275713,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 380.83273008606744,
+      "z": -367.04647258155296,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 135.15839420552655,
+      "z": -226.942508720229,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 161.81360007605022,
+      "z": -238.36616837902488,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 215.12401181709757,
+      "z": -261.2134876966166,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 241.77921768762127,
+      "z": -272.6371473554125,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 268.43442355814494,
+      "z": -284.0608070142083,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 321.74483529919223,
+      "z": -306.9081263318001,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 348.4000411697159,
+      "z": -318.3317859905959,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse"
+    },
+    {
+      "kind": "insula",
+      "x": 375.05524704023964,
+      "z": -329.7554456493918,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse"
+    }
+  ],
+  "evidenceScope": "Typed authored context and existing Blender kits; see dated browser captures for film acceptance.",
+  "existingBlenderAssets": [
+    {
+      "path": "/models/colosseum-rome/rome-kit.glb",
+      "bytes": 120788,
+      "sha256": "e90755a2b9ceefb503385d022d9f913af3f1aa79bb01375272954d5045eb7943"
+    },
+    {
+      "path": "/models/colosseum-rome/housing-variants.glb",
+      "bytes": 59848,
+      "sha256": "7b6d409fe283a08075794f98d150079996f2ad20364f0b8b8036e765290d631e"
+    },
+    {
+      "path": "/models/colosseum-rome/neronian-aqueduct.glb",
+      "bytes": 23604,
+      "sha256": "d2ef59ddc56e73412ca3302f1e5abe1919dbf6d71750f85c5451b089aa90b47d"
+    }
+  ],
+  "hills": [
+    {
+      "id": "palatine",
+      "x": -400,
+      "z": -80,
+      "sigma": 145,
+      "height": 32
+    },
+    {
+      "id": "caelian",
+      "x": 90,
+      "z": -380,
+      "sigma": 125,
+      "height": 22
+    },
+    {
+      "id": "esquiline",
+      "x": 300,
+      "z": 260,
+      "sigma": 140,
+      "height": 14
+    },
+    {
+      "id": "aventine",
+      "x": -340,
+      "z": -540,
+      "sigma": 130,
+      "height": 12
+    },
+    {
+      "id": "quirinal",
+      "x": -220,
+      "z": 620,
+      "sigma": 130,
+      "height": 18
+    },
+    {
+      "id": "viminal",
+      "x": 280,
+      "z": 540,
+      "sigma": 120,
+      "height": 16
+    },
+    {
+      "id": "janiculum",
+      "x": -720,
+      "z": 80,
+      "sigma": 160,
+      "height": 22
+    },
+    {
+      "id": "velia",
+      "x": -235,
+      "z": 195,
+      "sigma": 88,
+      "height": 18
+    },
+    {
+      "id": "oppian",
+      "x": 110,
+      "z": 300,
+      "sigma": 105,
+      "height": 12
+    }
+  ],
+  "westernRelief": [
+    {
+      "x": -860,
+      "z": 480,
+      "spreadX": 270,
+      "spreadZ": 260,
+      "height": 38
+    },
+    {
+      "x": -1030,
+      "z": 140,
+      "spreadX": 280,
+      "spreadZ": 410,
+      "height": 36
+    },
+    {
+      "x": -1300,
+      "z": -510,
+      "spreadX": 300,
+      "spreadZ": 330,
+      "height": 30
+    },
+    {
+      "x": -1440,
+      "z": 700,
+      "spreadX": 350,
+      "spreadZ": 350,
+      "height": 32
+    }
+  ],
+  "lots": [
+    {
+      "kind": "insula",
+      "x": 102.3317859905959,
+      "z": -354.3097485941599,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 128.98699186111958,
+      "z": -365.73340825295577,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 155.64219773164325,
+      "z": -377.1570679117516,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 182.29740360216695,
+      "z": -388.5807275705475,
+      "yaw": 3.5464844398748765,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 208.95260947269063,
+      "z": -400.0043872293433,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 235.6078153432143,
+      "z": -411.4280468881392,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 262.26302121373794,
+      "z": -422.851706546935,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 288.9182270842616,
+      "z": -434.2753662057309,
+      "yaw": 3.5464844398748765,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 315.57343295478535,
+      "z": -445.6990258645268,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 342.228638825309,
+      "z": -457.1226855233226,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 71.34346783570138,
+      "z": -375.84400358315435,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 97.99867370622505,
+      "z": -387.26766324195023,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 151.3090854472724,
+      "z": -410.11498255954194,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 177.9642913177961,
+      "z": -421.5386422183378,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 204.61949718831977,
+      "z": -432.96230187713365,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 257.9299089293671,
+      "z": -455.8096211947254,
+      "yaw": 3.5464844398748765,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 284.5851147998908,
+      "z": -467.23328085352125,
+      "yaw": 3.5464844398748765,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 311.2403206704145,
+      "z": -478.65694051231714,
+      "yaw": 3.5464844398748765,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 114.28067138083065,
+      "z": -252.80987599359435,
+      "yaw": 0.4048917862850834,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 140.93587725135433,
+      "z": -264.23353565239023,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 167.591083121878,
+      "z": -275.6571953111861,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 194.24628899240167,
+      "z": -287.08085496998194,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 220.90149486292538,
+      "z": -298.5045146287778,
+      "yaw": 0.4048917862850834,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 247.55670073344905,
+      "z": -309.92817428757365,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 274.21190660397275,
+      "z": -321.35183394636954,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 300.86711247449637,
+      "z": -332.77549360516537,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 327.52231834502004,
+      "z": -344.19915326396125,
+      "yaw": 0.4048917862850834,
+      "scale": 1.4,
+      "district": "caelian-watercourse",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 354.17752421554377,
+      "z": -355.62281292275713,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 380.83273008606744,
+      "z": -367.04647258155296,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 135.15839420552655,
+      "z": -226.942508720229,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 161.81360007605022,
+      "z": -238.36616837902488,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 215.12401181709757,
+      "z": -261.2134876966166,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 241.77921768762127,
+      "z": -272.6371473554125,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 268.43442355814494,
+      "z": -284.0608070142083,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 321.74483529919223,
+      "z": -306.9081263318001,
+      "yaw": 0.4048917862850834,
+      "scale": 1.5,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 348.4000411697159,
+      "z": -318.3317859905959,
+      "yaw": 0.4048917862850834,
+      "scale": 1.2,
+      "district": "caelian-watercourse",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 375.05524704023964,
+      "z": -329.7554456493918,
+      "yaw": 0.4048917862850834,
+      "scale": 1.3,
+      "district": "caelian-watercourse",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -139.96701242207735,
+      "z": 141.34822732958233,
+      "yaw": -2.5137560597780038,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -155.53298757792265,
+      "z": 119.90177267041767,
+      "yaw": 0.6278365938117894,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -155.46701242207735,
+      "z": 152.59822732958233,
+      "yaw": -2.5137560597780038,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -171.03298757792265,
+      "z": 131.15177267041767,
+      "yaw": 0.6278365938117894,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -170.96701242207735,
+      "z": 163.84822732958233,
+      "yaw": -2.5137560597780038,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -186.53298757792265,
+      "z": 142.40177267041767,
+      "yaw": 0.6278365938117894,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -186.46701242207735,
+      "z": 175.09822732958233,
+      "yaw": -2.5137560597780038,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -202.03298757792265,
+      "z": 153.65177267041767,
+      "yaw": 0.6278365938117894,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -208.93436232736926,
+      "z": 184.87423087466246,
+      "yaw": -2.946728733900921,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -227.93436232736926,
+      "z": 188.62423087466246,
+      "yaw": -2.946728733900921,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -233.06563767263074,
+      "z": 162.62576912533754,
+      "yaw": 0.19486391968887196,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -246.93436232736926,
+      "z": 192.37423087466246,
+      "yaw": -2.946728733900921,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -252.06563767263074,
+      "z": 166.37576912533754,
+      "yaw": 0.19486391968887196,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -271.06563767263077,
+      "z": 170.12576912533754,
+      "yaw": 0.19486391968887196,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -294.51288034696506,
+      "z": 186.1778296340364,
+      "yaw": 2.2848870254070546,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -307.51288034696506,
+      "z": 171.1778296340364,
+      "yaw": 2.2848870254070546,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -287.48711965303494,
+      "z": 153.8221703659636,
+      "yaw": 5.426479678996848,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -320.51288034696506,
+      "z": 156.1778296340364,
+      "yaw": 2.2848870254070546,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -300.48711965303494,
+      "z": 138.8221703659636,
+      "yaw": 5.426479678996848,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -333.51288034696506,
+      "z": 141.1778296340364,
+      "yaw": 2.2848870254070546,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -313.48711965303494,
+      "z": 123.8221703659636,
+      "yaw": 5.426479678996848,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -346.1778296340364,
+      "z": 128.5128803469651,
+      "yaw": 2.427501954977635,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -328.8221703659636,
+      "z": 108.48711965303491,
+      "yaw": 5.569094608567428,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -361.1778296340364,
+      "z": 115.51288034696509,
+      "yaw": 2.427501954977635,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -343.8221703659636,
+      "z": 95.48711965303491,
+      "yaw": 5.569094608567428,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -376.1778296340364,
+      "z": 102.51288034696509,
+      "yaw": 2.427501954977635,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -358.8221703659636,
+      "z": 82.48711965303491,
+      "yaw": 5.569094608567428,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -391.1778296340364,
+      "z": 89.51288034696509,
+      "yaw": 2.427501954977635,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -373.8221703659636,
+      "z": 69.48711965303491,
+      "yaw": 5.569094608567428,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -406.1778296340364,
+      "z": 76.51288034696509,
+      "yaw": 2.427501954977635,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -388.8221703659636,
+      "z": 56.48711965303492,
+      "yaw": 5.569094608567428,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -421.0483758669003,
+      "z": 58.495961425131405,
+      "yaw": 2.0831857871056343,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -430.0483758669003,
+      "z": 42.495961425131405,
+      "yaw": 2.0831857871056343,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -406.9516241330997,
+      "z": 29.504038574868595,
+      "yaw": 5.224778440695427,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -439.0483758669003,
+      "z": 26.495961425131405,
+      "yaw": 2.0831857871056343,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -415.9516241330997,
+      "z": 13.504038574868595,
+      "yaw": 5.224778440695427,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -448.0483758669003,
+      "z": 10.495961425131405,
+      "yaw": 2.0831857871056343,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -424.9516241330997,
+      "z": -2.495961425131406,
+      "yaw": 5.224778440695427,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -433.9516241330997,
+      "z": -18.495961425131405,
+      "yaw": 5.224778440695427,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -465.4347688381169,
+      "z": -26.582583908610374,
+      "yaw": 0.5070985043923368,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -470.5652311618831,
+      "z": 6.582583908610376,
+      "yaw": -2.6344941491974563,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -483.4347688381169,
+      "z": -16.582583908610374,
+      "yaw": 0.5070985043923368,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -488.5652311618831,
+      "z": 16.582583908610374,
+      "yaw": -2.6344941491974563,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -501.4347688381169,
+      "z": -6.582583908610374,
+      "yaw": 0.5070985043923368,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -506.5652311618831,
+      "z": 26.582583908610374,
+      "yaw": -2.6344941491974563,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -519.4347688381168,
+      "z": 3.417416091389626,
+      "yaw": 0.5070985043923368,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -524.5652311618832,
+      "z": 36.582583908610374,
+      "yaw": -2.6344941491974563,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -537.4347688381168,
+      "z": 13.417416091389626,
+      "yaw": 0.5070985043923368,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -544.2365032878428,
+      "z": 45.73969493612317,
+      "yaw": -2.782821983319221,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -553.5412744899351,
+      "z": 20.926971730543496,
+      "yaw": 0.3587706702705722,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -562.0142810656205,
+      "z": 52.40636160278984,
+      "yaw": -2.782821983319221,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -571.3190522677128,
+      "z": 27.59363839721016,
+      "yaw": 0.3587706702705722,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -579.7920588433983,
+      "z": 59.073028269456515,
+      "yaw": -2.782821983319221,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -589.0968300454906,
+      "z": 34.26030506387683,
+      "yaw": 0.3587706702705722,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -597.569836621176,
+      "z": 65.73969493612317,
+      "yaw": -2.782821983319221,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -606.8746078232683,
+      "z": 40.926971730543485,
+      "yaw": 0.3587706702705722,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -615.3476143989539,
+      "z": 72.40636160278984,
+      "yaw": -2.782821983319221,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -624.6523856010461,
+      "z": 47.59363839721016,
+      "yaw": 0.3587706702705722,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -633.1253921767317,
+      "z": 79.0730282694565,
+      "yaw": -2.782821983319221,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -642.430163378824,
+      "z": 54.260305063876814,
+      "yaw": 0.3587706702705722,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -650.9031699545094,
+      "z": 85.73969493612319,
+      "yaw": -2.782821983319221,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -660.2079411566017,
+      "z": 60.9269717305435,
+      "yaw": 0.3587706702705722,
+      "scale": 1.1949999999999998,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -668.6809477322871,
+      "z": 92.40636160278984,
+      "yaw": -2.782821983319221,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -677.9857189343794,
+      "z": 67.59363839721016,
+      "yaw": 0.3587706702705722,
+      "scale": 1.25,
+      "district": "velia-palatine-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -686.4587255100649,
+      "z": 99.0730282694565,
+      "yaw": -2.782821983319221,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -695.7634967121572,
+      "z": 74.26030506387681,
+      "yaw": 0.3587706702705722,
+      "scale": 1.14,
+      "district": "velia-palatine-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -256.64483732241905,
+      "z": 208.45649221460988,
+      "yaw": -1.254510198882742,
+      "scale": 1.25,
+      "district": "velia-north-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -281.35516267758095,
+      "z": 216.54350778539012,
+      "yaw": 1.887082454707051,
+      "scale": 1.25,
+      "district": "velia-north-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -250.64483732241905,
+      "z": 226.78982554794322,
+      "yaw": -1.254510198882742,
+      "scale": 1.14,
+      "district": "velia-north-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -275.35516267758095,
+      "z": 234.87684111872346,
+      "yaw": 1.887082454707051,
+      "scale": 1.14,
+      "district": "velia-north-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -265.816653826392,
+      "z": 254.711102550928,
+      "yaw": 2.158798930342464,
+      "scale": 1.25,
+      "district": "velia-north-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -234.18334617360804,
+      "z": 255.288897449072,
+      "yaw": -0.982793723247329,
+      "scale": 1.14,
+      "district": "velia-north-lane",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -255.81665382639196,
+      "z": 269.711102550928,
+      "yaw": 2.158798930342464,
+      "scale": 1.14,
+      "district": "velia-north-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -224.18334617360804,
+      "z": 270.288897449072,
+      "yaw": -0.982793723247329,
+      "scale": 1.1949999999999998,
+      "district": "velia-north-lane",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -245.81665382639196,
+      "z": 284.711102550928,
+      "yaw": 2.158798930342464,
+      "scale": 1.1949999999999998,
+      "district": "velia-north-lane",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -214.18334617360804,
+      "z": 285.288897449072,
+      "yaw": -0.982793723247329,
+      "scale": 1.25,
+      "district": "velia-north-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -235.81665382639196,
+      "z": 299.711102550928,
+      "yaw": 2.158798930342464,
+      "scale": 1.25,
+      "district": "velia-north-lane",
+      "housing": "frontage"
+    },
+    {
+      "kind": "palace",
+      "x": -425.0269122894071,
+      "z": -59.338719202207415,
+      "yaw": 1.3801144125941585,
+      "scale": 1.3039877233887092,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -417.9471413242563,
+      "z": -108.06608958945232,
+      "yaw": 1.3245495786029289,
+      "scale": 1.2529579192074016,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -412.7435396892934,
+      "z": -137.0351994535656,
+      "yaw": 1.3661879725358823,
+      "scale": 1.265152169498615,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -409.4454424982578,
+      "z": -37.48612885359312,
+      "yaw": 4.49938260699906,
+      "scale": 1.2085077948169785,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -403.5862835543981,
+      "z": -62.75898989460244,
+      "yaw": 4.531515379075934,
+      "scale": 1.1795484360121191,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -393.98058207768804,
+      "z": -111.7691544163339,
+      "yaw": 4.549967373058242,
+      "scale": 1.1272398343170063,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -389.3381032774671,
+      "z": -137.9070377553316,
+      "yaw": 4.5040177230379035,
+      "scale": 1.2836417193710805,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -386.69567111405047,
+      "z": -26.527355864800132,
+      "yaw": 1.3296444709017317,
+      "scale": 1.157787334965542,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -371.8390899479705,
+      "z": -102.46606658322905,
+      "yaw": 1.3846777359093914,
+      "scale": 1.1233128452906387,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": -367.9640706739381,
+      "z": -125.0312791021159,
+      "yaw": 1.4028387197363565,
+      "scale": 1.2666008721804247,
+      "district": "palatine"
+    },
+    {
+      "kind": "palace",
+      "x": 54.93071851100128,
+      "z": -408.26734351016916,
+      "yaw": -0.28011717135316216,
+      "scale": 1.1131876627588646,
+      "district": "caelian"
+    },
+    {
+      "kind": "palace",
+      "x": 337.8924913711438,
+      "z": 235.74545966991903,
+      "yaw": -2.2736966739357496,
+      "scale": 1.2547292516566815,
+      "district": "esquiline"
+    },
+    {
+      "kind": "palace",
+      "x": 318.7421844272528,
+      "z": 254.4379605068027,
+      "yaw": -2.285248160217428,
+      "scale": 1.2300073639675975,
+      "district": "esquiline"
+    },
+    {
+      "kind": "palace",
+      "x": 297.11034757337933,
+      "z": 278.00308188336925,
+      "yaw": -2.268831911654682,
+      "scale": 1.1332684239977973,
+      "district": "esquiline"
+    },
+    {
+      "kind": "palace",
+      "x": 312.2549631600796,
+      "z": 227.1440383595329,
+      "yaw": 0.8488566743545229,
+      "scale": 1.2119064528169112,
+      "district": "esquiline"
+    },
+    {
+      "kind": "palace",
+      "x": 296.7943843292557,
+      "z": 247.7973019103297,
+      "yaw": 0.8608480201903725,
+      "scale": 1.2737038416042925,
+      "district": "esquiline"
+    },
+    {
+      "kind": "palace",
+      "x": 278.4550342632889,
+      "z": 268.31225838426343,
+      "yaw": 0.824974793019704,
+      "scale": 1.3193190282257274,
+      "district": "esquiline"
+    },
+    {
+      "kind": "palace",
+      "x": -185.15004700016797,
+      "z": 642.422661462855,
+      "yaw": 2.785879049713466,
+      "scale": 1.1943252615863458,
+      "district": "quirinal"
+    },
+    {
+      "kind": "palace",
+      "x": -210.79680578720232,
+      "z": 636.0074072015165,
+      "yaw": 2.8338311753540517,
+      "scale": 1.3062052685627714,
+      "district": "quirinal"
+    },
+    {
+      "kind": "palace",
+      "x": -237.6977729242948,
+      "z": 623.8543658682638,
+      "yaw": 2.8297508044240285,
+      "scale": 1.2491624035919087,
+      "district": "quirinal"
+    },
+    {
+      "kind": "palace",
+      "x": -184.70371864579744,
+      "z": 620.8181937132903,
+      "yaw": 5.976598702034194,
+      "scale": 1.2301565939979628,
+      "district": "quirinal"
+    },
+    {
+      "kind": "palace",
+      "x": -210.22904084225067,
+      "z": 610.0884844628623,
+      "yaw": 5.957528338919606,
+      "scale": 1.1978840166237206,
+      "district": "quirinal"
+    },
+    {
+      "kind": "palace",
+      "x": -234.04799846435105,
+      "z": 604.3209796891496,
+      "yaw": 5.951828624017749,
+      "scale": 1.1136448493925855,
+      "district": "quirinal"
+    },
+    {
+      "kind": "palace",
+      "x": -730.2088480566397,
+      "z": 113.91311019804638,
+      "yaw": 1.6583965781538585,
+      "scale": 1.198700165981427,
+      "district": "janiculum"
+    },
+    {
+      "kind": "palace",
+      "x": -733.3819668354901,
+      "z": 81.41660732633039,
+      "yaw": 1.6502532698840673,
+      "scale": 1.1461028530914337,
+      "district": "janiculum"
+    },
+    {
+      "kind": "palace",
+      "x": -733.9284440437406,
+      "z": 53.790849972645674,
+      "yaw": 1.6813583734839062,
+      "scale": 1.2491755947284402,
+      "district": "janiculum"
+    },
+    {
+      "kind": "palace",
+      "x": -712.0572646680895,
+      "z": 40.510799681211886,
+      "yaw": 4.872257329451654,
+      "scale": 1.1248225691635163,
+      "district": "janiculum"
+    },
+    {
+      "kind": "insula",
+      "x": -478.2734643627299,
+      "z": -43.93144596180371,
+      "yaw": 1.411742436450478,
+      "scale": 1.2766436120681466,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -473.6505101134404,
+      "z": -60.40761656455237,
+      "yaw": 1.3714884137106502,
+      "scale": 1.3045598332211377,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -472.0413180968068,
+      "z": -76.91041976022086,
+      "yaw": 1.3347216691659207,
+      "scale": 1.2809125473164023,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -465.9997379920811,
+      "z": -109.57972729752139,
+      "yaw": 1.3702557759662535,
+      "scale": 1.3558934668637814,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -461.4137464437386,
+      "z": -125.55262628590076,
+      "yaw": 1.393587471551765,
+      "scale": 1.3007082182355225,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -458.9809158890023,
+      "z": -142.9390071280728,
+      "yaw": 1.3436661392520557,
+      "scale": 1.3018930213153364,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -452.22592862899955,
+      "z": -176.86693945851982,
+      "yaw": 1.3593585659121539,
+      "scale": 1.2145523254387083,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -447.8627169749313,
+      "z": -192.9507372574571,
+      "yaw": 1.3954930146760682,
+      "scale": 1.2826074798405172,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -462.3892734747501,
+      "z": -43.54147658470807,
+      "yaw": 4.554901248228778,
+      "scale": 1.3532283180393279,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -458.2464621311234,
+      "z": -62.02038178303765,
+      "yaw": 4.476302132302006,
+      "scale": 1.1343275396339596,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -456.5955234930442,
+      "z": -78.77751835719853,
+      "yaw": 4.491563449206804,
+      "scale": 1.2352164204232396,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -450.51345776894243,
+      "z": -110.95644824278999,
+      "yaw": 4.519051890017507,
+      "scale": 1.1799872507341207,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -446.732069553496,
+      "z": -129.6351096700129,
+      "yaw": 4.48971828628615,
+      "scale": 1.2672836605459452,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -443.1322516287127,
+      "z": -146.13948660187503,
+      "yaw": 4.557869441353758,
+      "scale": 1.2437234802730384,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -436.280996667702,
+      "z": -179.0894448994103,
+      "yaw": 4.467752619751771,
+      "scale": 1.2929155795648695,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -431.67524113056936,
+      "z": -195.57348709842887,
+      "yaw": 4.548130629293663,
+      "scale": 1.3493191190995277,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -448.4408907479554,
+      "z": -38.42148360908719,
+      "yaw": 1.418326838787217,
+      "scale": 1.215328341089189,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -445.9646353319431,
+      "z": -54.2970428687607,
+      "yaw": 1.3647574434825593,
+      "scale": 1.2419794855080546,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -442.341066072726,
+      "z": -72.06752489414062,
+      "yaw": 1.4190384468599597,
+      "scale": 1.3165479498170316,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -434.1366172352176,
+      "z": -102.75251973325477,
+      "yaw": 1.3246875049150924,
+      "scale": 1.3188444673456252,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -430.5699139010562,
+      "z": -119.48479095337547,
+      "yaw": 1.3521006739302914,
+      "scale": 1.2547545347921552,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -427.9733762200598,
+      "z": -138.57572377981964,
+      "yaw": 1.352353523538951,
+      "scale": 1.1562370384670795,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -421.1876317676393,
+      "z": -169.9016508071102,
+      "yaw": 1.3501042911387424,
+      "scale": 1.2170337031036615,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -418.61496455424276,
+      "z": -187.85835576373017,
+      "yaw": 1.381737347466443,
+      "scale": 1.2267282547801734,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -389.78138665754807,
+      "z": -163.8263724058884,
+      "yaw": 1.4000015263050238,
+      "scale": 1.2955435019545258,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -388.6123737365629,
+      "z": -182.12809664475253,
+      "yaw": 1.3560672573116983,
+      "scale": 1.2565630900487306,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -374.6209008601848,
+      "z": -167.16442883116656,
+      "yaw": 4.5192622331325385,
+      "scale": 1.2156531730294229,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -371.23807465970685,
+      "z": -183.83262056802167,
+      "yaw": 4.491980531148655,
+      "scale": 1.2161771427281203,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -393.48545955698006,
+      "z": 6.806304929471764,
+      "yaw": 1.403295304703098,
+      "scale": 1.322326983269304,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -379.53564027660383,
+      "z": -57.271737679379974,
+      "yaw": 1.404471687607039,
+      "scale": 1.2135803888924421,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -361.00937781545434,
+      "z": -159.51289843488536,
+      "yaw": 1.3460448349197771,
+      "scale": 1.2912678680010141,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -355.8399585894568,
+      "z": -176.24550046537746,
+      "yaw": 1.3718693556567099,
+      "scale": 1.2764299571327866,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -380.92891741147537,
+      "z": 24.67533227347191,
+      "yaw": 4.561118195544039,
+      "scale": 1.153764927610755,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -378.52703853396736,
+      "z": 7.461700084342641,
+      "yaw": 4.507073364675087,
+      "scale": 1.2435597230866553,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -370.8911642735395,
+      "z": -26.134205246238235,
+      "yaw": 4.4863164936081,
+      "scale": 1.2629312788136304,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -368.5669440221853,
+      "z": -43.02201651074804,
+      "yaw": 4.489283485047562,
+      "scale": 1.2951996311359109,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -364.86951639925957,
+      "z": -60.751000419357666,
+      "yaw": 4.524371631525499,
+      "scale": 1.298143649622798,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -359.3289731940824,
+      "z": -92.10684461926667,
+      "yaw": 4.500426869967995,
+      "scale": 1.1855456404201687,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -354.1326852397125,
+      "z": -109.94256151129628,
+      "yaw": 4.535695789347445,
+      "scale": 1.3545158368721606,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -350.439771179384,
+      "z": -126.37543301145982,
+      "yaw": 4.4739573017349885,
+      "scale": 1.287987186126411,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -344.81707682345916,
+      "z": -159.39640859148133,
+      "yaw": 4.552041674184655,
+      "scale": 1.2325332374870779,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -341.80902768130204,
+      "z": -175.25987360088016,
+      "yaw": 4.511691916024354,
+      "scale": 1.3100318050384523,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -350.6046742970819,
+      "z": 28.148826701501076,
+      "yaw": 4.4773470664751205,
+      "scale": 1.3112664384767414,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -347.5636652315025,
+      "z": 11.85931846848447,
+      "yaw": 4.4658192022359415,
+      "scale": 1.2857522497698666,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -339.6567190647595,
+      "z": -19.23160639016792,
+      "yaw": 4.486039433919867,
+      "scale": 1.2730453033372762,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -338.6895934482702,
+      "z": -37.608344348709906,
+      "yaw": 4.535429232067471,
+      "scale": 1.2144640926085413,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -334.911250277234,
+      "z": -54.24120763317452,
+      "yaw": 4.508856090240222,
+      "scale": 1.2580592746287584,
+      "district": "palatine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -327.9721311625619,
+      "z": -87.80565482786204,
+      "yaw": 4.550788437238005,
+      "scale": 1.1492780832201244,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -323.886970376422,
+      "z": -104.52564324445612,
+      "yaw": 4.483599198249211,
+      "scale": 1.3386831256933511,
+      "district": "palatine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -319.81212241492904,
+      "z": -120.80753901351201,
+      "yaw": 4.550310105074239,
+      "scale": 1.2325297280400993,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -315.42592268557775,
+      "z": -152.63673955210245,
+      "yaw": 4.516254420450931,
+      "scale": 1.1468032746203245,
+      "district": "palatine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -311.34806759856724,
+      "z": -169.80523370777334,
+      "yaw": 4.545022295218003,
+      "scale": 1.1284304906614127,
+      "district": "palatine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 20.486239785567317,
+      "z": -461.08526034011373,
+      "yaw": -0.2000486607220628,
+      "scale": 1.2354740882851185,
+      "district": "caelian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 37.35494214227137,
+      "z": -456.9273577955664,
+      "yaw": -0.26583384622583617,
+      "scale": 1.1559142089635135,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 55.7358529848498,
+      "z": -453.4650542374399,
+      "yaw": -0.24063849821916303,
+      "scale": 1.132732798345387,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 88.08653970392179,
+      "z": -445.7581912336306,
+      "yaw": -0.25756485699905535,
+      "scale": 1.2323929989710452,
+      "district": "caelian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 105.85489734342153,
+      "z": -440.68446799936453,
+      "yaw": -0.2471430684229963,
+      "scale": 1.309622867628932,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 21.818539638332524,
+      "z": -444.36694063072116,
+      "yaw": 2.9350233340431378,
+      "scale": 1.3333572096005084,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 40.65435216848269,
+      "z": -441.9020645321162,
+      "yaw": 2.8912449538503213,
+      "scale": 1.3095031209103765,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 87.21644222562244,
+      "z": -430.15210295745044,
+      "yaw": 2.865104482907839,
+      "scale": 1.3299488767050207,
+      "district": "caelian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 106.36623214230089,
+      "z": -424.30745376599873,
+      "yaw": 2.954790325116403,
+      "scale": 1.1594733363203706,
+      "district": "caelian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 120.67354575721987,
+      "z": -423.3160000977535,
+      "yaw": 2.865308258545622,
+      "scale": 1.1307802721112967,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 16.249591291842826,
+      "z": -431.58048566050593,
+      "yaw": -0.20270651397524853,
+      "scale": 1.1610102638788522,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 32.273699037791225,
+      "z": -426.336284612241,
+      "yaw": -0.2817953308601536,
+      "scale": 1.3336334225907922,
+      "district": "caelian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 80.24343265225005,
+      "z": -416.2823190049037,
+      "yaw": -0.21496718125647388,
+      "scale": 1.1416537472419441,
+      "district": "caelian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 95.77651847723881,
+      "z": -410.8468430351194,
+      "yaw": -0.2557584901130431,
+      "scale": 1.120710723977536,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 113.8570239384583,
+      "z": -407.92024406609374,
+      "yaw": -0.1875967997149237,
+      "scale": 1.2529090935736895,
+      "district": "caelian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 14.352836992446331,
+      "z": -415.2823969737277,
+      "yaw": 2.8895134744262694,
+      "scale": 1.2892936146445573,
+      "district": "caelian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 32.39632996458187,
+      "z": -409.38734999912003,
+      "yaw": 2.902776705057397,
+      "scale": 1.351996320039034,
+      "district": "caelian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 8.532463575662906,
+      "z": -382.58670693369675,
+      "yaw": 2.908649698857255,
+      "scale": 1.2637534044310452,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 24.737221937809576,
+      "z": -378.3893607460442,
+      "yaw": 2.8967199756559356,
+      "scale": 1.263674562405795,
+      "district": "caelian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 40.78607585144094,
+      "z": -376.33184779463073,
+      "yaw": 2.910604406314008,
+      "scale": 1.350603509079665,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 1.099758649220476,
+      "z": -368.20276134927997,
+      "yaw": -0.21843805599721602,
+      "scale": 1.2677181582897903,
+      "district": "caelian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 17.414042263466534,
+      "z": -365.3885053508418,
+      "yaw": -0.2276831635296949,
+      "scale": 1.187803911715746,
+      "district": "caelian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 404.68482159311327,
+      "z": 233.9121025473669,
+      "yaw": -2.291261954903142,
+      "scale": 1.233668367844075,
+      "district": "esquiline",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 393.8263850033203,
+      "z": 248.7581436622199,
+      "yaw": -2.3243924164394896,
+      "scale": 1.2599678510800005,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 380.4064460033344,
+      "z": 263.63181915047903,
+      "yaw": -2.334374015889601,
+      "scale": 1.35282661203295,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 354.5639405184131,
+      "z": 294.32890633280346,
+      "yaw": -2.278412158828699,
+      "scale": 1.2894298380613327,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 340.4424887632922,
+      "z": 310.2006687861373,
+      "yaw": -2.255637641339102,
+      "scale": 1.316487918905914,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 329.31057054680275,
+      "z": 323.51145441722537,
+      "yaw": -2.3169411179558423,
+      "scale": 1.1924945896305146,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 303.26165961674536,
+      "z": 354.2532301155624,
+      "yaw": -2.3284900306440006,
+      "scale": 1.2681911898218097,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 287.13649555205205,
+      "z": 370.30515667563185,
+      "yaw": -2.269138814340816,
+      "scale": 1.258865959327668,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 389.13759756129025,
+      "z": 224.6411874440264,
+      "yaw": 0.8674621646162117,
+      "scale": 1.3018891617283226,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 377.52420261511963,
+      "z": 240.13724287765038,
+      "yaw": 0.8175233543021599,
+      "scale": 1.1837531482987107,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 363.449794640467,
+      "z": 255.39401567967315,
+      "yaw": 0.8565984566099937,
+      "scale": 1.16928567558527,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 338.8069177485556,
+      "z": 285.0409521573195,
+      "yaw": 0.885385574387386,
+      "scale": 1.1901533561572433,
+      "district": "esquiline",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 324.04285643231754,
+      "z": 302.4890550707815,
+      "yaw": 0.8881315205115821,
+      "scale": 1.2181708456762137,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 312.6619849407929,
+      "z": 316.0304408959407,
+      "yaw": 0.8810704223448406,
+      "scale": 1.1518538388237358,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 285.41417114005503,
+      "z": 347.5089850309792,
+      "yaw": 0.8482600283445786,
+      "scale": 1.3491710885986687,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 270.8521104090055,
+      "z": 360.5991602249538,
+      "yaw": 0.865181524037383,
+      "scale": 1.171474978849292,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 379.88774586728965,
+      "z": 208.64823101287075,
+      "yaw": -2.260974760790826,
+      "scale": 1.120481215734035,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 364.6468228652092,
+      "z": 225.2089342770696,
+      "yaw": -2.238071302785077,
+      "scale": 1.2577870485186577,
+      "district": "esquiline",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 326.1445068885811,
+      "z": 271.79140200310434,
+      "yaw": -2.2429970030621673,
+      "scale": 1.3199645026773215,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 315.45720379182956,
+      "z": 285.454458098927,
+      "yaw": -2.3040015944694217,
+      "scale": 1.3477010760083796,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 302.12588208149725,
+      "z": 299.32382310538134,
+      "yaw": -2.2806135074417155,
+      "scale": 1.2378218642808498,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 275.2758103025141,
+      "z": 330.3261248510562,
+      "yaw": -2.26682873728639,
+      "scale": 1.1638622122444213,
+      "district": "esquiline",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 262.31467447819,
+      "z": 346.56248756312414,
+      "yaw": -2.2899396818080033,
+      "scale": 1.3560829593986274,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 362.3177769091562,
+      "z": 202.31801859954913,
+      "yaw": 0.8069512818111102,
+      "scale": 1.199193487558514,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 348.79968193437423,
+      "z": 215.48605276632398,
+      "yaw": 0.8123056419994678,
+      "scale": 1.2984628862515093,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 257.822475050074,
+      "z": 324.08351704480884,
+      "yaw": 0.844111731612123,
+      "scale": 1.1258142653293908,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 244.7615887163663,
+      "z": 337.9343923952501,
+      "yaw": 0.8929051713421936,
+      "scale": 1.1395493017509581,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 333.93417950090975,
+      "z": 178.29550750104252,
+      "yaw": 0.9036008077310393,
+      "scale": 1.1898909588344395,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 322.4101271964509,
+      "z": 193.30058617288316,
+      "yaw": 0.8312116720583285,
+      "scale": 1.3180437864363195,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 308.533400075065,
+      "z": 207.9656347494161,
+      "yaw": 0.8929121197536583,
+      "scale": 1.3033877659402788,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 283.9207969933986,
+      "z": 237.3985843901916,
+      "yaw": 0.8610135617535557,
+      "scale": 1.3538204837404193,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 268.8320063012259,
+      "z": 253.4451973196894,
+      "yaw": 0.8935249229529868,
+      "scale": 1.315111555196345,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 255.3302997007067,
+      "z": 268.1894839202372,
+      "yaw": 0.895446504243649,
+      "scale": 1.144171216543764,
+      "district": "esquiline",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 230.46233005983805,
+      "z": 299.08645115289,
+      "yaw": 0.8391612956868479,
+      "scale": 1.2525783736258747,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 218.211598022816,
+      "z": 314.7136054492207,
+      "yaw": 0.8647017067167904,
+      "scale": 1.284525312203914,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 325.09736414486963,
+      "z": 164.23125778150782,
+      "yaw": -2.2948660336616498,
+      "scale": 1.2564609354361893,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 310.9582973602109,
+      "z": 176.36192888009174,
+      "yaw": -2.3231547574461486,
+      "scale": 1.3521048279106618,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 297.24278961983043,
+      "z": 192.42032532337092,
+      "yaw": -2.2617485294067348,
+      "scale": 1.3008546839468182,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 272.1031213557587,
+      "z": 222.67730398823664,
+      "yaw": -2.3135470888060565,
+      "scale": 1.2861191210336984,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 260.1036283125035,
+      "z": 239.79575221532016,
+      "yaw": -2.255823807902173,
+      "scale": 1.308433962557465,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 246.7835709659468,
+      "z": 253.29952700927606,
+      "yaw": -2.33477767381771,
+      "scale": 1.282307582832873,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 219.419930163835,
+      "z": 282.10788932680595,
+      "yaw": -2.2719529262925544,
+      "scale": 1.2863535893522204,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 205.8787888028249,
+      "z": 298.98013940511174,
+      "yaw": -2.2732087413962048,
+      "scale": 1.33516011165455,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 306.8036487098179,
+      "z": 154.91867731490981,
+      "yaw": 0.8345889310454945,
+      "scale": 1.2056434408947827,
+      "district": "esquiline",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 292.71462271836094,
+      "z": 169.79033780573252,
+      "yaw": 0.8389918346758927,
+      "scale": 1.337371189761907,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 283.13705600278064,
+      "z": 185.6463803795561,
+      "yaw": 0.9000154344700272,
+      "scale": 1.3296791936643422,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 256.9568024605641,
+      "z": 214.3159276405095,
+      "yaw": 0.8909686048384751,
+      "scale": 1.3501959519460798,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 244.42266257122014,
+      "z": 230.39946460567606,
+      "yaw": 0.8635926632545884,
+      "scale": 1.3252888681180777,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 230.0235194722144,
+      "z": 243.66911448339158,
+      "yaw": 0.8281688251635055,
+      "scale": 1.2042697469890118,
+      "district": "esquiline",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 202.2992206210975,
+      "z": 276.4218010585825,
+      "yaw": 0.8610082871383051,
+      "scale": 1.288488846719265,
+      "district": "esquiline",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 189.7403055679064,
+      "z": 288.6744553893718,
+      "yaw": 0.8829523220295081,
+      "scale": 1.3111501721479,
+      "district": "esquiline",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -448.61833245092095,
+      "z": -546.3733140206024,
+      "yaw": 0.5960221161856898,
+      "scale": 1.2952184507437052,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -434.4297749164043,
+      "z": -556.7696430225916,
+      "yaw": 0.5464712025155894,
+      "scale": 1.2707475129887462,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -415.36545217742776,
+      "z": -565.7750209790589,
+      "yaw": 0.5290753222792991,
+      "scale": 1.1700846262462439,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -381.6719730888829,
+      "z": -588.1704418431876,
+      "yaw": 0.5385973539925762,
+      "scale": 1.3138919628039003,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -365.9487202010821,
+      "z": -598.7918478280576,
+      "yaw": 0.569117303567531,
+      "scale": 1.2342275899834931,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -350.2594574881364,
+      "z": -609.7428743997065,
+      "yaw": 0.5422801626404398,
+      "scale": 1.1332029110193254,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -313.47789914568995,
+      "z": -631.9351298856967,
+      "yaw": 0.6048568921420373,
+      "scale": 1.1260071433708072,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -297.6396532500078,
+      "z": -641.4344753178204,
+      "yaw": 0.5861860561906942,
+      "scale": 1.327686936147511,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -436.8918533506551,
+      "z": -531.2683396515464,
+      "yaw": 3.6935567152295885,
+      "scale": 1.2202877724915744,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -419.3573178007527,
+      "z": -544.0115234426233,
+      "yaw": 3.70340808539937,
+      "scale": 1.1649457271769643,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -403.1453572063239,
+      "z": -553.0440381130363,
+      "yaw": 3.7481806594720735,
+      "scale": 1.3569548313878477,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -366.8188194292603,
+      "z": -576.4792249783696,
+      "yaw": 3.714595809702824,
+      "scale": 1.2272236013412476,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -351.4411143309862,
+      "z": -584.516609887127,
+      "yaw": 3.6909072624361765,
+      "scale": 1.1767814889922739,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -335.9531692619012,
+      "z": -597.4320630550444,
+      "yaw": 3.6667724310728413,
+      "scale": 1.133223581183702,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -300.72994498329354,
+      "z": -618.8466697522144,
+      "yaw": 3.6655491034342598,
+      "scale": 1.2513965206407012,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -284.9925989406043,
+      "z": -628.8621283593906,
+      "yaw": 3.671273431352402,
+      "scale": 1.3480957842431964,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -430.04092624738547,
+      "z": -513.3160964913557,
+      "yaw": 0.575055476955662,
+      "scale": 1.1881694485247136,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -413.85289720302524,
+      "z": -526.039201052443,
+      "yaw": 0.5354546123440959,
+      "scale": 1.1271366983652116,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -395.55631282142144,
+      "z": -535.7365613575973,
+      "yaw": 0.5205877614929922,
+      "scale": 1.3154046802967787,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -361.13248854163123,
+      "z": -557.2637667962946,
+      "yaw": 0.5732195930346496,
+      "scale": 1.2838050304539503,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -344.9760274348113,
+      "z": -569.0762398878354,
+      "yaw": 0.5487356911670067,
+      "scale": 1.289957414828241,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -329.67716268598554,
+      "z": -578.8499143506517,
+      "yaw": 0.5269363119290792,
+      "scale": 1.3295302476920188,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -294.97561187711347,
+      "z": -600.8638571541173,
+      "yaw": 0.5813666757685714,
+      "scale": 1.3426027453504503,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -277.95825004421573,
+      "z": -612.3351076371761,
+      "yaw": 0.5492785946024232,
+      "scale": 1.1346803540550174,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -418.6462010389144,
+      "z": -502.42604712755826,
+      "yaw": 3.680064760365586,
+      "scale": 1.1832049314305186,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -398.5064302925322,
+      "z": -512.6225145266271,
+      "yaw": 3.7491804945124936,
+      "scale": 1.2010863749310374,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -383.89997736964676,
+      "z": -523.6741300083761,
+      "yaw": 3.7246120792655897,
+      "scale": 1.2973551557771863,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -350.384301374368,
+      "z": -545.3085491351918,
+      "yaw": 3.7231453547096502,
+      "scale": 1.1905934257991613,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -332.6818771614937,
+      "z": -553.6593940608572,
+      "yaw": 3.7211529641021666,
+      "scale": 1.1698823397979141,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -313.3042761141117,
+      "z": -566.1769281528321,
+      "yaw": 3.7387135381652667,
+      "scale": 1.2681560079567136,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -280.36301778832734,
+      "z": -587.6211899496236,
+      "yaw": 3.718656517945292,
+      "scale": 1.3397828916274013,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -265.2180151406785,
+      "z": -598.3668019769515,
+      "yaw": 3.7423112230217708,
+      "scale": 1.2076684904284776,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -396.5892415518812,
+      "z": -470.96283688089994,
+      "yaw": 3.738114016952987,
+      "scale": 1.3048564272560181,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -380.9882361532326,
+      "z": -481.58201770284245,
+      "yaw": 3.7396405829424664,
+      "scale": 1.2765491323173048,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -364.3822463140763,
+      "z": -491.94552236274785,
+      "yaw": 3.6569745641742526,
+      "scale": 1.1394585142284632,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -329.06748854145064,
+      "z": -515.1012469227976,
+      "yaw": 3.713000642515781,
+      "scale": 1.1256340042315425,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -314.4606086567489,
+      "z": -524.8235694537749,
+      "yaw": 3.725471821784104,
+      "scale": 1.3432175136357547,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -294.6130973175993,
+      "z": -536.7875247564126,
+      "yaw": 3.7529218959697213,
+      "scale": 1.2315397948771716,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -261.7743981063693,
+      "z": -556.1975940021874,
+      "yaw": 3.683941878688584,
+      "scale": 1.359010621495545,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -245.1617900756199,
+      "z": -566.434857801737,
+      "yaw": 3.7302626518142104,
+      "scale": 1.2217644070647657,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -392.2791780875945,
+      "z": -455.64120391702954,
+      "yaw": 0.6115556178405531,
+      "scale": 1.2150568040274086,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -373.4479711773646,
+      "z": -464.62367243303726,
+      "yaw": 0.5378157753521227,
+      "scale": 1.2877994387038054,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -357.2498064612105,
+      "z": -476.7092791890491,
+      "yaw": 0.5794042496733017,
+      "scale": 1.3403218763321638,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -325.60173053617734,
+      "z": -495.83372366267025,
+      "yaw": 0.5340540112252928,
+      "scale": 1.3162717190012336,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -307.97595533879394,
+      "z": -507.9418840690637,
+      "yaw": 0.5758292265725904,
+      "scale": 1.247049116138369,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -292.0967299433273,
+      "z": -517.3067426305901,
+      "yaw": 0.5629368387419381,
+      "scale": 1.348493836130947,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -257.8156441046985,
+      "z": -540.1349612849189,
+      "yaw": 0.5494083446940058,
+      "scale": 1.338862708695233,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -240.58256652618832,
+      "z": -550.0677779112484,
+      "yaw": 0.5653545577568584,
+      "scale": 1.149341544508934,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -376.97170457072804,
+      "z": -442.5086845056336,
+      "yaw": 3.666713148758809,
+      "scale": 1.2961107330024244,
+      "district": "aventine",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -360.3171822207985,
+      "z": -452.95653031450297,
+      "yaw": 3.737366438920672,
+      "scale": 1.1259148297272623,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -343.49081725839034,
+      "z": -463.7446640157862,
+      "yaw": 3.737322197536069,
+      "scale": 1.2974543821997941,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -310.97956640727796,
+      "z": -484.850873842227,
+      "yaw": 3.7198077699011813,
+      "scale": 1.1604010449163618,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -294.14408423061684,
+      "z": -495.4354505971216,
+      "yaw": 3.70968172150484,
+      "scale": 1.3589974450320006,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -276.1922212423871,
+      "z": -507.2168153908891,
+      "yaw": 3.7508467354886856,
+      "scale": 1.153845590632409,
+      "district": "aventine",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -242.26765754075274,
+      "z": -528.8998570318166,
+      "yaw": 3.7514794460572927,
+      "scale": 1.1320811379514635,
+      "district": "aventine",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -226.3145422761889,
+      "z": -535.6596993143644,
+      "yaw": 3.7244143997859833,
+      "scale": 1.1643834478221835,
+      "district": "aventine",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -155.6770038287213,
+      "z": 709.5724511544048,
+      "yaw": 2.788108782826665,
+      "scale": 1.2492979357205332,
+      "district": "quirinal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -176.28000597823967,
+      "z": 703.7515611264533,
+      "yaw": 2.8315271492886573,
+      "scale": 1.2616044670157136,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -194.94378358339947,
+      "z": 694.0343372542336,
+      "yaw": 2.7545763850284026,
+      "scale": 1.2438478350825608,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -231.71606183590214,
+      "z": 683.1482996238087,
+      "yaw": 2.8072272829550537,
+      "scale": 1.1973497670330109,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -249.32273442420774,
+      "z": 677.7852721692572,
+      "yaw": 2.7949684713340583,
+      "scale": 1.2007196712493897,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -271.0662614989553,
+      "z": 669.8940145786465,
+      "yaw": 2.7916539046519655,
+      "scale": 1.2883250429295003,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -308.62692041861743,
+      "z": 656.8161330722473,
+      "yaw": 2.7793618033712018,
+      "scale": 1.1611431261524559,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -326.7910410132733,
+      "z": 648.6675135042592,
+      "yaw": 2.825952256967056,
+      "scale": 1.3381943592056633,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -154.63225092822407,
+      "z": 692.4513014935806,
+      "yaw": 5.984688407334711,
+      "scale": 1.1239557839930059,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -171.86026883604686,
+      "z": 683.8128575948102,
+      "yaw": 5.920039449714337,
+      "scale": 1.1347974617034198,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -190.73941131641314,
+      "z": 677.3989419277946,
+      "yaw": 5.9626770799637105,
+      "scale": 1.1442976642027498,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -229.5402456404524,
+      "z": 662.7838313551638,
+      "yaw": 5.960490181495648,
+      "scale": 1.1243424849398436,
+      "district": "quirinal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -248.90512663360153,
+      "z": 657.6862569140836,
+      "yaw": 5.895123929845382,
+      "scale": 1.3429397032223642,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -269.39769988748,
+      "z": 650.3416100656551,
+      "yaw": 5.930363482598428,
+      "scale": 1.262455961480737,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -306.850728821386,
+      "z": 635.7918617629498,
+      "yaw": 5.906919141265776,
+      "scale": 1.3108714865520597,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -322.79355337850797,
+      "z": 630.371246638921,
+      "yaw": 5.956021386094604,
+      "scale": 1.1553610272705557,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -145.94623473453265,
+      "z": 675.7492153105978,
+      "yaw": 2.8428224441434473,
+      "scale": 1.3535730790160598,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -162.51562076296028,
+      "z": 667.3523424993674,
+      "yaw": 2.813251384936947,
+      "scale": 1.3546630149893464,
+      "district": "quirinal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -180.42338360609367,
+      "z": 662.0483597382303,
+      "yaw": 2.815281030705872,
+      "scale": 1.15130846247077,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -219.51833085169443,
+      "z": 649.2009641091652,
+      "yaw": 2.838300488384183,
+      "scale": 1.3420938776619733,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -239.28478082829832,
+      "z": 643.0712515688289,
+      "yaw": 2.752442081279795,
+      "scale": 1.3076417116075756,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -256.24613737620103,
+      "z": 637.4108523088512,
+      "yaw": 2.795410411649126,
+      "scale": 1.2591530795209112,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -294.66826135588144,
+      "z": 622.9573975849332,
+      "yaw": 2.8399109088422017,
+      "scale": 1.1974402381666005,
+      "district": "quirinal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -314.49597188456755,
+      "z": 615.6267773068083,
+      "yaw": 2.7861889821316335,
+      "scale": 1.2471836209855975,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -143.86611065641355,
+      "z": 655.8549972683801,
+      "yaw": 5.991140834394123,
+      "scale": 1.1912650565803051,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -161.06211371608532,
+      "z": 649.1633120025402,
+      "yaw": 5.985201118922073,
+      "scale": 1.3025190650485456,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -292.7347416581338,
+      "z": 602.9762401830134,
+      "yaw": 5.988920600584921,
+      "scale": 1.1726974412053826,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -310.80910278790356,
+      "z": 596.3828624679219,
+      "yaw": 5.898904720263768,
+      "scale": 1.161524536497891,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -131.66115097145146,
+      "z": 621.038247564527,
+      "yaw": 5.925806348666761,
+      "scale": 1.1607860214263201,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -149.66229666687445,
+      "z": 615.8665736405009,
+      "yaw": 5.914572998171884,
+      "scale": 1.1460811061598362,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -205.74335392580988,
+      "z": 594.9665500468602,
+      "yaw": 5.92713179834022,
+      "scale": 1.3465908407978715,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -224.8769763191874,
+      "z": 589.3767668150896,
+      "yaw": 5.959709874017377,
+      "scale": 1.3263907415419818,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -243.4737561504773,
+      "z": 583.1504015776352,
+      "yaw": 5.978126773576465,
+      "scale": 1.192474238201976,
+      "district": "quirinal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -282.21166515148815,
+      "z": 569.4319342860624,
+      "yaw": 5.893089888746132,
+      "scale": 1.1833196341991425,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -301.91188271020064,
+      "z": 563.6878023791351,
+      "yaw": 5.906150622701484,
+      "scale": 1.2839642189443112,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -119.0228708643056,
+      "z": 608.4835440443098,
+      "yaw": 2.813674837986681,
+      "scale": 1.262953382562846,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -138.65319149185277,
+      "z": 601.3357340232317,
+      "yaw": 2.779461178679693,
+      "scale": 1.3533264577761293,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -159.39885688694196,
+      "z": 593.4481991038085,
+      "yaw": 2.7808616110428455,
+      "scale": 1.2754811881668866,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -196.472999890654,
+      "z": 582.0969401878788,
+      "yaw": 2.7994833113697575,
+      "scale": 1.210517468303442,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -213.218048088596,
+      "z": 573.5698740143466,
+      "yaw": 2.806325877069238,
+      "scale": 1.258593291938305,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -234.1609876184927,
+      "z": 565.9253318039189,
+      "yaw": 2.751334472776133,
+      "scale": 1.2061853209882976,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -270.92942630198803,
+      "z": 554.1412269096186,
+      "yaw": 2.8018722863008487,
+      "scale": 1.1216377655416727,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -290.69083377192726,
+      "z": 546.3772338227425,
+      "yaw": 2.8432323627944323,
+      "scale": 1.2573058217763902,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -120.26932421720417,
+      "z": 588.0132984071024,
+      "yaw": 5.932932767843108,
+      "scale": 1.3340892328321934,
+      "district": "quirinal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -138.9968755562654,
+      "z": 582.7234575506187,
+      "yaw": 5.986684091774028,
+      "scale": 1.2891163478977978,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -155.787014066319,
+      "z": 576.6183077618542,
+      "yaw": 5.990319401783149,
+      "scale": 1.3177904486097396,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -192.85280201116922,
+      "z": 561.4019011202113,
+      "yaw": 5.9701011620817965,
+      "scale": 1.1519221756979825,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -214.099542059469,
+      "z": 556.7803756951924,
+      "yaw": 5.959585501941134,
+      "scale": 1.1416190748289228,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -231.98745313687706,
+      "z": 547.6593772902488,
+      "yaw": 5.956278494292151,
+      "scale": 1.3247330442257226,
+      "district": "quirinal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -268.60019132870764,
+      "z": 537.0151356765928,
+      "yaw": 5.939979231206912,
+      "scale": 1.2716616572625936,
+      "district": "quirinal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -287.5914834520364,
+      "z": 528.444930510245,
+      "yaw": 5.9677263551049196,
+      "scale": 1.144603872727603,
+      "district": "quirinal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 377.0174660109776,
+      "z": 550.6132467930123,
+      "yaw": -2.7108131899704695,
+      "scale": 1.2600217963941396,
+      "district": "viminal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 358.67960032858593,
+      "z": 560.4733703779858,
+      "yaw": -2.7091436905294195,
+      "scale": 1.2872381333820524,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 338.7542655534503,
+      "z": 568.7332784821747,
+      "yaw": -2.689898612440704,
+      "scale": 1.2837645519524814,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 303.8180126755929,
+      "z": 589.5429507526562,
+      "yaw": -2.667550476754224,
+      "scale": 1.1235072653368117,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 286.11645437179794,
+      "z": 598.1193873934875,
+      "yaw": -2.660680351915909,
+      "scale": 1.2444432784989476,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 270.13613753115027,
+      "z": 607.0642071016765,
+      "yaw": -2.6854785291218666,
+      "scale": 1.1374906234629454,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 234.5029562118235,
+      "z": 624.1271448328362,
+      "yaw": -2.6612472515992356,
+      "scale": 1.1372325548902156,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 365.18605324698285,
+      "z": 537.5566216028549,
+      "yaw": 0.43979743610448613,
+      "scale": 1.197254377063364,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 343.9161340755829,
+      "z": 546.3355594254023,
+      "yaw": 0.4554744985498063,
+      "scale": 1.2637184427306056,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 329.7350227805978,
+      "z": 556.0060594356352,
+      "yaw": 0.4467013988721691,
+      "scale": 1.2340245886705816,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 291.31365138078274,
+      "z": 573.9552555572744,
+      "yaw": 0.4739576058540068,
+      "scale": 1.127918942384422,
+      "district": "viminal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 274.19355824467175,
+      "z": 585.2465718387309,
+      "yaw": 0.5263422527661122,
+      "scale": 1.295209478698671,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 256.6685627775389,
+      "z": 592.9378640170852,
+      "yaw": 0.4638031342377461,
+      "scale": 1.2006948054395616,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 221.70490900787394,
+      "z": 609.5226174411791,
+      "yaw": 0.4657398418368347,
+      "scale": 1.3056467322632672,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 358.3673704911728,
+      "z": 518.9888112874171,
+      "yaw": -2.7038007430007216,
+      "scale": 1.3009456093236804,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 341.654922808449,
+      "z": 529.5234726958012,
+      "yaw": -2.645138923681481,
+      "scale": 1.2619326206482948,
+      "district": "viminal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 324.2291608542201,
+      "z": 537.5197392583776,
+      "yaw": -2.6817110564067494,
+      "scale": 1.242396946977824,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 286.15415668714536,
+      "z": 555.6512901607405,
+      "yaw": -2.659736090220651,
+      "scale": 1.1594269213080408,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 271.51768363197056,
+      "z": 563.8774971685473,
+      "yaw": -2.6247990934151693,
+      "scale": 1.2246458474360407,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 251.41473786067655,
+      "z": 574.3180129713429,
+      "yaw": -2.6469318378457336,
+      "scale": 1.2147907851077617,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 217.51673681531219,
+      "z": 593.7247082250796,
+      "yaw": -2.6425621086937845,
+      "scale": 1.2983197201602161,
+      "district": "viminal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 347.9906376072283,
+      "z": 505.96539323374026,
+      "yaw": 0.44029083103719574,
+      "scale": 1.2118255208991469,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 327.62892926932346,
+      "z": 513.8269149167506,
+      "yaw": 0.4694682351624168,
+      "scale": 1.2866198901832104,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 310.4443007656727,
+      "z": 525.410753588429,
+      "yaw": 0.4720405993129633,
+      "scale": 1.2413719199039044,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 277.44445622631713,
+      "z": 543.0425681873696,
+      "yaw": 0.48378392493664696,
+      "scale": 1.2891828328184785,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 256.5179245094216,
+      "z": 551.925575937189,
+      "yaw": 0.4458267714207567,
+      "scale": 1.1578704064711929,
+      "district": "viminal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 241.84120864657368,
+      "z": 560.551662526553,
+      "yaw": 0.5208448313487268,
+      "scale": 1.31392893537879,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 203.78799724031984,
+      "z": 577.7480086926641,
+      "yaw": 0.4441436656130053,
+      "scale": 1.2193348164856435,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 329.97348692526424,
+      "z": 474.4991615478527,
+      "yaw": 0.4884560740397818,
+      "scale": 1.2925272071547806,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 310.6404929409792,
+      "z": 481.76320740746706,
+      "yaw": 0.4989766955919139,
+      "scale": 1.1622467865981163,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 293.98136833700715,
+      "z": 490.50648976255957,
+      "yaw": 0.4773680511474184,
+      "scale": 1.1238655597902836,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 257.9608734513919,
+      "z": 510.8430258824146,
+      "yaw": 0.4683261803429149,
+      "scale": 1.2173600162938238,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 240.9473226074665,
+      "z": 518.9573881757198,
+      "yaw": 0.4875172008605249,
+      "scale": 1.351048163343221,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 223.95900633813758,
+      "z": 527.422980994701,
+      "yaw": 0.47699216567757946,
+      "scale": 1.1343731911666692,
+      "district": "viminal",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 188.87972213649937,
+      "z": 547.9066417039041,
+      "yaw": 0.4852617645946838,
+      "scale": 1.2134583278186621,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 326.3527696835017,
+      "z": 453.54742465919725,
+      "yaw": -2.628903261616035,
+      "scale": 1.1502216531708838,
+      "district": "viminal",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 307.9885367862888,
+      "z": 463.37644841715775,
+      "yaw": -2.6184142085697037,
+      "scale": 1.3488171054050326,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 289.8224789677269,
+      "z": 473.00804404074967,
+      "yaw": -2.6277590297368825,
+      "scale": 1.2863070510700345,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 254.25198931882971,
+      "z": 493.99347118801506,
+      "yaw": -2.706259883984132,
+      "scale": 1.3077081037685276,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 236.61453283250216,
+      "z": 503.1369600788765,
+      "yaw": -2.6504121369190052,
+      "scale": 1.1233059629797937,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 219.11193519010698,
+      "z": 510.30444805629446,
+      "yaw": -2.613461292672111,
+      "scale": 1.32319090038538,
+      "district": "viminal",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 182.78540133964646,
+      "z": 530.1125753831604,
+      "yaw": -2.693077531780256,
+      "scale": 1.2810664772242308,
+      "district": "viminal",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -762.8387633331272,
+      "z": 185.1647384137689,
+      "yaw": 1.7149214702353652,
+      "scale": 1.1956762397103013,
+      "district": "janiculum",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -766.3712969979061,
+      "z": 165.100376889465,
+      "yaw": 1.6495081928719606,
+      "scale": 1.3260459762625398,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -768.5426730720288,
+      "z": 144.1420365643599,
+      "yaw": 1.6687562707972552,
+      "scale": 1.1254058474861086,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -773.0652934039398,
+      "z": 104.87769512464396,
+      "yaw": 1.6787674537322324,
+      "scale": 1.1860119141824546,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -775.2166985609996,
+      "z": 85.68215109752938,
+      "yaw": 1.7199079539554964,
+      "scale": 1.2981378424167633,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -774.867999251611,
+      "z": 66.20502497940245,
+      "yaw": 1.6435896749070684,
+      "scale": 1.2520148438028993,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -780.6021494059266,
+      "z": 27.219612473109795,
+      "yaw": 1.6632400800634946,
+      "scale": 1.173981638737023,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -781.0837509267066,
+      "z": 6.970917902285129,
+      "yaw": 1.6735471786626452,
+      "scale": 1.2551781597547234,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -784.5735595366506,
+      "z": -11.989383040949349,
+      "yaw": 1.64850962920327,
+      "scale": 1.3573475124873222,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -746.4840389638621,
+      "z": 178.88698887531055,
+      "yaw": 4.777567432096961,
+      "scale": 1.1677522805519402,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -748.2648242869432,
+      "z": 159.28138953208708,
+      "yaw": 4.850838574322673,
+      "scale": 1.349892873056233,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -749.1153844104492,
+      "z": 138.48320791613844,
+      "yaw": 4.807295842140715,
+      "scale": 1.3055469587258997,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -752.6973517488128,
+      "z": 98.87839113588325,
+      "yaw": 4.827125621980789,
+      "scale": 1.3211703830026091,
+      "district": "janiculum",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -757.7138056028593,
+      "z": 78.68534768619271,
+      "yaw": 4.819315369425143,
+      "scale": 1.2631481189839544,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -757.9443938738146,
+      "z": 59.325164422737735,
+      "yaw": 4.8349741738268985,
+      "scale": 1.1365689668804408,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -763.5938988453917,
+      "z": 17.98439476762384,
+      "yaw": 4.793045510396163,
+      "scale": 1.1478146056085825,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -766.1613154584493,
+      "z": -0.20234818455184378,
+      "yaw": 4.842869035105954,
+      "scale": 1.1544590838626028,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -766.7164716132747,
+      "z": -20.24882887767762,
+      "yaw": 4.839403945135686,
+      "scale": 1.175969875007868,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -727.263936100955,
+      "z": 181.32584909486192,
+      "yaw": 1.680989995335492,
+      "scale": 1.350936810821295,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -727.966584699945,
+      "z": 160.76332326397787,
+      "yaw": 1.7212504965879794,
+      "scale": 1.2262546001374723,
+      "district": "janiculum",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -731.8224636227815,
+      "z": 140.01812529245848,
+      "yaw": 1.6484725623552525,
+      "scale": 1.2054095564037564,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -745.0387978796484,
+      "z": 21.91309568371567,
+      "yaw": 1.6360742587524304,
+      "scale": 1.3322299947217107,
+      "district": "janiculum",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -746.2204493590167,
+      "z": 2.4226169891481435,
+      "yaw": 1.6447559222041468,
+      "scale": 1.1925709443539383,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -748.9615541833468,
+      "z": -15.917992116773396,
+      "yaw": 1.6781799508186828,
+      "scale": 1.1507105413079264,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -708.9603847903345,
+      "z": 173.04193494166196,
+      "yaw": 4.79869951843078,
+      "scale": 1.210896679405123,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -712.0817064796946,
+      "z": 156.16317444365015,
+      "yaw": 4.849078691981535,
+      "scale": 1.3048772619292142,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -715.0267755072991,
+      "z": 136.5212827464887,
+      "yaw": 4.80721522164325,
+      "scale": 1.3147922288253904,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -717.9381343052681,
+      "z": 94.37113474445518,
+      "yaw": 4.797777130033623,
+      "scale": 1.2874299696087839,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -726.8950160630749,
+      "z": 14.289541209611889,
+      "yaw": 4.872934115676011,
+      "scale": 1.1969626600667835,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -729.6569252582034,
+      "z": -2.9150040508592046,
+      "yaw": 4.843684110951412,
+      "scale": 1.155853091031313,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -731.1106161885964,
+      "z": -25.88104947206525,
+      "yaw": 4.777652338540915,
+      "scale": 1.308850312307477,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -674.4303082502024,
+      "z": 171.99125144515278,
+      "yaw": 4.788355564161006,
+      "scale": 1.1781198609992862,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -675.1763905216644,
+      "z": 150.56968837890454,
+      "yaw": 4.852174368242535,
+      "scale": 1.3241379625722767,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -677.7513771727748,
+      "z": 129.54354585620777,
+      "yaw": 4.833332306796486,
+      "scale": 1.148492688946426,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -686.5358654996031,
+      "z": 52.52214063298118,
+      "yaw": 4.838631992971327,
+      "scale": 1.1759815440140666,
+      "district": "janiculum",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -691.6570014116904,
+      "z": 12.93049609044762,
+      "yaw": 4.773635710750509,
+      "scale": 1.1912600283883512,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -693.0511879085992,
+      "z": -8.557783443108578,
+      "yaw": 4.811129289397772,
+      "scale": 1.2943527072668077,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -695.0853913629913,
+      "z": -28.879373151425945,
+      "yaw": 4.802404834002059,
+      "scale": 1.2558132836036384,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -656.2017411622638,
+      "z": 174.02495697323675,
+      "yaw": 1.632082309450286,
+      "scale": 1.2424988003447652,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -658.164313386884,
+      "z": 154.76274330707554,
+      "yaw": 1.6454271944400694,
+      "scale": 1.2418377018719913,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -661.2738234816214,
+      "z": 133.71662250026478,
+      "yaw": 1.665578542782257,
+      "scale": 1.2899284957535566,
+      "district": "janiculum",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -672.1264139231187,
+      "z": 14.031255780169975,
+      "yaw": 1.7162232321149509,
+      "scale": 1.124805593416095,
+      "district": "janiculum",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -675.0452780742766,
+      "z": -4.504225242083532,
+      "yaw": 1.660630948671403,
+      "scale": 1.148789889998734,
+      "district": "janiculum",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -676.4046702108665,
+      "z": -26.285952627948287,
+      "yaw": 1.6872586017169828,
+      "scale": 1.320548238474876,
+      "district": "janiculum",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -206.93862304645623,
+      "z": 302.7273023787217,
+      "yaw": 2.2153639097898576,
+      "scale": 1.1626432432979346,
+      "district": "velia",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -181.47232817220782,
+      "z": 282.8326804795743,
+      "yaw": 2.2251461395030216,
+      "scale": 1.1602336974814536,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -193.38687707331982,
+      "z": 271.9766267967043,
+      "yaw": 2.2892857557828847,
+      "scale": 1.129862605147064,
+      "district": "velia",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -214.28186313723643,
+      "z": 243.29066034010384,
+      "yaw": 2.311916235295621,
+      "scale": 1.1460830724984408,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -225.00542771851462,
+      "z": 232.7823759335816,
+      "yaw": 2.290382846022521,
+      "scale": 1.1701140638254584,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -237.45375931310232,
+      "z": 218.72527668577277,
+      "yaw": 2.222314684578714,
+      "scale": 1.2314501988701523,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -156.69872193621802,
+      "z": 263.56738189797824,
+      "yaw": 2.2395304129659506,
+      "scale": 1.1765247675031425,
+      "district": "velia",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -168.66917734486861,
+      "z": 250.21331905742892,
+      "yaw": 2.306633298747738,
+      "scale": 1.2529505106247962,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -190.84336069034015,
+      "z": 224.77225411013748,
+      "yaw": 2.26685403911074,
+      "scale": 1.3337123853713275,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -201.63060437107555,
+      "z": 212.14160909074135,
+      "yaw": 2.301494625719761,
+      "scale": 1.1791764297895135,
+      "district": "velia",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -254.5181426624522,
+      "z": 145.9359088306996,
+      "yaw": 2.279176851335478,
+      "scale": 1.2084545876644552,
+      "district": "velia",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -277.7937803154634,
+      "z": 118.8058719783047,
+      "yaw": 2.238478405700562,
+      "scale": 1.2501491220109167,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -287.34238565178765,
+      "z": 104.66914419590321,
+      "yaw": 2.259066540255708,
+      "scale": 1.186329299863428,
+      "district": "velia",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -148.5594906069067,
+      "z": 249.74471028679878,
+      "yaw": 5.378087006068824,
+      "scale": 1.3048325964435936,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -158.92454700895553,
+      "z": 237.2893229202306,
+      "yaw": 5.393718991709909,
+      "scale": 1.2928307473286988,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -179.3794367729969,
+      "z": 210.35890630151465,
+      "yaw": 5.364020387248171,
+      "scale": 1.2638942787982526,
+      "district": "velia",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -192.5221393193545,
+      "z": 197.66492518094623,
+      "yaw": 5.384183842271602,
+      "scale": 1.2409805067628623,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -235.18948292631904,
+      "z": 146.59703480765089,
+      "yaw": 5.4275178540517,
+      "scale": 1.3097199530340733,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -245.7883237980382,
+      "z": 132.8352681609111,
+      "yaw": 5.361051289762406,
+      "scale": 1.2804844665899875,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -267.6755686565791,
+      "z": 106.44718340753619,
+      "yaw": 5.3887330835471285,
+      "scale": 1.2391761698946357,
+      "district": "velia",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": -276.76903274766806,
+      "z": 93.46062446076097,
+      "yaw": 5.36949865517862,
+      "scale": 1.2245182426273824,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -134.08909474777815,
+      "z": 243.67410126443548,
+      "yaw": 2.2351347627784435,
+      "scale": 1.1897631038539114,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -144.85637403971708,
+      "z": 229.9233084181464,
+      "yaw": 2.2421425878969328,
+      "scale": 1.1312451622448862,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -165.96101598911443,
+      "z": 203.22637523992108,
+      "yaw": 2.2883394954926644,
+      "scale": 1.1414907048083842,
+      "district": "velia",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": -176.62184177766295,
+      "z": 191.0446727912113,
+      "yaw": 2.236624610444096,
+      "scale": 1.3462428383715452,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -218.913723517416,
+      "z": 137.77385798487282,
+      "yaw": 2.265610720563245,
+      "scale": 1.1768975745514036,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -230.94085919151325,
+      "z": 124.77601280756335,
+      "yaw": 2.294883445879941,
+      "scale": 1.2846851075440646,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": -253.30693400312907,
+      "z": 99.10650553815469,
+      "yaw": 2.287524208190416,
+      "scale": 1.3560579110868276,
+      "district": "velia",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": -263.911803456906,
+      "z": 85.5907069406974,
+      "yaw": 2.2349770877710853,
+      "scale": 1.3545237045176328,
+      "district": "velia",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 171.22919369159467,
+      "z": 310.72058210463695,
+      "yaw": -2.7947894995397204,
+      "scale": 1.2733579019457102,
+      "district": "oppian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 153.52390304416448,
+      "z": 318.51568469425644,
+      "yaw": -2.7438919915415596,
+      "scale": 1.205577425695956,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 138.0693054585288,
+      "z": 324.01846936012777,
+      "yaw": -2.826256123657177,
+      "scale": 1.211170717906207,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 104.83806047599082,
+      "z": 336.27090520494585,
+      "yaw": -2.758461134910422,
+      "scale": 1.2621712974645198,
+      "district": "oppian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 87.2548150346608,
+      "z": 342.4349965423348,
+      "yaw": -2.8277535401581106,
+      "scale": 1.2630246972478927,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 71.39458362775366,
+      "z": 349.0107500867974,
+      "yaw": -2.763104057807314,
+      "scale": 1.273166329357773,
+      "district": "oppian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 163.04234895401927,
+      "z": 297.1566176591044,
+      "yaw": 0.35125127015512236,
+      "scale": 1.287598156798631,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 144.80917512138245,
+      "z": 304.5444470568865,
+      "yaw": 0.3967234932106713,
+      "scale": 1.2023822523094714,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 127.83199131794612,
+      "z": 309.79399315937457,
+      "yaw": 0.3825748846621046,
+      "scale": 1.3210986079275608,
+      "district": "oppian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 93.2860369686514,
+      "z": 323.0487834065243,
+      "yaw": 0.34501825759529864,
+      "scale": 1.3358223577216268,
+      "district": "oppian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 78.97199348311673,
+      "z": 329.15020392883224,
+      "yaw": 0.31957880786962606,
+      "scale": 1.1250180357135833,
+      "district": "oppian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 59.64465426112087,
+      "z": 335.3504892494053,
+      "yaw": 0.3501455901643986,
+      "scale": 1.2861124477535486,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 160.14240420437287,
+      "z": 283.08790297306126,
+      "yaw": -2.7585571081441147,
+      "scale": 1.1692628576979043,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 144.34223344602725,
+      "z": 286.72189617057904,
+      "yaw": -2.7667309025366107,
+      "scale": 1.2003149887733162,
+      "district": "oppian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 126.12549961813541,
+      "z": 293.9612290915996,
+      "yaw": -2.8241306003013875,
+      "scale": 1.2551461222209037,
+      "district": "oppian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 92.91736255533766,
+      "z": 306.31773673010895,
+      "yaw": -2.7558750863949086,
+      "scale": 1.1415338949114084,
+      "district": "oppian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 76.49484934857448,
+      "z": 312.28505520384135,
+      "yaw": -2.839164857828828,
+      "scale": 1.3212683424167335,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 58.29385682638827,
+      "z": 319.38656225689135,
+      "yaw": -2.8236537025606507,
+      "scale": 1.2371956121176482,
+      "district": "oppian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 150.47536601496012,
+      "z": 267.4862172672576,
+      "yaw": 0.39392445669386333,
+      "scale": 1.214050740338862,
+      "district": "oppian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "insula",
+      "x": 133.0933332086339,
+      "z": 275.36225717352534,
+      "yaw": 0.3571979607675949,
+      "scale": 1.12158055620268,
+      "district": "oppian",
+      "housing": "stepped"
+    },
+    {
+      "kind": "insula",
+      "x": 118.10687554028723,
+      "z": 278.89966129003807,
+      "yaw": 0.33800790670670366,
+      "scale": 1.2164574351347983,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 83.36211698010659,
+      "z": 292.8841321675298,
+      "yaw": 0.3932097653613219,
+      "scale": 1.290583064891398,
+      "district": "oppian",
+      "housing": "frontage"
+    },
+    {
+      "kind": "insula",
+      "x": 66.07023885543263,
+      "z": 297.99805207859214,
+      "yaw": 0.39248561083681677,
+      "scale": 1.2918863948434591,
+      "district": "oppian",
+      "housing": "corner"
+    },
+    {
+      "kind": "insula",
+      "x": 48.11432801051215,
+      "z": 305.2624424359539,
+      "yaw": 0.356173014010934,
+      "scale": 1.3101130949147046,
+      "district": "oppian",
+      "housing": "courtyard"
+    },
+    {
+      "kind": "pine",
+      "x": -235.32934901489432,
+      "z": -11.350718865667726,
+      "yaw": 1.5816838850175574,
+      "scale": 1.7506356310332194
+    },
+    {
+      "kind": "pine",
+      "x": -115.70502563028914,
+      "z": -318.4547767198521,
+      "yaw": 0.35112439028786935,
+      "scale": 1.5838354307226838
+    },
+    {
+      "kind": "pine",
+      "x": -53.976048916757414,
+      "z": 263.09474807138537,
+      "yaw": 2.8655784405928335,
+      "scale": 1.7792074958095327
+    },
+    {
+      "kind": "pine",
+      "x": -263.37749454590966,
+      "z": -32.68601593609122,
+      "yaw": 1.4839101025604142,
+      "scale": 1.9081426663557068
+    },
+    {
+      "kind": "pine",
+      "x": 102.5831180908446,
+      "z": -226.3230772945619,
+      "yaw": -0.3986891886901764,
+      "scale": 1.753724996582605
+    },
+    {
+      "kind": "pine",
+      "x": 281.8611524499982,
+      "z": -18.909131267277818,
+      "yaw": -1.5433304887771113,
+      "scale": 1.6128452542005107
+    },
+    {
+      "kind": "pine",
+      "x": 129.79247851418808,
+      "z": 251.08942574744702,
+      "yaw": -2.5889631805182782,
+      "scale": 1.6262178869452328
+    },
+    {
+      "kind": "pine",
+      "x": 92.63662002794985,
+      "z": -255.2047733959018,
+      "yaw": -0.26979150838082544,
+      "scale": 1.4416986155090854
+    },
+    {
+      "kind": "pine",
+      "x": -136.8345543921497,
+      "z": 306.0471992178322,
+      "yaw": 2.711156438722809,
+      "scale": 1.9705357767874374
+    },
+    {
+      "kind": "pine",
+      "x": 244.26818767822368,
+      "z": -135.0070189992796,
+      "yaw": -1.0080919058911648,
+      "scale": 1.573492928571068
+    },
+    {
+      "kind": "pine",
+      "x": -71.93056798231326,
+      "z": 298.7425697959812,
+      "yaw": 2.8526542321950195,
+      "scale": 1.4321870587999002
+    },
+    {
+      "kind": "pine",
+      "x": 271.51923127882077,
+      "z": 128.34335102501976,
+      "yaw": -2.0359361165684113,
+      "scale": 1.642952555487864
+    },
+    {
+      "kind": "pine",
+      "x": -272.432456682118,
+      "z": -89.7241600572936,
+      "yaw": 1.2783625395268063,
+      "scale": 1.3951495710993187
+    },
+    {
+      "kind": "pine",
+      "x": -262.2187428193842,
+      "z": -214.07641075498782,
+      "yaw": 0.8149662035766059,
+      "scale": 1.8588774353498594
+    },
+    {
+      "kind": "pine",
+      "x": 116.58201543314176,
+      "z": 231.13421508392716,
+      "yaw": -2.678078244263482,
+      "scale": 1.7106018392136322
+    },
+    {
+      "kind": "pine",
+      "x": 21.502303052065745,
+      "z": 283.5504928788575,
+      "yaw": -3.035809231833361,
+      "scale": 2.049372841673903
+    },
+    {
+      "kind": "pine",
+      "x": -176.1336907940403,
+      "z": -186.2829303794572,
+      "yaw": 0.685992771167003,
+      "scale": 1.859954935219139
+    },
+    {
+      "kind": "pine",
+      "x": -193.43296572491255,
+      "z": -193.55185128429133,
+      "yaw": 0.8500386120058523,
+      "scale": 1.8466803592862562
+    },
+    {
+      "kind": "pine",
+      "x": -187.44976830811922,
+      "z": -181.03201107513365,
+      "yaw": 0.8148634296791089,
+      "scale": 1.5767196151195095
+    },
+    {
+      "kind": "pine",
+      "x": 142.582572337145,
+      "z": -191.43840102494735,
+      "yaw": -0.637650234657755,
+      "scale": 1.477147142123431
+    },
+    {
+      "kind": "pine",
+      "x": -78.35536437565443,
+      "z": -321.6544415213018,
+      "yaw": 0.23458499263108004,
+      "scale": 1.6676041967933999
+    },
+    {
+      "kind": "pine",
+      "x": -5.6313004789838645,
+      "z": 318.35281731207175,
+      "yaw": 3.1901211737591906,
+      "scale": 1.89805111521855
+    },
+    {
+      "kind": "pine",
+      "x": -212.55440145935816,
+      "z": -212.03390316094178,
+      "yaw": 0.8505513075967995,
+      "scale": 2.009598810505122
+    },
+    {
+      "kind": "pine",
+      "x": 218.50336483781706,
+      "z": -233.3970630985809,
+      "yaw": -0.6893574688634984,
+      "scale": 2.0040121232159436
+    },
+    {
+      "kind": "pine",
+      "x": 72.27707266661696,
+      "z": 228.63848566152478,
+      "yaw": -2.8406539081290236,
+      "scale": 1.7843638781690971
+    },
+    {
+      "kind": "pine",
+      "x": -50.29287255985851,
+      "z": 235.0460685363928,
+      "yaw": 3.0081272966778605,
+      "scale": 1.8931892263237389
+    },
+    {
+      "kind": "pine",
+      "x": -149.90989293192285,
+      "z": -186.94373529805566,
+      "yaw": 0.6221365953572457,
+      "scale": 1.7832812152104454
+    },
+    {
+      "kind": "pine",
+      "x": -279.1884337271138,
+      "z": 17.278593744913707,
+      "yaw": 1.6635867521730408,
+      "scale": 1.8729052725946531
+    },
+    {
+      "kind": "pine",
+      "x": -102.4910941758685,
+      "z": -288.6327349281909,
+      "yaw": 0.3113885021717526,
+      "scale": 1.9944957378553227
+    },
+    {
+      "kind": "pine",
+      "x": -293.47119488399227,
+      "z": -23.8662138352297,
+      "yaw": 5.264513318008098,
+      "scale": 1.5925319648813456
+    },
+    {
+      "kind": "pine",
+      "x": -287.2612809349575,
+      "z": -111.81656362569265,
+      "yaw": 0.00013088874347011204,
+      "scale": 2.1450986836105583
+    },
+    {
+      "kind": "pine",
+      "x": -504.0144287835314,
+      "z": -77.54825284655391,
+      "yaw": 3.2607270872857224,
+      "scale": 1.5702326374594122
+    },
+    {
+      "kind": "pine",
+      "x": -290.06050193360124,
+      "z": -82.48861403472888,
+      "yaw": 5.086011591311835,
+      "scale": 1.9164404936134813
+    },
+    {
+      "kind": "pine",
+      "x": -529.5219757079384,
+      "z": -72.26130081576264,
+      "yaw": 1.8325404621287495,
+      "scale": 1.7027191069908438
+    },
+    {
+      "kind": "pine",
+      "x": -505.34731604279784,
+      "z": -64.12045578911804,
+      "yaw": 0.6942042347014171,
+      "scale": 1.7222444505197927
+    },
+    {
+      "kind": "pine",
+      "x": -494.5290356531249,
+      "z": -133.7390233427777,
+      "yaw": 4.087570217260956,
+      "scale": 1.692341550788842
+    },
+    {
+      "kind": "pine",
+      "x": -524.7039928305531,
+      "z": -53.712203084776654,
+      "yaw": 4.1659179463126375,
+      "scale": 1.6063875173684208
+    },
+    {
+      "kind": "pine",
+      "x": -320.9711330393766,
+      "z": -3.733412516595763,
+      "yaw": 5.96492600587651,
+      "scale": 2.0821477688383307
+    },
+    {
+      "kind": "pine",
+      "x": -515.4104981635301,
+      "z": -23.368528385061758,
+      "yaw": 0.9019493075918579,
+      "scale": 1.9671398516977205
+    },
+    {
+      "kind": "pine",
+      "x": -282.9952749343827,
+      "z": -50.091933108646955,
+      "yaw": 6.263408443896705,
+      "scale": 2.0979517378378656
+    },
+    {
+      "kind": "pine",
+      "x": -506.9024606059156,
+      "z": -95.47204353177634,
+      "yaw": 0.7062510344646963,
+      "scale": 2.0767901858780533
+    },
+    {
+      "kind": "pine",
+      "x": -495.9530607866214,
+      "z": -69.99271807227804,
+      "yaw": 5.049424579224496,
+      "scale": 1.909649355476722
+    },
+    {
+      "kind": "pine",
+      "x": -508.6208219959591,
+      "z": -107.03849196097062,
+      "yaw": 3.082795225698057,
+      "scale": 2.090020107664168
+    },
+    {
+      "kind": "pine",
+      "x": -502.1212744617836,
+      "z": -80.87478958028926,
+      "yaw": 5.829804461087519,
+      "scale": 1.6313998667756096
+    },
+    {
+      "kind": "pine",
+      "x": -503.4281800383092,
+      "z": -72.40125792501155,
+      "yaw": 1.3383471508679758,
+      "scale": 1.9593905814690515
+    },
+    {
+      "kind": "pine",
+      "x": -509.61005261399396,
+      "z": -81.64254733868395,
+      "yaw": 3.58829498606639,
+      "scale": 2.070097925327718
+    },
+    {
+      "kind": "pine",
+      "x": -495.90128621672284,
+      "z": -147.3042433352291,
+      "yaw": 5.971365464048647,
+      "scale": 1.6099940289277583
+    },
+    {
+      "kind": "pine",
+      "x": -522.6449545413335,
+      "z": -75.57749793888539,
+      "yaw": 5.199109022913824,
+      "scale": 2.1243279670365154
+    },
+    {
+      "kind": "pine",
+      "x": 144.72442524969256,
+      "z": -448.50204480211767,
+      "yaw": 6.16454542318078,
+      "scale": 2.109567351825535
+    },
+    {
+      "kind": "pine",
+      "x": 164.47084189012128,
+      "z": -443.0023270093654,
+      "yaw": 3.452682559115901,
+      "scale": 2.1310144340852277
+    },
+    {
+      "kind": "pine",
+      "x": 157.11988036390957,
+      "z": -435.9068457917538,
+      "yaw": 3.16127154963766,
+      "scale": 1.6930445409612729
+    },
+    {
+      "kind": "pine",
+      "x": 128.8025498833088,
+      "z": -462.79096315482053,
+      "yaw": 3.8461835978764984,
+      "scale": 1.8628847998799756
+    },
+    {
+      "kind": "pine",
+      "x": 146.29568354392188,
+      "z": -452.0416831825304,
+      "yaw": 3.057062727824804,
+      "scale": 1.9100528928218408
+    },
+    {
+      "kind": "pine",
+      "x": 147.5635854252511,
+      "z": -461.6162347176672,
+      "yaw": 4.283925352309053,
+      "scale": 1.8735998205840587
+    },
+    {
+      "kind": "pine",
+      "x": 273.5682772465531,
+      "z": 306.1334326787808,
+      "yaw": 0.7022498247811096,
+      "scale": 2.080680355732329
+    },
+    {
+      "kind": "pine",
+      "x": 228.21049614399317,
+      "z": 176.3001466614282,
+      "yaw": 1.1096720636669994,
+      "scale": 1.7503176572499797
+    },
+    {
+      "kind": "pine",
+      "x": 385.1425832140924,
+      "z": 322.0978563539851,
+      "yaw": 5.871626036906877,
+      "scale": 1.8048892376711592
+    },
+    {
+      "kind": "pine",
+      "x": 366.96574592122573,
+      "z": 320.7997070764721,
+      "yaw": 6.164146365461281,
+      "scale": 1.9712319267215208
+    },
+    {
+      "kind": "pine",
+      "x": 212.11224124900738,
+      "z": 256.9884155440756,
+      "yaw": 1.0805302937267376,
+      "scale": 1.5838034448912366
+    },
+    {
+      "kind": "pine",
+      "x": 260.4609726354682,
+      "z": 189.72506288549565,
+      "yaw": 3.4400289935983928,
+      "scale": 1.6418384549673646
+    },
+    {
+      "kind": "pine",
+      "x": 409.612948438942,
+      "z": 206.92722271209186,
+      "yaw": 3.5460410696783127,
+      "scale": 1.5181819380726664
+    },
+    {
+      "kind": "pine",
+      "x": 335.26153241033114,
+      "z": 361.7887400733752,
+      "yaw": 1.9867307607964515,
+      "scale": 1.8341347525361924
+    },
+    {
+      "kind": "pine",
+      "x": 346.88689321503495,
+      "z": 347.78021464591274,
+      "yaw": 3.2917648926834713,
+      "scale": 1.8460356909781694
+    },
+    {
+      "kind": "pine",
+      "x": -250.5654732940065,
+      "z": -503.57873821606364,
+      "yaw": 0.8746532648192555,
+      "scale": 1.892096793372184
+    },
+    {
+      "kind": "pine",
+      "x": -278.0305408880278,
+      "z": -479.4149188099718,
+      "yaw": 2.8421687546396854,
+      "scale": 1.6741780005628242
+    },
+    {
+      "kind": "pine",
+      "x": -281.02683736947546,
+      "z": -466.0976884749773,
+      "yaw": 6.100037215149271,
+      "scale": 1.6267986541613935
+    },
+    {
+      "kind": "pine",
+      "x": -288.8072505276366,
+      "z": -565.1714618900653,
+      "yaw": 1.5899747731970268,
+      "scale": 1.9991219379007816
+    },
+    {
+      "kind": "pine",
+      "x": -404.50400074510264,
+      "z": -610.119558929214,
+      "yaw": 5.787671175461339,
+      "scale": 1.8821515811607241
+    },
+    {
+      "kind": "pine",
+      "x": -238.72980943841574,
+      "z": -510.428961611309,
+      "yaw": 0.39874462723424764,
+      "scale": 1.8455270687351002
+    },
+    {
+      "kind": "pine",
+      "x": -411.8020930139046,
+      "z": -616.0120572108318,
+      "yaw": 3.6969545869177725,
+      "scale": 1.511474003922194
+    },
+    {
+      "kind": "pine",
+      "x": -237.6133374761671,
+      "z": -502.76405002074017,
+      "yaw": 4.257582391887585,
+      "scale": 1.4789355137152598
+    },
+    {
+      "kind": "pine",
+      "x": -263.8861705175594,
+      "z": 597.5034622336507,
+      "yaw": 2.9504479441254072,
+      "scale": 1.4882706829346717
+    },
+    {
+      "kind": "pine",
+      "x": -257.0612825284983,
+      "z": 706.253200984855,
+      "yaw": 0.8102406862796704,
+      "scale": 1.5226464558625594
+    },
+    {
+      "kind": "pine",
+      "x": -185.20208544653406,
+      "z": 541.7828877637747,
+      "yaw": 4.574535134721542,
+      "scale": 1.7926891687791793
+    },
+    {
+      "kind": "pine",
+      "x": -299.9463686029755,
+      "z": 679.0780898233014,
+      "yaw": 2.184370172608402,
+      "scale": 1.80513268224895
+    },
+    {
+      "kind": "pine",
+      "x": -126.14352179275963,
+      "z": 564.0431781687827,
+      "yaw": 4.674412421411431,
+      "scale": 1.4928849638905375
+    },
+    {
+      "kind": "pine",
+      "x": -205.74745807217968,
+      "z": 529.7426868084953,
+      "yaw": 2.5248690076373257,
+      "scale": 1.9716377930715678
+    },
+    {
+      "kind": "pine",
+      "x": -272.50485103602006,
+      "z": 691.6906171988699,
+      "yaw": 5.964824937255168,
+      "scale": 1.6787302722921593
+    },
+    {
+      "kind": "pine",
+      "x": -176.82895966251454,
+      "z": 547.39443420213,
+      "yaw": 4.4164606334840695,
+      "scale": 1.5041288007283582
+    },
+    {
+      "kind": "pine",
+      "x": -264.1469951488766,
+      "z": 694.1730905500561,
+      "yaw": 0.4879331161442335,
+      "scale": 1.6723298869095742
+    },
+    {
+      "kind": "pine",
+      "x": -264.1220904408129,
+      "z": 707.9535080697442,
+      "yaw": 5.97125706474481,
+      "scale": 1.7058964585652574
+    },
+    {
+      "kind": "pine",
+      "x": -275.511957826569,
+      "z": 696.9649838624656,
+      "yaw": 0.5558635664744419,
+      "scale": 2.069396671722643
+    },
+    {
+      "kind": "pine",
+      "x": -149.67684557324048,
+      "z": 556.2750110845759,
+      "yaw": 3.7707275941224974,
+      "scale": 1.7721993984887376
+    },
+    {
+      "kind": "pine",
+      "x": 317.4624184347377,
+      "z": 576.3206307606233,
+      "yaw": 5.5619234546312075,
+      "scale": 1.80194076388143
+    },
+    {
+      "kind": "pine",
+      "x": 287.06265921957714,
+      "z": 448.69950784802546,
+      "yaw": 2.283326771805104,
+      "scale": 1.7518287531333043
+    },
+    {
+      "kind": "pine",
+      "x": 301.0154650654534,
+      "z": 621.8248825366709,
+      "yaw": 2.3834421264686223,
+      "scale": 1.8561613071942702
+    },
+    {
+      "kind": "pine",
+      "x": 182.70699908647788,
+      "z": 580.080651756125,
+      "yaw": 4.902845768714399,
+      "scale": 1.7232983055291697
+    },
+    {
+      "kind": "pine",
+      "x": 368.52962683428945,
+      "z": 490.7984278232387,
+      "yaw": 4.253925597007401,
+      "scale": 2.1067973769502712
+    },
+    {
+      "kind": "pine",
+      "x": 275.82113628766103,
+      "z": 492.99840170901757,
+      "yaw": 3.3189889715899183,
+      "scale": 1.7476194667397067
+    },
+    {
+      "kind": "pine",
+      "x": 231.04084607709822,
+      "z": 468.50675806348266,
+      "yaw": 4.050360957357356,
+      "scale": 1.4642734175315126
+    },
+    {
+      "kind": "pine",
+      "x": 339.3145470271978,
+      "z": 601.1305092480345,
+      "yaw": 5.756360164260614,
+      "scale": 1.856122959940694
+    },
+    {
+      "kind": "pine",
+      "x": 323.2799185884864,
+      "z": 597.969304139744,
+      "yaw": 2.337898149744897,
+      "scale": 1.8948964313603938
+    },
+    {
+      "kind": "pine",
+      "x": -816.0571819449244,
+      "z": 51.061628762223485,
+      "yaw": 2.9798197389156984,
+      "scale": 1.7770000539487227
+    },
+    {
+      "kind": "pine",
+      "x": -855.3233625736406,
+      "z": 103.40650160427268,
+      "yaw": 0.757920151170802,
+      "scale": 1.737534421822056
+    },
+    {
+      "kind": "pine",
+      "x": -843.7661490622834,
+      "z": 36.18994172632869,
+      "yaw": 0.13666238812558681,
+      "scale": 1.5791923665208742
+    },
+    {
+      "kind": "pine",
+      "x": -802.1161291858231,
+      "z": 27.271027731823736,
+      "yaw": 5.2773614033538525,
+      "scale": 1.65851907315664
+    },
+    {
+      "kind": "pine",
+      "x": -863.8155569682469,
+      "z": 89.89408566118898,
+      "yaw": 1.8378659213497877,
+      "scale": 1.8287913339678197
+    },
+    {
+      "kind": "pine",
+      "x": -832.5039262604346,
+      "z": 146.5066256417721,
+      "yaw": 5.213379652725694,
+      "scale": 1.463820254127495
+    },
+    {
+      "kind": "pine",
+      "x": -572.390013707633,
+      "z": 84.59884268926855,
+      "yaw": 3.363901434374268,
+      "scale": 2.003234170144424
+    },
+    {
+      "kind": "pine",
+      "x": -802.920014312363,
+      "z": 117.39618267303933,
+      "yaw": 2.2235246629786602,
+      "scale": 1.7529296902241185
+    },
+    {
+      "kind": "pine",
+      "x": -824.1626452508252,
+      "z": 48.89706415696029,
+      "yaw": 0.7339943936983961,
+      "scale": 2.0530863160965964
+    },
+    {
+      "kind": "pine",
+      "x": -844.8001038432102,
+      "z": 86.70609278773897,
+      "yaw": 5.986345022498812,
+      "scale": 1.6356021932093425
+    },
+    {
+      "kind": "pine",
+      "x": -623.1351989603044,
+      "z": 110.44509277687357,
+      "yaw": 4.418309495685174,
+      "scale": 1.6848539148457347
+    },
+    {
+      "kind": "pine",
+      "x": -838.923099216035,
+      "z": 56.92447422986794,
+      "yaw": 3.0095639399839205,
+      "scale": 1.8494986152276396
+    },
+    {
+      "kind": "pine",
+      "x": -794.7241139987939,
+      "z": 112.63465631510434,
+      "yaw": 5.4104938359854815,
+      "scale": 1.8231049505993724
+    },
+    {
+      "kind": "pine",
+      "x": -805.311252583277,
+      "z": 180.9689891202762,
+      "yaw": 0.9356554931212072,
+      "scale": 2.0649690830847245
+    },
+    {
+      "kind": "pine",
+      "x": -843.369021653079,
+      "z": 100.67973334817484,
+      "yaw": 1.2210469823765548,
+      "scale": 1.763586340099573
+    },
+    {
+      "kind": "pine",
+      "x": -847.9292483544031,
+      "z": 106.68015847282291,
+      "yaw": 2.342653000694953,
+      "scale": 1.5118176367832348
+    },
+    {
+      "kind": "pine",
+      "x": -629.3322438711212,
+      "z": -18.019099552692296,
+      "yaw": 2.641188621639002,
+      "scale": 1.9555404615355654
+    },
+    {
+      "kind": "pine",
+      "x": -588.2653177713573,
+      "z": 105.9002590870856,
+      "yaw": 2.3096278240123556,
+      "scale": 1.5635323137277737
+    },
+    {
+      "kind": "pine",
+      "x": -801.0348941314405,
+      "z": 104.38683161043897,
+      "yaw": 4.264866215653796,
+      "scale": 1.8469030745094641
+    },
+    {
+      "kind": "pine",
+      "x": -613.4271352309759,
+      "z": 146.92680942092392,
+      "yaw": 3.9564098859752646,
+      "scale": 1.7062130937119946
+    },
+    {
+      "kind": "pine",
+      "x": -818.6538709650326,
+      "z": 124.22797963568733,
+      "yaw": 0.0733497016180626,
+      "scale": 2.1145334986504167
+    },
+    {
+      "kind": "pine",
+      "x": -820.1153554695436,
+      "z": 11.216689829876032,
+      "yaw": 5.972224251089146,
+      "scale": 1.992301633255556
+    },
+    {
+      "kind": "pine",
+      "x": -648.4671755487356,
+      "z": -12.327048835108016,
+      "yaw": 1.6124437934190505,
+      "scale": 1.9927491211565211
+    },
+    {
+      "kind": "pine",
+      "x": -629.4115433633591,
+      "z": 143.5169928690387,
+      "yaw": 4.481954343594268,
+      "scale": 2.044736540876329
+    },
+    {
+      "kind": "pine",
+      "x": -807.0833362731363,
+      "z": 108.54463631699801,
+      "yaw": 3.898193824654065,
+      "scale": 1.4537128523923457
+    },
+    {
+      "kind": "pine",
+      "x": -575.628588062935,
+      "z": 92.83105111518309,
+      "yaw": 5.095030018988404,
+      "scale": 1.801027753856033
+    },
+    {
+      "kind": "cypress",
+      "x": -492.9054150118071,
+      "z": -80.01371007836813,
+      "yaw": 0.7276783750908692,
+      "scale": 1.221179018332623
+    },
+    {
+      "kind": "cypress",
+      "x": -415.45294734188514,
+      "z": -14.783932090625356,
+      "yaw": 1.026089728458675,
+      "scale": 1.4377437186893076
+    },
+    {
+      "kind": "cypress",
+      "x": -459.78272287900205,
+      "z": -160.32510747885937,
+      "yaw": 2.493950915751839,
+      "scale": 1.2078072959091515
+    },
+    {
+      "kind": "cypress",
+      "x": -317.3327568264863,
+      "z": -27.90148524138111,
+      "yaw": 0.510913720281495,
+      "scale": 1.2216611665906385
+    },
+    {
+      "kind": "cypress",
+      "x": -310.77793936022755,
+      "z": -8.933264251307136,
+      "yaw": 2.4992768723650243,
+      "scale": 1.4589976839022711
+    },
+    {
+      "kind": "cypress",
+      "x": -335.64340250853843,
+      "z": -100.83106546156908,
+      "yaw": 4.430784500347762,
+      "scale": 1.0617080515483395
+    },
+    {
+      "kind": "cypress",
+      "x": -359.1904221420079,
+      "z": -144.92098347083413,
+      "yaw": 0.8804156376909295,
+      "scale": 1.2497615452855826
+    },
+    {
+      "kind": "cypress",
+      "x": -285.8853078786113,
+      "z": -78.48771106541554,
+      "yaw": 2.683317689672359,
+      "scale": 1.2845881019718945
+    },
+    {
+      "kind": "cypress",
+      "x": -503.0519391988961,
+      "z": -108.66065239454767,
+      "yaw": 1.2276361555849244,
+      "scale": 1.1710392442299054
+    },
+    {
+      "kind": "cypress",
+      "x": -285.07664267246133,
+      "z": -40.77591887710685,
+      "yaw": 2.03315234939052,
+      "scale": 1.10264683207497
+    },
+    {
+      "kind": "cypress",
+      "x": -485.09447574724635,
+      "z": -66.08679479461514,
+      "yaw": 6.057759975458255,
+      "scale": 1.4372179288882763
+    },
+    {
+      "kind": "cypress",
+      "x": -310.92778265483963,
+      "z": -39.709291802740346,
+      "yaw": 3.685990770779394,
+      "scale": 1.524001091090031
+    },
+    {
+      "kind": "cypress",
+      "x": -287.41122182295584,
+      "z": -85.73095461331782,
+      "yaw": 1.0617514726563209,
+      "scale": 1.518356852652505
+    },
+    {
+      "kind": "cypress",
+      "x": 146.17926908645182,
+      "z": -436.2291988101393,
+      "yaw": 5.931162662674885,
+      "scale": 1.323250058759004
+    },
+    {
+      "kind": "cypress",
+      "x": 83.17175332756455,
+      "z": -308.3640358126379,
+      "yaw": 5.288901923742849,
+      "scale": 1.5328923181630671
+    },
+    {
+      "kind": "cypress",
+      "x": 155.86367204384308,
+      "z": -336.2357438209673,
+      "yaw": 1.7426241641597378,
+      "scale": 1.2480280474526808
+    },
+    {
+      "kind": "cypress",
+      "x": 81.29735706628593,
+      "z": -338.529777587873,
+      "yaw": 0.6635401814662315,
+      "scale": 1.4368850755970926
+    },
+    {
+      "kind": "cypress",
+      "x": 107.71047220319284,
+      "z": -314.02078590304234,
+      "yaw": 5.503936629647193,
+      "scale": 1.1500387006206438
+    },
+    {
+      "kind": "cypress",
+      "x": 212.20965316894439,
+      "z": 257.16066049533083,
+      "yaw": 1.7589766200251618,
+      "scale": 1.338604400237091
+    },
+    {
+      "kind": "cypress",
+      "x": 265.9648006959884,
+      "z": 314.9084762559477,
+      "yaw": 5.267192980163926,
+      "scale": 1.328114902903326
+    },
+    {
+      "kind": "cypress",
+      "x": 257.66330455813187,
+      "z": 198.91070017078707,
+      "yaw": 5.30952117475456,
+      "scale": 1.417885660380125
+    },
+    {
+      "kind": "cypress",
+      "x": 198.7628955743811,
+      "z": 313.1847051065028,
+      "yaw": 5.205462009461214,
+      "scale": 1.3036543708993122
+    },
+    {
+      "kind": "cypress",
+      "x": 183.26463486603825,
+      "z": 257.0738488947316,
+      "yaw": 5.394493326025731,
+      "scale": 1.4467208326794208
+    },
+    {
+      "kind": "cypress",
+      "x": 368.1063512655579,
+      "z": 188.4713055228592,
+      "yaw": 4.383751455884103,
+      "scale": 1.433008471224457
+    },
+    {
+      "kind": "cypress",
+      "x": 400.4306538161238,
+      "z": 287.50597347223,
+      "yaw": 0.8900167119913548,
+      "scale": 1.2783005529316143
+    },
+    {
+      "kind": "cypress",
+      "x": 273.596124812044,
+      "z": 303.8103284562218,
+      "yaw": 2.843882675814239,
+      "scale": 1.3059021587949247
+    },
+    {
+      "kind": "cypress",
+      "x": 355.4065028977859,
+      "z": 191.12346353247204,
+      "yaw": 4.114976509928766,
+      "scale": 1.2274095952278004
+    },
+    {
+      "kind": "cypress",
+      "x": -289.8875739316279,
+      "z": -458.8645106556492,
+      "yaw": 3.8050048604453686,
+      "scale": 1.275678937858902
+    },
+    {
+      "kind": "cypress",
+      "x": -322.80626986925125,
+      "z": -452.1769611451442,
+      "yaw": 2.123065464049791,
+      "scale": 1.470503010856919
+    },
+    {
+      "kind": "cypress",
+      "x": -306.1890893639459,
+      "z": -596.4814493942434,
+      "yaw": 2.3834219952529336,
+      "scale": 1.3598472157726065
+    },
+    {
+      "kind": "cypress",
+      "x": -311.2438564880896,
+      "z": -449.4755262395961,
+      "yaw": 1.7416846430591986,
+      "scale": 1.2932328200666234
+    },
+    {
+      "kind": "cypress",
+      "x": -410.48191595190787,
+      "z": -619.19094160218,
+      "yaw": 5.736317063053569,
+      "scale": 1.3367186189396307
+    },
+    {
+      "kind": "cypress",
+      "x": -174.5980384900187,
+      "z": 582.9863481456798,
+      "yaw": 0.2027131511078437,
+      "scale": 1.0874946966767312
+    },
+    {
+      "kind": "cypress",
+      "x": -296.8197220298609,
+      "z": 659.1307292056101,
+      "yaw": 5.7314544462432035,
+      "scale": 1.2410010003484786
+    },
+    {
+      "kind": "cypress",
+      "x": -107.50758528550246,
+      "z": 652.4635974846151,
+      "yaw": 0.38578557223759063,
+      "scale": 1.160287785413675
+    },
+    {
+      "kind": "cypress",
+      "x": -103.79428548763187,
+      "z": 623.3300069389652,
+      "yaw": 1.2184999995759265,
+      "scale": 1.521738722990267
+    },
+    {
+      "kind": "cypress",
+      "x": -243.60996445933773,
+      "z": 696.6325197662095,
+      "yaw": 1.596753773192444,
+      "scale": 1.1967618651222438
+    },
+    {
+      "kind": "cypress",
+      "x": -119.60632775675674,
+      "z": 644.9119391766683,
+      "yaw": 6.161436555489676,
+      "scale": 1.3997274505207316
+    },
+    {
+      "kind": "cypress",
+      "x": -221.61124728443,
+      "z": 710.9895912643253,
+      "yaw": 5.3510208822639544,
+      "scale": 1.4413241947302595
+    },
+    {
+      "kind": "cypress",
+      "x": -176.05263723678462,
+      "z": 565.9305142372706,
+      "yaw": 0.8771252920862566,
+      "scale": 1.423337394441478
+    },
+    {
+      "kind": "cypress",
+      "x": -211.26930503719245,
+      "z": 525.8749900146745,
+      "yaw": 6.016464770730081,
+      "scale": 1.0726699855411426
+    },
+    {
+      "kind": "cypress",
+      "x": 243.50770337703915,
+      "z": 469.5857237316288,
+      "yaw": 6.047599430082186,
+      "scale": 1.4069550418760628
+    },
+    {
+      "kind": "cypress",
+      "x": 247.3671525045719,
+      "z": 483.2539074430732,
+      "yaw": 3.328241665116029,
+      "scale": 1.0773116695461795
+    },
+    {
+      "kind": "cypress",
+      "x": 193.6359342781176,
+      "z": 556.927741433478,
+      "yaw": 0.8331829561115828,
+      "scale": 1.401234800531529
+    },
+    {
+      "kind": "cypress",
+      "x": 310.1124688249285,
+      "z": 606.6727510430295,
+      "yaw": 5.646820875658135,
+      "scale": 1.4727562986779958
+    },
+    {
+      "kind": "cypress",
+      "x": 320.4170215361192,
+      "z": 582.5095054877713,
+      "yaw": 3.1556446195734367,
+      "scale": 1.4172935883514584
+    },
+    {
+      "kind": "cypress",
+      "x": 212.75519393311714,
+      "z": 549.9432630709967,
+      "yaw": 3.644104857285828,
+      "scale": 1.3365408271318302
+    },
+    {
+      "kind": "cypress",
+      "x": 227.69413602764348,
+      "z": 469.7512383320343,
+      "yaw": 5.658812106478173,
+      "scale": 1.4828265069052577
+    },
+    {
+      "kind": "cypress",
+      "x": -693.3784442913686,
+      "z": 161.72036958521338,
+      "yaw": 0.418303757104801,
+      "scale": 1.1960479542147369
+    },
+    {
+      "kind": "cypress",
+      "x": -780.7994522132303,
+      "z": 139.69447268525963,
+      "yaw": 0.853936304046112,
+      "scale": 1.3194184655556456
+    },
+    {
+      "kind": "cypress",
+      "x": -591.5450485511777,
+      "z": 97.67149898656896,
+      "yaw": 5.396897609945236,
+      "scale": 1.234190025087446
+    },
+    {
+      "kind": "cypress",
+      "x": -840.5836454511015,
+      "z": 53.99359266756822,
+      "yaw": 5.807519942630734,
+      "scale": 1.0554088158067316
+    },
+    {
+      "kind": "cypress",
+      "x": -769.6823587312875,
+      "z": 195.02864360866045,
+      "yaw": 3.7214362708153166,
+      "scale": 1.1583169956691564
+    },
+    {
+      "kind": "cypress",
+      "x": -795.0162384356468,
+      "z": 54.838443379172745,
+      "yaw": 5.151750808334095,
+      "scale": 1.3049255203921348
+    },
+    {
+      "kind": "cypress",
+      "x": -771.7230184438432,
+      "z": 116.44953045280371,
+      "yaw": 1.1961951143736425,
+      "scale": 1.5190015792148188
+    },
+    {
+      "kind": "cypress",
+      "x": -840.7448302723502,
+      "z": 126.04802883875759,
+      "yaw": 0.7580154500432398,
+      "scale": 1.060982955689542
+    },
+    {
+      "kind": "cypress",
+      "x": -764.9564463993917,
+      "z": 116.20559132413896,
+      "yaw": 2.096231246959796,
+      "scale": 1.336382401129231
+    },
+    {
+      "kind": "cypress",
+      "x": -818.213064998091,
+      "z": 90.66255407037272,
+      "yaw": 2.4109088654485498,
+      "scale": 1.2784314869903028
+    },
+    {
+      "kind": "cypress",
+      "x": -613.4705978693761,
+      "z": 87.59655194097563,
+      "yaw": 3.5809226060171695,
+      "scale": 1.4468844957416878
+    },
+    {
+      "kind": "cypress",
+      "x": -799.476630385935,
+      "z": 27.654154007533435,
+      "yaw": 1.8479666918931386,
+      "scale": 1.2638666169485078
+    },
+    {
+      "kind": "cypress",
+      "x": -661.2049223602946,
+      "z": 102.06209764886384,
+      "yaw": 2.0203711471964314,
+      "scale": 1.3131368855945766
+    }
+  ],
+  "contextMeshes": [
+    {
+      "name": "colosseum-urban-streets",
+      "triangles": 646,
+      "bounds": {
+        "min": [
+          -700.7900390625,
+          1.3957308530807495,
+          -438.38525390625
+        ],
+        "max": [
+          375.96783447265625,
+          32.27226257324219,
+          301.1094055175781
+        ]
+      },
+      "parts": [
+        {
+          "id": "caelian-arcade-street",
+          "firstVertex": 0,
+          "vertexCount": 318
+        },
+        {
+          "id": "caelian-south-street",
+          "firstVertex": 318,
+          "vertexCount": 300
+        },
+        {
+          "id": "precinct-north-approach",
+          "firstVertex": 618,
+          "vertexCount": 372
+        },
+        {
+          "id": "caelian-west-link",
+          "firstVertex": 990,
+          "vertexCount": 90
+        },
+        {
+          "id": "velia-palatine-lane",
+          "firstVertex": 1080,
+          "vertexCount": 720
+        },
+        {
+          "id": "velia-north-lane",
+          "firstVertex": 1800,
+          "vertexCount": 138
+        }
+      ],
+      "castShadow": false
+    },
+    {
+      "name": "colosseum-urban-retaining-masonry",
+      "triangles": 700,
+      "bounds": {
+        "min": [
+          -47,
+          1.188104510307312,
+          -488.2488708496094
+        ],
+        "max": [
+          389.0735168457031,
+          31.90999984741211,
+          -219.2689666748047
+        ]
+      },
+      "parts": [
+        {
+          "id": "precinct-retaining-wall",
+          "firstVertex": 0,
+          "vertexCount": 318
+        },
+        {
+          "id": "aqueduct-receiving-recess",
+          "firstVertex": 318,
+          "vertexCount": 66
+        },
+        {
+          "id": "aqueduct-covered-wall-entry",
+          "firstVertex": 384,
+          "vertexCount": 36
+        },
+        {
+          "id": "north-retaining-pilasters",
+          "firstVertex": 420,
+          "vertexCount": 300
+        },
+        {
+          "id": "east-retaining-pilasters",
+          "firstVertex": 720,
+          "vertexCount": 270
+        },
+        {
+          "id": "street-front-foundation-0",
+          "firstVertex": 990,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-1",
+          "firstVertex": 1020,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-2",
+          "firstVertex": 1050,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-3",
+          "firstVertex": 1080,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-4",
+          "firstVertex": 1110,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-5",
+          "firstVertex": 1140,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-6",
+          "firstVertex": 1170,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-7",
+          "firstVertex": 1200,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-8",
+          "firstVertex": 1230,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-9",
+          "firstVertex": 1260,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-10",
+          "firstVertex": 1290,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-11",
+          "firstVertex": 1320,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-12",
+          "firstVertex": 1350,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-13",
+          "firstVertex": 1380,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-14",
+          "firstVertex": 1410,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-15",
+          "firstVertex": 1440,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-16",
+          "firstVertex": 1470,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-17",
+          "firstVertex": 1500,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-18",
+          "firstVertex": 1530,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-19",
+          "firstVertex": 1560,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-20",
+          "firstVertex": 1590,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-21",
+          "firstVertex": 1620,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-22",
+          "firstVertex": 1650,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-23",
+          "firstVertex": 1680,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-24",
+          "firstVertex": 1710,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-25",
+          "firstVertex": 1740,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-26",
+          "firstVertex": 1770,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-27",
+          "firstVertex": 1800,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-28",
+          "firstVertex": 1830,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-29",
+          "firstVertex": 1860,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-30",
+          "firstVertex": 1890,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-31",
+          "firstVertex": 1920,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-32",
+          "firstVertex": 1950,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-33",
+          "firstVertex": 1980,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-34",
+          "firstVertex": 2010,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-35",
+          "firstVertex": 2040,
+          "vertexCount": 30
+        },
+        {
+          "id": "street-front-foundation-36",
+          "firstVertex": 2070,
+          "vertexCount": 30
+        }
+      ],
+      "castShadow": false
+    },
+    {
+      "name": "colosseum-urban-court-and-portico",
+      "triangles": 2254,
+      "bounds": {
+        "min": [
+          -47,
+          8.63581371307373,
+          -352
+        ],
+        "max": [
+          71,
+          41.40999984741211,
+          -226
+        ]
+      },
+      "parts": [
+        {
+          "id": "precinct-court",
+          "firstVertex": 0,
+          "vertexCount": 6
+        },
+        {
+          "id": "precinct-north-stair",
+          "firstVertex": 6,
+          "vertexCount": 2760
+        },
+        {
+          "id": "precinct-portico-columns",
+          "firstVertex": 2766,
+          "vertexCount": 2484
+        },
+        {
+          "id": "precinct-portico-beams",
+          "firstVertex": 5250,
+          "vertexCount": 108
+        },
+        {
+          "id": "precinct-temple-podium",
+          "firstVertex": 5358,
+          "vertexCount": 288
+        },
+        {
+          "id": "precinct-temple-cella",
+          "firstVertex": 5646,
+          "vertexCount": 216
+        },
+        {
+          "id": "precinct-temple-pronaos",
+          "firstVertex": 5862,
+          "vertexCount": 900
+        }
+      ],
+      "castShadow": false
+    },
+    {
+      "name": "colosseum-urban-portico-tiles",
+      "triangles": 24,
+      "bounds": {
+        "min": [
+          -42,
+          38.2599983215332,
+          -347
+        ],
+        "max": [
+          66,
+          43.060001373291016,
+          -269
+        ]
+      },
+      "parts": [
+        {
+          "id": "precinct-portico-roofs",
+          "firstVertex": 0,
+          "vertexCount": 54
+        },
+        {
+          "id": "precinct-temple-roof",
+          "firstVertex": 54,
+          "vertexCount": 18
+        }
+      ],
+      "castShadow": false
+    },
+    {
+      "name": "colosseum-aqueduct-distant-arcade",
+      "triangles": 2766,
+      "bounds": {
+        "min": [
+          321.4100036621094,
+          -0.05000000074505806,
+          -1305.887451171875
+        ],
+        "max": [
+          2447.07080078125,
+          34.45399856567383,
+          -394.8900146484375
+        ]
+      },
+      "castShadow": false
+    }
+  ]
+}

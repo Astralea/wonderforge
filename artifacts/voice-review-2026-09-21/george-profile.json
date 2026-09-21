@@ -1,0 +1,15 @@
+{
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "name": "George - Warm, Captivating Storyteller",
+  "category": "premade",
+  "description": "Warm resonance that instantly captivates listeners.",
+  "labels": {
+    "age": "middle_aged",
+    "accent": "british",
+    "gender": "male",
+    "use_case": "narrative_story",
+    "descriptive": "mature",
+    "language": "en"
+  },
+  "preview_url": "https://api.us.elevenlabs.io/v1/voices/JBFqnCBsd6RMkjVDRZzb/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJwcmVtYWRlIiwiZmlsZW5hbWUiOiJlNjIwNmQxYS0wNzIxLTQ3ODctYWFmYi0wNmE2ZTcwNWNhYzUubXAzIiwidGltZXN0YW1wIjoxNzg5OTE2NDAwMDAwMDAwfQ%3D%3D"
+}

@@ -1,0 +1,28 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-seating",
+  "captionText": "Tiered seating divides the crowd according to Roman social rank.",
+  "src": "/audio/narration/colosseum-seating-andrea-williams-078e69d345a0.mp3",
+  "duration": 4.643991,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 6.0,
+  "sha256": "8ae19fceba0e8f8d52a7cd31b38422469118cd8e0c5f6a521fb904ee3850f264",
+  "bytes": 75276,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.08,
+    "truePeakDbtp": -2.41,
+    "gainDb": 5.42
+  }
+}

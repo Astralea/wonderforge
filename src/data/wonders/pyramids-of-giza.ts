@@ -14,8 +14,7 @@ export const pyramidsOfGiza: Wonder = {
     text: 'From the heights of these pyramids, forty centuries look down on us.',
     author: 'Napoleon Bonaparte',
   },
-  description:
-    'Three tombs raised on the edge of the Western Desert — the last survivors of the Seven Wonders of the Ancient World.',
+  description: '',
   facts: [
     'The Great Pyramid of Khufu stood 146.6 m tall and remained the tallest human-made structure for more than 3,800 years.',
     'It was assembled from an estimated 2.3 million stone blocks averaging about 2.5 tonnes each.',

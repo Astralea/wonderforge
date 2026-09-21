@@ -1,0 +1,7640 @@
+{
+  "film": "pyramids-of-giza",
+  "mode": "desktop",
+  "scripts": [
+    "http://127.0.0.1:5590/assets/main-D8RR7sSY.js"
+  ],
+  "frames": [
+    {
+      "wallSeconds": 0.317,
+      "t": 0,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-00-t0.0000.png"
+    },
+    {
+      "wallSeconds": 2.307,
+      "t": 0.034,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-01-t0.0340.png"
+    },
+    {
+      "wallSeconds": 4.312,
+      "t": 0.067,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-02-t0.0670.png"
+    },
+    {
+      "wallSeconds": 6.287,
+      "t": 0.1,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-03-t0.1000.png"
+    },
+    {
+      "wallSeconds": 8.297,
+      "t": 0.134,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-04-t0.1340.png"
+    },
+    {
+      "wallSeconds": 10.297,
+      "t": 0.167,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-05-t0.1670.png"
+    },
+    {
+      "wallSeconds": 12.317,
+      "t": 0.2,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-06-t0.2000.png"
+    },
+    {
+      "wallSeconds": 14.314,
+      "t": 0.234,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-07-t0.2340.png"
+    },
+    {
+      "wallSeconds": 16.281,
+      "t": 0.267,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-08-t0.2670.png"
+    },
+    {
+      "wallSeconds": 18.282,
+      "t": 0.3,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-09-t0.3000.png"
+    },
+    {
+      "wallSeconds": 20.301,
+      "t": 0.334,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-10-t0.3340.png"
+    },
+    {
+      "wallSeconds": 22.304,
+      "t": 0.367,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-11-t0.3670.png"
+    },
+    {
+      "wallSeconds": 24.32,
+      "t": 0.4,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-12-t0.4000.png"
+    },
+    {
+      "wallSeconds": 26.284,
+      "t": 0.434,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-13-t0.4340.png"
+    },
+    {
+      "wallSeconds": 28.275,
+      "t": 0.467,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-14-t0.4670.png"
+    },
+    {
+      "wallSeconds": 30.294,
+      "t": 0.5,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-15-t0.5000.png"
+    },
+    {
+      "wallSeconds": 32.291,
+      "t": 0.533,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-16-t0.5330.png"
+    },
+    {
+      "wallSeconds": 34.285,
+      "t": 0.567,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-17-t0.5670.png"
+    },
+    {
+      "wallSeconds": 36.278,
+      "t": 0.6,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-18-t0.6000.png"
+    },
+    {
+      "wallSeconds": 38.292,
+      "t": 0.633,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-19-t0.6330.png"
+    },
+    {
+      "wallSeconds": 40.281,
+      "t": 0.667,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-20-t0.6670.png"
+    },
+    {
+      "wallSeconds": 42.306,
+      "t": 0.7,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-21-t0.7000.png"
+    },
+    {
+      "wallSeconds": 44.272,
+      "t": 0.734,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-22-t0.7340.png"
+    },
+    {
+      "wallSeconds": 46.294,
+      "t": 0.767,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-23-t0.7670.png"
+    },
+    {
+      "wallSeconds": 48.261,
+      "t": 0.8,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-24-t0.8000.png"
+    },
+    {
+      "wallSeconds": 50.258,
+      "t": 0.834,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-25-t0.8340.png"
+    },
+    {
+      "wallSeconds": 52.254,
+      "t": 0.867,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-26-t0.8670.png"
+    },
+    {
+      "wallSeconds": 54.267,
+      "t": 0.9,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-27-t0.9000.png"
+    },
+    {
+      "wallSeconds": 56.257,
+      "t": 0.934,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-28-t0.9340.png"
+    },
+    {
+      "wallSeconds": 58.278,
+      "t": 0.967,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-29-t0.9670.png"
+    },
+    {
+      "wallSeconds": 60.261,
+      "t": 1,
+      "path": "artifacts/review-board/release-2026-09-21/giza-stonehenge/pyramids-of-giza/desktop-live-30-t1.0000.png"
+    }
+  ],
+  "timeline": [
+    {
+      "wall": 2890.699999988079,
+      "t": 0.004,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 147,
+          "triangles": 132490,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            131.40189984617228,
+            57.79594963224595,
+            82.54698384704189
+          ],
+          "direction": [
+            -0.7871853977050168,
+            -0.3175723022888296,
+            -0.52866528395476
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 3142.5,
+      "t": 0.008,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 147,
+          "triangles": 132490,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            128.31588640439958,
+            57.218247546696986,
+            86.47046885097423
+          ],
+          "direction": [
+            -0.7699097138032589,
+            -0.3147784882926521,
+            -0.5551157860298845
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 3390.800000011921,
+      "t": 0.012,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 147,
+          "triangles": 132490,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            125.00095072401902,
+            56.581862644558164,
+            89.95792654199015
+          ],
+          "direction": [
+            -0.7524361669149964,
+            -0.31216166502780934,
+            -0.5799956117121348
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 3640.800000011921,
+      "t": 0.016,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 148,
+          "triangles": 132538,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            121.29259097912575,
+            55.85433323633254,
+            93.19841098048205
+          ],
+          "direction": [
+            -0.7337744047712593,
+            -0.30956751347780764,
+            -0.6047669613179538
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 3890.5,
+      "t": 0.021,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 148,
+          "triangles": 132538,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            117.17899699296215,
+            55.03045128531929,
+            96.15853574775144
+          ],
+          "direction": [
+            -0.7138165494203811,
+            -0.30699333495388864,
+            -0.6294609011427718
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 4140.399999976158,
+      "t": 0.025,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 148,
+          "triangles": 132538,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            112.88717136745635,
+            54.15323324150104,
+            98.67190187448819
+          ],
+          "direction": [
+            -0.6935601520913064,
+            -0.30456682565753185,
+            -0.6528501850654395
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 4390.399999976158,
+      "t": 0.029,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 148,
+          "triangles": 132538,
+          "points": 0,
+          "lines": 0,
+          "geometries": 89,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            108.29009092597624,
+            53.193965968097736,
+            100.81876893149604
+          ],
+          "direction": [
+            -0.6722893701929772,
+            -0.30219794275223,
+            -0.6757983472322568
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 4640.5,
+      "t": 0.033,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 138178,
+          "points": 0,
+          "lines": 1,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            103.52253003571303,
+            52.17715417401309,
+            102.52996961505556
+          ],
+          "direction": [
+            -0.6505222810354434,
+            -0.299943871445506,
+            -0.6977495509555885
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 4893.899999976158,
+      "t": 0.037,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 167,
+          "triangles": 145578,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            98.39457461574938,
+            51.05717277394538,
+            103.85023872837333
+          ],
+          "direction": [
+            -0.6272865878212004,
+            -0.2977087290141302,
+            -0.7196395274082898
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 5141,
+      "t": 0.042,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 146826,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            93.27955525795271,
+            49.9174967346589,
+            104.71151352592808
+          ],
+          "direction": [
+            -0.6040448465779799,
+            -0.2956332788486401,
+            -0.7400883648320564
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 5390.300000011921,
+      "t": 0.046,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 147986,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            88.34970551077032,
+            48.8651463745431,
+            105.48045989916918
+          ],
+          "direction": [
+            -0.580321962487892,
+            -0.29366582497454075,
+            -0.7595964738571555
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 5639.899999976158,
+      "t": 0.05,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 149274,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            83.43784419746235,
+            47.88759950192764,
+            106.3020226594852
+          ],
+          "direction": [
+            -0.5549639261457137,
+            -0.29171769043334367,
+            -0.7790480278937693
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 5890.699999988079,
+      "t": 0.054,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 150522,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            78.89977936446908,
+            47.05652376062683,
+            107.1344689119002
+          ],
+          "direction": [
+            -0.5299041655267686,
+            -0.2899378033173455,
+            -0.7969552343544092
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 6141.599999964237,
+      "t": 0.058,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 151706,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            74.5045820599818,
+            46.32699501821991,
+            108.03253948354477
+          ],
+          "direction": [
+            -0.5040592724466426,
+            -0.28824270593281975,
+            -0.8141501043033083
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 6390.199999988079,
+      "t": 0.062,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 152922,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            70.11691412103801,
+            45.68278360582283,
+            109.04522269339138
+          ],
+          "direction": [
+            -0.47665856414442637,
+            -0.2865910609904441,
+            -0.8310608744178403
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 6641.099999964237,
+      "t": 0.067,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 154194,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            66.04254480687517,
+            45.16933786867784,
+            110.11368192911137
+          ],
+          "direction": [
+            -0.44976295453969706,
+            -0.2851064561876844,
+            -0.8464204589704947
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 6890.199999988079,
+      "t": 0.071,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 155442,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            62.00866305743005,
+            44.75067625336923,
+            111.31585778410874
+          ],
+          "direction": [
+            -0.4217753531750932,
+            -0.28369693000557594,
+            -0.8611745487178757
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 7141.300000011921,
+      "t": 0.075,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 167,
+          "triangles": 150474,
+          "points": 0,
+          "lines": 4,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            58.26349845440973,
+            44.44966567447713,
+            112.57906604006173
+          ],
+          "direction": [
+            -0.39463356638499764,
+            -0.2824549367186173,
+            -0.8743475035736875
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 7390.300000011921,
+      "t": 0.079,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 148082,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            54.31867201888655,
+            44.23136199450386,
+            114.07945315270382
+          ],
+          "direction": [
+            -0.364941101871683,
+            -0.28123020859866454,
+            -0.8875401748294178
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 7641.899999976158,
+      "t": 0.083,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 157114,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            50.52617747880259,
+            44.00393488357583,
+            115.47212193688233
+          ],
+          "direction": [
+            -0.3363670781701331,
+            -0.2801778937447241,
+            -0.8990870572864775
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 7891,
+      "t": 0.087,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 159314,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            46.38706511193541,
+            43.461993099031346,
+            116.4198081632934
+          ],
+          "direction": [
+            -0.3070255133053004,
+            -0.2792208924940725,
+            -0.9098192278548692
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 8141.899999976158,
+      "t": 0.091,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 160634,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            41.98053599937421,
+            42.58731018599023,
+            116.8584202270971
+          ],
+          "direction": [
+            -0.27705579402468394,
+            -0.27836789726996214,
+            -0.9196474328604696
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 8390.300000011921,
+      "t": 0.096,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 161914,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            37.455423037536065,
+            41.39220492566336,
+            116.75675337817151
+          ],
+          "direction": [
+            -0.24692071458150955,
+            -0.2776328179119471,
+            -0.9284127202536748
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 8640.599999964237,
+      "t": 0.1,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 163250,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            32.908715135812244,
+            39.88550915400141,
+            116.10875459519482
+          ],
+          "direction": [
+            -0.21670916216392458,
+            -0.2770156444499658,
+            -0.9361086858715606
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 8891.199999988079,
+      "t": 0.104,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 164682,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            28.161664513601757,
+            37.95532907579495,
+            114.8263566840959
+          ],
+          "direction": [
+            -0.18463611881253605,
+            -0.2764882303853352,
+            -0.9431138648584427
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 9141.099999964237,
+      "t": 0.108,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 165898,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            23.789827749661214,
+            35.79894926179949,
+            113.0372096985318
+          ],
+          "direction": [
+            -0.15400754835947428,
+            -0.27610465152921326,
+            -0.9487085413614847
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 9391.699999988079,
+      "t": 0.112,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 164494,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            19.58845308712052,
+            33.384836938250245,
+            110.77084088647457
+          ],
+          "direction": [
+            -0.12256981813536763,
+            -0.2758306285773655,
+            -0.9533593782099583
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 9641.800000011921,
+      "t": 0.116,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 158358,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            16.20799899142399,
+            31.47293316555444,
+            108.88050674163071
+          ],
+          "direction": [
+            -0.09427073435748116,
+            -0.2756861329756277,
+            -0.9566139162319593
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 9891.800000011921,
+      "t": 0.12,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 165262,
+          "points": 0,
+          "lines": 4,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            12.856927072449292,
+            29.701394497783113,
+            107.04741934574821
+          ],
+          "direction": [
+            -0.06298441791375128,
+            -0.2756377678366378,
+            -0.9591959049339721
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 10140.899999976158,
+      "t": 0.125,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 171054,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            9.555712328629216,
+            28.166903415225246,
+            105.36979144315058
+          ],
+          "direction": [
+            -0.028748821135054132,
+            -0.2757177715923486,
+            -0.9608086259560197
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 10391,
+      "t": 0.129,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 172214,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            6.857065368175595,
+            27.15350977910176,
+            104.1802035058633
+          ],
+          "direction": [
+            0.0016589039982738937,
+            -0.2759047516486466,
+            -0.9611835496174616
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 10640.599999964237,
+      "t": 0.133,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 173574,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            4.324331944549073,
+            26.47242974227627,
+            103.28913785324613
+          ],
+          "direction": [
+            0.03174621811886534,
+            -0.2761969717165034,
+            -0.9605766031138706
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 10890.199999988079,
+      "t": 0.137,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 174726,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            1.5412525920915563,
+            26.088502565015776,
+            102.63051199434926
+          ],
+          "direction": [
+            0.06564736689961659,
+            -0.27665431792808604,
+            -0.9587245754599663
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 11140.399999976158,
+      "t": 0.142,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 176094,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -1.011689831775108,
+            26.072405601268937,
+            102.32268506048774
+          ],
+          "direction": [
+            0.09655228884675619,
+            -0.2771902089394478,
+            -0.9559514860004967
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 11391.699999988079,
+      "t": 0.146,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 177574,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -3.648196976960312,
+            26.133817120610196,
+            101.99575512128554
+          ],
+          "direction": [
+            0.12832596016623815,
+            -0.27786062195315253,
+            -0.9520115139614753
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 11641.099999964237,
+      "t": 0.15,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 175118,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -6.08844394505638,
+            26.199578104043432,
+            101.61049432457814
+          ],
+          "direction": [
+            0.15773441644303704,
+            -0.2785904572138699,
+            -0.9473685718973063
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 11890.599999964237,
+      "t": 0.154,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 169544,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -8.748331579374419,
+            26.28119422188294,
+            101.09854350228629
+          ],
+          "direction": [
+            0.1897898560021205,
+            -0.2795077186763094,
+            -0.9411988343379201
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 12140.599999964237,
+      "t": 0.158,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 180196,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -11.292706097273392,
+            26.369165656855348,
+            100.51721457602775
+          ],
+          "direction": [
+            0.22045319776207936,
+            -0.2805064025945807,
+            -0.9341929916778013
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 12391.099999964237,
+      "t": 0.162,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 183174,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -13.738931163861238,
+            26.463095343911373,
+            99.8718364384391
+          ],
+          "direction": [
+            0.24993369865174425,
+            -0.2815810783033119,
+            -0.9264152646733554
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 12641.899999976158,
+      "t": 0.166,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 184678,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -16.25022976219124,
+            26.569329109987518,
+            99.11869411478041
+          ],
+          "direction": [
+            0.2801984284076002,
+            -0.28280438449442863,
+            -0.917338825532114
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 12890.599999964237,
+      "t": 0.171,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 186054,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -18.794327855872513,
+            26.687407740475614,
+            98.25917780385018
+          ],
+          "direction": [
+            0.31085843886149606,
+            -0.28417166286157297,
+            -0.9069804281323176
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 13141.5,
+      "t": 0.175,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 187438,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -21.158730981355827,
+            26.806925446904526,
+            97.3701749399748
+          ],
+          "direction": [
+            0.33935286866535885,
+            -0.2855620362208426,
+            -0.8962666757154356
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 13390.699999988079,
+      "t": 0.179,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 188926,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -23.548967829605502,
+            26.937710892492408,
+            96.37966398789249
+          ],
+          "direction": [
+            0.36815863167294016,
+            -0.2870894804137245,
+            -0.8843296060635345
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 13641.099999964237,
+      "t": 0.183,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 189470,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -26.00392606722972,
+            27.082929251226183,
+            95.26206910220735
+          ],
+          "direction": [
+            0.397744379728953,
+            -0.2887915129226511,
+            -0.8708609937629982
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 13890.899999976158,
+      "t": 0.187,
+      "caption": "Khufu's pyramidKhufu's tomb rises first, built from limestone quarried on this plateau.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 156,
+          "triangles": 182018,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -28.331112829397902,
+            27.231283810728854,
+            94.1042947257263
+          ],
+          "direction": [
+            0.4257902992764181,
+            -0.2905357536518628,
+            -0.8569081612938707
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 14141,
+      "t": 0.191,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 157,
+          "triangles": 178938,
+          "points": 0,
+          "lines": 5,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -30.523266399851096,
+            27.381058049703945,
+            92.92157855699766
+          ],
+          "direction": [
+            0.4522088762776633,
+            -0.29230140869428434,
+            -0.8426547446558584
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 14392,
+      "t": 0.195,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 184258,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -32.66939150159753,
+            27.537642170266032,
+            91.67234331773848
+          ],
+          "direction": [
+            0.4780727445846052,
+            -0.2941517011412248,
+            -0.8275996783476094
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 14640.599999964237,
+      "t": 0.2,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 185962,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -35.035274800355346,
+            27.722388873212036,
+            90.18400946701328
+          ],
+          "direction": [
+            0.5065850125874677,
+            -0.2963397314937056,
+            -0.8096631327657163
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 14891.5,
+      "t": 0.204,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 187402,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -37.019913108801944,
+            27.887830384650307,
+            88.83968478688409
+          ],
+          "direction": [
+            0.5305027347206294,
+            -0.2983030999406771,
+            -0.7934621030772143
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 15140.300000011921,
+      "t": 0.208,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 189034,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -39.270905136549615,
+            28.087898826424837,
+            87.20132341878663
+          ],
+          "direction": [
+            0.5576303990484288,
+            -0.3006818081872002,
+            -0.7737175119398332
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 15390.899999976158,
+      "t": 0.212,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 190458,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -41.15514490500573,
+            28.26629996653255,
+            85.73005638553215
+          ],
+          "direction": [
+            0.5803381755850311,
+            -0.3028065277632741,
+            -0.7559866458493745
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 15640.599999964237,
+      "t": 0.217,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 189658,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -43.285715941804234,
+            28.48106131043604,
+            83.94749576007187
+          ],
+          "direction": [
+            0.6060145952259451,
+            -0.3053683350319946,
+            -0.7345042480019577
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 15891.300000011921,
+      "t": 0.22,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 155,
+          "triangles": 182402,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -45.07732921659867,
+            28.67331254825686,
+            82.34229638257028
+          ],
+          "direction": [
+            0.6276060904088422,
+            -0.3076650160688206,
+            -0.7151593061473093
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 16140.300000011921,
+      "t": 0.225,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 185130,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -47.07836689049111,
+            28.901882912754747,
+            80.4234314987547
+          ],
+          "direction": [
+            0.6517214482846095,
+            -0.31039934602272495,
+            -0.6920342475878456
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 16391.399999976158,
+      "t": 0.229,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 188274,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -48.75299822005711,
+            29.105543259083614,
+            78.70507252643296
+          ],
+          "direction": [
+            0.6719031441863665,
+            -0.3128388438966787,
+            -0.671325571225962
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 16640.599999964237,
+      "t": 0.233,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 190026,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -50.612319474579536,
+            29.346388435143947,
+            76.66350526564091
+          ],
+          "direction": [
+            0.6943106170909666,
+            -0.3157272778802898,
+            -0.6467217740242426
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 16891.599999964237,
+      "t": 0.237,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 191786,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -52.26042571989472,
+            29.57437564613611,
+            74.72233146412351
+          ],
+          "direction": [
+            0.7141726478970891,
+            -0.31846476486566877,
+            -0.6233278611892097
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 17140.899999976158,
+      "t": 0.242,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 190730,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -53.93045761878901,
+            29.840974829247713,
+            72.67892387334035
+          ],
+          "direction": [
+            0.7337373241626818,
+            -0.3213455727390233,
+            -0.5986372541127196
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 17392.30000001192,
+      "t": 0.246,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 155,
+          "triangles": 189442,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -56.07250235703567,
+            30.425429270913277,
+            70.63867291281407
+          ],
+          "direction": [
+            0.7522957404237529,
+            -0.3242707861653698,
+            -0.5734976688531269
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 17641.099999964237,
+      "t": 0.25,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 151,
+          "triangles": 181978,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -58.772313216914455,
+            31.37470513464747,
+            68.60899143883368
+          ],
+          "direction": [
+            0.7694088229140902,
+            -0.3271591040278111,
+            -0.5486136927508046
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 17891.19999998808,
+      "t": 0.254,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 156,
+          "triangles": 182346,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -62.300020680498875,
+            32.780253687975346,
+            66.35602785789806
+          ],
+          "direction": [
+            0.7864098166344105,
+            -0.33023910199569456,
+            -0.5220169880512612
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 18141.69999998808,
+      "t": 0.258,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 156,
+          "triangles": 186186,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -66.30402003972944,
+            34.49295437810707,
+            64.05148685245491
+          ],
+          "direction": [
+            0.8015254633769321,
+            -0.33318392905382843,
+            -0.49653338354902954
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 18391.19999998808,
+      "t": 0.262,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 157,
+          "triangles": 188112,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -71.43495138134074,
+            36.78891816898829,
+            61.26887721792291
+          ],
+          "direction": [
+            0.8169625981557648,
+            -0.33642989830218695,
+            -0.4683876991798166
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 18642.599999964237,
+      "t": 0.267,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 157,
+          "triangles": 189800,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -77.19343940742057,
+            39.44708322929828,
+            58.224903434026565
+          ],
+          "direction": [
+            0.8309046045387061,
+            -0.33961107999035284,
+            -0.4407514634169273
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 18892.399999976158,
+      "t": 0.271,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 191598,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -83.71620007393528,
+            42.52383061274152,
+            54.76469606959715
+          ],
+          "direction": [
+            0.8438489658376048,
+            -0.34282492472164006,
+            -0.4127832286375097
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 19140.80000001192,
+      "t": 0.275,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 154,
+          "triangles": 182806,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.83435044932041,
+            45.4161642234316,
+            51.083542366713374
+          ],
+          "direction": [
+            0.8554523439317036,
+            -0.3459706926184746,
+            -0.3853642006087844
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 19391,
+      "t": 0.279,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 188838,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -95.3738042906869,
+            48.027152406122624,
+            47.08101999870106
+          ],
+          "direction": [
+            0.8664058628760183,
+            -0.3492314950144037,
+            -0.35690088773224854
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 19641,
+      "t": 0.283,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 192630,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -99.99635073602583,
+            50.20909953498576,
+            43.04647764873618
+          ],
+          "direction": [
+            0.876111441259073,
+            -0.3524264084193134,
+            -0.3289747241713462
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 19891,
+      "t": 0.287,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 196002,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -103.92216828190638,
+            52.07537662665406,
+            38.83636605203771
+          ],
+          "direction": [
+            0.8850974855258508,
+            -0.35572529461207014,
+            -0.30010324205008565
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 20141,
+      "t": 0.291,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 197898,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -107.0703820379211,
+            53.596230222017184,
+            34.50682844155172
+          ],
+          "direction": [
+            0.8933224834080403,
+            -0.35914121303624646,
+            -0.27017129702569287
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 20391.69999998808,
+      "t": 0.296,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 194298,
+          "points": 0,
+          "lines": 5,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -109.38183102280041,
+            54.75249842802718,
+            30.034072307055297
+          ],
+          "direction": [
+            0.9008769415107136,
+            -0.3627658779247033,
+            -0.23837293065241638
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 20641.399999976158,
+      "t": 0.3,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 186914,
+          "points": 0,
+          "lines": 4,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -110.56203738114525,
+            55.396123236467176,
+            26.130117797884097
+          ],
+          "direction": [
+            0.9067515075487591,
+            -0.36608198346537196,
+            -0.20925029256876077
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 20891.69999998808,
+      "t": 0.304,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 193746,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -111.18151341684576,
+            55.81126046941025,
+            22.459765631190255
+          ],
+          "direction": [
+            0.9115237047356839,
+            -0.3693022080029746,
+            -0.1809431260619251
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 21140.399999976158,
+      "t": 0.308,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 195818,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -111.74374581850365,
+            56.284091876099254,
+            18.26975302074313
+          ],
+          "direction": [
+            0.9158601542095876,
+            -0.3729752170950191,
+            -0.14862592426664326
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 21391.30000001192,
+      "t": 0.312,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 196874,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -112.10858132949984,
+            56.693686180062656,
+            14.6351860872406
+          ],
+          "direction": [
+            0.9186740986835377,
+            -0.37615857108088335,
+            -0.12059282652951644
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 21641.099999964237,
+      "t": 0.317,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 194450,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -112.38826521786591,
+            57.1636798876842,
+            10.459218968938668
+          ],
+          "direction": [
+            0.9208312761193953,
+            -0.37981316087409145,
+            -0.08838395639004816
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 21891.399999976158,
+      "t": 0.321,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 184698,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -112.51453189368304,
+            57.59451029351263,
+            6.626263788223156
+          ],
+          "direction": [
+            0.9218051599765051,
+            -0.38316494022927716,
+            -0.05882070740635725
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 22141.30000001192,
+      "t": 0.325,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 194178,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -112.51405743291363,
+            58.04058947532062,
+            2.6527655536574337
+          ],
+          "direction": [
+            0.9218015005019748,
+            -0.38663710337370794,
+            -0.028173462107027862
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 22390.599999964237,
+      "t": 0.329,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 196314,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -112.377965783267,
+            58.49025441396064,
+            -1.3576123922261696
+          ],
+          "direction": [
+            0.9207518374786903,
+            -0.3901390084691496,
+            0.0027582331889051126
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 22640.899999976158,
+      "t": 0.333,
+      "caption": "The haulIn this reconstruction, damp sand eases the passage of loaded sledges.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 199682,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -112.12345594800328,
+            58.91506109686357,
+            -5.150799626455625
+          ],
+          "direction": [
+            0.9187888253186329,
+            -0.3934490435898895,
+            0.03201475547006338
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 22892.899999976158,
+      "t": 0.337,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 196546,
+          "points": 0,
+          "lines": 6,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -111.73907344751409,
+            59.34591593374969,
+            -9.002457182507316
+          ],
+          "direction": [
+            0.9158241166196874,
+            -0.3968079519728389,
+            0.06172225424342881
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 23140.80000001192,
+      "t": 0.341,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 192890,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -111.21785641785416,
+            59.78273098545892,
+            -12.912012599349582
+          ],
+          "direction": [
+            0.9118040151324844,
+            -0.40021516823249886,
+            0.09187631416699671
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 23391.099999964237,
+      "t": 0.346,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 196866,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -110.55914884957997,
+            60.22125798043842,
+            -16.841631748574592
+          ],
+          "direction": [
+            0.9067234611134062,
+            -0.40363765998976764,
+            0.12218512390839667
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 23641.19999998808,
+      "t": 0.35,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 198570,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -109.8278479568874,
+            60.62625545827446,
+            -20.47511022803531
+          ],
+          "direction": [
+            0.9010830011149592,
+            -0.4068002373723121,
+            0.1502098264944387
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 23892.599999964237,
+      "t": 0.354,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 192538,
+          "points": 0,
+          "lines": 2,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -108.89302862467547,
+            61.0677083409201,
+            -24.440524395836945
+          ],
+          "direction": [
+            0.8938728211441643,
+            -0.41024949580304193,
+            0.1807947200919402
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 24140.19999998808,
+      "t": 0.358,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 194042,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -107.89001613817125,
+            61.47874072520601,
+            -28.137436997428242
+          ],
+          "direction": [
+            0.8861366733223837,
+            -0.41346302225698073,
+            0.20930868452900575
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 24391.099999964237,
+      "t": 0.362,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 197778,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -106.75353850634612,
+            61.890319795410484,
+            -31.844093076358604
+          ],
+          "direction": [
+            0.8773711204760887,
+            -0.4166827977256879,
+            0.23789779955692358
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 24642.599999964237,
+      "t": 0.367,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 200058,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -105.493695869574,
+            62.29778106026761,
+            -35.51870082348296
+          ],
+          "direction": [
+            0.86765406410701,
+            -0.4198723996111003,
+            0.26623972859700185
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 24890.30000001192,
+      "t": 0.371,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 186938,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -104.2011136806448,
+            62.67562414765545,
+            -38.9309764975231
+          ],
+          "direction": [
+            0.8576844904278144,
+            -0.42283205677234637,
+            0.29255831323899817
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 25140.19999998808,
+      "t": 0.375,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 197618,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -102.66663916487732,
+            63.08330277317856,
+            -42.61823288319047
+          ],
+          "direction": [
+            0.8458492223304989,
+            -0.42602758760186904,
+            0.32099780012489515
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 25390.69999998808,
+      "t": 0.379,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 200018,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -101.13421205453052,
+            63.4552650356424,
+            -45.98787485221219
+          ],
+          "direction": [
+            0.8340297456926106,
+            -0.4289452414588774,
+            0.3469875547187609
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 25641.30000001192,
+      "t": 0.383,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 193890,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -99.46990028685808,
+            63.827059210106654,
+            -49.361627427745695
+          ],
+          "direction": [
+            0.8211930541962589,
+            -0.4318636858642242,
+            0.37300901406210984
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 25892.80000001192,
+      "t": 0.387,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 197234,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -97.53510495999676,
+            64.22469608590949,
+            -52.97672372447574
+          ],
+          "direction": [
+            0.8062701466005053,
+            -0.4349874779453208,
+            0.40089193647611465
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 26141.099999964237,
+      "t": 0.391,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 199586,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -95.76255421918447,
+            64.56171946453547,
+            -56.046859010054845
+          ],
+          "direction": [
+            0.7925986173453475,
+            -0.4376372578422062,
+            0.42457162214471866
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 26391.5,
+      "t": 0.396,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 196122,
+          "points": 0,
+          "lines": 4,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -93.70941074440562,
+            64.92454368948955,
+            -59.35897777640038
+          ],
+          "direction": [
+            0.7767629008074889,
+            -0.4404922783775369,
+            0.45011770529373973
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 26640.80000001192,
+      "t": 0.4,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 199250,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -91.67412047130826,
+            65.25910099389955,
+            -62.42015423865545
+          ],
+          "direction": [
+            0.7610648844569744,
+            -0.44312723532144094,
+            0.47372829233946845
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 26890.599999964237,
+      "t": 0.404,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 201962,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.5277377796258,
+            65.5884211676982,
+            -65.44085353746384
+          ],
+          "direction": [
+            0.7445100219718229,
+            -0.4457233491895775,
+            0.49702668255410787
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 27141.099999964237,
+      "t": 0.408,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 196994,
+          "points": 0,
+          "lines": 1,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -87.06283979964337,
+            65.94059508017175,
+            -68.68038318749866
+          ],
+          "direction": [
+            0.7254984788501487,
+            -0.44850250566015976,
+            0.5220128921805273
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 27391.599999964237,
+      "t": 0.412,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 202122,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -84.69707892471426,
+            66.25554741827376,
+            -71.58665261992859
+          ],
+          "direction": [
+            0.7072515715726292,
+            -0.45099069920356066,
+            0.5444286948168049
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 27640.599999964237,
+      "t": 0.416,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 205082,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -82.19524302401875,
+            66.56679955494366,
+            -74.46843130733673
+          ],
+          "direction": [
+            0.6879551294903632,
+            -0.45345249805681365,
+            0.5666556024729068
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 27891.80000001192,
+      "t": 0.421,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 202514,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -79.64600634737847,
+            66.86324330747088,
+            -77.22329069781561
+          ],
+          "direction": [
+            0.6682930893577141,
+            -0.4558000794774151,
+            0.5879035926621853
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 28141,
+      "t": 0.425,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 205642,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -76.92252734261882,
+            67.1591004699699,
+            -79.9840881404478
+          ],
+          "direction": [
+            0.6472871333463698,
+            -0.45814617331491647,
+            0.609197382529782
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 28390,
+      "t": 0.429,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 203306,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -74.14484271609963,
+            67.44068486796499,
+            -82.62391530406782
+          ],
+          "direction": [
+            0.6258630941024176,
+            -0.4603823810965559,
+            0.6295581391868535
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 28641,
+      "t": 0.433,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 206378,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -71.45649036459564,
+            67.69546443467377,
+            -85.02436370503617
+          ],
+          "direction": [
+            0.6051280669037519,
+            -0.462408848211513,
+            0.6480725883271337
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 28890.80000001192,
+      "t": 0.437,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 203074,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -68.57568920701598,
+            67.95062623187428,
+            -87.44163822444561
+          ],
+          "direction": [
+            0.5829086988499531,
+            -0.4644417469028212,
+            0.6667168158513106
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 29141.899999976158,
+      "t": 0.442,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 207706,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -65.47468975701172,
+            68.20618028473407,
+            -89.87822433766064
+          ],
+          "direction": [
+            0.5589909605732294,
+            -0.46648167900387727,
+            0.6855099920140785
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 29391.399999976158,
+      "t": 0.446,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 206978,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -62.540148796202374,
+            68.43104344601426,
+            -92.0374859569001
+          ],
+          "direction": [
+            0.5363571021045136,
+            -0.46828037685580637,
+            0.7021641885441272
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 29640.099999964237,
+      "t": 0.45,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 199554,
+          "points": 0,
+          "lines": 1,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -59.38514891202827,
+            68.65559840914557,
+            -94.21089034342948
+          ],
+          "direction": [
+            0.5120228631891649,
+            -0.47008072153384683,
+            0.7189274670046958
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 29891.69999998808,
+      "t": 0.454,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 209210,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -56.377076640457005,
+            68.85408584418836,
+            -96.14908309675292
+          ],
+          "direction": [
+            0.4888218641342273,
+            -0.4716761096842081,
+            0.7338765786544151
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 30141.5,
+      "t": 0.458,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 210578,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -53.168329306196824,
+            69.04996034529069,
+            -98.08087194937937
+          ],
+          "direction": [
+            0.46407307582442475,
+            -0.4732549381488681,
+            0.748776297576632
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 30391.80000001192,
+      "t": 0.462,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 210586,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -49.74508912054823,
+            69.24183425711068,
+            -99.99589926928378
+          ],
+          "direction": [
+            0.4376699228607594,
+            -0.4748067187512555,
+            0.7635467362589687
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 30641,
+      "t": 0.466,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 210010,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -46.55590945874118,
+            69.40548885081397,
+            -101.65147915149794
+          ],
+          "direction": [
+            0.41307205830181976,
+            -0.47613529525152204,
+            0.7763160794844095
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 30891.30000001192,
+      "t": 0.471,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 206794,
+          "points": 0,
+          "lines": 2,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -43.206421944445275,
+            69.56239796038139,
+            -103.26321659978045
+          ],
+          "direction": [
+            0.38723775325930454,
+            -0.47741456488987544,
+            0.7887472698410418
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 31142.80000001192,
+      "t": 0.475,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 214826,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -39.64282397673272,
+            69.71319905921649,
+            -104.84138989840692
+          ],
+          "direction": [
+            0.35975203296512787,
+            -0.4786504952494091,
+            0.8009195828389721
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 31390.099999964237,
+      "t": 0.479,
+      "caption": "Raising the stoneHere, ramps and levers raise each stone into place.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 216514,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -36.23986023145598,
+            69.84227355250654,
+            -106.22239681158884
+          ],
+          "direction": [
+            0.3335052704174607,
+            -0.4797149911487834,
+            0.8115711687035827
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 31641.599999964237,
+      "t": 0.483,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 210530,
+          "points": 0,
+          "lines": 1,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -32.859101082320805,
+            69.95657078053001,
+            -107.47704471353086
+          ],
+          "direction": [
+            0.30742976998306304,
+            -0.48066453856026753,
+            0.8212481585360216
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 31890.599999964237,
+      "t": 0.487,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 217234,
+          "points": 0,
+          "lines": 7,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -29.428846759292675,
+            70.05878930505706,
+            -108.63451488057217
+          ],
+          "direction": [
+            0.28097251758958913,
+            -0.4815214180657914,
+            0.8301756249753889
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 32141.099999964237,
+      "t": 0.491,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 211626,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -25.742936240090714,
+            70.15363208626854,
+            -109.75253635748373
+          ],
+          "direction": [
+            0.25254341125434837,
+            -0.4823259821667977,
+            0.8387988271086526
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 32389.899999976158,
+      "t": 0.496,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 223210,
+          "points": 0,
+          "lines": 8,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -22.06548010514677,
+            70.23318634741416,
+            -110.74188223568281
+          ],
+          "direction": [
+            0.22417951284746554,
+            -0.48301194244449264,
+            0.8464295655726302
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 32643.80000001192,
+      "t": 0.5,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 157,
+          "triangles": 217850,
+          "points": 0,
+          "lines": 0,
+          "geometries": 90,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -18.402337486800196,
+            70.29782061780278,
+            -111.6053375734918
+          ],
+          "direction": [
+            0.1959260133456179,
+            -0.48358205840769264,
+            0.8530893212792383
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 32890.69999998808,
+      "t": 0.504,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 225658,
+          "points": 0,
+          "lines": 6,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -15.069677408019427,
+            70.34950803144429,
+            -112.49328226684972
+          ],
+          "direction": [
+            0.16845704753367421,
+            -0.4840302815874816,
+            0.8586832417385244
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 33141.09999996424,
+      "t": 0.508,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 228490,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -12.170357100304335,
+            70.3935126060458,
+            -113.61339561774099
+          ],
+          "direction": [
+            0.14068141424271474,
+            -0.4843790538254864,
+            0.8634730290529036
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 33392.89999997616,
+      "t": 0.512,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 226258,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -9.61688658248878,
+            70.4310835548804,
+            -115.03474062218808
+          ],
+          "direction": [
+            0.11137058610802435,
+            -0.48463491061966524,
+            0.8675976002494614
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 33641.69999998808,
+      "t": 0.517,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 223498,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -7.6328957813729,
+            70.45892798998783,
+            -116.64476872864624
+          ],
+          "direction": [
+            0.08296222533377365,
+            -0.484774314555776,
+            0.8706957752939002
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 33890.5,
+      "t": 0.521,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 167,
+          "triangles": 220570,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -6.157436016299063,
+            70.47808612337465,
+            -118.43855346751893
+          ],
+          "direction": [
+            0.05519382587874438,
+            -0.48480829391919983,
+            0.8728771733365592
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 34141.30000001192,
+      "t": 0.525,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 167,
+          "triangles": 218074,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -5.153914610298093,
+            70.48921231736043,
+            -120.41000119542468
+          ],
+          "direction": [
+            0.02794452473349946,
+            -0.4847440234089195,
+            0.8742095488535642
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 34390.69999998808,
+      "t": 0.529,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 215330,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.558577429989987,
+            70.49273647610347,
+            -122.82041658985179
+          ],
+          "direction": [
+            -0.002025011327645103,
+            -0.4845621889646392,
+            0.87475447089736
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 34641.89999997616,
+      "t": 0.533,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 206666,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.4849297234029315,
+            70.48784613837051,
+            -125.29736249929651
+          ],
+          "direction": [
+            -0.029963670410562183,
+            -0.48428802090445683,
+            0.8743953861177285
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 34890.39999997616,
+      "t": 0.537,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 212482,
+          "points": 0,
+          "lines": 4,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.8861380798601495,
+            70.474905967581,
+            -128.029994006852
+          ],
+          "direction": [
+            -0.05821679151119057,
+            -0.48390801057509153,
+            0.8731803035383927
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 35140.80000001192,
+      "t": 0.542,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 218242,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -5.766987793077018,
+            70.45187157683249,
+            -131.11390361336393
+          ],
+          "direction": [
+            -0.08798053697415767,
+            -0.48339555248384247,
+            0.8709696693643124
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 35392.30000001192,
+      "t": 0.546,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 219650,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -6.345854976752026,
+            70.41164830077717,
+            -133.81185133418683
+          ],
+          "direction": [
+            -0.11713476762384548,
+            -0.48278137795874154,
+            0.8678718726344152
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 35641.69999998808,
+      "t": 0.55,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 220810,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -6.440905786669681,
+            70.35868794568326,
+            -135.8226101682812
+          ],
+          "direction": [
+            -0.1432194853048328,
+            -0.48213693568182264,
+            0.8643102187758518
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 35891,
+      "t": 0.554,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 222226,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -6.053534967583012,
+            70.27765491948881,
+            -137.66343280385385
+          ],
+          "direction": [
+            -0.17325791459507994,
+            -0.48128248149007913,
+            0.8592722898132557
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 36141,
+      "t": 0.558,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 223538,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -5.23599393105928,
+            70.18510454140394,
+            -138.89201982949916
+          ],
+          "direction": [
+            -0.2005751522032807,
+            -0.4803995824743826,
+            0.8538066815603341
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 36391.09999996424,
+      "t": 0.562,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 221194,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -3.9047748456133213,
+            70.06906414646878,
+            -139.71550238529773
+          ],
+          "direction": [
+            -0.22908270708530173,
+            -0.47936884321428913,
+            0.8471874795285068
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 36641.59999996424,
+      "t": 0.566,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 216002,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -2.1679148066661256,
+            69.93914482861935,
+            -140.05746854162373
+          ],
+          "direction": [
+            -0.25634777812534754,
+            -0.4782764631963942,
+            0.8399627619142089
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 36890.89999997616,
+      "t": 0.571,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 226594,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            0.05020479881174822,
+            69.78904680794997,
+            -139.95213840268494
+          ],
+          "direction": [
+            -0.2838294542401173,
+            -0.47706755686667546,
+            0.8317736393340551
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 37141,
+      "t": 0.575,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 229202,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            2.858810712994881,
+            69.612498696753,
+            -139.3536116669203
+          ],
+          "direction": [
+            -0.3123395708985309,
+            -0.4756959797073204,
+            0.8222878616039606
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 37390.09999996424,
+      "t": 0.579,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 230618,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            5.9878378730181225,
+            69.42635576497594,
+            -138.3218554826945
+          ],
+          "direction": [
+            -0.3391774967012856,
+            -0.4742923436458142,
+            0.8124071629979701
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 37641.89999997616,
+      "t": 0.583,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 231994,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            9.485889416616452,
+            69.2199785045032,
+            -136.91271956612695
+          ],
+          "direction": [
+            -0.3662545231675243,
+            -0.47276196586194924,
+            0.8014697423444472
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 37891,
+      "t": 0.587,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 233362,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            12.77257064747485,
+            69.01269224722432,
+            -135.4663530128247
+          ],
+          "direction": [
+            -0.3916044088240932,
+            -0.47122149780063033,
+            0.7903140432765087
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 38141.39999997616,
+      "t": 0.591,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 232754,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            16.129316036727907,
+            68.78652238462176,
+            -133.8656118358013
+          ],
+          "direction": [
+            -0.4174946932230929,
+            -0.4695364644800082,
+            0.7779676662009607
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 38391.80000001192,
+      "t": 0.596,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 224978,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            19.451701455279533,
+            68.54765824151036,
+            -132.15270999188704
+          ],
+          "direction": [
+            -0.44311996216508237,
+            -0.467752763814896,
+            0.7647562036847704
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 38640.30000001192,
+      "t": 0.6,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 236362,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            22.75538130118708,
+            68.29463149009649,
+            -130.31626953484954
+          ],
+          "direction": [
+            -0.4686009566568403,
+            -0.46585936198031114,
+            0.750591898621076
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 38890,
+      "t": 0.604,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 239530,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            26.0967445683782,
+            68.02216736701357,
+            -128.31633633842884
+          ],
+          "direction": [
+            -0.4943726000900648,
+            -0.46381657980241436,
+            0.7351665883189875
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 39140.69999998808,
+      "t": 0.608,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 241074,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            29.17986916976892,
+            67.75516574735184,
+            -126.3362917540233
+          ],
+          "direction": [
+            -0.5181524712185455,
+            -0.46181129304737945,
+            0.7198946771466103
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 39390.30000001192,
+      "t": 0.612,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 242506,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            32.338732018565494,
+            67.46513356182858,
+            -124.1649795521645
+          ],
+          "direction": [
+            -0.5425165048430848,
+            -0.45962961747420633,
+            0.7031475355239168
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 39640.5,
+      "t": 0.616,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 243970,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            35.323472927846495,
+            67.1747798465349,
+            -121.97177964246848
+          ],
+          "direction": [
+            -0.565537551135729,
+            -0.4574423487894647,
+            0.686231575919806
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 39890.59999996424,
+      "t": 0.621,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 240018,
+          "points": 0,
+          "lines": 5,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            38.34844183728846,
+            66.86320128284335,
+            -119.59836878632433
+          ],
+          "direction": [
+            -0.588868872484773,
+            -0.45509203140342325,
+            0.667925665004436
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 40140.89999997616,
+      "t": 0.625,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 167,
+          "triangles": 232490,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            41.19989864937567,
+            66.5523382271667,
+            -117.21144653352547
+          ],
+          "direction": [
+            -0.6108619101613159,
+            -0.45274417455075555,
+            0.649515541865184
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 40390.30000001192,
+      "t": 0.629,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 241858,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            44.10437354205931,
+            66.21717122133488,
+            -114.6182073102736
+          ],
+          "direction": [
+            -0.6332638716690571,
+            -0.45020978354919816,
+            0.6295141139285919
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 40640.5,
+      "t": 0.633,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 243442,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            46.820658742486756,
+            65.88532438594281,
+            -112.031840870704
+          ],
+          "direction": [
+            -0.6542143424950584,
+            -0.44769772988248413,
+            0.6095656951730707
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 40891.89999997616,
+      "t": 0.637,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 245018,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            49.44117054393193,
+            65.5467450661304,
+            -109.37488655858994
+          ],
+          "direction": [
+            -0.6744261214484358,
+            -0.445132112826322,
+            0.5890728383135608
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 41142,
+      "t": 0.642,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 246554,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            52.11501504307677,
+            65.18072883605831,
+            -106.48321601119446
+          ],
+          "direction": [
+            -0.6950492508472867,
+            -0.44235587376424407,
+            0.5667696356041826
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 41390.80000001192,
+      "t": 0.646,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 245906,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            54.545704169748674,
+            64.82804321997112,
+            -103.67879364657806
+          ],
+          "direction": [
+            -0.7137969440672054,
+            -0.439678279371475,
+            0.5451393705184557
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 41641.5,
+      "t": 0.65,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 232946,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            56.89302706742241,
+            64.46732799360261,
+            -100.7930794722353
+          ],
+          "direction": [
+            -0.7319016408343858,
+            -0.43693739648390917,
+            0.5228821087948957
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 41890.89999997616,
+      "t": 0.654,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 244946,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            59.28477084257244,
+            64.07691456227546,
+            -97.65081070984904
+          ],
+          "direction": [
+            -0.7503489519549805,
+            -0.4339683781633084,
+            0.4986460639114386
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 42140.80000001192,
+      "t": 0.658,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 246682,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            61.503220565944616,
+            63.69135797893579,
+            -94.5291109110286
+          ],
+          "direction": [
+            -0.7674596611695894,
+            -0.4310339314494515,
+            0.4745686656498601
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 42392.19999998808,
+      "t": 0.662,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 248434,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            63.66690750016926,
+            63.29037191914734,
+            -91.2637524056041
+          ],
+          "direction": [
+            -0.7841479897681256,
+            -0.42797971151312436,
+            0.4493832403147128
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 42641.30000001192,
+      "t": 0.666,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 248074,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            65.58010944119602,
+            62.912089754508976,
+            -88.16641499367569
+          ],
+          "direction": [
+            -0.7989043494623957,
+            -0.42509635573412596,
+            0.4254937470182514
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 42890.69999998808,
+      "t": 0.671,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 238282,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            67.56639377529747,
+            62.491779767796814,
+            -84.70642127794542
+          ],
+          "direction": [
+            -0.8142243872799227,
+            -0.4218904245929001,
+            0.3988071172828504
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 43141.30000001192,
+      "t": 0.675,
+      "caption": "Khafre's pyramidKhafre, Khufu's son, builds the second great pyramid on higher ground.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 247194,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            69.37993124531143,
+            62.078958260186084,
+            -81.28968771419042
+          ],
+          "direction": [
+            -0.8282120436023912,
+            -0.4187394386507672,
+            0.372454149326318
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 43391.09999996424,
+      "t": 0.679,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 249010,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            71.03950985724968,
+            61.671927766920696,
+            -77.90358173541215
+          ],
+          "direction": [
+            -0.8410122286814092,
+            -0.4156306415009988,
+            0.3463374092612539
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 43640.89999997616,
+      "t": 0.683,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 250770,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            72.63750236073056,
+            61.24775756190187,
+            -74.35711338596883
+          ],
+          "direction": [
+            -0.8533374054776741,
+            -0.41238889716739796,
+            0.31898380821867606
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 43890.80000001192,
+      "t": 0.687,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 168,
+          "triangles": 244138,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            74.14185616824028,
+            60.81246847929983,
+            -70.69930118918644
+          ],
+          "direction": [
+            -0.864940355179442,
+            -0.40906009613539374,
+            0.2907714217934134
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 44141.30000001192,
+      "t": 0.691,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 246738,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            75.46346540582587,
+            60.39347942265212,
+            -67.16129074131086
+          ],
+          "direction": [
+            -0.8751338119530734,
+            -0.40585402607170984,
+            0.26348305580789655
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 44391.09999996424,
+      "t": 0.696,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 249618,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            76.74074515417709,
+            59.94609738118291,
+            -63.365336149223914
+          ],
+          "direction": [
+            -0.8849853592428291,
+            -0.4024286810195816,
+            0.23420518913696325
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 44640.59999996424,
+      "t": 0.7,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 251514,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            77.83936841509848,
+            59.51655414507033,
+            -59.7034089018365
+          ],
+          "direction": [
+            -0.8934589446281479,
+            -0.3991380143629144,
+            0.2059610636853147
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 44891.09999996424,
+      "t": 0.704,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 249178,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            78.80912910308186,
+            59.089657043494434,
+            -56.04751417998153
+          ],
+          "direction": [
+            -0.9009386242282877,
+            -0.3958658173222305,
+            0.17776346657691725
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 45141.09999996424,
+      "t": 0.708,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 244122,
+          "points": 0,
+          "lines": 6,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            79.69818485447664,
+            58.64128175457746,
+            -52.190220774082924
+          ],
+          "direction": [
+            -0.9077958336919162,
+            -0.3924270944720001,
+            0.14801249898526356
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 45391.5,
+      "t": 0.712,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 248122,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            80.44184468900332,
+            58.201894536418884,
+            -48.393133276753694
+          ],
+          "direction": [
+            -0.913531617130735,
+            -0.38905545430131755,
+            0.11872589431501268
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 45640.09999996424,
+      "t": 0.717,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 249058,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.08135968617472,
+            57.745498297690915,
+            -44.43133445309732
+          ],
+          "direction": [
+            -0.918464140522948,
+            -0.38555138463509464,
+            0.08816888555155944
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 45893.09999996424,
+      "t": 0.721,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 245866,
+          "points": 0,
+          "lines": 6,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.58696940736615,
+            57.287850578556316,
+            -40.44072170871212
+          ],
+          "direction": [
+            -0.922363864201263,
+            -0.3820357725656056,
+            0.057389637530786075
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 46141.80000001192,
+      "t": 0.725,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 246098,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.93622828164504,
+            56.860732974183364,
+            -36.70024028755771
+          ],
+          "direction": [
+            -0.9250576674348671,
+            -0.3787529556397222,
+            0.028539630588670713
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 46391.5,
+      "t": 0.729,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 249442,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.17394656673628,
+            56.41514857697418,
+            -32.78158057440036
+          ],
+          "direction": [
+            -0.926891167833068,
+            -0.3753264245260417,
+            -0.0016846499782634532
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 46640.5,
+      "t": 0.733,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 248586,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.28285381291323,
+            55.9541208260057,
+            -28.709484971359384
+          ],
+          "direction": [
+            -0.92773115992352,
+            -0.37177922222087706,
+            -0.03309236818059835
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 46891.5,
+      "t": 0.737,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 248234,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.25395979421356,
+            55.506878086037524,
+            -24.742050127249144
+          ],
+          "direction": [
+            -0.9275083028775373,
+            -0.3683362177743342,
+            -0.06369284707821711
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 47140.80000001192,
+      "t": 0.741,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 250594,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            82.09821012762016,
+            55.07415744140638,
+            -20.887400486716416
+          ],
+          "direction": [
+            -0.9263070192841905,
+            -0.3650032465050688,
+            -0.09342342353820389
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 47390,
+      "t": 0.746,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 247354,
+          "points": 0,
+          "lines": 5,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.8013638994074,
+            54.62493271107127,
+            -16.868992743559502
+          ],
+          "direction": [
+            -0.924017470218061,
+            -0.36154130042550997,
+            -0.1244170519601159
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 47640.5,
+      "t": 0.75,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 249978,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            81.38480142067466,
+            54.19410642744906,
+            -12.99905161434468
+          ],
+          "direction": [
+            -0.9208045601537849,
+            -0.3582193403602387,
+            -0.1542655703385245
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 47893,
+      "t": 0.754,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 252410,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            80.81148617900402,
+            53.74609339705239,
+            -8.957856123408927
+          ],
+          "direction": [
+            -0.9163826297015508,
+            -0.3547629519606007,
+            -0.18543495867141924
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 48140.19999998808,
+      "t": 0.758,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 239498,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            80.14445486349308,
+            53.328150067842515,
+            -5.1722151278530575
+          ],
+          "direction": [
+            -0.9112378753460648,
+            -0.35153675588259575,
+            -0.21463327747190042
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 48391.19999998808,
+      "t": 0.762,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 252018,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            79.32238531951873,
+            52.89880812034804,
+            -1.2673417780595848
+          ],
+          "direction": [
+            -0.9048973246574741,
+            -0.3482207197721128,
+            -0.244751225020709
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 48641,
+      "t": 0.766,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 253026,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            78.3976083862868,
+            52.48629363171185,
+            2.5000062973661343
+          ],
+          "direction": [
+            -0.8977646008340753,
+            -0.34503282892327714,
+            -0.27380845212380533
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 48891.5,
+      "t": 0.771,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 253098,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            77.31076008418331,
+            52.064680346318724,
+            6.366490840246449
+          ],
+          "direction": [
+            -0.8893818346790613,
+            -0.34177271233834655,
+            -0.30363031015331277
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 49141.30000001192,
+      "t": 0.775,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 255882,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            76.08284392453199,
+            51.64563848416361,
+            10.225849438278843
+          ],
+          "direction": [
+            -0.8799110244432647,
+            -0.3385304887796285,
+            -0.3333972063917611
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 49391.59999996424,
+      "t": 0.779,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 251834,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            74.70645514744021,
+            51.22816733286921,
+            14.087519558379341
+          ],
+          "direction": [
+            -0.8692950578595057,
+            -0.33529835554638754,
+            -0.36318193119830045
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 49641.09999996424,
+      "t": 0.783,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 257466,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            73.2822400460905,
+            50.8398306857094,
+            17.695208678450356
+          ],
+          "direction": [
+            -0.8583102110083419,
+            -0.33228984706729847,
+            -0.391007722704817
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 49891,
+      "t": 0.787,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 256546,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            71.652483012484,
+            50.43746464464691,
+            21.449586149627947
+          ],
+          "direction": [
+            -0.8457400371618435,
+            -0.3291705713279658,
+            -0.4199649086686936
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 50140.89999997616,
+      "t": 0.792,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 249946,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            69.94878532350725,
+            50.05481232030944,
+            25.036088536138415
+          ],
+          "direction": [
+            -0.832599565489864,
+            -0.3262020446209351,
+            -0.4476272887472469
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 50391.19999998808,
+      "t": 0.796,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 258738,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            68.1266369532542,
+            49.6801990703947,
+            28.5631120734298
+          ],
+          "direction": [
+            -0.8185454940449268,
+            -0.32329379459137786,
+            -0.47483091364974817
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 50641.69999998808,
+      "t": 0.8,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 257922,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            66.19231664330205,
+            49.31475167106444,
+            32.0197280471625
+          ],
+          "direction": [
+            -0.803626250213161,
+            -0.32045457442003406,
+            -0.5014914911557413
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 50890.69999998808,
+      "t": 0.804,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 167,
+          "triangles": 248298,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            63.853260318362004,
+            48.92060604649438,
+            35.286792603459446
+          ],
+          "direction": [
+            -0.7872779356120051,
+            -0.31758788056215426,
+            -0.5285181077489575
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 51140.30000001192,
+      "t": 0.808,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 262266,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            61.05385078575815,
+            48.50082272312453,
+            37.827404661051304
+          ],
+          "direction": [
+            -0.7708639243294092,
+            -0.3149271552567001,
+            -0.5537054244355798
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 51391.30000001192,
+      "t": 0.812,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 263282,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            57.42735478407946,
+            48.00185509110523,
+            39.934664939210286
+          ],
+          "direction": [
+            -0.7523263915569375,
+            -0.3121458267879491,
+            -0.5801465188948265
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 51641.09999996424,
+      "t": 0.816,
+      "caption": "White limestoneWhite casing stone came by water from the quarries at Tura.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 263202,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            53.444246986846814,
+            47.48880898838741,
+            41.324259933428486
+          ],
+          "direction": [
+            -0.7340959494360005,
+            -0.30961060847249666,
+            -0.6043545384482087
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 51893.30000001192,
+      "t": 0.821,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 256350,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            48.573355356743534,
+            46.89335484782655,
+            42.17729855893313
+          ],
+          "direction": [
+            -0.7137525516022861,
+            -0.30698538544126036,
+            -0.6295373445687767
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 52141.5,
+      "t": 0.825,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 169,
+          "triangles": 261206,
+          "points": 0,
+          "lines": 6,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            43.2961778916967,
+            46.275370021991336,
+            42.380092583188244
+          ],
+          "direction": [
+            -0.6933770381038562,
+            -0.3045456789824818,
+            -0.6530545248625285
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 52391.39999997616,
+      "t": 0.829,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 257166,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            37.54312318870567,
+            45.624627869458,
+            41.98755199886204
+          ],
+          "direction": [
+            -0.6725830175519799,
+            -0.3022294863055935,
+            -0.6754919852286407
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 52641.89999997616,
+      "t": 0.833,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 259678,
+          "points": 0,
+          "lines": 0,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            31.39065859465839,
+            44.950530197302534,
+            41.2771898277369
+          ],
+          "direction": [
+            -0.6506742783495167,
+            -0.2999590552399206,
+            -0.6976012820185395
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 52890.5,
+      "t": 0.837,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 270782,
+          "points": 0,
+          "lines": 7,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            25.544145074153633,
+            44.33540141233193,
+            40.95679350668492
+          ],
+          "direction": [
+            -0.6278225774830763,
+            -0.29775842470538494,
+            -0.7191513969391106
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 53143.39999997616,
+      "t": 0.842,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 271910,
+          "points": 0,
+          "lines": 8,
+          "geometries": 91,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            20.02723742386698,
+            43.782857748131235,
+            41.06638959620284
+          ],
+          "direction": [
+            -0.6039495679850814,
+            -0.29562508065818477,
+            -0.7401693934610344
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 53392.09999996424,
+      "t": 0.846,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 172,
+          "triangles": 271230,
+          "points": 0,
+          "lines": 1,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            15.031563566199864,
+            43.31153255360158,
+            41.591166305591145
+          ],
+          "direction": [
+            -0.5799397935178768,
+            -0.2936353086019115,
+            -0.7599000864828895
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 53640.19999998808,
+      "t": 0.85,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 275974,
+          "points": 0,
+          "lines": 8,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            10.374427721652935,
+            42.90356512509611,
+            42.53891051563499
+          ],
+          "direction": [
+            -0.5549739922938525,
+            -0.2917184336697574,
+            -0.7790405787471448
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 53891.89999997616,
+      "t": 0.854,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 266878,
+          "points": 0,
+          "lines": 5,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            6.125031770271811,
+            42.56550879551192,
+            43.90097066560365
+          ],
+          "direction": [
+            -0.5293883433793749,
+            -0.28990260901947174,
+            -0.7973107670022677
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 54141.39999997616,
+      "t": 0.858,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 269710,
+          "points": 0,
+          "lines": 8,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            2.415099026322139,
+            42.305713920086845,
+            45.60301449021988
+          ],
+          "direction": [
+            -0.5041542361555204,
+            -0.2882486848666151,
+            -0.8140891854330892
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 54390.89999997616,
+      "t": 0.862,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 259222,
+          "points": 0,
+          "lines": 1,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -1.142601970670107,
+            42.094224530420874,
+            47.7152488068198
+          ],
+          "direction": [
+            -0.4771007155588469,
+            -0.2866165746210499,
+            -0.8307983187066117
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 54643.19999998808,
+      "t": 0.867,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 264726,
+          "points": 0,
+          "lines": 7,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -4.766889424691932,
+            41.90041762195111,
+            49.7845243282475
+          ],
+          "direction": [
+            -0.44914690255033846,
+            -0.28507397253607836,
+            -0.8467584603131734
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 54891.5,
+      "t": 0.871,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 259470,
+          "points": 0,
+          "lines": 3,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -8.213185151178976,
+            41.73328877858076,
+            51.60389250742975
+          ],
+          "direction": [
+            -0.42255935655661425,
+            -0.2837346025346934,
+            -0.8607777096968414
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 55140.89999997616,
+      "t": 0.875,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 257798,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -11.900093795570385,
+            41.60600124650357,
+            53.53354037687457
+          ],
+          "direction": [
+            -0.3937225240933797,
+            -0.2824153099528184,
+            -0.8747709224281472
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 55392.59999996424,
+      "t": 0.879,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 264022,
+          "points": 0,
+          "lines": 7,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -15.592983041198217,
+            41.55118767650954,
+            55.526418820074
+          ],
+          "direction": [
+            -0.3643163503078743,
+            -0.2812058963656898,
+            -0.8878045059288217
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 55640.69999998808,
+      "t": 0.883,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 267574,
+          "points": 0,
+          "lines": 7,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -19.183145894518724,
+            41.57797453856685,
+            57.64061620070924
+          ],
+          "direction": [
+            -0.3346202047539442,
+            -0.28017178777446616,
+            -0.8997405670001147
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 55890.89999997616,
+      "t": 0.887,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 174,
+          "triangles": 269070,
+          "points": 0,
+          "lines": 8,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -23.270123441894235,
+            41.71319067549641,
+            60.44453949733485
+          ],
+          "direction": [
+            -0.2982414616844851,
+            -0.27921436789950166,
+            -0.9127383892938786
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 56141.5,
+      "t": 0.891,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 171,
+          "triangles": 261882,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -27.726740616090645,
+            41.95286920295999,
+            63.749312009260365
+          ],
+          "direction": [
+            -0.25659490967931925,
+            -0.2783837820715712,
+            -0.9255601126918716
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 56391.69999998808,
+      "t": 0.896,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 170,
+          "triangles": 261698,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -32.968714035573996,
+            42.319916216681015,
+            67.72012060494214
+          ],
+          "direction": [
+            -0.20623318993844925,
+            -0.2776265735017314,
+            -0.9382917227885469
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 56641.59999996424,
+      "t": 0.9,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 176,
+          "triangles": 274170,
+          "points": 0,
+          "lines": 8,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -38.73505925722482,
+            42.794924470423844,
+            71.98368218944958
+          ],
+          "direction": [
+            -0.15023753994232392,
+            -0.27700120752059354,
+            -0.9490516385446114
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 56891.69999998808,
+      "t": 0.904,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 173,
+          "triangles": 270830,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -44.81758332547519,
+            43.34911896164967,
+            76.21483287166089
+          ],
+          "direction": [
+            -0.09133255048651291,
+            -0.2765178424552543,
+            -0.9566588984719266
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 57141,
+      "t": 0.908,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 166,
+          "triangles": 266294,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -52.35714757861773,
+            44.08511367988753,
+            80.95942768190992
+          ],
+          "direction": [
+            -0.019282908680581676,
+            -0.2761043875782361,
+            -0.9609341999288316
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 57390,
+      "t": 0.912,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 262690,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -60.26375895649473,
+            44.895375308947614,
+            85.26878633211976
+          ],
+          "direction": [
+            0.0546482058021341,
+            -0.275833869996727,
+            -0.9596505873312623
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 57640.80000001192,
+      "t": 0.917,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 262690,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -69.03036729138222,
+            45.825844050671876,
+            89.21380248843677
+          ],
+          "direction": [
+            0.13441159509288766,
+            -0.2756781635499411,
+            -0.951806216225928
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 57891.09999996424,
+      "t": 0.92,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 262762,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -77.75396727101675,
+            46.77786018665467,
+            92.25553640209873
+          ],
+          "direction": [
+            0.21139521861167995,
+            -0.2756376860306978,
+            -0.9377291333790171
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 58140.5,
+      "t": 0.925,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 262762,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -89.27273124859668,
+            47.92078816241253,
+            94.20193507865824
+          ],
+          "direction": [
+            0.3063694878671565,
+            -0.275714624069749,
+            -0.9111087657234416
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 58391.39999997616,
+      "t": 0.929,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 262762,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -101.17066216282839,
+            48.932168803846274,
+            93.72660514787256
+          ],
+          "direction": [
+            0.39695547161656386,
+            -0.27590605189116535,
+            -0.8753868882291423
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 58641.30000001192,
+      "t": 0.933,
+      "caption": "Menkaure's pyramidMenkaure's pyramid follows: three royal tombs, three separate reigns.",
+      "diagnostics": {
+        "renderer": {
+          "calls": 165,
+          "triangles": 262762,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -114.00649463999557,
+            49.900779823542265,
+            90.77812248582136
+          ],
+          "direction": [
+            0.4885970353309228,
+            -0.27621326236025706,
+            -0.8276346843639026
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 58892.19999998808,
+      "t": 0.937,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 164,
+          "triangles": 262714,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -127.81990655056659,
+            50.851651682413774,
+            84.90126547795555
+          ],
+          "direction": [
+            0.5817899129387237,
+            -0.27664946245573646,
+            -0.7648434951842791
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 59143.39999997616,
+      "t": 0.942,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 262658,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -141.69062999692363,
+            51.75366281394245,
+            76.01656768507864
+          ],
+          "direction": [
+            0.6707162185102846,
+            -0.27720656847212843,
+            -0.6879653135319914
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 59393.80000001192,
+      "t": 0.946,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 163,
+          "triangles": 262658,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -153.58649678368806,
+            52.5439872748565,
+            65.66108221505998
+          ],
+          "direction": [
+            0.7438022402339376,
+            -0.2778488854473142,
+            -0.6079130071635753
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 59641.09999996424,
+      "t": 0.95,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 262370,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -164.05201802861316,
+            53.27470615191466,
+            53.801238490398575
+          ],
+          "direction": [
+            0.8054524979602289,
+            -0.2786165624580444,
+            -0.523086115906062
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 59890.69999998808,
+      "t": 0.954,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 159,
+          "triangles": 262250,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -172.87577980698217,
+            53.930713439299,
+            40.96453522175668
+          ],
+          "direction": [
+            0.8550460589064204,
+            -0.27950169543613296,
+            -0.4367780207347044
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 60140.59999996424,
+      "t": 0.958,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 262178,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -179.9213830536057,
+            54.49412494073627,
+            27.893572073995195
+          ],
+          "direction": [
+            0.8924987925802513,
+            -0.2804752739379842,
+            -0.35324145559688547
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 60391,
+      "t": 0.962,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 262178,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -185.29165919036544,
+            54.96529538429258,
+            15.163390450022128
+          ],
+          "direction": [
+            0.9192930916846924,
+            -0.2815111839403415,
+            -0.27504847735864113
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 60641.09999996424,
+      "t": 0.966,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 158,
+          "triangles": 262178,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -189.5504429639594,
+            55.430213399525954,
+            1.3107276723345507
+          ],
+          "direction": [
+            0.9398668325357589,
+            -0.2827810292376717,
+            -0.1915338784718853
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 60892.39999997616,
+      "t": 0.971,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 262466,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -192.1705672685307,
+            55.838282419851296,
+            -12.024546145450799
+          ],
+          "direction": [
+            0.9521922599480348,
+            -0.28418658647799067,
+            -0.11210657501253832
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 61140.19999998808,
+      "t": 0.975,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 262466,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -193.39800390310717,
+            56.18835633589952,
+            -23.297779266164717
+          ],
+          "direction": [
+            0.9572848707799754,
+            -0.28555966185290727,
+            -0.04540215521557445
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 61391.19999998808,
+      "t": 0.979,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 160,
+          "triangles": 262466,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -193.79647541314142,
+            56.56175397881566,
+            -34.35035208678896
+          ],
+          "direction": [
+            0.9576906954253843,
+            -0.28712379951763434,
+            0.019709278175550793
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 61643.30000001192,
+      "t": 0.983,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 262522,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -193.4737475104538,
+            56.930639282980465,
+            -44.24005990295402
+          ],
+          "direction": [
+            0.9542356014173157,
+            -0.2887691622791389,
+            0.0777610950561949
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 61891.09999996424,
+      "t": 0.987,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 262570,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -192.66232980982798,
+            57.287053448338696,
+            -52.80310894369633
+          ],
+          "direction": [
+            0.9483034757347238,
+            -0.2904533236408773,
+            0.12789599170970956
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 62143.69999998808,
+      "t": 0.992,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 262570,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -191.40011280141118,
+            57.6744574967919,
+            -60.99876190651598
+          ],
+          "direction": [
+            0.940000730130949,
+            -0.29238989602440907,
+            0.1758032310741702
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 62391.19999998808,
+      "t": 0.996,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 162,
+          "triangles": 262570,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -190.03027571615215,
+            58.03075443931476,
+            -67.51831606039987
+          ],
+          "direction": [
+            0.9314791605907069,
+            -0.29426990540614945,
+            0.2138966950597601
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 62643.80000001192,
+      "t": 1,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 262522,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -188.50853123388245,
+            58.403768886359565,
+            -73.30819177725076
+          ],
+          "direction": [
+            0.9223858975715297,
+            -0.2963422293851408,
+            0.24776105231494355
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    },
+    {
+      "wall": 62890.69999998808,
+      "t": 1,
+      "caption": null,
+      "diagnostics": {
+        "renderer": {
+          "calls": 161,
+          "triangles": 262522,
+          "points": 0,
+          "lines": 0,
+          "geometries": 92,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -188.46843575236417,
+            58.41355304856346,
+            -73.44589795120956
+          ],
+          "direction": [
+            0.9221509760748957,
+            -0.2963980503353071,
+            0.24856744171662126
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 0.5
+        },
+        "scene": "giza-reference"
+      }
+    }
+  ],
+  "errors": [],
+  "completed": true,
+  "replayVisible": true
+}

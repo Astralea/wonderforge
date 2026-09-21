@@ -1,0 +1,5544 @@
+{
+  "description": "Independently requested times, not derived from the runtime grid.",
+  "cases": [
+    {
+      "julianDayUt1": 1750449.501736111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 00:02:30",
+        "jd": 1750449.501736111,
+        "azimuthDegrees": 13.845910548,
+        "elevationDegrees": -23.210965591,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620897222222222,
+        "distanceKm": 152088392.45,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.407496
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 00:02:30",
+        "jd": 1750449.501736111,
+        "azimuthDegrees": 194.228775307,
+        "elevationDegrees": 27.392490168,
+        "illuminatedFraction": 0.9986673,
+        "angularRadiusDegrees": 0.24689069444444445,
+        "distanceKm": 403198.72803,
+        "elongationDegrees": 175.8042,
+        "waxing": false,
+        "phaseAngleDegrees": 4.1847,
+        "deltaTSeconds": 9639.407496
+      }
+    },
+    {
+      "julianDayUt1": 1750449.513541667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 00:19:30",
+        "jd": 1750449.513541667,
+        "azimuthDegrees": 17.961399619,
+        "elevationDegrees": -22.343757387,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620901388888889,
+        "distanceKm": 152088147.66,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.407167
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 00:19:30",
+        "jd": 1750449.513541667,
+        "azimuthDegrees": 198.522268831,
+        "elevationDegrees": 26.519006236,
+        "illuminatedFraction": 0.9986607,
+        "angularRadiusDegrees": 0.24683430555555558,
+        "distanceKm": 403290.83768,
+        "elongationDegrees": 175.7937,
+        "waxing": false,
+        "phaseAngleDegrees": 4.1952,
+        "deltaTSeconds": 9639.407167
+      }
+    },
+    {
+      "julianDayUt1": 1750449.525347222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 00:36:30",
+        "jd": 1750449.525347222,
+        "azimuthDegrees": 21.988751892,
+        "elevationDegrees": -21.262723318,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209069444444444,
+        "distanceKm": 152087880.04,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.406837
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 00:36:30",
+        "jd": 1750449.525347222,
+        "azimuthDegrees": 202.715957399,
+        "elevationDegrees": 25.429322382,
+        "illuminatedFraction": 0.9986522,
+        "angularRadiusDegrees": 0.24676430555555556,
+        "distanceKm": 403405.13146,
+        "elongationDegrees": 175.7803,
+        "waxing": false,
+        "phaseAngleDegrees": 4.2086,
+        "deltaTSeconds": 9639.406837
+      }
+    },
+    {
+      "julianDayUt1": 1750449.537152778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 00:53:30",
+        "jd": 1750449.537152778,
+        "azimuthDegrees": 25.914559303,
+        "elevationDegrees": -19.978113693,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620911111111111,
+        "distanceKm": 152087590.2,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.406508
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 00:53:30",
+        "jd": 1750449.537152778,
+        "azimuthDegrees": 206.795038029,
+        "elevationDegrees": 24.134824024,
+        "illuminatedFraction": 0.9986419,
+        "angularRadiusDegrees": 0.24668125,
+        "distanceKm": 403541.03309,
+        "elongationDegrees": 175.764,
+        "waxing": false,
+        "phaseAngleDegrees": 4.2248,
+        "deltaTSeconds": 9639.406508
+      }
+    },
+    {
+      "julianDayUt1": 1750449.548958333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 01:10:30",
+        "jd": 1750449.548958333,
+        "azimuthDegrees": 29.728957224,
+        "elevationDegrees": -18.501320199,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209166666666667,
+        "distanceKm": 152087278.89,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.406178
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 01:10:30",
+        "jd": 1750449.548958333,
+        "azimuthDegrees": 210.748948944,
+        "elevationDegrees": 22.648101571,
+        "illuminatedFraction": 0.9986296,
+        "angularRadiusDegrees": 0.24658541666666667,
+        "distanceKm": 403697.85157,
+        "elongationDegrees": 175.7448,
+        "waxing": false,
+        "phaseAngleDegrees": 4.244,
+        "deltaTSeconds": 9639.406178
+      }
+    },
+    {
+      "julianDayUt1": 1750449.560763889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 01:27:30",
+        "jd": 1750449.560763889,
+        "azimuthDegrees": 33.425568937,
+        "elevationDegrees": -16.844473204,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620922222222222,
+        "distanceKm": 152086946.94,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.405849
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 01:27:30",
+        "jd": 1750449.560763889,
+        "azimuthDegrees": 214.571238172,
+        "elevationDegrees": 20.982479293,
+        "illuminatedFraction": 0.9986153,
+        "angularRadiusDegrees": 0.2464773611111111,
+        "distanceKm": 403874.78522,
+        "elongationDegrees": 175.7225,
+        "waxing": false,
+        "phaseAngleDegrees": 4.2662,
+        "deltaTSeconds": 9639.405849
+      }
+    },
+    {
+      "julianDayUt1": 1750449.572569444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 01:44:30",
+        "jd": 1750449.572569444,
+        "azimuthDegrees": 37.001271998,
+        "elevationDegrees": -15.020074281,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620929166666667,
+        "distanceKm": 152086595.35,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.405519
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 01:44:30",
+        "jd": 1750449.572569444,
+        "azimuthDegrees": 218.259215743,
+        "elevationDegrees": 19.151593981,
+        "illuminatedFraction": 0.9985989,
+        "angularRadiusDegrees": 0.2463577777777778,
+        "distanceKm": 404070.92628,
+        "elongationDegrees": 175.6972,
+        "waxing": false,
+        "phaseAngleDegrees": 4.2915,
+        "deltaTSeconds": 9639.405519
+      }
+    },
+    {
+      "julianDayUt1": 1750449.584375,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 02:01:30",
+        "jd": 1750449.584375,
+        "azimuthDegrees": 40.455846572,
+        "elevationDegrees": -13.040681096,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209347222222223,
+        "distanceKm": 152086225.16,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.405189
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 02:01:30",
+        "jd": 1750449.584375,
+        "azimuthDegrees": 221.813473119,
+        "elevationDegrees": 17.169042027,
+        "illuminatedFraction": 0.9985803,
+        "angularRadiusDegrees": 0.24622708333333335,
+        "distanceKm": 404285.26613,
+        "elongationDegrees": 175.6687,
+        "waxing": false,
+        "phaseAngleDegrees": 4.3199,
+        "deltaTSeconds": 9639.405189
+      }
+    },
+    {
+      "julianDayUt1": 1750449.596180555,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 02:18:30",
+        "jd": 1750449.596180555,
+        "azimuthDegrees": 43.79156336,
+        "elevationDegrees": -10.918653027,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620941666666667,
+        "distanceKm": 152085837.58,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.40486
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 02:18:30",
+        "jd": 1750449.596180555,
+        "azimuthDegrees": 225.237344086,
+        "elevationDegrees": 15.048103052,
+        "illuminatedFraction": 0.9985596,
+        "angularRadiusDegrees": 0.24608624999999998,
+        "distanceKm": 404516.70103,
+        "elongationDegrees": 175.637,
+        "waxing": false,
+        "phaseAngleDegrees": 4.3515,
+        "deltaTSeconds": 9639.40486
+      }
+    },
+    {
+      "julianDayUt1": 1750449.607986111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 02:35:30",
+        "jd": 1750449.607986111,
+        "azimuthDegrees": 47.012759415,
+        "elevationDegrees": -8.665958568,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209486111111113,
+        "distanceKm": 152085433.86,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.40453
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 02:35:30",
+        "jd": 1750449.607986111,
+        "azimuthDegrees": 228.53636821,
+        "elevationDegrees": 12.801538245,
+        "illuminatedFraction": 0.9985364,
+        "angularRadiusDegrees": 0.24593583333333335,
+        "distanceKm": 404764.03841,
+        "elongationDegrees": 175.602,
+        "waxing": false,
+        "phaseAngleDegrees": 4.3864,
+        "deltaTSeconds": 9639.40453
+      }
+    },
+    {
+      "julianDayUt1": 1750449.619791667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 02:52:30",
+        "jd": 1750449.619791667,
+        "azimuthDegrees": 50.125437823,
+        "elevationDegrees": -6.29404044,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620955555555555,
+        "distanceKm": 152085015.36,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.404201
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 02:52:30",
+        "jd": 1750449.619791667,
+        "azimuthDegrees": 231.717797632,
+        "elevationDegrees": 10.441456657,
+        "illuminatedFraction": 0.9985109,
+        "angularRadiusDegrees": 0.24577680555555556,
+        "distanceKm": 405026.0036,
+        "elongationDegrees": 175.5636,
+        "waxing": false,
+        "phaseAngleDegrees": 4.4247,
+        "deltaTSeconds": 9639.404201
+      }
+    },
+    {
+      "julianDayUt1": 1750449.631597222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 03:09:30",
+        "jd": 1750449.631597222,
+        "azimuthDegrees": 53.136914887,
+        "elevationDegrees": -3.813731244,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620963888888889,
+        "distanceKm": 152084583.54,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.403871
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 03:09:30",
+        "jd": 1750449.631597222,
+        "azimuthDegrees": 234.7901728,
+        "elevationDegrees": 7.979238643,
+        "illuminatedFraction": 0.9984827,
+        "angularRadiusDegrees": 0.24560986111111113,
+        "distanceKm": 405301.24692,
+        "elongationDegrees": 175.5218,
+        "waxing": false,
+        "phaseAngleDegrees": 4.4664,
+        "deltaTSeconds": 9639.403871
+      }
+    },
+    {
+      "julianDayUt1": 1750449.643402778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 03:26:30",
+        "jd": 1750449.643402778,
+        "azimuthDegrees": 56.055528053,
+        "elevationDegrees": -1.235211226,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2620970833333333,
+        "distanceKm": 152084139.89,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.403542
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 03:26:30",
+        "jd": 1750449.643402778,
+        "azimuthDegrees": 237.762977564,
+        "elevationDegrees": 5.425505765,
+        "illuminatedFraction": 0.9984519000000001,
+        "angularRadiusDegrees": 0.24543597222222222,
+        "distanceKm": 405588.35126,
+        "elongationDegrees": 175.4764,
+        "waxing": false,
+        "phaseAngleDegrees": 4.5116,
+        "deltaTSeconds": 9639.403542
+      }
+    },
+    {
+      "julianDayUt1": 1750449.655208333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 03:43:30",
+        "jd": 1750449.655208333,
+        "azimuthDegrees": 58.890410015,
+        "elevationDegrees": 1.432000325,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209791666666665,
+        "distanceKm": 152083686.01,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.403212
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 03:43:30",
+        "jd": 1750449.655208333,
+        "azimuthDegrees": 240.646375896,
+        "elevationDegrees": 2.79012623,
+        "illuminatedFraction": 0.9984183,
+        "angularRadiusDegrees": 0.24525611111111112,
+        "distanceKm": 405885.83984,
+        "elongationDegrees": 175.4275,
+        "waxing": false,
+        "phaseAngleDegrees": 4.5604,
+        "deltaTSeconds": 9639.403212
+      }
+    },
+    {
+      "julianDayUt1": 1750449.667013889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 04:00:30",
+        "jd": 1750449.667013889,
+        "azimuthDegrees": 61.651329487,
+        "elevationDegrees": 4.179027715,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209875,
+        "distanceKm": 152083223.52,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.402882
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 04:00:30",
+        "jd": 1750449.667013889,
+        "azimuthDegrees": 243.451026305,
+        "elevationDegrees": 0.082246541,
+        "illuminatedFraction": 0.9983818,
+        "angularRadiusDegrees": 0.2450711111111111,
+        "distanceKm": 406192.18432,
+        "elongationDegrees": 175.3749,
+        "waxing": false,
+        "phaseAngleDegrees": 4.6129,
+        "deltaTSeconds": 9639.402882
+      }
+    },
+    {
+      "julianDayUt1": 1750449.678819444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 04:17:30",
+        "jd": 1750449.678819444,
+        "azimuthDegrees": 64.348596252,
+        "elevationDegrees": 6.99760178,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26209944444444444,
+        "distanceKm": 152082754.1,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.402553
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 04:17:30",
+        "jd": 1750449.678819444,
+        "azimuthDegrees": 246.187966793,
+        "elevationDegrees": -2.68965764,
+        "illuminatedFraction": 0.9983423,
+        "angularRadiusDegrees": 0.24488208333333333,
+        "distanceKm": 406505.81308,
+        "elongationDegrees": 175.3186,
+        "waxing": false,
+        "phaseAngleDegrees": 4.6691,
+        "deltaTSeconds": 9639.402553
+      }
+    },
+    {
+      "julianDayUt1": 1750449.690625,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 04:34:30",
+        "jd": 1750449.690625,
+        "azimuthDegrees": 66.993028023,
+        "elevationDegrees": 9.880008501,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621002777777778,
+        "distanceKm": 152082279.49,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.402223
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 04:34:30",
+        "jd": 1750449.690625,
+        "azimuthDegrees": 248.868563794,
+        "elevationDegrees": -5.517717743,
+        "illuminatedFraction": 0.9982995,
+        "angularRadiusDegrees": 0.24468986111111113,
+        "distanceKm": 406825.11972,
+        "elongationDegrees": 175.2584,
+        "waxing": false,
+        "phaseAngleDegrees": 4.729,
+        "deltaTSeconds": 9639.402223
+      }
+    },
+    {
+      "julianDayUt1": 1750449.702430556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 04:51:30",
+        "jd": 1750449.702430556,
+        "azimuthDegrees": 69.5959764,
+        "elevationDegrees": 12.819026286,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621011111111111,
+        "distanceKm": 152081801.41,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.401894
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 04:51:30",
+        "jd": 1750449.702430556,
+        "azimuthDegrees": 251.5045179,
+        "elevationDegrees": -8.394598813,
+        "illuminatedFraction": 0.9982534,
+        "angularRadiusDegrees": 0.24449555555555555,
+        "distanceKm": 407148.47159,
+        "elongationDegrees": 175.1945,
+        "waxing": false,
+        "phaseAngleDegrees": 4.7928,
+        "deltaTSeconds": 9639.401894
+      }
+    },
+    {
+      "julianDayUt1": 1750449.714236111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 05:08:30",
+        "jd": 1750449.714236111,
+        "azimuthDegrees": 72.169412128,
+        "elevationDegrees": 15.807854484,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26210194444444446,
+        "distanceKm": 152081321.65,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.401564
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 05:08:30",
+        "jd": 1750449.714236111,
+        "azimuthDegrees": 254.107922447,
+        "elevationDegrees": -11.313419367,
+        "illuminatedFraction": 0.9982039,
+        "angularRadiusDegrees": 0.24430013888888888,
+        "distanceKm": 407474.21842,
+        "elongationDegrees": 175.1267,
+        "waxing": false,
+        "phaseAngleDegrees": 4.8604,
+        "deltaTSeconds": 9639.401564
+      }
+    },
+    {
+      "julianDayUt1": 1750449.726041667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 05:25:30",
+        "jd": 1750449.726041667,
+        "azimuthDegrees": 74.726072161,
+        "elevationDegrees": 18.840033738,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621027777777778,
+        "distanceKm": 152080841.96,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.401235
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 05:25:30",
+        "jd": 1750449.726041667,
+        "azimuthDegrees": 256.691372229,
+        "elevationDegrees": -14.267665168,
+        "illuminatedFraction": 0.9981507000000001,
+        "angularRadiusDegrees": 0.24410444444444443,
+        "distanceKm": 407800.70096,
+        "elongationDegrees": 175.055,
+        "waxing": false,
+        "phaseAngleDegrees": 4.9319,
+        "deltaTSeconds": 9639.401235
+      }
+    },
+    {
+      "julianDayUt1": 1750449.737847222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 05:42:30",
+        "jd": 1750449.737847222,
+        "azimuthDegrees": 77.279675088,
+        "elevationDegrees": 21.909357669,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621036111111111,
+        "distanceKm": 152080364.14,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.400905
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 05:42:30",
+        "jd": 1750449.737847222,
+        "azimuthDegrees": 259.268123063,
+        "elevationDegrees": -17.251096893,
+        "illuminatedFraction": 0.9980938,
+        "angularRadiusDegrees": 0.24390972222222224,
+        "distanceKm": 408126.25965,
+        "elongationDegrees": 174.9794,
+        "waxing": false,
+        "phaseAngleDegrees": 5.0073,
+        "deltaTSeconds": 9639.400905
+      }
+    },
+    {
+      "julianDayUt1": 1750449.749652778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 05:59:30",
+        "jd": 1750449.749652778,
+        "azimuthDegrees": 79.845216515,
+        "elevationDegrees": 25.009773919,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621044444444445,
+        "distanceKm": 152079889.93,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.400576
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 05:59:30",
+        "jd": 1750449.749652778,
+        "azimuthDegrees": 261.852305795,
+        "elevationDegrees": -20.257650321,
+        "illuminatedFraction": 0.998033,
+        "angularRadiusDegrees": 0.24371694444444444,
+        "distanceKm": 408449.24305,
+        "elongationDegrees": 174.8999,
+        "waxing": false,
+        "phaseAngleDegrees": 5.0866,
+        "deltaTSeconds": 9639.400576
+      }
+    },
+    {
+      "julianDayUt1": 1750449.761458333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 06:16:30",
+        "jd": 1750449.761458333,
+        "azimuthDegrees": 82.439362538,
+        "elevationDegrees": 28.135270935,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26210527777777776,
+        "distanceKm": 152079421.09,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.400246
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 06:16:30",
+        "jd": 1750449.761458333,
+        "azimuthDegrees": 264.459201932,
+        "elevationDegrees": -23.281326511,
+        "illuminatedFraction": 0.9979683,
+        "angularRadiusDegrees": 0.24352680555555556,
+        "distanceKm": 408768.01633,
+        "elongationDegrees": 174.8164,
+        "waxing": false,
+        "phaseAngleDegrees": 5.1698,
+        "deltaTSeconds": 9639.400246
+      }
+    },
+    {
+      "julianDayUt1": 1750449.773263889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 06:33:30",
+        "jd": 1750449.773263889,
+        "azimuthDegrees": 85.080968121,
+        "elevationDegrees": 31.279744761,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621059722222222,
+        "distanceKm": 152078959.33,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.399916
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 06:33:30",
+        "jd": 1750449.773263889,
+        "azimuthDegrees": 267.105591775,
+        "elevationDegrees": -26.316067772,
+        "illuminatedFraction": 0.9978992999999999,
+        "angularRadiusDegrees": 0.24334055555555553,
+        "distanceKm": 409080.96945,
+        "elongationDegrees": 174.7291,
+        "waxing": false,
+        "phaseAngleDegrees": 5.2569,
+        "deltaTSeconds": 9639.399916
+      }
+    },
+    {
+      "julianDayUt1": 1750449.785069444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 06:50:30",
+        "jd": 1750449.785069444,
+        "azimuthDegrees": 87.791758862,
+        "elevationDegrees": 34.436837368,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26210680555555554,
+        "distanceKm": 152078506.31,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.399587
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 06:50:30",
+        "jd": 1750449.785069444,
+        "azimuthDegrees": 269.810190806,
+        "elevationDegrees": -29.355613939,
+        "illuminatedFraction": 0.9978262,
+        "angularRadiusDegrees": 0.24315888888888887,
+        "distanceKm": 409386.52524,
+        "elongationDegrees": 174.638,
+        "waxing": false,
+        "phaseAngleDegrees": 5.3478,
+        "deltaTSeconds": 9639.399587
+      }
+    },
+    {
+      "julianDayUt1": 1750449.796875,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 07:07:30",
+        "jd": 1750449.796875,
+        "azimuthDegrees": 90.597230318,
+        "elevationDegrees": 37.599734001,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621076388888889,
+        "distanceKm": 152078063.67,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.399257
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 07:07:30",
+        "jd": 1750449.796875,
+        "azimuthDegrees": 272.594194947,
+        "elevationDegrees": -32.393331179,
+        "illuminatedFraction": 0.9977486,
+        "angularRadiusDegrees": 0.2429829166666667,
+        "distanceKm": 409683.14723,
+        "elongationDegrees": 174.5431,
+        "waxing": false,
+        "phaseAngleDegrees": 5.4425,
+        "deltaTSeconds": 9639.399257
+      }
+    },
+    {
+      "julianDayUt1": 1750449.808680556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 07:24:30",
+        "jd": 1750449.808680556,
+        "azimuthDegrees": 93.527840084,
+        "elevationDegrees": 40.760901327,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26210833333333333,
+        "distanceKm": 152077632.98,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.398928
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 07:24:30",
+        "jd": 1750449.808680556,
+        "azimuthDegrees": 275.481960754,
+        "elevationDegrees": -35.422002767,
+        "illuminatedFraction": 0.9976666000000001,
+        "angularRadiusDegrees": 0.24281319444444446,
+        "distanceKm": 409969.34711,
+        "elongationDegrees": 174.4444,
+        "waxing": false,
+        "phaseAngleDegrees": 5.5408,
+        "deltaTSeconds": 9639.398928
+      }
+    },
+    {
+      "julianDayUt1": 1750449.820486111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 07:41:30",
+        "jd": 1750449.820486111,
+        "azimuthDegrees": 96.620595157,
+        "elevationDegrees": 43.911739576,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621090277777778,
+        "distanceKm": 152077215.73,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.398598
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 07:41:30",
+        "jd": 1750449.820486111,
+        "azimuthDegrees": 278.501850948,
+        "elevationDegrees": -38.433567118,
+        "illuminatedFraction": 0.9975799999999999,
+        "angularRadiusDegrees": 0.24265083333333334,
+        "distanceKm": 410243.69203,
+        "elongationDegrees": 174.3422,
+        "waxing": false,
+        "phaseAngleDegrees": 5.6428,
+        "deltaTSeconds": 9639.398598
+      }
+    },
+    {
+      "julianDayUt1": 1750449.832291667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 07:58:30",
+        "jd": 1750449.832291667,
+        "azimuthDegrees": 99.921170115,
+        "elevationDegrees": 47.042109155,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26210972222222223,
+        "distanceKm": 152076813.36,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.398269
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 07:58:30",
+        "jd": 1750449.832291667,
+        "azimuthDegrees": 281.687278248,
+        "elevationDegrees": -41.41878412,
+        "illuminatedFraction": 0.9974888,
+        "angularRadiusDegrees": 0.24249652777777778,
+        "distanceKm": 410504.81149,
+        "elongationDegrees": 174.2365,
+        "waxing": false,
+        "phaseAngleDegrees": 5.7482,
+        "deltaTSeconds": 9639.398269
+      }
+    },
+    {
+      "julianDayUt1": 1750449.844097222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 08:15:30",
+        "jd": 1750449.844097222,
+        "azimuthDegrees": 103.486724582,
+        "elevationDegrees": 50.139673327,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621104166666667,
+        "distanceKm": 152076427.2,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.397939
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 08:15:30",
+        "jd": 1750449.844097222,
+        "azimuthDegrees": 285.077974121,
+        "elevationDegrees": -44.366803792,
+        "illuminatedFraction": 0.9973928999999999,
+        "angularRadiusDegrees": 0.2423509722222222,
+        "distanceKm": 410751.40387,
+        "elongationDegrees": 174.1273,
+        "waxing": false,
+        "phaseAngleDegrees": 5.857,
+        "deltaTSeconds": 9639.397939
+      }
+    },
+    {
+      "julianDayUt1": 1750449.855902778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 08:32:30",
+        "jd": 1750449.855902778,
+        "azimuthDegrees": 107.389601178,
+        "elevationDegrees": 53.188971236,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211097222222224,
+        "distanceKm": 152076058.52,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.397609
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 08:32:30",
+        "jd": 1750449.855902778,
+        "azimuthDegrees": 288.721485275,
+        "elevationDegrees": -47.264603896,
+        "illuminatedFraction": 0.9972923,
+        "angularRadiusDegrees": 0.2422148611111111,
+        "distanceKm": 410982.24263,
+        "elongationDegrees": 174.015,
+        "waxing": false,
+        "phaseAngleDegrees": 5.9691,
+        "deltaTSeconds": 9639.397609
+      }
+    },
+    {
+      "julianDayUt1": 1750449.867708333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 08:49:30",
+        "jd": 1750449.867708333,
+        "azimuthDegrees": 111.722021081,
+        "elevationDegrees": 56.170098352,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621116666666667,
+        "distanceKm": 152075708.47,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.39728
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 08:49:30",
+        "jd": 1750449.867708333,
+        "azimuthDegrees": 292.674838252,
+        "elevationDegrees": -50.096255673,
+        "illuminatedFraction": 0.9971869,
+        "angularRadiusDegrees": 0.24208875,
+        "distanceKm": 411196.18208,
+        "elongationDegrees": 173.8995,
+        "waxing": false,
+        "phaseAngleDegrees": 6.0843,
+        "deltaTSeconds": 9639.39728
+      }
+    },
+    {
+      "julianDayUt1": 1750449.879513889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 09:06:30",
+        "jd": 1750449.879513889,
+        "azimuthDegrees": 116.601609442,
+        "elevationDegrees": 59.056828036,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211222222222225,
+        "distanceKm": 152075378.11,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.39695
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 09:06:30",
+        "jd": 1750449.879513889,
+        "azimuthDegrees": 297.006171324,
+        "elevationDegrees": -52.841972543,
+        "illuminatedFraction": 0.9970768,
+        "angularRadiusDegrees": 0.24197347222222224,
+        "distanceKm": 411392.16272,
+        "elongationDegrees": 173.781,
+        "waxing": false,
+        "phaseAngleDegrees": 6.2024,
+        "deltaTSeconds": 9639.39695
+      }
+    },
+    {
+      "julianDayUt1": 1750449.891319444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 09:23:30",
+        "jd": 1750449.891319444,
+        "azimuthDegrees": 122.176740885,
+        "elevationDegrees": 61.813980296,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211277777777775,
+        "distanceKm": 152075068.39,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.396621
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 09:23:30",
+        "jd": 1750449.891319444,
+        "azimuthDegrees": 301.795846112,
+        "elevationDegrees": -55.476905961,
+        "illuminatedFraction": 0.9969619000000001,
+        "angularRadiusDegrees": 0.24186930555555555,
+        "distanceKm": 411569.21616,
+        "elongationDegrees": 173.6599,
+        "waxing": false,
+        "phaseAngleDegrees": 6.3233,
+        "deltaTSeconds": 9639.396621
+      }
+    },
+    {
+      "julianDayUt1": 1750449.903125,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 09:40:30",
+        "jd": 1750449.903125,
+        "azimuthDegrees": 128.628599549,
+        "elevationDegrees": 64.393905712,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621131944444444,
+        "distanceKm": 152074780.14,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.396291
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 09:40:30",
+        "jd": 1750449.903125,
+        "azimuthDegrees": 307.136011792,
+        "elevationDegrees": -57.969693767,
+        "illuminatedFraction": 0.9968422,
+        "angularRadiusDegrees": 0.24177694444444445,
+        "distanceKm": 411726.4696,
+        "elongationDegrees": 173.5361,
+        "waxing": false,
+        "phaseAngleDegrees": 6.4467,
+        "deltaTSeconds": 9639.396291
+      }
+    },
+    {
+      "julianDayUt1": 1750449.914930556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 09:57:30",
+        "jd": 1750449.914930556,
+        "azimuthDegrees": 136.162383926,
+        "elevationDegrees": 66.732302256,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211375000000003,
+        "distanceKm": 152074514.07,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.395962
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 09:57:30",
+        "jd": 1750449.914930556,
+        "azimuthDegrees": 313.126700088,
+        "elevationDegrees": -60.280882047,
+        "illuminatedFraction": 0.9967179,
+        "angularRadiusDegrees": 0.24169680555555556,
+        "distanceKm": 411863.14986,
+        "elongationDegrees": 173.4099,
+        "waxing": false,
+        "phaseAngleDegrees": 6.5725,
+        "deltaTSeconds": 9639.395962
+      }
+    },
+    {
+      "julianDayUt1": 1750449.926736111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 10:14:30",
+        "jd": 1750449.926736111,
+        "azimuthDegrees": 144.972733646,
+        "elevationDegrees": 68.744636897,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211416666666665,
+        "distanceKm": 152074270.79,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.395632
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 10:14:30",
+        "jd": 1750449.926736111,
+        "azimuthDegrees": 319.865323031,
+        "elevationDegrees": -62.361590075,
+        "illuminatedFraction": 0.9965889,
+        "angularRadiusDegrees": 0.24162902777777778,
+        "distanceKm": 411978.58682,
+        "elongationDegrees": 173.2816,
+        "waxing": false,
+        "phaseAngleDegrees": 6.7005,
+        "deltaTSeconds": 9639.395632
+      }
+    },
+    {
+      "julianDayUt1": 1750449.938541667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 10:31:30",
+        "jd": 1750449.938541667,
+        "azimuthDegrees": 155.163144706,
+        "elevationDegrees": 70.326700906,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621144444444444,
+        "distanceKm": 152074050.75,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.395303
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 10:31:30",
+        "jd": 1750449.938541667,
+        "azimuthDegrees": 327.425595802,
+        "elevationDegrees": -64.153232617,
+        "illuminatedFraction": 0.9964555,
+        "angularRadiusDegrees": 0.24157416666666667,
+        "distanceKm": 412072.21659,
+        "elongationDegrees": 173.1513,
+        "waxing": false,
+        "phaseAngleDegrees": 6.8304,
+        "deltaTSeconds": 9639.395303
+      }
+    },
+    {
+      "julianDayUt1": 1750449.950347222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 10:48:30",
+        "jd": 1750449.950347222,
+        "azimuthDegrees": 166.616366041,
+        "elevationDegrees": 71.365640268,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621148611111111,
+        "distanceKm": 152073854.3,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.394973
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 10:48:30",
+        "jd": 1750449.950347222,
+        "azimuthDegrees": 335.823468541,
+        "elevationDegrees": -65.589693016,
+        "illuminatedFraction": 0.9963177000000001,
+        "angularRadiusDegrees": 0.2415322222222222,
+        "distanceKm": 412143.58399,
+        "elongationDegrees": 173.0193,
+        "waxing": false,
+        "phaseAngleDegrees": 6.9621,
+        "deltaTSeconds": 9639.394973
+      }
+    },
+    {
+      "julianDayUt1": 1750449.962152778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 11:05:30",
+        "jd": 1750449.962152778,
+        "azimuthDegrees": 178.8814676,
+        "elevationDegrees": 71.766547407,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621151388888889,
+        "distanceKm": 152073681.65,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.394643
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 11:05:30",
+        "jd": 1750449.962152778,
+        "azimuthDegrees": 344.975126216,
+        "elevationDegrees": -66.603613728,
+        "illuminatedFraction": 0.9961755999999999,
+        "angularRadiusDegrees": 0.24150375,
+        "distanceKm": 412192.34461,
+        "elongationDegrees": 172.8858,
+        "waxing": false,
+        "phaseAngleDegrees": 7.0953,
+        "deltaTSeconds": 9639.394643
+      }
+    },
+    {
+      "julianDayUt1": 1750449.973958333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 11:22:30",
+        "jd": 1750449.973958333,
+        "azimuthDegrees": 191.219555294,
+        "elevationDegrees": 71.487263155,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211541666666666,
+        "distanceKm": 152073532.87,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.394314
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 11:22:30",
+        "jd": 1750449.973958333,
+        "azimuthDegrees": 354.666510951,
+        "elevationDegrees": -67.137452523,
+        "illuminatedFraction": 0.9960295000000001,
+        "angularRadiusDegrees": 0.24148847222222222,
+        "distanceKm": 412218.26635,
+        "elongationDegrees": 172.7509,
+        "waxing": false,
+        "phaseAngleDegrees": 7.2297,
+        "deltaTSeconds": 9639.394314
+      }
+    },
+    {
+      "julianDayUt1": 1750449.985763889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 11:39:30",
+        "jd": 1750449.985763889,
+        "azimuthDegrees": 202.862904678,
+        "elevationDegrees": 70.557519858,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211555555555555,
+        "distanceKm": 152073407.9,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.393984
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 11:39:30",
+        "jd": 1750449.985763889,
+        "azimuthDegrees": 4.564412263,
+        "elevationDegrees": -67.156884501,
+        "illuminatedFraction": 0.9958794000000001,
+        "angularRadiusDegrees": 0.24148680555555554,
+        "distanceKm": 412221.23058,
+        "elongationDegrees": 172.6151,
+        "waxing": false,
+        "phaseAngleDegrees": 7.3652,
+        "deltaTSeconds": 9639.393984
+      }
+    },
+    {
+      "julianDayUt1": 1750449.997569445,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 11:56:30",
+        "jd": 1750449.997569445,
+        "azimuthDegrees": 213.298475292,
+        "elevationDegrees": 69.065206825,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621158333333333,
+        "distanceKm": 152073306.57,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.393655
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 11:56:30",
+        "jd": 1750449.997569445,
+        "azimuthDegrees": 14.2839853,
+        "elevationDegrees": -66.660588849,
+        "illuminatedFraction": 0.9957256999999999,
+        "angularRadiusDegrees": 0.24149847222222223,
+        "distanceKm": 412201.23249,
+        "elongationDegrees": 172.4784,
+        "waxing": false,
+        "phaseAngleDegrees": 7.5015,
+        "deltaTSeconds": 9639.393655
+      }
+    },
+    {
+      "julianDayUt1": 1750450.009375,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 12:13:30",
+        "jd": 1750450.009375,
+        "azimuthDegrees": 222.354628176,
+        "elevationDegrees": 67.122356872,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621159722222222,
+        "distanceKm": 152073228.56,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.393325
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 12:13:30",
+        "jd": 1750450.009375,
+        "azimuthDegrees": 23.485165572,
+        "elevationDegrees": -65.680651094,
+        "illuminatedFraction": 0.9955685,
+        "angularRadiusDegrees": 0.24152361111111112,
+        "distanceKm": 412158.38126,
+        "elongationDegrees": 172.3412,
+        "waxing": false,
+        "phaseAngleDegrees": 7.6384,
+        "deltaTSeconds": 9639.393325
+      }
+    },
+    {
+      "julianDayUt1": 1750450.021180556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 12:30:30",
+        "jd": 1750450.021180556,
+        "azimuthDegrees": 230.105579151,
+        "elevationDegrees": 64.835975516,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621159722222222,
+        "distanceKm": 152073173.42,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.392996
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 12:30:30",
+        "jd": 1750450.021180556,
+        "azimuthDegrees": 31.943878722,
+        "elevationDegrees": -64.273322754,
+        "illuminatedFraction": 0.9954080000000001,
+        "angularRadiusDegrees": 0.24156194444444445,
+        "distanceKm": 412092.89946,
+        "elongationDegrees": 172.2036,
+        "waxing": false,
+        "phaseAngleDegrees": 7.7756,
+        "deltaTSeconds": 9639.392996
+      }
+    },
+    {
+      "julianDayUt1": 1750450.032986111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 12:47:30",
+        "jd": 1750450.032986111,
+        "azimuthDegrees": 236.737101835,
+        "elevationDegrees": 62.294394748,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621161111111111,
+        "distanceKm": 152073140.59,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.392666
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 12:47:30",
+        "jd": 1750450.032986111,
+        "azimuthDegrees": 39.567268365,
+        "elevationDegrees": -62.50565302,
+        "illuminatedFraction": 0.9952446,
+        "angularRadiusDegrees": 0.2416134722222222,
+        "distanceKm": 412005.12222,
+        "elongationDegrees": 172.0659,
+        "waxing": false,
+        "phaseAngleDegrees": 7.9129,
+        "deltaTSeconds": 9639.392666
+      }
+    },
+    {
+      "julianDayUt1": 1750450.044791667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 13:04:30",
+        "jd": 1750450.044791667,
+        "azimuthDegrees": 242.456115365,
+        "elevationDegrees": 59.565358584,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621161111111111,
+        "distanceKm": 152073129.37,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.392337
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 13:04:30",
+        "jd": 1750450.044791667,
+        "azimuthDegrees": 46.365274769,
+        "elevationDegrees": -60.444122769,
+        "illuminatedFraction": 0.9950785999999999,
+        "angularRadiusDegrees": 0.24167777777777777,
+        "distanceKm": 411895.4955,
+        "elongationDegrees": 171.9284,
+        "waxing": false,
+        "phaseAngleDegrees": 8.0501,
+        "deltaTSeconds": 9639.392337
+      }
+    },
+    {
+      "julianDayUt1": 1750450.056597222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 13:21:30",
+        "jd": 1750450.056597222,
+        "azimuthDegrees": 247.449288833,
+        "elevationDegrees": 56.699203191,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621161111111111,
+        "distanceKm": 152073138.94,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.392007
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 13:21:30",
+        "jd": 1750450.056597222,
+        "azimuthDegrees": 52.408620439,
+        "elevationDegrees": -58.147993189,
+        "illuminatedFraction": 0.9949101,
+        "angularRadiusDegrees": 0.24175458333333333,
+        "distanceKm": 411764.57424,
+        "elongationDegrees": 171.7912,
+        "waxing": false,
+        "phaseAngleDegrees": 8.1869,
+        "deltaTSeconds": 9639.392007
+      }
+    },
+    {
+      "julianDayUt1": 1750450.068402778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 13:38:30",
+        "jd": 1750450.068402778,
+        "azimuthDegrees": 251.870942885,
+        "elevationDegrees": 53.733072738,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621159722222222,
+        "distanceKm": 152073168.38,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.391677
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 13:38:30",
+        "jd": 1750450.068402778,
+        "azimuthDegrees": 57.793827485,
+        "elevationDegrees": -55.666879359,
+        "illuminatedFraction": 0.9947396000000001,
+        "angularRadiusDegrees": 0.2418436111111111,
+        "distanceKm": 411613.01982,
+        "elongationDegrees": 171.6546,
+        "waxing": false,
+        "phaseAngleDegrees": 8.3231,
+        "deltaTSeconds": 9639.391677
+      }
+    },
+    {
+      "julianDayUt1": 1750450.080208333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 13:55:30",
+        "jd": 1750450.080208333,
+        "azimuthDegrees": 255.843890642,
+        "elevationDegrees": 50.694590123,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621159722222222,
+        "distanceKm": 152073216.66,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.391348
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 13:55:30",
+        "jd": 1750450.080208333,
+        "azimuthDegrees": 62.621202241,
+        "elevationDegrees": -53.040898986,
+        "illuminatedFraction": 0.9945672000000001,
+        "angularRadiusDegrees": 0.24194444444444443,
+        "distanceKm": 411441.59703,
+        "elongationDegrees": 171.5188,
+        "waxing": false,
+        "phaseAngleDegrees": 8.4586,
+        "deltaTSeconds": 9639.391348
+      }
+    },
+    {
+      "julianDayUt1": 1750450.092013889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 14:12:30",
+        "jd": 1750450.092013889,
+        "azimuthDegrees": 259.46451138,
+        "elevationDegrees": 47.60464275,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621158333333333,
+        "distanceKm": 152073282.63,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.391018
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 14:12:30",
+        "jd": 1750450.092013889,
+        "azimuthDegrees": 66.983680445,
+        "elevationDegrees": -50.301962939,
+        "illuminatedFraction": 0.9943934,
+        "angularRadiusDegrees": 0.2420563888888889,
+        "distanceKm": 411251.17055,
+        "elongationDegrees": 171.3841,
+        "waxing": false,
+        "phaseAngleDegrees": 8.593,
+        "deltaTSeconds": 9639.391018
+      }
+    },
+    {
+      "julianDayUt1": 1750450.103819444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 14:29:30",
+        "jd": 1750450.103819444,
+        "azimuthDegrees": 262.808357039,
+        "elevationDegrees": 44.479382362,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211569444444444,
+        "distanceKm": 152073365.05,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.390689
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 14:29:30",
+        "jd": 1750450.103819444,
+        "azimuthDegrees": 70.962551406,
+        "elevationDegrees": -47.475352178,
+        "illuminatedFraction": 0.9942185000000001,
+        "angularRadiusDegrees": 0.24217916666666667,
+        "distanceKm": 411042.70107,
+        "elongationDegrees": 171.2505,
+        "waxing": false,
+        "phaseAngleDegrees": 8.7262,
+        "deltaTSeconds": 9639.390689
+      }
+    },
+    {
+      "julianDayUt1": 1750450.115625,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 14:46:30",
+        "jd": 1750450.115625,
+        "azimuthDegrees": 265.935024162,
+        "elevationDegrees": 41.331631897,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211555555555555,
+        "distanceKm": 152073462.6,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.390359
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 14:46:30",
+        "jd": 1750450.115625,
+        "azimuthDegrees": 74.626842769,
+        "elevationDegrees": -44.581184833,
+        "illuminatedFraction": 0.9940428,
+        "angularRadiusDegrees": 0.24231208333333332,
+        "distanceKm": 410817.24083,
+        "elongationDegrees": 171.1183,
+        "waxing": false,
+        "phaseAngleDegrees": 8.8581,
+        "deltaTSeconds": 9639.390359
+      }
+    },
+    {
+      "julianDayUt1": 1750450.127430555,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 15:03:30",
+        "jd": 1750450.127430555,
+        "azimuthDegrees": 268.892027244,
+        "elevationDegrees": 38.171872957,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211527777777777,
+        "distanceKm": 152073573.85,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.39003
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 15:03:30",
+        "jd": 1750450.127430555,
+        "azimuthDegrees": 78.034360398,
+        "elevationDegrees": -41.635639936,
+        "illuminatedFraction": 0.9938666,
+        "angularRadiusDegrees": 0.24245444444444444,
+        "distanceKm": 410575.92864,
+        "elongationDegrees": 170.9877,
+        "waxing": false,
+        "phaseAngleDegrees": 8.9883,
+        "deltaTSeconds": 9639.39003
+      }
+    },
+    {
+      "julianDayUt1": 1750450.139236111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 15:20:30",
+        "jd": 1750450.139236111,
+        "azimuthDegrees": 271.717761934,
+        "elevationDegrees": 35.00894449,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621151388888889,
+        "distanceKm": 152073697.33,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.3897
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 15:20:30",
+        "jd": 1750450.139236111,
+        "azimuthDegrees": 81.233303053,
+        "elevationDegrees": -38.651926667,
+        "illuminatedFraction": 0.9936902999999999,
+        "angularRadiusDegrees": 0.24260569444444444,
+        "distanceKm": 410319.98477,
+        "elongationDegrees": 170.8588,
+        "waxing": false,
+        "phaseAngleDegrees": 9.1169,
+        "deltaTSeconds": 9639.3897
+      }
+    },
+    {
+      "julianDayUt1": 1750450.151041667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 15:37:30",
+        "jd": 1750450.151041667,
+        "azimuthDegrees": 274.443736051,
+        "elevationDegrees": 31.850544368,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621148611111111,
+        "distanceKm": 152073831.48,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.38937
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 15:37:30",
+        "jd": 1750450.151041667,
+        "azimuthDegrees": 84.263934125,
+        "elevationDegrees": -35.641033206,
+        "illuminatedFraction": 0.9935141000000001,
+        "angularRadiusDegrees": 0.24276499999999998,
+        "distanceKm": 410050.705,
+        "elongationDegrees": 170.7319,
+        "waxing": false,
+        "phaseAngleDegrees": 9.2435,
+        "deltaTSeconds": 9639.38937
+      }
+    },
+    {
+      "julianDayUt1": 1750450.162847222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 15:54:30",
+        "jd": 1750450.162847222,
+        "azimuthDegrees": 277.096241623,
+        "elevationDegrees": 28.703596509,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621145833333333,
+        "distanceKm": 152073974.67,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.389041
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 15:54:30",
+        "jd": 1750450.162847222,
+        "azimuthDegrees": 87.16009402,
+        "elevationDegrees": -32.612300476,
+        "illuminatedFraction": 0.9933384,
+        "angularRadiusDegrees": 0.24293166666666666,
+        "distanceKm": 409769.45459,
+        "elongationDegrees": 170.607,
+        "waxing": false,
+        "phaseAngleDegrees": 9.3681,
+        "deltaTSeconds": 9639.389041
+      }
+    },
+    {
+      "julianDayUt1": 1750450.174652778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 16:11:30",
+        "jd": 1750450.174652778,
+        "azimuthDegrees": 279.69760976,
+        "elevationDegrees": 25.574525959,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211430555555554,
+        "distanceKm": 152074125.25,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.388711
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 16:11:30",
+        "jd": 1750450.174652778,
+        "azimuthDegrees": 89.95048641,
+        "elevationDegrees": -29.573862073,
+        "illuminatedFraction": 0.9931635,
+        "angularRadiusDegrees": 0.24310486111111113,
+        "distanceKm": 409477.66177,
+        "elongationDegrees": 170.4842,
+        "waxing": false,
+        "phaseAngleDegrees": 9.4905,
+        "deltaTSeconds": 9639.388711
+      }
+    },
+    {
+      "julianDayUt1": 1750450.186458333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 16:28:30",
+        "jd": 1750450.186458333,
+        "azimuthDegrees": 282.267156474,
+        "elevationDegrees": 22.469470651,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211402777777776,
+        "distanceKm": 152074281.5,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.388382
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 16:28:30",
+        "jd": 1750450.186458333,
+        "azimuthDegrees": 92.659738306,
+        "elevationDegrees": -26.532984248,
+        "illuminatedFraction": 0.9929895999999999,
+        "angularRadiusDegrees": 0.24328361111111113,
+        "distanceKm": 409176.81077,
+        "elongationDegrees": 170.3638,
+        "waxing": false,
+        "phaseAngleDegrees": 9.6107,
+        "deltaTSeconds": 9639.388382
+      }
+    },
+    {
+      "julianDayUt1": 1750450.198263889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 16:45:30",
+        "jd": 1750450.198263889,
+        "azimuthDegrees": 284.821899121,
+        "elevationDegrees": 19.394449382,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211388888888887,
+        "distanceKm": 152074441.7,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.388052
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 16:45:30",
+        "jd": 1750450.198263889,
+        "azimuthDegrees": 95.309259474,
+        "elevationDegrees": -23.496332481,
+        "illuminatedFraction": 0.9928171,
+        "angularRadiusDegrees": 0.24346708333333333,
+        "distanceKm": 408868.43476,
+        "elongationDegrees": 170.2457,
+        "waxing": false,
+        "phaseAngleDegrees": 9.7285,
+        "deltaTSeconds": 9639.388052
+      }
+    },
+    {
+      "julianDayUt1": 1750450.210069444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 17:02:30",
+        "jd": 1750450.210069444,
+        "azimuthDegrees": 287.377100858,
+        "elevationDegrees": 16.355499519,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211347222222225,
+        "distanceKm": 152074604.07,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.387723
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 17:02:30",
+        "jd": 1750450.210069444,
+        "azimuthDegrees": 97.917934038,
+        "elevationDegrees": -20.470184184,
+        "illuminatedFraction": 0.9926461999999999,
+        "angularRadiusDegrees": 0.24365430555555553,
+        "distanceKm": 408554.10817,
+        "elongationDegrees": 170.1301,
+        "waxing": false,
+        "phaseAngleDegrees": 9.8438,
+        "deltaTSeconds": 9639.387723
+      }
+    },
+    {
+      "julianDayUt1": 1750450.221875,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 17:19:30",
+        "jd": 1750450.221875,
+        "azimuthDegrees": 289.946684448,
+        "elevationDegrees": 13.358793137,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621131944444444,
+        "distanceKm": 152074766.85,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.387393
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 17:19:30",
+        "jd": 1750450.221875,
+        "azimuthDegrees": 100.502675121,
+        "elevationDegrees": -17.460602336,
+        "illuminatedFraction": 0.9924771,
+        "angularRadiusDegrees": 0.24384458333333334,
+        "distanceKm": 408235.43906,
+        "elongationDegrees": 170.017,
+        "waxing": false,
+        "phaseAngleDegrees": 9.9566,
+        "deltaTSeconds": 9639.387393
+      }
+    },
+    {
+      "julianDayUt1": 1750450.233680556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 17:36:30",
+        "jd": 1750450.233680556,
+        "azimuthDegrees": 292.543543589,
+        "elevationDegrees": 10.410738313,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211291666666664,
+        "distanceKm": 152074928.27,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.387064
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 17:36:30",
+        "jd": 1750450.233680556,
+        "azimuthDegrees": 103.078868911,
+        "elevationDegrees": -14.473580941,
+        "illuminatedFraction": 0.9923099999999999,
+        "angularRadiusDegrees": 0.24403666666666668,
+        "distanceKm": 407914.06089,
+        "elongationDegrees": 169.9065,
+        "waxing": false,
+        "phaseAngleDegrees": 10.0668,
+        "deltaTSeconds": 9639.387064
+      }
+    },
+    {
+      "julianDayUt1": 1750450.245486111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 17:53:30",
+        "jd": 1750450.245486111,
+        "azimuthDegrees": 295.179771686,
+        "elevationDegrees": 7.518069106,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211277777777775,
+        "distanceKm": 152075086.54,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.386734
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 17:53:30",
+        "jd": 1750450.245486111,
+        "azimuthDegrees": 105.660729007,
+        "elevationDegrees": -11.515170492,
+        "illuminatedFraction": 0.9921451,
+        "angularRadiusDegrees": 0.24422972222222222,
+        "distanceKm": 407591.62457,
+        "elongationDegrees": 169.7986,
+        "waxing": false,
+        "phaseAngleDegrees": 10.1744,
+        "deltaTSeconds": 9639.386734
+      }
+    },
+    {
+      "julianDayUt1": 1750450.257291667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 18:10:30",
+        "jd": 1750450.257291667,
+        "azimuthDegrees": 297.866820525,
+        "elevationDegrees": 4.687926637,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621125,
+        "distanceKm": 152075239.93,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.386404
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 18:10:30",
+        "jd": 1750450.257291667,
+        "azimuthDegrees": 108.261577462,
+        "elevationDegrees": -8.591588729,
+        "illuminatedFraction": 0.9919825,
+        "angularRadiusDegrees": 0.2444227777777778,
+        "distanceKm": 407269.7898,
+        "elongationDegrees": 169.6934,
+        "waxing": false,
+        "phaseAngleDegrees": 10.2794,
+        "deltaTSeconds": 9639.386404
+      }
+    },
+    {
+      "julianDayUt1": 1750450.269097222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 18:27:30",
+        "jd": 1750450.269097222,
+        "azimuthDegrees": 300.615596252,
+        "elevationDegrees": 1.927932024,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211222222222225,
+        "distanceKm": 152075386.7,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.386075
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 18:27:30",
+        "jd": 1750450.269097222,
+        "azimuthDegrees": 110.894063468,
+        "elevationDegrees": -5.709321284,
+        "illuminatedFraction": 0.9918223999999999,
+        "angularRadiusDegrees": 0.24461472222222225,
+        "distanceKm": 406950.21668,
+        "elongationDegrees": 169.5908,
+        "waxing": false,
+        "phaseAngleDegrees": 10.3818,
+        "deltaTSeconds": 9639.386075
+      }
+    },
+    {
+      "julianDayUt1": 1750450.280902778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 18:44:30",
+        "jd": 1750450.280902778,
+        "azimuthDegrees": 303.436495961,
+        "elevationDegrees": -0.75374936,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621119444444444,
+        "distanceKm": 152075525.18,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.385745
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 18:44:30",
+        "jd": 1750450.280902778,
+        "azimuthDegrees": 113.570327313,
+        "elevationDegrees": -2.875214659,
+        "illuminatedFraction": 0.9916648000000001,
+        "angularRadiusDegrees": 0.24480458333333335,
+        "distanceKm": 406634.55706,
+        "elongationDegrees": 169.4907,
+        "waxing": false,
+        "phaseAngleDegrees": 10.4816,
+        "deltaTSeconds": 9639.385745
+      }
+    },
+    {
+      "julianDayUt1": 1750450.292708333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 19:01:30",
+        "jd": 1750450.292708333,
+        "azimuthDegrees": 306.3393851,
+        "elevationDegrees": -3.348354225,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621116666666667,
+        "distanceKm": 152075653.71,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.385416
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 19:01:30",
+        "jd": 1750450.292708333,
+        "azimuthDegrees": 116.302113411,
+        "elevationDegrees": -0.096563095,
+        "illuminatedFraction": 0.9915098999999999,
+        "angularRadiusDegrees": 0.2449913888888889,
+        "distanceKm": 406324.44592,
+        "elongationDegrees": 169.3933,
+        "waxing": false,
+        "phaseAngleDegrees": 10.5788,
+        "deltaTSeconds": 9639.385416
+      }
+    },
+    {
+      "julianDayUt1": 1750450.304513889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 19:18:30",
+        "jd": 1750450.304513889,
+        "azimuthDegrees": 309.333513873,
+        "elevationDegrees": -5.846481564,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621115277777778,
+        "distanceKm": 152075770.7,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.385086
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 19:18:30",
+        "jd": 1750450.304513889,
+        "azimuthDegrees": 119.100833089,
+        "elevationDegrees": 2.618810368,
+        "illuminatedFraction": 0.9913576000000001,
+        "angularRadiusDegrees": 0.24517416666666667,
+        "distanceKm": 406021.49278,
+        "elongationDegrees": 169.2983,
+        "waxing": false,
+        "phaseAngleDegrees": 10.6735,
+        "deltaTSeconds": 9639.385086
+      }
+    },
+    {
+      "julianDayUt1": 1750450.316319444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 19:35:30",
+        "jd": 1750450.316319444,
+        "azimuthDegrees": 312.427369751,
+        "elevationDegrees": -8.238071432,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621113888888889,
+        "distanceKm": 152075874.63,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.384757
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 19:35:30",
+        "jd": 1750450.316319444,
+        "azimuthDegrees": 121.977575277,
+        "elevationDegrees": 5.262479737,
+        "illuminatedFraction": 0.9912079,
+        "angularRadiusDegrees": 0.24535194444444447,
+        "distanceKm": 405727.27292,
+        "elongationDegrees": 169.2058,
+        "waxing": false,
+        "phaseAngleDegrees": 10.7658,
+        "deltaTSeconds": 9639.384757
+      }
+    },
+    {
+      "julianDayUt1": 1750450.328125,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 19:52:30",
+        "jd": 1750450.328125,
+        "azimuthDegrees": 315.628463701,
+        "elevationDegrees": -10.512408479,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211125,
+        "distanceKm": 152075964.05,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.384427
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 19:52:30",
+        "jd": 1750450.328125,
+        "azimuthDegrees": 124.943060074,
+        "elevationDegrees": 7.82535065,
+        "illuminatedFraction": 0.9910607,
+        "angularRadiusDegrees": 0.24552374999999999,
+        "distanceKm": 405443.31918,
+        "elongationDegrees": 169.1157,
+        "waxing": false,
+        "phaseAngleDegrees": 10.8557,
+        "deltaTSeconds": 9639.384427
+      }
+    },
+    {
+      "julianDayUt1": 1750450.339930556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 20:09:30",
+        "jd": 1750450.339930556,
+        "azimuthDegrees": 318.943049921,
+        "elevationDegrees": -12.658157667,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211111111111113,
+        "distanceKm": 152076037.57,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.384098
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 20:09:30",
+        "jd": 1750450.339930556,
+        "azimuthDegrees": 128.007529491,
+        "elevationDegrees": 10.297608078,
+        "illuminatedFraction": 0.9909161000000001,
+        "angularRadiusDegrees": 0.24568875,
+        "distanceKm": 405171.11345,
+        "elongationDegrees": 169.0277,
+        "waxing": false,
+        "phaseAngleDegrees": 10.9434,
+        "deltaTSeconds": 9639.384098
+      }
+    },
+    {
+      "julianDayUt1": 1750450.351736111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 20:26:30",
+        "jd": 1750450.351736111,
+        "azimuthDegrees": 322.375783505,
+        "elevationDegrees": -14.663440528,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211097222222224,
+        "distanceKm": 152076093.92,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.383768
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 20:26:30",
+        "jd": 1750450.351736111,
+        "azimuthDegrees": 131.180567479,
+        "elevationDegrees": 12.668682175,
+        "illuminatedFraction": 0.9907738,
+        "angularRadiusDegrees": 0.2458459722222222,
+        "distanceKm": 404912.07863,
+        "elongationDegrees": 168.9419,
+        "waxing": false,
+        "phaseAngleDegrees": 11.029,
+        "deltaTSeconds": 9639.383768
+      }
+    },
+    {
+      "julianDayUt1": 1750450.363541667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 20:43:30",
+        "jd": 1750450.363541667,
+        "azimuthDegrees": 325.929327656,
+        "elevationDegrees": -16.515960497,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211097222222224,
+        "distanceKm": 152076131.89,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.383438
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 20:43:30",
+        "jd": 1750450.363541667,
+        "azimuthDegrees": 134.470842677,
+        "elevationDegrees": 14.927239903,
+        "illuminatedFraction": 0.9906337999999999,
+        "angularRadiusDegrees": 0.24599444444444446,
+        "distanceKm": 404667.5707,
+        "elongationDegrees": 168.8581,
+        "waxing": false,
+        "phaseAngleDegrees": 11.1126,
+        "deltaTSeconds": 9639.383438
+      }
+    },
+    {
+      "julianDayUt1": 1750450.375347222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 21:00:30",
+        "jd": 1750450.375347222,
+        "azimuthDegrees": 329.603932076,
+        "elevationDegrees": -18.203184766,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211083333333335,
+        "distanceKm": 152076150.4,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.383109
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 21:00:30",
+        "jd": 1750450.375347222,
+        "azimuthDegrees": 137.885769106,
+        "elevationDegrees": 17.061211329,
+        "illuminatedFraction": 0.9904958,
+        "angularRadiusDegrees": 0.24613361111111112,
+        "distanceKm": 404438.87131,
+        "elongationDegrees": 168.7761,
+        "waxing": false,
+        "phaseAngleDegrees": 11.1944,
+        "deltaTSeconds": 9639.383109
+      }
+    },
+    {
+      "julianDayUt1": 1750450.387152778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 21:17:30",
+        "jd": 1750450.387152778,
+        "azimuthDegrees": 333.397016217,
+        "elevationDegrees": -19.712587452,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211083333333335,
+        "distanceKm": 152076148.45,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.382779
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 21:17:30",
+        "jd": 1750450.387152778,
+        "azimuthDegrees": 141.431086239,
+        "elevationDegrees": 19.057861456,
+        "illuminatedFraction": 0.9903597000000001,
+        "angularRadiusDegrees": 0.2462625,
+        "distanceKm": 404227.18048,
+        "elongationDegrees": 168.6958,
+        "waxing": false,
+        "phaseAngleDegrees": 11.2745,
+        "deltaTSeconds": 9639.382779
+      }
+    },
+    {
+      "julianDayUt1": 1750450.398958333,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 21:34:30",
+        "jd": 1750450.398958333,
+        "azimuthDegrees": 337.30280354,
+        "elevationDegrees": -21.031954061,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211097222222224,
+        "distanceKm": 152076125.17,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.38245
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 21:34:30",
+        "jd": 1750450.398958333,
+        "azimuthDegrees": 145.110368248,
+        "elevationDegrees": 20.903918639,
+        "illuminatedFraction": 0.9902251,
+        "angularRadiusDegrees": 0.24638041666666669,
+        "distanceKm": 404033.61,
+        "elongationDegrees": 168.617,
+        "waxing": false,
+        "phaseAngleDegrees": 11.3532,
+        "deltaTSeconds": 9639.38245
+      }
+    },
+    {
+      "julianDayUt1": 1750450.410763889,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 21:51:30",
+        "jd": 1750450.410763889,
+        "azimuthDegrees": 341.31206307,
+        "elevationDegrees": -22.149740329,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211097222222224,
+        "distanceKm": 152076079.8,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.38212
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 21:51:30",
+        "jd": 1750450.410763889,
+        "azimuthDegrees": 148.924486317,
+        "elevationDegrees": 22.585770377,
+        "illuminatedFraction": 0.9900918,
+        "angularRadiusDegrees": 0.24648694444444444,
+        "distanceKm": 403859.17684,
+        "elongationDegrees": 168.5394,
+        "waxing": false,
+        "phaseAngleDegrees": 11.4305,
+        "deltaTSeconds": 9639.38212
+      }
+    },
+    {
+      "julianDayUt1": 1750450.422569444,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 22:08:30",
+        "jd": 1750450.422569444,
+        "azimuthDegrees": 345.412018434,
+        "elevationDegrees": -23.055469921,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211111111111113,
+        "distanceKm": 152076011.71,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.381791
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 22:08:30",
+        "jd": 1750450.422569444,
+        "azimuthDegrees": 152.871063761,
+        "elevationDegrees": 24.089733912,
+        "illuminatedFraction": 0.9899595999999999,
+        "angularRadiusDegrees": 0.2465811111111111,
+        "distanceKm": 403704.79765,
+        "elongationDegrees": 168.463,
+        "waxing": false,
+        "phaseAngleDegrees": 11.5068,
+        "deltaTSeconds": 9639.381791
+      }
+    },
+    {
+      "julianDayUt1": 1750450.434375,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 22:25:30",
+        "jd": 1750450.434375,
+        "azimuthDegrees": 349.586478399,
+        "elevationDegrees": -23.740146312,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211125,
+        "distanceKm": 152075920.38,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.381461
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 22:25:30",
+        "jd": 1750450.434375,
+        "azimuthDegrees": 156.943983473,
+        "elevationDegrees": 25.402403962,
+        "illuminatedFraction": 0.9898281,
+        "angularRadiusDegrees": 0.2466627777777778,
+        "distanceKm": 403571.28322,
+        "elongationDegrees": 168.3875,
+        "waxing": false,
+        "phaseAngleDegrees": 11.5821,
+        "deltaTSeconds": 9639.381461
+      }
+    },
+    {
+      "julianDayUt1": 1750450.446180556,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 22:42:30",
+        "jd": 1750450.446180556,
+        "azimuthDegrees": 353.816224018,
+        "elevationDegrees": -24.196646324,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621115277777778,
+        "distanceKm": 152075805.42,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.381131
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 22:42:30",
+        "jd": 1750450.446180556,
+        "azimuthDegrees": 161.133021913,
+        "elevationDegrees": 26.511070619,
+        "illuminatedFraction": 0.9896969,
+        "angularRadiusDegrees": 0.2467311111111111,
+        "distanceKm": 403459.33404,
+        "elongationDegrees": 168.3126,
+        "waxing": false,
+        "phaseAngleDegrees": 11.6568,
+        "deltaTSeconds": 9639.381131
+      }
+    },
+    {
+      "julianDayUt1": 1750450.457986111,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 22:59:30",
+        "jd": 1750450.457986111,
+        "azimuthDegrees": 358.079656253,
+        "elevationDegrees": -24.420058423,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621116666666667,
+        "distanceKm": 152075666.59,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.380802
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 22:59:30",
+        "jd": 1750450.457986111,
+        "azimuthDegrees": 165.423693513,
+        "elevationDegrees": 27.404189579,
+        "illuminatedFraction": 0.9895655999999999,
+        "angularRadiusDegrees": 0.2467861111111111,
+        "distanceKm": 403369.53608,
+        "elongationDegrees": 168.2382,
+        "waxing": false,
+        "phaseAngleDegrees": 11.7311,
+        "deltaTSeconds": 9639.380802
+      }
+    },
+    {
+      "julianDayUt1": 1750450.469791667,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 23:16:30",
+        "jd": 1750450.469791667,
+        "azimuthDegrees": 2.353668957,
+        "elevationDegrees": -24.407929971,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621119444444444,
+        "distanceKm": 152075503.75,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.380472
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 23:16:30",
+        "jd": 1750450.469791667,
+        "azimuthDegrees": 169.797381808,
+        "elevationDegrees": 28.071873907,
+        "illuminatedFraction": 0.9894339999999999,
+        "angularRadiusDegrees": 0.24682722222222223,
+        "distanceKm": 403302.35746,
+        "elongationDegrees": 168.164,
+        "waxing": false,
+        "phaseAngleDegrees": 11.8051,
+        "deltaTSeconds": 9639.380472
+      }
+    },
+    {
+      "julianDayUt1": 1750450.481597222,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 23:33:30",
+        "jd": 1750450.481597222,
+        "azimuthDegrees": 6.614673302,
+        "elevationDegrees": -24.160395009,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211236111111114,
+        "distanceKm": 152075316.91,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.380143
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 23:33:30",
+        "jd": 1750450.481597222,
+        "azimuthDegrees": 174.23180933,
+        "elevationDegrees": 28.506365767,
+        "illuminatedFraction": 0.9893015,
+        "angularRadiusDegrees": 0.24685430555555557,
+        "distanceKm": 403258.1456,
+        "elongationDegrees": 168.0898,
+        "waxing": false,
+        "phaseAngleDegrees": 11.8791,
+        "deltaTSeconds": 9639.380143
+      }
+    },
+    {
+      "julianDayUt1": 1750450.493402778,
+      "sun": {
+        "calendarUt1": "0080-Jun-21 23:50:30",
+        "jd": 1750450.493402778,
+        "azimuthDegrees": 10.839672635,
+        "elevationDegrees": -23.680167196,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621126388888889,
+        "distanceKm": 152075106.22,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.379813
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-21 23:50:30",
+        "jd": 1750450.493402778,
+        "azimuthDegrees": 178.701853685,
+        "elevationDegrees": 28.702440071,
+        "illuminatedFraction": 0.9891678,
+        "angularRadiusDegrees": 0.24686708333333332,
+        "distanceKm": 403237.12539,
+        "elongationDegrees": 168.0154,
+        "waxing": false,
+        "phaseAngleDegrees": 11.9533,
+        "deltaTSeconds": 9639.379813
+      }
+    },
+    {
+      "julianDayUt1": 1750450.505208333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 00:07:30",
+        "jd": 1750450.505208333,
+        "azimuthDegrees": 15.007275647,
+        "elevationDegrees": -22.972398761,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211305555555553,
+        "distanceKm": 152074871.93,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.379484
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 00:07:30",
+        "jd": 1750450.505208333,
+        "azimuthDegrees": 183.180660624,
+        "elevationDegrees": 28.65769326,
+        "illuminatedFraction": 0.9890323999999999,
+        "angularRadiusDegrees": 0.24686569444444445,
+        "distanceKm": 403239.39766,
+        "elongationDegrees": 167.9404,
+        "waxing": false,
+        "phaseAngleDegrees": 12.028,
+        "deltaTSeconds": 9639.379484
+      }
+    },
+    {
+      "julianDayUt1": 1750450.517013889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 00:24:30",
+        "jd": 1750450.517013889,
+        "azimuthDegrees": 19.098548973,
+        "elevationDegrees": -22.044422398,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211347222222225,
+        "distanceKm": 152074614.45,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.379154
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 00:24:30",
+        "jd": 1750450.517013889,
+        "azimuthDegrees": 187.640949604,
+        "elevationDegrees": 28.372680891,
+        "illuminatedFraction": 0.9888948999999999,
+        "angularRadiusDegrees": 0.24685013888888888,
+        "distanceKm": 403264.93871,
+        "elongationDegrees": 167.8648,
+        "waxing": false,
+        "phaseAngleDegrees": 12.1034,
+        "deltaTSeconds": 9639.379154
+      }
+    },
+    {
+      "julianDayUt1": 1750450.528819445,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 00:41:30",
+        "jd": 1750450.528819445,
+        "azimuthDegrees": 23.097638951,
+        "elevationDegrees": -20.905405556,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211402777777776,
+        "distanceKm": 152074334.3,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.378825
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 00:41:30",
+        "jd": 1750450.528819445,
+        "azimuthDegrees": 192.056368118,
+        "elevationDegrees": 27.850885835,
+        "illuminatedFraction": 0.9887547999999999,
+        "angularRadiusDegrees": 0.24682027777777776,
+        "distanceKm": 403313.60036,
+        "elongationDegrees": 167.7883,
+        "waxing": false,
+        "phaseAngleDegrees": 12.1798,
+        "deltaTSeconds": 9639.378825
+      }
+    },
+    {
+      "julianDayUt1": 1750450.540625,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 00:58:30",
+        "jd": 1750450.540625,
+        "azimuthDegrees": 26.992131572,
+        "elevationDegrees": -19.565953347,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621145833333333,
+        "distanceKm": 152074032.13,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.378495
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 00:58:30",
+        "jd": 1750450.540625,
+        "azimuthDegrees": 196.402740987,
+        "elevationDegrees": 27.098521359,
+        "illuminatedFraction": 0.9886117,
+        "angularRadiusDegrees": 0.24677652777777778,
+        "distanceKm": 403385.11079,
+        "elongationDegrees": 167.7106,
+        "waxing": false,
+        "phaseAngleDegrees": 12.2573,
+        "deltaTSeconds": 9639.378495
+      }
+    },
+    {
+      "julianDayUt1": 1750450.552430556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 01:15:30",
+        "jd": 1750450.552430556,
+        "azimuthDegrees": 30.773158182,
+        "elevationDegrees": -18.037696727,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621151388888889,
+        "distanceKm": 152073708.72,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.378165
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 01:15:30",
+        "jd": 1750450.552430556,
+        "azimuthDegrees": 200.659082368,
+        "elevationDegrees": 26.124194791,
+        "illuminatedFraction": 0.9884651999999999,
+        "angularRadiusDegrees": 0.24671916666666666,
+        "distanceKm": 403479.0763,
+        "elongationDegrees": 167.6315,
+        "waxing": false,
+        "phaseAngleDegrees": 12.3362,
+        "deltaTSeconds": 9639.378165
+      }
+    },
+    {
+      "julianDayUt1": 1750450.564236111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 01:32:30",
+        "jd": 1750450.564236111,
+        "azimuthDegrees": 34.435284588,
+        "elevationDegrees": -16.332897804,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211569444444444,
+        "distanceKm": 152073364.94,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.377836
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 01:32:30",
+        "jd": 1750450.564236111,
+        "azimuthDegrees": 204.808285921,
+        "elevationDegrees": 24.938472949,
+        "illuminatedFraction": 0.9883147,
+        "angularRadiusDegrees": 0.24664819444444444,
+        "distanceKm": 403594.98335,
+        "elongationDegrees": 167.5508,
+        "waxing": false,
+        "phaseAngleDegrees": 12.4166,
+        "deltaTSeconds": 9639.377836
+      }
+    },
+    {
+      "julianDayUt1": 1750450.576041667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 01:49:30",
+        "jd": 1750450.576041667,
+        "azimuthDegrees": 37.976238785,
+        "elevationDegrees": -14.464096026,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211625,
+        "distanceKm": 152073001.8,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.377506
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 01:49:30",
+        "jd": 1750450.576041667,
+        "azimuthDegrees": 208.837465254,
+        "elevationDegrees": 23.553397678,
+        "illuminatedFraction": 0.9881599,
+        "angularRadiusDegrees": 0.24656444444444442,
+        "distanceKm": 403732.20162,
+        "elongationDegrees": 167.4683,
+        "waxing": false,
+        "phaseAngleDegrees": 12.4989,
+        "deltaTSeconds": 9639.377506
+      }
+    },
+    {
+      "julianDayUt1": 1750450.587847222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 02:06:30",
+        "jd": 1750450.587847222,
+        "azimuthDegrees": 41.396537495,
+        "elevationDegrees": -12.443809829,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211694444444444,
+        "distanceKm": 152072620.4,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.377177
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 02:06:30",
+        "jd": 1750450.587847222,
+        "azimuthDegrees": 212.737970691,
+        "elevationDegrees": 21.981997933,
+        "illuminatedFraction": 0.9880004,
+        "angularRadiusDegrees": 0.24646805555555554,
+        "distanceKm": 403889.98771,
+        "elongationDegrees": 167.3838,
+        "waxing": false,
+        "phaseAngleDegrees": 12.5832,
+        "deltaTSeconds": 9639.377177
+      }
+    },
+    {
+      "julianDayUt1": 1750450.599652778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 02:23:30",
+        "jd": 1750450.599652778,
+        "azimuthDegrees": 44.699066976,
+        "elevationDegrees": -10.284299872,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621176388888889,
+        "distanceKm": 152072221.95,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.376847
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 02:23:30",
+        "jd": 1750450.599652778,
+        "azimuthDegrees": 216.505146022,
+        "elevationDegrees": 20.237836247,
+        "illuminatedFraction": 0.9878355999999999,
+        "angularRadiusDegrees": 0.2463598611111111,
+        "distanceKm": 404067.4894,
+        "elongationDegrees": 167.2972,
+        "waxing": false,
+        "phaseAngleDegrees": 12.6696,
+        "deltaTSeconds": 9639.376847
+      }
+    },
+    {
+      "julianDayUt1": 1750450.611458333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 02:40:30",
+        "jd": 1750450.611458333,
+        "azimuthDegrees": 47.888663017,
+        "elevationDegrees": -7.997393264,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26211833333333334,
+        "distanceKm": 152071807.73,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.376518
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 02:40:30",
+        "jd": 1750450.611458333,
+        "azimuthDegrees": 220.137906188,
+        "elevationDegrees": 18.334615648,
+        "illuminatedFraction": 0.9876651,
+        "angularRadiusDegrees": 0.2462402777777778,
+        "distanceKm": 404263.7505,
+        "elongationDegrees": 167.2082,
+        "waxing": false,
+        "phaseAngleDegrees": 12.7584,
+        "deltaTSeconds": 9639.376518
+      }
+    },
+    {
+      "julianDayUt1": 1750450.623263889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 02:57:30",
+        "jd": 1750450.623263889,
+        "azimuthDegrees": 50.971722513,
+        "elevationDegrees": -5.594363656,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621191666666667,
+        "distanceKm": 152071379.14,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.376188
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 02:57:30",
+        "jd": 1750450.623263889,
+        "azimuthDegrees": 223.638217572,
+        "elevationDegrees": 16.285860564,
+        "illuminatedFraction": 0.9874885999999999,
+        "angularRadiusDegrees": 0.24611,
+        "distanceKm": 404477.7164,
+        "elongationDegrees": 167.1166,
+        "waxing": false,
+        "phaseAngleDegrees": 12.8497,
+        "deltaTSeconds": 9639.376188
+      }
+    },
+    {
+      "julianDayUt1": 1750450.635069444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 03:14:30",
+        "jd": 1750450.635069444,
+        "azimuthDegrees": 53.95586709,
+        "elevationDegrees": -3.085859537,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621198611111111,
+        "distanceKm": 152070937.64,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.375858
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 03:14:30",
+        "jd": 1750450.635069444,
+        "azimuthDegrees": 227.010550421,
+        "elevationDegrees": 14.104674796,
+        "illuminatedFraction": 0.9873057,
+        "angularRadiusDegrees": 0.24596972222222221,
+        "distanceKm": 404708.23985,
+        "elongationDegrees": 167.0224,
+        "waxing": false,
+        "phaseAngleDegrees": 12.9436,
+        "deltaTSeconds": 9639.375858
+      }
+    },
+    {
+      "julianDayUt1": 1750450.646875,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 03:31:30",
+        "jd": 1750450.646875,
+        "azimuthDegrees": 56.849669546,
+        "elevationDegrees": -0.481872186,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26212069444444447,
+        "distanceKm": 152070484.76,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.375529
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 03:31:30",
+        "jd": 1750450.646875,
+        "azimuthDegrees": 230.261355165,
+        "elevationDegrees": 11.803572249,
+        "illuminatedFraction": 0.987116,
+        "angularRadiusDegrees": 0.24582041666666665,
+        "distanceKm": 404954.08773,
+        "elongationDegrees": 166.9254,
+        "waxing": false,
+        "phaseAngleDegrees": 13.0403,
+        "deltaTSeconds": 9639.375529
+      }
+    },
+    {
+      "julianDayUt1": 1750450.658680555,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 03:48:30",
+        "jd": 1750450.658680555,
+        "azimuthDegrees": 59.662446913,
+        "elevationDegrees": 2.208264995,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26212138888888886,
+        "distanceKm": 152070022.1,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.375199
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 03:48:30",
+        "jd": 1750450.658680555,
+        "azimuthDegrees": 233.398596668,
+        "elevationDegrees": 9.394371132,
+        "illuminatedFraction": 0.9869190999999999,
+        "angularRadiusDegrees": 0.24566277777777776,
+        "distanceKm": 405213.94784,
+        "elongationDegrees": 166.8255,
+        "waxing": false,
+        "phaseAngleDegrees": 13.14,
+        "deltaTSeconds": 9639.375199
+      }
+    },
+    {
+      "julianDayUt1": 1750450.670486111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 04:05:30",
+        "jd": 1750450.670486111,
+        "azimuthDegrees": 62.404119632,
+        "elevationDegrees": 4.975853115,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621222222222222,
+        "distanceKm": 152069551.3,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.37487
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 04:05:30",
+        "jd": 1750450.670486111,
+        "azimuthDegrees": 236.431364404,
+        "elevationDegrees": 6.888140627,
+        "illuminatedFraction": 0.9867148,
+        "angularRadiusDegrees": 0.2454977777777778,
+        "distanceKm": 405486.4361,
+        "elongationDegrees": 166.7226,
+        "waxing": false,
+        "phaseAngleDegrees": 13.2426,
+        "deltaTSeconds": 9639.37487
+      }
+    },
+    {
+      "julianDayUt1": 1750450.682291667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 04:22:30",
+        "jd": 1750450.682291667,
+        "azimuthDegrees": 65.085134284,
+        "elevationDegrees": 7.812786393,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26212305555555554,
+        "distanceKm": 152069074.05,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.37454
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 04:22:30",
+        "jd": 1750450.682291667,
+        "azimuthDegrees": 239.369564582,
+        "elevationDegrees": 4.295189143,
+        "illuminatedFraction": 0.9865026,
+        "angularRadiusDegrees": 0.2453261111111111,
+        "distanceKm": 405770.10441,
+        "elongationDegrees": 166.6165,
+        "waxing": false,
+        "phaseAngleDegrees": 13.3484,
+        "deltaTSeconds": 9639.37454
+      }
+    },
+    {
+      "julianDayUt1": 1750450.694097222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 04:39:30",
+        "jd": 1750450.694097222,
+        "azimuthDegrees": 67.716447081,
+        "elevationDegrees": 10.711497302,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621238888888889,
+        "distanceKm": 152068592.09,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.374211
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 04:39:30",
+        "jd": 1750450.694097222,
+        "azimuthDegrees": 242.223693274,
+        "elevationDegrees": 1.625083671,
+        "illuminatedFraction": 0.9862823000000001,
+        "angularRadiusDegrees": 0.24514888888888886,
+        "distanceKm": 406063.44847,
+        "elongationDegrees": 166.5073,
+        "waxing": false,
+        "phaseAngleDegrees": 13.4573,
+        "deltaTSeconds": 9639.374211
+      }
+    },
+    {
+      "julianDayUt1": 1750450.705902778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 04:56:30",
+        "jd": 1750450.705902778,
+        "azimuthDegrees": 70.309566409,
+        "elevationDegrees": 13.664891399,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621247222222222,
+        "distanceKm": 152068107.17,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.373881
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 04:56:30",
+        "jd": 1750450.705902778,
+        "azimuthDegrees": 245.004684551,
+        "elevationDegrees": -1.113307882,
+        "illuminatedFraction": 0.9860536999999999,
+        "angularRadiusDegrees": 0.24496694444444445,
+        "distanceKm": 406364.91617,
+        "elongationDegrees": 166.3948,
+        "waxing": false,
+        "phaseAngleDegrees": 13.5695,
+        "deltaTSeconds": 9639.373881
+      }
+    },
+    {
+      "julianDayUt1": 1750450.717708333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 05:13:30",
+        "jd": 1750450.717708333,
+        "azimuthDegrees": 72.876654944,
+        "elevationDegrees": 16.666273579,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26212555555555556,
+        "distanceKm": 152067621.05,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.373552
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 05:13:30",
+        "jd": 1750450.717708333,
+        "azimuthDegrees": 247.723826765,
+        "elevationDegrees": -3.911758446,
+        "illuminatedFraction": 0.9858163999999999,
+        "angularRadiusDegrees": 0.24478152777777776,
+        "distanceKm": 406672.9156,
+        "elongationDegrees": 166.279,
+        "waxing": false,
+        "phaseAngleDegrees": 13.6849,
+        "deltaTSeconds": 9639.373552
+      }
+    },
+    {
+      "julianDayUt1": 1750450.729513889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 05:30:30",
+        "jd": 1750450.729513889,
+        "azimuthDegrees": 75.430695011,
+        "elevationDegrees": 19.70926623,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621263888888889,
+        "distanceKm": 152067135.52,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.373222
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 05:30:30",
+        "jd": 1750450.729513889,
+        "azimuthDegrees": 250.392739311,
+        "elevationDegrees": -6.762611811,
+        "illuminatedFraction": 0.9855704,
+        "angularRadiusDegrees": 0.24459319444444444,
+        "distanceKm": 406985.82404,
+        "elongationDegrees": 166.16,
+        "waxing": false,
+        "phaseAngleDegrees": 13.8036,
+        "deltaTSeconds": 9639.373222
+      }
+    },
+    {
+      "julianDayUt1": 1750450.741319444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 05:47:30",
+        "jd": 1750450.741319444,
+        "azimuthDegrees": 77.985724894,
+        "elevationDegrees": 22.787718153,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26212722222222223,
+        "distanceKm": 152066652.34,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.372892
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 05:47:30",
+        "jd": 1750450.741319444,
+        "azimuthDegrees": 253.023404596,
+        "elevationDegrees": -9.658704629,
+        "illuminatedFraction": 0.9853153,
+        "angularRadiusDegrees": 0.24440333333333333,
+        "distanceKm": 407301.99626,
+        "elongationDegrees": 166.0376,
+        "waxing": false,
+        "phaseAngleDegrees": 13.9257,
+        "deltaTSeconds": 9639.372892
+      }
+    },
+    {
+      "julianDayUt1": 1750450.753125,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 06:04:30",
+        "jd": 1750450.753125,
+        "azimuthDegrees": 80.55715971,
+        "elevationDegrees": 25.895602311,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621280555555555,
+        "distanceKm": 152066173.27,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.372563
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 06:04:30",
+        "jd": 1750450.753125,
+        "azimuthDegrees": 255.628251585,
+        "elevationDegrees": -12.593282115,
+        "illuminatedFraction": 0.9850511000000001,
+        "angularRadiusDegrees": 0.24421291666666667,
+        "distanceKm": 407619.77326,
+        "elongationDegrees": 165.912,
+        "waxing": false,
+        "phaseAngleDegrees": 14.0509,
+        "deltaTSeconds": 9639.372563
+      }
+    },
+    {
+      "julianDayUt1": 1750450.764930556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 06:21:30",
+        "jd": 1750450.764930556,
+        "azimuthDegrees": 83.162216715,
+        "elevationDegrees": 29.026897649,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621288888888889,
+        "distanceKm": 152065700.05,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.372233
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 06:21:30",
+        "jd": 1750450.764930556,
+        "azimuthDegrees": 258.220289356,
+        "elevationDegrees": -15.559907318,
+        "illuminatedFraction": 0.9847776,
+        "angularRadiusDegrees": 0.2440226388888889,
+        "distanceKm": 407937.491,
+        "elongationDegrees": 165.7831,
+        "waxing": false,
+        "phaseAngleDegrees": 14.1795,
+        "deltaTSeconds": 9639.372233
+      }
+    },
+    {
+      "julianDayUt1": 1750450.776736111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 06:38:30",
+        "jd": 1750450.776736111,
+        "azimuthDegrees": 85.82047518,
+        "elevationDegrees": 32.175449037,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26212972222222225,
+        "distanceKm": 152065234.38,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.371904
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 06:38:30",
+        "jd": 1750450.776736111,
+        "azimuthDegrees": 260.81329295,
+        "elevationDegrees": -18.552363723,
+        "illuminatedFraction": 0.9844947000000001,
+        "angularRadiusDegrees": 0.24383375000000002,
+        "distanceKm": 408253.4889,
+        "elongationDegrees": 165.6509,
+        "waxing": false,
+        "phaseAngleDegrees": 14.3113,
+        "deltaTSeconds": 9639.371904
+      }
+    },
+    {
+      "julianDayUt1": 1750450.788541667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 06:55:30",
+        "jd": 1750450.788541667,
+        "azimuthDegrees": 88.554613163,
+        "elevationDegrees": 35.334795662,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213041666666664,
+        "distanceKm": 152064777.92,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.371574
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 06:55:30",
+        "jd": 1750450.788541667,
+        "azimuthDegrees": 263.422046333,
+        "elevationDegrees": -21.564548941,
+        "illuminatedFraction": 0.9842025,
+        "angularRadiusDegrees": 0.2436472222222222,
+        "distanceKm": 408566.11837,
+        "elongationDegrees": 165.5156,
+        "waxing": false,
+        "phaseAngleDegrees": 14.4462,
+        "deltaTSeconds": 9639.371574
+      }
+    },
+    {
+      "julianDayUt1": 1750450.800347222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 07:12:30",
+        "jd": 1750450.800347222,
+        "azimuthDegrees": 91.391380758,
+        "elevationDegrees": 38.497954041,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213125,
+        "distanceKm": 152064332.29,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.371245
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 07:12:30",
+        "jd": 1750450.800347222,
+        "azimuthDegrees": 266.062651,
+        "elevationDegrees": -24.590356082,
+        "illuminatedFraction": 0.9839007,
+        "angularRadiusDegrees": 0.2434638888888889,
+        "distanceKm": 408873.75125,
+        "elongationDegrees": 165.3773,
+        "waxing": false,
+        "phaseAngleDegrees": 14.5842,
+        "deltaTSeconds": 9639.371245
+      }
+    },
+    {
+      "julianDayUt1": 1750450.812152778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 07:29:30",
+        "jd": 1750450.812152778,
+        "azimuthDegrees": 94.362892174,
+        "elevationDegrees": 41.657135321,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213194444444443,
+        "distanceKm": 152063899.02,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.370915
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 07:29:30",
+        "jd": 1750450.812152778,
+        "azimuthDegrees": 268.7529131,
+        "elevationDegrees": -27.623538351,
+        "illuminatedFraction": 0.9835894999999999,
+        "angularRadiusDegrees": 0.24328472222222222,
+        "distanceKm": 409174.78777,
+        "elongationDegrees": 165.2359,
+        "waxing": false,
+        "phaseAngleDegrees": 14.7252,
+        "deltaTSeconds": 9639.370915
+      }
+    },
+    {
+      "julianDayUt1": 1750450.823958333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 07:46:30",
+        "jd": 1750450.823958333,
+        "azimuthDegrees": 97.508348195,
+        "elevationDegrees": 44.803367001,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213277777777777,
+        "distanceKm": 152063479.6,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.370586
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 07:46:30",
+        "jd": 1750450.823958333,
+        "azimuthDegrees": 271.512825746,
+        "elevationDegrees": -30.657549675,
+        "illuminatedFraction": 0.9832689000000001,
+        "angularRadiusDegrees": 0.24311069444444444,
+        "distanceKm": 409467.66482,
+        "elongationDegrees": 165.0916,
+        "waxing": false,
+        "phaseAngleDegrees": 14.8691,
+        "deltaTSeconds": 9639.370586
+      }
+    },
+    {
+      "julianDayUt1": 1750450.835763889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 08:03:30",
+        "jd": 1750450.835763889,
+        "azimuthDegrees": 100.876334672,
+        "elevationDegrees": 47.925974943,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621334722222222,
+        "distanceKm": 152063075.45,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.370256
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 08:03:30",
+        "jd": 1750450.835763889,
+        "azimuthDegrees": 274.365168706,
+        "elevationDegrees": -33.68535282,
+        "illuminatedFraction": 0.9829389999999999,
+        "angularRadiusDegrees": 0.24294277777777779,
+        "distanceKm": 409750.8634,
+        "elongationDegrees": 164.9445,
+        "waxing": false,
+        "phaseAngleDegrees": 15.0157,
+        "deltaTSeconds": 9639.370256
+      }
+    },
+    {
+      "julianDayUt1": 1750450.847569444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 08:20:30",
+        "jd": 1750450.847569444,
+        "azimuthDegrees": 104.527873283,
+        "elevationDegrees": 51.011860498,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621340277777778,
+        "distanceKm": 152062687.87,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.369926
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 08:20:30",
+        "jd": 1750450.847569444,
+        "azimuthDegrees": 277.336251148,
+        "elevationDegrees": -36.699182237,
+        "illuminatedFraction": 0.9825999,
+        "angularRadiusDegrees": 0.24278152777777778,
+        "distanceKm": 410022.91621,
+        "elongationDegrees": 164.7948,
+        "waxing": false,
+        "phaseAngleDegrees": 15.1651,
+        "deltaTSeconds": 9639.369926
+      }
+    },
+    {
+      "julianDayUt1": 1750450.859375,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 08:37:30",
+        "jd": 1750450.859375,
+        "azimuthDegrees": 108.54040058,
+        "elevationDegrees": 54.044477463,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621347222222222,
+        "distanceKm": 152062318.1,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.369597
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 08:37:30",
+        "jd": 1750450.859375,
+        "azimuthDegrees": 280.456825998,
+        "elevationDegrees": -39.690245406,
+        "illuminatedFraction": 0.9822516,
+        "angularRadiusDegrees": 0.24262791666666667,
+        "distanceKm": 410282.41469,
+        "elongationDegrees": 164.6425,
+        "waxing": false,
+        "phaseAngleDegrees": 15.3169,
+        "deltaTSeconds": 9639.369597
+      }
+    },
+    {
+      "julianDayUt1": 1750450.871180556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 08:54:30",
+        "jd": 1750450.871180556,
+        "azimuthDegrees": 113.012746251,
+        "elevationDegrees": 57.002373717,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621352777777778,
+        "distanceKm": 152061967.27,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.369267
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 08:54:30",
+        "jd": 1750450.871180556,
+        "azimuthDegrees": 283.763200985,
+        "elevationDegrees": -42.648340778,
+        "illuminatedFraction": 0.9818946,
+        "angularRadiusDegrees": 0.24248277777777777,
+        "distanceKm": 410528.01573,
+        "elongationDegrees": 164.4879,
+        "waxing": false,
+        "phaseAngleDegrees": 15.4711,
+        "deltaTSeconds": 9639.369267
+      }
+    },
+    {
+      "julianDayUt1": 1750450.882986111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 09:11:30",
+        "jd": 1750450.882986111,
+        "azimuthDegrees": 118.070786941,
+        "elevationDegrees": 59.857119639,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213583333333335,
+        "distanceKm": 152061636.4,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.368938
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 09:11:30",
+        "jd": 1750450.882986111,
+        "azimuthDegrees": 287.298554944,
+        "elevationDegrees": -45.561363695,
+        "illuminatedFraction": 0.9815288,
+        "angularRadiusDegrees": 0.24234680555555554,
+        "distanceKm": 410758.44834,
+        "elongationDegrees": 164.3311,
+        "waxing": false,
+        "phaseAngleDegrees": 15.6275,
+        "deltaTSeconds": 9639.368938
+      }
+    },
+    {
+      "julianDayUt1": 1750450.894791667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 09:28:30",
+        "jd": 1750450.894791667,
+        "azimuthDegrees": 123.872348287,
+        "elevationDegrees": 62.570431398,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621363888888889,
+        "distanceKm": 152061326.42,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.368608
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 09:28:30",
+        "jd": 1750450.894791667,
+        "azimuthDegrees": 291.11442451,
+        "elevationDegrees": -48.414665655,
+        "illuminatedFraction": 0.9811547,
+        "angularRadiusDegrees": 0.24222055555555555,
+        "distanceKm": 410972.51923,
+        "elongationDegrees": 164.1722,
+        "waxing": false,
+        "phaseAngleDegrees": 15.7859,
+        "deltaTSeconds": 9639.368608
+      }
+    },
+    {
+      "julianDayUt1": 1750450.906597222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 09:45:30",
+        "jd": 1750450.906597222,
+        "azimuthDegrees": 130.607287139,
+        "elevationDegrees": 65.090411464,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213694444444446,
+        "distanceKm": 152061038.11,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.368279
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 09:45:30",
+        "jd": 1750450.906597222,
+        "azimuthDegrees": 295.272224645,
+        "elevationDegrees": -51.19022611,
+        "illuminatedFraction": 0.9807724,
+        "angularRadiusDegrees": 0.24210472222222224,
+        "distanceKm": 411169.1189,
+        "elongationDegrees": 164.0115,
+        "waxing": false,
+        "phaseAngleDegrees": 15.9462,
+        "deltaTSeconds": 9639.368279
+      }
+    },
+    {
+      "julianDayUt1": 1750450.918402778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 10:02:30",
+        "jd": 1750450.918402778,
+        "azimuthDegrees": 138.483354797,
+        "elevationDegrees": 67.347323306,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621373611111111,
+        "distanceKm": 152060772.17,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.367949
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 10:02:30",
+        "jd": 1750450.918402778,
+        "azimuthDegrees": 299.844461395,
+        "elevationDegrees": -53.865601209,
+        "illuminatedFraction": 0.9803824,
+        "angularRadiusDegrees": 0.2419998611111111,
+        "distanceKm": 411347.22649,
+        "elongationDegrees": 163.8492,
+        "waxing": false,
+        "phaseAngleDegrees": 16.1081,
+        "deltaTSeconds": 9639.367949
+      }
+    },
+    {
+      "julianDayUt1": 1750450.930208333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 10:19:30",
+        "jd": 1750450.930208333,
+        "azimuthDegrees": 147.68066524,
+        "elevationDegrees": 69.250672034,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621377777777778,
+        "distanceKm": 152060529.15,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.367619
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 10:19:30",
+        "jd": 1750450.930208333,
+        "azimuthDegrees": 304.914902079,
+        "elevationDegrees": -56.412638611,
+        "illuminatedFraction": 0.9799849,
+        "angularRadiusDegrees": 0.2419065277777778,
+        "distanceKm": 411505.91467,
+        "elongationDegrees": 163.6853,
+        "waxing": false,
+        "phaseAngleDegrees": 16.2715,
+        "deltaTSeconds": 9639.367619
+      }
+    },
+    {
+      "julianDayUt1": 1750450.942013889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 10:36:30",
+        "jd": 1750450.942013889,
+        "azimuthDegrees": 158.25559533,
+        "elevationDegrees": 70.691961227,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621381944444444,
+        "distanceKm": 152060309.48,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.36729
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 10:36:30",
+        "jd": 1750450.942013889,
+        "azimuthDegrees": 310.576296874,
+        "elevationDegrees": -58.796024983,
+        "illuminatedFraction": 0.9795805,
+        "angularRadiusDegrees": 0.2418252777777778,
+        "distanceKm": 411644.35379,
+        "elongationDegrees": 163.5202,
+        "waxing": false,
+        "phaseAngleDegrees": 16.4362,
+        "deltaTSeconds": 9639.36729
+      }
+    },
+    {
+      "julianDayUt1": 1750450.953819444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 10:53:30",
+        "jd": 1750450.953819444,
+        "azimuthDegrees": 170.004556827,
+        "elevationDegrees": 71.55988264,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621384722222222,
+        "distanceKm": 152060113.47,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.36696
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 10:53:30",
+        "jd": 1750450.953819444,
+        "azimuthDegrees": 316.92326704,
+        "elevationDegrees": -60.97190682,
+        "illuminatedFraction": 0.9791694,
+        "angularRadiusDegrees": 0.24175625,
+        "distanceKm": 411761.81593,
+        "elongationDegrees": 163.3541,
+        "waxing": false,
+        "phaseAngleDegrees": 16.6019,
+        "deltaTSeconds": 9639.36696
+      }
+    },
+    {
+      "julianDayUt1": 1750450.965625,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 11:10:30",
+        "jd": 1750450.965625,
+        "azimuthDegrees": 182.380018876,
+        "elevationDegrees": 71.770850545,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213875,
+        "distanceKm": 152059941.28,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.366631
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 11:10:30",
+        "jd": 1750450.965625,
+        "azimuthDegrees": 324.037015336,
+        "elevationDegrees": -62.88715617,
+        "illuminatedFraction": 0.9787522,
+        "angularRadiusDegrees": 0.2417,
+        "distanceKm": 411857.67794,
+        "elongationDegrees": 163.187,
+        "waxing": false,
+        "phaseAngleDegrees": 16.7684,
+        "deltaTSeconds": 9639.366631
+      }
+    },
+    {
+      "julianDayUt1": 1750450.977430556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 11:27:30",
+        "jd": 1750450.977430556,
+        "azimuthDegrees": 194.600850567,
+        "elevationDegrees": 71.302272243,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621390277777778,
+        "distanceKm": 152059792.96,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.366301
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 11:27:30",
+        "jd": 1750450.977430556,
+        "azimuthDegrees": 331.958806494,
+        "elevationDegrees": -64.480340911,
+        "illuminatedFraction": 0.9783293000000001,
+        "angularRadiusDegrees": 0.2416566666666667,
+        "distanceKm": 411931.42453,
+        "elongationDegrees": 163.0194,
+        "waxing": false,
+        "phaseAngleDegrees": 16.9356,
+        "deltaTSeconds": 9639.366301
+      }
+    },
+    {
+      "julianDayUt1": 1750450.989236111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 11:44:30",
+        "jd": 1750450.989236111,
+        "azimuthDegrees": 205.946921966,
+        "elevationDegrees": 70.203070156,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213930555555554,
+        "distanceKm": 152059668.42,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.365972
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 11:44:30",
+        "jd": 1750450.989236111,
+        "azimuthDegrees": 340.653334078,
+        "elevationDegrees": -65.685881773,
+        "illuminatedFraction": 0.9779013000000001,
+        "angularRadiusDegrees": 0.24162666666666666,
+        "distanceKm": 411982.65042,
+        "elongationDegrees": 162.8513,
+        "waxing": false,
+        "phaseAngleDegrees": 17.1033,
+        "deltaTSeconds": 9639.365972
+      }
+    },
+    {
+      "julianDayUt1": 1750451.001041667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 12:01:30",
+        "jd": 1750451.001041667,
+        "azimuthDegrees": 216.002221168,
+        "elevationDegrees": 68.571718251,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621394444444444,
+        "distanceKm": 152059567.44,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.365642
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 12:01:30",
+        "jd": 1750451.001041667,
+        "azimuthDegrees": 349.973526168,
+        "elevationDegrees": -66.442554192,
+        "illuminatedFraction": 0.9774687,
+        "angularRadiusDegrees": 0.24161000000000002,
+        "distanceKm": 412011.06246,
+        "elongationDegrees": 162.6831,
+        "waxing": false,
+        "phaseAngleDegrees": 17.2711,
+        "deltaTSeconds": 9639.365642
+      }
+    },
+    {
+      "julianDayUt1": 1750451.012847222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 12:18:30",
+        "jd": 1750451.012847222,
+        "azimuthDegrees": 224.678463081,
+        "elevationDegrees": 66.521286397,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621395833333333,
+        "distanceKm": 152059489.66,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.365313
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 12:18:30",
+        "jd": 1750451.012847222,
+        "azimuthDegrees": 359.650941212,
+        "elevationDegrees": -66.705525884,
+        "illuminatedFraction": 0.9770321,
+        "angularRadiusDegrees": 0.24160680555555555,
+        "distanceKm": 412016.48059,
+        "elongationDegrees": 162.5149,
+        "waxing": false,
+        "phaseAngleDegrees": 17.4389,
+        "deltaTSeconds": 9639.365313
+      }
+    },
+    {
+      "julianDayUt1": 1750451.024652778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 12:35:30",
+        "jd": 1750451.024652778,
+        "azimuthDegrees": 232.094172433,
+        "elevationDegrees": 64.154355425,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621397222222222,
+        "distanceKm": 152059434.6,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.364983
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 12:35:30",
+        "jd": 1750451.024652778,
+        "azimuthDegrees": 9.33450499,
+        "elevationDegrees": -66.45779384,
+        "illuminatedFraction": 0.976592,
+        "angularRadiusDegrees": 0.24161708333333334,
+        "distanceKm": 411998.83891,
+        "elongationDegrees": 162.3469,
+        "waxing": false,
+        "phaseAngleDegrees": 17.6064,
+        "deltaTSeconds": 9639.364983
+      }
+    },
+    {
+      "julianDayUt1": 1750451.036458333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 12:52:30",
+        "jd": 1750451.036458333,
+        "azimuthDegrees": 238.448306964,
+        "elevationDegrees": 61.55337131,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621397222222222,
+        "distanceKm": 152059401.66,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.364653
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 12:52:30",
+        "jd": 1750451.036458333,
+        "azimuthDegrees": 18.671583922,
+        "elevationDegrees": -65.715104366,
+        "illuminatedFraction": 0.9761491,
+        "angularRadiusDegrees": 0.24164097222222222,
+        "distanceKm": 411958.18609,
+        "elongationDegrees": 162.1794,
+        "waxing": false,
+        "phaseAngleDegrees": 17.7735,
+        "deltaTSeconds": 9639.364653
+      }
+    },
+    {
+      "julianDayUt1": 1750451.048263889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 13:09:30",
+        "jd": 1750451.048263889,
+        "azimuthDegrees": 243.944979761,
+        "elevationDegrees": 58.780774753,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621397222222222,
+        "distanceKm": 152059390.11,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.364324
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 13:09:30",
+        "jd": 1750451.048263889,
+        "azimuthDegrees": 27.389922639,
+        "elevationDegrees": -64.521356999,
+        "illuminatedFraction": 0.9757039000000001,
+        "angularRadiusDegrees": 0.24167819444444447,
+        "distanceKm": 411894.68489,
+        "elongationDegrees": 162.0126,
+        "waxing": false,
+        "phaseAngleDegrees": 17.9399,
+        "deltaTSeconds": 9639.364324
+      }
+    },
+    {
+      "julianDayUt1": 1750451.060069445,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 13:26:30",
+        "jd": 1750451.060069445,
+        "azimuthDegrees": 248.762410932,
+        "elevationDegrees": 55.882768181,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621397222222222,
+        "distanceKm": 152059399.1,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.363994
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 13:26:30",
+        "jd": 1750451.060069445,
+        "azimuthDegrees": 35.338179333,
+        "elevationDegrees": -62.937304359,
+        "illuminatedFraction": 0.9752572,
+        "angularRadiusDegrees": 0.24172875,
+        "distanceKm": 411808.61162,
+        "elongationDegrees": 161.8466,
+        "waxing": false,
+        "phaseAngleDegrees": 18.1054,
+        "deltaTSeconds": 9639.363994
+      }
+    },
+    {
+      "julianDayUt1": 1750451.071875,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 13:43:30",
+        "jd": 1750451.071875,
+        "azimuthDegrees": 253.04580857,
+        "elevationDegrees": 52.893472764,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621397222222222,
+        "distanceKm": 152059427.69,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.363665
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 13:43:30",
+        "jd": 1750451.071875,
+        "azimuthDegrees": 42.477699932,
+        "elevationDegrees": -61.028448623,
+        "illuminatedFraction": 0.9748095000000001,
+        "angularRadiusDegrees": 0.2417923611111111,
+        "distanceKm": 411700.35484,
+        "elongationDegrees": 161.6818,
+        "waxing": false,
+        "phaseAngleDegrees": 18.2698,
+        "deltaTSeconds": 9639.363665
+      }
+    },
+    {
+      "julianDayUt1": 1750451.083680556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 14:00:30",
+        "jd": 1750451.083680556,
+        "azimuthDegrees": 256.91004121,
+        "elevationDegrees": 49.838360052,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621395833333333,
+        "distanceKm": 152059474.79,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.363335
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 14:00:30",
+        "jd": 1750451.083680556,
+        "azimuthDegrees": 48.847749534,
+        "elevationDegrees": -58.856383621,
+        "illuminatedFraction": 0.9743615,
+        "angularRadiusDegrees": 0.2418686111111111,
+        "distanceKm": 411570.41379,
+        "elongationDegrees": 161.5183,
+        "waxing": false,
+        "phaseAngleDegrees": 18.4329,
+        "deltaTSeconds": 9639.363335
+      }
+    },
+    {
+      "julianDayUt1": 1750451.095486111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 14:17:30",
+        "jd": 1750451.095486111,
+        "azimuthDegrees": 260.445117003,
+        "elevationDegrees": 46.736800862,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621394444444444,
+        "distanceKm": 152059539.25,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.363006
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 14:17:30",
+        "jd": 1750451.095486111,
+        "azimuthDegrees": 54.528658274,
+        "elevationDegrees": -56.474495946,
+        "illuminatedFraction": 0.9739137999999999,
+        "angularRadiusDegrees": 0.24195750000000002,
+        "distanceKm": 411419.3959,
+        "elongationDegrees": 161.3563,
+        "waxing": false,
+        "phaseAngleDegrees": 18.5945,
+        "deltaTSeconds": 9639.363006
+      }
+    },
+    {
+      "julianDayUt1": 1750451.107291667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 14:34:30",
+        "jd": 1750451.107291667,
+        "azimuthDegrees": 263.721664945,
+        "elevationDegrees": 43.603879319,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213930555555554,
+        "distanceKm": 152059619.79,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.362676
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 14:34:30",
+        "jd": 1750451.107291667,
+        "azimuthDegrees": 59.614892425,
+        "elevationDegrees": -53.926905394,
+        "illuminatedFraction": 0.9734672000000001,
+        "angularRadiusDegrees": 0.24205833333333332,
+        "distanceKm": 411248.01426,
+        "elongationDegrees": 161.196,
+        "waxing": false,
+        "phaseAngleDegrees": 18.7544,
+        "deltaTSeconds": 9639.362676
+      }
+    },
+    {
+      "julianDayUt1": 1750451.119097222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 14:51:30",
+        "jd": 1750451.119097222,
+        "azimuthDegrees": 266.79553829,
+        "elevationDegrees": 40.451666059,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213916666666665,
+        "distanceKm": 152059715.06,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.362347
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 14:51:30",
+        "jd": 1750451.119097222,
+        "azimuthDegrees": 64.199418146,
+        "elevationDegrees": -51.249157063,
+        "illuminatedFraction": 0.9730222000000001,
+        "angularRadiusDegrees": 0.24217069444444442,
+        "distanceKm": 411057.08422,
+        "elongationDegrees": 161.0376,
+        "waxing": false,
+        "phaseAngleDegrees": 18.9124,
+        "deltaTSeconds": 9639.362347
+      }
+    },
+    {
+      "julianDayUt1": 1750451.130902778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 15:08:30",
+        "jd": 1750451.130902778,
+        "azimuthDegrees": 269.711421035,
+        "elevationDegrees": 37.290112976,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621390277777778,
+        "distanceKm": 152059823.64,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.362017
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 15:08:30",
+        "jd": 1750451.130902778,
+        "azimuthDegrees": 68.366367094,
+        "elevationDegrees": -48.469587105,
+        "illuminatedFraction": 0.9725794999999999,
+        "angularRadiusDegrees": 0.24229416666666667,
+        "distanceKm": 410847.51994,
+        "elongationDegrees": 160.8813,
+        "waxing": false,
+        "phaseAngleDegrees": 19.0683,
+        "deltaTSeconds": 9639.362017
+      }
+    },
+    {
+      "julianDayUt1": 1750451.142708333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 15:25:30",
+        "jd": 1750451.142708333,
+        "azimuthDegrees": 272.505569169,
+        "elevationDegrees": 34.127688405,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213875,
+        "distanceKm": 152059944.0,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.361687
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 15:25:30",
+        "jd": 1750451.142708333,
+        "azimuthDegrees": 72.18863736,
+        "elevationDegrees": -45.610775919,
+        "illuminatedFraction": 0.9721396,
+        "angularRadiusDegrees": 0.24242833333333333,
+        "distanceKm": 410620.3298,
+        "elongationDegrees": 160.7272,
+        "waxing": false,
+        "phaseAngleDegrees": 19.2221,
+        "deltaTSeconds": 9639.361687
+      }
+    },
+    {
+      "julianDayUt1": 1750451.154513889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 15:42:30",
+        "jd": 1750451.154513889,
+        "azimuthDegrees": 275.207869609,
+        "elevationDegrees": 30.971835346,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621386111111111,
+        "distanceKm": 152060074.58,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.361358
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 15:42:30",
+        "jd": 1750451.154513889,
+        "azimuthDegrees": 75.72800753,
+        "elevationDegrees": -42.690839448,
+        "illuminatedFraction": 0.9717033,
+        "angularRadiusDegrees": 0.24257222222222222,
+        "distanceKm": 410376.61219,
+        "elongationDegrees": 160.5755,
+        "waxing": false,
+        "phaseAngleDegrees": 19.3734,
+        "deltaTSeconds": 9639.361358
+      }
+    },
+    {
+      "julianDayUt1": 1750451.166319444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 15:59:30",
+        "jd": 1750451.166319444,
+        "azimuthDegrees": 277.843382884,
+        "elevationDegrees": 27.829308911,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621383333333333,
+        "distanceKm": 152060213.74,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.361028
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 15:59:30",
+        "jd": 1750451.166319444,
+        "azimuthDegrees": 79.036329162,
+        "elevationDegrees": -39.724487577,
+        "illuminatedFraction": 0.971271,
+        "angularRadiusDegrees": 0.24272555555555556,
+        "distanceKm": 410117.54998,
+        "elongationDegrees": 160.4264,
+        "waxing": false,
+        "phaseAngleDegrees": 19.5222,
+        "deltaTSeconds": 9639.361028
+      }
+    },
+    {
+      "julianDayUt1": 1750451.178125,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 16:16:30",
+        "jd": 1750451.178125,
+        "azimuthDegrees": 280.433501908,
+        "elevationDegrees": 24.706430979,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621380555555556,
+        "distanceKm": 152060359.81,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.360699
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 16:16:30",
+        "jd": 1750451.178125,
+        "azimuthDegrees": 82.15704465,
+        "elevationDegrees": -36.72385866,
+        "illuminatedFraction": 0.9708434,
+        "angularRadiusDegrees": 0.24288722222222223,
+        "distanceKm": 409844.40538,
+        "elongationDegrees": 160.2799,
+        "waxing": false,
+        "phaseAngleDegrees": 19.6684,
+        "deltaTSeconds": 9639.360699
+      }
+    },
+    {
+      "julianDayUt1": 1750451.189930555,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 16:33:30",
+        "jd": 1750451.189930555,
+        "azimuthDegrees": 282.996826486,
+        "elevationDegrees": 21.609287848,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621377777777778,
+        "distanceKm": 152060511.07,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.360369
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 16:33:30",
+        "jd": 1750451.189930555,
+        "azimuthDegrees": 85.126678806,
+        "elevationDegrees": -33.699165702,
+        "illuminatedFraction": 0.9704209,
+        "angularRadiusDegrees": 0.24305680555555556,
+        "distanceKm": 409558.51378,
+        "elongationDegrees": 160.1362,
+        "waxing": false,
+        "phaseAngleDegrees": 19.8117,
+        "deltaTSeconds": 9639.360369
+      }
+    },
+    {
+      "julianDayUt1": 1750451.201736111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 16:50:30",
+        "jd": 1750451.201736111,
+        "azimuthDegrees": 285.549826452,
+        "elevationDegrees": 18.543888425,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621375,
+        "distanceKm": 152060665.78,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.36004
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 16:50:30",
+        "jd": 1750451.201736111,
+        "azimuthDegrees": 87.976163109,
+        "elevationDegrees": -30.659194353,
+        "illuminatedFraction": 0.9700041,
+        "angularRadiusDegrees": 0.24323333333333333,
+        "distanceKm": 409261.27742,
+        "elongationDegrees": 159.9954,
+        "waxing": false,
+        "phaseAngleDegrees": 19.9522,
+        "deltaTSeconds": 9639.36004
+      }
+    },
+    {
+      "julianDayUt1": 1750451.213541667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 17:07:30",
+        "jd": 1750451.213541667,
+        "azimuthDegrees": 288.107345863,
+        "elevationDegrees": 15.516294956,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621373611111111,
+        "distanceKm": 152060822.17,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.35971
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 17:07:30",
+        "jd": 1750451.213541667,
+        "azimuthDegrees": 90.731954938,
+        "elevationDegrees": -27.611688173,
+        "illuminatedFraction": 0.9695933999999999,
+        "angularRadiusDegrees": 0.24341597222222222,
+        "distanceKm": 408954.15874,
+        "elongationDegrees": 159.8576,
+        "waxing": false,
+        "phaseAngleDegrees": 20.0897,
+        "deltaTSeconds": 9639.35971
+      }
+    },
+    {
+      "julianDayUt1": 1750451.225347222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 17:24:30",
+        "jd": 1750451.225347222,
+        "azimuthDegrees": 290.682985415,
+        "elevationDegrees": 12.532734482,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621370833333333,
+        "distanceKm": 152060978.46,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.35938
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 17:24:30",
+        "jd": 1750451.225347222,
+        "azimuthDegrees": 93.416959893,
+        "elevationDegrees": -24.563649575,
+        "illuminatedFraction": 0.9691893,
+        "angularRadiusDegrees": 0.2436038888888889,
+        "distanceKm": 408638.67306,
+        "elongationDegrees": 159.7228,
+        "waxing": false,
+        "phaseAngleDegrees": 20.2241,
+        "deltaTSeconds": 9639.35938
+      }
+    },
+    {
+      "julianDayUt1": 1750451.237152778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 17:41:30",
+        "jd": 1750451.237152778,
+        "azimuthDegrees": 293.289388922,
+        "elevationDegrees": 9.599696477,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621368055555556,
+        "distanceKm": 152061132.89,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.359051
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 17:41:30",
+        "jd": 1750451.237152778,
+        "azimuthDegrees": 96.051281644,
+        "elevationDegrees": -21.521578918,
+        "illuminatedFraction": 0.968792,
+        "angularRadiusDegrees": 0.24379625000000002,
+        "distanceKm": 408316.38179,
+        "elongationDegrees": 159.5912,
+        "waxing": false,
+        "phaseAngleDegrees": 20.3555,
+        "deltaTSeconds": 9639.359051
+      }
+    },
+    {
+      "julianDayUt1": 1750451.248958333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 17:58:30",
+        "jd": 1750451.248958333,
+        "azimuthDegrees": 295.938451267,
+        "elevationDegrees": 6.724020112,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621365277777778,
+        "distanceKm": 152061283.69,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.358721
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 17:58:30",
+        "jd": 1750451.248958333,
+        "azimuthDegrees": 98.652828415,
+        "elevationDegrees": -18.491667807,
+        "illuminatedFraction": 0.968402,
+        "angularRadiusDegrees": 0.24399194444444444,
+        "distanceKm": 407988.88412,
+        "elongationDegrees": 159.4628,
+        "waxing": false,
+        "phaseAngleDegrees": 20.4836,
+        "deltaTSeconds": 9639.358721
+      }
+    },
+    {
+      "julianDayUt1": 1750451.260763889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 18:15:30",
+        "jd": 1750451.260763889,
+        "azimuthDegrees": 298.641458869,
+        "elevationDegrees": 3.912972932,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213625,
+        "distanceKm": 152061429.11,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.358392
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 18:15:30",
+        "jd": 1750451.260763889,
+        "azimuthDegrees": 101.237801745,
+        "elevationDegrees": -15.479959601,
+        "illuminatedFraction": 0.9680194,
+        "angularRadiusDegrees": 0.24419,
+        "distanceKm": 407657.80917,
+        "elongationDegrees": 159.3376,
+        "waxing": false,
+        "phaseAngleDegrees": 20.6085,
+        "deltaTSeconds": 9639.358392
+      }
+    },
+    {
+      "julianDayUt1": 1750451.272569444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 18:32:30",
+        "jd": 1750451.272569444,
+        "azimuthDegrees": 301.40916862,
+        "elevationDegrees": 1.174321511,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213597222222224,
+        "distanceKm": 152061567.44,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.358062
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 18:32:30",
+        "jd": 1750451.272569444,
+        "azimuthDegrees": 103.821089482,
+        "elevationDegrees": -12.492486472,
+        "illuminatedFraction": 0.9676446,
+        "angularRadiusDegrees": 0.24438972222222222,
+        "distanceKm": 407324.80836,
+        "elongationDegrees": 159.2156,
+        "waxing": false,
+        "phaseAngleDegrees": 20.7302,
+        "deltaTSeconds": 9639.358062
+      }
+    },
+    {
+      "julianDayUt1": 1750451.284375,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 18:49:30",
+        "jd": 1750451.284375,
+        "azimuthDegrees": 304.251828038,
+        "elevationDegrees": -1.483607251,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213583333333335,
+        "distanceKm": 152061697.01,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.357733
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 18:49:30",
+        "jd": 1750451.284375,
+        "azimuthDegrees": 106.416581169,
+        "elevationDegrees": -9.535388933,
+        "illuminatedFraction": 0.9672777,
+        "angularRadiusDegrees": 0.2445898611111111,
+        "distanceKm": 406991.54636,
+        "elongationDegrees": 159.0969,
+        "waxing": false,
+        "phaseAngleDegrees": 20.8487,
+        "deltaTSeconds": 9639.357733
+      }
+    },
+    {
+      "julianDayUt1": 1750451.296180556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 19:06:30",
+        "jd": 1750451.296180556,
+        "azimuthDegrees": 307.179135657,
+        "elevationDegrees": -4.051875925,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213555555555557,
+        "distanceKm": 152061816.17,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.357403
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 19:06:30",
+        "jd": 1750451.296180556,
+        "azimuthDegrees": 109.037417483,
+        "elevationDegrees": -6.615024019,
+        "illuminatedFraction": 0.9669188,
+        "angularRadiusDegrees": 0.24478944444444442,
+        "distanceKm": 406659.69292,
+        "elongationDegrees": 158.9813,
+        "waxing": false,
+        "phaseAngleDegrees": 20.964,
+        "deltaTSeconds": 9639.357403
+      }
+    },
+    {
+      "julianDayUt1": 1750451.307986111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 19:23:30",
+        "jd": 1750451.307986111,
+        "azimuthDegrees": 310.200139803,
+        "elevationDegrees": -6.520901519,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621354166666667,
+        "distanceKm": 152061923.37,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.357074
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 19:23:30",
+        "jd": 1750451.307986111,
+        "azimuthDegrees": 111.696183355,
+        "elevationDegrees": -3.738064694,
+        "illuminatedFraction": 0.9665679,
+        "angularRadiusDegrees": 0.24498750000000002,
+        "distanceKm": 406330.91422,
+        "elongationDegrees": 158.869,
+        "waxing": false,
+        "phaseAngleDegrees": 21.0761,
+        "deltaTSeconds": 9639.357074
+      }
+    },
+    {
+      "julianDayUt1": 1750451.319791667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 19:40:30",
+        "jd": 1750451.319791667,
+        "azimuthDegrees": 313.323072718,
+        "elevationDegrees": -8.8804406,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621352777777778,
+        "distanceKm": 152062017.09,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.356744
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 19:40:30",
+        "jd": 1750451.319791667,
+        "azimuthDegrees": 114.405049548,
+        "elevationDegrees": -0.911593045,
+        "illuminatedFraction": 0.966225,
+        "angularRadiusDegrees": 0.24518305555555556,
+        "distanceKm": 406006.86433,
+        "elongationDegrees": 158.7597,
+        "waxing": false,
+        "phaseAngleDegrees": 21.1852,
+        "deltaTSeconds": 9639.356744
+      }
+    },
+    {
+      "julianDayUt1": 1750451.331597222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 19:57:30",
+        "jd": 1750451.331597222,
+        "azimuthDegrees": 316.555118067,
+        "elevationDegrees": -11.119601117,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621351388888889,
+        "distanceKm": 152062095.9,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.356414
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 19:57:30",
+        "jd": 1750451.331597222,
+        "azimuthDegrees": 117.175864813,
+        "elevationDegrees": 1.856811998,
+        "illuminatedFraction": 0.9658901,
+        "angularRadiusDegrees": 0.245375,
+        "distanceKm": 405689.1761,
+        "elongationDegrees": 158.6535,
+        "waxing": false,
+        "phaseAngleDegrees": 21.2911,
+        "deltaTSeconds": 9639.356414
+      }
+    },
+    {
+      "julianDayUt1": 1750451.343402778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 20:14:30",
+        "jd": 1750451.343402778,
+        "azimuthDegrees": 319.902112685,
+        "elevationDegrees": -13.226888685,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.262135,
+        "distanceKm": 152062158.45,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.356085
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 20:14:30",
+        "jd": 1750451.343402778,
+        "azimuthDegrees": 120.02019705,
+        "elevationDegrees": 4.55899227,
+        "illuminatedFraction": 0.965563,
+        "angularRadiusDegrees": 0.2455625,
+        "distanceKm": 405379.45279,
+        "elongationDegrees": 158.5503,
+        "waxing": false,
+        "phaseAngleDegrees": 21.3942,
+        "deltaTSeconds": 9639.356085
+      }
+    },
+    {
+      "julianDayUt1": 1750451.355208333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 20:31:30",
+        "jd": 1750451.355208333,
+        "azimuthDegrees": 323.368188734,
+        "elevationDegrees": -15.190295818,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621348611111111,
+        "distanceKm": 152062203.47,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.355755
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 20:31:30",
+        "jd": 1750451.355208333,
+        "azimuthDegrees": 122.949319798,
+        "elevationDegrees": 7.186135069,
+        "illuminatedFraction": 0.9652435,
+        "angularRadiusDegrees": 0.24574444444444443,
+        "distanceKm": 405079.25958,
+        "elongationDegrees": 158.4499,
+        "waxing": false,
+        "phaseAngleDegrees": 21.4943,
+        "deltaTSeconds": 9639.355755
+      }
+    },
+    {
+      "julianDayUt1": 1750451.367013889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 20:48:30",
+        "jd": 1750451.367013889,
+        "azimuthDegrees": 326.955370439,
+        "elevationDegrees": -16.997442454,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621348611111111,
+        "distanceKm": 152062229.81,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.355426
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 20:48:30",
+        "jd": 1750451.367013889,
+        "azimuthDegrees": 125.974137877,
+        "elevationDegrees": 9.728707994,
+        "illuminatedFraction": 0.9649314,
+        "angularRadiusDegrees": 0.24592,
+        "distanceKm": 404790.1146,
+        "elongationDegrees": 158.3523,
+        "waxing": false,
+        "phaseAngleDegrees": 21.5917,
+        "deltaTSeconds": 9639.355426
+      }
+    },
+    {
+      "julianDayUt1": 1750451.378819444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 21:05:30",
+        "jd": 1750451.378819444,
+        "azimuthDegrees": 330.663150247,
+        "elevationDegrees": -18.63577468,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621348611111111,
+        "distanceKm": 152062236.39,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.355096
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 21:05:30",
+        "jd": 1750451.378819444,
+        "azimuthDegrees": 129.105043577,
+        "elevationDegrees": 12.176408217,
+        "illuminatedFraction": 0.9646263,
+        "angularRadiusDegrees": 0.24608819444444444,
+        "distanceKm": 404513.4813,
+        "elongationDegrees": 158.2572,
+        "waxing": false,
+        "phaseAngleDegrees": 21.6866,
+        "deltaTSeconds": 9639.355096
+      }
+    },
+    {
+      "julianDayUt1": 1750451.390625,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 21:22:30",
+        "jd": 1750451.390625,
+        "azimuthDegrees": 334.488081628,
+        "elevationDegrees": -20.092825284,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621348611111111,
+        "distanceKm": 152062222.25,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.354767
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 21:22:30",
+        "jd": 1750451.390625,
+        "azimuthDegrees": 132.351695417,
+        "elevationDegrees": 14.518133311,
+        "illuminatedFraction": 0.9643278,
+        "angularRadiusDegrees": 0.24624819444444446,
+        "distanceKm": 404250.75987,
+        "elongationDegrees": 158.1647,
+        "waxing": false,
+        "phaseAngleDegrees": 21.779,
+        "deltaTSeconds": 9639.354767
+      }
+    },
+    {
+      "julianDayUt1": 1750451.402430556,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 21:39:30",
+        "jd": 1750451.402430556,
+        "azimuthDegrees": 338.423437864,
+        "elevationDegrees": -21.356534393,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.262135,
+        "distanceKm": 152062186.57,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.354437
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 21:39:30",
+        "jd": 1750451.402430556,
+        "azimuthDegrees": 135.722711255,
+        "elevationDegrees": 16.741981853,
+        "illuminatedFraction": 0.9640356,
+        "angularRadiusDegrees": 0.24639902777777778,
+        "distanceKm": 404003.27967,
+        "elongationDegrees": 158.0744,
+        "waxing": false,
+        "phaseAngleDegrees": 21.8691,
+        "deltaTSeconds": 9639.354437
+      }
+    },
+    {
+      "julianDayUt1": 1750451.414236111,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 21:56:30",
+        "jd": 1750451.414236111,
+        "azimuthDegrees": 342.458994951,
+        "elevationDegrees": -22.415620993,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.262135,
+        "distanceKm": 152062128.61,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.354108
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 21:56:30",
+        "jd": 1750451.414236111,
+        "azimuthDegrees": 139.225272072,
+        "elevationDegrees": 18.835294556,
+        "illuminatedFraction": 0.9637491,
+        "angularRadiusDegrees": 0.24653999999999998,
+        "distanceKm": 403772.29186,
+        "elongationDegrees": 157.9862,
+        "waxing": false,
+        "phaseAngleDegrees": 21.957,
+        "deltaTSeconds": 9639.354108
+      }
+    },
+    {
+      "julianDayUt1": 1750451.426041667,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 22:13:30",
+        "jd": 1750451.426041667,
+        "azimuthDegrees": 346.580998168,
+        "elevationDegrees": -23.259987234,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621351388888889,
+        "distanceKm": 152062047.76,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.353778
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 22:13:30",
+        "jd": 1750451.426041667,
+        "azimuthDegrees": 142.864639893,
+        "elevationDegrees": 20.784747928,
+        "illuminatedFraction": 0.9634678,
+        "angularRadiusDegrees": 0.24667027777777778,
+        "distanceKm": 403558.96217,
+        "elongationDegrees": 157.8999,
+        "waxing": false,
+        "phaseAngleDegrees": 22.0431,
+        "deltaTSeconds": 9639.353778
+      }
+    },
+    {
+      "julianDayUt1": 1750451.437847222,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 22:30:30",
+        "jd": 1750451.437847222,
+        "azimuthDegrees": 350.772362286,
+        "elevationDegrees": -23.881128445,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621354166666667,
+        "distanceKm": 152061943.56,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.353448
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 22:30:30",
+        "jd": 1750451.437847222,
+        "azimuthDegrees": 146.643604799,
+        "elevationDegrees": 22.576512776,
+        "illuminatedFraction": 0.9631911,
+        "angularRadiusDegrees": 0.24678930555555556,
+        "distanceKm": 403364.36446,
+        "elongationDegrees": 157.8154,
+        "waxing": false,
+        "phaseAngleDegrees": 22.1275,
+        "deltaTSeconds": 9639.353448
+      }
+    },
+    {
+      "julianDayUt1": 1750451.449652778,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 22:47:30",
+        "jd": 1750451.449652778,
+        "azimuthDegrees": 355.013132838,
+        "elevationDegrees": -24.272514669,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213555555555557,
+        "distanceKm": 152061815.65,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.353119
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 22:47:30",
+        "jd": 1750451.449652778,
+        "azimuthDegrees": 150.561892874,
+        "elevationDegrees": 24.196488538,
+        "illuminatedFraction": 0.9629183,
+        "angularRadiusDegrees": 0.24689625,
+        "distanceKm": 403189.47451,
+        "elongationDegrees": 157.7324,
+        "waxing": false,
+        "phaseAngleDegrees": 22.2103,
+        "deltaTSeconds": 9639.353119
+      }
+    },
+    {
+      "julianDayUt1": 1750451.461458333,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 23:04:30",
+        "jd": 1750451.461458333,
+        "azimuthDegrees": 359.281201833,
+        "elevationDegrees": -24.429906579,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213583333333335,
+        "distanceKm": 152061663.81,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.352789
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 23:04:30",
+        "jd": 1750451.461458333,
+        "azimuthDegrees": 154.61558669,
+        "elevationDegrees": 25.630620185,
+        "illuminatedFraction": 0.9626488000000001,
+        "angularRadiusDegrees": 0.24699083333333335,
+        "distanceKm": 403035.16423,
+        "elongationDegrees": 157.6506,
+        "waxing": false,
+        "phaseAngleDegrees": 22.2919,
+        "deltaTSeconds": 9639.352789
+      }
+    },
+    {
+      "julianDayUt1": 1750451.473263889,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 23:21:30",
+        "jd": 1750451.473263889,
+        "azimuthDegrees": 3.553231485,
+        "elevationDegrees": -24.351571404,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621361111111111,
+        "distanceKm": 152061487.96,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.35246
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 23:21:30",
+        "jd": 1750451.473263889,
+        "azimuthDegrees": 158.79663041,
+        "elevationDegrees": 26.865296929,
+        "illuminatedFraction": 0.9623819,
+        "angularRadiusDegrees": 0.2470723611111111,
+        "distanceKm": 402902.19703,
+        "elongationDegrees": 157.5699,
+        "waxing": false,
+        "phaseAngleDegrees": 22.3724,
+        "deltaTSeconds": 9639.35246
+      }
+    },
+    {
+      "julianDayUt1": 1750451.485069444,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 23:38:30",
+        "jd": 1750451.485069444,
+        "azimuthDegrees": 7.805703077,
+        "elevationDegrees": -24.038373674,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621365277777778,
+        "distanceKm": 152061288.14,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.35213
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 23:38:30",
+        "jd": 1750451.485069444,
+        "azimuthDegrees": 163.092508257,
+        "elevationDegrees": 27.887821272,
+        "illuminatedFraction": 0.9621168,
+        "angularRadiusDegrees": 0.24714041666666667,
+        "distanceKm": 402791.22309,
+        "elongationDegrees": 157.4901,
+        "waxing": false,
+        "phaseAngleDegrees": 22.4521,
+        "deltaTSeconds": 9639.35213
+      }
+    },
+    {
+      "julianDayUt1": 1750451.496875,
+      "sun": {
+        "calendarUt1": "0080-Jun-22 23:55:30",
+        "jd": 1750451.496875,
+        "azimuthDegrees": 12.015984615,
+        "elevationDegrees": -23.493729758,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213694444444446,
+        "distanceKm": 152061064.52,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.351801
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-22 23:55:30",
+        "jd": 1750451.496875,
+        "azimuthDegrees": 167.486188131,
+        "elevationDegrees": 28.686923247,
+        "illuminatedFraction": 0.9618527,
+        "angularRadiusDegrees": 0.24719472222222222,
+        "distanceKm": 402702.7755,
+        "elongationDegrees": 157.4107,
+        "waxing": false,
+        "phaseAngleDegrees": 22.5312,
+        "deltaTSeconds": 9639.351801
+      }
+    },
+    {
+      "julianDayUt1": 1750451.508680556,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 00:12:30",
+        "jd": 1750451.508680556,
+        "azimuthDegrees": 16.163307317,
+        "elevationDegrees": -22.723431764,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621373611111111,
+        "distanceKm": 152060817.41,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.351471
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 00:12:30",
+        "jd": 1750451.508680556,
+        "azimuthDegrees": 171.956407764,
+        "elevationDegrees": 29.253281143,
+        "illuminatedFraction": 0.9615887999999999,
+        "angularRadiusDegrees": 0.2472348611111111,
+        "distanceKm": 402637.26725,
+        "elongationDegrees": 157.3318,
+        "waxing": false,
+        "phaseAngleDegrees": 22.61,
+        "deltaTSeconds": 9639.351471
+      }
+    },
+    {
+      "julianDayUt1": 1750451.520486111,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 00:29:30",
+        "jd": 1750451.520486111,
+        "azimuthDegrees": 20.229558287,
+        "elevationDegrees": -21.735361669,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621377777777778,
+        "distanceKm": 152060547.24,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.351141
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 00:29:30",
+        "jd": 1750451.520486111,
+        "azimuthDegrees": 176.478343021,
+        "elevationDegrees": 29.579999312,
+        "illuminatedFraction": 0.9613243,
+        "angularRadiusDegrees": 0.24726083333333335,
+        "distanceKm": 402594.98908,
+        "elongationDegrees": 157.2529,
+        "waxing": false,
+        "phaseAngleDegrees": 22.6888,
+        "deltaTSeconds": 9639.351141
+      }
+    },
+    {
+      "julianDayUt1": 1750451.532291667,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 00:46:30",
+        "jd": 1750451.532291667,
+        "azimuthDegrees": 24.19982989,
+        "elevationDegrees": -20.539127659,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621383333333333,
+        "distanceKm": 152060254.58,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.350812
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 00:46:30",
+        "jd": 1750451.532291667,
+        "azimuthDegrees": 181.024641287,
+        "elevationDegrees": 29.662989763,
+        "illuminatedFraction": 0.9610584,
+        "angularRadiusDegrees": 0.2472725,
+        "distanceKm": 402576.10708,
+        "elongationDegrees": 157.1738,
+        "waxing": false,
+        "phaseAngleDegrees": 22.7676,
+        "deltaTSeconds": 9639.350812
+      }
+    },
+    {
+      "julianDayUt1": 1750451.544097222,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 01:03:30",
+        "jd": 1750451.544097222,
+        "azimuthDegrees": 28.062705849,
+        "elevationDegrees": -19.145659657,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26213875,
+        "distanceKm": 152059940.1,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.350482
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 01:03:30",
+        "jd": 1750451.544097222,
+        "azimuthDegrees": 185.566735651,
+        "elevationDegrees": 29.501210074,
+        "illuminatedFraction": 0.9607902,
+        "angularRadiusDegrees": 0.24726972222222224,
+        "distanceKm": 402580.66236,
+        "elongationDegrees": 157.0943,
+        "waxing": false,
+        "phaseAngleDegrees": 22.8469,
+        "deltaTSeconds": 9639.350482
+      }
+    },
+    {
+      "julianDayUt1": 1750451.555902778,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 01:20:30",
+        "jd": 1750451.555902778,
+        "azimuthDegrees": 31.810301739,
+        "elevationDegrees": -17.566799589,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621394444444444,
+        "distanceKm": 152059604.62,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.350153
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 01:20:30",
+        "jd": 1750451.555902778,
+        "azimuthDegrees": 190.076301733,
+        "elevationDegrees": 29.096725929,
+        "illuminatedFraction": 0.9605189,
+        "angularRadiusDegrees": 0.24725250000000001,
+        "distanceKm": 402608.5704,
+        "elongationDegrees": 157.0142,
+        "waxing": false,
+        "phaseAngleDegrees": 22.9269,
+        "deltaTSeconds": 9639.350153
+      }
+    },
+    {
+      "julianDayUt1": 1750451.567708333,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 01:37:30",
+        "jd": 1750451.567708333,
+        "azimuthDegrees": 35.438102945,
+        "elevationDegrees": -15.814916434,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214,
+        "distanceKm": 152059249.04,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.349823
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 01:37:30",
+        "jd": 1750451.567708333,
+        "azimuthDegrees": 194.526685715,
+        "elevationDegrees": 28.45458971,
+        "illuminatedFraction": 0.9602436,
+        "angularRadiusDegrees": 0.24722125,
+        "distanceKm": 402659.62162,
+        "elongationDegrees": 156.9331,
+        "waxing": false,
+        "phaseAngleDegrees": 23.0078,
+        "deltaTSeconds": 9639.349823
+      }
+    },
+    {
+      "julianDayUt1": 1750451.579513889,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 01:54:30",
+        "jd": 1750451.579513889,
+        "azimuthDegrees": 38.944658393,
+        "elevationDegrees": -13.902567041,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214069444444443,
+        "distanceKm": 152058874.4,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.349494
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 01:54:30",
+        "jd": 1750451.579513889,
+        "azimuthDegrees": 198.894140644,
+        "elevationDegrees": 27.582551756,
+        "illuminatedFraction": 0.9599634,
+        "angularRadiusDegrees": 0.24717583333333332,
+        "distanceKm": 402733.4825,
+        "elongationDegrees": 156.8509,
+        "waxing": false,
+        "phaseAngleDegrees": 23.0898,
+        "deltaTSeconds": 9639.349494
+      }
+    },
+    {
+      "julianDayUt1": 1750451.591319445,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 02:11:30",
+        "jd": 1750451.591319445,
+        "azimuthDegrees": 42.331189453,
+        "elevationDegrees": -11.842214888,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621413888888889,
+        "distanceKm": 152058481.83,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.349164
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 02:11:30",
+        "jd": 1750451.591319445,
+        "azimuthDegrees": 203.158747035,
+        "elevationDegrees": 26.490642159,
+        "illuminatedFraction": 0.9596777,
+        "angularRadiusDegrees": 0.24711680555555554,
+        "distanceKm": 402829.69781,
+        "elongationDegrees": 156.7673,
+        "waxing": false,
+        "phaseAngleDegrees": 23.1731,
+        "deltaTSeconds": 9639.349164
+      }
+    },
+    {
+      "julianDayUt1": 1750451.603125,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 02:28:30",
+        "jd": 1750451.603125,
+        "azimuthDegrees": 45.60116689,
+        "elevationDegrees": -9.646010785,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214208333333333,
+        "distanceKm": 152058072.55,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.348835
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 02:28:30",
+        "jd": 1750451.603125,
+        "azimuthDegrees": 207.304956374,
+        "elevationDegrees": 25.190673471,
+        "illuminatedFraction": 0.9593854,
+        "angularRadiusDegrees": 0.24704444444444446,
+        "distanceKm": 402947.69285,
+        "elongationDegrees": 156.6821,
+        "waxing": false,
+        "phaseAngleDegrees": 23.2581,
+        "deltaTSeconds": 9639.348835
+      }
+    },
+    {
+      "julianDayUt1": 1750451.614930556,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 02:45:30",
+        "jd": 1750451.614930556,
+        "azimuthDegrees": 48.75989732,
+        "elevationDegrees": -7.325633464,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621427777777778,
+        "distanceKm": 152057647.9,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.348505
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 02:45:30",
+        "jd": 1750451.614930556,
+        "azimuthDegrees": 211.321759691,
+        "elevationDegrees": 23.695717445,
+        "illuminatedFraction": 0.9590859,
+        "angularRadiusDegrees": 0.24695916666666667,
+        "distanceKm": 403086.77684,
+        "elongationDegrees": 156.5951,
+        "waxing": false,
+        "phaseAngleDegrees": 23.3449,
+        "deltaTSeconds": 9639.348505
+      }
+    },
+    {
+      "julianDayUt1": 1750451.626736111,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 03:02:30",
+        "jd": 1750451.626736111,
+        "azimuthDegrees": 51.814148055,
+        "elevationDegrees": -4.892184015,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214347222222223,
+        "distanceKm": 152057209.28,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.348175
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 03:02:30",
+        "jd": 1750451.626736111,
+        "azimuthDegrees": 215.202535743,
+        "elevationDegrees": 22.019602329,
+        "illuminatedFraction": 0.9587783000000001,
+        "angularRadiusDegrees": 0.24686166666666667,
+        "distanceKm": 403246.14715,
+        "elongationDegrees": 156.506,
+        "waxing": false,
+        "phaseAngleDegrees": 23.4337,
+        "deltaTSeconds": 9639.348175
+      }
+    },
+    {
+      "julianDayUt1": 1750451.638541667,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 03:19:30",
+        "jd": 1750451.638541667,
+        "azimuthDegrees": 54.771827799,
+        "elevationDegrees": -2.356126148,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214430555555557,
+        "distanceKm": 152056758.17,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.347846
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 03:19:30",
+        "jd": 1750451.638541667,
+        "azimuthDegrees": 218.944663544,
+        "elevationDegrees": 20.176465059,
+        "illuminatedFraction": 0.9584619000000001,
+        "angularRadiusDegrees": 0.24675222222222223,
+        "distanceKm": 403424.89376,
+        "elongationDegrees": 156.4148,
+        "waxing": false,
+        "phaseAngleDegrees": 23.5247,
+        "deltaTSeconds": 9639.347846
+      }
+    },
+    {
+      "julianDayUt1": 1750451.650347222,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 03:36:30",
+        "jd": 1750451.650347222,
+        "azimuthDegrees": 57.641731773,
+        "elevationDegrees": 0.27273629,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621451388888889,
+        "distanceKm": 152056296.12,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.347516
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 03:36:30",
+        "jd": 1750451.650347222,
+        "azimuthDegrees": 222.548991763,
+        "elevationDegrees": 18.180378926,
+        "illuminatedFraction": 0.9581360999999999,
+        "angularRadiusDegrees": 0.24663166666666667,
+        "distanceKm": 403622.00434,
+        "elongationDegrees": 156.3212,
+        "waxing": false,
+        "phaseAngleDegrees": 23.6181,
+        "deltaTSeconds": 9639.347516
+      }
+    },
+    {
+      "julianDayUt1": 1750451.662152778,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 03:53:30",
+        "jd": 1750451.662152778,
+        "azimuthDegrees": 60.433353576,
+        "elevationDegrees": 2.985252607,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214597222222225,
+        "distanceKm": 152055824.75,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.347187
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 03:53:30",
+        "jd": 1750451.662152778,
+        "azimuthDegrees": 226.019248985,
+        "elevationDegrees": 16.04506446,
+        "illuminatedFraction": 0.9578001,
+        "angularRadiusDegrees": 0.24650083333333334,
+        "distanceKm": 403836.37013,
+        "elongationDegrees": 156.225,
+        "waxing": false,
+        "phaseAngleDegrees": 23.714,
+        "deltaTSeconds": 9639.347187
+      }
+    },
+    {
+      "julianDayUt1": 1750451.673958333,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 04:10:30",
+        "jd": 1750451.673958333,
+        "azimuthDegrees": 63.156762534,
+        "elevationDegrees": 5.772896348,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621468055555556,
+        "distanceKm": 152055345.71,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.346857
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 04:10:30",
+        "jd": 1750451.673958333,
+        "azimuthDegrees": 229.361460754,
+        "elevationDegrees": 13.783681425,
+        "illuminatedFraction": 0.9574532000000001,
+        "angularRadiusDegrees": 0.2463602777777778,
+        "distanceKm": 404066.79232,
+        "elongationDegrees": 156.126,
+        "waxing": false,
+        "phaseAngleDegrees": 23.8127,
+        "deltaTSeconds": 9639.346857
+      }
+    },
+    {
+      "julianDayUt1": 1750451.685763889,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 04:27:30",
+        "jd": 1750451.685763889,
+        "azimuthDegrees": 65.822543746,
+        "elevationDegrees": 8.627719777,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214763888888887,
+        "distanceKm": 152054860.71,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.346528
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 04:27:30",
+        "jd": 1750451.685763889,
+        "azimuthDegrees": 232.583418372,
+        "elevationDegrees": 11.40869342,
+        "illuminatedFraction": 0.957095,
+        "angularRadiusDegrees": 0.24621083333333335,
+        "distanceKm": 404311.9887,
+        "elongationDegrees": 156.0243,
+        "waxing": false,
+        "phaseAngleDegrees": 23.9141,
+        "deltaTSeconds": 9639.346528
+      }
+    },
+    {
+      "julianDayUt1": 1750451.697569444,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 04:44:30",
+        "jd": 1750451.697569444,
+        "azimuthDegrees": 68.441798235,
+        "elevationDegrees": 11.542295918,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621484722222222,
+        "distanceKm": 152054371.48,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.346198
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 04:44:30",
+        "jd": 1750451.697569444,
+        "azimuthDegrees": 235.694225185,
+        "elevationDegrees": 8.931793508,
+        "illuminatedFraction": 0.9567247999999999,
+        "angularRadiusDegrees": 0.24605347222222224,
+        "distanceKm": 404570.60075,
+        "elongationDegrees": 155.9195,
+        "waxing": false,
+        "phaseAngleDegrees": 24.0186,
+        "deltaTSeconds": 9639.346198
+      }
+    },
+    {
+      "julianDayUt1": 1750451.709375,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 05:01:30",
+        "jd": 1750451.709375,
+        "azimuthDegrees": 71.02620202,
+        "elevationDegrees": 14.509650911,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26214930555555555,
+        "distanceKm": 152053879.78,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.345869
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 05:01:30",
+        "jd": 1750451.709375,
+        "azimuthDegrees": 238.703931192,
+        "elevationDegrees": 6.363878549,
+        "illuminatedFraction": 0.9563422,
+        "angularRadiusDegrees": 0.2458890277777778,
+        "distanceKm": 404841.20137,
+        "elongationDegrees": 155.8117,
+        "waxing": false,
+        "phaseAngleDegrees": 24.1261,
+        "deltaTSeconds": 9639.345869
+      }
+    },
+    {
+      "julianDayUt1": 1750451.721180555,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 05:18:30",
+        "jd": 1750451.721180555,
+        "azimuthDegrees": 73.588125415,
+        "elevationDegrees": 17.523188049,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621501388888889,
+        "distanceKm": 152053387.39,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.345539
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 05:18:30",
+        "jd": 1750451.721180555,
+        "azimuthDegrees": 241.623256695,
+        "elevationDegrees": 3.715060492,
+        "illuminatedFraction": 0.9559466000000001,
+        "angularRadiusDegrees": 0.24571833333333334,
+        "distanceKm": 405122.30257,
+        "elongationDegrees": 155.7008,
+        "waxing": false,
+        "phaseAngleDegrees": 24.2368,
+        "deltaTSeconds": 9639.345539
+      }
+    },
+    {
+      "julianDayUt1": 1750451.732986111,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 05:35:30",
+        "jd": 1750451.732986111,
+        "azimuthDegrees": 76.140817298,
+        "elevationDegrees": 20.576603539,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.2621509722222222,
+        "distanceKm": 152052896.08,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.345209
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 05:35:30",
+        "jd": 1750451.732986111,
+        "azimuthDegrees": 244.463399397,
+        "elevationDegrees": 0.994704878,
+        "illuminatedFraction": 0.9555378,
+        "angularRadiusDegrees": 0.2455425,
+        "distanceKm": 405412.36383,
+        "elongationDegrees": 155.5866,
+        "waxing": false,
+        "phaseAngleDegrees": 24.3507,
+        "deltaTSeconds": 9639.345209
+      }
+    },
+    {
+      "julianDayUt1": 1750451.744791667,
+      "sun": {
+        "calendarUt1": "0080-Jun-23 05:52:30",
+        "jd": 1750451.744791667,
+        "azimuthDegrees": 78.698663556,
+        "elevationDegrees": 23.663792691,
+        "illuminatedFraction": 1.0,
+        "angularRadiusDegrees": 0.26215180555555556,
+        "distanceKm": 152052407.62,
+        "elongationDegrees": 0.0,
+        "waxing": false,
+        "phaseAngleDegrees": 0.0,
+        "deltaTSeconds": 9639.34488
+      },
+      "moon": {
+        "calendarUt1": "0080-Jun-23 05:52:30",
+        "jd": 1750451.744791667,
+        "azimuthDegrees": 247.235916901,
+        "elevationDegrees": -1.788511529,
+        "illuminatedFraction": 0.9551152999999999,
+        "angularRadiusDegrees": 0.24536249999999998,
+        "distanceKm": 405709.80033,
+        "elongationDegrees": 155.4691,
+        "waxing": false,
+        "phaseAngleDegrees": 24.4678,
+        "deltaTSeconds": 9639.34488
+      }
+    }
+  ]
+}

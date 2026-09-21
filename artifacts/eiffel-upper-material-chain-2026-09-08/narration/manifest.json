@@ -1,7 +1,7 @@
 [
   {
     "captionId": "eiffel-lift-prepared",
-    "text": "At the foot of each pylon, a lifting frame takes the weight of the iron.",
+    "text": "A lifting frame raises an iron section from the ground.",
     "voiceId": "pNInz6obpgDQGcFmaJgB",
     "model": "eleven_multilingual_v2",
     "speed": 1.2,
@@ -12,7 +12,7 @@
   },
   {
     "captionId": "eiffel-lift-later",
-    "text": "One member settles into place, while the other crews continue around the tower.",
+    "text": "Crews work on all four legs of the tower.",
     "voiceId": "pNInz6obpgDQGcFmaJgB",
     "model": "eleven_multilingual_v2",
     "speed": 1.2,
@@ -23,7 +23,7 @@
   },
   {
     "captionId": "eiffel-joint-prepared",
-    "text": "Up close, workers align the plates and tighten the bolts that hold the joint.",
+    "text": "A crane turns the next iron section and lowers it into position.",
     "voiceId": "pNInz6obpgDQGcFmaJgB",
     "model": "eleven_multilingual_v2",
     "speed": 1.2,
@@ -34,7 +34,7 @@
   },
   {
     "captionId": "eiffel-joint-later",
-    "text": "Around them, many hands repeat the work, joining the four pylons into one tower.",
+    "text": "The four legs will meet at the first platform.",
     "voiceId": "pNInz6obpgDQGcFmaJgB",
     "model": "eleven_multilingual_v2",
     "speed": 1.2,
@@ -45,7 +45,7 @@
   },
   {
     "captionId": "eiffel-relay-prepared",
-    "text": "Winches lift the longer members from platform to platform, toward the narrowing summit.",
+    "text": "An iron section arrives at the first platform, ready for the next lift.",
     "voiceId": "pNInz6obpgDQGcFmaJgB",
     "model": "eleven_multilingual_v2",
     "speed": 1.2,
@@ -56,7 +56,7 @@
   },
   {
     "captionId": "eiffel-relay-later",
-    "text": "The work rises above Paris, until the tower’s iron lattice reaches the sky.",
+    "text": "The frame narrows above the second platform.",
     "voiceId": "pNInz6obpgDQGcFmaJgB",
     "model": "eleven_multilingual_v2",
     "speed": 1.2,

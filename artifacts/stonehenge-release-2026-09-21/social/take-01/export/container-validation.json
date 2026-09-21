@@ -1,0 +1,56 @@
+{
+  "mp4Atoms": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 23618
+    },
+    {
+      "type": "free",
+      "offset": 23650,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 23658,
+      "size": 18261436
+    }
+  ],
+  "faststart": true,
+  "capturedFrames": [
+    {
+      "film": "pyramids-of-giza",
+      "count": 150,
+      "unique": 150,
+      "firstSourceSecond": 27,
+      "lastSourceSecond": 31.96666666666667
+    },
+    {
+      "film": "eiffel-tower",
+      "count": 150,
+      "unique": 150,
+      "firstSourceSecond": 18,
+      "lastSourceSecond": 22.96666666666667
+    },
+    {
+      "film": "colosseum",
+      "count": 150,
+      "unique": 150,
+      "firstSourceSecond": 54,
+      "lastSourceSecond": 58.96666666666667
+    },
+    {
+      "film": "stonehenge",
+      "count": 150,
+      "unique": 150,
+      "firstSourceSecond": 55,
+      "lastSourceSecond": 59.96666666666667
+    }
+  ],
+  "contactSheet": "artifacts/stonehenge-release-2026-09-21/social/take-01/export/contact-sheet.jpg"
+}

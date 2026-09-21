@@ -1,0 +1,22 @@
+{
+  "wonderId": "pyramids-of-giza",
+  "captionId": "giza-ramps",
+  "captionText": "Here, ramps and levers raise each stone into place.",
+  "src": "/audio/narration/giza-ramps-george-2013ef8333df.mp3",
+  "duration": 3.482993,
+  "volume": 1,
+  "voiceName": "George",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "windowSeconds": 7.2,
+  "sha256": "d2a10b9baf38fd0bab4d2f6b22fbb94e357356a5f31b495f23e9718f3c7abfb2",
+  "bytes": 56886
+}

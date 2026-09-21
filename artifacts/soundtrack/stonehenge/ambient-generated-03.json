@@ -1,0 +1,13 @@
+{
+  "wonder": "stonehenge",
+  "role": "ambient",
+  "model": "lyria-3-clip-preview",
+  "location": "global",
+  "prompt": "A 30-second instrumental ambient acoustic bed for Stonehenge on open chalk\ngrassland. Archaeologically cautious speculative atmosphere: low natural wind,\nunpitched breath passing across a rough hollow wood-or-bone tube, occasional\nstruck wood, and a quiet rounded stone resonance. Do not turn the breath into a\nrecognizable flute melody or imitate a ney, shakuhachi, pan flute, or any named\nregional instrument. Very spacious, even, meditative, no strong beat, no build\nand no climax so it can become a seamless loop. Instrumental only: no voice,\nvocals, chant, choir, lyrics, orchestra, synthesizer, bagpipes, fiddle, tin\nwhistle, Celtic, Druidic, Anglo-Saxon, medieval or Egyptian styling.",
+  "model_text": [
+    "<instrumental>",
+    "Caption: This is an atmospheric Ambient soundscape designed to evoke the feeling of standing on open chalk grassland at Stonehenge. The foundation of the piece is a wide stereo field recording of low natural wind sweeping across an open plain, providing a constant, airy texture. Layered deep within this wind are very low-frequency, almost subliminal sine wave drone pads that add weight and a sense of immense scale. Floating above this foundation is an unpitched breath sound, created by passing air across the embouchure hole of a simple, rough wooden tube. This breath sound should have a hollow, airy quality with audible imperfections, occasionally changing its timbre slightly as if the player's breath is wavering. Its phrases are long and irregular, never forming a recognizable melody. Occasional, sparse percussive elements punctuate the space: these are samples of resonant hardwood being struck, providing a dry, earthy, and organic sound that echoes gently in the expansive sound field. Complementing this is the quiet, rounded resonance of a large stone being gently struck, creating a deep, mellow 'thrum' with a long, natural decay. The entire mix is extremely spacious, with heavy use of long-tail reverb to create a meditative, seamless loop with no strong beat, build, or climax, allowing all elements to blend into a timeless, contemplative atmosphere.\nMosic: 4.5\nBPM: 60.0"
+  ],
+  "file": "ambient-generated-03.mp3",
+  "provenance": "Google Lyria 3 via Gen AI SDK on Vertex AI; SynthID and C2PA enabled by model default."
+}

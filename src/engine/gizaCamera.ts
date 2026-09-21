@@ -73,6 +73,7 @@ export const GIZA_SHOTS = {
     reveal: { from: 0.88, to: 0.96 },
   },
   baseRadius: 148,
+  operation: { in: 0.08, near: 0.14, hold: 0.24, out: 0.30, target: [7, 2.8, 23], radius: 0.64 },
   /** The reveal widens the orbit from focus (0.82) to full (1.0). */
   focus: { min: 0.82, from: 0.87, to: 0.97 },
   /**
@@ -127,6 +128,10 @@ export function gizaCinematicShotAt(t: number, aspect: number): GizaCinematicSho
     const span = handoffs.reveal.to - handoffs.reveal.from;
     target = lerp3(GIZA_SHOTS.menkaure, GIZA_SHOTS.ensemble, easeInOutQuad((t - handoffs.reveal.from) / span));
   }
+  const operation = GIZA_SHOTS.operation;
+  const operationWeight = easeInOutQuad((t - operation.in) / (operation.near - operation.in))
+    * (1 - easeInOutQuad((t - operation.hold) / (operation.out - operation.hold)));
+  target = lerp3(target, operation.target, operationWeight);
   target[1] += Math.sin(t * Math.PI * 2) * 0.35;
 
   const intro = t < 0.08 ? 1.22 - easeInOutQuad(t / 0.08) * 0.22 : 1;
@@ -144,7 +149,8 @@ export function gizaCinematicShotAt(t: number, aspect: number): GizaCinematicSho
 
   return {
     target,
-    radius: GIZA_SHOTS.baseRadius * focusRadius * intro * reveal * narrow * mobileReveal,
+    radius: GIZA_SHOTS.baseRadius * focusRadius * intro * reveal * narrow * mobileReveal
+      * (1 - operationWeight * (1 - operation.radius)),
     azimuth:
       GIZA_CAMERA.startAzimuth +
       t * Math.PI * 2 * 1.25 +

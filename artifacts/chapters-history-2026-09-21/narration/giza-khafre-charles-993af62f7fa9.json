@@ -1,0 +1,28 @@
+{
+  "wonderId": "pyramids-of-giza",
+  "captionId": "giza-khafre",
+  "captionText": "Khafre, Khufu's son, builds the second great pyramid on higher ground.",
+  "src": "/audio/narration/giza-khafre-charles-993af62f7fa9.mp3",
+  "duration": 4.551111,
+  "volume": 1,
+  "voiceName": "Charles",
+  "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.8,
+  "sha256": "5a56e24c3266699d782e9c29eeb86baca93c528e0c46aefa0b4c2c55d224aae4",
+  "bytes": 74022,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.24,
+    "truePeakDbtp": -2.35,
+    "gainDb": 7.55
+  }
+}

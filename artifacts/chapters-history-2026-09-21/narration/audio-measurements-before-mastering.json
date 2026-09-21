@@ -1,0 +1,154 @@
+[
+  {
+    "captionId": "giza-khufu",
+    "integratedLUFS": -18.83,
+    "truePeakDbTP": -1.83,
+    "rangeLU": 3.6,
+    "duration": 4.318912,
+    "tailSeconds": 2.881088
+  },
+  {
+    "captionId": "giza-roads",
+    "integratedLUFS": -20.41,
+    "truePeakDbTP": -1.88,
+    "rangeLU": 5.5,
+    "duration": 4.365351,
+    "tailSeconds": 2.834649
+  },
+  {
+    "captionId": "giza-ramps",
+    "integratedLUFS": -17.59,
+    "truePeakDbTP": -1.92,
+    "rangeLU": 1.6,
+    "duration": 3.529433,
+    "tailSeconds": 3.670567
+  },
+  {
+    "captionId": "giza-khafre",
+    "integratedLUFS": -18.23,
+    "truePeakDbTP": -1.86,
+    "rangeLU": 1.8,
+    "duration": 4.551111,
+    "tailSeconds": 3.248889
+  },
+  {
+    "captionId": "giza-casing",
+    "integratedLUFS": -18.75,
+    "truePeakDbTP": -1.74,
+    "rangeLU": 1.4,
+    "duration": 3.436553,
+    "tailSeconds": 3.763447
+  },
+  {
+    "captionId": "giza-menkaure",
+    "integratedLUFS": -18.76,
+    "truePeakDbTP": -1.9,
+    "rangeLU": 2.9,
+    "duration": 4.92263,
+    "tailSeconds": 0.47737
+  },
+  {
+    "captionId": "stonehenge-earthwork",
+    "integratedLUFS": -17.04,
+    "truePeakDbTP": -1.91,
+    "rangeLU": 1.3,
+    "duration": 5.10839,
+    "tailSeconds": 2.09161
+  },
+  {
+    "captionId": "stonehenge-sarsens",
+    "integratedLUFS": -17.1,
+    "truePeakDbTP": -1.64,
+    "rangeLU": 0.9,
+    "duration": 5.34059,
+    "tailSeconds": 1.85941
+  },
+  {
+    "captionId": "stonehenge-pits",
+    "integratedLUFS": -17.2,
+    "truePeakDbTP": -1.73,
+    "rangeLU": 1.0,
+    "duration": 4.92263,
+    "tailSeconds": 2.27737
+  },
+  {
+    "captionId": "stonehenge-lintels",
+    "integratedLUFS": -17.08,
+    "truePeakDbTP": -1.85,
+    "rangeLU": 0.8,
+    "duration": 4.086712,
+    "tailSeconds": 3.113288
+  },
+  {
+    "captionId": "stonehenge-bluestones",
+    "integratedLUFS": -16.98,
+    "truePeakDbTP": -1.94,
+    "rangeLU": 0.6,
+    "duration": 4.504671,
+    "tailSeconds": 2.695329
+  },
+  {
+    "captionId": "stonehenge-axis",
+    "integratedLUFS": -17.83,
+    "truePeakDbTP": -1.51,
+    "rangeLU": 2.3,
+    "duration": 4.87619,
+    "tailSeconds": 2.32381
+  },
+  {
+    "captionId": "colosseum-valley",
+    "integratedLUFS": -16.72,
+    "truePeakDbTP": -1.93,
+    "rangeLU": 1.3,
+    "duration": 4.504671,
+    "tailSeconds": 2.095329
+  },
+  {
+    "captionId": "colosseum-stone",
+    "integratedLUFS": -16.65,
+    "truePeakDbTP": -2.09,
+    "rangeLU": 1.1,
+    "duration": 4.458231,
+    "tailSeconds": 1.541769
+  },
+  {
+    "captionId": "colosseum-cranes",
+    "integratedLUFS": -16.6,
+    "truePeakDbTP": -1.94,
+    "rangeLU": 0.5,
+    "duration": 5.24771,
+    "tailSeconds": 1.35229
+  },
+  {
+    "captionId": "colosseum-vaults",
+    "integratedLUFS": -17.18,
+    "truePeakDbTP": -1.92,
+    "rangeLU": 1.6,
+    "duration": 4.040272,
+    "tailSeconds": 1.959728
+  },
+  {
+    "captionId": "colosseum-seating",
+    "integratedLUFS": -16.97,
+    "truePeakDbTP": -1.92,
+    "rangeLU": 1.0,
+    "duration": 4.643991,
+    "tailSeconds": 1.356009
+  },
+  {
+    "captionId": "colosseum-titus",
+    "integratedLUFS": -16.7,
+    "truePeakDbTP": -1.91,
+    "rangeLU": 0.1,
+    "duration": 4.829751,
+    "tailSeconds": 1.170249
+  },
+  {
+    "captionId": "colosseum-moonrise",
+    "integratedLUFS": -16.69,
+    "truePeakDbTP": -1.88,
+    "rangeLU": 0.4,
+    "duration": 4.179592,
+    "tailSeconds": 0.620408
+  }
+]

@@ -145,6 +145,20 @@ function horizontalPosition(
   ];
 }
 
+/** Transform a metre-space local point using the renderer's YXZ convention. */
+export function stonehengePointFromPose(point: Vec3, position: Vec3, rotation: Vec3): Vec3 {
+  const [pitch, yaw, roll] = rotation;
+  const x = point[0] * Math.cos(roll) - point[1] * Math.sin(roll);
+  const y = point[0] * Math.sin(roll) + point[1] * Math.cos(roll);
+  const pitchedY = y * Math.cos(pitch) - point[2] * Math.sin(pitch);
+  const z = y * Math.sin(pitch) + point[2] * Math.cos(pitch);
+  return [
+    position[0] + x * Math.cos(yaw) + z * Math.sin(yaw),
+    position[1] + pitchedY,
+    position[2] - x * Math.sin(yaw) + z * Math.cos(yaw),
+  ];
+}
+
 function uprightRaisePose(
   stone: StonehengeStone,
   outward: [number, number],
@@ -155,20 +169,30 @@ function uprightRaisePose(
   const startHeelY = stonehengeTerrainHeightAt(stone.finalPosition[0], stone.finalPosition[2])
     + stone.dimensions[0] * 0.5;
   const finalHeelY = stone.finalPosition[1] - halfLength;
-  // The butt descends from the turf into the prepared socket as the stone
-  // pivots upward. It never begins below its final depth and rises out.
   const heelY = lerp(startHeelY, finalHeelY, Math.sin(theta));
-  const radial = halfLength * Math.cos(theta);
   const heel: Vec3 = [stone.finalPosition[0], heelY, stone.finalPosition[2]];
+  const yaw = stone.finalRotation[1];
+  // Local +Y tips toward -X under positive Z rotation. Choose the outward
+  // side, then derive the centre from the actual rotated butt-to-centre arm.
+  const sign = -Math.cos(yaw) * outward[0] + Math.sin(yaw) * outward[1] >= 0 ? 1 : -1;
+  const rotation: Vec3 = [0, yaw, sign * (Math.PI * 0.5 - theta)];
   return {
-    position: [
-      stone.finalPosition[0] + outward[0] * radial,
-      heelY + halfLength * Math.sin(theta),
-      stone.finalPosition[2] + outward[1] * radial,
-    ],
-    rotation: [0, stone.finalRotation[1], Math.PI * 0.5 - theta],
+    position: stonehengePointFromPose([0, halfLength, 0], heel, rotation),
+    rotation,
     heelPosition: heel,
   };
+}
+
+/** A short traverse perpendicular to the lintel's long bearing axis. */
+export function stonehengeLintelStagingPosition(stone: StonehengeStone): Vec3 {
+  const yaw = stone.finalRotation[1];
+  const outward = outwardFor(stone);
+  const sign = Math.sin(yaw) * outward[0] + Math.cos(yaw) * outward[1] >= 0 ? 1 : -1;
+  return [
+    stone.finalPosition[0] + Math.sin(yaw) * sign * 1.15,
+    0,
+    stone.finalPosition[2] + Math.cos(yaw) * sign * 1.15,
+  ];
 }
 
 function uprightPoses(stone: StonehengeStone, route: StonehengeRoute): Pose[] {
@@ -177,9 +201,9 @@ function uprightPoses(stone: StonehengeStone, route: StonehengeRoute): Pose[] {
   const laneQueue = lanePoint(route.queue, route, stone.lane);
   const outward = outwardFor(stone);
   const pitPose = uprightRaisePose(stone, outward, 0);
-  const sourceRotation: Vec3 = [0, yawAlong(route.source, route.dressing, stone.finalRotation[1]), Math.PI / 2];
-  const haulRotation: Vec3 = [0, yawAlong(route.dressing, route.queue, stone.finalRotation[1]), Math.PI / 2];
-  const queueRotation: Vec3 = [0, yawAlong(route.queue, pitPose.position, stone.finalRotation[1]), Math.PI / 2];
+  const sourceRotation: Vec3 = [0, yawAlong(route.source, route.dressing, stone.finalRotation[1]), pitPose.rotation[2]];
+  const haulRotation: Vec3 = [0, yawAlong(route.dressing, route.queue, stone.finalRotation[1]), pitPose.rotation[2]];
+  const queueRotation: Vec3 = [0, yawAlong(route.queue, pitPose.position, stone.finalRotation[1]), pitPose.rotation[2]];
   const dressingOffset: Vec3 = [laneDressing[0] - 1.1, laneDressing[1], laneDressing[2] + 0.8];
   const finalPose: Pose = {
     position: [...stone.finalPosition],
@@ -223,16 +247,11 @@ function lintelPoses(stone: StonehengeStone, route: StonehengeRoute): Pose[] {
   const laneSource = lanePoint(route.source, route, stone.lane);
   const laneDressing = lanePoint(route.dressing, route, stone.lane);
   const laneQueue = lanePoint(route.queue, route, stone.lane);
-  const outward = outwardFor(stone);
   const sourceRotation: Vec3 = [0, yawAlong(route.source, route.dressing, stone.finalRotation[1]), 0];
   const haulRotation: Vec3 = [0, yawAlong(route.dressing, route.queue, stone.finalRotation[1]), 0];
   const stagingRotation: Vec3 = [0, stone.finalRotation[1], 0];
   const dressingOffset: Vec3 = [laneDressing[0] - 0.8, laneDressing[1], laneDressing[2] + 0.6];
-  const staging: Vec3 = [
-    stone.finalPosition[0] + outward[0] * 1.15,
-    0,
-    stone.finalPosition[2] + outward[1] * 1.15,
-  ];
+  const staging: Vec3 = stonehengeLintelStagingPosition(stone);
   staging[1] = horizontalPosition(stone, staging, stagingRotation, STONEHENGE_SLED_BED_HEIGHT)[1];
   const highY = stone.finalPosition[1] + 0.62;
   const quarterY = staging[1] + (highY - staging[1]) * 0.34;
@@ -317,7 +336,7 @@ function stateRoles(
       : phaseIndex >= 4 && phaseIndex <= 6
         ? 0.72
         : 0,
-    cribHeight: isCrib || onGuides ? Math.max(0.04, position[1] - stone.dimensions[1] * 0.5 - 0.015) : 0,
+    cribHeight: isCrib || onGuides ? Math.max(0.04, position[1] - stone.dimensions[1] * 0.5) : 0,
     sledLift,
     contactDust: contact.contactDustAmount > 0.08,
     contactDustAmount: contact.contactDustAmount,

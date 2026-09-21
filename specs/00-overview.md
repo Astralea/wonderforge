@@ -27,10 +27,12 @@ require feature or visual parity and should not drive extensive separate work.
 
 ## Experience flow
 
-1. Home — one full-bleed Giza diorama. A title plate (brand, headline,
-   sentence, "Enter the gallery") crossfades into the ten-wonder catalog
-   over the same picture; there is no page scroll between them.
-2. Wonder catalog — the existing ten-wonder index and stable deep links.
+1. Home — one full-bleed Giza diorama (the quality bar). A title plate
+   (brand as the page heading, “Choose a site”) crossfades into the
+   catalog over the same picture; there is no page scroll between them.
+   Do not stage Colosseum, Stonehenge, or Eiffel as the homepage orbit.
+2. Wonder catalog — two chronological blocks (On site / In production)
+   and stable deep links. Unpublished ids stay in typed data.
 3. Cinematic view — quarrying, dressing, hauling, raising, aligning, and
    seating happen across a deterministic construction movie. Eiffel includes
    longer working chapters with playback speed controls; other scenes retain
@@ -53,7 +55,9 @@ require feature or visual parity and should not drive extensive separate work.
 
 ## Non-goals
 
-- No Firaxis/2K assets. Geometry and materials are original and procedural.
+- No Firaxis/2K assets. Geometry and materials are original and procedural,
+  except the credited NASA lunar surface image authorized for Colosseum's Moon
+  in Spec 12. This observational texture does not supply a construction model.
 - No photorealistic digital twin. The target is a tactile, low-poly,
   tilt-shift miniature with physically legible construction.
 - No backend or accounts. The experience remains a static site.

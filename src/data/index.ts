@@ -10,7 +10,7 @@ import { forbiddenCity } from './wonders/forbidden-city';
 import { eiffelTower } from './wonders/eiffel-tower';
 import { sydneyOperaHouse } from './wonders/sydney-opera-house';
 
-/** The canonical catalog — Spec 01. Order = gallery order. */
+/** The canonical catalog — Spec 01. Gallery order is chronological On site / In production. */
 export const WONDERS: Wonder[] = [
   pyramidsOfGiza,
   stonehenge,
@@ -23,6 +23,29 @@ export const WONDERS: Wonder[] = [
   eiffelTower,
   sydneyOperaHouse,
 ];
+
+const READY_IDS = new Set([
+  'pyramids-of-giza',
+  'stonehenge',
+  'colosseum',
+  'eiffel-tower',
+]);
+
+function byCompletedYear(a: Wonder, b: Wonder): number {
+  return a.completedYear - b.completedYear;
+}
+
+export function isReadyWonder(id: string): boolean {
+  return READY_IDS.has(id);
+}
+
+export function catalogReady(): Wonder[] {
+  return WONDERS.filter((w) => READY_IDS.has(w.id)).sort(byCompletedYear);
+}
+
+export function catalogInProgress(): Wonder[] {
+  return WONDERS.filter((w) => !READY_IDS.has(w.id)).sort(byCompletedYear);
+}
 
 export function getWonder(id: string): Wonder {
   const w = WONDERS.find((w) => w.id === id);

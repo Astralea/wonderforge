@@ -3,6 +3,11 @@
 Scene authoring proceeds from the world inward and from logistics to monument.
 The renderer must never receive a flat pile of disconnected decorative parts.
 
+Execute [Spec 49 — Scene authoring pipeline](49-scene-authoring-pipeline.md)
+for research, context layout, Blender assets, integration and film acceptance.
+Layer presence alone is insufficient: roads and infrastructure must connect
+the named districts they belong to, using shared typed placement data.
+
 ## Layer contract
 
 Every production scene declares these layers, far to near:
@@ -70,8 +75,10 @@ generic `masonryPyramid` that emits one box per course is forbidden for Giza.
 - Generate courses bottom-up.
 - Generate separate stones around each visible perimeter ring and generate a
   stacked interior core from human-scale fill cells. Interior fill may only be
-  omitted where it is permanently occluded and cannot create a see-through
-  silhouette at any scrubbed construction time.
+  omitted where it is permanently occluded **and still blocks light**: a hollow
+  casing shell is a failed pyramid. The renderer may replace deeply buried
+  cells with an opaque occupancy volume of matching slope, but backlight must
+  not shine through joints or light the inner face of the far casing.
 - Core-fill cells are course-local and reveal progressively. A cell in course
   `n > 0` must horizontally overlap at least one settled cell in course `n-1`;
   no active working deck may appear as an unsupported floating lid.
@@ -98,7 +105,9 @@ and lintel/crib state graphs rather than forcing its mechanics into Giza's
 masonry phases. Petra is the second and uses remaining-rock members plus
 spoil-cell haul rather than Giza ramps or Stonehenge pits. The Colosseum is
 the third and uses wagon haul plus treadwheel cranes for a freestanding
-elliptical amphitheatre. Sydney Opera House is the fourth and uses on-site
+elliptical amphitheatre. Its main-construction layer is a stacked interior
+like Giza core fill: podium, radial walls, vaults, and a stepped cavea
+bowl, not an outer arcade shell with empty air inside. Sydney Opera House is the fourth and uses on-site
 precast ribs, tower cranes, and ceramic tile skins on a harbour podium.
 The Eiffel Tower is the fifth and uses wagon haul plus creeper cranes for
 four inward-leaning puddled-iron lattice pylons on the Champ de Mars.

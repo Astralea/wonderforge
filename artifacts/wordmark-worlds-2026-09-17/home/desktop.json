@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5589/#/",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/wordmark-worlds-2026-09-17/home/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "drawingBuffer": {
+      "width": 1440,
+      "height": 900
+    },
+    "alphaPixels": 4102,
+    "variance": 243,
+    "colorBuckets": 121,
+    "metrics": {
+      "colorBuckets": 176,
+      "colorEntropyBits": 4.59,
+      "edgeDensity": 0.158,
+      "luminance": {
+        "mean": 75.2,
+        "p5": 29.1,
+        "p95": 115.4,
+        "contrast": 86.2
+      },
+      "dominantColorShare": 0.137,
+      "nonBackgroundShare": 0.863
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 159,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 262572,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 84,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 159,
+        "triangles": 262572,
+        "points": 0,
+        "lines": 0,
+        "geometries": 84,
+        "textures": 16
+      },
+      "camera": {
+        "position": [
+          54.3583999798479,
+          71.57190364790219,
+          74.87422393962572
+        ],
+        "direction": [
+          -0.5682702661884881,
+          -0.42455899677003955,
+          -0.7048535754521519
+        ],
+        "fov": 35,
+        "aspect": 1.6,
+        "near": 0.5
+      },
+      "scene": "giza-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

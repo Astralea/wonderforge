@@ -1,0 +1,130 @@
+/*
+ * Catalog glyphs (Spec 05 §Catalog): the slot is empty until the row is
+ * hovered or focused, then one pen builds the monument from the ground up.
+ *
+ * Per-stroke timing arrives as inline custom properties from WonderGlyph:
+ *   --wg-d     delay before this stroke's pen starts
+ *   --wg-t     duration, proportional to the stroke's measured length
+ *   --wg-total whole-glyph build time (on the .wonder-glyph span)
+ */
+.wonder-glyph {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+  /* Ink tones are absolute colors (not currentColor): Chrome cannot
+     interpolate an SVG paint between currentColor and a mixed color and
+     falls back to transparent, which would make fresh ink fade in from nothing. */
+  --wg-ink: color-mix(in srgb, var(--color-gold, #d4a24e) 80%, transparent);
+  --wg-hot: color-mix(in srgb, var(--color-gold, #d4a24e) 55%, #fff6dc);
+  color: var(--wg-ink);
+}
+
+/* In-production rows: quieter ink, same build. */
+.wonder-glyph[data-tone='quiet'] {
+  --wg-ink: color-mix(in srgb, var(--color-gold, #d4a24e) 42%, transparent);
+  --wg-hot: color-mix(in srgb, var(--color-gold, #d4a24e) 40%, rgb(255 246 220 / 0.4));
+}
+
+/* The drawing rises slightly from its ground line (y≈28 of 32) while it builds. */
+.wonder-glyph svg {
+  overflow: visible;
+  width: 2.4rem;
+  height: 2.4rem;
+  transform-origin: 50% 87%;
+  transform: scale(0.965, 0.93);
+  transition: transform 0.2s ease-in;
+}
+
+.group:hover .wonder-glyph svg,
+.group:focus-visible .wonder-glyph svg,
+.group:focus-within .wonder-glyph svg {
+  transform: scale(1);
+  transition: transform var(--wg-total, 1s) cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Plan: a dotted underdrawing of the finished glyph, visible at once so the
+   hover answers immediately while the ink is still on its way. */
+.wonder-glyph .wg-plan path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.45;
+  stroke-linecap: round;
+  stroke-dasharray: 0.35 0.85;
+  opacity: 0;
+  transition: opacity 0.16s ease-out;
+}
+
+.group:hover .wonder-glyph .wg-plan path,
+.group:focus-visible .wonder-glyph .wg-plan path,
+.group:focus-within .wonder-glyph .wg-plan path {
+  opacity: 0.22;
+  transition: opacity 0.28s ease-out;
+}
+
+/* Ink: hidden by dash offset until its turn, then drawn at pen speed. Fresh
+   ink is hotter and paler than the row's gold and cools once it lands.
+   Leaving the row fades the ink out, then resets the pen for the next hover
+   (a zero-duration transition delayed past the fade) so it never rewinds. */
+.wonder-glyph .wg-build {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  stroke: var(--wg-hot);
+  transition:
+    opacity 0.18s ease-out,
+    stroke-dashoffset 0s linear 0.18s,
+    stroke 0s linear 0.18s;
+}
+
+.group:hover .wonder-glyph .wg-build,
+.group:focus-visible .wonder-glyph .wg-build,
+.group:focus-within .wonder-glyph .wg-build {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  stroke: var(--wg-ink);
+  transition:
+    opacity 0s,
+    stroke-dashoffset var(--wg-t, 0.5s) cubic-bezier(0.38, 0.04, 0.24, 1) var(--wg-d, 0s),
+    stroke 0.75s ease-out calc(var(--wg-d, 0s) + var(--wg-t, 0.5s));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wonder-glyph svg,
+  .wonder-glyph .wg-plan path,
+  .wonder-glyph .wg-build {
+    transition: none;
+  }
+
+  .wonder-glyph svg {
+    transform: none;
+  }
+
+  .wonder-glyph .wg-build {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+
+  .group:hover .wonder-glyph svg,
+  .group:focus-visible .wonder-glyph svg,
+  .group:focus-within .wonder-glyph svg {
+    transform: none;
+    transition: none;
+  }
+
+  .group:hover .wonder-glyph .wg-plan path,
+  .group:focus-visible .wonder-glyph .wg-plan path,
+  .group:focus-within .wonder-glyph .wg-plan path {
+    transition: none;
+  }
+
+  .group:hover .wonder-glyph .wg-build,
+  .group:focus-visible .wonder-glyph .wg-build,
+  .group:focus-within .wonder-glyph .wg-build {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: var(--wg-ink);
+    transition: none;
+  }
+}

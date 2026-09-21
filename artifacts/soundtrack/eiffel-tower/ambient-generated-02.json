@@ -1,0 +1,13 @@
+{
+  "wonder": "eiffel-tower",
+  "role": "ambient",
+  "model": "lyria-3-clip-preview",
+  "location": "global",
+  "prompt": "A 30-second instrumental ambient bed for the Champ de Mars beside the Seine\nin 1889: temperate Paris air, salon-string warmth, faint civic brass far\noff, no beat and no climax so it can loop. Instrumental only; no vocals; no\naccordion, musette, can-can, jazz, chanson, or construction-site pulse.",
+  "model_text": [
+    "<instrumental>",
+    "Caption: This is a lush, instrumental Ambient piece designed as a seamless loop, evoking the refined, temperate atmosphere of the Champ de Mars in Paris circa 1889. The core texture is a massive string orchestra section (violins, violas, cellos, double basses) playing sustained, legato chords in a warm major key. The string sound is rich and glossy, with a generous application of hall reverb to create a sense of vast, open space and historical grandeur, completely avoiding any percussive attack. Floating gently within this string bed is a solo harp, playing delicate, glistening upward arpeggios that add a magical, ethereal quality. To create a sense of distance and depth, a solo flute occasionally offers a simple, wistful melodic phrase that echoes the string harmony. Far in the background, mixed very low and panned wide, is the faint sound of a distant civic brass band—a subtle choir of cornets and trombones—playing a stately fanfare. This brass sound is heavily filtered to remove high-end frequencies and drenched in reverb to create the illusion that it's drifting from across the Seine. Underpinning the entire piece is an almost imperceptible, high-frequency stereo field recording of gentle breeze and faint, distant park chatter, providing a subtle layer of naturalism. There is no discernible beat or rhythmic pulse, allowing the piece to feel weightless and endlessly looping.\nMosic: 4.5\nBPM: 60.0"
+  ],
+  "file": "ambient-generated-02.mp3",
+  "provenance": "Google Lyria 3 via Gen AI SDK on Vertex AI; SynthID and C2PA enabled by model default."
+}

@@ -89,8 +89,22 @@ stations are built in 0–9s, remain until the first-floor platform is complete,
 and retire by station/member in66–90s. Haul-away of removed members and removal
 of the later first-floor and second-floor plant remain editorial omissions.
 
-Keep existing six narration recordings; adjust their viewer-clock windows to
-match the work and retain at least8seconds each. The loading wave remains tied
+The six short-film captions describe the authored pictures, not omitted
+worker or freight action. Preserve IDs and eight-second windows:
+
+| ID | Title | Sentence |
+|---|---|---|
+| `eiffel-lift-prepared` | The first lift | A lifting frame raises an iron section from the ground. |
+| `eiffel-lift-later` | The four legs | Crews work on all four legs of the tower. |
+| `eiffel-joint-prepared` | Aligning the iron | A crane turns the next iron section and lowers it into position. |
+| `eiffel-joint-later` | The lower structure | The four legs will meet at the first platform. |
+| `eiffel-relay-prepared` | The first platform | An iron section arrives at the first platform, ready for the next lift. |
+| `eiffel-relay-later` | The upper tower | The frame narrows above the second platform. |
+
+Do not say that workers tighten bolts, and do not imply freight above the
+second-floor receiver. Spoken clips must be regenerated to these sentences
+before the narration is treated as current; retain at least eight viewer
+seconds each. The loading wave remains tied
 to genuine asset progress and moves independently during a stationary milestone.
 
 Verification: actual kit support/height/count probes at5,6,10,40,66,70,90,100%;

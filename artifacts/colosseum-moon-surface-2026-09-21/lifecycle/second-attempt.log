@@ -1,0 +1,68 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'WonderForge, back to films' })[22m
+[2m    - locator resolved to <button aria-label="WonderForge, back to films" class="flex min-h-11 cursor-pointer items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold">WonderForge</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div data-empty="true" class="eiffel-arrival" data-wonder="colosseum" data-testid="wonder-arrival">…</div> from <div class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div data-empty="true" class="eiffel-arrival" data-wonder="colosseum" data-testid="wonder-arrival">…</div> from <div class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    56 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div data-empty="true" class="eiffel-arrival" data-wonder="colosseum" data-testid="wonder-arrival">…</div> from <div class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+
+    at /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/colosseum-moon-surface-2026-09-21/lifecycle/check.mjs:54:74 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'WonderForge, back to films' })",
+    '    - locator resolved to <button aria-label="WonderForge, back to films" class="flex min-h-11 cursor-pointer items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold">WonderForge</button>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <div data-empty="true" class="eiffel-arrival" data-wonder="colosseum" data-testid="wonder-arrival">…</div> from <div class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <div data-empty="true" class="eiffel-arrival" data-wonder="colosseum" data-testid="wonder-arrival">…</div> from <div class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '    - retrying click action',
+    '      - waiting 100ms',
+    '    56 × waiting for element to be visible, enabled and stable',
+    '       - element is visible, enabled and stable',
+    '       - scrolling into view if needed',
+    '       - done scrolling',
+    '       - <div data-empty="true" class="eiffel-arrival" data-wonder="colosseum" data-testid="wonder-arrival">…</div> from <div class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '     - retrying click action',
+    '       - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.4.0

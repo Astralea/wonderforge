@@ -1,10 +1,14 @@
 import {
   BoxGeometry,
+  BufferGeometry,
   CylinderGeometry,
+  DoubleSide,
+  Float32BufferAttribute,
   Group,
   InstancedMesh,
   Matrix4,
   MeshStandardMaterial,
+  MeshBasicMaterial,
   Quaternion,
   SphereGeometry,
   Vector3,
@@ -40,19 +44,36 @@ export class ColosseumWorkSystem {
   private readonly armGeometry = new CylinderGeometry(0.85, 1, 1, 5, 1, true);
   private readonly boxGeometry = new BoxGeometry(1, 1, 1);
   private readonly poleGeometry = new CylinderGeometry(0.08, 0.1, 1, 6);
+  private readonly scaffoldGeometry = new CylinderGeometry(0.08, 0.1, 1, 4, 1, true);
   private readonly wheelGeometry = new CylinderGeometry(1, 1, 0.18, 12);
   private readonly dustGeometry = new SphereGeometry(0.5, 7, 4);
+  // Two crossed triangles per leg: a direction-independent foot-to-hip shadow
+  // silhouette, not a flat ground decal. Keeping the feet separate preserves
+  // gait gaps. Four triangles per worker cost eight submissions including the
+  // invisible main pass, versus resubmitting both detailed cylinder legs.
+  private readonly crewContactGeometry = new BufferGeometry().setAttribute('position', new Float32BufferAttribute([
+    -1, 0, 0, 1, 0, 0, 0, 1, 0,
+    0, 0, -1, 0, 0, 1, 0, 1, 0,
+  ], 3));
+  private readonly crewContactMaterial = new MeshBasicMaterial({ colorWrite: false, depthWrite: false, side: DoubleSide, shadowSide: DoubleSide });
   private readonly bodies: InstancedMesh;
   private readonly heads: InstancedMesh;
   private readonly legs: InstancedMesh;
+  private readonly crewContactShadows: InstancedMesh;
   private readonly arms: InstancedMesh;
   private readonly wagonDecks: InstancedMesh;
   private readonly wagonWheels: InstancedMesh;
   private readonly cranePoles: InstancedMesh;
   private readonly craneBooms: InstancedMesh;
+  private readonly cranePlatforms: InstancedMesh;
+  private readonly craneSupports: InstancedMesh;
   private readonly treadwheels: InstancedMesh;
   private readonly ropes: InstancedMesh;
   private readonly scaffoldPoles: InstancedMesh;
+  private readonly scaffoldShadowPoles: InstancedMesh;
+  // Color/depth writes are disabled only in the main material. Three's shadow
+  // pass supplies its own depth material, retaining these column shadows.
+  private readonly shadowOnlyMaterial = new MeshBasicMaterial({ colorWrite: false, depthWrite: false });
   private readonly scaffoldDecks: InstancedMesh;
   private readonly scaffoldBraces: InstancedMesh;
   private readonly centering: InstancedMesh;
@@ -77,6 +98,8 @@ export class ColosseumWorkSystem {
     this.bodies = new InstancedMesh(this.bodyGeometry, linen, MAX_WORKERS);
     this.heads = new InstancedMesh(this.headGeometry, skin, MAX_WORKERS);
     this.legs = new InstancedMesh(this.legGeometry, linen, MAX_WORKERS * 2);
+    this.crewContactGeometry.computeVertexNormals();
+    this.crewContactShadows = new InstancedMesh(this.crewContactGeometry, this.crewContactMaterial, MAX_WORKERS * 2);
     this.arms = new InstancedMesh(this.armGeometry, skin, MAX_WORKERS * 2);
     this.wagonDecks = new InstancedMesh(this.boxGeometry, timber, MAX_OPERATIONS);
     this.wagonWheels = new InstancedMesh(this.wheelGeometry, timber, MAX_OPERATIONS * 4);
@@ -84,22 +107,48 @@ export class ColosseumWorkSystem {
     this.craneBooms = new InstancedMesh(this.boxGeometry, timber, MAX_OPERATIONS);
     this.treadwheels = new InstancedMesh(this.wheelGeometry, timber, MAX_OPERATIONS);
     this.ropes = new InstancedMesh(this.armGeometry, ropeMat, MAX_OPERATIONS * 4);
-    this.scaffoldPoles = new InstancedMesh(this.poleGeometry, timber, MAX_SCAFFOLD_POLES);
+    this.scaffoldPoles = new InstancedMesh(this.scaffoldGeometry, timber, MAX_SCAFFOLD_POLES);
+    this.scaffoldShadowPoles = new InstancedMesh(this.scaffoldGeometry, this.shadowOnlyMaterial, 80);
+    this.scaffoldShadowPoles.name = 'colosseum-scaffold-shadow-columns';
+    this.bodies.name = 'colosseum-crew-bodies';
+    this.heads.name = 'colosseum-crew-heads';
+    this.legs.name = 'colosseum-crew-legs';
+    this.crewContactShadows.name = 'colosseum-crew-contact-shadows';
+    this.arms.name = 'colosseum-crew-arms';
     this.scaffoldDecks = new InstancedMesh(this.boxGeometry, timber, MAX_SCAFFOLD_DECKS);
     this.scaffoldBraces = new InstancedMesh(this.boxGeometry, timber, MAX_SCAFFOLD_BRACES);
     this.centering = new InstancedMesh(this.boxGeometry, timber, MAX_CENTERING);
     this.dust = new InstancedMesh(this.dustGeometry, dustMat, MAX_OPERATIONS * 2);
+    this.cranePlatforms = new InstancedMesh(this.boxGeometry, timber, MAX_OPERATIONS);
+    this.craneSupports = new InstancedMesh(this.boxGeometry, timber, MAX_OPERATIONS * 4);
+    this.wagonDecks.name = 'colosseum-wagon-decks';
+    this.wagonWheels.name = 'colosseum-wagon-wheels';
+    this.cranePoles.name = 'colosseum-crane-masts';
+    this.craneBooms.name = 'colosseum-crane-jibs';
+    this.cranePlatforms.name = 'colosseum-crane-platforms';
+    this.craneSupports.name = 'colosseum-crane-supports';
+    this.scaffoldPoles.name = 'colosseum-scaffold-poles';
     for (const mesh of [
-      this.bodies, this.heads, this.legs, this.arms,
-      this.wagonDecks, this.wagonWheels, this.cranePoles, this.craneBooms, this.treadwheels,
-      this.ropes, this.scaffoldPoles, this.scaffoldDecks, this.scaffoldBraces, this.centering,
+      this.bodies, this.heads, this.legs, this.crewContactShadows, this.arms,
+      this.wagonDecks, this.wagonWheels, this.cranePoles, this.craneBooms, this.cranePlatforms, this.craneSupports, this.treadwheels,
+      this.ropes, this.scaffoldPoles, this.scaffoldShadowPoles, this.scaffoldDecks, this.scaffoldBraces, this.centering,
     ]) {
       mesh.castShadow = true;
       mesh.frustumCulled = false;
       this.group.add(mesh);
     }
+    this.scaffoldPoles.castShadow = false;
     this.dust.frustumCulled = false;
     this.group.add(this.dust);
+  }
+
+  setCompactDetail(compact: boolean): void {
+    // Torso shadows alone begin metres above the feet and detach visibly in
+    // low sunlight. The cheap articulated foot-to-hip silhouettes retain that
+    // contact on both tiers without resubmitting all limb/head triangles.
+    for (const mesh of [this.heads, this.wagonWheels]) mesh.castShadow = !compact;
+    this.arms.castShadow = false;
+    this.legs.castShadow = false;
   }
 
   update(operations: ActiveColosseumOperation[], t: number): void {
@@ -119,6 +168,7 @@ export class ColosseumWorkSystem {
     let wheels = 0;
     let poles = 0;
     let booms = 0;
+    let supports = 0;
     let tread = 0;
     let ropes = 0;
     let frames = 0;
@@ -167,6 +217,7 @@ export class ColosseumWorkSystem {
         crew.lean,
       );
       this.bodies.setMatrixAt(bodies, matrix);
+      const hip = new Vector3(0, -0.3, 0).applyMatrix4(matrix);
       compose(
         new Vector3(
           x + fx * (crew.lean * 0.45 * FIGURE + stride * 0.12),
@@ -197,6 +248,19 @@ export class ColosseumWorkSystem {
           new Vector3(FIGURE, FIGURE, FIGURE),
         );
         this.legs.setMatrixAt(legs, matrix);
+        const foot = new Vector3(0, -0.31, 0).applyMatrix4(matrix);
+        // The base cross stays within the pentagonal visible foot's inradius;
+        // each tip reaches inside the actually leaned/bobbing lower torso.
+        // Shear only this hidden silhouette to follow the separate walking
+        // feet, never bridge their ground-level gap with one broad proxy.
+        const footRadius = 0.065 * FIGURE;
+        matrix.set(
+          lx * footRadius, hip.x - foot.x, fx * footRadius, foot.x,
+          0, hip.y - foot.y, 0, foot.y,
+          lz * footRadius, hip.z - foot.z, fz * footRadius, foot.z,
+          0, 0, 0, 1,
+        );
+        this.crewContactShadows.setMatrixAt(legs, matrix);
         legs += 1;
       }
       for (const armSide of [-1, 1] as const) {
@@ -217,6 +281,7 @@ export class ColosseumWorkSystem {
     };
 
     let scaffoldPoles = 0;
+    let scaffoldShadowPoles = 0;
     let scaffoldDecks = 0;
     let scaffoldBraces = 0;
     for (const bay of colosseumScaffoldsAt(t)) {
@@ -231,6 +296,14 @@ export class ColosseumWorkSystem {
         scaffoldDecks += 1;
       }
       const corners = [[-2.6, -1.6], [2.6, -1.6], [-2.6, 1.6], [2.6, 1.6]] as const;
+      // One continuous shadow column covers the same stack footprint. The
+      // visible fixed-length timber instances below keep their identity/size.
+      for (const [ox, oz] of corners) {
+        const px = x + lateral.x * ox + forward.x * oz;
+        const pz = z + lateral.z * ox + forward.z * oz;
+        compose(new Vector3(px, foot + bay.height / 2, pz), yaw, new Vector3(12.5, bay.height, 12.5));
+        this.scaffoldShadowPoles.setMatrixAt(scaffoldShadowPoles++, matrix);
+      }
       for (let lift = 0; lift < bay.segmentCount; lift += 1) {
         const cy = foot + lift * bay.segmentLength + bay.segmentLength / 2;
         for (const [ox, oz] of corners) {
@@ -283,7 +356,7 @@ export class ColosseumWorkSystem {
       const rig = colosseumCraneRigAt(part, state);
 
       if (hauling) {
-        compose(new Vector3(partPos.x, bottom - state.wagonLift * 0.2 + 0.42, partPos.z), yaw, new Vector3(
+        compose(new Vector3(partPos.x, bottom - 0.19, partPos.z), yaw, new Vector3(
           Math.max(part.dimensions[0], 2.2) + 1.4,
           0.38,
           Math.max(part.dimensions[2], 2.4) + 1.6,
@@ -291,13 +364,17 @@ export class ColosseumWorkSystem {
         this.wagonDecks.setMatrixAt(decks, matrix);
         decks += 1;
         const wagonSpin = motion.get(part.id)?.wagonSpin ?? 0;
-        for (const along of [-0.9, 0.9] as const) {
+        const wheelSide = (Math.max(part.dimensions[0], 2.2) + 1.4) / 2 + .3;
+        const wheelSpan = Math.max(.9, part.dimensions[2] * .32);
+        for (const along of [-wheelSpan, wheelSpan]) {
           for (const side of [-1, 1] as const) {
+            const wheelX = partPos.x + forward.x * along + lateral.x * side * wheelSide;
+            const wheelZ = partPos.z + forward.z * along + lateral.z * side * wheelSide;
             composeWheel(
               new Vector3(
-                partPos.x + forward.x * along + lateral.x * side * 0.85,
-                bottom - state.wagonLift + 0.52,
-                partPos.z + forward.z * along + lateral.z * side * 0.85,
+                wheelX,
+                colosseumTerrainHeightAt(wheelX, wheelZ) + 0.72,
+                wheelZ,
               ),
               yaw,
               wagonSpin,
@@ -320,12 +397,25 @@ export class ColosseumWorkSystem {
       }
 
       if (rig) {
+        const stationYaw = part.finalRotation[1];
+        compose(new Vector3(rig.base[0], rig.base[1] - .21, rig.base[2]), stationYaw, new Vector3(7.2, .42, 5.8));
+        this.cranePlatforms.setMatrixAt(booms, matrix);
+        for (const [ox, oz] of [[-2.8, -2.2], [-2.8, 2.2], [2.8, -2.2], [2.8, 2.2]]) {
+          const x = rig.base[0] + Math.cos(stationYaw) * ox! + Math.sin(stationYaw) * oz!;
+          const z = rig.base[2] - Math.sin(stationYaw) * ox! + Math.cos(stationYaw) * oz!;
+          const foot = colosseumTerrainHeightAt(x, z);
+          const top = rig.base[1] - .42;
+          if (top > foot + .02) {
+            compose(new Vector3(x, (top + foot) / 2, z), stationYaw, new Vector3(.75, top - foot, .75));
+            this.craneSupports.setMatrixAt(supports++, matrix);
+          }
+        }
         const mastHeight = Math.max(0.8, rig.mastTop[1] - rig.base[1]);
         compose(new Vector3(rig.base[0], rig.base[1] + mastHeight / 2, rig.base[2]), rig.yaw, new Vector3(14, mastHeight, 14));
         this.cranePoles.setMatrixAt(poles, matrix);
         poles += 1;
         compose(
-          new Vector3(rig.base[0] + Math.cos(rig.yaw) * 2.1, rig.base[1] + mastHeight * 0.48, rig.base[2] - Math.sin(rig.yaw) * 2.1),
+          new Vector3(rig.base[0] + Math.cos(stationYaw) * 2.1, rig.base[1] + mastHeight * 0.46, rig.base[2] - Math.sin(stationYaw) * 2.1),
           rig.yaw,
           new Vector3(11, mastHeight * 0.92, 11),
         );
@@ -373,14 +463,18 @@ export class ColosseumWorkSystem {
       [this.bodies, bodies],
       [this.heads, bodies],
       [this.legs, legs],
+      [this.crewContactShadows, legs],
       [this.arms, arms],
       [this.wagonDecks, decks],
       [this.wagonWheels, wheels],
       [this.cranePoles, poles],
       [this.craneBooms, booms],
+      [this.cranePlatforms, booms],
+      [this.craneSupports, supports],
       [this.treadwheels, tread],
       [this.ropes, ropes],
       [this.scaffoldPoles, scaffoldPoles],
+      [this.scaffoldShadowPoles, scaffoldShadowPoles],
       [this.scaffoldDecks, scaffoldDecks],
       [this.scaffoldBraces, scaffoldBraces],
       [this.centering, frames],
@@ -396,15 +490,19 @@ export class ColosseumWorkSystem {
     this.bodyGeometry.dispose();
     this.headGeometry.dispose();
     this.legGeometry.dispose();
+    this.crewContactGeometry.dispose();
+    this.crewContactMaterial.dispose();
     this.armGeometry.dispose();
     this.boxGeometry.dispose();
     this.poleGeometry.dispose();
+    this.scaffoldGeometry.dispose();
+    this.shadowOnlyMaterial.dispose();
     this.wheelGeometry.dispose();
     this.dustGeometry.dispose();
     for (const mesh of [
-      this.bodies, this.heads, this.legs, this.arms,
-      this.wagonDecks, this.wagonWheels, this.cranePoles, this.craneBooms, this.treadwheels,
-      this.ropes, this.scaffoldPoles, this.scaffoldDecks, this.scaffoldBraces, this.centering, this.dust,
+      this.bodies, this.heads, this.legs, this.crewContactShadows, this.arms,
+      this.wagonDecks, this.wagonWheels, this.cranePoles, this.craneBooms, this.cranePlatforms, this.craneSupports, this.treadwheels,
+      this.ropes, this.scaffoldPoles, this.scaffoldShadowPoles, this.scaffoldDecks, this.scaffoldBraces, this.centering, this.dust,
     ]) mesh.dispose();
     for (const material of this.materials) material.dispose();
   }

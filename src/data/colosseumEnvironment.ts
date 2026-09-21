@@ -25,7 +25,9 @@ export interface ColosseumEnvironmentPlan {
   ecology: {
     tufts: number;
     pines: number;
+    cypress: number;
     insulae: number;
+    farBlocks: number;
     aqueductPiers: number;
     description: string;
   };
@@ -59,10 +61,14 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
     },
     layers: COLOSSEUM_CONSTRUCTION.layers.map((layer) => ({ ...layer })),
     terrain: {
-      radius: 640,
-      segments: 96,
+      radius: 2200,
+      segments: 64,
       motion: 'static-world-space',
-      description: 'Drained alluvial valley between Palatine and Caelian, with an eastern Tivoli haul road.',
+      description:
+        'Drained alluvial valley between Palatine, Oppian, Velia and Caelian, with Quirinal, ' +
+        'Viminal, and Janiculum as a farther city ring, extending past every ' +
+        'cinematic hold so the square plane never silhouettes. Olive scrub on ' +
+        'the rises; far valley fog meets the sky.',
     },
     monument: {
       major: COLOSSEUM_MAJOR,
@@ -71,18 +77,22 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
       bays: COLOSSEUM_CONSTRUCTION.bays,
     },
     ecology: {
-      tufts: 640,
-      pines: 120,
-      insulae: 140,
-      aqueductPiers: 16,
+      tufts: 720,
+      pines: 400,
+      cypress: 130,
+      insulae: 420,
+      farBlocks: 48,
+      aqueductPiers: 28,
       description:
-        'Valley herbs, grove-scale umbrella pines on Palatine and Caelian, ' +
-        'roofed brick insulae on the hills, and a Claudian-aqueduct arcade to the east.',
+        'Olive Palatine and Caelian neighbourhoods of hip-roof insulae and palace ' +
+        'wings, a farther Quirinal–Viminal–Janiculum city ring, umbrella-pine ridges, ' +
+        'and the Neronian watercourse entering the Claudian precinct from the east, ' +
+        'with adjoining streets and courtyard blocks. Hills stay below the 48 m facade. No standing water in the oval.',
     },
     site: {
-      wagons: 10,
-      timberStocks: 22,
-      mixingTubs: 12,
+      wagons: 18,
+      timberStocks: 48,
+      mixingTubs: 28,
     },
     exclusions: [
       'modern tourism',
@@ -90,10 +100,17 @@ export function createColosseumEnvironmentPlan(): ColosseumEnvironmentPlan {
       'Giza ramps',
       'Stonehenge pits',
       'gladiatorial games during construction',
+      'standing water in the working oval',
+      'mid-ground Tiber pool',
+      'Domitianic aqueduct extension to the Palatine',
+      'Trajan baths',
+      'Arch of Constantine',
     ],
     sources: [
       { title: 'UNESCO Historic Centre of Rome', url: 'https://whc.unesco.org/en/list/91/' },
       { title: 'Britannica: Colosseum', url: 'https://www.britannica.com/topic/Colosseum' },
+      { title: 'World History Encyclopedia: Colosseum', url: 'https://www.worldhistory.org/Colosseum/' },
+      { title: 'Structurae: Colosseum', url: 'https://structurae.net/en/structures/colosseum' },
     ],
   };
 }

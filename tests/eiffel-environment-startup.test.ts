@@ -111,7 +111,7 @@ describe('Eiffel deferred environment fallback', () => {
     // Browser readers cannot silently recover from the workstation's public/ directory.
     vi.stubGlobal('process', { ...process, versions: { ...process.versions, node: undefined } });
     const environment = make(); await environment.ready;
-    expect(fetch).toHaveBeenCalledWith('/models/paris-1889/paris-city.glb');
+    expect(fetch).toHaveBeenCalledWith('/models/paris-1889/paris-city.glb.gz');
     expect(environment.parisSource).toBe('procedural'); expect(environment.lifeSource).toBe('blender');
     expect(scatter(environment, 'houses')!.visible).toBe(true);
     expect(scatter(environment, 'barges')!.visible).toBe(false);
@@ -126,6 +126,20 @@ describe('Eiffel deferred environment fallback', () => {
     expect(resources(environment)).toEqual(before); expect(environment.group.children).toHaveLength(children);
     expect(writes).not.toHaveBeenCalled(); expect(scatter(environment, 'houses')).toBeUndefined();
     environments.splice(environments.indexOf(environment), 1);
+  });
+
+  it('advances city load fraction while streets are still pending', async () => {
+    const { city, life } = deferredAssets();
+    const environment = make();
+    expect(environment.loadFraction).toBe(0);
+    await vi.waitFor(() => {
+      expect(environment.loadFraction).toBeGreaterThan(0);
+    });
+    expect(environment.loadFraction).toBeLessThan(1);
+    city.resolve(new Group());
+    life.resolve(lifeAsset());
+    await environment.ready;
+    expect(environment.loadFraction).toBe(1);
   });
 
   it('preserves the eager legacy environment and all its matrices and colors', async () => {

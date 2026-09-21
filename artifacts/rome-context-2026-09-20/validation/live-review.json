@@ -1,0 +1,258 @@
+[
+  {
+    "mode": "desktop",
+    "errors": [],
+    "shots": [
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 102,
+            "triangles": 145936,
+            "points": 0,
+            "lines": 0,
+            "geometries": 44,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              -288.712995574705,
+              122.5314995199449,
+              215.67504519687134
+            ],
+            "direction": [
+              0.7757418684589777,
+              -0.2498167162482648,
+              -0.5794964726404365
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.22,
+        "diagnostics": {
+          "renderer": {
+            "calls": 97,
+            "triangles": 87188,
+            "points": 0,
+            "lines": 0,
+            "geometries": 44,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              -52.124914079146016,
+              92.03373379119495,
+              303.1085968024739
+            ],
+            "direction": [
+              0.17008992539923076,
+              -0.2524915770151579,
+              -0.9525321101223216
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 102,
+            "triangles": 145936,
+            "points": 0,
+            "lines": 0,
+            "geometries": 44,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              -288.712995574705,
+              122.5314995199449,
+              215.67504519687134
+            ],
+            "direction": [
+              0.7757418684589777,
+              -0.2498167162482648,
+              -0.5794964726404365
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 1,
+        "diagnostics": {
+          "renderer": {
+            "calls": 70,
+            "triangles": 125174,
+            "points": 0,
+            "lines": 0,
+            "geometries": 44,
+            "textures": 16
+          },
+          "camera": {
+            "position": [
+              -334.233879573538,
+              124.21947484302642,
+              183.2845905118151
+            ],
+            "direction": [
+              0.8522327940727961,
+              -0.23514211310259003,
+              -0.4673408299651598
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      }
+    ],
+    "replayValue": 0.007,
+    "home": {
+      "hash": "#/",
+      "overflow": false,
+      "loader": false
+    }
+  },
+  {
+    "mode": "mobile",
+    "errors": [],
+    "shots": [
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 82,
+            "triangles": 103605,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              -426.5554943751874,
+              166.9217300978022,
+              318.646465307925
+            ],
+            "direction": [
+              0.7757418684589777,
+              -0.24981671624826476,
+              -0.5794964726404365
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.22,
+        "diagnostics": {
+          "renderer": {
+            "calls": 61,
+            "triangles": 63945,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              -102.0554630633128,
+              166.15360317589796,
+              582.7280455841795
+            ],
+            "direction": [
+              0.17008992539923076,
+              -0.25249157701515795,
+              -0.9525321101223216
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 0.86,
+        "diagnostics": {
+          "renderer": {
+            "calls": 82,
+            "triangles": 103605,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              -426.5554943751874,
+              166.9217300978022,
+              318.646465307925
+            ],
+            "direction": [
+              0.7757418684589777,
+              -0.24981671624826476,
+              -0.5794964726404365
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      },
+      {
+        "t": 1,
+        "diagnostics": {
+          "renderer": {
+            "calls": 51,
+            "triangles": 80645,
+            "points": 0,
+            "lines": 0,
+            "geometries": 42,
+            "textures": 5
+          },
+          "camera": {
+            "position": [
+              -456.887111695594,
+              158.06109696861103,
+              250.54422156156187
+            ],
+            "direction": [
+              0.8522327940727961,
+              -0.23514211310259006,
+              -0.46734082996515947
+            ],
+            "fov": 42,
+            "aspect": 0.46208530805687204,
+            "near": 0.5
+          },
+          "scene": "colosseum-reference"
+        }
+      }
+    ],
+    "replayValue": 0.006,
+    "home": {
+      "hash": "#/",
+      "overflow": false,
+      "loader": false
+    }
+  }
+]

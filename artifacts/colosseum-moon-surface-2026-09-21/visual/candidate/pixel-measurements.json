@@ -1,0 +1,140 @@
+{
+  "method": "Rendered sRGB luma (0–255): Moon inner ellipse r<=0.78, halo r=1.3–1.8, local sky r=2.8–3.3. Diagnostic comparison only; sky gradients/clouds can affect annular differences. Radius from projected enlarged astronomical limb.",
+  "measurements": [
+    {
+      "mode": "desktop",
+      "t": 0.9,
+      "diameterPixels": [
+        29.562921968255864,
+        29.645992036020857
+      ],
+      "innerQ10": 136.7156,
+      "innerMedian": 153.142,
+      "innerQ90": 177.3558,
+      "innerQ90MinusQ10": 40.64019999999999,
+      "haloMedian": 113.64620000000001,
+      "surroundingMedian": 113.64620000000001,
+      "haloMinusSurrounding": 0
+    },
+    {
+      "mode": "desktop",
+      "t": 0.95,
+      "diameterPixels": [
+        29.763626972101747,
+        30.185354399996243
+      ],
+      "innerQ10": 94.60679999999999,
+      "innerMedian": 121.52659999999999,
+      "innerQ90": 158.79940000000002,
+      "innerQ90MinusQ10": 64.19260000000003,
+      "haloMedian": 37.292199999999994,
+      "surroundingMedian": 46.06119999999999,
+      "haloMinusSurrounding": -8.768999999999998
+    },
+    {
+      "mode": "desktop",
+      "t": 1,
+      "diameterPixels": [
+        30.684421906912576,
+        31.46645099806824
+      ],
+      "innerQ10": 82.1644,
+      "innerMedian": 111.0842,
+      "innerQ90": 146.9358,
+      "innerQ90MinusQ10": 64.7714,
+      "haloMedian": 19.628,
+      "surroundingMedian": 19.415399999999998,
+      "haloMinusSurrounding": 0.2126000000000019
+    },
+    {
+      "mode": "1080p",
+      "t": 0.9,
+      "diameterPixels": [
+        35.47550636190681,
+        35.57519044322498
+      ],
+      "innerQ10": 136.7156,
+      "innerMedian": 153.2142,
+      "innerQ90": 178.14319999999998,
+      "innerQ90MinusQ10": 41.427599999999984,
+      "haloMedian": 113.64620000000001,
+      "surroundingMedian": 112.93100000000001,
+      "haloMinusSurrounding": 0.7151999999999958
+    },
+    {
+      "mode": "1080p",
+      "t": 0.95,
+      "diameterPixels": [
+        35.716352366521846,
+        36.22242527999538
+      ],
+      "innerQ10": 93.60679999999999,
+      "innerMedian": 122.31400000000001,
+      "innerQ90": 158.79940000000002,
+      "innerQ90MinusQ10": 65.19260000000003,
+      "haloMedian": 37.577,
+      "surroundingMedian": 46.06119999999999,
+      "haloMinusSurrounding": -8.484199999999994
+    },
+    {
+      "mode": "1080p",
+      "t": 1,
+      "diameterPixels": [
+        36.82130628829486,
+        37.75974119768196
+      ],
+      "innerQ10": 81.81139999999999,
+      "innerMedian": 111.2246,
+      "innerQ90": 147.9358,
+      "innerQ90MinusQ10": 66.12440000000001,
+      "haloMedian": 19.628,
+      "surroundingMedian": 19.415399999999998,
+      "haloMinusSurrounding": 0.2126000000000019
+    },
+    {
+      "mode": "portrait",
+      "t": 0.9,
+      "diameterPixels": [
+        22.77152796443194,
+        22.835514615452155
+      ],
+      "innerQ10": 135.64339999999999,
+      "innerMedian": 151.0016,
+      "innerQ90": 175.3558,
+      "innerQ90MinusQ10": 39.7124,
+      "haloMedian": 111.6462,
+      "surroundingMedian": 111.574,
+      "haloMinusSurrounding": 0.07219999999999516
+    },
+    {
+      "mode": "portrait",
+      "t": 0.95,
+      "diameterPixels": [
+        22.926125659902993,
+        23.250971016122435
+      ],
+      "innerQ10": 98.53460000000001,
+      "innerMedian": 124.5988,
+      "innerQ90": 160.7994,
+      "innerQ90MinusQ10": 62.26479999999998,
+      "haloMedian": 37.861799999999995,
+      "surroundingMedian": 46.9208,
+      "haloMinusSurrounding": -9.059000000000005
+    },
+    {
+      "mode": "portrait",
+      "t": 1,
+      "diameterPixels": [
+        23.635389366314087,
+        24.23776545543612
+      ],
+      "innerQ10": 81.8796,
+      "innerMedian": 107.7312,
+      "innerQ90": 141.72320000000002,
+      "innerQ90MinusQ10": 59.84360000000002,
+      "haloMedian": 19.4114,
+      "surroundingMedian": 18.3432,
+      "haloMinusSurrounding": 1.068200000000001
+    }
+  ]
+}

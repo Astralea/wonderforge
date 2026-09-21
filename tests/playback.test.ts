@@ -77,6 +77,16 @@ describe('playback store', () => {
     expect(usePlaybackStore.getState().status).toBe('playing');
   });
 
+  it('seeking to the endpoint offers Replay from any transport state', () => {
+    for (const status of ['idle', 'paused', 'playing', 'complete'] as const) {
+      usePlaybackStore.setState({ status, t: .4 });
+      usePlaybackStore.getState().seek(1);
+      expect(usePlaybackStore.getState()).toMatchObject({ t: 1, status: 'complete' });
+      usePlaybackStore.getState().seek(.4);
+      expect(usePlaybackStore.getState()).toMatchObject({ t: .4, status: 'paused' });
+    }
+  });
+
   it('select switches wonder and resets playback; unknown ids throw', () => {
     const s = usePlaybackStore.getState();
     s.play();

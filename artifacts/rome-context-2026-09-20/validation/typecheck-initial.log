@@ -1,0 +1,5 @@
+
+> wonderforge@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+tests/colosseum-urban-context.test.ts(70,56): error TS7006: Parameter 'o' implicitly has an 'any' type.

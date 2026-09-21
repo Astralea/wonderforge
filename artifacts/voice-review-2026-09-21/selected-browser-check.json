@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "desktop",
+    "errors": [],
+    "overflow": false,
+    "audioPlayers": 3
+  },
+  {
+    "mode": "mobile",
+    "errors": [],
+    "overflow": false,
+    "audioPlayers": 3
+  }
+]

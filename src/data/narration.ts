@@ -1,3 +1,5 @@
+import { HISTORICAL_NARRATION_ASSETS } from './historicalNarration.generated';
+
 /**
  * Typed prerecorded caption narration (Spec 05 §Caption voice).
  *
@@ -10,7 +12,7 @@
 
 export interface NarrationVoice {
   provider: 'ElevenLabs';
-  name: 'George' | 'Daniel' | 'Bill' | 'Alice' | 'Adam';
+  name: 'George' | 'Daniel' | 'Bill' | 'Alice' | 'Adam' | 'Charles' | 'Oliver' | 'Andrea Williams';
   voiceId: string;
   model: 'eleven_multilingual_v2';
   description: string;
@@ -67,153 +69,43 @@ export const ADAM_NARRATION_VOICE: NarrationVoice = {
   description: 'Narrator American male; distinct from George, Daniel, Bill, and Alice.',
 };
 
-export const GIZA_NARRATION: readonly NarrationClip[] = [
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-quarry',
-    captionText:
-      'Blocks are won from the plateau itself; the fine white casing crosses the river from Tura.',
-    src: '/audio/narration/giza-george-quarry.mp3',
-    duration: 6.780227,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-roads',
-    captionText: 'Sledges run on wetted roads — water on the sand eases the haul.',
-    src: '/audio/narration/giza-george-roads.mp3',
-    duration: 5.944308,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-ramps',
-    captionText: 'Ramps of earth and brick rise with the working face, course by course.',
-    src: '/audio/narration/giza-george-ramps.mp3',
-    duration: 5.479909,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-masons',
-    captionText: 'Every casing stone is dressed, levered, and seated by hand.',
-    src: '/audio/narration/giza-george-masons.mp3',
-    duration: 5.24771,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'pyramids-of-giza',
-    captionId: 'giza-horizon',
-    captionText: 'One building day stands for three reigns.',
-    src: '/audio/narration/giza-george-horizon.mp3',
-    duration: 4.272472,
-    volume: 1,
-    voice: GEORGE_NARRATION_VOICE,
-  },
-];
+/** Owner-selected voice library entries, 2026-09-21. */
+export const CHARLES_NARRATION_VOICE: NarrationVoice = {
+  provider: 'ElevenLabs', name: 'Charles', voiceId: 'zNsotODqUhvbJ5wMG7Ei',
+  model: 'eleven_multilingual_v2',
+  description: 'Expressive mature English gentleman with a traditional British RP accent.',
+};
 
-export const STONEHENGE_NARRATION: readonly NarrationClip[] = [
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-sarsens',
-    captionText: 'Sarsen faces were dressed with hammerstones before the haul.',
-    src: '/audio/narration/stonehenge-daniel-sarsens.mp3',
-    duration: 6.269388,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-bluestones',
-    captionText:
-      'The smaller bluestones were transported from the Preseli Hills in Wales, over 200 km away.',
-    src: '/audio/narration/stonehenge-daniel-bluestones.mp3',
-    duration: 8.637823,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-pits',
-    captionText: 'Each upright is rotated into a ramp-sided pit, then packed with chalk rubble.',
-    src: '/audio/narration/stonehenge-daniel-pits.mp3',
-    duration: 7.709025,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-lintels',
-    captionText: 'Timber platforms are a likely way the lintels were raised into place.',
-    src: '/audio/narration/stonehenge-daniel-lintels.mp3',
-    duration: 5.572789,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'stonehenge',
-    captionId: 'stonehenge-axis',
-    captionText: 'Aligned to the midsummer sunrise and the midwinter sunset.',
-    src: '/audio/narration/stonehenge-daniel-axis.mp3',
-    duration: 6.083628,
-    volume: 1,
-    voice: DANIEL_NARRATION_VOICE,
-  },
-];
+export const OLIVER_NARRATION_VOICE: NarrationVoice = {
+  provider: 'ElevenLabs', name: 'Oliver', voiceId: 'L1aJrPa7pLJEyYlh3Ilq',
+  model: 'eleven_multilingual_v2',
+  description: 'Warm, kind, mature British narrator with a steady delivery.',
+};
 
-export const COLOSSEUM_NARRATION: readonly NarrationClip[] = [
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-lake',
-    captionText:
-      'The amphitheatre stands on Nero\'s drained lake between Palatine and Caelian.',
-    src: '/audio/narration/colosseum-bill-lake.mp3',
-    duration: 5.15483,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-stone',
-    captionText: 'Load-bearing piers are Tivoli travertine hauled twenty kilometres into Rome.',
-    src: '/audio/narration/colosseum-bill-stone.mp3',
-    duration: 5.990748,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-cranes',
-    captionText:
-      'Treadwheel cranes of the Haterii type raise dressed blocks to each working storey.',
-    src: '/audio/narration/colosseum-bill-cranes.mp3',
-    duration: 5.34059,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-vaults',
-    captionText: 'Timber centering carries opus caementicium vaults over the radial walls.',
-    src: '/audio/narration/colosseum-bill-vaults.mp3',
-    duration: 5.15483,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-  {
-    wonderId: 'colosseum',
-    captionId: 'colosseum-orders',
-    captionText: 'Eighty arched bays stack three classical orders under a fourth attic storey.',
-    src: '/audio/narration/colosseum-bill-orders.mp3',
-    duration: 5.34059,
-    volume: 1,
-    voice: BILL_NARRATION_VOICE,
-  },
-];
+export const ANDREA_NARRATION_VOICE: NarrationVoice = {
+  provider: 'ElevenLabs', name: 'Andrea Williams', voiceId: 'dcWyhLms5IOM9o93xsQu',
+  model: 'eleven_multilingual_v2',
+  description: 'Professional British female narrator with a refined accent.',
+};
+
+export const HISTORICAL_NARRATION_VOICES: Readonly<Record<string, NarrationVoice>> = {
+  'pyramids-of-giza': CHARLES_NARRATION_VOICE,
+  stonehenge: OLIVER_NARRATION_VOICE,
+  colosseum: ANDREA_NARRATION_VOICE,
+};
+export const HISTORICAL_NARRATION_SPEED = 0.92;
+
+/** Only measured, generated takes are bound. Missing takes remain silent. */
+function historicalNarrationFor(wonderId: string, voice: NarrationVoice): readonly NarrationClip[] {
+  return HISTORICAL_NARRATION_ASSETS.filter(clip => clip.wonderId === wonderId && clip.voiceId === voice.voiceId).map(clip => ({
+    wonderId, captionId: clip.captionId, captionText: clip.captionText,
+    src: clip.src, duration: clip.duration, volume: clip.volume, voice,
+  }));
+}
+
+export const GIZA_NARRATION = historicalNarrationFor('pyramids-of-giza', HISTORICAL_NARRATION_VOICES['pyramids-of-giza']!);
+export const STONEHENGE_NARRATION = historicalNarrationFor('stonehenge', HISTORICAL_NARRATION_VOICES.stonehenge!);
+export const COLOSSEUM_NARRATION = historicalNarrationFor('colosseum', HISTORICAL_NARRATION_VOICES.colosseum!);
 
 export const SYDNEY_NARRATION: readonly NarrationClip[] = [
   {
@@ -315,7 +207,7 @@ export const EIFFEL_STORY_NARRATION: readonly NarrationClip[] = [
   {
     wonderId: 'eiffel-tower',
     captionId: "eiffel-lift-prepared",
-    captionText: "At the foot of each pylon, a lifting frame takes the weight of the iron.",
+    captionText: "A lifting frame raises an iron section from the ground.",
     src: "/audio/narration/eiffel-adam-lift-prepared.mp3",
     duration: 3.761633,
     volume: 1,
@@ -324,7 +216,7 @@ export const EIFFEL_STORY_NARRATION: readonly NarrationClip[] = [
   {
     wonderId: 'eiffel-tower',
     captionId: "eiffel-lift-later",
-    captionText: "One member settles into place, while the other crews continue around the tower.",
+    captionText: "Crews work on all four legs of the tower.",
     src: "/audio/narration/eiffel-adam-lift-later.mp3",
     duration: 3.761633,
     volume: 1,
@@ -333,7 +225,7 @@ export const EIFFEL_STORY_NARRATION: readonly NarrationClip[] = [
   {
     wonderId: 'eiffel-tower',
     captionId: "eiffel-joint-prepared",
-    captionText: "Up close, workers align the plates and tighten the bolts that hold the joint.",
+    captionText: "A crane turns the next iron section and lowers it into position.",
     src: "/audio/narration/eiffel-adam-joint-prepared.mp3",
     duration: 3.390113,
     volume: 1,
@@ -342,7 +234,7 @@ export const EIFFEL_STORY_NARRATION: readonly NarrationClip[] = [
   {
     wonderId: 'eiffel-tower',
     captionId: "eiffel-joint-later",
-    captionText: "Around them, many hands repeat the work, joining the four pylons into one tower.",
+    captionText: "The four legs will meet at the first platform.",
     src: "/audio/narration/eiffel-adam-joint-later.mp3",
     duration: 4.272472,
     volume: 1,
@@ -351,7 +243,7 @@ export const EIFFEL_STORY_NARRATION: readonly NarrationClip[] = [
   {
     wonderId: 'eiffel-tower',
     captionId: "eiffel-relay-prepared",
-    captionText: "Winches lift the longer members from platform to platform, toward the narrowing summit.",
+    captionText: "An iron section arrives at the first platform, ready for the next lift.",
     src: "/audio/narration/eiffel-adam-relay-prepared.mp3",
     duration: 4.272472,
     volume: 1,
@@ -360,7 +252,7 @@ export const EIFFEL_STORY_NARRATION: readonly NarrationClip[] = [
   {
     wonderId: 'eiffel-tower',
     captionId: "eiffel-relay-later",
-    captionText: "The work rises above Paris, until the tower’s iron lattice reaches the sky.",
+    captionText: "The frame narrows above the second platform.",
     src: "/audio/narration/eiffel-adam-relay-later.mp3",
     duration: 4.318912,
     volume: 1,

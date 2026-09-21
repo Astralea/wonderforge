@@ -1,0 +1,76 @@
+{
+  "generated": 2,
+  "expected": 19,
+  "provider": "ElevenLabs",
+  "status": "waiting-for-key-allowance",
+  "failures": [
+    {
+      "captionId": "giza-khufu",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "giza-khafre",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "giza-casing",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "giza-menkaure",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "stonehenge-earthwork",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "stonehenge-sarsens",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "stonehenge-pits",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "stonehenge-lintels",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "stonehenge-bluestones",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "stonehenge-axis",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-valley",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-stone",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-cranes",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-vaults",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-seating",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-titus",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    },
+    {
+      "captionId": "colosseum-moonrise",
+      "reason": "Existing API key quota exhausted; 37 credits remain under its 20000-credit cap. Owner asked to increase allowance; no alternate provider used."
+    }
+  ]
+}

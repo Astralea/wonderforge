@@ -1,0 +1,22 @@
+{
+  "wonderId": "pyramids-of-giza",
+  "captionId": "giza-casing",
+  "captionText": "White casing stone came by water from the quarries at Tura.",
+  "src": "/audio/narration/giza-casing-charles-59e0e7af593b.mp3",
+  "duration": 3.436553,
+  "volume": 1,
+  "voiceName": "Charles",
+  "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "c91914f82738f4c8e5f34f87be42d03e0da7ccada38f4bfe20d93f85521e24eb",
+  "bytes": 56050
+}

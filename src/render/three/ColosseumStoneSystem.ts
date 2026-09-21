@@ -39,13 +39,46 @@ function setTransform(
 function stoneColor(material: ColosseumPart['material'], variation: number, target: Color): Color {
   if (material === 'tuff') target.set('#a8895c');
   else if (material === 'pozzolana') target.set('#8a7a68');
+  else if (material === 'timber') target.set('#6a4a30');
   else target.set('#d8c4a0');
   target.offsetHSL(variation * 0.01, variation * 0.018, variation * 0.035);
   return target;
 }
 
-export function createColosseumPartGeometry(kind: ColosseumPartKind): BufferGeometry {
-  if (kind !== 'arch') return new BoxGeometry(1, 1, 1, 2, 2, 2);
+function createCaveaSeatGeometry(steps = 12): BufferGeometry {
+  const shape = new Shape();
+  shape.moveTo(-0.5, -0.5);
+  for (let i = 0; i < steps; i += 1) {
+    const x0 = -0.5 + i / steps;
+    const x1 = -0.5 + (i + 1) / steps;
+    const y1 = -0.5 + (i + 1) / steps;
+    shape.lineTo(x0, y1);
+    shape.lineTo(x1, y1);
+  }
+  shape.lineTo(0.5, -0.5);
+  shape.closePath();
+  const geometry = new ExtrudeGeometry(shape, { depth: 1, bevelEnabled: false, steps: 1, curveSegments: 1 });
+  geometry.translate(0, 0, -0.5);
+  geometry.rotateY(-Math.PI / 2);
+  geometry.computeBoundingBox();
+  const box = geometry.boundingBox!;
+  geometry.translate(
+    -(box.min.x + box.max.x) / 2,
+    -(box.min.y + box.max.y) / 2,
+    -(box.min.z + box.max.z) / 2,
+  );
+  geometry.scale(
+    1 / Math.max(1e-6, box.max.x - box.min.x),
+    1 / Math.max(1e-6, box.max.y - box.min.y),
+    1 / Math.max(1e-6, box.max.z - box.min.z),
+  );
+  geometry.computeVertexNormals();
+  return geometry;
+}
+
+export function createColosseumPartGeometry(kind: ColosseumPartKind, compact = false): BufferGeometry {
+  if (kind === 'seat') return createCaveaSeatGeometry(compact ? 4 : 12);
+  if (kind !== 'arch') return new BoxGeometry(1, 1, 1);
   const shape = new Shape();
   shape.moveTo(-0.5, -0.5);
   shape.lineTo(0.5, -0.5);
@@ -59,7 +92,7 @@ export function createColosseumPartGeometry(kind: ColosseumPartKind): BufferGeom
   hole.lineTo(0.32, -0.5);
   hole.closePath();
   shape.holes.push(hole);
-  const geometry = new ExtrudeGeometry(shape, { depth: 1, bevelEnabled: false, steps: 1, curveSegments: 10 });
+  const geometry = new ExtrudeGeometry(shape, { depth: 1, bevelEnabled: false, steps: 1, curveSegments: compact ? 4 : 6 });
   geometry.translate(0, 0, -0.5);
   geometry.computeVertexNormals();
   return geometry;
@@ -69,6 +102,9 @@ export class ColosseumStoneSystem {
   readonly group = new Group();
   private readonly geometries: BufferGeometry[] = [];
   private readonly localMaterials: MeshStandardMaterial[] = [];
+  private readonly detailMeshes: Array<{ mesh: InstancedMesh; full: BufferGeometry; compact: BufferGeometry }> = [];
+  private readonly compactGeometries = new Map<ColosseumPartKind, BufferGeometry>();
+  private compactDetail = false;
   private readonly batches: Array<{ parts: ColosseumPart[]; mesh: InstancedMesh }>;
   private readonly activeMeshes: Record<ColosseumPartKind, InstancedMesh>;
 
@@ -84,31 +120,41 @@ export class ColosseumStoneSystem {
     const matrix = new Matrix4();
     const quaternion = new Quaternion();
     const color = new Color();
-    const kinds: ColosseumPartKind[] = ['block', 'arch', 'wedge'];
-    this.batches = kinds.map((kind) => {
-      const parts = plan.parts.filter((part) => part.kind === kind);
+    const kinds: ColosseumPartKind[] = ['block', 'arch', 'wedge', 'seat', 'plank'];
+    this.batches = kinds.flatMap((kind) => {
+      const allParts = plan.parts.filter((part) => part.kind === kind);
       const geometry = createColosseumPartGeometry(kind);
       this.geometries.push(geometry);
-      const mesh = new InstancedMesh(geometry, travertine, Math.max(1, parts.length));
-      mesh.name = `colosseum-parts-${kind}`;
-      mesh.castShadow = true;
-      mesh.receiveShadow = true;
-      mesh.frustumCulled = false;
-      mesh.count = 0;
-      parts.forEach((part, index) => {
-        setTransform(mesh, index, part.finalPosition, part.finalRotation, part.dimensions, matrix, quaternion);
-        mesh.setColorAt(index, stoneColor(part.material, part.colorVariation, color));
+      // The inner ambulacra sit behind the exterior and under the cavea/vaults.
+      // Retain every visible arch, but avoid duplicating their hidden shadows.
+      const groups = kind === 'arch'
+        ? [allParts.filter(part => part.group !== 'inner-arcade'), allParts.filter(part => part.group === 'inner-arcade')]
+        : [allParts];
+      return groups.map((parts, groupIndex) => {
+        const mesh = new InstancedMesh(geometry, travertine, Math.max(1, parts.length));
+        mesh.name = `colosseum-parts-${kind}${groupIndex ? '-inner' : ''}`;
+        this.registerDetail(mesh, kind);
+        mesh.castShadow = kind !== 'seat' && groupIndex === 0;
+        mesh.receiveShadow = true;
+        mesh.frustumCulled = false;
+        mesh.count = 0;
+        parts.forEach((part, index) => {
+          setTransform(mesh, index, part.finalPosition, part.finalRotation, part.dimensions, matrix, quaternion);
+          mesh.setColorAt(index, stoneColor(part.material, part.colorVariation, color));
+        });
+        mesh.instanceMatrix.needsUpdate = true;
+        if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+        this.group.add(mesh);
+        return { parts, mesh };
       });
-      mesh.instanceMatrix.needsUpdate = true;
-      if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
-      this.group.add(mesh);
-      return { parts, mesh };
     });
 
     this.activeMeshes = {
       block: this.createActiveMesh('block', travertine),
       arch: this.createActiveMesh('arch', travertine),
       wedge: this.createActiveMesh('wedge', travertine),
+      seat: this.createActiveMesh('seat', travertine),
+      plank: this.createActiveMesh('plank', travertine),
     };
   }
 
@@ -117,12 +163,30 @@ export class ColosseumStoneSystem {
     this.geometries.push(geometry);
     const mesh = new InstancedMesh(geometry, material, this.plan.maxActive);
     mesh.name = `colosseum-active-${kind}`;
+    this.registerDetail(mesh, kind);
     mesh.castShadow = true;
     mesh.receiveShadow = true;
     mesh.frustumCulled = false;
     mesh.count = 0;
     this.group.add(mesh);
     return mesh;
+  }
+
+  private registerDetail(mesh: InstancedMesh, kind: ColosseumPartKind): void {
+    if (kind !== 'arch' && kind !== 'seat') return;
+    let compact = this.compactGeometries.get(kind);
+    if (!compact) {
+      compact = createColosseumPartGeometry(kind, true);
+      this.compactGeometries.set(kind, compact);
+      this.geometries.push(compact);
+    }
+    this.detailMeshes.push({ mesh, full: mesh.geometry, compact });
+  }
+
+  setCompactDetail(compact: boolean): void {
+    if (compact === this.compactDetail) return;
+    this.compactDetail = compact;
+    for (const detail of this.detailMeshes) detail.mesh.geometry = compact ? detail.compact : detail.full;
   }
 
   update(t: number): ActiveColosseumOperation[] {
@@ -145,7 +209,7 @@ export class ColosseumStoneSystem {
     }
 
     const operations = activeColosseumOperationsAt(this.plan, t);
-    const cursors: Record<ColosseumPartKind, number> = { block: 0, arch: 0, wedge: 0 };
+    const cursors: Record<ColosseumPartKind, number> = { block: 0, arch: 0, wedge: 0, seat: 0, plank: 0 };
     for (const operation of operations) {
       const kind = operation.part.kind;
       const mesh = this.activeMeshes[kind];
@@ -162,7 +226,7 @@ export class ColosseumStoneSystem {
       mesh.setColorAt(index, stoneColor(operation.part.material, operation.part.colorVariation, color));
       cursors[kind] += 1;
     }
-    for (const kind of ['block', 'arch', 'wedge'] as const) {
+    for (const kind of ['block', 'arch', 'wedge', 'seat', 'plank'] as const) {
       const mesh = this.activeMeshes[kind];
       mesh.count = cursors[kind];
       mesh.instanceMatrix.needsUpdate = true;

@@ -1,0 +1,188 @@
+{
+  "startedAt": "2026-09-20T18:39:55.322Z",
+  "base": "http://127.0.0.1:5590",
+  "dry": true,
+  "method": "Existing deployed deterministic debug route. Original app ThreeCanvas/WorldScene, no source imports, no renderer or pose changes. One PNG per exact1/30s sample.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "framesPerShot": 4,
+  "shots": [
+    {
+      "id": "pyramids-of-giza",
+      "label": "Pyramids of Giza",
+      "start": 27,
+      "duration": 60,
+      "href": "http://127.0.0.1:5590/#/debug/wonder/pyramids-of-giza/0.450000000000",
+      "bundle": [
+        "http://127.0.0.1:5590/assets/main-D8RR7sSY.js"
+      ],
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+      "scene": "giza-reference",
+      "scriptProof": [
+        {
+          "url": "http://127.0.0.1:5590/assets/main-D8RR7sSY.js",
+          "status": 200,
+          "sha256": "34d9bfeb5058194446144df0530f98acafb5ef19a7fd1b60a6428f53afc4271b",
+          "bytes": 2366662,
+          "headers": {
+            "vary": "Origin",
+            "content-type": "text/javascript",
+            "last-modified": "Sun, 20 Sep 2026 16:10:27 GMT",
+            "etag": "W/\"2366662-1789920627800\"",
+            "cache-control": "no-cache",
+            "content-encoding": "gzip",
+            "date": "Sun, 20 Sep 2026 18:39:57 GMT",
+            "connection": "keep-alive",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked"
+          }
+        }
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "seconds": 27,
+          "t": 0.45,
+          "file": "artifacts/stonehenge-release-2026-09-21/social/dry-frames/pyramids-of-giza/0000.png",
+          "bytes": 2175150,
+          "sha256": "24bd9e729b660048f874acf5ef60c15473fb794f477e77638f3da22e2727c35a",
+          "hash": "#/debug/wonder/pyramids-of-giza/0.450000000000",
+          "scene": "giza-reference",
+          "camera": {
+            "position": [
+              -55.118271545051314,
+              64.80626525010327,
+              -88.36250949061711
+            ],
+            "direction": [
+              0.511454998145053,
+              -0.4701211521315063,
+              0.7193051419189139
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "renderer": {
+            "calls": 161,
+            "triangles": 201466,
+            "points": 0,
+            "lines": 2,
+            "geometries": 84,
+            "textures": 16
+          }
+        },
+        {
+          "frame": 1,
+          "seconds": 27.033333333333335,
+          "t": 0.4505555555555556,
+          "file": "artifacts/stonehenge-release-2026-09-21/social/dry-frames/pyramids-of-giza/0001.png",
+          "bytes": 2186937,
+          "sha256": "31028cd7dcd181bbb4fdaa2773bdba991b9f3badf9879fb05d2453053abfe5a9",
+          "hash": "#/debug/wonder/pyramids-of-giza/0.450555555556",
+          "scene": "giza-reference",
+          "camera": {
+            "position": [
+              -54.72801371825818,
+              64.83272687007397,
+              -88.62068650196655
+            ],
+            "direction": [
+              0.5082417838827435,
+              -0.47034859794688855,
+              0.7214308598369512
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "renderer": {
+            "calls": 163,
+            "triangles": 206602,
+            "points": 0,
+            "lines": 7,
+            "geometries": 84,
+            "textures": 16
+          }
+        },
+        {
+          "frame": 2,
+          "seconds": 27.066666666666666,
+          "t": 0.45111111111111113,
+          "file": "artifacts/stonehenge-release-2026-09-21/social/dry-frames/pyramids-of-giza/0002.png",
+          "bytes": 2187620,
+          "sha256": "2c950eb34f1d9c3cb4aed54b3b8d6014632becc58e6cb6f7b6a943a2b8a0130a",
+          "hash": "#/debug/wonder/pyramids-of-giza/0.451111111111",
+          "scene": "giza-reference",
+          "camera": {
+            "position": [
+              -54.33674201098744,
+              64.85898551126074,
+              -88.87720206728008
+            ],
+            "direction": [
+              0.5050202217668173,
+              -0.47057438325662154,
+              0.7235428981264657
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "renderer": {
+            "calls": 163,
+            "triangles": 208202,
+            "points": 0,
+            "lines": 8,
+            "geometries": 84,
+            "textures": 16
+          }
+        },
+        {
+          "frame": 3,
+          "seconds": 27.1,
+          "t": 0.4516666666666667,
+          "file": "artifacts/stonehenge-release-2026-09-21/social/dry-frames/pyramids-of-giza/0003.png",
+          "bytes": 2189709,
+          "sha256": "00b035f6da811f651b69f867ad85f130e60ad1be37d0183b1e4d60347413c694",
+          "hash": "#/debug/wonder/pyramids-of-giza/0.451666666667",
+          "scene": "giza-reference",
+          "camera": {
+            "position": [
+              -53.94446338132934,
+              64.88504074515366,
+              -89.13205285405152
+            ],
+            "direction": [
+              0.5017903690871814,
+              -0.470798504415808,
+              0.7256412293490418
+            ],
+            "fov": 35,
+            "aspect": 1.7777777777777777,
+            "near": 0.5
+          },
+          "renderer": {
+            "calls": 163,
+            "triangles": 208770,
+            "points": 0,
+            "lines": 8,
+            "geometries": 84,
+            "textures": 16
+          }
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead."
+      ],
+      "failed": []
+    }
+  ],
+  "finishedAt": "2026-09-20T18:39:59.365Z"
+}

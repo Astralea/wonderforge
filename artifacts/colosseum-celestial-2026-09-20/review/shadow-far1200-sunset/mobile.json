@@ -1,0 +1,151 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/colosseum/0.702",
+  "mode": "mobile",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/colosseum-celestial-2026-09-20/review/shadow-far1200-sunset/mobile.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "drawingBuffer": {
+      "width": 526,
+      "height": 1139
+    },
+    "alphaPixels": 4098,
+    "variance": 247,
+    "colorBuckets": 97,
+    "metrics": {
+      "colorBuckets": 107,
+      "colorEntropyBits": 4.8,
+      "edgeDensity": 0.184,
+      "luminance": {
+        "mean": 91,
+        "p5": 33.6,
+        "p95": 165.8,
+        "contrast": 132.2
+      },
+      "dominantColorShare": 0.187,
+      "nonBackgroundShare": 0.813
+    },
+    "renderBudget": {
+      "tier": "mobile",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 73,
+          "limit": 150,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 93490,
+          "limit": 300000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 42,
+          "limit": 200,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 5,
+          "limit": 40,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 73,
+        "triangles": 93490,
+        "points": 0,
+        "lines": 0,
+        "geometries": 42,
+        "textures": 5
+      },
+      "colosseumCelestial": {
+        "t": 0.702,
+        "julianDayUt1": 1750439.2605317407,
+        "calendar": "Julian",
+        "timeScale": "UT1",
+        "angularScale": 2.4,
+        "sun": {
+          "direction": [
+            -0.8770181440246836,
+            0.05487844530440614,
+            0.4773128233061318
+          ],
+          "azimuthDegrees": 298.5570257390844,
+          "worldAzimuthDegrees": -208.5570257390844,
+          "elevationDegrees": 3.145883698505487,
+          "distanceKm": 152189680.34532508,
+          "angularRadiusDegrees": 0.26191541239335514,
+          "aboveHorizon": true,
+          "upperLimbAboveHorizon": true,
+          "horizonVisibility": 1
+        },
+        "moon": {
+          "direction": [
+            -0.688377605149319,
+            0.6589453272755352,
+            -0.3031951984953353
+          ],
+          "azimuthDegrees": 246.2289579976806,
+          "worldAzimuthDegrees": -156.2289579976806,
+          "elevationDegrees": 41.21948697603994,
+          "distanceKm": 364361.6005277722,
+          "angularRadiusDegrees": 0.2732068461736884,
+          "aboveHorizon": true,
+          "upperLimbAboveHorizon": true,
+          "horizonVisibility": 1,
+          "lightDirection": [
+            -0.8764071471947731,
+            0.05336399224912193,
+            0.4786050529164468
+          ],
+          "illuminatedFraction": 0.25332387378043053,
+          "referenceIlluminatedFraction": 0.2533439166038409,
+          "phaseAngleDegrees": 119.56115457473,
+          "referencePhaseAngleDegrees": 119.56128371319323,
+          "elongationDegrees": 60.31952781918454,
+          "waxing": true
+        },
+        "key": "sun",
+        "keyVisibility": 1
+      },
+      "camera": {
+        "position": [
+          461.36974815115576,
+          111.08331232495753,
+          262.89932862153665
+        ],
+        "direction": [
+          -0.8581516688783775,
+          -0.15639567848918445,
+          -0.48899499481197506
+        ],
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

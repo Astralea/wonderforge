@@ -1,10 +1,8 @@
 import { COLOSSEUM_A, COLOSSEUM_B, ellipsePoint, ellipseYaw } from '../data/colosseumConstruction';
 import type { Vec3 } from '../data/constructionTypes';
 import {
-  COLOSSEUM_SCAFFOLD_SEGMENT,
   COLOSSEUM_SCAFFOLD_STATIONS,
   colosseumCraneRigAt,
-  colosseumScaffoldStackHeightAt,
   colosseumScaffoldWindowAt,
   colosseumScaffoldsAt,
   type ActiveColosseumOperation,
@@ -321,13 +319,13 @@ function yardShuttles(t: number, crews: ColosseumCrewPose[]): void {
 function scaffoldCrews(t: number, crews: ColosseumCrewPose[]): void {
   const window = colosseumScaffoldWindowAt(t);
   if (!window) return;
-  const bays = colosseumScaffoldsAt(t);
-  const raw = colosseumScaffoldStackHeightAt(t);
-  const visible = Math.floor(raw / COLOSSEUM_SCAFFOLD_SEGMENT) * COLOSSEUM_SCAFFOLD_SEGMENT;
+  // Removed stations are omitted from the sampler's array. Array position is
+  // therefore not a station identity during the staggered final strike.
+  const bays = new Map(colosseumScaffoldsAt(t).map(bay => [bay.station, bay]));
   for (let station = 0; station < COLOSSEUM_SCAFFOLD_STATIONS; station += 1) {
     const id = `climb-${station}`;
     const s = salt(id);
-    const bay = bays[station];
+    const bay = bays.get(station);
     const theta = (station / COLOSSEUM_SCAFFOLD_STATIONS) * Math.PI * 2 - Math.PI / 2;
     const yaw = bay?.yaw ?? ellipseYaw(COLOSSEUM_A, COLOSSEUM_B, theta);
     const [sx, sz] = ellipsePoint(COLOSSEUM_A + 7.4, COLOSSEUM_B + 6.6, theta);
@@ -341,8 +339,8 @@ function scaffoldCrews(t: number, crews: ColosseumCrewPose[]): void {
     const stagger = station === 0 ? 0.04 : 0.12 + s[0] * 0.58;
     const poleX = bx + lx * (2.1 + s[1] * 1.2) - fx * (1.1 + s[2] * 1.4);
     const poleZ = bz + lz * (2.1 + s[1] * 1.2) - fz * (1.1 + s[2] * 1.4);
-    const cap = foot + Math.max(visible, 0.35);
-    const deckY = bay?.deckY ?? foot + visible;
+    const cap = bay?.deckY ?? foot;
+    const deckY = cap;
     // South-arc clusters only — a person on every station reads as a chorus ring.
     const keep = station === 0 || station === 1 || station === 3 || station === 17;
     if (!keep) continue;
@@ -374,7 +372,16 @@ function scaffoldCrews(t: number, crews: ColosseumCrewPose[]): void {
       const u = clamp((local - stagger) / speed);
       const along = window.kind === 'raising' ? u : 1 - u;
       const desired = window.base + window.rise * along;
-      const y = Math.min(foot + desired, cap);
+      // Final dismantling removes the whole stack, not just the attic lift.
+      // Join the preceding descent and reach ground ahead of timber removal.
+      // Merely clamping the old pose to a stepped cap would drop the worker
+      // by one complete lift whenever a pole disappears.
+      const closingStrike = window.kind === 'striking' && window.strikeFrom >= 0.9;
+      const startingHeight = window.base + window.rise * (1 - (0.7 + s[2] * 0.3));
+      const supportedHeight = closingStrike
+        ? startingHeight * (1 - clamp(local / 0.75))
+        : desired;
+      const y = Math.min(foot + supportedHeight, cap);
       pushCrew(
         crews,
         id,
@@ -411,7 +418,12 @@ function scaffoldCrews(t: number, crews: ColosseumCrewPose[]): void {
     }
     if (t > window.strikeFrom - climbOut) {
       const u = clamp((t - (window.strikeFrom - climbOut)) / climbOut);
-      const y = foot + window.base + window.rise * (1 - u * (0.7 + s[2] * 0.3));
+      // These two workers become the existing ground crew at strikeFrom;
+      // complete their descent before that handoff instead of teleporting down.
+      const groundHandoff = window.strikeFrom >= 0.9 && (station === 1 || station === 17);
+      const y = foot + (groundHandoff
+        ? (window.base + window.rise) * (1 - u)
+        : window.base + window.rise * (1 - u * (0.7 + s[2] * 0.3)));
       pushCrew(
         crews,
         id,

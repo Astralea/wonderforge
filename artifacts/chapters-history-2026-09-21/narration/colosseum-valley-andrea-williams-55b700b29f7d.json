@@ -1,0 +1,22 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-valley",
+  "captionText": "Vespasian builds an amphitheatre on the site of Nero's lake.",
+  "src": "/audio/narration/colosseum-valley-andrea-williams-55b700b29f7d.mp3",
+  "duration": 4.504671,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 6.6,
+  "sha256": "3dab8e5fad6c31357b9b2e2f1e0415580982cb278f3dc89386b88ee51dccdae4",
+  "bytes": 73186
+}

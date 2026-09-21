@@ -1,0 +1,22 @@
+{
+  "wonderId": "colosseum",
+  "captionId": "colosseum-moonrise",
+  "captionText": "After sunset, a nearly full Moon rises over Rome.",
+  "src": "/audio/narration/colosseum-moonrise-andrea-williams-49c49d1d7275.mp3",
+  "duration": 4.179592,
+  "volume": 1,
+  "voiceName": "Andrea Williams",
+  "voiceId": "dcWyhLms5IOM9o93xsQu",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 4.8,
+  "sha256": "caf5322bcc7e03569db355322d2dc0c56eabb688a14886da2f997da4e57f1526",
+  "bytes": 67753
+}

@@ -1,0 +1,197 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/narration.test.ts tests/ui.test.tsx tests/historical-chapters.test.ts tests/historical-chapter-ui.test.tsx
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/historical-chapter-ui.test.tsx (10 tests) 256ms
+ ❯ tests/narration.test.ts (9 tests | 5 failed) 10ms
+   × prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Charles clip to every authored Giza caption beat 5ms
+     → expected [] to have a length of 6 but got +0
+   × prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Oliver clip to every authored Stonehenge caption beat 0ms
+     → expected [] to have a length of 6 but got +0
+   × prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Andrea Williams clip to every authored Colosseum caption beat 0ms
+     → expected [] to have a length of 7 but got +0
+   ✓ prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Alice clip to every authored Sydney caption beat 1ms
+   ✓ prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Adam clip to every authored Eiffel caption beat 1ms
+   ✓ prerecorded caption narration (Spec 05 §Caption voice) > serves valid, non-placeholder MP3 assets from public/audio/narration 1ms
+   × prerecorded caption narration (Spec 05 §Caption voice) > binds each historical take to its actual generated voice and delivery settings 0ms
+     → expected [] to have a length of 19 but got +0
+   × prerecorded caption narration (Spec 05 §Caption voice) > gives each authored reference scene a distinct ElevenLabs voice and files 0ms
+     → every reference scene needs generated narration: expected 0 to be greater than 0
+   ✓ prerecorded caption narration (Spec 05 §Caption voice) > returns no prerecorded clip for wonders without an ElevenLabs track 0ms
+ ✓ tests/historical-chapters.test.ts (4 tests) 2ms
+ ❯ tests/ui.test.tsx (36 tests | 3 failed) 1209ms
+   ✓ home > renders the brand, then the catalog after Enter — without leaving the page 139ms
+   ✓ home > keeps Giza on the homepage even if a leftover session pick is Colosseum 13ms
+   ✓ home > catalog wordmark returns to the title plate 37ms
+   ✓ home > Escape on the catalog returns to the title plate 27ms
+   ✓ home > clicking a ready gallery row opens the cinematic and starts playing 29ms
+   ✓ home > lists in-progress wonders with a dashed outline and does not open them 23ms
+   ✓ home > does not show a legal or fan-homage footer on the catalog 24ms
+   ✓ home > uses the pointer cursor on every clickable home control 28ms
+   ✓ cinematic view > keeps construction clear, preserves the full quote in facts, and shows it at the reveal 51ms
+   ✓ cinematic view > transport: play/pause toggles, scrubber seeks 46ms
+   ✓ cinematic view > leaves cinematic assets unready so the score cannot start over the loader 28ms
+   ✓ cinematic view > keeps every global cinematic control together in the bottom control rail 43ms
+   ✓ cinematic view > uses the pointer cursor on every clickable cinematic control 53ms
+   ✓ cinematic view > replay appears when the movie completes and restarts it 36ms
+   ✓ cinematic view > speed toggle multiplies wall-clock advance (Spec 02) 41ms
+   ✓ cinematic view > caption layer: beats appear at 1× during play, never in gaps, at speed, or at the reveal 43ms
+   ✓ cinematic view > parks the wordmark in the top letterbox slot and keeps the beat index below it 24ms
+   ✓ cinematic view > a touch press wakes hidden movie controls without requiring a mouse move 29ms
+   ✓ cinematic view > caption beat index: titles stay listed and a click seeks to that face 38ms
+   × cinematic view > caption voice: Giza uses bundled Charles clips and stops them when turned off 31ms
+     → expected "play" to be called 1 times, but got 0 times
+   × cinematic view > caption voice: Stonehenge uses bundled Oliver clips, not browser speech 30ms
+     → expected "play" to be called 1 times, but got 0 times
+   × cinematic view > caption voice still plays when the browser rejects an early seek 27ms
+     → expected 0 to be greater than or equal to 1
+   ✓ cinematic view > caption voice stays silent if a bundled clip is rejected 29ms
+   ✓ cinematic view > caption voice stays silent for a wonder without ElevenLabs clips 9ms
+   ✓ cinematic view > caption voice: Sydney uses bundled Alice clips, not browser speech 7ms
+   ✓ cinematic view > caption voice: Eiffel uses bundled Adam clips, not browser speech 31ms
+   ✓ cinematic view > next/previous navigate the catalog in order 42ms
+   ✓ cinematic view > Escape closes back to the gallery 22ms
+   ✓ cinematic view > floats the construction story over the uninterrupted ground lift, free of quote cards 25ms
+   ✓ cinematic view > space toggles playback 24ms
+   ✓ cinematic view > opens the three-minute Eiffel film without an edition picker and navigates its own clock 35ms
+   ✓ cinematic view > clears the short-film closeup for captions while retaining chapter navigation and every control 45ms
+   ✓ cinematic view > retains compact chapter access outside Eiffel captions and on every other film 41ms
+   ✓ cinematic view > restores captions when switching films with the chapter drawer open 38ms
+   ✓ deep links > #/wonder/:id opens a Ready cinematic and ignores unpublished ids 15ms
+   ✓ deep links > unknown wonder ids fall back to home 7ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/narration.test.ts > prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Charles clip to every authored Giza caption beat
+AssertionError: expected [] to have a length of 6 but got +0
+
+- Expected
++ Received
+
+- 6
++ 0
+
+ ❯ tests/narration.test.ts:24:28
+     22|   it('binds exactly one Charles clip to every authored Giza caption be…
+     23|     const beats = captionsFor(giza);
+     24|     expect(GIZA_NARRATION).toHaveLength(beats.length);
+       |                            ^
+     25| 
+     26|     for (const beat of beats) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  tests/narration.test.ts > prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Oliver clip to every authored Stonehenge caption beat
+AssertionError: expected [] to have a length of 6 but got +0
+
+- Expected
++ Received
+
+- 6
++ 0
+
+ ❯ tests/narration.test.ts:41:34
+     39|   it('binds exactly one Oliver clip to every authored Stonehenge capti…
+     40|     const beats = captionsFor(stonehenge);
+     41|     expect(STONEHENGE_NARRATION).toHaveLength(beats.length);
+       |                                  ^
+     42|     expect(narrationClipsForWonder(stonehenge.id)).toEqual(STONEHENGE_…
+     43| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  tests/narration.test.ts > prerecorded caption narration (Spec 05 §Caption voice) > binds exactly one Andrea Williams clip to every authored Colosseum caption beat
+AssertionError: expected [] to have a length of 7 but got +0
+
+- Expected
++ Received
+
+- 7
++ 0
+
+ ❯ tests/narration.test.ts:60:33
+     58|     const colosseum = getWonder('colosseum');
+     59|     const beats = captionsFor(colosseum);
+     60|     expect(COLOSSEUM_NARRATION).toHaveLength(beats.length);
+       |                                 ^
+     61|     expect(narrationClipsForWonder(colosseum.id)).toEqual(COLOSSEUM_NA…
+     62| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+ FAIL  tests/narration.test.ts > prerecorded caption narration (Spec 05 §Caption voice) > binds each historical take to its actual generated voice and delivery settings
+AssertionError: expected [] to have a length of 19 but got +0
+
+- Expected
++ Received
+
+- 19
++ 0
+
+ ❯ tests/narration.test.ts:149:19
+    147|   it('binds each historical take to its actual generated voice and del…
+    148|     const clips = [...GIZA_NARRATION, ...STONEHENGE_NARRATION, ...COLO…
+    149|     expect(clips).toHaveLength(19);
+       |                   ^
+    150|     for (const clip of clips) {
+    151|       const takes = HISTORICAL_NARRATION_ASSETS.filter(take => take.sr…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/8]⎯
+
+ FAIL  tests/narration.test.ts > prerecorded caption narration (Spec 05 §Caption voice) > gives each authored reference scene a distinct ElevenLabs voice and files
+AssertionError: every reference scene needs generated narration: expected 0 to be greater than 0
+ ❯ tests/narration.test.ts:169:79
+    167|   it('gives each authored reference scene a distinct ElevenLabs voice …
+    168|     for (const track of [GIZA_NARRATION, STONEHENGE_NARRATION, COLOSSE…
+    169|       expect(track.length, 'every reference scene needs generated narr…
+       |                                                                               ^
+    170|     }
+    171|     const voices = [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/8]⎯
+
+ FAIL  tests/ui.test.tsx > cinematic view > caption voice: Giza uses bundled Charles clips and stops them when turned off
+AssertionError: expected "play" to be called 1 times, but got 0 times
+ ❯ tests/ui.test.tsx:407:20
+    405|       // Enabling primes every Giza clip in the immediate click gestur…
+    406|       // the active beat starts its own (reused) element.
+    407|       expect(play).toHaveBeenCalledTimes(GIZA_NARRATION.length + 1);
+       |                    ^
+    408|       expect(speak).not.toHaveBeenCalled();
+    409| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/8]⎯
+
+ FAIL  tests/ui.test.tsx > cinematic view > caption voice: Stonehenge uses bundled Oliver clips, not browser speech
+AssertionError: expected "play" to be called 1 times, but got 0 times
+ ❯ tests/ui.test.tsx:454:20
+    452| 
+    453|       fireEvent.click(screen.getByRole('button', { name: /turn narrati…
+    454|       expect(play).toHaveBeenCalledTimes(STONEHENGE_NARRATION.length +…
+       |                    ^
+    455|       expect(speak).not.toHaveBeenCalled();
+    456|     } finally {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/8]⎯
+
+ FAIL  tests/ui.test.tsx > cinematic view > caption voice still plays when the browser rejects an early seek
+AssertionError: expected 0 to be greater than or equal to 1
+ ❯ tests/ui.test.tsx:492:38
+    490|         await Promise.resolve();
+    491|       });
+    492|       expect(play.mock.calls.length).toBeGreaterThanOrEqual(GIZA_NARRA…
+       |                                      ^
+    493|     } finally {
+    494|       vi.useRealTimers();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/8]⎯
+
+
+ Test Files  2 failed | 2 passed (4)
+      Tests  8 failed | 51 passed (59)
+   Start at  00:39:21
+   Duration  2.07s (transform 443ms, setup 44ms, collect 1.12s, tests 1.48s, environment 369ms, prepare 122ms)
+

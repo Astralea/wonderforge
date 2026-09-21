@@ -1,0 +1,28 @@
+{
+  "wonderId": "pyramids-of-giza",
+  "captionId": "giza-menkaure",
+  "captionText": "Menkaure's pyramid follows: three royal tombs, three separate reigns.",
+  "src": "/audio/narration/giza-menkaure-charles-1ce51fd78161.mp3",
+  "duration": 4.92263,
+  "volume": 1,
+  "voiceName": "Charles",
+  "voiceId": "zNsotODqUhvbJ5wMG7Ei",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 5.4,
+  "sha256": "56206b095d6d37eb641488a9d9122f0b264215eeec9c190148b69f7ecac53649",
+  "bytes": 79874,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.27,
+    "truePeakDbtp": -2.28,
+    "gainDb": 10.06
+  }
+}

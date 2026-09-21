@@ -5,20 +5,103 @@ import { usePlaybackStore } from '../store/playback';
 import { prefersReducedMotion } from './a11y';
 import { soundtrackClockAt } from '../engine/soundtrackClock';
 
+const liveBeds = new Map<string, HTMLAudioElement>();
+const hookOwners = new Map<string, number>();
+
+function bedKey(wonderId: string, role: TrackRole, eiffelEdit: 'detailed' | 'cinematic'): string {
+  return `${wonderId}:${role}:${eiffelEdit}`;
+}
+
+function retireBed(audio: HTMLAudioElement): void {
+  audio.pause();
+  audio.removeAttribute('src');
+  audio.load();
+}
+
+function retainHook(key: string): void {
+  hookOwners.set(key, (hookOwners.get(key) ?? 0) + 1);
+}
+
+function releaseHook(key: string, audio: HTMLAudioElement): void {
+  const left = (hookOwners.get(key) ?? 1) - 1;
+  if (left > 0) {
+    hookOwners.set(key, left);
+    return;
+  }
+  hookOwners.delete(key);
+  if (liveBeds.get(key) === audio) liveBeds.delete(key);
+  retireBed(audio);
+}
+
+function configureBed(audio: HTMLAudioElement, track: NonNullable<ReturnType<typeof trackFor>>): void {
+  audio.loop = track.loop;
+  audio.volume = track.volume;
+  audio.preload = 'auto';
+  audio.preservesPitch = true;
+  audio.muted = useAudioStore.getState().muted;
+}
+
+function acquireBed(
+  wonderId: string,
+  role: TrackRole,
+  eiffelEdit: 'detailed' | 'cinematic',
+): { track: NonNullable<ReturnType<typeof trackFor>>; key: string; audio: HTMLAudioElement } | undefined {
+  const track = trackFor(wonderId, role, eiffelEdit);
+  if (!track) return undefined;
+  const key = bedKey(wonderId, role, eiffelEdit);
+  const existing = liveBeds.get(key);
+  if (existing && existing.src) {
+    configureBed(existing, track);
+    return { track, key, audio: existing };
+  }
+  if (existing) retireBed(existing);
+  const audio = new Audio(track.src);
+  liveBeds.set(key, audio);
+  configureBed(audio, track);
+  return { track, key, audio };
+}
+
+/**
+ * Start (then immediately pause) the cinematic cue inside a user gesture so
+ * a later effect-driven play() is not blocked by autoplay policy.
+ * Unlock only: do not leave the score playing over the loader.
+ */
+export function primeSoundtrack(wonderId: string, role: TrackRole): void {
+  const eiffelEdit = usePlaybackStore.getState().eiffelEdit;
+  const bed = acquireBed(wonderId, role, eiffelEdit);
+  if (!bed) return;
+  const { audio, track } = bed;
+  const alreadyAudible = !audio.paused && audio.volume > 0;
+  if (!alreadyAudible) audio.volume = 0;
+  const restore = () => {
+    audio.volume = track.volume;
+    if (alreadyAudible) return;
+    audio.pause();
+    try {
+      audio.currentTime = 0;
+    } catch {
+      // Unready media can reject a seek; priming still unlocked playback.
+    }
+  };
+  try {
+    const started = audio.play() as Promise<void> | undefined;
+    if (started?.then) void started.then(restore, restore);
+    else restore();
+  } catch {
+    restore();
+  }
+}
+
 /** Native media transport, with bounded recovery driven by media/user events. */
 export function useSoundtrack(wonderId: string, role: TrackRole): void {
   const eiffelEdit = usePlaybackStore((s) => s.eiffelEdit);
 
   useEffect(() => {
     if (role === 'cinematic' && prefersReducedMotion()) return;
-    const track = trackFor(wonderId, role, eiffelEdit);
-    if (!track) return;
-    const audio = new Audio(track.src);
-    audio.loop = track.loop;
-    audio.volume = track.volume;
-    audio.preload = 'auto';
-    audio.preservesPitch = true;
-    audio.muted = useAudioStore.getState().muted;
+    const bed = acquireBed(wonderId, role, eiffelEdit);
+    if (!bed) return;
+    const { track, key, audio } = bed;
+    retainHook(key);
 
     let disposed = false;
     let wanted = false;
@@ -28,6 +111,7 @@ export function useSoundtrack(wonderId: string, role: TrackRole): void {
     let blocked: 'gesture' | 'ready' | 'terminal' | null = null;
     let restoreTime: number | null = null;
     let seekRevision: number | undefined;
+    let startedOnce = false;
 
     const clearGesture = () => {
       window.removeEventListener('pointerdown', onGesture);
@@ -76,12 +160,13 @@ export function useSoundtrack(wonderId: string, role: TrackRole): void {
       }
     };
     const attemptPlay = () => {
-      if (disposed || !wanted || pending || blocked || !audio.paused || audio.ended) return;
+      if (disposed || !wanted || pending || blocked || !audio.paused || (audio.ended && !audio.loop)) return;
       pending = true;
       const attempt = ++generation;
       const started = () => {
         if (disposed || attempt !== generation || !wanted) return;
         pending = false;
+        startedOnce = true;
         clearGesture();
         useAudioStore.getState().setUnlocked(true);
       };
@@ -104,10 +189,27 @@ export function useSoundtrack(wonderId: string, role: TrackRole): void {
     function onReady() {
       if (!wanted || disposed) return;
       onMetadata();
-      if (blocked === 'ready') blocked = null;
+      if (blocked === 'ready') {
+        blocked = null;
+        attemptPlay();
+        return;
+      }
+      if (audio.loop && startedOnce) return;
       attemptPlay();
     }
-    const onPause = () => attemptPlay();
+    const onPause = () => {
+      if (audio.loop && startedOnce) return;
+      attemptPlay();
+    };
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return;
+      attemptPlay();
+    };
+    const onEnded = () => {
+      if (!wanted || disposed || !audio.loop) return;
+      audio.currentTime = 0;
+      attemptPlay();
+    };
     const onStalled = () => {
       if (audio.readyState < 3) recoverLoad();
     };
@@ -119,11 +221,14 @@ export function useSoundtrack(wonderId: string, role: TrackRole): void {
     audio.addEventListener('loadedmetadata', onMetadata);
     audio.addEventListener('canplay', onReady);
     audio.addEventListener('pause', onPause);
+    audio.addEventListener('ended', onEnded);
     audio.addEventListener('error', onError);
     audio.addEventListener('stalled', onStalled);
+    document.addEventListener('visibilitychange', onVisible);
 
     const sync = (state: ReturnType<typeof usePlaybackStore.getState>) => {
-      const shouldPlay = role === 'ambient' || (state.assetsReady && state.status === 'playing');
+      const shouldPlay = role === 'ambient'
+        || (state.status === 'playing' && (state.assetsReady || startedOnce));
       if (role === 'cinematic' && state.assetsReady) {
         const clock = soundtrackClockAt(state.t, state.durationMs / 1000, track.duration, track.loop);
         audio.loop = clock.loop;
@@ -167,11 +272,11 @@ export function useSoundtrack(wonderId: string, role: TrackRole): void {
       audio.removeEventListener('loadedmetadata', onMetadata);
       audio.removeEventListener('canplay', onReady);
       audio.removeEventListener('pause', onPause);
+      audio.removeEventListener('ended', onEnded);
       audio.removeEventListener('error', onError);
       audio.removeEventListener('stalled', onStalled);
-      audio.pause();
-      audio.removeAttribute('src');
-      audio.load();
+      document.removeEventListener('visibilitychange', onVisible);
+      releaseHook(key, audio);
     };
   }, [role, wonderId, eiffelEdit]);
 }

@@ -61,6 +61,11 @@ export interface SydneySailDef {
     /** Azimuthal half-width of the shell patch (rad). */
     thetaHalf: number;
   };
+  /** Pointed Utzon vault cut from the 75 m sphere (Spec 13 harbour fabric). */
+  vault: {
+    half: number;
+    foot: number;
+  };
 }
 
 /**
@@ -73,61 +78,70 @@ export interface SydneySailDef {
  * from 500–700 m: a nested fan of curved blades, not individual blobs.
  */
 export const SYDNEY_SAILS: SydneySailDef[] = [
-  // Concert Hall — 4 nested shells, largest (outermost) first
+  // Concert Hall — 4 nested shells, largest south, nesting north. Foot origin on the podium.
   {
     id: 0, group: 'concert',
-    position: [4, 50, -28], rotation: [0.08, -0.38, 0], dimensions: [46, 54, 6],
-    sphere: { centre: [6, 14, -14], phiStart: 0.62, phiLength: 0.72, thetaHalf: 0.32 },
+    position: [10, SYDNEY_PODIUM_DECK, 20], rotation: [0.22, -0.32, 0], dimensions: [49, 54, 57],
+    sphere: { centre: [12, 14, 6], phiStart: 0.72, phiLength: 0.58, thetaHalf: 0.40 },
+    vault: { half: 0.40, foot: 1.12 },
     ribCount: 4,
   },
   {
     id: 1, group: 'concert',
-    position: [10, 42, -20], rotation: [0.10, -0.22, 0], dimensions: [38, 44, 6],
-    sphere: { centre: [6, 14, -14], phiStart: 0.72, phiLength: 0.60, thetaHalf: 0.28 },
+    position: [13, SYDNEY_PODIUM_DECK, 10], rotation: [0.24, -0.24, 0], dimensions: [43, 48, 54],
+    sphere: { centre: [15, 14, -6], phiStart: 0.80, phiLength: 0.50, thetaHalf: 0.36 },
+    vault: { half: 0.36, foot: 1.04 },
     ribCount: 4,
   },
   {
     id: 2, group: 'concert',
-    position: [16, 34, -10], rotation: [0.12, -0.08, 0], dimensions: [30, 36, 5],
-    sphere: { centre: [6, 14, -14], phiStart: 0.82, phiLength: 0.48, thetaHalf: 0.24 },
+    position: [15, SYDNEY_PODIUM_DECK, 0], rotation: [0.26, -0.16, 0], dimensions: [36, 43, 50],
+    sphere: { centre: [17, 14, -16], phiStart: 0.88, phiLength: 0.42, thetaHalf: 0.32 },
+    vault: { half: 0.32, foot: 0.96 },
     ribCount: 3,
   },
   {
     id: 3, group: 'concert',
-    position: [20, 26, 0], rotation: [0.14, 0.06, 0], dimensions: [22, 28, 5],
-    sphere: { centre: [6, 14, -14], phiStart: 0.92, phiLength: 0.36, thetaHalf: 0.20 },
+    position: [16, SYDNEY_PODIUM_DECK, -8], rotation: [0.28, -0.08, 0], dimensions: [27, 36, 45],
+    sphere: { centre: [18, 14, -24], phiStart: 0.96, phiLength: 0.34, thetaHalf: 0.26 },
+    vault: { half: 0.26, foot: 0.88 },
     ribCount: 3,
   },
   // Opera Theatre — 3 nested shells
   {
     id: 4, group: 'opera',
-    position: [-12, 48, -4], rotation: [0.08, 0.60, 0], dimensions: [42, 50, 6],
-    sphere: { centre: [-12, 14, 4], phiStart: 0.64, phiLength: 0.68, thetaHalf: 0.30 },
+    position: [-10, SYDNEY_PODIUM_DECK, 22], rotation: [0.22, 0.56, 0], dimensions: [48, 52, 56],
+    sphere: { centre: [-10, 14, 8], phiStart: 0.74, phiLength: 0.54, thetaHalf: 0.38 },
+    vault: { half: 0.38, foot: 1.08 },
     ribCount: 4,
   },
   {
     id: 5, group: 'opera',
-    position: [-18, 38, 8], rotation: [0.10, 0.78, 0], dimensions: [34, 40, 5],
-    sphere: { centre: [-12, 14, 4], phiStart: 0.74, phiLength: 0.55, thetaHalf: 0.26 },
+    position: [-13, SYDNEY_PODIUM_DECK, 12], rotation: [0.24, 0.66, 0], dimensions: [46, 46, 51],
+    sphere: { centre: [-13, 14, -4], phiStart: 0.82, phiLength: 0.46, thetaHalf: 0.34 },
+    vault: { half: 0.34, foot: 1.00 },
     ribCount: 4,
   },
   {
     id: 6, group: 'opera',
-    position: [-22, 28, 18], rotation: [0.12, 0.94, 0], dimensions: [26, 30, 5],
-    sphere: { centre: [-12, 14, 4], phiStart: 0.84, phiLength: 0.42, thetaHalf: 0.22 },
+    position: [-15, SYDNEY_PODIUM_DECK, 2], rotation: [0.26, 0.74, 0], dimensions: [43, 40, 45],
+    sphere: { centre: [-15, 14, -14], phiStart: 0.90, phiLength: 0.38, thetaHalf: 0.28 },
+    vault: { half: 0.28, foot: 0.92 },
     ribCount: 3,
   },
-  // Restaurant shells — smaller, between the two main groups
+  // Restaurant shells — smaller, south of the halls
   {
     id: 7, group: 'restaurant',
-    position: [2, 26, 12], rotation: [0.10, 0.18, 0], dimensions: [22, 26, 4],
-    sphere: { centre: [0, 14, 8], phiStart: 0.86, phiLength: 0.38, thetaHalf: 0.20 },
+    position: [2, SYDNEY_PODIUM_DECK, 30], rotation: [0.24, 0.12, 0], dimensions: [29, 35, 47],
+    sphere: { centre: [2, 14, 18], phiStart: 0.92, phiLength: 0.34, thetaHalf: 0.28 },
+    vault: { half: 0.28, foot: 0.90 },
     ribCount: 3,
   },
   {
     id: 8, group: 'restaurant',
-    position: [10, 20, 20], rotation: [0.12, 0.32, 0], dimensions: [16, 18, 4],
-    sphere: { centre: [0, 14, 8], phiStart: 0.96, phiLength: 0.28, thetaHalf: 0.16 },
+    position: [8, SYDNEY_PODIUM_DECK, 36], rotation: [0.26, 0.22, 0], dimensions: [20, 28, 41],
+    sphere: { centre: [8, 14, 26], phiStart: 1.00, phiLength: 0.26, thetaHalf: 0.22 },
+    vault: { half: 0.22, foot: 0.82 },
     ribCount: 2,
   },
 ];

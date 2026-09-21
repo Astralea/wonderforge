@@ -113,8 +113,9 @@ export interface Wonder {
   completedYear: number;
   endsAtNight: boolean;
   quote: Quote;
-  description: string;
+  description: string;      // optional; empty omits the About paragraph
   facts: string[];
+  credits?: readonly { label: string; url: string }[];
   palette: WonderPalette;
   structure: StructureSpec;
 }

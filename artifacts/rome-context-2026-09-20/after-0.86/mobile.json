@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5590/#/debug/wonder/colosseum/0.86",
+  "mode": "mobile",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/rome-context-2026-09-20/after-0.86/mobile.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "drawingBuffer": {
+      "width": 526,
+      "height": 1139
+    },
+    "alphaPixels": 4098,
+    "variance": 220,
+    "colorBuckets": 102,
+    "metrics": {
+      "colorBuckets": 120,
+      "colorEntropyBits": 5.31,
+      "edgeDensity": 0.201,
+      "luminance": {
+        "mean": 78.4,
+        "p5": 15.3,
+        "p95": 151.3,
+        "contrast": 135.9
+      },
+      "dominantColorShare": 0.122,
+      "nonBackgroundShare": 0.878
+    },
+    "renderBudget": {
+      "tier": "mobile",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 82,
+          "limit": 150,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 103605,
+          "limit": 300000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 40,
+          "limit": 200,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 5,
+          "limit": 40,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 82,
+        "triangles": 103605,
+        "points": 0,
+        "lines": 0,
+        "geometries": 40,
+        "textures": 5
+      },
+      "camera": {
+        "position": [
+          -426.5554943751874,
+          166.9217300978022,
+          318.646465307925
+        ],
+        "direction": [
+          0.7757418684589777,
+          -0.24981671624826476,
+          -0.5794964726404365
+        ],
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 0.5
+      },
+      "scene": "colosseum-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

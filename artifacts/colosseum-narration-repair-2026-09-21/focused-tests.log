@@ -1,0 +1,19 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/historical-chapters.test.ts tests/historical-chapter-ui.test.tsx tests/narration.test.ts tests/captions.test.ts --maxWorkers=2
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/narration.test.ts (9 tests) 20ms
+ ✓ tests/captions.test.ts (7 tests) 5ms
+ ✓ tests/historical-chapter-ui.test.tsx (10 tests) 261ms
+ ✓ tests/historical-chapters.test.ts (5 tests) 2276ms
+   ✓ historical chapters follow their films > checks generated assets against the actual decoded duration and recorded hash  557ms
+   ✓ historical chapters follow their films > measures the delivered MP3 loudness and peak instead of trusting filter targets  1717ms
+
+ Test Files  4 passed (4)
+      Tests  31 passed (31)
+   Start at  14:36:45
+   Duration  2.60s (transform 402ms, setup 55ms, collect 958ms, tests 2.56s, environment 398ms, prepare 149ms)
+

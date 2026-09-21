@@ -95,7 +95,8 @@ export function CaptionLayer({ wonder }: { wonder: Wonder }) {
       {caption && (
         <figure
           data-testid="live-caption"
-          className={`absolute max-w-md ${PLACE_CLASSES[caption.place]} ${film && caption.place === 'lower-right' ? 'eiffel-fact-caption' : ''}`}
+          data-caption-id={caption.id}
+          className={`film-caption absolute max-w-md ${PLACE_CLASSES[caption.place]} ${film && caption.place === 'lower-right' ? 'eiffel-fact-caption' : ''}`}
           style={{ opacity: film ? eiffelChapterCaptionOpacityAt({ ...caption,
             fromSeconds: caption.from * eiffelFilmEditDuration(eiffelEdit),
             toSeconds: caption.until * eiffelFilmEditDuration(eiffelEdit),

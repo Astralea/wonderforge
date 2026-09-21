@@ -1,0 +1,13 @@
+{
+  "wonder": "eiffel-tower",
+  "role": "ambient",
+  "model": "lyria-3-clip-preview",
+  "location": "global",
+  "prompt": "A 30-second instrumental ambient bed for the Champ de Mars beside the Seine\nin 1889: temperate Paris air, salon-string warmth, faint civic brass far\noff, no beat and no climax so it can loop. Instrumental only; no vocals; no\naccordion, musette, can-can, jazz, chanson, or construction-site pulse.",
+  "model_text": [
+    "<instrumental>",
+    "Caption: This is a lush, atmospheric Orchestral Ambient piece designed to evoke the warmth and grandeur of 1889 Paris. The entire track is built upon a foundation of a large, lush string section—violins, violas, cellos, and double basses—playing warm, expansive major-key chords with long, legato bow strokes. These strings should swell and breathe with gentle, almost imperceptible dynamics, creating a continuous, pillowy bed of sound that feels both majestic and serene. Layered on top of the strings is a delicate, shimmering texture created by a concert harp playing gentle, ascending arpeggios that twinkle and decay like sunlight reflecting on the Seine. Providing melodic color is a solo flute with a clear, airy tone, playing a simple, lyrical, and slightly wistful melody that floats gracefully above the rich string harmonies. In the distance, creating a sense of space and civic pride, is a faint brass ensemble (trumpets and French horns) playing a slow, stately fanfare. This brass sound must be heavily processed with a long, spacious reverb and filtered to sound as if it's echoing from across a great distance, blending into the ambient texture rather than serving as a focal point. The production aesthetic is wide and cinematic, with a large stereo field and generous use of hall reverb to give every instrument a sense of grandeur and space. There is no discernible beat; the music flows seamlessly from one chord to the next, creating a perfect, non-climactic loop.\nMosic: 4.5\nBPM: 60.0"
+  ],
+  "file": "ambient-generated-01.mp3",
+  "provenance": "Google Lyria 3 via Gen AI SDK on Vertex AI; SynthID and C2PA enabled by model default."
+}

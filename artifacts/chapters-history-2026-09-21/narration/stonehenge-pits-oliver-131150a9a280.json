@@ -1,0 +1,28 @@
+{
+  "wonderId": "stonehenge",
+  "captionId": "stonehenge-pits",
+  "captionText": "Here, ropes raise the uprights; rubble secures their bases.",
+  "src": "/audio/narration/stonehenge-pits-oliver-131150a9a280.mp3",
+  "duration": 4.92263,
+  "volume": 1,
+  "voiceName": "Oliver",
+  "voiceId": "L1aJrPa7pLJEyYlh3Ilq",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 0.92
+  },
+  "windowSeconds": 7.2,
+  "sha256": "c848f083c648018ab85baff52d0844c777d94fe553a8c2b7fd0b3af5e990d9b1",
+  "bytes": 79874,
+  "mastering": {
+    "version": "measured-limiter-v1",
+    "integratedLufs": -16.23,
+    "truePeakDbtp": -2.4,
+    "gainDb": 7.36
+  }
+}

@@ -8,7 +8,7 @@ const manifest = JSON.parse(readFileSync('public/models/eiffel-construction-kit/
 const fixture = new Map([
   ['/models/eiffel-construction-kit/tower-kit.glb', readFileSync('public/models/eiffel-construction-kit/tower-kit.glb')],
   ['/models/eiffel-construction-kit/tower-kit-seated.glb', readFileSync('public/models/eiffel-construction-kit/tower-kit-seated.glb')],
-  ['/models/eiffel-construction-kit/tower-kit.manifest.json', readFileSync('public/models/eiffel-construction-kit/tower-kit.manifest.json')],
+  ['/models/eiffel-construction-kit/tower-kit.runtime.json', readFileSync('public/models/eiffel-construction-kit/tower-kit.runtime.json')],
 ]);
 function installFetch() {
   vi.stubGlobal('fetch', vi.fn(async (url: string) => {

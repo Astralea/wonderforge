@@ -80,7 +80,8 @@ function stone(input: StoneInput): StonehengeStone {
     material: input.material,
     dimensions: input.dimensions,
     finalPosition: input.finalPosition,
-    finalRotation: [0, input.finalYaw, 0],
+    // Authored XZ angles turn +X toward +Z; Three.js Y yaw turns the opposite way.
+    finalRotation: [0, -input.finalYaw, 0],
     scale: [1, 1, 1],
     embedDepth: input.embedDepth ?? 0,
     supportIds: input.supportIds ?? [],
@@ -108,8 +109,8 @@ function createTrilithons(random: () => number): StonehengeStone[] {
     const center = rotateXZ(pair.center[0], pair.center[1], STONEHENGE_AXIS);
     const gap = pairIndex === 0 ? 2.8 : 2.45;
     const totalHeight = pair.visibleHeight + 1.15;
-    const uprightStart = 0.07 + pairIndex * 0.034;
-    const uprightDuration = 0.135;
+    const uprightStart = 0.025 + pairIndex * 0.024;
+    const uprightDuration = 0.09;
     const ids = [`trilithon-${pairIndex.toString().padStart(2, '0')}-upright-a`, `trilithon-${pairIndex.toString().padStart(2, '0')}-upright-b`];
 
     [-1, 1].forEach((side, sideIndex) => {
@@ -162,7 +163,7 @@ function createOuterSarsens(random: () => number): StonehengeStone[] {
     const visibleHeight = 4.1;
     const embedDepth = 1.05;
     const totalHeight = visibleHeight + embedDepth;
-    const start = 0.285 + index * 0.0084;
+    const start = 0.175 + index * 0.0084;
     uprights.push(stone({
       id: `outer-sarsen-upright-${index.toString().padStart(2, '0')}`,
       group: 'outer-sarsen',
@@ -210,7 +211,7 @@ function createOuterSarsens(random: () => number): StonehengeStone[] {
       finalYaw: angle + Math.PI / 2,
       supportIds: [uprights[index]!.id, uprights[next]!.id],
       lane: index % 14,
-      start: Math.max(0.62 + sequence * 0.0075, supportEnd + 0.006),
+      start: Math.max(0.48 + sequence * 0.0075, supportEnd + 0.006),
       duration: 0.07,
       variation: random() * 2 - 1,
     }));
@@ -231,7 +232,7 @@ function createBluestones(random: () => number): StonehengeStone[] {
     const visibleHeight = 2.05 + random() * 0.45;
     const embedDepth = 0.52;
     const totalHeight = visibleHeight + embedDepth;
-    const start = 0.69 + sequence * (0.175 / 58);
+    const start = 0.58 + sequence * (0.22 / 58);
     result.push(stone({
       id,
       group,
@@ -298,8 +299,8 @@ function createHeelStone(random: () => number): StonehengeStone {
     embedDepth,
     routeId: 'heel-northeast',
     lane: 0,
-    start: 0.165,
-    duration: 0.115,
+    start: 0.09,
+    duration: 0.11,
     variation: random() * 2 - 1,
   });
 }

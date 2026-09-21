@@ -37,7 +37,18 @@ export const EIFFEL_PARIS_LIFE_ROOTS: readonly EiffelParisPrototypeKind[] = [
 ];
 export const EIFFEL_PARIS_CITY_CELL_SIZE = 104;
 
+/** Some static hosts set Content-Encoding for .gz and fetch has already
+ * decompressed it. File fixtures and other hosts return the gzip bytes. */
+export async function decodeParisCityBuffer(buffer: ArrayBuffer): Promise<ArrayBuffer> {
+  if (buffer.byteLength >= 4 && new DataView(buffer).getUint32(0, true) === 0x46546c67) return buffer;
+  return new Response(new Blob([buffer]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+}
+
 async function readGlbBuffer(url: string): Promise<ArrayBuffer> {
+  if (url === EIFFEL_PARIS_CITY_GLB && typeof DecompressionStream !== 'undefined') {
+    const compressed = await readGlbBuffer(`${url}.gz`);
+    return decodeParisCityBuffer(compressed);
+  }
   try {
     const response = await fetch(url);
     if (response.ok) return await response.arrayBuffer();
@@ -61,8 +72,14 @@ async function parseGlb(url: string): Promise<Group> {
   return gltf.scene;
 }
 
-export async function loadEiffelParisCity(shouldDiscard?: () => boolean): Promise<Group> {
-  const source = await parseGlb(EIFFEL_PARIS_CITY_GLB);
+export async function loadEiffelParisCity(
+  shouldDiscard?: () => boolean,
+  onStep?: () => void,
+): Promise<Group> {
+  const buffer = await readGlbBuffer(EIFFEL_PARIS_CITY_GLB);
+  onStep?.();
+  const source = (await new GLTFLoader().parseAsync(buffer, '')).scene;
+  onStep?.();
   // Navigation can dispose the owner while fetch/GLTF decoding is pending.
   // Avoid analysing and repartitioning a city that will never be displayed.
   if (shouldDiscard?.()) {
@@ -501,6 +518,7 @@ export async function loadEiffelParisCity(shouldDiscard?: () => boolean): Promis
   });
   for (const geometry of sourceGeometries) geometry.dispose();
   for (const sourceMaterial of sourceMaterials) sourceMaterial.dispose();
+  onStep?.();
   return city;
 }
 
