@@ -1,0 +1,19 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/paris-load-cancellation.test.ts tests/eiffel-rebuilt-environment.test.ts --maxWorkers=1 --minWorkers=1
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 18413ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  4979ms
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  4387ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  4305ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  4428ms
+ ✓ tests/paris-load-cancellation.test.ts (1 test) 4ms
+
+ Test Files  2 passed (2)
+      Tests  11 passed (11)
+   Start at  21:43:22
+   Duration  19.39s (transform 253ms, setup 44ms, collect 429ms, tests 18.42s, environment 0ms, prepare 121ms)
+

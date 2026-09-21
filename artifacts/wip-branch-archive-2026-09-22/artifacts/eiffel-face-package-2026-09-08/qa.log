@@ -1,0 +1,278 @@
+[
+  {
+    "device": "desktop",
+    "states": [
+      {
+        "t": 0,
+        "y": 0.858,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 7.205377195365383e-13
+      },
+      {
+        "t": 2,
+        "y": 0.858,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.561066946549121e-12
+      },
+      {
+        "t": 12,
+        "y": 3.053255859375,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.602640863105591e-12
+      },
+      {
+        "t": 22,
+        "y": 11.461500000000001,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.602640863105591e-12
+      },
+      {
+        "t": 32,
+        "y": 19.869744140625002,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.5917214903347762e-12
+      },
+      {
+        "t": 42,
+        "y": 22.065,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.595542830423362e-12
+      },
+      {
+        "t": 46,
+        "y": 22.065,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.595542830423362e-12
+      },
+      {
+        "t": 22,
+        "y": 11.461500000000001,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.602640863105591e-12
+      },
+      {
+        "t": 0,
+        "y": 0.858,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 7.205377195365383e-13
+      }
+    ],
+    "reverseChanged": 0,
+    "playback": {
+      "before": 0,
+      "after": {
+        "seconds": 3.2233000000000023,
+        "y": 0.8637910776881442
+      }
+    },
+    "orbitChanged": 602603,
+    "health": {
+      "overflow": false,
+      "programs": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "calls": 113,
+      "triangles": 40170
+    },
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "states": [
+      {
+        "t": 0,
+        "y": 0.858,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 7.205377195365383e-13
+      },
+      {
+        "t": 2,
+        "y": 0.858,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.561066946549121e-12
+      },
+      {
+        "t": 12,
+        "y": 3.053255859375,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.602640863105591e-12
+      },
+      {
+        "t": 22,
+        "y": 11.461500000000001,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.602640863105591e-12
+      },
+      {
+        "t": 32,
+        "y": 19.869744140625002,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.5917214903347762e-12
+      },
+      {
+        "t": 42,
+        "y": 22.065,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.595542830423362e-12
+      },
+      {
+        "t": 46,
+        "y": 22.065,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.595542830423362e-12
+      },
+      {
+        "t": 22,
+        "y": 11.461500000000001,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 3.602640863105591e-12
+      },
+      {
+        "t": 0,
+        "y": 0.858,
+        "tipResidual": 4.9151256933745355e-8,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "ropeError": 1.1920931797249068e-8,
+        "forceResidual": 7.205377195365383e-13
+      }
+    ],
+    "reverseChanged": 0,
+    "playback": {
+      "before": 0,
+      "after": {
+        "seconds": 3.2359999999523152,
+        "y": 0.8639704147704936
+      }
+    },
+    "orbitChanged": 125879,
+    "health": {
+      "overflow": false,
+      "programs": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "calls": 113,
+      "triangles": 40170
+    },
+    "errors": []
+  }
+]

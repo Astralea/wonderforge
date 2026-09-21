@@ -1,0 +1,26 @@
+{
+  "node": "v24.4.0",
+  "bundle": {
+    "path": "dist/assets/main-CbeRpit_.js",
+    "bytes": 2103885,
+    "sha256": "bad7a5a8052521538989dcfde5137b5a6fa1988fc8dd9bd91bf98abd39e8326f"
+  },
+  "publicRelay": {
+    "path": "public/models/eiffel-second-floor-relay/relay.glb",
+    "bytes": 1580952,
+    "sha256": "4b71e83c5e2403feceb44e6da7543fcc3ac96736af969adabdd96807067f4e76"
+  },
+  "servedBundle": {
+    "url": "http://127.0.0.1:5589/assets/main-CbeRpit_.js",
+    "status": 200,
+    "bytes": 2103885,
+    "sha256": "bad7a5a8052521538989dcfde5137b5a6fa1988fc8dd9bd91bf98abd39e8326f"
+  },
+  "servedRelay": {
+    "url": "http://127.0.0.1:5589/models/eiffel-second-floor-relay/relay.glb",
+    "status": 200,
+    "bytes": 1580952,
+    "sha256": "4b71e83c5e2403feceb44e6da7543fcc3ac96736af969adabdd96807067f4e76"
+  },
+  "pass": true
+}

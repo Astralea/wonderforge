@@ -1,0 +1,18 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-detail-filter.test.ts (4 tests) 2390ms
+   ✓ Actual exported Paris detail filtering > carries exact feature metadata through every spatial split without removing or moving source corners  1583ms
+   ✓ Actual exported Paris detail filtering > preserves integrated band area and continuously reduces contrast below a pixel  426ms
+ ✓ tests/paris-assets.test.ts (4 tests) 3604ms
+   ✓ MCP-authored Paris exports > places north-bank walkers on exported paving and the new houses on dry land  784ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  1958ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  857ms
+ ✓ tests/paris-facade-materials.test.ts (2 tests) 1192ms
+   ✓ Paris embedded facade material > preserves every mapped source corner through spatial batching and disposes the texture once  1053ms
+
+ Test Files  3 passed (3)
+      Tests  10 passed (10)
+   Start at  13:44:08
+   Duration  7.75s (transform 69ms, setup 22ms, collect 145ms, tests 7.19s, environment 0ms, prepare 77ms)
+

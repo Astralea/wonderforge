@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-story-narration.test.ts (2 tests) 1002ms
+   ✓ reads MP3 decoder duration for every story clip rather than trusting declared duration alone  996ms
+ ✓ tests/eiffel-film-edit.test.ts (4 tests) 4763ms
+   ✓ keeps detailed shots identical and short edit camera continuous and reversible  1533ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3108ms
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  22:13:20
+   Duration  5.29s (transform 254ms, setup 45ms, collect 585ms, tests 5.77s, environment 0ms, prepare 116ms)
+

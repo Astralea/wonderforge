@@ -1,0 +1,21 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-continuous-background.test.ts tests/eiffel-film-edit.test.ts tests/eiffel-progress-story.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-progress-story.test.ts (5 tests) 22516ms
+   ✓ cinematic construction story against the actual tower kit > preserves every seated identity over dense forward playback and reverse seeks  7346ms
+ ✓ tests/eiffel-film-edit.test.ts (8 tests) 26841ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1396ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  8968ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3518ms
+   ✓ budgets readable structural rise and retains every seated identity through dense forward and reverse seeks  12708ms
+ ✓ tests/eiffel-continuous-background.test.ts (5 tests) 16423ms
+
+ Test Files  3 passed (3)
+      Tests  18 passed (18)
+   Start at  23:30:23
+   Duration  39.60s (transform 232ms, setup 37ms, collect 567ms, tests 65.78s, environment 0ms, prepare 95ms)
+

@@ -1,0 +1,54 @@
+[
+  {
+    name: 'desktop',
+    mode: 'before',
+    errors: [],
+    diagnostics: {
+      kind: 'north-bank',
+      t: 0.5,
+      source: 'blender',
+      life: 'blender',
+      render: [Object],
+      actor: [Object]
+    }
+  },
+  {
+    name: 'desktop',
+    mode: 'after',
+    errors: [],
+    diagnostics: {
+      kind: 'north-bank',
+      t: 0.5,
+      source: 'blender',
+      life: 'blender',
+      render: [Object],
+      actor: [Object]
+    }
+  },
+  {
+    name: 'mobile',
+    mode: 'before',
+    errors: [],
+    diagnostics: {
+      kind: 'north-bank',
+      t: 0.5,
+      source: 'blender',
+      life: 'blender',
+      render: [Object],
+      actor: [Object]
+    }
+  },
+  {
+    name: 'mobile',
+    mode: 'after',
+    errors: [],
+    diagnostics: {
+      kind: 'north-bank',
+      t: 0.5,
+      source: 'blender',
+      life: 'blender',
+      render: [Object],
+      actor: [Object]
+    }
+  }
+]

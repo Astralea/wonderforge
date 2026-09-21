@@ -1,0 +1,8 @@
+file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/qa-eiffel-rebuild.mjs:54
+  if (first !== second) throw new Error('Backward seeking changed the canvas at the same time');
+                              ^
+
+Error: Backward seeking changed the canvas at the same time
+    at file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/qa-eiffel-rebuild.mjs:54:31
+
+Node.js v24.4.0

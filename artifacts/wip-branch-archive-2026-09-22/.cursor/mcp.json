@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "stitch": {
+      "command": "/Users/hina/.local/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp",
+        "python3",
+        "/Users/hina/.cursor/stitch-mcp-proxy.py"
+      ],
+      "env": {
+        "STITCH_API_KEY": "<redacted 2026-09-22 \u2014 rotate this key>"
+      }
+    }
+  }
+}

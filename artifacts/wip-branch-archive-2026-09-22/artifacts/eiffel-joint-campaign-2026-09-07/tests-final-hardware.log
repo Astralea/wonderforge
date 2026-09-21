@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-joint-fastening.test.ts tests/eiffel-joint-campaign.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-joint-fastening.test.ts (7 tests) 291ms
+ ✓ tests/eiffel-joint-campaign.test.ts (6 tests) 447ms
+   ✓ two actual ground deliveries with retained joint support > keeps fixed basket material, balanced COM and actual hook geometry throughout suspension  305ms
+
+ Test Files  2 passed (2)
+      Tests  13 passed (13)
+   Start at  22:00:25
+   Duration  631ms (transform 76ms, setup 0ms, collect 126ms, tests 739ms, environment 0ms, prepare 59ms)
+

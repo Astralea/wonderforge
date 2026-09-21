@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-kit-renderer.test.ts --maxWorkers=2
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-kit-renderer.test.ts (2 tests) 965ms
+   ✓ rigid Eiffel kit renderer > compacts only fully seated source members and reproduces rigid reverse seeks  717ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  16:03:50
+   Duration  1.26s (transform 58ms, setup 17ms, collect 139ms, tests 965ms, environment 0ms, prepare 34ms)
+

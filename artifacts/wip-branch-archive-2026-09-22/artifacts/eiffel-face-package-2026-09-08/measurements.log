@@ -1,0 +1,52 @@
+{
+  "sourceGLBSHA256": "dde2a9308b75ce48a40bd863912984789b5781814b47c3763d6a13eed4a228a1",
+  "massKg": 105.66491510343879,
+  "centerOfMass": [
+    0.012881050368373514,
+    -0.04483347851096388,
+    -0.019342189806648348
+  ],
+  "supports": [
+    {
+      "partId": "lower-ne-02-m015-c000",
+      "queries": 84,
+      "contacts": 14
+    },
+    {
+      "partId": "lower-ne-02-m015-c001",
+      "queries": 84,
+      "contacts": 24
+    },
+    {
+      "partId": "lower-ne-02-m015-c002",
+      "queries": 84,
+      "contacts": 24
+    },
+    {
+      "partId": "lower-ne-02-m015-c003",
+      "queries": 84,
+      "contacts": 18
+    },
+    {
+      "partId": "lower-ne-02-m015-c004",
+      "queries": 84,
+      "contacts": 36
+    }
+  ],
+  "bridle": {
+    "anchorPlaneY": 0.276,
+    "verticalLoadFractions": [
+      0.24596274878586347,
+      0.2276416561969777,
+      0.27337944102078493,
+      0.2530161539963739
+    ],
+    "allPositive": true,
+    "sum": 1
+  },
+  "limits": [
+    "Mesh-assigned mass using 600 kg/m3 timber and 7800 kg/m3 iron; small overlapping band junction volumes are counted in their model components.",
+    "Contact rays locate support patches; they do not prove global nonpenetration, friction or strength.",
+    "Four positive vertical load fractions are a static bridle feasibility check; actual rope eyes and route need separate geometry checks."
+  ]
+}

@@ -1,0 +1,17 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-film.test.ts tests/eiffel-summit-work-camera.test.ts tests/eiffel-ending-quote.test.tsx --maxWorkers=2 --minWorkers=1
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-summit-work-camera.test.ts (5 tests) 339ms
+ ✓ tests/eiffel-film.test.ts (15 tests) 12835ms
+   ✓ Eiffel main film chapter > binds the lightweight insertion coordinate to the actual production plan and manifest bytes  12792ms
+ ✓ tests/eiffel-ending-quote.test.tsx (2 tests) 35ms
+
+ Test Files  3 passed (3)
+      Tests  22 passed (22)
+   Start at  09:47:57
+   Duration  14.19s (transform 398ms, setup 39ms, collect 900ms, tests 13.21s, environment 303ms, prepare 87ms)
+

@@ -1,0 +1,34 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=4 tests/eiffel-ground-lift-renderer.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/eiffel-ground-lift-renderer.test.ts (2 tests | 1 failed) 95ms
+   ✓ actual Blender ground-lift renderer > matches the sampled hoist apex with the articulated exported jib throughout the passage 88ms
+   × actual Blender ground-lift renderer > renders the cart hand support and sling contacts at their sampled world positions 6ms
+     → expected 0.62 to be less than or equal to 0.41
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-ground-lift-renderer.test.ts > actual Blender ground-lift renderer > renders the cart hand support and sling contacts at their sampled world positions
+AssertionError: expected 0.62 to be less than or equal to 0.41
+ ❯ tests/eiffel-ground-lift-renderer.test.ts:52:31
+     50|      expect(worker.leftFoot.center).toEqual(waiting.leftFoot.center);e…
+     51|      [worker.arms.left,worker.arms.right].forEach((arm,j)=>{
+     52|       expect(arm.upperLength).toBeLessThanOrEqual(.41);expect(arm.fore…
+       |                               ^
+     53|       const mesh=system.group.getObjectByName(`ground-slinger-${i}-han…
+     54|       expect(mesh.getWorldPosition(new Vector3()).distanceTo(new Vecto…
+ ❯ tests/eiffel-ground-lift-renderer.test.ts:51:43
+ ❯ tests/eiffel-ground-lift-renderer.test.ts:48:48
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  20:36:58
+   Duration  342ms (transform 63ms, setup 0ms, collect 103ms, tests 95ms, environment 0ms, prepare 38ms)
+

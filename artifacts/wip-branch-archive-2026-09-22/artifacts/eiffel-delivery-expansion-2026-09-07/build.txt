@@ -1,0 +1,8 @@
+
+> wonderforge@0.1.0 build
+> tsc -b && vite build
+
+tests/eiffel-delivery-camera.test.ts(40,79): error TS2352: Conversion of type 'number[]' to type 'RigidVec3' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 3 element(s) but source may have fewer.
+tests/eiffel-delivery-camera.test.ts(40,99): error TS2352: Conversion of type 'number[]' to type 'RigidVec3' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 3 element(s) but source may have fewer.

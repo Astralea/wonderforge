@@ -1,0 +1,4 @@
+[
+  { mode: 'desktop', seeks: 17, errors: 0 },
+  { mode: 'mobile', seeks: 17, errors: 0 }
+]

@@ -1,0 +1,201 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/eiffel-long-load-onward.test.ts (6 tests | 3 failed) 26ms
+   ✓ Eiffel actual long-load onward first-floor crossing > preserves the reviewed 128-second handoff and one transported identity 4ms
+   ✓ Eiffel actual long-load onward first-floor crossing > fastens four distinct bolts continuously before unloading and release 15ms
+   ✓ Eiffel actual long-load onward first-floor crossing > retains the lower sling on its saddle while only the free connector retracts 0ms
+   × Eiffel actual long-load onward first-floor crossing > closes the hatch by two-hand contact before gripping and moving the cart 5ms
+     → No connected onward body pose: {"feet":[[-21.52125,57.94000244140625,-3.7215625],[-21.32,57.94000244140625,-3.67]],"hands":[[-21.310322265625,58.27438232421875,-4.079013671875],[-21.310322265625,58.27438232421875,-4.079013671875]],"x":-21.420625}
+   × Eiffel actual long-load onward first-floor crossing > moves the same rigid carrier through the full supported 13m crossing 0ms
+     → No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+   × Eiffel actual long-load onward first-floor crossing > has continuous rigid positions at every phase boundary and deterministic reverse queries 1ms
+     → No connected onward body pose: {"feet":[[-21.42,57.94000244140625,-4],[-21.200000000000088,57.94000244140625,-3.9999999999997526]],"hands":[[-21.14600000000002,58.01000244140628,-4.379999999999965],[-21.14600000000002,58.01000244140628,-4.379999999999965]],"x":-21.310000000000045}
+ ❯ tests/eiffel-long-load-film-system.test.ts (4 tests | 1 failed) 141ms
+   ✓ Production long-load Blender renderer > copies the four accepted assets byte-for-byte and batches all source triangles without a second tower 41ms
+   ✓ Production long-load Blender renderer > renders actual rigid cargo and rope endpoints through forward/reverse seeks, with the bridge hatch open 29ms
+   × Production long-load Blender renderer > keeps one real payload and cart through release, hatch closure, full crossing and reverse 49ms
+     → No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+   ✓ Production long-load Blender renderer > does not attach late-loaded equipment after disposal and releases loaded batch resources exactly once 21ms
+ ❯ tests/eiffel-long-load-film-camera.test.ts (6 tests | 5 failed) 926ms
+   × main-film actual long-load camera > dispatches the complete onward chapter through the work camera in the actual main film 17ms
+     → No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+   × main-film actual long-load camera > fits each work envelope through continuous framing transitions in desktop and portrait 99ms
+     → No connected onward body pose: {"feet":[[-21.52118245503,57.94000244140625,-3.7217482486675006],[-21.32,57.94000244140625,-3.67]],"hands":[[-21.310247701587517,58.274262357326755,-4.079150249567423],[-21.310247701587517,58.274262357326755,-4.079150249567423]],"x":-21.420591227515}
+   × main-film actual long-load camera > shows the whole real carrier during ascent, landing, climb, descent and cart travel 4ms
+     → No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+   ✓ main-film actual long-load camera > gives the fastening and upper-release worker actions a readable projected size 1ms
+   × main-film actual long-load camera > has no camera-pose or lens jump at framing and mechanical phase boundaries, including reverse seeking 1ms
+     → No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+   × main-film actual long-load camera > keeps the five-metre near frustum outside every completed-tower solid 803ms
+     → No connected onward body pose: {"feet":[[-21.52118245503,57.94000244140625,-3.7217482486675006],[-21.32,57.94000244140625,-3.67]],"hands":[[-21.310247701587517,58.274262357326755,-4.079150249567423],[-21.310247701587517,58.274262357326755,-4.079150249567423]],"x":-21.420591227515}
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 9 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-long-load-film-camera.test.ts > main-film actual long-load camera > dispatches the complete onward chapter through the work camera in the actual main film
+Error: No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:125
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ eiffelLongLoadCameraBoundsAt src/engine/eiffelLongLoadCamera.ts:27:18
+ ❯ eiffelLongLoadFilmShotAt src/engine/eiffelLongLoadCamera.ts:62:18
+ ❯ eiffelFilmShotAt src/engine/eiffelFilm.ts:224:52
+ ❯ tests/eiffel-long-load-film-camera.test.ts:22:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/9]⎯
+
+ FAIL  tests/eiffel-long-load-film-camera.test.ts > main-film actual long-load camera > fits each work envelope through continuous framing transitions in desktop and portrait
+Error: No connected onward body pose: {"feet":[[-21.52118245503,57.94000244140625,-3.7217482486675006],[-21.32,57.94000244140625,-3.67]],"hands":[[-21.310247701587517,58.274262357326755,-4.079150249567423],[-21.310247701587517,58.274262357326755,-4.079150249567423]],"x":-21.420591227515}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:16
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ eiffelLongLoadCameraBoundsAt src/engine/eiffelLongLoadCamera.ts:27:18
+ ❯ eiffelLongLoadFilmShotAt src/engine/eiffelLongLoadCamera.ts:62:18
+ ❯ shotAt tests/eiffel-long-load-film-camera.test.ts:12:46
+ ❯ cameraAt tests/eiffel-long-load-film-camera.test.ts:13:60
+ ❯ tests/eiffel-long-load-film-camera.test.ts:28:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/9]⎯
+
+ FAIL  tests/eiffel-long-load-film-camera.test.ts > main-film actual long-load camera > shows the whole real carrier during ascent, landing, climb, descent and cart travel
+Error: No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:125
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ eiffelLongLoadCameraBoundsAt src/engine/eiffelLongLoadCamera.ts:27:18
+ ❯ eiffelLongLoadFilmShotAt src/engine/eiffelLongLoadCamera.ts:62:18
+ ❯ shotAt tests/eiffel-long-load-film-camera.test.ts:12:46
+ ❯ cameraAt tests/eiffel-long-load-film-camera.test.ts:13:60
+ ❯ tests/eiffel-long-load-film-camera.test.ts:35:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/9]⎯
+
+ FAIL  tests/eiffel-long-load-film-camera.test.ts > main-film actual long-load camera > has no camera-pose or lens jump at framing and mechanical phase boundaries, including reverse seeking
+Error: No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:125
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ eiffelLongLoadCameraBoundsAt src/engine/eiffelLongLoadCamera.ts:27:18
+ ❯ eiffelLongLoadFilmShotAt src/engine/eiffelLongLoadCamera.ts:62:18
+ ❯ shotAt tests/eiffel-long-load-film-camera.test.ts:12:46
+ ❯ tests/eiffel-long-load-film-camera.test.ts:66:59
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/9]⎯
+
+ FAIL  tests/eiffel-long-load-film-camera.test.ts > main-film actual long-load camera > keeps the five-metre near frustum outside every completed-tower solid
+Error: No connected onward body pose: {"feet":[[-21.52118245503,57.94000244140625,-3.7217482486675006],[-21.32,57.94000244140625,-3.67]],"hands":[[-21.310247701587517,58.274262357326755,-4.079150249567423],[-21.310247701587517,58.274262357326755,-4.079150249567423]],"x":-21.420591227515}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:16
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ eiffelLongLoadCameraBoundsAt src/engine/eiffelLongLoadCamera.ts:27:18
+ ❯ eiffelLongLoadFilmShotAt src/engine/eiffelLongLoadCamera.ts:62:18
+ ❯ shotAt tests/eiffel-long-load-film-camera.test.ts:12:46
+ ❯ cameraAt tests/eiffel-long-load-film-camera.test.ts:13:60
+ ❯ tests/eiffel-long-load-film-camera.test.ts:72:129
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/9]⎯
+
+ FAIL  tests/eiffel-long-load-film-system.test.ts > Production long-load Blender renderer > keeps one real payload and cart through release, hatch closure, full crossing and reverse
+Error: No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:125
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ EiffelLongLoadFilmSystem.update src/render/three/EiffelLongLoadFilmSystem.ts:150:20
+ ❯ tests/eiffel-long-load-film-system.test.ts:78:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/9]⎯
+
+ FAIL  tests/eiffel-long-load-onward.test.ts > Eiffel actual long-load onward first-floor crossing > closes the hatch by two-hand contact before gripping and moving the cart
+Error: No connected onward body pose: {"feet":[[-21.52125,57.94000244140625,-3.7215625],[-21.32,57.94000244140625,-3.67]],"hands":[[-21.310322265625,58.27438232421875,-4.079013671875],[-21.310322265625,58.27438232421875,-4.079013671875]],"x":-21.420625}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:16
+ ❯ tests/eiffel-long-load-onward.test.ts:41:40
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/9]⎯
+
+ FAIL  tests/eiffel-long-load-onward.test.ts > Eiffel actual long-load onward first-floor crossing > moves the same rigid carrier through the full supported 13m crossing
+Error: No connected onward body pose: {"feet":[[-20.65,57.94000244140625,-3],[-20.65,57.94000244140625,-2.74]],"hands":[[-20.23,58.12000244140625,-4.799999999999999],[-20.23,58.12000244140625,-4.6]],"x":-20.48}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:125
+ ❯ tests/eiffel-long-load-onward.test.ts:49:39
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/9]⎯
+
+ FAIL  tests/eiffel-long-load-onward.test.ts > Eiffel actual long-load onward first-floor crossing > has continuous rigid positions at every phase boundary and deterministic reverse queries
+Error: No connected onward body pose: {"feet":[[-21.42,57.94000244140625,-4],[-21.200000000000088,57.94000244140625,-3.9999999999997526]],"hands":[[-21.14600000000002,58.01000244140628,-4.379999999999965],[-21.14600000000002,58.01000244140628,-4.379999999999965]],"x":-21.310000000000045}
+ ❯ eiffelLongLoadWorkerRig src/engine/eiffelLongLoadWorkerPose.ts:62:17
+     60|  let best:ReturnType<typeof candidate>=null;
+     61|  for(let i=0;i<=48;i++){const p=candidate(-.35+i*1.65/48);if(p&&(!best…
+     62|  if(!best)throw Error(`No connected onward body pose: ${JSON.stringify…
+       |                 ^
+     63|  // Refine the best interval so a coarse search grid cannot visibly sn…
+     64|  let step=1.65/48;
+ ❯ eiffelLongLoadWorkerRoles src/engine/eiffelLongLoadWorkerPose.ts:75:10
+ ❯ sampleEiffelLongLoadOnward src/engine/eiffelLongLoadOnward.ts:116:16
+ ❯ sampleEiffelLongLoadFilm src/engine/eiffelLongLoadFilm.ts:19:51
+ ❯ tests/eiffel-long-load-onward.test.ts:59:79
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/9]⎯
+
+
+ Test Files  3 failed (3)
+      Tests  9 failed | 7 passed (16)
+   Start at  12:10:51
+   Duration  1.42s (transform 145ms, setup 43ms, collect 259ms, tests 1.09s, environment 0ms, prepare 101ms)
+

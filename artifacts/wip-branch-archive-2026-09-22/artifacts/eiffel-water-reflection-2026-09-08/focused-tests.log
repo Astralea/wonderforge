@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-water-reflection.test.ts (2 tests) 3ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  09:11:00
+   Duration  367ms (transform 88ms, setup 44ms, collect 87ms, tests 3ms, environment 0ms, prepare 85ms)
+

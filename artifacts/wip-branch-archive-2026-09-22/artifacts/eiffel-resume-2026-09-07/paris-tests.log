@@ -1,0 +1,30 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-site-layout.test.ts (2 tests) 223ms
+ ❯ tests/paris-assets.test.ts (3 tests | 1 failed) 1435ms
+   × MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain 853ms
+     → expected 236924 to be less than 225000
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  575ms
+   ✓ MCP-authored Paris exports > keeps grounded articulated prototypes at real scale and boats straddling the waterline 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/paris-assets.test.ts > MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain
+AssertionError: expected 236924 to be less than 225000
+ ❯ tests/paris-assets.test.ts:88:23
+     86|     );
+     87|     expect(triangles).toBe(manifest.cityTriangles);
+     88|     expect(triangles).toBeLessThan(225_000); // complete exhibition se…
+       |                       ^
+     89|     expect(city.children.length).toBeGreaterThanOrEqual(12);
+     90|     expect(city.children.length).toBeLessThan(30);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 4 passed (5)
+   Start at  18:07:57
+   Duration  1.74s (transform 81ms, setup 0ms, collect 129ms, tests 1.66s, environment 0ms, prepare 134ms)
+

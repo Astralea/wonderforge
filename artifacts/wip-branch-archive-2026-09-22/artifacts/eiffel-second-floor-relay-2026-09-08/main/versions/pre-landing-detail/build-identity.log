@@ -1,0 +1,26 @@
+{
+  "node": "v24.4.0",
+  "bundle": {
+    "path": "dist/assets/main-DEqd7NcA.js",
+    "bytes": 2103626,
+    "sha256": "3ee1723c1c4eace10fb293f515ba9c58755bfd2bb7f41f062ec2aec63b0663f9"
+  },
+  "publicRelay": {
+    "path": "public/models/eiffel-second-floor-relay/relay.glb",
+    "bytes": 1580952,
+    "sha256": "4b71e83c5e2403feceb44e6da7543fcc3ac96736af969adabdd96807067f4e76"
+  },
+  "servedBundle": {
+    "url": "http://127.0.0.1:5589/assets/main-DEqd7NcA.js",
+    "status": 200,
+    "bytes": 2103626,
+    "sha256": "3ee1723c1c4eace10fb293f515ba9c58755bfd2bb7f41f062ec2aec63b0663f9"
+  },
+  "servedRelay": {
+    "url": "http://127.0.0.1:5589/models/eiffel-second-floor-relay/relay.glb",
+    "status": 200,
+    "bytes": 1580952,
+    "sha256": "4b71e83c5e2403feceb44e6da7543fcc3ac96736af969adabdd96807067f4e76"
+  },
+  "pass": true
+}

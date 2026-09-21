@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/paris-assets.test.ts --maxWorkers=4
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-assets.test.ts (3 tests) 1177ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  840ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  332ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  22:33:56
+   Duration  1.38s (transform 42ms, setup 0ms, collect 70ms, tests 1.18s, environment 0ms, prepare 29ms)
+

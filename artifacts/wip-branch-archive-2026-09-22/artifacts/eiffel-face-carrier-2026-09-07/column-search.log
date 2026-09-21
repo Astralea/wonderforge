@@ -1,0 +1,3910 @@
+{
+  "scope": "Actual 6 mm angle legs, clamp solids and plate/pads beside the first beam; completed tower minus replaced slab, 245 static support solids, both cargo, baskets, upper slings and hook. Exact ground-hoist sweeps additionally include the incoming beam; optional column offsets are search candidates, not crane or route admission. Excludes actual articulated crane, exact cart and crew.",
+  "includesCarrierFrame": true,
+  "carrierEnds": [
+    -1.6,
+    0.9
+  ],
+  "sourceCarrierSHA256": "d3b3a6070925009191927faf09ec0dadee1b7191c7c7f69e389562315c21bf21",
+  "step": 0.1,
+  "productionAdmitted": false,
+  "reports": [
+    {
+      "offset": 0.4,
+      "samples": 0,
+      "findings": [],
+      "groundHoistSweeps": [
+        {
+          "dx": -1,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.09578253822179936
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.010449377749697036
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.17137339309831817
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18940458108976677
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0077802635187254054
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0012180214814279111
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.12269438449244063
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.12269438449244063
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.12269438449244063
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.010203902152788658
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.010203902152788658
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.010203902152788658
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.14941370510005314
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1287178651181155
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1655727610091079
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.4547508720137654
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.23976861597990506
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-0-piece-0",
+              "depth": 0.19791817764261926
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-1-piece-0",
+              "depth": 0.19791817764261926
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-2-piece-0",
+              "depth": 0.19791817764261926
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-1-3-5.2-1-piece-0",
+              "depth": 0.09558279009979657
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-1-3-10.4-1-piece-0",
+              "depth": 0.09558279009979657
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-1-3-15.6-1-piece-0",
+              "depth": 0.09558279009979657
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-0-1-piece-0",
+              "depth": 0.14489315568049188
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-1-1-piece-0",
+              "depth": 0.14489315568049188
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-1-3-1-0-piece-0",
+              "depth": 0.14489315568049188
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-2-1-piece-0",
+              "depth": 0.14489315568049188
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-1-3-2-0-piece-0",
+              "depth": 0.14489315568049188
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.20238200195186873
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.20238200195186873
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.20238200195186873
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.17805866488171357
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-0-0-piece-0",
+              "depth": 0.05904706957116786
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.17805866488171357
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.17805866488171357
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.17805866488171357
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.17805866488171357
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-5.2-0-piece-0",
+              "depth": 0.13775084608005356
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-10.4-0-piece-0",
+              "depth": 0.13775084608005356
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-15.6-0-piece-0",
+              "depth": 0.13775084608005356
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-0-1-piece-0",
+              "depth": 0.18061097639914814
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-1-1-piece-0",
+              "depth": 0.18061097639914814
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-1-0-piece-0",
+              "depth": 0.18061097639914814
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-2-1-piece-0",
+              "depth": 0.18061097639914814
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-2-0-piece-0",
+              "depth": 0.18061097639914814
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-raker",
+              "depth": 0.14635384193625445
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-cross-raker",
+              "depth": 0.17673805771670453
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-saddle",
+              "depth": 0.30782321350621356
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18920858085876516
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0828487171134615
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.06280981336794143
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.10387542038666289
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.264799435735284
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.22642934596392375
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.02076860490376098
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.06001295523809344
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0077802635187254054
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0012180214814279111
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.034987308054539756
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.03748153733073016
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.051146363963594565
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "east-saddle",
+              "depth": 0.024256579255933275
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.15053093995317113
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.1205309399531771
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "east-saddle",
+              "depth": 0.024256579255933275
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.12269438449244063
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.12269438449244063
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.12269438449244063
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.0926943844924466
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "east-saddle",
+              "depth": 0.009507613260822723
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.010203902152788658
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.010203902152788658
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.010203902152788658
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "east-saddle",
+              "depth": 0.024256579255933275
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.242839747737019
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0352918224811497
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.25754306183159487
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.045354111180850226
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.5904842777917133
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.23976861597990506
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-0-piece-0",
+              "depth": 0.19563269666923921
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-1-piece-0",
+              "depth": 0.19563269666923921
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-2-piece-0",
+              "depth": 0.19563269666923921
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-1-3-5.2-1-piece-0",
+              "depth": 0.04331855846596987
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-1-3-10.4-1-piece-0",
+              "depth": 0.04331855846596987
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-1-3-15.6-1-piece-0",
+              "depth": 0.04331855846596987
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-0-1-piece-0",
+              "depth": 0.09262892404666516
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-1-1-piece-0",
+              "depth": 0.09262892404666516
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-1-3-1-0-piece-0",
+              "depth": 0.09262892404666516
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-2-1-piece-0",
+              "depth": 0.09262892404666516
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-1-3-2-0-piece-0",
+              "depth": 0.09262892404666516
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.15011777031804202
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.15011777031804202
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.15011777031804202
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.12579443324788686
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-0-0-piece-0",
+              "depth": 0.007320507127361861
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.12579443324788686
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.12579443324788686
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.12579443324788686
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.12579443324788686
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-5.2-0-piece-0",
+              "depth": 0.08548661444622678
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-10.4-0-piece-0",
+              "depth": 0.08548661444622678
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-15.6-0-piece-0",
+              "depth": 0.08548661444622678
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-0-1-piece-0",
+              "depth": 0.12834674476532137
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-1-1-piece-0",
+              "depth": 0.12834674476532137
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-1-0-piece-0",
+              "depth": 0.12834674476532137
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-2-1-piece-0",
+              "depth": 0.12834674476532137
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-2-0-piece-0",
+              "depth": 0.12834674476532137
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-raker",
+              "depth": 0.19861807357008116
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-cross-raker",
+              "depth": 0.12447382608287781
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-saddle",
+              "depth": 0.30553773253283345
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.27542903375283867
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.17627475975042736
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1562358560049073
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.19730146302362864
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07505736407200767
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18174536498298588
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.133003303326958
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.11419464754072678
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.15343899787505927
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0077802635187254054
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0012180214814279111
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1284133506915056
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.13090757996769595
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1445724066005604
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.07485965914291079
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "east-raker",
+              "depth": 0.1293433438395269
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "east-saddle",
+              "depth": 0.0726673499503292
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.07485965914291079
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "east-raker",
+              "depth": 0.1293433438395269
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "east-saddle",
+              "depth": 0.0726673499503292
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.07485965914291762
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "east-raker",
+              "depth": 0.12050819016942399
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "east-saddle",
+              "depth": 0.0726673499503292
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "east-saddle",
+              "depth": 0.057918383955218644
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.33626579037398474
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "east-saddle",
+              "depth": 0.03406178432328488
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.16411701919462904
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.13878015381781597
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.64274850942554
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.21242167757424307
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-0-piece-0",
+              "depth": 0.1433684650354125
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-1-piece-0",
+              "depth": 0.1433684650354125
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-2-piece-0",
+              "depth": 0.1433684650354125
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-0-1-piece-0",
+              "depth": 0.040364692412838396
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-1-1-piece-0",
+              "depth": 0.040364692412838396
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-1-3-1-0-piece-0",
+              "depth": 0.040364692412838396
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-1-3-2-1-piece-0",
+              "depth": 0.040364692412838396
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-1-3-2-0-piece-0",
+              "depth": 0.040364692412838396
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.0978535386842153
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.0978535386842153
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.0978535386842153
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.07353020161406014
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.07353020161406014
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.07353020161406014
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.07353020161406014
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.07353020161406014
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-5.2-0-piece-0",
+              "depth": 0.03322238281240007
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-10.4-0-piece-0",
+              "depth": 0.03322238281240007
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-5-3-15.6-0-piece-0",
+              "depth": 0.03322238281240007
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-0-1-piece-0",
+              "depth": 0.07608251313149465
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-1-1-piece-0",
+              "depth": 0.07608251313149465
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-1-0-piece-0",
+              "depth": 0.07608251313149465
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-2-1-piece-0",
+              "depth": 0.07608251313149465
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-2-0-piece-0",
+              "depth": 0.07608251313149465
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-raker",
+              "depth": 0.21550910144549273
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-cross-raker",
+              "depth": 0.0722095944490511
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-saddle",
+              "depth": 0.25327350089900674
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18200299111587284
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1026423339606527
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1226789066982364
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.12470381753834413
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.16848340670897352
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.08831932234602015
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.03957726068999216
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.20762069017769258
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.24686504051202507
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.14154505928181038
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0077802635187254054
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0012180214814279111
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.2218393933284714
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.05629217688970407
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.2379984492375262
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.02435375677230408
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.21194596168161794
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "east-raker",
+              "depth": 0.10762473170137307
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.21194596168161794
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "east-raker",
+              "depth": 0.10762473170137307
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.11110339765763878
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "east-raker",
+              "depth": 0.10762473170138015
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.08103994834147421
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.40456826253293093
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.04408575877502092
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07069097655766324
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07318520583385917
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c002",
+              "depth": 0.4864639391477681
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c002",
+              "depth": 0.0022831663796504253
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.6950127410593667
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.16015744594041637
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-0-piece-0",
+              "depth": 0.09110423340158573
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-1-piece-0",
+              "depth": 0.09110423340158573
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-2-piece-0",
+              "depth": 0.09110423340158573
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-5.2-1-piece-0",
+              "depth": 0.045589307050388536
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-10.4-1-piece-0",
+              "depth": 0.045589307050388536
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "frame-2-3-15.6-1-piece-0",
+              "depth": 0.045589307050388536
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-0-1-piece-0",
+              "depth": 0.021265969980233432
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-1-1-piece-0",
+              "depth": 0.021265969980233432
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-1-0-piece-0",
+              "depth": 0.021265969980233432
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-2-3-2-1-piece-0",
+              "depth": 0.021265969980233432
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-2-3-2-0-piece-0",
+              "depth": 0.021265969980233432
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-0-1-piece-0",
+              "depth": 0.023818281497667945
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-1-1-piece-0",
+              "depth": 0.023818281497667945
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-1-0-piece-0",
+              "depth": 0.023818281497667945
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-5-3-2-1-piece-0",
+              "depth": 0.023818281497667945
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "brace-back-5-3-2-0-piece-0",
+              "depth": 0.023818281497667945
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-raker",
+              "depth": 0.18050317367400193
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-cross-raker",
+              "depth": 0.01994536281522434
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "west-cross-raker",
+              "depth": 0.09786696923210363
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "middle-tie",
+              "depth": 0.09319920418972898
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-head-left",
+              "depth": 0.16490969779068765
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-head-right",
+              "depth": 0.1741506087576652
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "platform-brace-east-a",
+              "depth": 0.13886909251721324
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "platform-brace-east-b",
+              "depth": 0.1290574552687439
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-saddle",
+              "depth": 0.20100926926518004
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.08857694847890704
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.00921629132368687
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.029252864061270603
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0312777749013783
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.2084462385986254
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.20517589772234826
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.19018204888454232
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.002400885892277731
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.002400885892277731
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.0024008858922807074
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.3152654359654372
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18511737360317518
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.11777979940926989
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.10492310845907524
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "east-raker",
+              "depth": 0.08590611956321928
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.10492310845907524
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "east-raker",
+              "depth": 0.08590611956321928
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "east-raker",
+              "depth": 0.08590611956322636
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.10492310845908205
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.01572264722845754
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c002",
+              "depth": 0.06255724324585998
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.1811720613137281
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.13595860108293856
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c002",
+              "depth": 0.6231569917577301
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c002",
+              "depth": 0.09570920901661628
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.7472769726931935
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m012-c000",
+              "depth": 0.10789321430658964
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-0-piece-0",
+              "depth": 0.03884000176775902
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-1-piece-0",
+              "depth": 0.03884000176775902
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "post-3-2-piece-0",
+              "depth": 0.03884000176775902
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-raker",
+              "depth": 0.12823894204017522
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "west-cross-raker",
+              "depth": 0.04560273759827692
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "middle-tie",
+              "depth": 0.04093497255590221
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-head-left",
+              "depth": 0.20536217890133202
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-head-right",
+              "depth": 0.22641484039149196
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "platform-brace-east-a",
+              "depth": 0.09542093756787855
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "platform-brace-east-b",
+              "depth": 0.11168493694353504
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-saddle",
+              "depth": 0.14874503763135333
+            }
+          ]
+        },
+        {
+          "dx": -0.5,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.09095637970680198
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.08768603883052487
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07269218999271894
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.4015048006866207
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.06762751471135178
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07012174398754904
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.08723412238089129
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.08723412238089129
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0872341223808983
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.19365236100414163
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.21320176375278047
+            }
+          ]
+        },
+        {
+          "dx": -0.5,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.30807875804965484
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18066016501785714
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.18066016501785714
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.040048683693026235
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.12090457044958419
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.10022631836717583
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.27970736872400837
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c002",
+              "depth": 0.10961800932972192
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.11099692493076496
+            }
+          ]
+        },
+        {
+          "dx": -0.5,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.01118841738725843
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0662337679723437
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0662337679723437
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.06623376797235073
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.21465271541268913
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.16809000913744926
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.16809000913744926
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.13347472632999197
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.027478527812618364
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.0068002757302100215
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.33197160035783513
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c002",
+              "depth": 0.05735377769589521
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.24808322746947198
+            }
+          ]
+        },
+        {
+          "dx": -0.5,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.01858793032782987
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.04403078521811503
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.03801902358374669
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.06212455323922414
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.05611285612116964
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.15965981060930956
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.15965981060930956
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.019048329284478666
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.14190492485812473
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.12122667277572327
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.027082059220796983
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.027066036533728445
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.040714198314862976
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07466396650048346
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07466396650048346
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07466396650049044
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.02040521213931945
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.020389189452250885
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.034037351233384694
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c002",
+              "depth": 0.1781602757074202
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.35028536444375663
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c002",
+              "depth": 0.0050895460620685035
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.38516953000817944
+            }
+          ]
+        },
+        {
+          "dx": -0.5,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.06952406617979562
+            },
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.06761758531440794
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.019800336358290885
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.06905188172436316
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.07126802377996538
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.020140478795662248
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.02235679525231607
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1890903635459968
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.1890903635459968
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.11247437192144447
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.04847888222115887
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.027800630138757467
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.07801819507276275
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.03553774386522606
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.09165033416682872
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.07134134799128522
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.042214590946696544
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.08497348708535041
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.17363977691485033
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.02365306177932014
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c002",
+              "depth": 0.12589604407359345
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.2568593218067909
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.5222558325468865
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "east-head-right",
+              "depth": 0.0329036294895948
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.08101571627094926
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07160050465417322
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07160050465417322
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.07160050465417322
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.2993615086087203
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.30603762821942154
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c000",
+              "depth": 0.13937122736780738
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.08414924405827401
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.030079580418983523
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.24842537275675458
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.25510149236745583
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c000",
+              "depth": 0.045945184730841554
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m010-c001",
+              "depth": 0.03188501242444729
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.19748923690478887
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.20416535651549006
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.14655310105282313
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.15322994813430066
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.46864977782963013
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.01584317196277893
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.01584317196277893
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.01584317196279305
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.09561696520085738
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.009166324881301369
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.009166324881301369
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.009166324881308412
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c002",
+              "depth": 0.10229381228233493
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.2113209527467621
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.5209140094634569
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-02-m011-c001",
+              "depth": 0.041415582925178995
+            }
+          ]
+        },
+        {
+          "dx": 0.5,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.2824757271319953
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.19450637021028427
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.15409965012932503
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11978170475475025
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.12379927586307105
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.18174263212368658
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13309917097791413
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.14380260985117688
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.14484394845896587
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.1287566688909162
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.18422464280512416
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.2180663762942298
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.1120601649075752
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.11143299412797347
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13228981406772533
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1316626432881165
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.14279114417045236
+            }
+          ]
+        },
+        {
+          "dx": 0.5,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.2824757271319953
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.19450637021028427
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.15409965012932503
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11978170475475025
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.12379927586307105
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.18174263212368658
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13309917097791413
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.17018965586657941
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20935461864863925
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.31341607434083246
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1120601649075752
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11143299412797347
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13228981406772533
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1316626432881165
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.14279114417045236
+            }
+          ]
+        },
+        {
+          "dx": 0.5,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.2824757271319953
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.19450637021028427
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.15409965012932503
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11978170475475025
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.12379927586307105
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.18174263212368658
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13309917097791413
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.17018965586657941
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20935461864863925
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.39361097223685704
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1120601649075752
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11143299412797347
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13228981406772533
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1316626432881165
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.14279114417045236
+            }
+          ]
+        },
+        {
+          "dx": 0.5,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.2824757271319953
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.19450637021028427
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.15409965012932503
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11978170475475025
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.12379927586307105
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.18174263212368658
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13309917097791413
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.17018965586657941
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20935461864863925
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.39361097223685704
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1120601649075752
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11143299412797347
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13228981406772533
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1316626432881165
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.14279114417045236
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.4864639391477681
+            }
+          ]
+        },
+        {
+          "dx": 0.5,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.2824757271319953
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.19450637021028427
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.15409965012932503
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11978170475475025
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.12379927586307105
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.18174263212368658
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13309917097791413
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.17018965586657941
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20935461864863925
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.39361097223685704
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1120601649075752
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.11143299412797347
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.13228981406772533
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.1316626432881165
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.14279114417045236
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.24900212857867388
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.9864639391477681
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.10421055008792024
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779767
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20095816977524095
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.09913509325045329
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.2854857031590711
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008792024
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779767
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20095816977524095
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c000",
+              "depth": 0.04687086161662657
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.33774993479289783
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008792024
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779767
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20095816977524095
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.3900141664267246
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008792024
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779767
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20095816977524095
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.4864639391477681
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.43100313754772657
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008791313
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.10421055008792024
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779057
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.07802066471779767
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.20095816977524095
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.28668330441058565
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.9864639391477681
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.43100313754772657
+            }
+          ]
+        },
+        {
+          "dx": 1.5,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.14939992638074107
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.09910967631117375
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.06232522945284872
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.06797318564600016
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.16035968894221875
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.17391831384157835
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.1475708174369662
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.1611294423363252
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.03036294720520516
+            }
+          ]
+        },
+        {
+          "dx": 1.5,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.12130907219578257
+            },
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.12299716401374788
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.07417677965106573
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.10941428879252076
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.014172804514168746
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.11769501174170338
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.04656984791908302
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.02161054183188621
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.013345610180559466
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.21007896711266666
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.12858771019307422
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.00990752384149365
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.19729009560741417
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.1413765816983267
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.03036294720520516
+            }
+          ]
+        },
+        {
+          "dx": 1.5,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.06904484056195584
+            },
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.07327788584329994
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.024454953555362473
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.061237061337905005
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.06977128427473578
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.02503034879625962
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.09624894044911142
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.03194964113838129
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.026229147468227874
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.07132982000233413
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.06560984181438619
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.2597982452831146
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.07886843202262625
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.05962680201194159
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.24700937377786208
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.09165730352787876
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.04683793050668911
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.03036294720520516
+            }
+          ]
+        },
+        {
+          "dx": 1.5,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.023558607672852006
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.011517783167457073
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.02005200610428784
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.1460109521852342
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.047017628542810094
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.0570571225919817
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.03197168758254944
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.04201137857885356
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.30951752345356254
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.02914915385217834
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.02911845444554926
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.29672865194831005
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.041938025357430825
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.04190732595080245
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.4864639391477681
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c001",
+              "depth": 0.03036294720520516
+            }
+          ]
+        },
+        {
+          "dx": 1.5,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.09652269779391938
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.007337844421533764
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.10850847101404515
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.3245952559793084
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.3243644802424974
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.9864639391477681
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m009-c002",
+              "depth": 0.03036294720520516
+            }
+          ]
+        },
+        {
+          "dx": 2,
+          "dz": -1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.03285035109639248
+            },
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.11476016589062364
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.06491030311433121
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.0022514969877808835
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.01659085352867931
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.42866589438525843
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.13742583579378914
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.03463378332984518
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.44554475143535693
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.15551966833121203
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.2002305016992555
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.23696683763182197
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.09836691909913092
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.09836691909913092
+            },
+            {
+              "piece": "clamp-0-side-1",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.03234209588302378
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.39848762833970625
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.013161644994347549
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.09909032709457713
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.09692875881569563
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.08557804759387846
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.08557804759387846
+            },
+            {
+              "piece": "clamp-1-side-1",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.04513096738827628
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.025950516499600056
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.011050050467289418
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.13774489293842457
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m011-c002",
+              "depth": 0.25443509550990095
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.07907100182532234
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.0623424389006797
+            }
+          ]
+        },
+        {
+          "dx": 2,
+          "dz": -0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.03559302998434029
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.10598144868640849
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.29827674099891305
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.18969006742761585
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.12402437848757414
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.31515559804901155
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.20778389996503874
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.0698413483129101
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.10657768424547671
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.12372096910821687
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.12372096910821687
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.006988045873944929
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.27101739413742154
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.019563933511946796
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.22947948048092243
+            },
+            {
+              "piece": "upright-0-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.08428473836353403
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.13529732576432638
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.13529732576432638
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.08451819799762811
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.08676692053276157
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.10044064562501849
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.13517172793412735
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.10687857520973996
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.1146066705345064
+            }
+          ]
+        },
+        {
+          "dx": 2,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.12498362514206947
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.024244227914238067
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.0026408272639782265
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.04042491706016199
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m010-c001",
+              "depth": 0.012164749267161407
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.19537204384413756
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.16788758761256764
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.24195429906144256
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m010-c001",
+              "depth": 0.03025858180458433
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.21341497364530332
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.18476644466266617
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.2600481315988654
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m015-c000",
+              "depth": 0.036456342642728574
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.07400169093776895
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.07400169093776895
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.056707324044392854
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.14062824075107627
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.13846667247218802
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m010-c001",
+              "depth": 0.0024386216244171068
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.1426119389634594
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.08679056244302141
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.08679056244302141
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.043918452539133304
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.17390879315535718
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.10422807286685985
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.18983124078274755
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.004782574547781859
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.05461434357591323
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.07107624260975404
+            }
+          ]
+        },
+        {
+          "dx": 2,
+          "dz": 0.5,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.21437422029979852
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.11363482307196714
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.0920314224217073
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.12981551221789106
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.012201512710899004
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.23396599109837987
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.03749843422622238
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.1851921888818601
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.05437729127632089
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.04057289664537478
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.07984280268320915
+            },
+            {
+              "piece": "clamp-0-lower",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.024282412767320995
+            },
+            {
+              "piece": "clamp-0-upper",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.024282412767320995
+            },
+            {
+              "piece": "clamp-0-side--1",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.024282412767328065
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.07590584371866643
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.010239087364730892
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.07815456625379989
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.008077519085842658
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.09182829134605687
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m011-c001",
+              "depth": 0.012222785577113999
+            },
+            {
+              "piece": "clamp-1-lower",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.03707128427257348
+            },
+            {
+              "piece": "clamp-1-upper",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.03707128427257348
+            },
+            {
+              "piece": "clamp-1-side--1",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.03707128427258056
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.2632993883130863
+            },
+            {
+              "piece": "outrigger-1-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.014837477709130732
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.23743115061071715
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.06548744542910065
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.4864639391477681
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c001",
+              "depth": 0.002350111942086494
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-01-m014-c002",
+              "depth": 0.021356964439306098
+            }
+          ]
+        },
+        {
+          "dx": 2,
+          "dz": 1,
+          "hits": [
+            {
+              "piece": "lower-ne-02-m015-c000",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.24688727807860142
+            },
+            {
+              "piece": "lower-ne-02-m015-c001",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.1707806488448003
+            },
+            {
+              "piece": "lower-ne-02-m015-c002",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.1814220175794365
+            },
+            {
+              "piece": "lower-ne-02-m015-c003",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.19501287992610866
+            },
+            {
+              "piece": "lower-ne-02-m015-c004",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.10159210786862818
+            },
+            {
+              "piece": "bottom-seat-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.14457539594065075
+            },
+            {
+              "piece": "bottom-seat-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.09580159372413098
+            },
+            {
+              "piece": "upper-backstop-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.12996349180310396
+            },
+            {
+              "piece": "upper-backstop-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.16923339784093833
+            },
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.1652964388763955
+            },
+            {
+              "piece": "outrigger-0-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.11284042714582858
+            },
+            {
+              "piece": "upright-0-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.18121888650378595
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.3526899834708154
+            },
+            {
+              "piece": "upright-1-flange",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.14804055545298797
+            },
+            {
+              "piece": "upright-1-web",
+              "fixed": "lower-ne-01-m010-c002",
+              "depth": 0.15028927798812727
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m018-c001",
+              "depth": 0.002925861109753569
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m021-c001",
+              "depth": 0.3620456560744101
+            },
+            {
+              "piece": "incoming-beam",
+              "fixed": "lower-ne-00-m034-c001",
+              "depth": 0.9864639391477681
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

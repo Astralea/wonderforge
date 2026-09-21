@@ -1,0 +1,88 @@
+import type { MeshStandardMaterial } from 'three';
+import { materialDetailFor } from '../../data/materialDetail';
+
+/** Retire unresolved ripple octaves before their normal gradients alias into sun glitter.
+ * Eiffel-only: other wonders keep their existing material recipes and programs.
+ */
+export function configureEiffelWater(material: MeshStandardMaterial): void {
+  if (material.userData.eiffelRippleFilter) return;
+  const enabled = { value: 1 };
+  material.userData.eiffelRippleFilter = enabled;
+  const reflection = { value: 1 };
+  material.userData.eiffelReflectionFilter = reflection;
+  const previous = material.onBeforeCompile.bind(material);
+  const previousKey = material.customProgramCacheKey.bind(material);
+  material.onBeforeCompile = (shader, renderer) => {
+    previous(shader, renderer);
+    const original = /float wfFbm\(vec2 p\)\s*\{\s*return wfNoise\(p\) \* 0\.65 \+ wfNoise\(p \* 2\.13 \+ 7\.3\) \* 0\.35;\s*\}/;
+    if (!original.test(shader.fragmentShader)) throw new Error('Eiffel water expected the shared two-octave ripple field');
+    shader.uniforms.uEiffelRippleFilter = enabled;
+    shader.fragmentShader = 'uniform float uEiffelRippleFilter;\n' + shader.fragmentShader.replace(original, `
+float wfFbm(vec2 p) {
+  float span = max(length(dFdx(p)), length(dFdy(p)));
+  // Use a smooth footprint transition; a hard octave switch would itself pop.
+  float coarse = 1.0 - smoothstep(0.15, 0.5, span);
+  float fine = 1.0 - smoothstep(0.15, 0.5, span * 2.13);
+  float n0 = wfNoise(p), n1 = wfNoise(p * 2.13 + 7.3);
+  float unfiltered = n0 * 0.65 + n1 * 0.35;
+  float filtered = 0.5 + (n0 - 0.5) * 0.65 * coarse + (n1 - 0.5) * 0.35 * fine;
+  return mix(unfiltered, filtered, uEiffelRippleFilter);
+}`);
+    shader.uniforms.uEiffelReflectionFilter = reflection;
+    shader.fragmentShader = filterSunReflection(shader.fragmentShader);
+  };
+  material.customProgramCacheKey = () => `${previousKey()}:eiffel-footprint-water-v1:eiffel-reflection-footprint-v1`;
+  material.needsUpdate = true;
+}
+
+/** Average the authored sun radiance, not derivatives of derivative-filtered normals. */
+function filterSunReflection(source: string): string {
+  const recipe = materialDetailFor('water');
+  const ripple = recipe.ripple!, chop = recipe.chop!, strength = recipe.normalRipple!.strength;
+  const sun = source.match(/float wfCosSun = max\(dot\(wfReflectWorld, uWfSunDirection\), 0\.0\);[\s\S]*?wfSkyRefl \+= uWfSunTint \* \([\s\S]*?\n  \);/)?.[0];
+  if (!sun) throw new Error('Eiffel water expected the shared analytic sun reflection');
+  const f = (value: number) => value.toFixed(6);
+  const functions = `
+vec3 wfEiffelSunAt(vec3 wfReflectWorld) {
+  ${sun.replace('wfSkyRefl +=', 'return')}
+}
+float wfEiffelWaterNoiseAt(vec2 p, float span) {
+  float a = 1.0 - smoothstep(0.15, 0.5, span);
+  float b = 1.0 - smoothstep(0.15, 0.5, span * 2.13);
+  float n0 = wfNoise(p), n1 = wfNoise(p * 2.13 + 7.3);
+  return mix(n0 * 0.65 + n1 * 0.35,
+    0.5 + (n0 - 0.5) * 0.65 * a + (n1 - 0.5) * 0.35 * b, uEiffelRippleFilter);
+}
+vec3 wfEiffelWaterSunAt(vec2 rp, vec2 cp, float rs, float cs, vec3 viewPosition) {
+  const float h = 0.08;
+  float r = wfEiffelWaterNoiseAt(rp, rs), c = wfEiffelWaterNoiseAt(cp, cs);
+  vec2 gradient = vec2(
+    (wfEiffelWaterNoiseAt(rp + vec2(h, 0.0), rs) - r) / h * ${f(ripple.scale)},
+    (wfEiffelWaterNoiseAt(rp + vec2(0.0, h), rs) - r) / h * ${f(ripple.scale * 0.55)});
+  gradient += vec2(
+    (wfEiffelWaterNoiseAt(cp + vec2(h, 0.0), cs) - c) / h * ${f(chop.scale)},
+    (wfEiffelWaterNoiseAt(cp + vec2(0.0, h), cs) - c) / h * ${f(chop.scale * 0.8)}) * ${f(chop.amplitude / ripple.amplitude)};
+  vec3 n = normalize(vec3(-gradient.x * ${f(strength)}, 1.0, -gradient.y * ${f(strength)}));
+  vec3 reflected = inverseTransformDirection(reflect(-normalize(viewPosition), mat3(viewMatrix) * n), viewMatrix);
+  return wfEiffelSunAt(reflected);
+}
+`;
+  // Only first derivatives of original interpolated coordinates are taken.
+  // All four samples share those footprints; no sample function differentiates.
+  const sample = `
+  vec2 rdx = dFdx(wfRp), rdy = dFdy(wfRp);
+  vec2 cdx = dFdx(wfCp), cdy = dFdy(wfCp);
+  vec3 vdx = dFdx(vViewPosition), vdy = dFdy(vViewPosition);
+  float rs = max(length(rdx), length(rdy)), cs = max(length(cdx), length(cdy));
+  vec3 averagedSun = vec3(0.0);
+  for (int iy = 0; iy < 2; iy++) {
+    for (int ix = 0; ix < 2; ix++) {
+      vec2 q = vec2(float(ix), float(iy)) * 0.5 - 0.25;
+      averagedSun += wfEiffelWaterSunAt(wfRp + rdx*q.x + rdy*q.y,
+        wfCp + cdx*q.x + cdy*q.y, rs, cs, vViewPosition + vdx*q.x + vdy*q.y) * 0.25;
+    }
+  }
+  wfSkyRefl += mix(wfEiffelSunAt(wfReflectWorld), averagedSun, uEiffelReflectionFilter);
+`;
+  return 'uniform float uEiffelReflectionFilter;\n' + source.replace(sun, sample).replace('void main() {', `${functions}\nvoid main() {`);
+}

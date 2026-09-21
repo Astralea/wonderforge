@@ -1,0 +1,19 @@
+[09/08/26 14:28:50] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/08/26 14:30:26] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{
+  "status": "ok",
+  "files": [
+    {
+      "file": "eiffel-summit-mast-assemblies.blend",
+      "objects": 10,
+      "meshes": 7
+    },
+    {
+      "file": "eiffel-tower-mast-joint.blend",
+      "objects": 13853,
+      "meshes": 13853
+    }
+  ]
+}

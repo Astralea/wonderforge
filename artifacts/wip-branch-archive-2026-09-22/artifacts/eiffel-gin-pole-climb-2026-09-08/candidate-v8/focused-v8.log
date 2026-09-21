@@ -1,0 +1,251 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/eiffel-gin-pole-climb-asset.test.ts (7 tests | 1 failed) 40762ms
+   ✓ actual Blender summit gin-pole climb candidate > exports the exact role hierarchy and applies motion only to authored moving roots 3ms
+   ✓ actual Blender summit gin-pole climb candidate > sweeps every actual half-guide clear of the complete moving pole assembly 264ms
+   ✓ actual Blender summit gin-pole climb candidate > keeps each actual axial pin inside its drilled pole bore only when locked 2ms
+   ✓ actual Blender summit gin-pole climb candidate > seats actual drive shoes and ladder feet on named tower triangles 24ms
+   ✓ actual Blender summit gin-pole climb candidate > exports real fairlead and drum axles through their paired bearing geometry 1ms
+   ✓ actual Blender summit gin-pole climb candidate > keeps the complete moving vertical rope outside every actual guide leaf sweep  893ms
+   × actual Blender summit gin-pole climb candidate > moves only the timeline-active guides clear of every seated tower and fixed-rig solid 39419ms
+     → expected [ { seconds: 5, …(4) }, …(29) ] to deeply equal []
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-gin-pole-climb-asset.test.ts > actual Blender summit gin-pole climb candidate > moves only the timeline-active guides clear of every seated tower and fixed-rig solid
+AssertionError: expected [ { seconds: 5, …(4) }, …(29) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.1,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.1,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.2,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.2,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.3,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.3,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.4,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.4,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.5,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.5,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.6,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.6,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.7,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.7,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.8,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.8,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.9,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 5.9,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.1,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.1,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.2,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.2,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.3,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.3,
++   },
++   {
++     "depth": 0.017489483980312914,
++     "kind": "fixed-rig",
++     "moving": "guide-0-north-leaf/fork-root-dogleg056",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.4,
++   },
++   {
++     "depth": 0.01752789083708603,
++     "kind": "fixed-rig",
++     "moving": "guide-0-south-leaf/fork-root-dogleg057",
++     "obstacle": "guide-0-fixed/guide-fixed-hinge-pin028",
++     "seconds": 6.4,
++   },
++ ]
+
+ ❯ tests/eiffel-gin-pole-climb-asset.test.ts:349:35
+    347|       }
+    348|     }
+    349|     expect(failures.slice(0, 30)).toEqual([]);
+       |                                   ^
+    350|   }, 30_000);
+    351| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 passed (7)
+   Start at  15:56:51
+   Duration  41.37s (transform 289ms, setup 15ms, collect 444ms, tests 40.76s, environment 0ms, prepare 27ms)
+

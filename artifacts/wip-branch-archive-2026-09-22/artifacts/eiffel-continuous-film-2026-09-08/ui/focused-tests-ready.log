@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/three-canvas-readiness.test.tsx (5 tests) 70ms
+ ✓ tests/eiffel-chapter-captions.test.tsx (5 tests) 46ms
+ ✓ tests/playback.test.ts (14 tests) 4ms
+ ✓ tests/eiffel-world-cut-visibility.test.ts (2 tests) 16ms
+ ✓ tests/ui.test.tsx (27 tests) 1424ms
+
+ Test Files  5 passed (5)
+      Tests  53 passed (53)
+   Start at  22:09:03
+   Duration  3.10s (transform 1.25s, setup 117ms, collect 3.28s, tests 1.56s, environment 1.57s, prepare 269ms)
+

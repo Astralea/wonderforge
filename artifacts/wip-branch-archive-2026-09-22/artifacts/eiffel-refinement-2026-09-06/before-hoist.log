@@ -1,0 +1,86 @@
+{
+  "url": "http://127.0.0.1:5589/#/debug/wonder/eiffel-tower/0.69127",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/eiffel-refinement-2026-09-06/before-hoist/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "drawingBuffer": {
+      "width": 1440,
+      "height": 900
+    },
+    "alphaPixels": 4102,
+    "variance": 197,
+    "colorBuckets": 156,
+    "metrics": {
+      "colorBuckets": 188,
+      "colorEntropyBits": 5.63,
+      "edgeDensity": 0.208,
+      "luminance": {
+        "mean": 116.7,
+        "p5": 63.7,
+        "p95": 151.3,
+        "contrast": 87.6
+      },
+      "dominantColorShare": 0.11,
+      "nonBackgroundShare": 0.89
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 108,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 276984,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 25,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 108,
+        "triangles": 276984,
+        "points": 0,
+        "lines": 0,
+        "geometries": 25,
+        "textures": 16
+      },
+      "scene": "eiffel-tower-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

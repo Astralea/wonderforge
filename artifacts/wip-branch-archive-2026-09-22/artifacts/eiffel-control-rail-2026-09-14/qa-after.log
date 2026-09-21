@@ -1,0 +1,687 @@
+{
+  "bundle": "main-DGaRJ8M1.js",
+  "errors": [],
+  "views": [
+    {
+      "name": "desktop",
+      "eleven": {
+        "progress": "0.11",
+        "sceneClass": "fixed inset-0 overflow-hidden bg-umber-950 eiffel-story-focus",
+        "rail": {
+          "x": 0,
+          "y": 569,
+          "width": 1280,
+          "height": 151,
+          "bottom": 720
+        },
+        "controls": {
+          "x": 192,
+          "y": 577,
+          "width": 896,
+          "height": 135,
+          "bottom": 712
+        },
+        "letterbox": {
+          "x": 0,
+          "y": 676.8125,
+          "width": 1280,
+          "height": 43.1875,
+          "bottom": 720
+        },
+        "canvas": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "bottom": 720
+        },
+        "cssBottom": "0px",
+        "chromeOpacity": "1",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "buttons": [
+          {
+            "name": "Previous wonder",
+            "x": 360.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Play",
+            "x": 412.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Next wonder",
+            "x": 464.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Mute soundtrack",
+            "x": 516.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Disable narration",
+            "x": 568.1875,
+            "y": 665,
+            "width": 145.625,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Wonder facts",
+            "x": 721.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "1× speed",
+            "x": 778.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "2× speed",
+            "x": 824.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "4× speed",
+            "x": 870.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          }
+        ]
+      },
+      "thirtyOne": {
+        "progress": "0.31",
+        "sceneClass": "fixed inset-0 overflow-hidden bg-umber-950 ",
+        "rail": {
+          "x": 0,
+          "y": 569,
+          "width": 1280,
+          "height": 151,
+          "bottom": 720
+        },
+        "controls": {
+          "x": 192,
+          "y": 577,
+          "width": 896,
+          "height": 135,
+          "bottom": 712
+        },
+        "letterbox": {
+          "x": 0,
+          "y": 676.8125,
+          "width": 1280,
+          "height": 43.1875,
+          "bottom": 720
+        },
+        "canvas": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "bottom": 720
+        },
+        "cssBottom": "0px",
+        "chromeOpacity": "1",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "buttons": [
+          {
+            "name": "Previous wonder",
+            "x": 360.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Play",
+            "x": 412.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Next wonder",
+            "x": 464.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Mute soundtrack",
+            "x": 516.1875,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Disable narration",
+            "x": 568.1875,
+            "y": 665,
+            "width": 145.625,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "Wonder facts",
+            "x": 721.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "1× speed",
+            "x": 778.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "2× speed",
+            "x": 824.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          },
+          {
+            "name": "4× speed",
+            "x": 870.8125,
+            "y": 665,
+            "width": 44,
+            "height": 44,
+            "bottom": 709
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile",
+      "eleven": {
+        "progress": "0.11",
+        "sceneClass": "fixed inset-0 overflow-hidden bg-umber-950 eiffel-story-focus",
+        "rail": {
+          "x": 0,
+          "y": 646,
+          "width": 390,
+          "height": 198,
+          "bottom": 844
+        },
+        "controls": {
+          "x": 0,
+          "y": 654,
+          "width": 390,
+          "height": 182,
+          "bottom": 836
+        },
+        "letterbox": {
+          "x": 0,
+          "y": 793.375,
+          "width": 390,
+          "height": 50.625,
+          "bottom": 844
+        },
+        "canvas": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "bottom": 844
+        },
+        "cssBottom": "0px",
+        "chromeOpacity": "1",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "name": "Previous wonder",
+            "x": 26.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Play",
+            "x": 74.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Next wonder",
+            "x": 122.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Mute soundtrack",
+            "x": 170.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Disable narration",
+            "x": 218.1875,
+            "y": 738,
+            "width": 145.625,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Wonder facts",
+            "x": 98,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          },
+          {
+            "name": "1× speed",
+            "x": 151,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          },
+          {
+            "name": "2× speed",
+            "x": 197,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          },
+          {
+            "name": "4× speed",
+            "x": 243,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          }
+        ]
+      },
+      "thirtyOne": {
+        "progress": "0.31",
+        "sceneClass": "fixed inset-0 overflow-hidden bg-umber-950 ",
+        "rail": {
+          "x": 0,
+          "y": 646,
+          "width": 390,
+          "height": 198,
+          "bottom": 844
+        },
+        "controls": {
+          "x": 0,
+          "y": 654,
+          "width": 390,
+          "height": 182,
+          "bottom": 836
+        },
+        "letterbox": {
+          "x": 0,
+          "y": 793.375,
+          "width": 390,
+          "height": 50.625,
+          "bottom": 844
+        },
+        "canvas": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "bottom": 844
+        },
+        "cssBottom": "0px",
+        "chromeOpacity": "1",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "name": "Previous wonder",
+            "x": 26.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Play",
+            "x": 74.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Next wonder",
+            "x": 122.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Mute soundtrack",
+            "x": 170.1875,
+            "y": 738,
+            "width": 44,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Disable narration",
+            "x": 218.1875,
+            "y": 738,
+            "width": 145.625,
+            "height": 44,
+            "bottom": 782
+          },
+          {
+            "name": "Wonder facts",
+            "x": 98,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          },
+          {
+            "name": "1× speed",
+            "x": 151,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          },
+          {
+            "name": "2× speed",
+            "x": 197,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          },
+          {
+            "name": "4× speed",
+            "x": 243,
+            "y": 789,
+            "width": 44,
+            "height": 44,
+            "bottom": 833
+          }
+        ]
+      }
+    },
+    {
+      "name": "landscape",
+      "eleven": {
+        "progress": "0.11",
+        "sceneClass": "fixed inset-0 overflow-hidden bg-umber-950 eiffel-story-focus",
+        "rail": {
+          "x": 0,
+          "y": 239,
+          "width": 844,
+          "height": 151,
+          "bottom": 390
+        },
+        "controls": {
+          "x": 0,
+          "y": 247,
+          "width": 844,
+          "height": 135,
+          "bottom": 382
+        },
+        "letterbox": {
+          "x": 0,
+          "y": 366.609375,
+          "width": 844,
+          "height": 23.390625,
+          "bottom": 390
+        },
+        "canvas": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "bottom": 390
+        },
+        "cssBottom": "0px",
+        "chromeOpacity": "1",
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "buttons": [
+          {
+            "name": "Previous wonder",
+            "x": 142.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Play",
+            "x": 194.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Next wonder",
+            "x": 246.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Mute soundtrack",
+            "x": 298.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Disable narration",
+            "x": 350.1875,
+            "y": 335,
+            "width": 145.625,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Wonder facts",
+            "x": 503.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "1× speed",
+            "x": 560.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "2× speed",
+            "x": 606.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "4× speed",
+            "x": 652.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          }
+        ]
+      },
+      "thirtyOne": {
+        "progress": "0.31",
+        "sceneClass": "fixed inset-0 overflow-hidden bg-umber-950 ",
+        "rail": {
+          "x": 0,
+          "y": 239,
+          "width": 844,
+          "height": 151,
+          "bottom": 390
+        },
+        "controls": {
+          "x": 0,
+          "y": 247,
+          "width": 844,
+          "height": 135,
+          "bottom": 382
+        },
+        "letterbox": {
+          "x": 0,
+          "y": 366.609375,
+          "width": 844,
+          "height": 23.390625,
+          "bottom": 390
+        },
+        "canvas": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "bottom": 390
+        },
+        "cssBottom": "0px",
+        "chromeOpacity": "1",
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "buttons": [
+          {
+            "name": "Previous wonder",
+            "x": 142.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Play",
+            "x": 194.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Next wonder",
+            "x": 246.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Mute soundtrack",
+            "x": 298.1875,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Disable narration",
+            "x": 350.1875,
+            "y": 335,
+            "width": 145.625,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "Wonder facts",
+            "x": 503.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "1× speed",
+            "x": 560.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "2× speed",
+            "x": 606.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          },
+          {
+            "name": "4× speed",
+            "x": 652.8125,
+            "y": 335,
+            "width": 44,
+            "height": 44,
+            "bottom": 379
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "captures": [
+    {
+      "name": "desktop",
+      "mode": "compact",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/desktop-compact-0.png",
+      "metrics": {
+        "mode": "compact",
+        "progress": 0,
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 87854,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 0,
+          "seatedSources": 7290,
+          "triangles": 87852
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "expanded",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/desktop-expanded-0.png",
+      "metrics": {
+        "mode": "expanded",
+        "progress": 0,
+        "renderer": {
+          "frame": 1,
+          "calls": 32,
+          "triangles": 165866,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 13814,
+          "seatedSources": 0,
+          "triangles": 165864
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "transport",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/desktop-transport-0.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 0,
+        "renderer": {
+          "frame": 1,
+          "calls": 3,
+          "triangles": 26,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "transport",
+      "progress": 0.5,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/desktop-transport-0.5.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 0.5,
+        "renderer": {
+          "frame": 1,
+          "calls": 3,
+          "triangles": 26,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "transport",
+      "progress": 1,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/desktop-transport-1.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 1,
+        "renderer": {
+          "frame": 1,
+          "calls": 3,
+          "triangles": 26,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "mobile",
+      "mode": "compact",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/mobile-compact-0.png",
+      "metrics": {
+        "mode": "compact",
+        "progress": 0,
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 87854,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 0,
+          "seatedSources": 7290,
+          "triangles": 87852
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "mobile",
+      "mode": "transport",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa/mobile-transport-0.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 0,
+        "renderer": {
+          "frame": 1,
+          "calls": 3,
+          "triangles": 26,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    }
+  ],
+  "errors": [],
+  "comparison": {
+    "changedPixelFraction": 0.0002183641975308642,
+    "meanChannelError": 0.034858539094650205
+  },
+  "selected": "shaft-00-m001-c000"
+}

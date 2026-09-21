@@ -1,0 +1,121 @@
+{
+  "captures": [
+    {
+      "name": "desktop",
+      "path": "artifacts/eiffel-resume-2026-09-07/setting/desktop-workyard.png",
+      "kind": "workyard",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 21,
+        "triangles": 78293,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/eiffel-resume-2026-09-07/setting/desktop-north-bank.png",
+      "kind": "north-bank",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 17,
+        "triangles": 38330,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/eiffel-resume-2026-09-07/setting/mobile-workyard.png",
+      "kind": "workyard",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 18,
+        "triangles": 48404,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/eiffel-resume-2026-09-07/setting/mobile-north-bank.png",
+      "kind": "north-bank",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 16,
+        "triangles": 33158,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    }
+  ],
+  "errors": []
+}

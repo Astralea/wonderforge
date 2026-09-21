@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-assets.test.ts (3 tests) 897ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  607ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  14:44:33
+   Duration  1.19s (transform 79ms, setup 0ms, collect 95ms, tests 897ms, environment 0ms, prepare 58ms)
+

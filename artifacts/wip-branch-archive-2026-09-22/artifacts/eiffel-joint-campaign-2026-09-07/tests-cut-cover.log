@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-film.test.ts tests/caption-layer.test.tsx tests/ui.test.tsx
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-film.test.ts (11 tests) 27ms
+ ✓ tests/ui.test.tsx (26 tests) 935ms
+
+ Test Files  2 passed (2)
+      Tests  37 passed (37)
+   Start at  22:04:49
+   Duration  1.62s (transform 288ms, setup 0ms, collect 574ms, tests 961ms, environment 189ms, prepare 62ms)
+

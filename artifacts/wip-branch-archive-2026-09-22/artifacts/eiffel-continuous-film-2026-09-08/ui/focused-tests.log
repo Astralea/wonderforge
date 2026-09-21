@@ -1,0 +1,57 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/three-canvas-readiness.test.tsx (5 tests) 67ms
+ ✓ tests/eiffel-chapter-captions.test.tsx (5 tests) 40ms
+ ✓ tests/playback.test.ts (14 tests) 4ms
+ ✓ tests/eiffel-world-cut-visibility.test.ts (1 test) 12ms
+ ❯ tests/ui.test.tsx (27 tests | 1 failed) 1403ms
+   ✓ home > renders the brand, then the catalog after Enter — without leaving the page 189ms
+   ✓ home > catalog wordmark returns to the title plate 49ms
+   ✓ home > Escape on the catalog returns to the title plate 24ms
+   ✓ home > clicking a gallery row opens the cinematic and starts playing 43ms
+   ✓ cinematic view > shows the title card first, then the quote once construction begins 48ms
+   ✓ cinematic view > transport: play/pause toggles, scrubber seeks 64ms
+   ✓ cinematic view > keeps every global cinematic control together in the bottom control rail 59ms
+   ✓ cinematic view > replay appears when the movie completes and restarts it 47ms
+   ✓ cinematic view > speed toggle multiplies wall-clock advance (Spec 02) 62ms
+   ✓ cinematic view > caption layer: beats appear at 1× during play, never in gaps, at speed, or at the reveal 81ms
+   ✓ cinematic view > parks the wordmark in the top letterbox slot and keeps the beat index below it 40ms
+   ✓ cinematic view > a touch press wakes hidden movie controls without requiring a mouse move 52ms
+   ✓ cinematic view > caption beat index: titles stay listed and a click seeks to that face 56ms
+   ✓ cinematic view > caption voice: Giza uses bundled George clips and stops them when turned off 57ms
+   ✓ cinematic view > caption voice: Stonehenge uses bundled Daniel clips, not browser speech 49ms
+   ✓ cinematic view > caption voice still plays when the browser rejects an early seek 47ms
+   ✓ cinematic view > caption voice stays silent if a bundled clip is rejected 46ms
+   ✓ cinematic view > caption voice stays silent for a wonder without ElevenLabs clips 55ms
+   ✓ cinematic view > caption voice: Sydney uses bundled Alice clips, not browser speech 46ms
+   × cinematic view > caption voice: Eiffel uses bundled Adam clips, not browser speech 51ms
+     → expected "play" to be called 6 times, but got 12 times
+   ✓ cinematic view > next/previous navigate the catalog in order 64ms
+   ✓ cinematic view > Escape closes back to the gallery 30ms
+   ✓ cinematic view > floats the construction story over the uninterrupted ground lift, free of quote cards 39ms
+   ✓ cinematic view > space toggles playback 37ms
+   ✓ cinematic view > offers two Eiffel editions and keeps short story navigation on its own clock 56ms
+   ✓ deep links > #/wonder/:id opens straight into the cinematic 8ms
+   ✓ deep links > unknown wonder ids fall back to home 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ui.test.tsx > cinematic view > caption voice: Eiffel uses bundled Adam clips, not browser speech
+AssertionError: expected "play" to be called 6 times, but got 12 times
+ ❯ tests/ui.test.tsx:498:20
+    496| 
+    497|       fireEvent.click(screen.getByRole('button', { name: /enable narra…
+    498|       expect(play).toHaveBeenCalledTimes(EIFFEL_NARRATION.length + 1);
+       |                    ^
+    499|       expect(speak).not.toHaveBeenCalled();
+    500|     } finally {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  1 failed | 51 passed (52)
+   Start at  22:03:33
+   Duration  3.02s (transform 1.15s, setup 117ms, collect 3.00s, tests 1.53s, environment 1.72s, prepare 249ms)
+

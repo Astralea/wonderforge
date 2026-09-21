@@ -1,0 +1,4 @@
+[
+  { name: 'desktop', errors: [], triangles: 8164 },
+  { name: 'mobile', errors: [], triangles: 8152 }
+]

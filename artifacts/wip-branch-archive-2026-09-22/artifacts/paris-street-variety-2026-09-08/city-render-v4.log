@@ -1,0 +1,28 @@
+[09/08/26 23:57:47] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition.004", "file": "", "objects": 127}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/paris-1889.blend",
+  "objects": 127,
+  "meshes": 95,
+  "triangles": 197928,
+  "packedImages": [
+    "carnavalet-g30823.jpg",
+    "carnavalet-g30823.jpg.001",
+    "carnavalet-g30823.jpg.002",
+    "loc-1889-trocadero.jpg",
+    "loc-1889-trocadero.jpg.001",
+    "loc-1889-trocadero.jpg.002",
+    "loc-balloon-paris-large.jpg",
+    "loc-balloon-paris-large.jpg.001",
+    "loc-balloon-paris-large.jpg.002",
+    "paris-frontages-v2.png",
+    "paris-frontages-v2.png.001",
+    "paris-frontages-v2.png.002"
+  ],
+  "render": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/near-city-review.png"
+}

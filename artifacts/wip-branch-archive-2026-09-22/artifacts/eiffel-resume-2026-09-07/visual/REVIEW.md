@@ -1,0 +1,23 @@
+# Fresh production visual audit — 2026-09-07
+
+Scope: read-only review of loopback production port 5589, Chromium, desktop 1440×900. No code, model, build, server, or Blender changes. Five Eiffel debug frames (.04, .12, .32, .58, .92), sixteen captures during real 1× playback from t=.008 to .207, and Giza reference frames at .12/.58. No page errors. This is visual evidence, not a collision/structural certificate or full performance run.
+
+## Three remaining blockers, ranked
+
+1. **Construction still reads as rapid appearance rather than a delivery-and-lift process.** During real playback `live-05.png` (t=.075), `live-06.png` (.088), and `live-07.png` (.101), black cranes disappear and reappear at different heights/legs while the legs acquire dense iron. The small loads cannot be followed from a visible stockpile to their seats at this framing and rate. `src/engine/eiffelConstructionTiming.ts:74–82` gives only one hero wave, capped at .35 seconds, in selected stages; 13,814 parts over .035–.9 of a 60-second film with four concurrent rigs means about 15 ms per operation on average. `src/engine/eiffelProductionConstruction.ts:383–399` removes the crane/carrier outside each individual operation; lines425–434 start non-foundation work already staged near its elevated seat. These are separate from the corrected short-jib silhouette. Next correction: persistent station-level crane/deck/crew presence, a readable connected work yard, and representative seconds-long source→carrier→receiving→hook→seat sequences. Repetitive work may be compressed, but the viewer needs an observable logistics chain. Giza `giza-0.12.png` has an immediately visible ramp, hauling crews, stockpiles and dense work camp that Eiffel's lawn lacks.
+
+2. **Paris still has disconnected, vacant city layers, especially after the orbit exposes the opposite bank.** `eiffel-tower-058.png` shows the river bordered by broad unoccupied strips; `eiffel-tower-092.png` shows repeated rows of similarly sized pale north-bank volumes beyond a large featureless brown apron. Those rows have no visually readable connected street frontage/activity at this distance. The opening `eiffel-tower-004.png` devotes most of the foreground to a nearly empty lawn with isolated foundation pads, red cubes and a dirt strip that does not read as a connected works route. Expo palaces and market groups are present, but the requested density is uneven; people on the outer paths mostly read as a regular dotted perimeter rather than occupied urban places. Preserve the tower's necessary work clearance, but replace unused peripheral gaps with authored quays, street intersections, varied blocks, site sheds/material stacks and grouped activity. This is not a request to fill the structural footprint with crowds.
+
+3. **Sky and surface treatment remain visibly synthetic.** At `.58` and `.92`, the upper sky is a broad smooth navy field fading into a grey horizontal haze band, without readable cloud structure. In `.04`/`.32`, fountain pools have a high-frequency white-speckled surface that reads more like gravel than water, and the almost uniform green site lawn lacks the wear expected of an active iron-construction yard. Atmospheric changes are visible, but the requested realistic sky/surroundings are not yet supported by these production images. Add low-contrast structured cloud layers, reduce pool high-frequency sparkle, and use ground detail that follows actual logistics/foot traffic.
+
+## Requirements not presently blocked by these captures
+
+- Camera rotation is clearly substantial: the composition moves from the exhibition gardens behind the tower at .04/.12 to the river and opposite-bank blocks at .58/.92. It is no longer static.
+- The old giant horizontal jibs and whole-tier silver flying loads are absent from the reviewed samples. This does not certify every unsampled frame.
+- The summit shows a curved open crown/lantern silhouette in `.92`; its historical dimensions and detailed resemblance are not verified by this distant frame. Use a close saved-model render against the cited Rouillard section before declaring historical acceptance.
+
+## Evidence notes
+
+- `report.json` stores the actual live sample times and diagnostics from the primary run.
+- `pyramids-012.png` and `pyramids-058.png` used an incorrect catalog id and are INVALID reference evidence; retained but excluded from findings. Correct reference files are `giza-0.12.png` and `giza-0.58.png`, captured using `pyramids-of-giza` by `giza.mjs`.
+- Screenshots sampled real playback; they do not capture every intermediate animation frame. The timing finding is corroborated by the current scheduler and renderer lifecycle, not inferred solely from distant stills.

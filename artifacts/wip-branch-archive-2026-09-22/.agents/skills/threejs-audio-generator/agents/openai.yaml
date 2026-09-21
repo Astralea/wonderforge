@@ -1,0 +1,4 @@
+interface:
+  display_name: "Three.js Audio Generator"
+  short_description: "Generate SFX, ambience, voice, and cleaned audio assets for Three.js games"
+  default_prompt: "Load .agents/skills/threejs-audio-generator/SKILL.md from the current project and follow it exactly. Non-negotiables: run the probe before declaring the key unavailable; load the audio workflow reference; report the audio matrix, output paths, runtime trigger mapping, and verification notes."

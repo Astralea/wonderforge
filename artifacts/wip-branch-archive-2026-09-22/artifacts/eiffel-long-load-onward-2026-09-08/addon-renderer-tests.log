@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-long-load-onward-system.test.ts (3 tests) 26ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  11:51:28
+   Duration  255ms (transform 35ms, setup 21ms, collect 50ms, tests 26ms, environment 0ms, prepare 42ms)
+

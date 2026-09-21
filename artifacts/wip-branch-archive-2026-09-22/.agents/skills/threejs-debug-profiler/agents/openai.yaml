@@ -1,0 +1,4 @@
+interface:
+  display_name: "Three.js Debug Profiler"
+  short_description: "Debug and profile Three.js games"
+  default_prompt: "Load .agents/skills/threejs-debug-profiler/SKILL.md from the current project and follow it exactly. Non-negotiables: load the debug/profile checklists reference first; reproduce and measure before fixing; report the reference ledger with baseline/post evidence."

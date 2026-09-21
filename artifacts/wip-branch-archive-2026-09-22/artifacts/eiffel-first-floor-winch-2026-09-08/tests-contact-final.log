@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-first-floor-winch.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-first-floor-winch.test.ts (4 tests) 1283ms
+   ✓ Eiffel first-floor relay winch geometry > keeps every transformed frame prism clear of the completed stage-45 tower  698ms
+   ✓ Eiffel first-floor relay winch geometry > sweeps every exported trolley mesh through its transformed travel without entering frame or tower  400ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  04:58:35
+   Duration  1.61s (transform 73ms, setup 39ms, collect 114ms, tests 1.28s, environment 0ms, prepare 45ms)
+

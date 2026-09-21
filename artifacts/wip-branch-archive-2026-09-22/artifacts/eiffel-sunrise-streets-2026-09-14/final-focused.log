@@ -1,0 +1,17 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-street-lights.test.ts tests/eiffel-sunrise-rendering.test.ts tests/eiffel-cinematic-atmosphere.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-cinematic-atmosphere.test.ts (4 tests) 112ms
+ ✓ tests/eiffel-street-lights.test.ts (4 tests) 1267ms
+   ✓ existing 1889 street gas lamps > fits actual exported pavement triangles and leaves finite authored instances unchanged through reverse seeks  1089ms
+ ✓ tests/eiffel-sunrise-rendering.test.ts (2 tests) 5ms
+
+ Test Files  3 passed (3)
+      Tests  10 passed (10)
+   Start at  00:18:21
+   Duration  1.61s (transform 743ms, setup 40ms, collect 1.28s, tests 1.38s, environment 0ms, prepare 98ms)
+

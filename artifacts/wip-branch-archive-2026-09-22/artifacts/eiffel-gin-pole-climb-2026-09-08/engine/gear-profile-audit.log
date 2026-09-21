@@ -1,0 +1,1 @@
+{"scope":"Actual extruded GLB outer profiles through one tooth period; boundary-vertex containment depth, not shaft/pawl/load certification.","sha256":"f304c1dc033341ca4f2c0acf8e90eb8c8c5562223d60a985bc6d2e2b594c50b4","phases":91,"inputVertices":428,"outputVertices":852,"xOverlap":0.024000000208616257,"worst":{"depth":0},"violationsAbove01mm":0}

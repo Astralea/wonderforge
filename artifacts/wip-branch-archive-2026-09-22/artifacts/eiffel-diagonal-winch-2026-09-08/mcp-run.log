@@ -1,0 +1,18 @@
+[09/08/26 06:22:02] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 diagonal receiver frame candidate.002", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-diagonal-receiver-2026-09-08/blender/eiffel-diagonal-receiver-frame.blend", "objects": 17}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 diagonal fixed winch",
+    "objects": 21,
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-diagonal-winch-2026-09-08/blender/eiffel-diagonal-winch.blend",
+    "productionReady": false,
+    "scope": "fixed guide/drum geometry; no power/brake/anchorage"
+  },
+  "stdout": "06:22:05 | INFO: Starting glTF 2.0 export\n06:22:05 | INFO: Extracting primitive: Cylinder.425\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.422\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.423\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.424\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.428\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.430\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.426\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-cap\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-hanger\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-hanger.001\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-outrigger0.6\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-outrigger-0.6\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-riser0.6\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: guide-riser-0.6\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: Cylinder.434\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: winch-bearing0.62\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: winch-bearing-0.62\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Extracting primitive: winch-bed.007\n06:22:05 | INFO: Primitives created: 1\n06:22:05 | INFO: Finished glTF 2.0 export in 0.0411529541015625 s\n\nInfo: Saved as \"eiffel-diagonal-winch.blend\"\n"
+}

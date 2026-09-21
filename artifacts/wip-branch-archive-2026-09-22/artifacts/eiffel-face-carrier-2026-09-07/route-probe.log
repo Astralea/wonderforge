@@ -1,0 +1,49 @@
+{
+  "scope": "Actual 6 mm angle legs, clamp solids and plate/pads beside the first beam; completed tower minus replaced slab, 245 static support solids, both cargo, baskets, upper slings and hook. Exact ground-hoist sweeps additionally include the incoming beam; optional column offsets are search candidates, not crane or route admission. Excludes actual articulated crane, exact cart and crew.",
+  "includesCarrierFrame": true,
+  "carrierEnds": [
+    -1.6,
+    0.9
+  ],
+  "sourceCarrierSHA256": "d3b3a6070925009191927faf09ec0dadee1b7191c7c7f69e389562315c21bf21",
+  "step": 0.02,
+  "productionAdmitted": false,
+  "reports": [
+    {
+      "offset": 0.4,
+      "samples": 2301,
+      "findings": [
+        {
+          "piece": "outrigger-0-flange",
+          "fixed": "lower-ne-02-m013-c001",
+          "seconds": 22.16,
+          "depth": 0.07261006365962216
+        },
+        {
+          "piece": "outrigger-1-flange",
+          "fixed": "lower-ne-02-m013-c001",
+          "seconds": 22.34,
+          "depth": 0.07002922667930697
+        }
+      ],
+      "groundHoistSweeps": [
+        {
+          "dx": 0,
+          "dz": 0,
+          "hits": [
+            {
+              "piece": "outrigger-0-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.19748923690478887
+            },
+            {
+              "piece": "outrigger-1-flange",
+              "fixed": "lower-ne-02-m013-c001",
+              "depth": 0.20416535651549006
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

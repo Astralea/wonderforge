@@ -1,0 +1,27 @@
+[09/06/26 23:05:12] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/06/26 23:05:19] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"status\": \"ok\",\n  \"result\": {\n    \"scene\": \"WonderForge Eiffel \u2014 Blender reconstruction.004\",\n    \"assemblies\": 363,\n    \"meshes\": 7190,\n    \"triangles\": 86652,\n    \"blend\": \"/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-rebuild/blender/eiffel-tower.blend\"\n  },\n  \"stdout\": \"23:05:17 | INFO: Starting glTF 2.0 export\\n23:05:17 | INFO: Extracting primitive: linked-unit-beam-iron.004\\n23:05:17 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: 1889-curved-beacon-cupola.001\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-deck.004\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-window.001\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-dark-iron.004\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-masonry.004\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-gold.004\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-roof.001\\n23:05:18 | INFO: Primitives created: 1\\n23:05:18 | INFO: Finished glTF 2.0 export in 1.4704530239105225 s\\n\\nInfo: Saved copy as \\\"eiffel-tower.blend\\\"\\nInfo: Saved copy as \\\"eiffel-tower.blend\\\"\\nEIFFEL BUILD COMPLETE 363 parts 7190 mesh nodes 86652 triangles\\n\"\n}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "status": "ok",
+    "result": {
+      "scene": "WonderForge Eiffel \u2014 Blender reconstruction.004",
+      "assemblies": 363,
+      "meshes": 7190,
+      "triangles": 86652,
+      "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-rebuild/blender/eiffel-tower.blend"
+    },
+    "stdout": "23:05:17 | INFO: Starting glTF 2.0 export\n23:05:17 | INFO: Extracting primitive: linked-unit-beam-iron.004\n23:05:17 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: 1889-curved-beacon-cupola.001\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-deck.004\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-window.001\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-dark-iron.004\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-masonry.004\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-gold.004\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Extracting primitive: linked-unit-beam-roof.001\n23:05:18 | INFO: Primitives created: 1\n23:05:18 | INFO: Finished glTF 2.0 export in 1.4704530239105225 s\n\nInfo: Saved copy as \"eiffel-tower.blend\"\nInfo: Saved copy as \"eiffel-tower.blend\"\nEIFFEL BUILD COMPLETE 363 parts 7190 mesh nodes 86652 triangles\n"
+  },
+  "isError": false
+}

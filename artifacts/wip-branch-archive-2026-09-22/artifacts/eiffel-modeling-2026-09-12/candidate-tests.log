@@ -1,0 +1,29 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/paris-roof-detail.test.ts tests/paris-facade-materials.test.ts tests/paris-near-typologies.test.ts tests/paris-assets.test.ts tests/paris-detail-filter.test.ts --maxWorkers=2
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-detail-filter.test.ts (5 tests) 5302ms
+   ✓ Actual exported Paris detail filtering > carries exact feature metadata through every spatial split without removing or moving source corners  4461ms
+   ✓ Actual exported Paris detail filtering > preserves integrated band area and continuously reduces contrast below a pixel  432ms
+ ✓ tests/paris-assets.test.ts (4 tests) 6625ms
+   ✓ MCP-authored Paris exports > places north-bank walkers on exported paving and the new houses on dry land  831ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  2134ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  3654ms
+ ✓ tests/paris-near-typologies.test.ts (9 tests) 4820ms
+   ✓ actual Blender near-Paris block typologies > exports the courtyard surface on shared terrain within the retained block reservations  374ms
+   ✓ actual Blender near-Paris block typologies > retains street attributes outside the repaired near-city region and all north-bank triangles exactly  878ms
+   ✓ actual Blender near-Paris block typologies > repairs intersections with exactly the old exported planar coverage and no positive-area overlap  1582ms
+ ✓ tests/paris-roof-detail.test.ts (2 tests) 1034ms
+   ✓ retains every existing city triangle and UV while adding a bounded authored roof kit  807ms
+ ✓ tests/paris-facade-materials.test.ts (3 tests) 7894ms
+   ✓ Paris embedded facade material > preserves actual source roughness and metalness per corner through every batching merge  4102ms
+   ✓ Paris embedded facade material > preserves every mapped source corner through spatial batching and disposes the texture once  3653ms
+
+ Test Files  5 passed (5)
+      Tests  23 passed (23)
+   Start at  15:40:09
+   Duration  15.01s (transform 142ms, setup 54ms, collect 358ms, tests 25.67s, environment 0ms, prepare 169ms)
+

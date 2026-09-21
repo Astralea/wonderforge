@@ -1,0 +1,353 @@
+{
+  "captures": [
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/desktop-exposition.png",
+      "kind": "exposition",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 26,
+        "triangles": 231259,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/desktop-market.png",
+      "kind": "market",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 22,
+        "triangles": 74753,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/desktop-city.png",
+      "kind": "city",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 22,
+        "triangles": 111799,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/desktop-street.png",
+      "kind": "street",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 18,
+        "triangles": 43619,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/desktop-pedestrian.png",
+      "kind": "pedestrian",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 19,
+        "triangles": 36199,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-outer-inner-person-2",
+        "kind": "pedestrian-man",
+        "position": [
+          -37.36897100717988,
+          0.8747152863367674,
+          105.7
+        ],
+        "yaw": 1.5707963267948966,
+        "visibility": 1,
+        "distance": 32.22,
+        "wheelAngle": 0,
+        "gaitPhase": 0.4645156452778636
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/desktop-river.png",
+      "kind": "river",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 14,
+        "triangles": 26152,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "steamer-east",
+        "kind": "steam-boat",
+        "position": [
+          -334.79999999999995,
+          0.2,
+          -128.0945430317266
+        ],
+        "yaw": 1.6507963267948966,
+        "visibility": 1,
+        "distance": 126,
+        "wheelAngle": 0,
+        "gaitPhase": 0
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/mobile-exposition.png",
+      "kind": "exposition",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 22,
+        "triangles": 102444,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/mobile-market.png",
+      "kind": "market",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 20,
+        "triangles": 57390,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/mobile-city.png",
+      "kind": "city",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 19,
+        "triangles": 70931,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/mobile-street.png",
+      "kind": "street",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 18,
+        "triangles": 41773,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/mobile-pedestrian.png",
+      "kind": "pedestrian",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 16,
+        "triangles": 34863,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-outer-inner-person-2",
+        "kind": "pedestrian-man",
+        "position": [
+          -37.36897100717988,
+          0.8747152863367674,
+          105.7
+        ],
+        "yaw": 1.5707963267948966,
+        "visibility": 1,
+        "distance": 32.22,
+        "wheelAngle": 0,
+        "gaitPhase": 0.4645156452778636
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-exposition-2026-09-07/qa-close/mobile-river.png",
+      "kind": "river",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 14,
+        "triangles": 26152,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "steamer-east",
+        "kind": "steam-boat",
+        "position": [
+          -334.79999999999995,
+          0.2,
+          -128.0945430317266
+        ],
+        "yaw": 1.6507963267948966,
+        "visibility": 1,
+        "distance": 126,
+        "wheelAngle": 0,
+        "gaitPhase": 0
+      }
+    }
+  ],
+  "errors": []
+}

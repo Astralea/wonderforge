@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-crowd-renderer.test.ts (1 test) 689ms
+   ✓ reassigns actual fixed slots to a close formerly-far walker with exact complement, sole contact and reverse identity  689ms
+ ✓ tests/eiffel-crowd-detail.test.ts (3 tests) 2ms
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 3864ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  2168ms
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  547ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  525ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  549ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  13:01:10
+   Duration  4.21s (transform 198ms, setup 31ms, collect 357ms, tests 4.55s, environment 0ms, prepare 85ms)
+

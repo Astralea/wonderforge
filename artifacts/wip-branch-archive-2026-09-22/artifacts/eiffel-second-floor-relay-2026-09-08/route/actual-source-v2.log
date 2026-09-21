@@ -1,0 +1,100 @@
+{
+  "source": {
+    "path": "artifacts/eiffel-second-floor-relay-2026-09-08/model/second-floor-relay.glb",
+    "sha256": "54d61eb36d9e9b56069257fbc4f8ea6879829cf480532bd88eb03e4a0c3e0298",
+    "bytes": 1480560
+  },
+  "meshes": 301,
+  "staticHits": [
+    {
+      "part": "guide-flange004",
+      "hits": [
+        "shaft-01-m027-c002"
+      ]
+    },
+    {
+      "part": "guide-flange005",
+      "hits": [
+        "shaft-01-m027-c002",
+        "shaft-01-m028-c003"
+      ]
+    },
+    {
+      "part": "guide-groove002",
+      "hits": [
+        "shaft-01-m027-c002"
+      ]
+    }
+  ],
+  "confirmedStatic": [
+    {
+      "moving": "guide-flange005",
+      "tower": "shaft-01-m027-c002",
+      "method": "actual moving triangles versus actual rectangular shaft solid"
+    }
+  ],
+  "route": [
+    {
+      "leg": "vertical",
+      "hits": [
+        "clevis-cheek009",
+        "clevis-cheek010",
+        "clevis-crossbar005",
+        "keeper-blade005",
+        "keeper-hinge005",
+        "keeper-thumb-lever005",
+        "clevis-pin-head005",
+        "clevis-pin-shaft005",
+        "pin-guide-stop005",
+        "pin-slide-guide009",
+        "pin-slide-guide010",
+        "replacement-upper-rope-eye005"
+      ]
+    },
+    {
+      "leg": "diagonal",
+      "hits": []
+    },
+    {
+      "leg": "lower",
+      "hits": [
+        "cart-bed003"
+      ]
+    }
+  ],
+  "floorMisses": [],
+  "gearBearing": [],
+  "sheave": [
+    {
+      "role": "relay-moving-sheave",
+      "count": 1,
+      "objects": [
+        {
+          "name": "relay-moving-sheave002",
+          "parentRole": "relay-trolley",
+          "worldPosition": [
+            -8.736804008483887,
+            125.70001983642578,
+            -3.919851064682007
+          ],
+          "meshes": 3,
+          "localPosition": [
+            0,
+            -0.14498138427734375,
+            0
+          ],
+          "localQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "wheelContacts": {
+    "count": 328,
+    "misses": []
+  }
+}

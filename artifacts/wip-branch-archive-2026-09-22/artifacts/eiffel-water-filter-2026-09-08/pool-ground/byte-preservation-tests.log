@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-pool-terrain.test.ts (7 tests) 2382ms
+   ✓ Actual exposition basin ground and support > clips only the actual paving intersection and retains exterior source triangles  824ms
+   ✓ Actual exposition basin ground and support > keeps active traffic footprints outside the unchanged basin boundaries  636ms
+   ✓ Actual exposition basin ground and support > exports finite nondegenerate prepared terrain triangles with unit face-side normals  565ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  15:39:19
+   Duration  2.85s (transform 148ms, setup 26ms, collect 222ms, tests 2.38s, environment 0ms, prepare 84ms)
+

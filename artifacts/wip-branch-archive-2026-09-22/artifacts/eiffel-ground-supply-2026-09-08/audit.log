@@ -1,0 +1,399 @@
+{"processed":1,"total":12918,"seconds":0.001990708000000268}
+{"processed":501,"total":12918,"seconds":0.4398967080000002}
+{"processed":1001,"total":12918,"seconds":0.8263682910000006}
+{"processed":1501,"total":12918,"seconds":1.6647903749999995}
+{"processed":2001,"total":12918,"seconds":2.5066818750000013}
+{"processed":2501,"total":12918,"seconds":3.4644135410000008}
+{"processed":3001,"total":12918,"seconds":4.408009833000001}
+{"processed":3501,"total":12918,"seconds":5.241570291000001}
+{"processed":4001,"total":12918,"seconds":6.078745958000001}
+{"processed":4501,"total":12918,"seconds":6.892867791}
+{"processed":5001,"total":12918,"seconds":7.553430541000001}
+{"processed":5501,"total":12918,"seconds":7.857799625}
+{"processed":6001,"total":12918,"seconds":8.613460750000002}
+{"processed":6501,"total":12918,"seconds":9.916587332999999}
+{"processed":7001,"total":12918,"seconds":11.186640583}
+{"processed":7501,"total":12918,"seconds":12.964669999999998}
+{"processed":8001,"total":12918,"seconds":14.660023290999998}
+{"processed":8501,"total":12918,"seconds":16.746092333}
+{"processed":9001,"total":12918,"seconds":18.485235499999998}
+{"processed":9501,"total":12918,"seconds":20.197997916}
+{"processed":10001,"total":12918,"seconds":22.203865915999998}
+{"processed":10501,"total":12918,"seconds":24.506730040999997}
+{"processed":11001,"total":12918,"seconds":28.555024416000002}
+{"processed":11501,"total":12918,"seconds":34.014655083}
+{"processed":12001,"total":12918,"seconds":40.011024625}
+{"processed":12501,"total":12918,"seconds":49.471083207999996}
+{
+  "productionReady": false,
+  "total": 12918,
+  "envelopeRoutes": 7747,
+  "directBlocked": 12918,
+  "directIronBlocked": 9124,
+  "directReceiverBlocked": 12918,
+  "rejected": 5171,
+  "byStage": {
+    "1": {
+      "total": 448,
+      "routes": 405,
+      "directIronBlocked": 58
+    },
+    "2": {
+      "total": 368,
+      "routes": 348,
+      "directIronBlocked": 238
+    },
+    "3": {
+      "total": 368,
+      "routes": 317,
+      "directIronBlocked": 274
+    },
+    "4": {
+      "total": 352,
+      "routes": 247,
+      "directIronBlocked": 260
+    },
+    "5": {
+      "total": 352,
+      "routes": 245,
+      "directIronBlocked": 278
+    },
+    "6": {
+      "total": 336,
+      "routes": 222,
+      "directIronBlocked": 262
+    },
+    "7": {
+      "total": 328,
+      "routes": 207,
+      "directIronBlocked": 240
+    },
+    "8": {
+      "total": 304,
+      "routes": 196,
+      "directIronBlocked": 240
+    },
+    "9": {
+      "total": 256,
+      "routes": 174,
+      "directIronBlocked": 184
+    },
+    "10": {
+      "total": 136,
+      "routes": 116,
+      "directIronBlocked": 36
+    },
+    "11": {
+      "total": 136,
+      "routes": 120,
+      "directIronBlocked": 76
+    },
+    "12": {
+      "total": 136,
+      "routes": 116,
+      "directIronBlocked": 52
+    },
+    "13": {
+      "total": 136,
+      "routes": 98,
+      "directIronBlocked": 40
+    },
+    "14": {
+      "total": 136,
+      "routes": 104,
+      "directIronBlocked": 58
+    },
+    "15": {
+      "total": 136,
+      "routes": 120,
+      "directIronBlocked": 48
+    },
+    "16": {
+      "total": 136,
+      "routes": 124,
+      "directIronBlocked": 34
+    },
+    "17": {
+      "total": 136,
+      "routes": 92,
+      "directIronBlocked": 50
+    },
+    "18": {
+      "total": 152,
+      "routes": 120,
+      "directIronBlocked": 42
+    },
+    "19": {
+      "total": 152,
+      "routes": 134,
+      "directIronBlocked": 32
+    },
+    "20": {
+      "total": 144,
+      "routes": 112,
+      "directIronBlocked": 28
+    },
+    "21": {
+      "total": 144,
+      "routes": 112,
+      "directIronBlocked": 32
+    },
+    "23": {
+      "total": 1296,
+      "routes": 1122,
+      "directIronBlocked": 901
+    },
+    "24": {
+      "total": 320,
+      "routes": 156,
+      "directIronBlocked": 221
+    },
+    "25": {
+      "total": 256,
+      "routes": 141,
+      "directIronBlocked": 194
+    },
+    "26": {
+      "total": 256,
+      "routes": 162,
+      "directIronBlocked": 212
+    },
+    "27": {
+      "total": 256,
+      "routes": 126,
+      "directIronBlocked": 218
+    },
+    "28": {
+      "total": 256,
+      "routes": 113,
+      "directIronBlocked": 238
+    },
+    "29": {
+      "total": 256,
+      "routes": 130,
+      "directIronBlocked": 212
+    },
+    "30": {
+      "total": 240,
+      "routes": 122,
+      "directIronBlocked": 198
+    },
+    "31": {
+      "total": 240,
+      "routes": 112,
+      "directIronBlocked": 204
+    },
+    "32": {
+      "total": 240,
+      "routes": 114,
+      "directIronBlocked": 196
+    },
+    "34": {
+      "total": 704,
+      "routes": 307,
+      "directIronBlocked": 412
+    },
+    "35": {
+      "total": 164,
+      "routes": 55,
+      "directIronBlocked": 154
+    },
+    "36": {
+      "total": 162,
+      "routes": 114,
+      "directIronBlocked": 150
+    },
+    "37": {
+      "total": 152,
+      "routes": 136,
+      "directIronBlocked": 108
+    },
+    "38": {
+      "total": 140,
+      "routes": 48,
+      "directIronBlocked": 120
+    },
+    "39": {
+      "total": 136,
+      "routes": 16,
+      "directIronBlocked": 124
+    },
+    "40": {
+      "total": 116,
+      "routes": 16,
+      "directIronBlocked": 100
+    },
+    "41": {
+      "total": 116,
+      "routes": 38,
+      "directIronBlocked": 84
+    },
+    "42": {
+      "total": 108,
+      "routes": 38,
+      "directIronBlocked": 92
+    },
+    "43": {
+      "total": 100,
+      "routes": 44,
+      "directIronBlocked": 84
+    },
+    "44": {
+      "total": 92,
+      "routes": 26,
+      "directIronBlocked": 78
+    },
+    "45": {
+      "total": 92,
+      "routes": 35,
+      "directIronBlocked": 78
+    },
+    "46": {
+      "total": 88,
+      "routes": 31,
+      "directIronBlocked": 81
+    },
+    "47": {
+      "total": 84,
+      "routes": 28,
+      "directIronBlocked": 80
+    },
+    "48": {
+      "total": 76,
+      "routes": 26,
+      "directIronBlocked": 68
+    },
+    "49": {
+      "total": 76,
+      "routes": 24,
+      "directIronBlocked": 70
+    },
+    "50": {
+      "total": 76,
+      "routes": 35,
+      "directIronBlocked": 65
+    },
+    "51": {
+      "total": 76,
+      "routes": 32,
+      "directIronBlocked": 64
+    },
+    "52": {
+      "total": 76,
+      "routes": 32,
+      "directIronBlocked": 60
+    },
+    "54": {
+      "total": 320,
+      "routes": 161,
+      "directIronBlocked": 276
+    },
+    "55": {
+      "total": 192,
+      "routes": 56,
+      "directIronBlocked": 188
+    },
+    "56": {
+      "total": 408,
+      "routes": 207,
+      "directIronBlocked": 404
+    },
+    "57": {
+      "total": 90,
+      "routes": 34,
+      "directIronBlocked": 84
+    },
+    "58": {
+      "total": 96,
+      "routes": 59,
+      "directIronBlocked": 72
+    },
+    "59": {
+      "total": 20,
+      "routes": 9,
+      "directIronBlocked": 20
+    },
+    "60": {
+      "total": 144,
+      "routes": 4,
+      "directIronBlocked": 144
+    },
+    "61": {
+      "total": 48,
+      "routes": 0,
+      "directIronBlocked": 48
+    },
+    "62": {
+      "total": 120,
+      "routes": 0,
+      "directIronBlocked": 110
+    },
+    "63": {
+      "total": 79,
+      "routes": 0,
+      "directIronBlocked": 79
+    },
+    "59.05": {
+      "total": 20,
+      "routes": 7,
+      "directIronBlocked": 20
+    },
+    "59.1": {
+      "total": 20,
+      "routes": 11,
+      "directIronBlocked": 20
+    },
+    "59.15": {
+      "total": 20,
+      "routes": 12,
+      "directIronBlocked": 20
+    },
+    "59.2": {
+      "total": 20,
+      "routes": 10,
+      "directIronBlocked": 20
+    },
+    "59.25": {
+      "total": 20,
+      "routes": 8,
+      "directIronBlocked": 16
+    },
+    "59.3": {
+      "total": 20,
+      "routes": 4,
+      "directIronBlocked": 18
+    },
+    "59.35": {
+      "total": 20,
+      "routes": 11,
+      "directIronBlocked": 13
+    },
+    "59.4": {
+      "total": 20,
+      "routes": 10,
+      "directIronBlocked": 13
+    },
+    "59.45": {
+      "total": 20,
+      "routes": 17,
+      "directIronBlocked": 10
+    },
+    "59.5": {
+      "total": 20,
+      "routes": 0,
+      "directIronBlocked": 16
+    },
+    "59.55": {
+      "total": 159,
+      "routes": 19,
+      "directIronBlocked": 105
+    }
+  },
+  "elapsedSeconds": 59.90795445799999,
+  "limits": [
+    "Fixed-orientation cargo envelope sweep only; non-box kit parts are conservative boxes.",
+    "Uses completed kit at original start; concurrent moving loads and equipment lifecycles are excluded.",
+    "Receiver deck/supports and simplified mast included; actual crane, bracket, slings, stock carrier, city, roads and workers are not certified.",
+    "No main-film promotion; original upper routes and unreadable clock remain separate defects."
+  ]
+}

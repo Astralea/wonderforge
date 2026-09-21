@@ -1,0 +1,4 @@
+interface:
+  display_name: "Three.js QA Release"
+  short_description: "Verify and release Three.js games"
+  default_prompt: "Load .agents/skills/threejs-qa-release/SKILL.md from the current project and follow it exactly. Non-negotiables: browser QA with screenshots and canvas-pixel evidence on desktop and mobile; visual test harness and bot playtest decisions reported as added/extended/skipped; report the reference ledger, pass/fail QA matrix, artifacts, and risks."

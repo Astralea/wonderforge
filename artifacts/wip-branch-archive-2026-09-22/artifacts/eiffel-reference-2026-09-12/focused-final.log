@@ -1,0 +1,21 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-shadow.test.ts tests/render-pipeline.test.ts tests/three-canvas-readiness.test.tsx tests/eiffel-film-edit.test.ts tests/eiffel-ui-clock.test.tsx --maxWorkers=2
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-shadow.test.ts (8 tests) 111ms
+ ✓ tests/render-pipeline.test.ts (5 tests) 2ms
+ ✓ tests/eiffel-ui-clock.test.tsx (6 tests) 93ms
+ ✓ tests/three-canvas-readiness.test.tsx (7 tests) 71ms
+ ✓ tests/eiffel-film-edit.test.ts (5 tests) 11948ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1024ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  8458ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  2321ms
+
+ Test Files  5 passed (5)
+      Tests  31 passed (31)
+   Start at  15:09:43
+   Duration  12.44s (transform 504ms, setup 64ms, collect 1.07s, tests 12.22s, environment 575ms, prepare 185ms)
+

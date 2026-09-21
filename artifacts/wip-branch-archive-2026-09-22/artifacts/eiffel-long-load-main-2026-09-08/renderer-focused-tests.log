@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-long-load-drive-system.test.ts (3 tests) 38ms
+ ✓ tests/eiffel-long-load-film-system.test.ts (3 tests) 48ms
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  10:08:06
+   Duration  10.13s (transform 500ms, setup 81ms, collect 19.41s, tests 86ms, environment 0ms, prepare 226ms)
+

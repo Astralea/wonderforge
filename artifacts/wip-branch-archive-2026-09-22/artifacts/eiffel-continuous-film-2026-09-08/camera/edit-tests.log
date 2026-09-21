@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-film-edit.test.ts (3 tests) 3684ms
+   ✓ keeps detailed shots identical and short edit camera continuous and reversible  1450ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during both close-up approaches  2184ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  22:00:49
+   Duration  4.21s (transform 221ms, setup 23ms, collect 298ms, tests 3.68s, environment 0ms, prepare 46ms)
+

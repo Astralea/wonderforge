@@ -1,0 +1,24 @@
+[09/07/26 18:12:02] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/07/26 18:12:05] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition.008",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-resume-2026-09-07/blender/paris-1889.blend",
+    "cityTriangles": 239430,
+    "actors": {
+      "pedestrian-man.013": 216,
+      "pedestrian-woman.013": 256,
+      "horse.013": 216,
+      "cart.013": 1532,
+      "carriage.013": 1580,
+      "steam-boat.013": 404,
+      "barge.013": 104
+    },
+    "cityBytes": 13635304,
+    "lifeBytes": 249076
+  },
+  "evidence": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-resume-2026-09-07/blender/mcp-build-result.json"
+}

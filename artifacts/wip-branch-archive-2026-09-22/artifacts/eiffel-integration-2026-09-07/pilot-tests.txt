@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-guyenet-station.test.ts (3 tests) 8199ms
+   ✓ bounded supported Guyenet NE pilot contract > keeps the rigid payload, working jib and pivot clear along the complete pilot route  913ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  19:36:57
+   Duration  8.58s (transform 145ms, setup 0ms, collect 156ms, tests 8.20s, environment 0ms, prepare 93ms)
+

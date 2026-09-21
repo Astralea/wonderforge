@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-summit-gin-pole-candidate.test.ts (3 tests) 23ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  13:48:43
+   Duration  273ms (transform 34ms, setup 14ms, collect 106ms, tests 23ms, environment 0ms, prepare 28ms)
+

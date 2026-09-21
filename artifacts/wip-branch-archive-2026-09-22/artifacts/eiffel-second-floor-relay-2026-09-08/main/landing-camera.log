@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-second-floor-relay-main.test.ts (6 tests) 97ms
+ ✓ tests/eiffel-second-floor-relay-camera.test.ts (3 tests) 1304ms
+   ✓ Second-floor relay construction framing > keeps the full five-metre near frustum outside completed tower solids  1055ms
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  19:42:52
+   Duration  1.73s (transform 462ms, setup 36ms, collect 835ms, tests 1.40s, environment 0ms, prepare 79ms)
+

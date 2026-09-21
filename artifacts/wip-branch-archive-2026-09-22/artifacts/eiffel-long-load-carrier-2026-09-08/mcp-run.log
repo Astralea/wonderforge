@@ -1,0 +1,18 @@
+[09/08/26 07:08:36] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 long-member first-floor receiver candidate", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-real-payload-route-2026-09-08/blender/eiffel-long-member-first-receiver.blend", "objects": 68}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 real long-load lifting carrier",
+    "partId": "summit-access-stair-m000-c000",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-long-load-carrier-2026-09-08/blender/eiffel-long-load-carrier.blend",
+    "objects": 10,
+    "productionReady": false
+  },
+  "stdout": "07:08:40 | INFO: Starting glTF 2.0 export\n07:08:40 | INFO: Extracting primitive: Cube.060\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cube.054\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cube.055\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cube.056\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cube.058\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cylinder.455\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cylinder.454\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cylinder.453\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Extracting primitive: Cylinder.452\n07:08:40 | INFO: Primitives created: 1\n07:08:40 | INFO: Finished glTF 2.0 export in 0.06383800506591797 s\n\nInfo: Saved as \"eiffel-long-load-carrier.blend\"\n"
+}

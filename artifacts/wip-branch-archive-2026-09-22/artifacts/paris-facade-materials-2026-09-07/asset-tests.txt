@@ -1,0 +1,24 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/paris-facade-materials.test.ts tests/paris-assets.test.ts tests/eiffel-rebuilt-environment.test.ts tests/eiffel-render-precision.test.ts --maxWorkers=4
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-render-precision.test.ts (2 tests) 254ms
+ ✓ tests/paris-facade-materials.test.ts (2 tests) 688ms
+   ✓ Paris embedded facade material > preserves every mapped source corner through spatial batching and disposes the texture once  550ms
+ ✓ tests/paris-assets.test.ts (3 tests) 1448ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  918ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  526ms
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 2851ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  1570ms
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  403ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  381ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  421ms
+
+ Test Files  4 passed (4)
+      Tests  17 passed (17)
+   Start at  22:49:44
+   Duration  3.18s (transform 190ms, setup 61ms, collect 383ms, tests 5.24s, environment 0ms, prepare 125ms)
+

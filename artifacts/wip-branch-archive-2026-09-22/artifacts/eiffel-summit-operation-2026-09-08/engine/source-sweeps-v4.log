@@ -1,0 +1,15 @@
+{
+  "assetSHA256": "a5a2a96ede7dd1d1f8b37573e85ba6118bee0226a8ad2bc7ea552eee194a6d82",
+  "scope": "Actual exported fixed-crosspin triangles vs timber chord boxes for449 samples; actual cart triangles vs three actual assembly member boxes for201 samples through release/yaw. Assembly1 only. No luff tackle, all other rig bodies, or strength admission.",
+  "head": {
+    "samples": 449,
+    "clear": true,
+    "failures": []
+  },
+  "cart": {
+    "samples": 201,
+    "contactAllowanceMetres": 0.00005,
+    "clear": true,
+    "failures": []
+  }
+}

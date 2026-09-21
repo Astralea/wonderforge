@@ -1,0 +1,19 @@
+# Supported summit gin-pole candidate — parent Blender MCP work
+
+Current V9 is a saved Blender mechanism candidate, separate from the production film. The production preview still uses the old c001/c002 generic rigs. Do not present this mechanical demonstration as completed ground-to-summit construction.
+
+Editable source: `blender/eiffel-summit-gin-pole-climb.blend`; contextual review: `blender/eiffel-summit-gin-pole-climb-review.blend`. Parent alone used the actual installed Blender Lab MCP against isolated Blender9877. `mcp-v9-build.log` and `mcp/` hold the real replies. Original desktop Blender62427/9876 was read-only probed and retained. Latest source has334 objects,298 meshes,36 roles. GLB SHA256 `f304c1dc033341ca4f2c0acf8e90eb8c8c5562223d60a985bc6d2e2b594c50b4`.
+
+The six-metre timber pole has a three-metre timber lattice jib, real split guides, opening leaves, independent axial/keeper pins, drilled bores, a positive foot cap, retained rope hitch, hand winch with meshing involute gears, three grooved fairleads and an access ladder. Shoes sit on actual seated tower surfaces. The70-second pure sampler raises the pole4.666667m while the fixed guide/drive frames remain on the tower. Full fixed reeving and the changing descending rope are rendered with0.006m radius; the existing articulated worker visibly cranks from a ladder rung.
+
+The latest guide hinges are atX−0.40. The lower old guide is above the railing atY301.85; the others remain302.30,305.766667,306.966667. Each keeper clears its stop by0.30m before rotation. The lower keeper is inverted in the actual Blender source and withdraws downward to avoid the next collar; the others withdraw upward. Reaction arms terminate at the stop-ear face, leaving its pin bore open. Each fork joins its own hinge-bearing level and has an actual shaft bore. The west sheave brace runs behind the entire guide/control sweep atZ+0.70. Source/rejection evidence for earlier candidates is preserved in `candidate-v1` through `candidate-v8`; none is silently recertified.
+
+See `engine/` for focused geometric gates and their stated scope, and `browser/` for actual candidate desktop/mobile captures. The outer gear-profile audit samples one input tooth period; it does not certify pawl action or load capacity. Earlier conservative OBB reports can flag non-collisions at drilled holes and must not be mistaken for final exact solid checks. Final current gate status is recorded separately in the final verification summary.
+
+## Production work still required
+
+Read `design/next-production-integration.md` before editing the film. Current pickups lie5.57m horizontally from the pole, outside its3m jib. The proposed climb drive bears on m075, which travels with c001; that drive cannot lift c001 before its own support exists. Author the initial supported cargo drive and a reachable supported receiving/handoff route, then handle both mast assemblies and the climb as one coherent insertion while preserving all original part IDs. Elevated incoming stock still omits an upstream operation.
+
+The preview currently begins with hardware and operator already installed. It animates guide/axial controls without worker gestures. Worker access, operation of those controls, initial cargo reeving, winch holding/winding inventory, rig installation/removal and full material provenance remain unfinished. The current model is a mechanically informed reconstruction, not a surveyed historical rig or a structural capacity certificate. Goal remains ACTIVE; do not switch to another wonder or spend the next goal turn only recertifying water/camera work.
+
+Water/basin changes are independently shipped in `../eiffel-water-filter-2026-09-08/`; its `production-browser/README.md` records the new local bundle and actual full-film checks. No new plugin is required.

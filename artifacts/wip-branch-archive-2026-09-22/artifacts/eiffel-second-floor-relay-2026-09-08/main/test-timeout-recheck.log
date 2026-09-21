@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-joint-riggers.test.ts (5 tests) 10803ms
+   ✓ Eiffel joint-campaign ground slingers > keeps rendered bodies and limbs clear of both oriented carts and cargo outside designated hand contact  1300ms
+   ✓ Eiffel joint-campaign ground slingers > clears 1,900 completed tower solids and all 245 installed support members  9490ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  19:28:06
+   Duration  11.22s (transform 157ms, setup 47ms, collect 148ms, tests 10.80s, environment 0ms, prepare 64ms)
+

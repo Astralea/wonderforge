@@ -1,0 +1,18 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-traffic.test.ts (12 tests) 1470ms
+   ✓ 1889 Paris traffic > keeps road traffic outside the site and promenade traffic on the paved boundary  850ms
+   ✓ 1889 Paris traffic > keeps closed street loops position-continuous through route wrap  539ms
+ ✓ tests/paris-assets.test.ts (4 tests) 2116ms
+   ✓ MCP-authored Paris exports > places north-bank walkers on exported paving and the new houses on dry land  771ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  911ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  429ms
+ ✓ tests/paris-facade-materials.test.ts (2 tests) 678ms
+   ✓ Paris embedded facade material > preserves every mapped source corner through spatial batching and disposes the texture once  541ms
+
+ Test Files  3 passed (3)
+      Tests  18 passed (18)
+   Start at  01:48:05
+   Duration  2.50s (transform 79ms, setup 35ms, collect 141ms, tests 4.26s, environment 0ms, prepare 85ms)
+

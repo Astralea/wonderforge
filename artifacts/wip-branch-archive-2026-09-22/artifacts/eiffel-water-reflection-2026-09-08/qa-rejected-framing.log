@@ -1,0 +1,2 @@
+{"name":"desktop","t":0.12,"variants":[{"filter":0,"trackedSamples":0,"meanTrackedLumaChange":null,"calls":18,"triangles":84},{"filter":1,"trackedSamples":0,"meanTrackedLumaChange":null,"calls":18,"triangles":84}],"errors":[],"waterCount":2}
+{"name":"desktop","t":0.5,"variants":[{"filter":0,"trackedSamples":0,"meanTrackedLumaChange":null,"calls":18,"triangles":84},{"filter":1,"trackedSamples":0,"meanTrackedLumaChange":null,"calls":18,"triangles":84}],"errors":[],"waterCount":2}

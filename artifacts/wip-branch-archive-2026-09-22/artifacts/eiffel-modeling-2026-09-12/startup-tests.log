@@ -1,0 +1,20 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-environment-startup.test.ts tests/eiffel-rebuilt-environment.test.ts tests/eiffel-world.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-environment-startup.test.ts (9 tests) 318ms
+ ✓ tests/eiffel-world.test.ts (7 tests) 61ms
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 14167ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  3646ms
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  3430ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  3431ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  3432ms
+
+ Test Files  3 passed (3)
+      Tests  26 passed (26)
+   Start at  15:38:14
+   Duration  14.57s (transform 265ms, setup 39ms, collect 490ms, tests 14.55s, environment 0ms, prepare 101ms)
+

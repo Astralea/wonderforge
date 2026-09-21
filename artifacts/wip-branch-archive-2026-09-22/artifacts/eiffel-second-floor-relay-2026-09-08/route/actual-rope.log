@@ -1,0 +1,32 @@
+{
+  "source": {
+    "path": "artifacts/eiffel-second-floor-relay-2026-09-08/model/second-floor-relay.glb",
+    "sha256": "1ee73a0c07d7d1eb6efb05c8e993cee5069a50afaa141baaf04372ba3a08be10",
+    "bytes": 1580948
+  },
+  "sampleCount": 73,
+  "ropeHits": [],
+  "cartContactCount": 8,
+  "cartMisses": [],
+  "shoeCount": 196,
+  "shoeDirectContacts": 152,
+  "shoeBoundaryCases": 44,
+  "maxBoundaryDistance": 1.950453309279822e-7,
+  "shoeMisses": [],
+  "bridgeRoute": [
+    {
+      "leg": "vertical",
+      "hits": []
+    },
+    {
+      "leg": "diagonal",
+      "hits": []
+    },
+    {
+      "leg": "lower",
+      "hits": [
+        "cart-bed002"
+      ]
+    }
+  ]
+}

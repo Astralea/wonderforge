@@ -1,0 +1,30 @@
+[
+  {
+    "device": "desktop",
+    "loaded": {
+      "text": "Blender 地面裝載模型已載入。",
+      "overflow": false,
+      "meshes": 27,
+      "programs": [
+        true,
+        true
+      ]
+    },
+    "orbitChangedPixels": 261818,
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "loaded": {
+      "text": "Blender 地面裝載模型已載入。",
+      "overflow": false,
+      "meshes": 27,
+      "programs": [
+        true,
+        true
+      ]
+    },
+    "orbitChangedPixels": 83101,
+    "errors": []
+  }
+]

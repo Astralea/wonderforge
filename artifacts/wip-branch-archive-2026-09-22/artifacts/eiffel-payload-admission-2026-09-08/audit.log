@@ -1,0 +1,51 @@
+{
+  "manifest": "public/models/eiffel-construction-kit/tower-kit.manifest.json",
+  "sha256": "0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c",
+  "envelope": [
+    0.58,
+    1.78,
+    0.58
+  ],
+  "envelopeMeaning": "Exterior of solid proxy, not usable packing space",
+  "productionAdmitted": false,
+  "cohorts": [
+    {
+      "minimumInstalledY": 0,
+      "total": 13046,
+      "axisAlignedEnvelopeFits": 1551,
+      "provenTooLongAtAnyRotation": 11071
+    },
+    {
+      "minimumInstalledY": 57.94,
+      "total": 6878,
+      "axisAlignedEnvelopeFits": 1271,
+      "provenTooLongAtAnyRotation": 5391
+    },
+    {
+      "minimumInstalledY": 116.14,
+      "total": 3859,
+      "axisAlignedEnvelopeFits": 1191,
+      "provenTooLongAtAnyRotation": 2628
+    },
+    {
+      "minimumInstalledY": 197,
+      "total": 2484,
+      "axisAlignedEnvelopeFits": 1151,
+      "provenTooLongAtAnyRotation": 1293
+    }
+  ],
+  "representatives": {
+    "shaft": "shaft-13-m005-c000",
+    "platform": "platform-3-0-00-m023-c000",
+    "lantern": "summit-access-stair-m000-c000",
+    "widestPanel": "summit-gallery-0-0-m006-c000"
+  },
+  "remainingGates": [
+    "real carrier and restraint",
+    "drive and braking",
+    "supported swept routes",
+    "equipment erection",
+    "unloading and onward delivery",
+    "actual final member installation"
+  ]
+}

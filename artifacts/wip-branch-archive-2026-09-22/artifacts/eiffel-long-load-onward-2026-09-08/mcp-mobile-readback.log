@@ -1,0 +1,28 @@
+[09/08/26 12:30:29] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 mobile retained sling", "file": "", "objects": 14}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "reloaded": [
+      {
+        "file": "eiffel-onward-mobile.blend",
+        "scene": "WonderForge \u2014 mobile onward hardware.001",
+        "objects": 261,
+        "roles": 85,
+        "triangles": 5696
+      },
+      {
+        "file": "eiffel-closed-sling-mobile.blend",
+        "scene": "WonderForge \u2014 mobile retained sling.001",
+        "objects": 14,
+        "roles": 14,
+        "triangles": 5456
+      }
+    ]
+  }
+}

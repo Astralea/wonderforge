@@ -1,0 +1,8 @@
+{"profile":"desktop","variant":"before","region":"fountain","ground":18432,"beds":0,"city":202324,"buffer":{"cssWidth":1440,"cssHeight":900,"bufferWidth":1440,"bufferHeight":900}}
+{"profile":"desktop","variant":"before","region":"small","ground":18432,"beds":0,"city":202324,"buffer":{"cssWidth":1440,"cssHeight":900,"bufferWidth":1440,"bufferHeight":900}}
+{"profile":"desktop","variant":"after","region":"fountain","ground":18608,"beds":288,"city":202312,"buffer":{"cssWidth":1440,"cssHeight":900,"bufferWidth":1440,"bufferHeight":900}}
+{"profile":"desktop","variant":"after","region":"small","ground":18608,"beds":288,"city":202312,"buffer":{"cssWidth":1440,"cssHeight":900,"bufferWidth":1440,"bufferHeight":900}}
+{"profile":"mobile","variant":"before","region":"fountain","ground":18432,"beds":0,"city":202324,"buffer":{"cssWidth":390,"cssHeight":844,"bufferWidth":526,"bufferHeight":1139}}
+{"profile":"mobile","variant":"before","region":"small","ground":18432,"beds":0,"city":202324,"buffer":{"cssWidth":390,"cssHeight":844,"bufferWidth":526,"bufferHeight":1139}}
+{"profile":"mobile","variant":"after","region":"fountain","ground":18608,"beds":288,"city":202312,"buffer":{"cssWidth":390,"cssHeight":844,"bufferWidth":526,"bufferHeight":1139}}
+{"profile":"mobile","variant":"after","region":"small","ground":18608,"beds":288,"city":202312,"buffer":{"cssWidth":390,"cssHeight":844,"bufferWidth":526,"bufferHeight":1139}}

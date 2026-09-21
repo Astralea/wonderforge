@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-world-cut-visibility.test.ts tests/eiffel-second-floor-relay-main.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-world-cut-visibility.test.ts (4 tests) 19ms
+ ✓ tests/eiffel-second-floor-relay-main.test.ts (7 tests) 111ms
+
+ Test Files  2 passed (2)
+      Tests  11 passed (11)
+   Start at  03:46:22
+   Duration  806ms (transform 499ms, setup 34ms, collect 1.09s, tests 130ms, environment 0ms, prepare 61ms)
+

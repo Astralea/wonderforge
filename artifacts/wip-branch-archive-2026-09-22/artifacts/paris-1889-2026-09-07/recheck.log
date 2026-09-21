@@ -1,0 +1,37 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-assets.test.ts (2 tests) 422ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  417ms
+ ❯ tests/eiffel-rebuilt-environment.test.ts (9 tests | 1 failed) 787ms
+   ✓ rebuilt Eiffel environment > keeps the full rotated Seine channel submerged and all four foundation pads level 1ms
+   ✓ rebuilt Eiffel environment > surrounds the orbit with courtyard blocks while keeping trees out of the Seine 28ms
+   ✓ rebuilt Eiffel environment > gives both street and side facade windows their authored world-space width 34ms
+   ✓ rebuilt Eiffel environment > centers distant bridges on the rotated Seine 7ms
+   × rebuilt Eiffel environment > keeps the rebuilt environment economical enough for the whole-scene budget 453ms
+     → expected 152 to be less than 70
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices 138ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone 124ms
+   ✓ rebuilt Eiffel environment > uses the real apparent solar radius rather than an oversized graphic disc 0ms
+   ✓ rebuilt Eiffel environment > keeps temperate blue above a restrained neutral river haze 0ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-rebuilt-environment.test.ts > rebuilt Eiffel environment > keeps the rebuilt environment economical enough for the whole-scene budget
+AssertionError: expected 152 to be less than 70
+ ❯ tests/eiffel-rebuilt-environment.test.ts:174:23
+    172|     // roads, courtyard blocks and traffic while keeping the environme…
+    173|     // the whole-frame 300k triangle and 150 call gates.
+    174|     expect(drawables).toBeLessThan(70);
+       |                       ^
+    175|     expect(triangles).toBeLessThan(190_000);
+    176|     environment.dispose();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 10 passed (11)
+   Start at  07:53:03
+   Duration  1.17s (transform 145ms, setup 0ms, collect 233ms, tests 1.21s, environment 0ms, prepare 133ms)
+

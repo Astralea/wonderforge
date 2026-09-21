@@ -1,0 +1,21 @@
+[09/08/26 01:22:24] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 supported face-package receiver", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-transfer-2026-09-08/blender/eiffel-face-receiver.blend", "objects": 10}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 receiving worker platform",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-installation-2026-09-08/blender/eiffel-face-worker-platform.blend",
+    "sourceOccupancySHA256": "a7fb0e48a99c530ee37a22eca51f6cbc632d7ba9d65d1e7f91070096f4155774",
+    "productionAdmitted": false,
+    "limits": [
+      "Timber bearing geometry study. Fixings, rated strength, worker access and erection are not reconstructed.",
+      "Hidden source prisms are retained for editing; exported joined mesh is the visible union."
+    ]
+  },
+  "stdout": "01:22:25 | INFO: Starting glTF 2.0 export\n01:22:25 | INFO: Extracting primitive: worker-knee-0\n01:22:25 | INFO: Primitives created: 1\n01:22:25 | INFO: Finished glTF 2.0 export in 0.019351959228515625 s\n\nInfo: Saved as \"eiffel-face-worker-platform.blend\"\n"
+}

@@ -1,0 +1,21 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-water-filter.test.ts (3 tests) 14ms
+ ✓ tests/eiffel-pool-terrain.test.ts (7 tests) 2239ms
+   ✓ Actual exposition basin ground and support > clips only the actual paving intersection and retains exterior source triangles  584ms
+   ✓ Actual exposition basin ground and support > keeps active traffic footprints outside the unchanged basin boundaries  690ms
+   ✓ Actual exposition basin ground and support > exports finite nondegenerate prepared terrain triangles with unit face-side normals  599ms
+ ✓ tests/paris-detail-filter.test.ts (5 tests) 2742ms
+   ✓ Actual exported Paris detail filtering > carries exact feature metadata through every spatial split without removing or moving source corners  1853ms
+   ✓ Actual exported Paris detail filtering > preserves integrated band area and continuously reduces contrast below a pixel  443ms
+ ✓ tests/paris-assets.test.ts (4 tests) 3804ms
+   ✓ MCP-authored Paris exports > places north-bank walkers on exported paving and the new houses on dry land  872ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  1997ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  930ms
+
+ Test Files  4 passed (4)
+      Tests  19 passed (19)
+   Start at  15:35:36
+   Duration  4.26s (transform 291ms, setup 72ms, collect 563ms, tests 8.80s, environment 0ms, prepare 213ms)
+

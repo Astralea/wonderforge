@@ -2,6 +2,12 @@ import { X } from 'lucide-react';
 import type { Wonder } from '../data/types';
 import { eraLabel, formatYear } from './format';
 
+/** Spec 05: the facts panel footer is the single place the repository is linked. */
+export const SOURCE_URL = 'https://github.com/Astralea/wonderforge';
+
+const creditLink =
+  'underline underline-offset-4 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold';
+
 export function FactsPanel({
   wonder,
   open,
@@ -48,17 +54,20 @@ export function FactsPanel({
           </li>
         ))}
       </ul>
-      {wonder.credits?.length ? (
-        <footer className="mt-8 border-t border-white/10 pt-4 text-xs leading-relaxed text-parchment/60">
-          {wonder.credits.map(credit => (
-            <p key={credit.url}>
-              <a href={credit.url} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold">
-                {credit.label}
-              </a>
-            </p>
-          ))}
-        </footer>
-      ) : null}
+      <footer className="mt-8 border-t border-white/10 pt-4 text-xs leading-relaxed text-parchment/60">
+        {wonder.credits?.map(credit => (
+          <p key={credit.url}>
+            <a href={credit.url} target="_blank" rel="noreferrer" className={creditLink}>
+              {credit.label}
+            </a>
+          </p>
+        ))}
+        <p className={wonder.credits?.length ? 'mt-2' : undefined}>
+          <a href={SOURCE_URL} target="_blank" rel="noreferrer" className={creditLink}>
+            Source on GitHub
+          </a>
+        </p>
+      </footer>
     </aside>
   );
 }

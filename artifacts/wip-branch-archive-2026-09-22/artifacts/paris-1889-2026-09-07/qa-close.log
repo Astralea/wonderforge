@@ -1,0 +1,237 @@
+{
+  "captures": [
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/desktop-city.png",
+      "kind": "city",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 77,
+        "triangles": 101473,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "cart-east-a",
+        "kind": "cart",
+        "position": [
+          394.04980196896054,
+          0.07428767969418126,
+          95.10052314680695
+        ],
+        "yaw": 0.8354866776461597,
+        "visibility": 1,
+        "distance": 63,
+        "wheelAngle": 100,
+        "gaitPhase": 1.256637061435903
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/desktop-street.png",
+      "kind": "street",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 48,
+        "triangles": 63172,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "cart-east-a",
+        "kind": "cart",
+        "position": [
+          394.04980196896054,
+          0.07428767969418126,
+          95.10052314680695
+        ],
+        "yaw": 0.8354866776461597,
+        "visibility": 1,
+        "distance": 63,
+        "wheelAngle": 100,
+        "gaitPhase": 1.256637061435903
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/desktop-pedestrian.png",
+      "kind": "pedestrian",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 46,
+        "triangles": 62352,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "pedestrian-east-1-1",
+        "kind": "pedestrian-man",
+        "position": [
+          248.20354056994861,
+          0.2925912883662601,
+          187.5
+        ],
+        "yaw": 1.5707963267948966,
+        "visibility": 1,
+        "distance": -36.9,
+        "wheelAngle": 0,
+        "gaitPhase": 4.188790204786386
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/desktop-river.png",
+      "kind": "river",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 40,
+        "triangles": 51738,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "steamer-east",
+        "kind": "steam-boat",
+        "position": [
+          -450,
+          0.2,
+          -118.85883176935664
+        ],
+        "yaw": 1.6507963267948966,
+        "visibility": 1,
+        "distance": 126,
+        "wheelAngle": 0,
+        "gaitPhase": 0
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/mobile-city.png",
+      "kind": "city",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 61,
+        "triangles": 82259,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "cart-east-a",
+        "kind": "cart",
+        "position": [
+          394.04980196896054,
+          0.07428767969418126,
+          95.10052314680695
+        ],
+        "yaw": 0.8354866776461597,
+        "visibility": 1,
+        "distance": 63,
+        "wheelAngle": 100,
+        "gaitPhase": 1.256637061435903
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/mobile-street.png",
+      "kind": "street",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 46,
+        "triangles": 60170,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "cart-east-a",
+        "kind": "cart",
+        "position": [
+          394.04980196896054,
+          0.07428767969418126,
+          95.10052314680695
+        ],
+        "yaw": 0.8354866776461597,
+        "visibility": 1,
+        "distance": 63,
+        "wheelAngle": 100,
+        "gaitPhase": 1.256637061435903
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/mobile-pedestrian.png",
+      "kind": "pedestrian",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 46,
+        "triangles": 62352,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "pedestrian-east-1-1",
+        "kind": "pedestrian-man",
+        "position": [
+          248.20354056994861,
+          0.2925912883662601,
+          187.5
+        ],
+        "yaw": 1.5707963267948966,
+        "visibility": 1,
+        "distance": -36.9,
+        "wheelAngle": 0,
+        "gaitPhase": 4.188790204786386
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-1889-2026-09-07/qa-close/mobile-river.png",
+      "kind": "river",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 40,
+        "triangles": 51738,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "steamer-east",
+        "kind": "steam-boat",
+        "position": [
+          -450,
+          0.2,
+          -118.85883176935664
+        ],
+        "yaw": 1.6507963267948966,
+        "visibility": 1,
+        "distance": 126,
+        "wheelAngle": 0,
+        "gaitPhase": 0
+      }
+    }
+  ],
+  "errors": []
+}

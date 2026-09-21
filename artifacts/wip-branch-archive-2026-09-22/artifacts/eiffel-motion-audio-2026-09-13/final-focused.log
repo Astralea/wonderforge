@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-world-payload-sampling.test.ts tests/eiffel-edition-audio-hook.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-edition-audio-hook.test.ts (12 tests) 26ms
+ ✓ tests/eiffel-world-payload-sampling.test.ts (2 tests) 117ms
+
+ Test Files  2 passed (2)
+      Tests  14 passed (14)
+   Start at  21:42:56
+   Duration  951ms (transform 692ms, setup 90ms, collect 1.10s, tests 143ms, environment 176ms, prepare 68ms)
+

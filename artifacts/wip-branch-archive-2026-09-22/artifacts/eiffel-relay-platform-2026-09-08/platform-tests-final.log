@@ -1,0 +1,14 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-relay-platform.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-relay-platform.test.ts (5 tests) 330ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  03:24:09
+   Duration  638ms (transform 64ms, setup 26ms, collect 115ms, tests 330ms, environment 0ms, prepare 48ms)
+

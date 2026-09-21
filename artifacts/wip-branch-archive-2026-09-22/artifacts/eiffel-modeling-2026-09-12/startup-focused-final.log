@@ -1,0 +1,14 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-environment-startup.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-environment-startup.test.ts (9 tests) 290ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  15:39:02
+   Duration  595ms (transform 128ms, setup 12ms, collect 173ms, tests 290ms, environment 0ms, prepare 27ms)
+

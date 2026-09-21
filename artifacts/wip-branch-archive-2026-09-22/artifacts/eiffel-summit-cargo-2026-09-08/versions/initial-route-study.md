@@ -1,0 +1,9 @@
+# Summit cargo route candidate
+
+The former centre-SLERP upending path was only an envelope test and is rejected. A passive sling cannot produce that rotation.
+
+The current candidate starts each exact-ID rigid assembly flat on a positively supported terrace cart at parent pose `[-6.4701368053,281.0400000036,0]`. A tail shoe pins local Z `-2.0333333333` at world `[-6.4701368053,281.0400000036,-2.0333333333]`; the tackle attaches to a real upper collar at local Z `+2.0333333333`. The parent rotates about world X to quaternion `[-sqrt(1/2),0,0,sqrt(1/2)]` while the tail stays fixed. The resulting upright parent pose is `[-6.4701368053,283.0733333369,-2.0333333333]`. The upper line then owns the load, the tail pin releases, and the upright assembly spins about its vertical axis to its final yaw before rising in the clear exterior lane.
+
+A 6 m luff jib on the same 6 m pole reaches the moving upper collar. Its maximum sampled horizontal reach is `5.9296602194 m`. With the jib heel/head at Y `307.05` and a hook/block point 0.35 m above the collar, the minimum geometric boom-tip height margin is `2.4827068857 m`. Both complete assemblies clear all seated manifest boxes at 301 samples per translation leg and 1.5-degree upending increments. The c002 final butt contact with c001 is accepted only at `0.000010173 m`, below the explicit 0.1 mm adjacent-mast contact limit.
+
+`terrace-support.json` records zero misses for 324 actual-GLB downward rays from the proposed cart wheel tracks on the Y `280.589995` terrace. The authored mechanism still needs a stationary 0.78 x 5.27 m cart/cradle, tail shoe and removable pin, two positive collars, 6 m luff jib and cargo tackle, and drive/reaction supports on seated m073 for c001 and seated m075 for c002. Sling paths, candidate-mesh collisions, capacities, and the earlier freight provenance remain outside this admission.

@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-gin-pole-climb-asset.test.ts (5 tests) 362ms
+ ✓ tests/eiffel-summit-gin-pole-climb.test.ts (7 tests) 713ms
+   ✓ Eiffel supported summit gin-pole climb candidate > keeps at least two installed and positively latched guides engaged during every lift  472ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  15:16:25
+   Duration  1.78s (transform 286ms, setup 19ms, collect 439ms, tests 1.08s, environment 0ms, prepare 56ms)
+

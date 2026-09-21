@@ -1,0 +1,410 @@
+
+> wonderforge@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-rebuild-camera.test.ts (10 tests) 215ms
+ ✓ tests/eiffel-site-layout.test.ts (2 tests) 288ms
+ ✓ tests/eiffel-kit-construction.test.ts (6 tests) 394ms
+ ✓ tests/eiffel-render-precision.test.ts (2 tests) 513ms
+   ✓ Eiffel render precision > keeps the entire new near-frustum outside transformed city and tower mesh bounds throughout desktop/mobile orbits  507ms
+ ✓ tests/eiffel-assembly.test.ts (5 tests) 612ms
+   ✓ Blender Eiffel assembly contract > round-trips real exported vertices into the manifest world bounds  405ms
+ ✓ tests/eiffel-guyenet.test.ts (8 tests) 814ms
+   ✓ documented Eiffel screw-climbing mechanism > keeps a bolted load path and safety-jack contact throughout the full stroke  373ms
+   ✓ documented Eiffel screw-climbing mechanism > keeps the full working jib envelope clear of head G, its shoes and screw I throughout a sampled full slew  359ms
+ ✓ tests/eiffel-rigid.test.ts (6 tests) 290ms
+ ✓ tests/eiffel-guyenet-asset.test.ts (5 tests) 943ms
+   ✓ actual Blender Guyenet export and web articulation > matches the manifest dimensions and keeps the component within a bounded triangle budget  618ms
+ ✓ tests/giza-field-birds.test.ts (7 tests) 651ms
+ ✓ tests/eiffel-construction.test.ts (8 tests) 421ms
+ ✓ tests/giza-campfires.test.ts (5 tests) 253ms
+ ✓ tests/giza-environment.test.ts (15 tests) 786ms
+ ✓ tests/paris-moorings.test.ts (1 test) 729ms
+   ✓ attaches barge moorings to gunwales and bollards supported by the actual quay solids  728ms
+ ✓ tests/eiffel-world.test.ts (7 tests) 133ms
+ ✓ tests/eiffel-ground-lift-pilot.test.ts (6 tests) 214ms
+ ✓ tests/stonehenge-construction.test.ts (12 tests) 159ms
+ ✓ tests/giza-foreground.test.ts (5 tests) 249ms
+ ✓ tests/giza-world.test.ts (11 tests) 132ms
+ ✓ tests/giza-camera.test.ts (12 tests) 87ms
+ ✓ tests/eiffel-crane.test.ts (5 tests) 80ms
+ ✓ tests/giza-river.test.ts (24 tests) 164ms
+ ✓ tests/eiffel-crane-rig.test.ts (2 tests) 83ms
+ ✓ tests/colosseum-world.test.ts (7 tests) 46ms
+ ✓ tests/paris-assets.test.ts (3 tests) 1975ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  1495ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  474ms
+ ✓ tests/wonders.test.ts (9 tests) 12ms
+ ✓ tests/colosseum-construction.test.ts (11 tests) 135ms
+ ✓ tests/sydney-construction.test.ts (12 tests) 44ms
+ ✓ tests/geometry.test.ts (5 tests) 174ms
+ ✓ tests/petra-construction.test.ts (7 tests) 33ms
+ ✓ tests/eiffel-kit-renderer.test.ts (2 tests) 1888ms
+   ✓ rigid Eiffel kit renderer > compacts only fully seated source members and reproduces rigid reverse seeks  1060ms
+   ✓ rigid Eiffel kit renderer > does not attach a late asset completion after disposal  828ms
+ ✓ tests/render.test.ts (19 tests) 24ms
+ ✓ tests/giza-sky.test.ts (17 tests) 33ms
+ ✓ tests/eiffel-film.test.ts (8 tests) 57ms
+ ✓ tests/material-detail.test.ts (19 tests) 18ms
+ ✓ tests/eiffel-campaign-coverage.test.ts (4 tests) 21ms
+ ✓ tests/camera.test.ts (10 tests) 11ms
+ ✓ tests/construction.test.ts (16 tests) 2508ms
+   ✓ Giza physical masonry plan > uses human-scale, full-size blocks with unique seats  474ms
+   ✓ Giza physical masonry plan > builds a deterministic human-scale interior core instead of a floating lid  1231ms
+   ✓ Giza physical masonry plan > supports every elevated core cell from an earlier-settled cell below  508ms
+ ✓ tests/sydney-world.test.ts (8 tests) 65ms
+ ✓ tests/narration.test.ts (8 tests) 10ms
+ ✓ tests/daynight.test.ts (9 tests) 6ms
+ ✓ tests/roadwork.test.ts (12 tests) 10ms
+ ✓ tests/scenes.test.ts (12 tests) 21ms
+ ✓ tests/eiffel-traffic.test.ts (12 tests) 2755ms
+   ✓ 1889 Paris traffic > keeps road traffic outside the site and promenade traffic on the paved boundary  1477ms
+   ✓ 1889 Paris traffic > keeps closed street loops position-continuous through route wrap  996ms
+ ✓ tests/timeline.test.ts (26 tests) 23ms
+ ✓ tests/eiffel-timing.test.ts (2 tests) 4ms
+ ✓ tests/easing.test.ts (10 tests) 3ms
+ ✓ tests/captions.test.ts (7 tests) 11ms
+ ✓ tests/petra-world.test.ts (6 tests) 9ms
+ ✓ tests/stonehenge-world.test.ts (7 tests) 14ms
+ ✓ tests/format.test.ts (5 tests) 4ms
+ ✓ tests/soundtrack-clock.test.ts (3 tests) 3ms
+ ✓ tests/site-clearance.test.ts (6 tests) 9ms
+ ✓ tests/soundtrack.test.ts (6 tests) 6ms
+ ✓ tests/render-pipeline.test.ts (5 tests) 2ms
+ ✓ tests/playback.test.ts (10 tests) 6ms
+ ✓ tests/three-canvas-readiness.test.tsx (3 tests) 76ms
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 4113ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  2768ms
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  377ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  405ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  413ms
+ ✓ tests/eiffel-foundation-crew.test.ts (2 tests) 4804ms
+   ✓ foundation crew steering and gait > grounds stance feet and steers the whole team around every bearing  4796ms
+ ✓ tests/eiffel-kit.test.ts (3 tests) 5247ms
+   ✓ bounded Blender Eiffel construction kit > maps every real exported vertex to its canonical rigid cargo frame  4849ms
+ ❯ tests/ui.test.tsx (25 tests | 1 failed) 1148ms
+   ✓ home > renders the brand, then the catalog after Enter — without leaving the page 168ms
+   ✓ home > catalog wordmark returns to the title plate 65ms
+   ✓ home > Escape on the catalog returns to the title plate 21ms
+   ✓ home > clicking a gallery row opens the cinematic and starts playing 50ms
+   ✓ cinematic view > shows the title card first, then the quote once construction begins 50ms
+   ✓ cinematic view > transport: play/pause toggles, scrubber seeks 58ms
+   ✓ cinematic view > keeps every global cinematic control together in the bottom control rail 53ms
+   ✓ cinematic view > replay appears when the movie completes and restarts it 48ms
+   ✓ cinematic view > speed toggle multiplies wall-clock advance (Spec 02) 53ms
+   ✓ cinematic view > caption layer: beats appear at 1× during play, never in gaps, at speed, or at the reveal 68ms
+   ✓ cinematic view > parks the wordmark in the top letterbox slot and keeps the beat index below it 40ms
+   ✓ cinematic view > a touch press wakes hidden movie controls without requiring a mouse move 41ms
+   ✓ cinematic view > caption beat index: titles stay listed and a click seeks to that face 45ms
+   ✓ cinematic view > caption voice: Giza uses bundled George clips and stops them when turned off 45ms
+   ✓ cinematic view > caption voice: Stonehenge uses bundled Daniel clips, not browser speech 39ms
+   ✓ cinematic view > caption voice still plays when the browser rejects an early seek 46ms
+   ✓ cinematic view > caption voice stays silent if a bundled clip is rejected 38ms
+   ✓ cinematic view > caption voice stays silent for a wonder without ElevenLabs clips 38ms
+   ✓ cinematic view > caption voice: Sydney uses bundled Alice clips, not browser speech 31ms
+   × cinematic view > caption voice: Eiffel uses bundled Adam clips, not browser speech 32ms
+     → Unable to find an element by: [data-testid="live-caption"]
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33mclass[39m=[32m"fixed inset-0 overflow-hidden bg-umber-950"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"absolute inset-0"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mdata-testid[39m=[32m"wonder-canvas"[39m
+        [36m/>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"pointer-events-none absolute inset-0 [background:radial-gradient(120%_90%_at_50%_40%,transparent_55%,rgba(0,0,0,0.45)_100%)]"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"pointer-events-none absolute inset-x-0 top-0 z-[5] h-[6vh] bg-black"[39m
+        [33mdata-testid[39m=[32m"cinematic-letterbox-top"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[6vh] bg-black"[39m
+        [33mdata-testid[39m=[32m"cinematic-letterbox-bottom"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"absolute top-0 left-0 z-[15] flex h-[6vh] items-center px-5"[39m
+        [33mdata-testid[39m=[32m"cinematic-wordmark"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flex min-h-11 items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"[39m
+        [36m>[39m
+          [0mWonderForge[0m
+        [36m</button>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"absolute inset-0 z-10 transition-opacity duration-500 pointer-events-none opacity-0"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"absolute left-0 top-[calc(6vh+1rem)] flex flex-col items-start px-5"[39m
+          [33mdata-testid[39m=[32m"cinematic-top-chrome"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"absolute inset-x-0 bottom-[calc(6vh+0.5rem)] bg-gradient-to-t from-black/80 via-black/35 to-transparent pt-16 pb-3"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33maria-label[39m=[32m"Cinematic controls"[39m
+            [33mclass[39m=[32m"mx-auto w-full max-w-4xl px-4 md:px-6"[39m
+            [33mrole[39m=[32m"group"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"mb-2 w-full"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"mb-1 flex items-center justify-between text-[10px] tracking-[0.16em] text-parchment/60 uppercase md:text-xs"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"truncate"[39m
+                [36m>[39m
+                  [0mConstruction[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                [36m>[39m
+                  [0m20[0m
+                  [0m%[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"relative flex h-12 items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"pointer-events-none absolute inset-x-0 h-2 rounded-full bg-parchment/25"[39m
+                [36m/>[39m
+                [36m<div[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"pointer-events-none absolute left-0 h-2 rounded-full bg-gold shadow-[0_0_12px_rgba(212,162,78,0.38)]"[39m
+                  [33mstyle[39m=[32m"width: 20%;"[39m
+                [36m/>[39m
+                [36m<input[39m
+                  [33maria-label[39m=[32m"Seek"[39m
+                  [33mclass[39m=[32m"relative z-10 h-12 w-full cursor-pointer appearance-none bg-transparent focus-visible:outline-2 focus-visible:outline-gold [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-umber-950 [&::-moz-range-thumb]:bg-gold [&::-moz-range-track]:h-2 [&::-moz-range-track]:rounded-full [&::-moz-range-track]:bg-transparent [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-transparent [&::-webkit-slider-thumb]:-mt-1.5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-umber-950 [&::-webkit-slider-thumb]:bg-gold"[39m
+                  [33mmax[39m=[32m"1"[39m
+                  [33mmin[39m=[32m"0"[39m
+                  [33mstep[39m=[32m"0.001"[39m
+                  [33mtype[39m=[32m"range"[39m
+                  [33mvalue[39m=[32m"0.2"[39m
+                [36m/>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex flex-wrap items-center justify-center gap-1 border-t border-parchment/10 pt-2 md:gap-2"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Previous wonder"[39m
+                [33mclass[39m=[32m"grid min-h-11 min-w-11 place-items-center rounded-full text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"lucide lucide-skip-back"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"18"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"18"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<polygon[39m
+                    [33mpoints[39m=[32m"19 20 9 12 19 4 19 20"[39m
+                  [36m/>[39m
+                  [36m<line[39m
+                    [33mx1[39m=[32m"5"[39m
+                    [33mx2[39m=[32m"5"[39m
+                    [33my1[39m=[32m"19"[39m
+                    [33my2[39m=[32m"5"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Pause"[39m
+              ...
+   ✓ cinematic view > next/previous navigate the catalog in order 55ms
+   ✓ cinematic view > Escape closes back to the gallery 30ms
+   ✓ cinematic view > space toggles playback 25ms
+   ✓ deep links > #/wonder/:id opens straight into the cinematic 5ms
+   ✓ deep links > unknown wonder ids fall back to home 2ms
+ ✓ tests/eiffel-ground-lift-rig-clearance.test.ts (2 tests) 11795ms
+ ✓ tests/eiffel-station-map.test.ts (3 tests) 1602ms
+   ✓ Eiffel full-manifest station map audit > maps real prior or lower same-stage support envelopes and exposes every gap  1598ms
+ ✓ tests/eiffel-production-works.test.ts (1 test) 6ms
+ ✓ tests/eiffel-guyenet-station.test.ts (3 tests) 12777ms
+   ✓ bounded supported Guyenet NE pilot contract > keeps the rigid payload, working jib and pivot clear along the complete pilot route  991ms
+ ✓ tests/eiffel-production-construction.test.ts (6 tests) 2574ms
+   ✓ Eiffel bounded full production schedule > gives every upper pickup a visible receiver tied to two real-face saddles  1558ms
+   ✓ Eiffel bounded full production schedule > keeps every moving cargo envelope clear of its fixed mast  486ms
+ ✓ tests/eiffel-foundation-route.test.ts (3 tests) 207ms
+ ✓ tests/eiffel-upper-clearance.test.ts (4 tests) 1718ms
+   ✓ first-floor completed-solid clearance > validates each accepted first-floor route at independent phase samples  1715ms
+ ✓ tests/eiffel-signature-timing.test.ts (4 tests) 804ms
+   ✓ camera-aware Eiffel signature proposal, isolated from current timing > selects four near-facing, bounded payloads with measured route projections  441ms
+   ✓ camera-aware Eiffel signature proposal, isolated from current timing > allocates four independent2.4s windows without overlaps, dependency violations or changed height milestones  358ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ui.test.tsx > cinematic view > caption voice: Eiffel uses bundled Adam clips, not browser speech
+TestingLibraryElementError: Unable to find an element by: [data-testid="live-caption"]
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33mclass[39m=[32m"fixed inset-0 overflow-hidden bg-umber-950"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"absolute inset-0"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mdata-testid[39m=[32m"wonder-canvas"[39m
+        [36m/>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"pointer-events-none absolute inset-0 [background:radial-gradient(120%_90%_at_50%_40%,transparent_55%,rgba(0,0,0,0.45)_100%)]"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"pointer-events-none absolute inset-x-0 top-0 z-[5] h-[6vh] bg-black"[39m
+        [33mdata-testid[39m=[32m"cinematic-letterbox-top"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[6vh] bg-black"[39m
+        [33mdata-testid[39m=[32m"cinematic-letterbox-bottom"[39m
+      [36m/>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"absolute top-0 left-0 z-[15] flex h-[6vh] items-center px-5"[39m
+        [33mdata-testid[39m=[32m"cinematic-wordmark"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flex min-h-11 items-center px-1 font-display text-sm tracking-[0.24em] text-parchment/80 uppercase transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"[39m
+        [36m>[39m
+          [0mWonderForge[0m
+        [36m</button>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"absolute inset-0 z-10 transition-opacity duration-500 pointer-events-none opacity-0"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"absolute left-0 top-[calc(6vh+1rem)] flex flex-col items-start px-5"[39m
+          [33mdata-testid[39m=[32m"cinematic-top-chrome"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"absolute inset-x-0 bottom-[calc(6vh+0.5rem)] bg-gradient-to-t from-black/80 via-black/35 to-transparent pt-16 pb-3"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33maria-label[39m=[32m"Cinematic controls"[39m
+            [33mclass[39m=[32m"mx-auto w-full max-w-4xl px-4 md:px-6"[39m
+            [33mrole[39m=[32m"group"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"mb-2 w-full"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"mb-1 flex items-center justify-between text-[10px] tracking-[0.16em] text-parchment/60 uppercase md:text-xs"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"truncate"[39m
+                [36m>[39m
+                  [0mConstruction[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                [36m>[39m
+                  [0m20[0m
+                  [0m%[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"relative flex h-12 items-center"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"pointer-events-none absolute inset-x-0 h-2 rounded-full bg-parchment/25"[39m
+                [36m/>[39m
+                [36m<div[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"pointer-events-none absolute left-0 h-2 rounded-full bg-gold shadow-[0_0_12px_rgba(212,162,78,0.38)]"[39m
+                  [33mstyle[39m=[32m"width: 20%;"[39m
+                [36m/>[39m
+                [36m<input[39m
+                  [33maria-label[39m=[32m"Seek"[39m
+                  [33mclass[39m=[32m"relative z-10 h-12 w-full cursor-pointer appearance-none bg-transparent focus-visible:outline-2 focus-visible:outline-gold [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-umber-950 [&::-moz-range-thumb]:bg-gold [&::-moz-range-track]:h-2 [&::-moz-range-track]:rounded-full [&::-moz-range-track]:bg-transparent [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-transparent [&::-webkit-slider-thumb]:-mt-1.5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-umber-950 [&::-webkit-slider-thumb]:bg-gold"[39m
+                  [33mmax[39m=[32m"1"[39m
+                  [33mmin[39m=[32m"0"[39m
+                  [33mstep[39m=[32m"0.001"[39m
+                  [33mtype[39m=[32m"range"[39m
+                  [33mvalue[39m=[32m"0.2"[39m
+                [36m/>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"flex flex-wrap items-center justify-center gap-1 border-t border-parchment/10 pt-2 md:gap-2"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Previous wonder"[39m
+                [33mclass[39m=[32m"grid min-h-11 min-w-11 place-items-center rounded-full text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"lucide lucide-skip-back"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"18"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"18"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<polygon[39m
+                    [33mpoints[39m=[32m"19 20 9 12 19 4 19 20"[39m
+                  [36m/>[39m
+                  [36m<line[39m
+                    [33mx1[39m=[32m"5"[39m
+                    [33mx2[39m=[32m"5"[39m
+                    [33my1[39m=[32m"19"[39m
+                    [33my2[39m=[32m"5"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Pause"[39m
+              ...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ tests/ui.test.tsx:490:28
+    488|         vi.advanceTimersByTime(2600);
+    489|       });
+    490|       expect(within(screen.getByTestId('live-caption')).getByText('The…
+       |                            ^
+    491|       expect(speak).not.toHaveBeenCalled();
+    492| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 67 passed (68)
+      Tests  1 failed | 535 passed (536)
+   Start at  20:06:35
+   Duration  30.76s (transform 4.84s, setup 0ms, collect 106.78s, tests 65.02s, environment 887ms, prepare 3.98s)
+

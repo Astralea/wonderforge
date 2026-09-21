@@ -1,0 +1,35 @@
+[09/07/26 23:18:30] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 face joint geometry review", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-joint-2026-09-07/blender/eiffel-face-joint.blend", "objects": 16}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 face joint geometry review.001",
+    "productionAdmitted": false,
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-joint-2026-09-07/blender/eiffel-face-joint.blend",
+    "sourceManifestSHA256": "0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c",
+    "candidateSHA256": "292cea3c72451782f7da641d5f970c4d4f192835f2c31b16a84272a5bd2aa5cb",
+    "pieces": 5,
+    "triangles": 60,
+    "massKg": 69.25996036537771,
+    "contextIds": [
+      "lower-ne-02-m010-c001",
+      "lower-ne-02-m010-c002",
+      "lower-ne-02-m011-c001",
+      "lower-ne-02-m012-c001",
+      "lower-ne-02-m012-c000",
+      "lower-ne-02-m012-c002"
+    ],
+    "limits": [
+      "Geometry only. No ground-delivery or fastening admission.",
+      "Other original tower joint contacts remain unresolved.",
+      "Incoming beam clearance is sampled; it is sufficient to reject an observed intersecting order, not to prove all motion clear."
+    ],
+    "geometryAsset": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-joint-2026-09-07/model/face-joint.glb"
+  },
+  "stdout": "23:18:31 | INFO: Starting glTF 2.0 export\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m015-c000.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m015-c001.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m015-c002.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m015-c003.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m015-c004.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Finished glTF 2.0 export in 0.052994728088378906 s\n\n23:18:31 | INFO: Starting glTF 2.0 export\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m010-c001-context.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m010-c002-context.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m011-c001-context.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m012-c000-context.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m012-c001-context.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m012-c002-context.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Extracting primitive: lower-ne-02-m015-c000-original.001\n23:18:31 | INFO: Primitives created: 1\n23:18:31 | INFO: Finished glTF 2.0 export in 0.02296137809753418 s\n\nInfo: Saved as \"eiffel-face-joint.blend\"\n"
+}

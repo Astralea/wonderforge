@@ -1,0 +1,496 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Pause', exact: true })[22m
+[2m    - locator resolved to <button aria-label="Pause" class="grid min-h-11 min-w-11 place-items-center rounded-full text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold">…</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83683,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83729,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 100ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83705,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 100ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83721,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  2 × retrying click action[22m
+[2m      - waiting 500ms[22m
+[2m      - waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83697,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83524,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83578,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":90146,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":92306,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":94714,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":92622,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":89667,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":58,"triangles":86243,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":100,"triangles":92355,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":100,"triangles":93887,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":100,"triangles":93691,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113679,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113485,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  2 × retrying click action[22m
+[2m      - waiting 500ms[22m
+[2m      - waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113501,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  2 × retrying click action[22m
+[2m      - waiting 500ms[22m
+[2m      - waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113525,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113014,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113186,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":113033,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":112744,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":112462,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":112279,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":112172,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":112228,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":111862,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":111557,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":111313,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":111257,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":110707,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":110079,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":106437,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":103237,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":88440,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":141,"triangles":88985,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":79410,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":138,"triangles":74677,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74889,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74942,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74613,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74769,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74689,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74743,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74612,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74604,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74746,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74596,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74600,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74661,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74697,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+[2m    - element is visible, enabled and stable[22m
+[2m    - scrolling into view if needed[22m
+[2m    - done scrolling[22m
+[2m    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":140,"triangles":74837,"points":0,"lines":0,"geometries":127,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events[22m
+[2m  - retrying click action[22m
+[2m    - waiting 500ms[22m
+
+    at /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-upper-material-chain-2026-09-08/holistic-qa/root-draw-profile.mjs:42:101 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'Pause', exact: true })",
+    '    - locator resolved to <button aria-label="Pause" class="grid min-h-11 min-w-11 place-items-center rounded-full text-parchment/80 transition-colors hover:bg-white/10 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold">…</button>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83683,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83729,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 100ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83705,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 100ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83721,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  2 × retrying click action',
+    '      - waiting 500ms',
+    '      - waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83697,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83524,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":49,"triangles":83578,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":90146,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":92306,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":94714,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":92622,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":94,"triangles":89667,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":58,"triangles":86243,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    '    - waiting 500ms',
+    '    - waiting for element to be visible, enabled and stable',
+    '    - element is visible, enabled and stable',
+    '    - scrolling into view if needed',
+    '    - done scrolling',
+    '    - <canvas role="img" width="526" height="1139" data-assets="ready" class="block h-full w-full" data-engine="three.js r185" aria-label="Eiffel Tower physical construction diorama" data-renderer-diagnostics="{"calls":100,"triangles":92355,"points":0,"lines":0,"geometries":86,"textures":109}"></canvas> from <div aria-hidden="true" class="absolute inset-0">…</div> subtree intercepts pointer events',
+    '  - retrying click action',
+    ... 281 more items
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.4.0

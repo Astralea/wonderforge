@@ -1,0 +1,191 @@
+0 0.02822973356819377 fork-diagonal008 / pole-foot-band-return003 [
+  [
+    0.02822973356819377,
+    'fork-diagonal008',
+    'pole-foot-band-return003'
+  ],
+  [
+    0.028229733568193763,
+    'fork-diagonal009',
+    'pole-foot-band-return002'
+  ],
+  [ 0.014881510307290235, 'fork-side008', 'timber-six-metre-pole001' ],
+  [ 0.014881510307290235, 'fork-side009', 'timber-six-metre-pole001' ],
+  [
+    0.011874609243506314,
+    'fork-diagonal008',
+    'timber-six-metre-pole001'
+  ],
+  [
+    0.011874609243506307,
+    'fork-diagonal009',
+    'timber-six-metre-pole001'
+  ],
+  [ 0.01174565490578136, 'fork-diagonal008', 'moving-lug-web001' ],
+  [ 0.006197469220142374, 'fork-diagonal008', 'foot-cap-tie001' ],
+  [
+    0.006197469220142374,
+    'fork-diagonal008',
+    'pole-foot-band-cheek003'
+  ],
+  [ 0.006197469220142374, 'fork-diagonal009', 'foot-cap-tie001' ],
+  [
+    0.006197469220142374,
+    'fork-diagonal009',
+    'pole-foot-band-cheek003'
+  ]
+]
+0.25 0.031144552823475377 fork-diagonal009 / pole-foot-band-return002 [
+  [
+    0.031144552823475377,
+    'fork-diagonal009',
+    'pole-foot-band-return002'
+  ],
+  [
+    0.03114455282347537,
+    'fork-diagonal008',
+    'pole-foot-band-return003'
+  ],
+  [ 0.015016033926884033, 'fork-diagonal008', 'moving-lug-web001' ],
+  [ 0.011527528268999276, 'fork-side009', 'timber-six-metre-pole001' ],
+  [ 0.01152752826899927, 'fork-side008', 'timber-six-metre-pole001' ],
+  [
+    0.008521035716672287,
+    'fork-diagonal009',
+    'timber-six-metre-pole001'
+  ],
+  [
+    0.00852103571667228,
+    'fork-diagonal008',
+    'timber-six-metre-pole001'
+  ],
+  [ 0.003143436053013565, 'fork-diagonal008', 'foot-cap-tie001' ],
+  [
+    0.003143436053013565,
+    'fork-diagonal008',
+    'pole-foot-band-cheek003'
+  ],
+  [ 0.003143436053013565, 'fork-diagonal009', 'foot-cap-tie001' ],
+  [
+    0.003143436053013565,
+    'fork-diagonal009',
+    'pole-foot-band-cheek003'
+  ]
+]
+0.5 0.03405908279679786 fork-diagonal009 / pole-foot-band-return002 [
+  [
+    0.03405908279679786,
+    'fork-diagonal009',
+    'pole-foot-band-return002'
+  ],
+  [
+    0.03405908279679785,
+    'fork-diagonal008',
+    'pole-foot-band-return003'
+  ],
+  [ 0.018286430729778626, 'fork-diagonal008', 'moving-lug-web001' ],
+  [ 0.0081720892569275, 'fork-side008', 'timber-six-metre-pole001' ],
+  [ 0.0081720892569275, 'fork-side009', 'timber-six-metre-pole001' ],
+  [
+    0.005166062455341874,
+    'fork-diagonal008',
+    'timber-six-metre-pole001'
+  ],
+  [
+    0.005166062455341874,
+    'fork-diagonal009',
+    'timber-six-metre-pole001'
+  ],
+  [ 0.00008964670505957201, 'fork-diagonal008', 'foot-cap-tie001' ],
+  [
+    0.00008964670505957201,
+    'fork-diagonal008',
+    'pole-foot-band-cheek003'
+  ],
+  [ 0.00008964670505957201, 'fork-diagonal009', 'foot-cap-tie001' ],
+  [
+    0.00008964670505957201,
+    'fork-diagonal009',
+    'pole-foot-band-cheek003'
+  ]
+]
+1 0.030452175632607673 fork-diagonal008 / pole-foot-band-return003 [
+  [
+    0.030452175632607673,
+    'fork-diagonal008',
+    'pole-foot-band-return003'
+  ],
+  [
+    0.030452175632607673,
+    'fork-diagonal009',
+    'pole-foot-band-return002'
+  ],
+  [ 0.019264981274762834, 'fork-diagonal008', 'moving-lug-web001' ],
+  [ 0.0014570958688521624, 'fork-side008', 'timber-six-metre-pole001' ],
+  [ 0.0014570958688521624, 'fork-side009', 'timber-six-metre-pole001' ]
+]
+2 0.019426793221694265 fork-diagonal008 / moving-lug-web001 [
+  [ 0.019426793221694265, 'fork-diagonal008', 'moving-lug-web001' ],
+  [
+    0.017010410493529332,
+    'fork-diagonal008',
+    'pole-foot-band-return003'
+  ],
+  [
+    0.017010410493529332,
+    'fork-diagonal009',
+    'pole-foot-band-return002'
+  ],
+  [
+    0.0001099241068385215,
+    'pole-guide-half-side017',
+    'timber-six-metre-pole001'
+  ],
+  [
+    0.0001099241068385215,
+    'pole-guide-half-side019',
+    'timber-six-metre-pole001'
+  ]
+]
+3 0.019529553207541777 fork-diagonal008 / moving-lug-web001 [
+  [ 0.019529553207541777, 'fork-diagonal008', 'moving-lug-web001' ],
+  [
+    0.0035534117007095384,
+    'fork-diagonal008',
+    'pole-foot-band-return003'
+  ],
+  [
+    0.0035534117007095384,
+    'fork-diagonal009',
+    'pole-foot-band-return002'
+  ],
+  [
+    0.0018429979490850457,
+    'pole-guide-half-side017',
+    'timber-six-metre-pole001'
+  ],
+  [
+    0.0018429979490850457,
+    'pole-guide-half-side019',
+    'timber-six-metre-pole001'
+  ]
+]
+5 0.01955847148325507 fork-diagonal008 / moving-lug-web001 [
+  [ 0.01955847148325507, 'fork-diagonal008', 'moving-lug-web001' ],
+  [
+    0.0038025487735378802,
+    'pole-guide-half-side019',
+    'timber-six-metre-pole001'
+  ],
+  [
+    0.0038025487735378755,
+    'pole-guide-half-side017',
+    'timber-six-metre-pole001'
+  ]
+]
+10 0.018598334769591884 fork-diagonal008 / moving-lug-web001 [ [ 0.018598334769591884, 'fork-diagonal008', 'moving-lug-web001' ] ]
+15 0.01913874854752623 fork-diagonal008 / moving-lug-eye001 [
+  [ 0.01913874854752623, 'fork-diagonal008', 'moving-lug-eye001' ],
+  [ 0.01613108431016491, 'fork-diagonal008', 'moving-lug-web001' ]
+]
+20 0  []

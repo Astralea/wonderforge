@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-sunrise-rendering.test.ts tests/eiffel-cinematic-atmosphere.test.ts tests/eiffel-street-lights.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-cinematic-atmosphere.test.ts (4 tests) 111ms
+ ✓ tests/eiffel-sunrise-rendering.test.ts (2 tests) 5ms
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  00:12:37
+   Duration  986ms (transform 613ms, setup 30ms, collect 1.03s, tests 116ms, environment 0ms, prepare 60ms)
+

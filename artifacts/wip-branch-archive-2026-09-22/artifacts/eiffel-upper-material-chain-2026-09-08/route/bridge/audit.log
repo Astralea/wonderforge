@@ -1,0 +1,419 @@
+{
+  "identities": {
+    "public/models/eiffel-construction-kit/tower-kit.glb": "8c597d707ba70a38870075c5ebc22ca0092fcaeb253ce43ea030e3d57a9908f1",
+    "public/models/eiffel-second-floor-relay/relay.glb": "e5e4998d8b35310dff7e6a39f356bd9a309653917fd9dc9ec0a76b94779a5da8",
+    "artifacts/eiffel-relay-platform-2026-09-08/model/platform.glb": "558f8b9c3313e0bf5b76f12e74c66b135edc73207c36ae831d20094e8eff3ac7"
+  },
+  "filter": {
+    "maxStage": 59.55,
+    "excludedPartId": "summit-access-stair-m000-c000",
+    "scope": "Conservative stage envelope, includes same-stage future members; actual GLB surface triangles"
+  },
+  "obstacleMeshes": 13760,
+  "segments": [
+    {
+      "id": "second-floor-inward",
+      "a": [
+        -15,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -2,
+        116.47999939,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-second-floor-relay/relay.glb:side-brace-negative002"
+      ]
+    },
+    {
+      "id": "central-rise",
+      "a": [
+        -2,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -1.8
+      ],
+      "hits": []
+    },
+    {
+      "id": "platform-land-cross",
+      "a": [
+        -2,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "id": "platform-land-down",
+      "a": [
+        -2,
+        198,
+        -3.6
+      ],
+      "b": [
+        -2,
+        197,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "id": "outer-rise",
+      "a": [
+        -15,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -15,
+        198,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m026-c003",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m027-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m028-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m029-c003",
+        "eiffel-second-floor-relay/relay.glb:girder-1002",
+        "eiffel-second-floor-relay/relay.glb:girder--1002"
+      ]
+    },
+    {
+      "id": "outer-enter",
+      "a": [
+        -15,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m025-c001",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m026-c001",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m026-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m030-c001",
+        "model/platform.glb:relay-structure"
+      ]
+    }
+  ]
+}
+{
+  "sha": "21adee7be5ef20d0392b699269ff2cca45b9d00c700ddb2c1c19f6716234df1e",
+  "meshes": 188,
+  "clashes": [
+    {
+      "new": "bridge_deck_plank031",
+      "old": "shaft-00-m032-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        -1.1142857372760773,
+        116.19999999925494,
+        -1.600000023841858
+      ],
+      "max": [
+        -0.8357143104076385,
+        116.30000000074506,
+        0.3999999761581421
+      ]
+    },
+    {
+      "new": "bridge_deck_plank031",
+      "old": "shaft-00-m034-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        -1.1142857372760773,
+        116.19999999925494,
+        -1.600000023841858
+      ],
+      "max": [
+        -0.8357143104076385,
+        116.30000000074506,
+        0.3999999761581421
+      ]
+    },
+    {
+      "new": "bridge_deck_plank032",
+      "old": "shaft-00-m032-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        -0.8357143104076385,
+        116.19999999925494,
+        -1.600000023841858
+      ],
+      "max": [
+        -0.5571428835391998,
+        116.30000000074506,
+        0.3999999761581421
+      ]
+    },
+    {
+      "new": "bridge_deck_plank032",
+      "old": "shaft-00-m034-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        -0.8357143104076385,
+        116.19999999925494,
+        -1.600000023841858
+      ],
+      "max": [
+        -0.5571428835391998,
+        116.30000000074506,
+        0.3999999761581421
+      ]
+    },
+    {
+      "new": "bridge_counter_diagonal011",
+      "old": "shaft-00-m034-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        -0.026641414380822015,
+        116.26753781591559,
+        0.39799999818205833
+      ],
+      "max": [
+        1.9766414620645378,
+        117.93247439111566,
+        0.4819999970495701
+      ]
+    },
+    {
+      "new": "bridge_deck_plank037",
+      "old": "shaft-00-m033-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        0.5571428835391998,
+        116.19999999925494,
+        -1.600000023841858
+      ],
+      "max": [
+        0.8357143104076385,
+        116.30000000074506,
+        0.3999999761581421
+      ]
+    },
+    {
+      "new": "bridge_deck_plank038",
+      "old": "shaft-00-m033-c000",
+      "source": "public/models/eiffel-construction-kit/tower-kit.glb",
+      "min": [
+        0.8357143104076385,
+        116.19999999925494,
+        -1.600000023841858
+      ],
+      "max": [
+        1.1142857372760773,
+        116.30000000074506,
+        0.3999999761581421
+      ]
+    }
+  ],
+  "supports": [
+    {
+      "id": "bridge_bearing_sole003",
+      "point": [
+        9.25,
+        116.13999603316188,
+        0.5900000035762787
+      ],
+      "hit": {
+        "id": "platform-2-1-02-m000-c001",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole003",
+      "point": [
+        9.25,
+        116.13999603316188,
+        0.28999999165534973
+      ],
+      "hit": {
+        "id": "platform-2-1-02-m000-c001",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole003",
+      "point": [
+        9.75,
+        116.13999603316188,
+        0.5900000035762787
+      ],
+      "hit": {
+        "id": "platform-2-1-02-m000-c001",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole003",
+      "point": [
+        9.75,
+        116.13999603316188,
+        0.28999999165534973
+      ],
+      "hit": {
+        "id": "platform-2-1-02-m000-c001",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole002",
+      "point": [
+        9.25,
+        116.13999603316188,
+        -1.4899999797344208
+      ],
+      "hit": {
+        "id": "platform-2-1-01-m000-c000",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole002",
+      "point": [
+        9.25,
+        116.13999603316188,
+        -1.7899999916553497
+      ],
+      "hit": {
+        "id": "platform-2-1-01-m000-c000",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole002",
+      "point": [
+        9.75,
+        116.13999603316188,
+        -1.4899999797344208
+      ],
+      "hit": {
+        "id": "platform-2-1-01-m000-c000",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole002",
+      "point": [
+        9.75,
+        116.13999603316188,
+        -1.7899999916553497
+      ],
+      "hit": {
+        "id": "platform-2-1-01-m000-c000",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole001",
+      "point": [
+        -9.75,
+        116.13999603316188,
+        0.5900000035762787
+      ],
+      "hit": {
+        "id": "platform-2-3-01-m000-c003",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole001",
+      "point": [
+        -9.75,
+        116.13999603316188,
+        0.28999999165534973
+      ],
+      "hit": {
+        "id": "platform-2-3-01-m000-c003",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole001",
+      "point": [
+        -9.25,
+        116.13999603316188,
+        0.5900000035762787
+      ],
+      "hit": {
+        "id": "platform-2-3-01-m000-c003",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole001",
+      "point": [
+        -9.25,
+        116.13999603316188,
+        0.28999999165534973
+      ],
+      "hit": {
+        "id": "platform-2-3-01-m000-c003",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole",
+      "point": [
+        -9.75,
+        116.13999603316188,
+        -1.4899999797344208
+      ],
+      "hit": {
+        "id": "platform-2-3-02-m000-c002",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole",
+      "point": [
+        -9.75,
+        116.13999603316188,
+        -1.7899999916553497
+      ],
+      "hit": {
+        "id": "platform-2-3-02-m000-c002",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole",
+      "point": [
+        -9.25,
+        116.13999603316188,
+        -1.4899999797344208
+      ],
+      "hit": {
+        "id": "platform-2-3-02-m000-c002",
+        "y": 116.13999816775322
+      }
+    },
+    {
+      "id": "bridge_bearing_sole",
+      "point": [
+        -9.25,
+        116.13999603316188,
+        -1.7899999916553497
+      ],
+      "hit": {
+        "id": "platform-2-3-02-m000-c002",
+        "y": 116.13999816775322
+      }
+    }
+  ]
+}

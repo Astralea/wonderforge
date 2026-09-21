@@ -1,0 +1,14 @@
+{
+  productionAdmitted: false,
+  scope: '411 poses at 0.2 s. Worker primitives versus fixed context and articulated crane. Worker-versus-payload full-body clearance is excluded; active hand contact is tested separately against the actual GLB rail.  Payload envelope, upper legs, hoist rope and 623 crane primitives versus frozen tower and both support frames. Guide self-pairs checked at every pose. Additionally exact whole straight sweeps of payload and upper legs for lift, lateral translation and descent. Not continuous rotational/slew certification or exact eye contacts.',
+  workerSupportHits: { count: 0, first: [] },
+  workerHits: { count: 0, first: [] },
+  workerCraneHits: { count: 0, first: [] },
+  exactStraightHits: { count: 0, first: [] },
+  supportHits: { count: 0, first: [] },
+  payloadHits: { count: 0, first: [] },
+  bridleHits: { count: 0, first: [] },
+  hoistRopeHits: { count: 0, first: [] },
+  craneHits: { count: 0, first: [] },
+  guideSelfHits: { count: 0, first: [] }
+}

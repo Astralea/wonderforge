@@ -1,0 +1,7 @@
+[09/07/26 20:47:44] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/07/26 20:47:45] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+meta=None content=[TextContent(type='text', text='{\n  "status": "ok",\n  "result": {\n    "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-delivery-expansion-2026-09-07/blender/eiffel-ground-rigging.blend",\n    "scene": "WonderForge — ground rigging contact at 13.7s",\n    "objects": 111,\n    "referenceSeconds": 13.7,\n    "staticFrame": true\n  },\n  "stdout": "Info: Saved as \\"eiffel-ground-rigging.blend\\"\\n"\n}', annotations=None, meta=None)] structuredContent={'status': 'ok', 'result': {'file': '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-delivery-expansion-2026-09-07/blender/eiffel-ground-rigging.blend', 'scene': 'WonderForge — ground rigging contact at 13.7s', 'objects': 111, 'referenceSeconds': 13.7, 'staticFrame': True}, 'stdout': 'Info: Saved as "eiffel-ground-rigging.blend"\n'} isError=False

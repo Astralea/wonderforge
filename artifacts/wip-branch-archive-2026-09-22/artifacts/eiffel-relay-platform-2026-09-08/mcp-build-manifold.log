@@ -1,0 +1,22 @@
+[09/08/26 03:22:08] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 supported 197m relay platform.002", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-relay-platform-2026-09-08/blender/eiffel-relay-platform.blend", "objects": 5420}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 supported 197m relay platform.003",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-relay-platform-2026-09-08/blender/eiffel-relay-platform.blend",
+    "floorY": 197,
+    "sourcePrisms": 144,
+    "productionReady": false,
+    "limits": [
+      "Authored fitted collars, not rated anchor/bolt capacity.",
+      "Erection, central guide support, winch mounting and cargo/rope lifecycle not admitted."
+    ]
+  },
+  "stdout": "03:22:17 | INFO: Starting glTF 2.0 export\n03:22:17 | INFO: Extracting primitive: deck-z--1.003\n03:22:17 | INFO: Primitives created: 1\n03:22:17 | INFO: Extracting primitive: collar-0-0--1.003\n03:22:17 | INFO: Primitives created: 1\n03:22:17 | INFO: Finished glTF 2.0 export in 0.14812898635864258 s\n\nInfo: Saved as \"eiffel-relay-platform.blend\"\n"
+}

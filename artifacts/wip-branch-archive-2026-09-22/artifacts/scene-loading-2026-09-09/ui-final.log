@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/ui.test.tsx tests/three-canvas-readiness.test.tsx --maxWorkers=1 --minWorkers=1
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/ui.test.tsx (27 tests) 968ms
+ ✓ tests/three-canvas-readiness.test.tsx (5 tests) 54ms
+
+ Test Files  2 passed (2)
+      Tests  32 passed (32)
+   Start at  11:35:14
+   Duration  2.18s (transform 264ms, setup 19ms, collect 563ms, tests 1.02s, environment 326ms, prepare 53ms)
+

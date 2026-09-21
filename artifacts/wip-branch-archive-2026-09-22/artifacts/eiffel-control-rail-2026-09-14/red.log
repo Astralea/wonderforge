@@ -1,0 +1,70 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/ui.test.tsx
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/ui.test.tsx (30 tests | 1 failed) 1153ms
+   ✓ home > renders the brand, then the catalog after Enter — without leaving the page 140ms
+   ✓ home > catalog wordmark returns to the title plate 37ms
+   ✓ home > Escape on the catalog returns to the title plate 20ms
+   ✓ home > clicking a gallery row opens the cinematic and starts playing 34ms
+   ✓ cinematic view > shows the title card first, then the quote once construction begins 37ms
+   ✓ cinematic view > transport: play/pause toggles, scrubber seeks 43ms
+   ✓ cinematic view > keeps every global cinematic control together in the bottom control rail 49ms
+   ✓ cinematic view > replay appears when the movie completes and restarts it 35ms
+   ✓ cinematic view > speed toggle multiplies wall-clock advance (Spec 02) 48ms
+   ✓ cinematic view > caption layer: beats appear at 1× during play, never in gaps, at speed, or at the reveal 54ms
+   ✓ cinematic view > parks the wordmark in the top letterbox slot and keeps the beat index below it 30ms
+   ✓ cinematic view > a touch press wakes hidden movie controls without requiring a mouse move 37ms
+   ✓ cinematic view > caption beat index: titles stay listed and a click seeks to that face 39ms
+   ✓ cinematic view > caption voice: Giza uses bundled George clips and stops them when turned off 39ms
+   ✓ cinematic view > caption voice: Stonehenge uses bundled Daniel clips, not browser speech 35ms
+   ✓ cinematic view > caption voice still plays when the browser rejects an early seek 34ms
+   ✓ cinematic view > caption voice stays silent if a bundled clip is rejected 39ms
+   ✓ cinematic view > caption voice stays silent for a wonder without ElevenLabs clips 39ms
+   ✓ cinematic view > caption voice: Sydney uses bundled Alice clips, not browser speech 28ms
+   ✓ cinematic view > caption voice: Eiffel uses bundled Adam clips, not browser speech 34ms
+   ✓ cinematic view > next/previous navigate the catalog in order 39ms
+   ✓ cinematic view > Escape closes back to the gallery 23ms
+   ✓ cinematic view > floats the construction story over the uninterrupted ground lift, free of quote cards 30ms
+   ✓ cinematic view > space toggles playback 24ms
+   ✓ cinematic view > opens the three-minute Eiffel film without an edition picker and navigates its own clock 35ms
+   ✓ cinematic view > clears the short-film closeup for captions while retaining chapter navigation and every control 54ms
+   × cinematic view > keeps one short-film transport layout across captions, speeds and playback states 34ms
+     → expect(element).toHaveAttribute("data-layout", "eiffel-film") // element.getAttribute("data-layout") === "eiffel-film"
+
+Expected the element to have attribute:
+  data-layout="eiffel-film"
+Received:
+  null
+   ✓ cinematic view > restores chapter navigation outside short-film caption windows and preserves Detailed and other wonders 52ms
+   ✓ deep links > #/wonder/:id opens straight into the cinematic 6ms
+   ✓ deep links > unknown wonder ids fall back to home 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ui.test.tsx > cinematic view > keeps one short-film transport layout across captions, speeds and playback states
+Error: expect(element).toHaveAttribute("data-layout", "eiffel-film") // element.getAttribute("data-layout") === "eiffel-film"
+
+Expected the element to have attribute:
+  data-layout="eiffel-film"
+Received:
+  null
+ ❯ tests/ui.test.tsx:603:20
+    601|       act(() => usePlaybackStore.getState().seek(t));
+    602|       expect(screen.getByRole('group', { name: 'Cinematic controls' })…
+    603|       expect(rail).toHaveAttribute('data-layout', 'eiffel-film');
+       |                    ^
+    604|     }
+    605|     for (const speed of [2, 4, 1] as const) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 29 passed (30)
+   Start at  03:26:01
+   Duration  2.45s (transform 373ms, setup 25ms, collect 722ms, tests 1.15s, environment 384ms, prepare 43ms)
+

@@ -1,0 +1,1 @@
+Previous goal turn: progress. This turn: progress — parent-authored Blender V6 source saved/read back; supported cart/upending, revised head, visible rope candidate, renderer fixes, actual geometry gates and desktop/mobile checks added. Goal remains active; full operational/production admission remains incomplete. No unchanged-water recertification performed.

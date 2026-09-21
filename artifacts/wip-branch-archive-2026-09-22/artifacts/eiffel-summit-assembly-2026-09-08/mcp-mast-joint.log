@@ -1,0 +1,20 @@
+[09/08/26 14:02:52] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 compact mast-clamped gin pole.003", "file": "", "objects": 308}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "partId": "summit-crown-m072-c000",
+  "sourceColumnTop": 300.51001358032227,
+  "nextMastBottom": 302.6666667461395,
+  "editedBottom": 300.51002180576324,
+  "editedTop": 302.6666749715805,
+  "length": 2.1566531658172607,
+  "removedOverlap": 2.5100135803222656,
+  "onlyChangedKitNode": "summit-crown-m072-c000",
+  "onlyChangedCompactNode": "summit-crown/member-072",
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-assembly-2026-09-08/blender/eiffel-tower-mast-joint.blend",
+  "binaryChunksPreserved": true
+}

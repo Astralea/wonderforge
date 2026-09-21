@@ -1,0 +1,74 @@
+{
+  "source": {
+    "path": "artifacts/eiffel-second-floor-relay-2026-09-08/model/second-floor-relay.glb",
+    "sha256": "566e73971056790d9d972bc19183d9ee1c0f044a5b351b3b9e0f6133ccd298ab",
+    "bytes": 1581424
+  },
+  "meshes": 301,
+  "staticHits": [],
+  "confirmedStatic": [],
+  "route": [
+    {
+      "leg": "vertical",
+      "hits": [
+        "clevis-cheek013",
+        "clevis-cheek014",
+        "clevis-crossbar007",
+        "keeper-blade007",
+        "keeper-hinge007",
+        "keeper-thumb-lever007",
+        "clevis-pin-head007",
+        "clevis-pin-shaft007",
+        "pin-guide-stop007",
+        "pin-slide-guide013",
+        "pin-slide-guide014",
+        "replacement-upper-rope-eye007"
+      ]
+    },
+    {
+      "leg": "diagonal",
+      "hits": []
+    },
+    {
+      "leg": "lower",
+      "hits": [
+        "cart-bed004"
+      ]
+    }
+  ],
+  "floorMisses": [],
+  "gearBearing": [],
+  "sheave": [
+    {
+      "role": "relay-moving-sheave",
+      "count": 1,
+      "objects": [
+        {
+          "name": "relay-moving-sheave003",
+          "parentRole": "relay-trolley",
+          "worldPosition": [
+            -8.736804008483887,
+            125.70001983642578,
+            -3.919851064682007
+          ],
+          "meshes": 3,
+          "localPosition": [
+            0,
+            -0.14498138427734375,
+            0
+          ],
+          "localQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "wheelContacts": {
+    "count": 328,
+    "misses": []
+  }
+}

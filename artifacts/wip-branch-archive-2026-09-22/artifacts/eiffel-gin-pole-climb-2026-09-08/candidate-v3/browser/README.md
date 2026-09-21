@@ -1,0 +1,15 @@
+# Supported climbing gin-pole candidate preview
+
+Open dev5590 `/artifacts/eiffel-gin-pole-climb-2026-09-08/browser/index.html` after the parent freezes the actual candidate GLB. This isolated source-module scene does not replace the production film or its existing rig.
+
+The renderer loads the actual Blender rig and exact18-part pusher geometry from `onward.glb` (`onward-mobile.glb` for initial viewport width<700), preserves source geometry sizes, applies the pure70-second role adapter, and batches shared materials. The visible rope currently covers only west tangent→moving lug; drum feed, both guide wraps and luff rope remain incomplete. Guide actuation has no workers yet. The upper crank operator begins already on the ladder; a continuous access climb is not shown.
+
+Current connected pose: pelvis[.22,306.278,−.62], right hand on actual crank atX.48, left hand on actual ladder rail[−.173205080757,306.71,−.30], both solesY305.368. This supersedes the earlier two-hand design proposal. Two focused worker tests cover721 angular poses, exact.31/.31 arms and.43/.44 legs, contact targets and reverse queries. The actual renderer hierarchy test verifies18 worker roles and unmoving guide roots through forward/reverse sampling. These3 tests pass. The later whole-project typecheck passes after the other agent corrected its unused test import.
+
+The actual geometry broad phase in `../design/worker-drive-overlap.json` found overlapping bounds, but every non-hand pair had a separating vertex-projection axis across361 samples over9–14s (>one crank turn). This proves separation for those discrete poses; it is not an interval sweep. Hands were excluded from that narrow check because their intended grip contacts need separate treatment. Neither static reach nor this sampled drive check proves guide-leaf/body safety.
+
+`qa.mjs` completed desktop1440×900 and mobile390×844 against actual V3 GLB SHA `5ff90e584fa5a44b0db38098bdd9c7e3c5591fe9323ba63f4b6a6ad86e53469b`. Each mode sampled17 forward/reverse times including0,7,14,20,32,46,60,66,70 and additional leaf-sweep poses. Reports include actual local/world role transforms and served GLB hashes. All four guide-root world matrices remain identical; reverse-to-zero roles match exactly. Console errors:0 in both final runs. Candidate peaks: desktop27,168 triangles/86calls; mobile26,592/86. These are isolated-scene counts, not whole-production budget evidence.
+
+Inspected desktop crank-close, desktop70s and mobile16s screenshots. Full raised jib and supported crown floor fit the final wide camera; close view shows the operator's connected stance and visible descending line. Initial diagnostic framing clipped the raised jib and desktop logged a favicon404; those captures/reports are preserved under `initial-camera/`. A wider diagnostic camera and inline favicon resolved those harness issues. No production camera changed.
+
+The actual positive axial-pin gate remains Maxwell's separate work; this preview is still a candidate. Missing reeving and human guide actuation remain material limitations. No capacity or interval-sweep claim follows from these discrete screenshots.

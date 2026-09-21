@@ -1,0 +1,26 @@
+[09/08/26 13:34:58] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "Scene", "file": "", "objects": 3}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "manifestSha256": "af72b1356e65d70de1b5496f974d1a003feb27b7f37821f1ede2aac0e8df1892",
+  "assemblies": [
+    {
+      "parentPartId": "summit-crown-m072-c001",
+      "childPartId": "summit-crown-m075-c000",
+      "maxOriginalVertexResidualMetres": 3.052198885556035e-05,
+      "meshVertices": 16
+    },
+    {
+      "parentPartId": "summit-crown-m072-c002",
+      "childPartId": "summit-crown-m076-c000",
+      "maxOriginalVertexResidualMetres": 3.052198885556035e-05,
+      "meshVertices": 16
+    }
+  ],
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-assembly-2026-09-08/blender/eiffel-summit-mast-assemblies.blend",
+  "asset": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-assembly-2026-09-08/model/summit-mast-assemblies.glb"
+}

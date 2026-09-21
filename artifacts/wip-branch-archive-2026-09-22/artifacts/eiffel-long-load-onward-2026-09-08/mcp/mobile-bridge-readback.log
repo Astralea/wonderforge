@@ -1,0 +1,28 @@
+[09/08/26 12:47:47] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 mobile onward bridge", "file": "", "objects": 62}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "reloaded": [
+      {
+        "file": "eiffel-bridge-mobile.blend",
+        "scene": "WonderForge \u2014 mobile onward bridge.002",
+        "objects": 62,
+        "roleObjects": 8,
+        "roleMultiplicities": {
+          "bridge-timber": 1,
+          "freight-hatch": 1,
+          "stock-cart": 1,
+          "cart-wheel": 4,
+          "bridge-iron": 1
+        },
+        "triangles": 5788
+      }
+    ]
+  }
+}

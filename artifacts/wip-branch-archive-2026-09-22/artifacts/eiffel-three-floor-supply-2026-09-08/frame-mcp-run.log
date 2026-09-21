@@ -1,0 +1,18 @@
+[09/08/26 06:38:37] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 diagonal fixed winch", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-diagonal-winch-2026-09-08/blender/eiffel-diagonal-winch.blend", "objects": 21}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 diagonal receiver frame candidate.003",
+    "objects": 17,
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-diagonal-receiver-2026-09-08/blender/eiffel-diagonal-receiver-frame.blend",
+    "productionReady": false,
+    "scope": "frame only; no trolley/hoist/drive/rigging"
+  },
+  "stdout": "06:38:38 | INFO: Starting glTF 2.0 export\n06:38:38 | INFO: Extracting primitive: foot-0-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: foot-0--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: foot-1-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: foot-1--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: girder-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: girder--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: portal-head-0-1.001\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: portal-head-0--1.001\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: portal-head-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: post-0-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: post-0--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: post-1-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: post-1--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: rail-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: rail--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: side-tie-1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Extracting primitive: side-tie--1.003\n06:38:38 | INFO: Primitives created: 1\n06:38:38 | INFO: Finished glTF 2.0 export in 0.05707907676696777 s\n\nInfo: Saved as \"eiffel-diagonal-receiver-frame.blend\"\n"
+}

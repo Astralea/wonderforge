@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=1 tests/render-cost-diagnostics.test.ts tests/render-pipeline.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/render-cost-diagnostics.test.ts (3 tests) 4ms
+ ✓ tests/render-pipeline.test.ts (5 tests) 1ms
+
+ Test Files  2 passed (2)
+      Tests  8 passed (8)
+   Start at  16:07:23
+   Duration  361ms (transform 55ms, setup 20ms, collect 107ms, tests 6ms, environment 0ms, prepare 58ms)
+

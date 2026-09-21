@@ -1,0 +1,10 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+page.screenshot: Target page, context or browser has been closed
+    at /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-continuous-film-2026-09-08/ui/audio-qa.mjs:73:18 {
+  log: []
+}
+
+Node.js v24.4.0

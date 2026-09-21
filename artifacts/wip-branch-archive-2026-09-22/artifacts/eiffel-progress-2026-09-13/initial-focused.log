@@ -1,0 +1,302 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-film-edit.test.ts tests/eiffel-ui-clock.test.tsx
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-ui-clock.test.tsx (6 tests) 91ms
+ ❯ tests/eiffel-film-edit.test.ts (7 tests | 1 failed) 22756ms
+   ✓ maps both same-duration detailed and 180-second edits smoothly over all source time 90ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1110ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  7978ms
+   ✓ shows actual supported joint fastening during its spoken close-up cue 75ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3278ms
+   × budgets readable structural rise and retains every seated identity through dense forward and reverse seeks 10191ms
+     → expected [ { …(2) }, { …(2) }, { …(2) }, …(61) ] to deeply equal []
+   ✓ frames the physical first-floor arrival and supported landing throughout the relay sentence 34ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-film-edit.test.ts > budgets readable structural rise and retains every seated identity through dense forward and reverse seeks
+AssertionError: expected [ { …(2) }, { …(2) }, { …(2) }, …(61) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 9.2,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 9.2,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 9.2,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 9.2,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 9.4,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 9.4,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 9.4,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 9.4,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 10,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 10,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 10,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 10,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 10.2,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 10.2,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 10.2,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 10.2,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 10.4,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 10.4,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 10.4,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 10.4,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 12.6,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 12.6,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 12.6,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 12.6,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 13.8,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 13.8,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 13.8,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 13.8,
++   },
++   {
++     "id": "lower-ne-02-m029-c002",
++     "seconds": 15.9,
++   },
++   {
++     "id": "lower-nw-02-m021-c002",
++     "seconds": 15.9,
++   },
++   {
++     "id": "lower-se-02-m005-c002",
++     "seconds": 15.9,
++   },
++   {
++     "id": "lower-sw-02-m013-c002",
++     "seconds": 15.9,
++   },
++   {
++     "id": "lower-ne-02-m004-c000",
++     "seconds": 29.5,
++   },
++   {
++     "id": "lower-ne-02-m004-c001",
++     "seconds": 29.5,
++   },
++   {
++     "id": "lower-ne-02-m004-c002",
++     "seconds": 29.5,
++   },
++   {
++     "id": "lower-ne-02-m012-c000",
++     "seconds": 29.5,
++   },
++   {
++     "id": "lower-ne-02-m004-c000",
++     "seconds": 29.7,
++   },
++   {
++     "id": "lower-ne-02-m004-c001",
++     "seconds": 29.7,
++   },
++   {
++     "id": "lower-ne-02-m004-c002",
++     "seconds": 29.7,
++   },
++   {
++     "id": "lower-ne-02-m012-c000",
++     "seconds": 29.7,
++   },
++   {
++     "id": "lower-ne-02-m004-c000",
++     "seconds": 30.2,
++   },
++   {
++     "id": "lower-ne-02-m004-c001",
++     "seconds": 30.2,
++   },
++   {
++     "id": "lower-ne-02-m004-c002",
++     "seconds": 30.2,
++   },
++   {
++     "id": "lower-ne-02-m012-c000",
++     "seconds": 30.2,
++   },
++   {
++     "id": "lower-ne-02-m004-c000",
++     "seconds": 31.6,
++   },
++   {
++     "id": "lower-ne-02-m004-c001",
++     "seconds": 31.6,
++   },
++   {
++     "id": "lower-ne-02-m004-c002",
++     "seconds": 31.6,
++   },
++   {
++     "id": "lower-ne-02-m012-c000",
++     "seconds": 31.6,
++   },
++   {
++     "id": "lower-ne-02-m004-c000",
++     "seconds": 33.2,
++   },
++   {
++     "id": "lower-ne-02-m004-c001",
++     "seconds": 33.2,
++   },
++   {
++     "id": "lower-ne-02-m004-c002",
++     "seconds": 33.2,
++   },
++   {
++     "id": "lower-ne-02-m012-c000",
++     "seconds": 33.2,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 67.8,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 68.4,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 68.9,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 69.7,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 70.9,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 71.4,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 73.7,
++   },
++   {
++     "id": "platform-1-3-05-m026-c001",
++     "seconds": 79.6,
++   },
++   {
++     "id": "summit-access-stair-m001-c000",
++     "seconds": 158.1,
++   },
++   {
++     "id": "summit-access-stair-m001-c000",
++     "seconds": 158.7,
++   },
++   {
++     "id": "summit-access-stair-m001-c000",
++     "seconds": 158.9,
++   },
++   {
++     "id": "summit-access-stair-m001-c000",
++     "seconds": 160.4,
++   },
++ ]
+
+ ❯ tests/eiffel-film-edit.test.ts:85:20
+     83|     if(!reached50&&height>=50)reached50=seconds;if(!reached280&&height…
+     84|   }
+     85|   expect(removals).toEqual([]);
+       |                    ^
+     86|   expect(reached50).toBeGreaterThan(48);expect(reached280).toBeGreater…
+     87|   // Exact insertion endpoints and neighboring representable source ti…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 12 passed (13)
+   Start at  04:22:09
+   Duration  23.19s (transform 400ms, setup 24ms, collect 734ms, tests 22.85s, environment 380ms, prepare 55ms)
+

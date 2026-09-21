@@ -1,0 +1,4 @@
+{"profile":"desktop","dynamic":false,"errors":[],"near":false,"nearPixels":130.5001454605561,"triangles":[244127,227488,228511,235318,227488],"reverse":{"maxChannelDifference":0,"changedChannels":0}}
+{"profile":"desktop","dynamic":true,"errors":[],"near":true,"nearPixels":130.5001454605561,"triangles":[245303,227888,228911,236054,227888],"reverse":{"maxChannelDifference":0,"changedChannels":0}}
+{"profile":"mobile","dynamic":false,"errors":[],"near":false,"nearPixels":122.38013640967705,"triangles":[210871,206421,207788,214337,206421],"reverse":{"maxChannelDifference":0,"changedChannels":0}}
+{"profile":"mobile","dynamic":true,"errors":[],"near":true,"nearPixels":122.38013640967705,"triangles":[210031,206421,207788,214673,206421],"reverse":{"maxChannelDifference":0,"changedChannels":0}}

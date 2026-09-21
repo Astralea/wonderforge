@@ -1,0 +1,252 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/eiffel-gin-pole-climb-asset.test.ts (8 tests | 1 failed) 3300ms
+   ✓ actual Blender summit gin-pole climb candidate > exports the exact role hierarchy and applies motion only to authored moving roots 3ms
+   ✓ actual Blender summit gin-pole climb candidate > sweeps every actual half-guide clear of the complete moving pole assembly 257ms
+   ✓ actual Blender summit gin-pole climb candidate > keeps each actual axial pin inside its drilled pole bore only when locked 2ms
+   ✓ actual Blender summit gin-pole climb candidate > seats actual drive shoes and ladder feet on named tower triangles 28ms
+   ✓ actual Blender summit gin-pole climb candidate > exports real fairlead and drum axles through their paired bearing geometry 1ms
+   ✓ actual Blender summit gin-pole climb candidate > keeps the complete moving vertical rope outside every actual guide leaf sweep  906ms
+   × actual Blender summit gin-pole climb candidate > moves only the timeline-active guides clear of every seated tower and fixed-rig solid 1944ms
+     → expected [ { seconds: 16.7, …(4) }, …(29) ] to deeply equal []
+   ✓ actual Blender summit gin-pole climb candidate > exports open coaxial bores at every fork-to-fixed-hinge joint 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-gin-pole-climb-asset.test.ts > actual Blender summit gin-pole climb candidate > moves only the timeline-active guides clear of every seated tower and fixed-rig solid
+AssertionError: expected [ { seconds: 16.7, …(4) }, …(29) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "depth": 0.0002183434854514249,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 16.7,
++   },
++   {
++     "depth": 0.0050274244359744535,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 16.8,
++   },
++   {
++     "depth": 0.00987356522584032,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 16.9,
++   },
++   {
++     "depth": 0.014677284418910419,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17,
++   },
++   {
++     "depth": 0.01935860328864783,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.1,
++   },
++   {
++     "depth": 0.02383825470551537,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.2,
++   },
++   {
++     "depth": 0.024670527422020166,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.3,
++   },
++   {
++     "depth": 0.020680574233211162,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.4,
++   },
++   {
++     "depth": 0.01725306851932489,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.5,
++   },
++   {
++     "depth": 0.01431195028307162,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.6,
++   },
++   {
++     "depth": 0.011924782314102766,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.7,
++   },
++   {
++     "depth": 0.010153830499077145,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.8,
++   },
++   {
++     "depth": 0.00905547381114178,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 17.9,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.1,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.2,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.3,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.4,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.5,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.6,
++   },
++   {
++     "depth": 0.00867950374702771,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.7,
++   },
++   {
++     "depth": 0.003214760943407058,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-keeper-pin078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.8,
++   },
++   {
++     "depth": 0.014201462967654156,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.8,
++   },
++   {
++     "depth": 0.012580693253554629,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 18.9,
++   },
++   {
++     "depth": 0.008920837259384772,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 19,
++   },
++   {
++     "depth": 0.008920837259384772,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 19.1,
++   },
++   {
++     "depth": 0.008920837259384772,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 19.2,
++   },
++   {
++     "depth": 0.008920837259384772,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 19.3,
++   },
++   {
++     "depth": 0.008920837259384772,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 19.4,
++   },
++   {
++     "depth": 0.008920837259384772,
++     "kind": "fixed-rig",
++     "moving": "guide-3-north-latch/hinge-pin-pull-eye078",
++     "obstacle": "climb-drive-fixed/west-fairlead-brace009",
++     "seconds": 19.5,
++   },
++ ]
+
+ ❯ tests/eiffel-gin-pole-climb-asset.test.ts:351:35
+    349|       }
+    350|     }
+    351|     expect(failures.slice(0, 30)).toEqual([]);
+       |                                   ^
+    352|   }, 30_000);
+    353| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 passed (8)
+   Start at  15:58:35
+   Duration  3.90s (transform 289ms, setup 14ms, collect 446ms, tests 3.30s, environment 0ms, prepare 28ms)
+

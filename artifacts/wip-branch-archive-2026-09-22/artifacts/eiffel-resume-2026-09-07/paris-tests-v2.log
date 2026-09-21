@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-site-layout.test.ts (2 tests) 241ms
+ ✓ tests/paris-assets.test.ts (3 tests) 1150ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  822ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  323ms
+
+ Test Files  2 passed (2)
+      Tests  5 passed (5)
+   Start at  18:12:12
+   Duration  1.56s (transform 102ms, setup 0ms, collect 146ms, tests 1.39s, environment 0ms, prepare 173ms)
+

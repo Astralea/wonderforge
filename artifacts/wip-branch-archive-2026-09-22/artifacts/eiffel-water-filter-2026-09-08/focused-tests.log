@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-water-filter.test.ts (3 tests) 13ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  15:05:53
+   Duration  279ms (transform 76ms, setup 32ms, collect 68ms, tests 13ms, environment 0ms, prepare 57ms)
+

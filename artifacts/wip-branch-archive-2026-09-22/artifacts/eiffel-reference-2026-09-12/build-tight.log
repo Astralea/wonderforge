@@ -1,0 +1,40 @@
+
+> wonderforge@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelGroundLiftSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelLongLoadDriveSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelHistoricFlagSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelHistoricFlagSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelHistoricFlagSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelHistoricFlagSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelJointFasteningSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelJointCampaignSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelSecondFloorRelaySystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelLongLoadFilmSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/eiffelPalais.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/eiffelPalais.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/eiffelPhotoEntrance.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/eiffelPhotoEntrance.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/EiffelLongLoadOnwardSystem.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/eiffelParis.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/src/render/three/eiffelParis.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+✓ 1909 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/eiffel-crane.html                               0.47 kB │ gzip:   0.31 kB
+dist/index.html                                      1.06 kB │ gzip:   0.56 kB
+dist/assets/eiffelCrane-bsYd2smN.css                 1.75 kB │ gzip:   0.81 kB
+dist/assets/main-DG2eoU_r.css                       44.15 kB │ gzip:   8.30 kB
+dist/assets/__vite-browser-external-BIHI7g3E.js      0.03 kB │ gzip:   0.05 kB
+dist/assets/eiffelCrane-RzwQ75qd.js                 26.31 kB │ gzip:   7.56 kB
+dist/assets/EiffelGuyenetRig-DiSyznI1.js           677.46 kB │ gzip: 176.37 kB
+dist/assets/main-COG87K31.js                     2,132.80 kB │ gzip: 416.31 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.63s

@@ -1,0 +1,11 @@
+# Revised summit operator access
+
+The isolated80-second sequence starts on the existing bottom ladder rung, ascends16 rungs, takes the upper grabrail, and turns to the stopped extended crank. The fixed-size18-part operator keeps three declared contacts while one limb moves. Continuous elbow/knee bend choices and the outside-rail hand approach prevent the old forearm/head/shin obstructions. This sequence does not depict ground arrival, installing controls, operating guide latches or a complete cargo lift, and it is not in the production film.
+
+Final actual asset: SHA256`816b8b9e3467dd594072914846abee9a90ca789f4934cc917d3a3989b54c1165`. Both desktop and mobile fetched these same bytes. Each browser run recorded20 forward/reverse queries and a close final handoff frame, with zero console/page errors and exact recorded-role reversal. Desktop peaks89,108 triangles/93 calls; mobile88,532/93. These are custom-scene counts, not whole-film budgets. The final V3 mobile lower ascent16s and desktop80s close handoff were inspected. Earlier V1/V2 reports and captures are preserved undercandidate-v1 andcandidate-v2.
+
+Six focused access tests pass: exact arm/leg lengths, three fixed contacts, reverse determinism, all18-part continuity at phase joins and bounded adjacent-pose displacement, actual source toe/palm contact rays, batch-matrix agreement with source poses, fixed hardware roots and once-only disposal. The six access tests were rerun successfully against V3; the preceding13-test access/luff/renderer run and TypeScript check passed, with production source unchanged by this asset replay.
+
+The actual V3 source geometry was checked at161 half-second poses. Non-contact body pieces and the released hand/foot have zero obstacle-triangle/worker-box interior intersections at10µm tolerance. Held palms/toes have separate actual-source ray-contact tests. This sampled check is not a continuous swept-volume or strength certificate; closed fingers are not modeled. Full winding/luff attachment, guide operation and production integration remain separate tasks.
+
+`preview/index.html` provides the live candidate; report JSON contains exact source responses and rendered roles. `old-source-*` preserves earlier rejected lower-drive geometry evidence. `operation-access-free-limbs.json` is the final whole-access source collision report.

@@ -1,0 +1,5 @@
+src/render/three/EiffelProductionWorks.ts 54ms
+src/render/three/EiffelWorld.ts 10ms
+src/engine/eiffelProductionConstruction.ts 35ms
+tests/eiffel-production-construction.test.ts 9ms
+tests/eiffel-production-works.test.ts 3ms
