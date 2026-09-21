@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-detail-filter.test.ts (5 tests) 2454ms
+   ✓ Actual exported Paris detail filtering > carries exact feature metadata through every spatial split without removing or moving source corners  1603ms
+   ✓ Actual exported Paris detail filtering > preserves integrated band area and continuously reduces contrast below a pixel  408ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  14:12:35
+   Duration  2.67s (transform 41ms, setup 13ms, collect 58ms, tests 2.45s, environment 0ms, prepare 27ms)
+

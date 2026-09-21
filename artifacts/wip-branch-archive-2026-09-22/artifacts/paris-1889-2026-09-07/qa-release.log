@@ -1,0 +1,10 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+browserContext.newPage: Target page, context or browser has been closed
+    at /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/qa-eiffel-rebuild.mjs:81:31 {
+  log: []
+}
+
+Node.js v24.4.0

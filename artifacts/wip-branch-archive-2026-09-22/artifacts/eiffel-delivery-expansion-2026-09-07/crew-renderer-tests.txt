@@ -1,0 +1,17 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=4 tests/eiffel-ground-lift-renderer.test.ts tests/eiffel-ground-riggers.test.ts tests/eiffel-ground-lift-pilot.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-ground-lift-pilot.test.ts (6 tests) 118ms
+ ✓ tests/eiffel-ground-lift-renderer.test.ts (2 tests) 107ms
+ ✓ tests/eiffel-ground-riggers.test.ts (6 tests) 4202ms
+   ✓ Eiffel ground slingers > keeps rendered bodies and non-contact limbs out of the carrier bed  4067ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  20:43:21
+   Duration  4.39s (transform 81ms, setup 0ms, collect 162ms, tests 4.43s, environment 0ms, prepare 91ms)
+

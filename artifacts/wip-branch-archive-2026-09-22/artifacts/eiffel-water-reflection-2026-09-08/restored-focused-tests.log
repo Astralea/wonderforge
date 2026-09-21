@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-render-precision.test.ts (2 tests | 1 skipped) 2ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 1 skipped (2)
+   Start at  09:20:22
+   Duration  425ms (transform 116ms, setup 67ms, collect 97ms, tests 2ms, environment 0ms, prepare 103ms)
+

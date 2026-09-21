@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-rigid.test.ts (6 tests) 137ms
+ ✓ tests/eiffel-kit-renderer.test.ts (2 tests) 694ms
+   ✓ rigid Eiffel kit renderer > compacts only fully seated source members and reproduces rigid reverse seeks  441ms
+ ✓ tests/eiffel-kit.test.ts (3 tests) 3206ms
+   ✓ bounded Blender Eiffel construction kit > maps every real exported vertex to its canonical rigid cargo frame  2896ms
+
+ Test Files  3 passed (3)
+      Tests  11 passed (11)
+   Start at  23:51:44
+   Duration  3.52s (transform 148ms, setup 0ms, collect 354ms, tests 4.04s, environment 0ms, prepare 154ms)
+

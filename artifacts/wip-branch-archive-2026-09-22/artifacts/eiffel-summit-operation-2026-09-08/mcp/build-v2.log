@@ -1,0 +1,16 @@
+[09/08/26 17:56:15] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 supported summit cargo candidate.001", "file": "", "objects": 1087}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "separate Blender mechanical candidate; rope feed and contact admission pending",
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-operation-2026-09-08/blender/eiffel-summit-operation-rig.blend",
+  "asset": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-operation-2026-09-08/model/summit-operation-rig.glb",
+  "sha256": "d32ce27a1302e0e2698d9200e03c6906b09da7e774f6bb8d4fdb3ce10aae2b20",
+  "objects": 1090,
+  "meshes": 1012,
+  "roles": 78
+}

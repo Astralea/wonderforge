@@ -1,0 +1,170 @@
+{
+  "before": {
+    "frames": [
+      {
+        "seconds": 104,
+        "productionT": 0.4298666666666666,
+        "height": null,
+        "exterior": 0,
+        "posts": 0
+      },
+      {
+        "seconds": 104.4,
+        "productionT": 0.43119351561711344,
+        "height": 119.61348724365234,
+        "exterior": 12,
+        "posts": 4
+      },
+      {
+        "seconds": 108,
+        "productionT": 0.4426296767266751,
+        "height": 123.0999984741211,
+        "exterior": 140,
+        "posts": 8
+      },
+      {
+        "seconds": 112,
+        "productionT": 0.4549499542995944,
+        "height": 129.06390380859375,
+        "exterior": 282,
+        "posts": 16
+      },
+      {
+        "seconds": 116,
+        "productionT": 0.46790206017584285,
+        "height": 136.04348754882812,
+        "exterior": 420,
+        "posts": 24
+      },
+      {
+        "seconds": 120,
+        "productionT": 0.4825605551458386,
+        "height": 143.06292724609375,
+        "exterior": 564,
+        "posts": 32
+      },
+      {
+        "seconds": 122.4,
+        "productionT": 0.49262173618164884,
+        "height": 151.03549194335938,
+        "exterior": 673,
+        "posts": 40
+      },
+      {
+        "seconds": 124,
+        "productionT": 0.5,
+        "height": 155.0610809326172,
+        "exterior": 748,
+        "posts": 44
+      },
+      {
+        "seconds": 140,
+        "productionT": 0.6344037770158188,
+        "height": 275.07501220703125,
+        "exterior": 1788,
+        "posts": 144
+      },
+      {
+        "seconds": 146,
+        "productionT": 0.6959098426694104,
+        "height": 275.07501220703125,
+        "exterior": 1788,
+        "posts": 144
+      },
+      {
+        "seconds": 158,
+        "productionT": 0.79,
+        "height": 275.07501220703125,
+        "exterior": 1788,
+        "posts": 144
+      }
+    ],
+    "min3sHeight": 2.9999923706054688,
+    "min3sPosts": 4,
+    "totalHeight": 31.42200469970703
+  },
+  "after": {
+    "frames": [
+      {
+        "seconds": 104,
+        "productionT": 0.4298666666666666,
+        "height": null,
+        "exterior": 0,
+        "posts": 0
+      },
+      {
+        "seconds": 104.4,
+        "productionT": 0.43163128022221486,
+        "height": 119.61348724365234,
+        "exterior": 17,
+        "posts": 4
+      },
+      {
+        "seconds": 108,
+        "productionT": 0.45127175265966984,
+        "height": 129.04348754882812,
+        "exterior": 240,
+        "posts": 16
+      },
+      {
+        "seconds": 112,
+        "productionT": 0.4786870776778682,
+        "height": 140.26292419433594,
+        "exterior": 496,
+        "posts": 28
+      },
+      {
+        "seconds": 116,
+        "productionT": 0.5084131930328983,
+        "height": 159.10000610351562,
+        "exterior": 824,
+        "posts": 48
+      },
+      {
+        "seconds": 120,
+        "productionT": 0.5367506500363967,
+        "height": 182.04373168945312,
+        "exterior": 1079,
+        "posts": 68
+      },
+      {
+        "seconds": 122.4,
+        "productionT": 0.5515475975754014,
+        "height": 193.0416717529297,
+        "exterior": 1196,
+        "posts": 80
+      },
+      {
+        "seconds": 124,
+        "productionT": 0.56,
+        "height": 202.0407257080078,
+        "exterior": 1269,
+        "posts": 88
+      },
+      {
+        "seconds": 140,
+        "productionT": 0.6157045033033783,
+        "height": 260.3638000488281,
+        "exterior": 1684,
+        "posts": 132
+      },
+      {
+        "seconds": 146,
+        "productionT": 0.645,
+        "height": 275.07501220703125,
+        "exterior": 1788,
+        "posts": 144
+      },
+      {
+        "seconds": 158,
+        "productionT": 0.79,
+        "height": 275.07501220703125,
+        "exterior": 1788,
+        "posts": 144
+      }
+    ],
+    "min3sHeight": 5.999992370605469,
+    "min3sPosts": 8,
+    "totalHeight": 73.42818450927734
+  }
+}

@@ -1,0 +1,1033 @@
+{
+  "viewCount": 204,
+  "allClearCount": 19,
+  "best": [
+    {
+      "azimuth": 170,
+      "pitch": 35,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -35.974389386901564,
+        132.1129873451272,
+        1.8983507527960233
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 170,
+      "pitch": 40,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -34.61456917512271,
+        133.91247785185,
+        1.6585777605467127
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 170,
+      "pitch": 70,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -23.757426309670095,
+        141.6320081404336,
+        -0.25582946003899787
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 160,
+      "pitch": 35,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -35.01352941432148,
+        132.1129873451272,
+        5.484328989424127
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 160,
+      "pitch": 40,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -33.71600407021681,
+        133.91247785185,
+        5.012068385964012
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 160,
+      "pitch": 60,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -27.216004070216812,
+        139.7166604983954,
+        2.646261863233696
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 160,
+      "pitch": 65,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -25.325412811144673,
+        140.7640024629529,
+        1.9581429197675757
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 160,
+      "pitch": 70,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -23.356238925925012,
+        141.6320081404336,
+        1.2414222394532877
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 150,
+      "pitch": 30,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -34.5,
+        130.2,
+        9.4583302491977
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 150,
+      "pitch": 35,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -33.44456847782179,
+        132.1129873451272,
+        8.848976575756891
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 150,
+      "pitch": 55,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -27.915025887196006,
+        138.4979531515138,
+        5.656493672563597
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 150,
+      "pitch": 60,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -26.258330249197705,
+        139.7166604983954,
+        4.7
+      ],
+      "clearCount": 4,
+      "minimumFirstOccluderDistance": null,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    }
+  ],
+  "az200": [
+    {
+      "azimuth": 200,
+      "pitch": 70,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -23.356238925925012,
+        141.6320081404336,
+        -4.841422239453286
+      ],
+      "clearCount": 3,
+      "minimumFirstOccluderDistance": 25.968612931664282,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "steam-cylinder007",
+            "role": "relay-steam-cylinder",
+            "distance": 25.968612931664282,
+            "point": [
+              -15.408756095878278,
+              117.06351162650853,
+              -2.0854553844340047
+            ]
+          }
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 200,
+      "pitch": 60,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -27.216004070216812,
+        139.7166604983954,
+        -6.246261863233693
+      ],
+      "clearCount": 3,
+      "minimumFirstOccluderDistance": 25.828238218845723,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "cylinder-gland007",
+            "role": "relay-cylinder-gland",
+            "distance": 25.828238218845723,
+            "point": [
+              -15.519576688974672,
+              117.06028945599378,
+              -2.1255426063809733
+            ]
+          }
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 200,
+      "pitch": 75,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -21.323469016844044,
+        142.3140714835158,
+        -4.101554499435798
+      ],
+      "clearCount": 2,
+      "minimumFirstOccluderDistance": 19.803634381696792,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "shaft-00-m025-c003",
+            "role": null,
+            "distance": 19.803634381696792,
+            "point": [
+              -16.784018581480307,
+              123.10000002840043,
+              -2.553399924943817
+            ]
+          }
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "shaft-00-m025-c003",
+            "role": null,
+            "distance": 19.83190085700569,
+            "point": [
+              -16.784018590696956,
+              123.10000006741163,
+              -2.2261502636761765
+            ]
+          }
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    },
+    {
+      "azimuth": 200,
+      "pitch": 40,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -33.71600407021681,
+        133.91247785185,
+        -8.612068385964008
+      ],
+      "clearCount": 1,
+      "minimumFirstOccluderDistance": 22.51969301007172,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "cylinder-foot014",
+            "role": "relay-cylinder-foot",
+            "distance": 25.85696476935301,
+            "point": [
+              -15.502041734302937,
+              116.7458236422823,
+              -2.1205210851577796
+            ]
+          }
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "shaft-00-m027-c002",
+            "role": null,
+            "distance": 22.51969301007172,
+            "point": [
+              -17.66606482324426,
+              119.1369096165983,
+              -3.024707044348113
+            ]
+          }
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "shaft-00-m027-c002",
+            "role": null,
+            "distance": 22.636605007076177,
+            "point": [
+              -17.65080896691073,
+              119.12286508080444,
+              -2.646102695346742
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "azimuth": 200,
+      "pitch": 50,
+      "radius": 26,
+      "target": [
+        -15,
+        117.2,
+        -1.8
+      ],
+      "position": [
+        -30.7045921124314,
+        137.11715552109342,
+        -7.516004070216808
+      ],
+      "clearCount": 1,
+      "minimumFirstOccluderDistance": 22.468824045829688,
+      "rays": [
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "shaft-00-m028-c003",
+            "role": null,
+            "distance": 22.468824045829688,
+            "point": [
+              -17.515473142331995,
+              119.53930100314155,
+              -2.8347408495960065
+            ]
+          }
+        },
+        {
+          "target": [
+            -15.22,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "shaft-00-m028-c003",
+            "role": null,
+            "distance": 22.549885462939603,
+            "point": [
+              -17.51547314233199,
+              119.53930100314155,
+              -2.459967506862312
+            ]
+          }
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -2.02
+          ],
+          "clear": false,
+          "occluder": {
+            "part": "steam-cylinder007",
+            "role": "relay-steam-cylinder",
+            "distance": 25.879370245828653,
+            "point": [
+              -15.234695883181441,
+              117.06925341055461,
+              -2.1769277509296563
+            ]
+          }
+        },
+        {
+          "target": [
+            -14.78,
+            116.47999938964844,
+            -1.58
+          ],
+          "clear": true,
+          "occluder": null
+        }
+      ]
+    }
+  ]
+}

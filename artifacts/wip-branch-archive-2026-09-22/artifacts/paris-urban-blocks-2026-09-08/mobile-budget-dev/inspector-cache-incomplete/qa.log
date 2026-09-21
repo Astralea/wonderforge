@@ -1,0 +1,9 @@
+{"maxTriangles":{"requestedT":0.97,"t":0.97,"seconds":256.08,"scene":"eiffel-tower-reference","camera":{"position":[-20.224009581060322,279.0866282959159,594.1496320006047],"direction":[0.03333021277516203,-0.20019346710382652,-0.979189293571632],"fov":49.95365982095839,"aspect":0.46208530805687204,"near":5},"calls":100,"triangles":298900,"points":0,"lines":0,"geometries":169,"textures":30},"maxCalls":{"requestedT":0.48,"t":0.48,"seconds":126.72,"scene":"eiffel-tower-reference","camera":{"position":[163.0807940043425,63.903767143080955,-35.91763060653632],"direction":[-0.9075452262964705,-0.40673664307580026,-0.10453212619055163],"fov":42,"aspect":0.46208530805687204,"near":5},"calls":149,"triangles":99979,"points":0,"lines":0,"geometries":165,"textures":30},"assetIdentityPass":false,"budgetPass":true,"assets":[],"overflow":false,"errors":["City response read: response.body: Protocol error (Network.getResponseBody): Request content was evicted from inspector cache\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.","City response read: response.body: Protocol error (Network.getResponseBody): Request content was evicted from inspector cache\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."]}
+file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-urban-blocks-2026-09-08/qa-mobile-budget-dev.mjs:67
+  if (errors.length || overflow || !budgetPass || !assetIdentityPass) throw Error('Mobile budget, browser error, or asset identity gate failed');
+                                                                            ^
+
+Error: Mobile budget, browser error, or asset identity gate failed
+    at file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-urban-blocks-2026-09-08/qa-mobile-budget-dev.mjs:67:77
+
+Node.js v24.4.0

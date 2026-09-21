@@ -1,0 +1,39 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-progress-story.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/eiffel-progress-story.test.ts (5 tests | 1 failed) 17878ms
+   ✓ cinematic construction story against the actual tower kit > makes the requested progress points different without a premature summit silhouette 28ms
+   ✓ cinematic construction story against the actual tower kit > admits each relay only after every actual bearing-platform member is seated 35ms
+   × cinematic construction story against the actual tower kit > retains four reserved ground deliveries and holds the upper payload supported until installation 63ms
+     → expected 'tackle' to be 'upper-receiver' // Object.is equality
+   ✓ cinematic construction story against the actual tower kit > preserves every seated identity over dense forward playback and reverse seeks  5512ms
+   ✓ cinematic construction story against the actual tower kit > starts the leg approach by six percent and never returns to a low close-up after withdrawal 73ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-progress-story.test.ts > cinematic construction story against the actual tower kit > retains four reserved ground deliveries and holds the upper payload supported until installation
+AssertionError: expected 'tackle' to be 'upper-receiver' // Object.is equality
+
+Expected: "upper-receiver"
+Received: "tackle"
+
+ ❯ tests/eiffel-progress-story.test.ts:69:36
+     67|     for(const seconds of[124,130,144,157.9]){const f=at(seconds),relay…
+     68|       expect(f.transportedPartIds).toContain(EIFFEL_LONG_LOAD_FILM_PAR…
+     69|       expect(relay.carrierSupport).toBe('upper-receiver');expect(relay…
+       |                                    ^
+     70|     }
+     71|     expect(at(161.999).seatedPartIds).not.toContain(EIFFEL_LONG_LOAD_F…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  04:24:46
+   Duration  18.32s (transform 186ms, setup 17ms, collect 257ms, tests 17.88s, environment 0ms, prepare 36ms)
+

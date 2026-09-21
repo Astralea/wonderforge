@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-ground-plant-retirement.test.ts tests/eiffel-ground-lift-renderer.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-ground-lift-renderer.test.ts (4 tests) 395ms
+   ✓ actual Blender ground-lift renderer > matches the sampled hoist apex with the articulated exported jib throughout the passage  344ms
+ ✓ tests/eiffel-ground-plant-retirement.test.ts (3 tests) 179ms
+
+ Test Files  2 passed (2)
+      Tests  7 passed (7)
+   Start at  21:59:59
+   Duration  878ms (transform 387ms, setup 48ms, collect 742ms, tests 574ms, environment 0ms, prepare 65ms)
+

@@ -1,0 +1,13 @@
+0 -> 1 []
+1 -> 2 []
+2 -> 3 []
+3 -> 4 []
+{"case":"first-floor-outer-lane","hits":[]}
+{"case":"first-floor-landing-cross","hits":[]}
+{"case":"first-floor-landing-lower","hits":[]}
+{"case":"outer-lane-to-second-floor-rejected","hits":[{"part":"platform-2-3-02-m000-c001","depth":0.7999999999999998}]}
+{"case":"direct-stock-lift-rejected","hits":[{"part":"platform-2-3-02-m000-c000","depth":0.45000033378601145},{"part":"platform-2-3-02-m000-c002","depth":0.15000014305114817}]}
+{"floorContact":[-21.8,-4.3],"hitY":57.94000121951103,"part":"platform-1-3-03-m000-c007"}
+{"floorContact":[-21.8,-3.7],"hitY":57.94000121951103,"part":"platform-1-3-03-m000-c007"}
+{"floorContact":[-21.2,-4.3],"hitY":57.94000121951103,"part":"platform-1-3-03-m000-c007"}
+{"floorContact":[-21.2,-3.7],"hitY":57.94000121951103,"part":"platform-1-3-03-m000-c007"}

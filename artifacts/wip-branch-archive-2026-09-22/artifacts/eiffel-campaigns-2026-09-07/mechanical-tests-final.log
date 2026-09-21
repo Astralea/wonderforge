@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-guyenet.test.ts (8 tests) 346ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  19:03:15
+   Duration  597ms (transform 65ms, setup 0ms, collect 62ms, tests 346ms, environment 0ms, prepare 62ms)
+

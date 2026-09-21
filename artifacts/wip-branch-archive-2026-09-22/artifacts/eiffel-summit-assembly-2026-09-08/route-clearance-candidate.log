@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "scope": {
+    "method": "actual manifest local convex boxes at 2401 exact sampled rigid poses per assembly member; fixed solids are operations seated before the parent route; self, assembly siblings, same/later wave parts excluded",
+    "penetrationTolerance": 0.00001,
+    "claim": "geometric OBB clearance only; support, lug and load capacity remain outside this audit"
+  },
+  "geometryClear": false,
+  "assemblies": [
+    {
+      "parentPartId": "summit-crown-m072-c000",
+      "wave": 3589,
+      "productionStart": 0.8966674298574245,
+      "productionEnd": 0.8970840011252466,
+      "fixedCount": 13821,
+      "routes": [
+        {
+          "partId": "summit-crown-m072-c000",
+          "clear": false,
+          "firstCollision": {
+            "sample": 513,
+            "productionT": 0.8967564719659215,
+            "phase": "transfer",
+            "pose": {
+              "position": [
+                -4.800146920643646,
+                282.0899951159954,
+                -0.2699340820299158
+              ],
+              "quaternion": [
+                0,
+                0,
+                0.7071067811865475,
+                0.7071067811865475
+              ]
+            },
+            "obstacleId": "summit-apartment-3-1-m000-c001",
+            "obstacleStage": 57,
+            "penetration": 0.005147112570601742
+          },
+          "maxPenetration": 0.15456688017094233,
+          "exactPairs": 1474
+        },
+        {
+          "partId": "summit-crown-m073-c000",
+          "clear": false,
+          "firstCollision": {
+            "sample": 501,
+            "productionT": 0.8967543891095824,
+            "phase": "transfer",
+            "pose": {
+              "position": [
+                -4.59153286427426,
+                282.08999514053176,
+                0.20907683195887383
+              ],
+              "quaternion": [
+                0,
+                0.7071068022599702,
+                -4.214684723446994e-8,
+                -0.707106760113123
+              ]
+            },
+            "obstacleId": "summit-apartment-3-1-m000-c001",
+            "obstacleStage": 57,
+            "penetration": 0.006533068420167432
+          },
+          "maxPenetration": 0.18009124927673606,
+          "exactPairs": 48
+        }
+      ],
+      "clear": false
+    },
+    {
+      "parentPartId": "summit-crown-m072-c001",
+      "wave": 3595,
+      "productionStart": 0.8991668574643567,
+      "productionEnd": 0.8995834287321787,
+      "fixedCount": 13846,
+      "routes": [
+        {
+          "partId": "summit-crown-m072-c001",
+          "clear": true,
+          "firstCollision": null,
+          "maxPenetration": 0,
+          "exactPairs": 0
+        },
+        {
+          "partId": "summit-crown-m074-c000",
+          "clear": true,
+          "firstCollision": null,
+          "maxPenetration": 0,
+          "exactPairs": 0
+        },
+        {
+          "partId": "summit-crown-m075-c000",
+          "clear": true,
+          "firstCollision": null,
+          "maxPenetration": 0,
+          "exactPairs": 0
+        }
+      ],
+      "clear": true
+    },
+    {
+      "parentPartId": "summit-crown-m072-c002",
+      "wave": 3596,
+      "productionStart": 0.8995834287321787,
+      "productionEnd": 0.9,
+      "fixedCount": 13850,
+      "routes": [
+        {
+          "partId": "summit-crown-m072-c002",
+          "clear": false,
+          "firstCollision": {
+            "sample": 2400,
+            "productionT": 0.8999999999995835,
+            "phase": "lower",
+            "pose": {
+              "position": [
+                0,
+                309.6666564941406,
+                0
+              ],
+              "quaternion": [
+                -0.4999999850988386,
+                -0.5000000447034816,
+                -0.4999999850988386,
+                0.4999999850988386
+              ]
+            },
+            "obstacleId": "summit-crown-m072-c001",
+            "obstacleStage": 63,
+            "penetration": 0.00001017252611444989
+          },
+          "maxPenetration": 0.00001017252611444989,
+          "exactPairs": 1
+        },
+        {
+          "partId": "summit-crown-m076-c000",
+          "clear": true,
+          "firstCollision": null,
+          "maxPenetration": 0,
+          "exactPairs": 0
+        }
+      ],
+      "clear": false
+    }
+  ]
+}

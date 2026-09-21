@@ -1,0 +1,14 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-ground-lift-renderer.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-ground-lift-renderer.test.ts (1 test) 20ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  20:07:08
+   Duration  338ms (transform 103ms, setup 0ms, collect 134ms, tests 20ms, environment 0ms, prepare 59ms)
+

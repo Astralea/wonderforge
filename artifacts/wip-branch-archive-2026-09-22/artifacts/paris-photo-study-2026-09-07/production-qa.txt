@@ -1,0 +1,127 @@
+{
+  "captures": 18,
+  "errors": [],
+  "playback": {
+    "reverseSeekExactPixels": true,
+    "pointerSeek": 0.142,
+    "samples": [
+      {
+        "t": 0.147,
+        "metrics": {
+          "renderer": {
+            "calls": 101,
+            "triangles": 236225,
+            "points": 0,
+            "lines": 0,
+            "geometries": 76,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 0.295,
+        "metrics": {
+          "renderer": {
+            "calls": 77,
+            "triangles": 252833,
+            "points": 0,
+            "lines": 0,
+            "geometries": 76,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 0.442,
+        "metrics": {
+          "renderer": {
+            "calls": 104,
+            "triangles": 301183,
+            "points": 0,
+            "lines": 0,
+            "geometries": 76,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 0.587,
+        "metrics": {
+          "renderer": {
+            "calls": 104,
+            "triangles": 330036,
+            "points": 0,
+            "lines": 0,
+            "geometries": 76,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 0.733,
+        "metrics": {
+          "renderer": {
+            "calls": 72,
+            "triangles": 348126,
+            "points": 0,
+            "lines": 0,
+            "geometries": 76,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 0.88,
+        "metrics": {
+          "renderer": {
+            "calls": 112,
+            "triangles": 361621,
+            "points": 0,
+            "lines": 0,
+            "geometries": 76,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 1,
+        "metrics": {
+          "renderer": {
+            "calls": 65,
+            "triangles": 346896,
+            "points": 0,
+            "lines": 0,
+            "geometries": 77,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      },
+      {
+        "t": 1,
+        "metrics": {
+          "renderer": {
+            "calls": 65,
+            "triangles": 346896,
+            "points": 0,
+            "lines": 0,
+            "geometries": 77,
+            "textures": 40
+          },
+          "scene": "eiffel-tower-reference"
+        }
+      }
+    ],
+    "completed": true,
+    "replayed": true
+  },
+  "reducedMotion": {
+    "time": 1
+  }
+}

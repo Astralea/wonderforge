@@ -1,0 +1,144 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=4
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-readable-clock.test.ts (4 tests) 9259ms
+   ✓ Eiffel readable production clock > measures the complete manifest and reserves four 60 Hz frame intervals per wave  9244ms
+ ✓ tests/eiffel-joint-riggers.test.ts (5 tests) 9917ms
+   ✓ Eiffel joint-campaign ground slingers > keeps rendered bodies and limbs clear of both oriented carts and cargo outside designated hand contact  1272ms
+   ✓ Eiffel joint-campaign ground slingers > clears 1,900 completed tower solids and all 245 installed support members  8633ms
+ ✓ tests/eiffel-guyenet-station.test.ts (3 tests) 10222ms
+   ✓ bounded supported Guyenet NE pilot contract > keeps the rigid payload, working jib and pivot clear along the complete pilot route  929ms
+ ✓ tests/eiffel-delivery-camera.test.ts (7 tests) 10371ms
+   ✓ supported ground delivery camera > keeps the near-frustum clear of all final tower solids and actual falsework while exposing the moving payload at useful pixel scale  8526ms
+   ✓ two-load supported joint campaign camera > keeps the5m near-frustum outside every final tower solid during both close follows and fastening  1578ms
+ ✓ tests/eiffel-kit.test.ts (3 tests) 3103ms
+   ✓ bounded Blender Eiffel construction kit > maps every real exported vertex to its canonical rigid cargo frame  2805ms
+ ✓ tests/eiffel-foundation-crew.test.ts (2 tests) 3037ms
+   ✓ foundation crew steering and gait > grounds stance feet and steers the whole team around every bearing  3030ms
+ ✓ tests/eiffel-ground-riggers.test.ts (6 tests) 4266ms
+   ✓ Eiffel ground slingers > keeps rendered bodies and non-contact limbs out of the carrier bed  4130ms
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 2188ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  1175ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  322ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  327ms
+ ✓ tests/paris-assets.test.ts (4 tests) 2072ms
+   ✓ MCP-authored Paris exports > places north-bank walkers on exported paving and the new houses on dry land  758ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  886ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  423ms
+ ✓ tests/eiffel-ground-lift-rig-clearance.test.ts (2 tests) 7662ms
+ ✓ tests/eiffel-traffic.test.ts (12 tests) 1442ms
+   ✓ 1889 Paris traffic > keeps road traffic outside the site and promenade traffic on the paved boundary  832ms
+   ✓ 1889 Paris traffic > keeps closed street loops position-continuous through route wrap  534ms
+ ✓ tests/construction.test.ts (16 tests) 1036ms
+   ✓ Giza physical masonry plan > builds a deterministic human-scale interior core instead of a floating lid  475ms
+ ✓ tests/eiffel-production-construction.test.ts (6 tests) 2401ms
+   ✓ Eiffel bounded full production schedule > gives every upper pickup a visible receiver tied to two real-face saddles  1439ms
+   ✓ Eiffel bounded full production schedule > keeps every moving cargo envelope clear of its fixed mast  457ms
+ ✓ tests/eiffel-station-map.test.ts (3 tests) 1466ms
+   ✓ Eiffel full-manifest station map audit > maps real prior or lower same-stage support envelopes and exposes every gap  1461ms
+ ✓ tests/eiffel-kit-renderer.test.ts (2 tests) 636ms
+   ✓ rigid Eiffel kit renderer > compacts only fully seated source members and reproduces rigid reverse seeks  387ms
+ ✓ tests/paris-facade-materials.test.ts (2 tests) 662ms
+   ✓ Paris embedded facade material > preserves every mapped source corner through spatial batching and disposes the texture once  522ms
+ ✓ tests/eiffel-supply-pusher-contacts.test.ts (2 tests) 563ms
+   ✓ Eiffel second-floor supply pusher contacts > keeps every rendered body box outside the actual moving cart meshes while hands meet only the handle face  388ms
+ ✓ tests/eiffel-guyenet-asset.test.ts (5 tests) 463ms
+ ✓ tests/eiffel-joint-campaign.test.ts (6 tests) 440ms
+ ✓ tests/eiffel-summit-handoff.test.ts (4 tests) 378ms
+   ✓ summit stock handoff audit > independently replays every exact translation sweep against tower, racks, and preceding stock  370ms
+ ✓ tests/eiffel-second-floor-supply.test.ts (5 tests) 430ms
+ ✓ tests/paris-moorings.test.ts (1 test) 394ms
+   ✓ attaches barge moorings to gunwales and bollards supported by the actual quay solids  393ms
+ ✓ tests/giza-environment.test.ts (15 tests) 378ms
+ ✓ tests/eiffel-relay-platform.test.ts (5 tests) 354ms
+ ✓ tests/eiffel-guyenet.test.ts (8 tests) 344ms
+ ✓ tests/eiffel-joint-fastening.test.ts (7 tests) 291ms
+ ✓ tests/eiffel-summit-rack-geometry.test.ts (5 tests) 299ms
+ ✓ tests/eiffel-render-precision.test.ts (2 tests) 229ms
+ ✓ tests/giza-field-birds.test.ts (7 tests) 262ms
+ ✓ tests/eiffel-site-layout.test.ts (2 tests) 238ms
+ ✓ tests/eiffel-second-floor-bridge-asset.test.ts (1 test) 242ms
+ ✓ tests/eiffel-assembly.test.ts (5 tests) 218ms
+ ✓ tests/eiffel-kit-construction.test.ts (6 tests) 185ms
+ ✓ tests/eiffel-rebuild-camera.test.ts (10 tests) 154ms
+ ✓ tests/eiffel-construction.test.ts (8 tests) 150ms
+ ✓ tests/eiffel-relay-receiving.test.ts (3 tests) 137ms
+ ✓ tests/eiffel-joint-campaign-renderer.test.ts (5 tests) 132ms
+ ✓ tests/eiffel-upper-clearance.test.ts (4 tests) 1690ms
+   ✓ first-floor completed-solid clearance > validates each accepted first-floor route at independent phase samples  1687ms
+ ✓ tests/eiffel-rigid.test.ts (6 tests) 127ms
+ ✓ tests/eiffel-summit-stock.test.ts (3 tests) 116ms
+ ✓ tests/eiffel-ground-lift-pilot.test.ts (6 tests) 117ms
+ ✓ tests/eiffel-joint-blender-assets.test.ts (3 tests) 115ms
+ ✓ tests/eiffel-face-receiving-worker.test.ts (2 tests) 109ms
+ ✓ tests/eiffel-ground-lift-renderer.test.ts (2 tests) 105ms
+ ✓ tests/eiffel-face-joint-asset.test.ts (2 tests) 103ms
+ ✓ tests/eiffel-relay-units.test.ts (3 tests) 87ms
+ ✓ tests/giza-campfires.test.ts (5 tests) 89ms
+ ✓ tests/giza-foreground.test.ts (5 tests) 83ms
+ ✓ tests/eiffel-face-package-lift.test.ts (3 tests) 79ms
+ ✓ tests/stonehenge-construction.test.ts (12 tests) 77ms
+ ✓ tests/eiffel-supply-pusher.test.ts (3 tests) 78ms
+ ✓ tests/eiffel-face-carrier.test.ts (2 tests) 70ms
+ ✓ tests/giza-world.test.ts (11 tests) 64ms
+ ✓ tests/eiffel-relay-splices.test.ts (4 tests) 66ms
+ ✓ tests/eiffel-world.test.ts (7 tests) 61ms
+ ✓ tests/eiffel-face-package-transfer.test.ts (2 tests) 55ms
+ ✓ tests/giza-river.test.ts (24 tests) 50ms
+ ✓ tests/geometry.test.ts (5 tests) 48ms
+ ✓ tests/eiffel-relay-splice-asset.test.ts (1 test) 40ms
+ ✓ tests/eiffel-crane-rig.test.ts (2 tests) 40ms
+ ✓ tests/colosseum-construction.test.ts (11 tests) 40ms
+ ✓ tests/eiffel-crane.test.ts (5 tests) 33ms
+ ✓ tests/eiffel-film.test.ts (11 tests) 27ms
+ ✓ tests/sydney-world.test.ts (8 tests) 24ms
+ ✓ tests/petra-construction.test.ts (7 tests) 16ms
+ ✓ tests/colosseum-world.test.ts (7 tests) 22ms
+ ✓ tests/eiffel-signature-timing.test.ts (4 tests) 766ms
+   ✓ camera-aware Eiffel signature proposal, isolated from current timing > selects four near-facing, bounded payloads with measured route projections  410ms
+   ✓ camera-aware Eiffel signature proposal, isolated from current timing > allocates four independent2.4s windows without overlaps, dependency violations or changed height milestones  351ms
+ ✓ tests/eiffel-relay-winch-asset.test.ts (3 tests) 16ms
+ ✓ tests/giza-camera.test.ts (12 tests) 18ms
+ ✓ tests/render.test.ts (19 tests) 16ms
+ ✓ tests/giza-sky.test.ts (17 tests) 20ms
+ ✓ tests/eiffel-campaign-coverage.test.ts (4 tests) 11ms
+ ✓ tests/eiffel-relay-winch.test.ts (3 tests) 15ms
+ ✓ tests/sydney-construction.test.ts (12 tests) 12ms
+ ✓ tests/eiffel-second-floor-supply-clock.test.ts (3 tests) 11ms
+ ✓ tests/material-detail.test.ts (19 tests) 10ms
+ ✓ tests/scenes.test.ts (12 tests) 9ms
+ ✓ tests/eiffel-supply-pusher-asset.test.ts (1 test) 10ms
+ ✓ tests/eiffel-vertical-pair-asset.test.ts (1 test) 11ms
+ ✓ tests/stonehenge-world.test.ts (7 tests) 8ms
+ ✓ tests/wonders.test.ts (9 tests) 9ms
+ ✓ tests/roadwork.test.ts (12 tests) 8ms
+ ✓ tests/narration.test.ts (8 tests) 7ms
+ ✓ tests/captions.test.ts (7 tests) 5ms
+ ✓ tests/eiffel-ground-supply.test.ts (3 tests) 4ms
+ ✓ tests/petra-world.test.ts (6 tests) 4ms
+ ✓ tests/timeline.test.ts (26 tests) 4ms
+ ✓ tests/eiffel-timing.test.ts (2 tests) 3ms
+ ✓ tests/camera.test.ts (10 tests) 4ms
+ ✓ tests/soundtrack.test.ts (6 tests) 3ms
+ ✓ tests/eiffel-convex.test.ts (4 tests) 3ms
+ ✓ tests/daynight.test.ts (9 tests) 3ms
+ ✓ tests/site-clearance.test.ts (6 tests) 3ms
+ ✓ tests/playback.test.ts (11 tests) 3ms
+ ✓ tests/easing.test.ts (10 tests) 2ms
+ ✓ tests/render-pipeline.test.ts (5 tests) 2ms
+ ✓ tests/format.test.ts (5 tests) 1ms
+ ✓ tests/eiffel-foundation-route.test.ts (3 tests) 198ms
+ ✓ tests/soundtrack-clock.test.ts (3 tests) 1ms
+ ✓ tests/three-canvas-readiness.test.tsx (3 tests) 45ms
+ ✓ tests/ui.test.tsx (26 tests) 921ms
+ ✓ tests/eiffel-production-works.test.ts (1 test) 5ms
+
+ Test Files  102 passed (102)
+      Tests  657 passed (657)
+   Start at  04:36:28
+   Duration  46.47s (transform 1.19s, setup 467ms, collect 61.35s, tests 81.82s, environment 395ms, prepare 2.92s)
+

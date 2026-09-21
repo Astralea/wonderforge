@@ -1,0 +1,179 @@
+{
+  "captures": [
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-photo-study-2026-09-07/qa/desktop-photo-axis.png",
+      "kind": "photo-axis",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 20,
+        "triangles": 132387,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-photo-study-2026-09-07/qa/desktop-palace.png",
+      "kind": "palace",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 20,
+        "triangles": 57662,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "desktop",
+      "path": "artifacts/paris-photo-study-2026-09-07/qa/desktop-street.png",
+      "kind": "street",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 16,
+        "triangles": 33279,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-photo-study-2026-09-07/qa/mobile-photo-axis.png",
+      "kind": "photo-axis",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 17,
+        "triangles": 57239,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-photo-study-2026-09-07/qa/mobile-palace.png",
+      "kind": "palace",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 16,
+        "triangles": 42109,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    },
+    {
+      "name": "mobile",
+      "path": "artifacts/paris-photo-study-2026-09-07/qa/mobile-street.png",
+      "kind": "street",
+      "t": 0.5,
+      "source": "blender",
+      "life": "blender",
+      "render": {
+        "frame": 1,
+        "calls": 16,
+        "triangles": 32466,
+        "points": 0,
+        "lines": 0
+      },
+      "actor": {
+        "id": "expo-vehicle-2",
+        "kind": "cart",
+        "position": [
+          100,
+          2.3552823861474677,
+          194.49999999999994
+        ],
+        "yaw": 0,
+        "visibility": 1,
+        "distance": 61.49999999999999,
+        "wheelAngle": 97.6190476190476,
+        "gaitPhase": 4.108236547002001
+      }
+    }
+  ],
+  "errors": []
+}

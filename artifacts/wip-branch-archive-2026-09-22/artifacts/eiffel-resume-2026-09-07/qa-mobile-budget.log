@@ -1,0 +1,9 @@
+{"maxTriangles":{"t":0.89,"calls":98,"triangles":306424,"points":0,"lines":0,"geometries":76,"textures":29},"maxCalls":{"t":0.87,"calls":115,"triangles":304425,"points":0,"lines":0,"geometries":76,"textures":29},"errors":[]}
+file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/qa-paris-mobile-budget.mjs:21
+ if(errors.length||maxTriangles.triangles>300000||maxCalls.calls>150)throw new Error('Mobile budget or browser error gate failed');
+                                                                           ^
+
+Error: Mobile budget or browser error gate failed
+    at file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/qa-paris-mobile-budget.mjs:21:76
+
+Node.js v24.4.0

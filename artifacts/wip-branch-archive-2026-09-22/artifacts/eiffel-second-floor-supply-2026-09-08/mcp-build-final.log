@@ -1,0 +1,17 @@
+[09/08/26 04:12:24] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/08/26 04:12:25] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 second-floor freight bridge", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-second-floor-supply-2026-09-08/blender/eiffel-second-floor-bridge.blend", "objects": 14}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 second-floor freight bridge.001",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-second-floor-supply-2026-09-08/blender/eiffel-second-floor-bridge.blend",
+    "objects": 14,
+    "productionReady": false
+  },
+  "stdout": "04:12:26 | INFO: Starting glTF 2.0 export\n04:12:26 | INFO: Extracting primitive: bridge-iron.001\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: bridge-timber.001\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: axle-bearing.004\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: axle-bearing.005\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: axle-bearing.006\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: axle-bearing.007\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: cart-axle.002\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: cart-axle.003\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: cart-bed.001\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: Cylinder.283\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: Cylinder.284\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: Cylinder.285\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Extracting primitive: Cylinder.286\n04:12:26 | INFO: Primitives created: 1\n04:12:26 | INFO: Finished glTF 2.0 export in 0.05884528160095215 s\n\nInfo: Saved as \"eiffel-second-floor-bridge.blend\"\n"
+}

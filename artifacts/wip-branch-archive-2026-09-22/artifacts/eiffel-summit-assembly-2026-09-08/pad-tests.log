@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-crane-bearing-pad.test.ts (1 test) 3ms
+ ✓ tests/eiffel-crane.test.ts (5 tests) 34ms
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  13:54:51
+   Duration  216ms (transform 50ms, setup 34ms, collect 75ms, tests 38ms, environment 0ms, prepare 71ms)
+

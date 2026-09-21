@@ -1,0 +1,10 @@
+file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-assembly-2026-09-08/browser/qa.mjs:5
+import { eiffelFilmShotAt, EIFFEL_FILM_DURATION, EIFFEL_FILM_LONG_LOAD_START_SECONDS, sampleEiffelFilm, sampleEiffelLongLoadFilm, EIFFEL_FILM_STAGE63_FINAL_WAVE_START_SECONDS, EIFFEL_FILM_STAGE63_FINAL_WAVE_END_SECONDS, EIFFEL_TRAFFIC_ACTORS, C000_QA, sampleEiffelProductionOperation } from './sampler.mjs';
+                                                                                                                                                                                                                                                   ^^^^^^^
+SyntaxError: The requested module './sampler.mjs' does not provide an export named 'C000_QA'
+    at #_instantiate (node:internal/modules/esm/module_job:254:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:362:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)
+
+Node.js v24.4.0

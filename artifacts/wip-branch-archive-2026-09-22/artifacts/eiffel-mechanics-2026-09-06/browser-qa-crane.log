@@ -1,0 +1,343 @@
+{
+  "captures": [
+    {
+      "name": "desktop",
+      "mode": "compact",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/desktop-compact-0.png",
+      "metrics": {
+        "mode": "compact",
+        "progress": 0,
+        "crane": null,
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 87854,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 0,
+          "seatedSources": 7290,
+          "triangles": 87852
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "expanded",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/desktop-expanded-0.png",
+      "metrics": {
+        "mode": "expanded",
+        "progress": 0,
+        "crane": null,
+        "renderer": {
+          "frame": 1,
+          "calls": 32,
+          "triangles": 165866,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 13814,
+          "seatedSources": 0,
+          "triangles": 165864
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "transport",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/desktop-transport-0.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 0,
+        "crane": {
+          "base": [
+            -4,
+            0,
+            0
+          ],
+          "pivot": [
+            -4,
+            10,
+            0
+          ],
+          "boomTip": [
+            0,
+            17.386474125047755,
+            0
+          ],
+          "hook": [
+            0,
+            2.6620000064373017,
+            0
+          ],
+          "lugs": [
+            [
+              0,
+              1.1620000064373017,
+              -0.7857506799697876
+            ],
+            [
+              0,
+              1.1620000064373017,
+              0.7857506799697876
+            ]
+          ],
+          "ropeLength": 14.724474118610454,
+          "horizontalReach": 4,
+          "boomLength": 8.4
+        },
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 658,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "transport",
+      "progress": 0.5,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/desktop-transport-0.5.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 0.5,
+        "crane": {
+          "base": [
+            -4,
+            0,
+            0
+          ],
+          "pivot": [
+            -4,
+            10,
+            0
+          ],
+          "boomTip": [
+            -0.014743330178496855,
+            17.39437573029348,
+            -0.0306077586570081
+          ],
+          "hook": [
+            -0.014743330178496855,
+            5.467498443137904,
+            -0.0306077586570081
+          ],
+          "lugs": [
+            [
+              -0.09513525504951768,
+              3.6444535745823607,
+              -0.7953637803485661
+            ],
+            [
+              0.06564859469252397,
+              3.9674984431379037,
+              0.7341482630345499
+            ]
+          ],
+          "ropeLength": 11.926877287155575,
+          "horizontalReach": 3.985374205673388,
+          "boomLength": 8.4
+        },
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 658,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "desktop",
+      "mode": "transport",
+      "progress": 1,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/desktop-transport-1.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 1,
+        "crane": {
+          "base": [
+            -4,
+            0,
+            0
+          ],
+          "pivot": [
+            -4,
+            10,
+            0
+          ],
+          "boomTip": [
+            -0.10593555840647477,
+            17.442112589024042,
+            -0.10593553231458971
+          ],
+          "hook": [
+            -0.10593555840647477,
+            5.951809735150344,
+            -0.10593553231458971
+          ],
+          "lugs": [
+            [
+              -0.2608271337972041,
+              2.942609520161117,
+              -0.2608271354281201
+            ],
+            [
+              0.048956016984254586,
+              4.451809735150344,
+              0.048956070798940654
+            ]
+          ],
+          "ropeLength": 11.490302853873697,
+          "horizontalReach": 3.89550512928553,
+          "boomLength": 8.4
+        },
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 658,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "mobile",
+      "mode": "compact",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/mobile-compact-0.png",
+      "metrics": {
+        "mode": "compact",
+        "progress": 0,
+        "crane": null,
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 87854,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 0,
+          "seatedSources": 7290,
+          "triangles": 87852
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    },
+    {
+      "name": "mobile",
+      "mode": "transport",
+      "progress": 0,
+      "path": "artifacts/eiffel-mechanics-2026-09-06/qa-crane/mobile-transport-0.png",
+      "metrics": {
+        "mode": "transport",
+        "progress": 0,
+        "crane": {
+          "base": [
+            -4,
+            0,
+            0
+          ],
+          "pivot": [
+            -4,
+            10,
+            0
+          ],
+          "boomTip": [
+            0,
+            17.386474125047755,
+            0
+          ],
+          "hook": [
+            0,
+            2.6620000064373017,
+            0
+          ],
+          "lugs": [
+            [
+              0,
+              1.1620000064373017,
+              -0.7857506799697876
+            ],
+            [
+              0,
+              1.1620000064373017,
+              0.7857506799697876
+            ]
+          ],
+          "ropeLength": 14.724474118610454,
+          "horizontalReach": 4,
+          "boomLength": 8.4
+        },
+        "renderer": {
+          "frame": 1,
+          "calls": 9,
+          "triangles": 658,
+          "points": 0,
+          "lines": 0
+        },
+        "kit": {
+          "sourceMembers": 7290,
+          "kitPieces": 13814,
+          "ready": true,
+          "visiblePieces": 1,
+          "seatedSources": 0,
+          "triangles": 12
+        },
+        "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+      }
+    }
+  ],
+  "errors": [],
+  "comparison": {
+    "changedPixelFraction": 0.0002183641975308642,
+    "meanChannelError": 0.034858539094650205
+  },
+  "selected": "shaft-00-m000-c000"
+}

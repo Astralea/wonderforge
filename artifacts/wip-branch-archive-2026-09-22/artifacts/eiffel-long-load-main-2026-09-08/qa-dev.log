@@ -1,0 +1,85 @@
+pre [
+  null,               'Jump to The Champ',
+  'Jump to The Iron', 'Jump to The Legs',
+  'Jump to The Join', 'Jump to The Beacon',
+  'Previous wonder',  'Pause',
+  'Next wonder',      'Mute soundtrack',
+  'Enable narration', 'Wonder facts',
+  '1× speed',         '2× speed',
+  '4× speed'
+]
+post [
+  null,               'Jump to The Champ',
+  'Jump to The Iron', 'Jump to The Legs',
+  'Jump to The Join', 'Jump to The Beacon',
+  'Previous wonder',  'Play',
+  'Next wonder',      'Mute soundtrack',
+  'Enable narration', 'Wonder facts',
+  '1× speed',         '2× speed',
+  '4× speed'
+]
+pre [
+  null,
+  'Previous wonder',
+  'Play',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+post [
+  null,
+  'Previous wonder',
+  'Pause',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+pre [
+  null,
+  'Previous wonder',
+  'Pause',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+post [
+  null,
+  'Previous wonder',
+  'Play',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+locator.getAttribute: Error: strict mode violation: locator('script[type="module"]') resolved to 3 elements:
+    1) <script type="module">import { injectIntoGlobalHook } from "/@react-ref…</script> aka locator('script').first()
+    2) <script type="module" src="/@vite/client"></script> aka locator('script').nth(1)
+    3) <script type="module" src="/src/main.tsx?t=1788829499415"></script> aka locator('body script')
+
+Call log:
+[2m  - waiting for locator('script[type="module"]')[22m
+
+    at /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-long-load-main-2026-09-08/qa-dev-desktop.mjs:18:59 {
+  log: [ `  - waiting for locator('script[type="module"]')` ]
+}
+
+Node.js v24.4.0

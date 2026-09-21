@@ -1,0 +1,1 @@
+Initial browser review interrupted by an in-flight Vite source refresh; the temporary imported playback handle was cleared before capture. This run is not verification evidence. Repeat after all source files are frozen.

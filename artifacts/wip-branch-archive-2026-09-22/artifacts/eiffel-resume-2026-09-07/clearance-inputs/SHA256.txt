@@ -1,0 +1,6 @@
+bba024acc6fa57b2c189709b0ebd34aa954876d63823af35e90540f7c56c70f1  artifacts/eiffel-resume-2026-09-07/clearance-inputs/EiffelProductionWorks.ts
+f9df8c5d0b9c061231fa7eb50e451a2c9d2f2c93734022ab72b6519332434b3c  artifacts/eiffel-resume-2026-09-07/clearance-inputs/eiffelConstructionTiming.ts
+4193a4f8d41d6a745ce8fbf8b0c9cc82b1f7cc0c0fbc028090a6ca0ad99018b1  artifacts/eiffel-resume-2026-09-07/clearance-inputs/eiffelProductionConstruction.ts
+aa9b56ad44cdfe664af1856cdb0d0adf7f4f1ade498409b41d900a3fe48a6441  artifacts/eiffel-resume-2026-09-07/clearance-inputs/eiffelStationMap.ts
+0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c  public/models/eiffel-construction-kit/tower-kit.manifest.json
+1cf4d305ca7005b5818f844f88dea476d5f0aecf563432f8748f56727e442180  public/models/eiffel-construction-kit/tower-kit.glb

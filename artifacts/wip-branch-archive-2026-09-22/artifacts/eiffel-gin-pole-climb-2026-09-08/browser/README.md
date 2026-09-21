@@ -1,0 +1,13 @@
+# V9 climbing gin-pole candidate — actual browser QA
+
+Preview: `http://127.0.0.1:5590/artifacts/eiffel-gin-pole-climb-2026-09-08/browser/index.html`. This isolated source-module scene is a70-second kinematic demonstration; it does not replace either production summit cargo lift.
+
+Both desktop1440×900 and mobile390×844 served the actual V9 GLB,1,601,276bytes, SHA256 `f304c1dc033341ca4f2c0acf8e90eb8c8c5562223d60a985bc6d2e2b594c50b4`. Exact saved Blender18-part worker sources are `onward.glb` desktop / `onward-mobile.glb` mobile; response hashes are in each report and local hashes in `source-hashes.json`.
+
+Each mode captured17 poses:0,7,8,9,14,16,18,20,30,31,32,46,60,66,70,14,0 seconds. Reports record actual local/world transforms for moving pole, all fixed guides, paired leaves/keepers, axial pins, crank/drum, and worker hands/feet. All four fixed-guide root matrices stayed identical; reverse-to-zero returned exactly identical recorded roles. Both modes logged zero browser console/page errors. Candidate-only peak counts: desktop34,716triangles/87calls; mobile34,140/87. These are not production whole-scene performance claims.
+
+Inspected desktop crank-close, mobile completed70s, and desktop opposite-side rope-close46s captures. The final wide camera contains the full raised pole/jib and crown support floor. Close views make the connected worker, crank, three sheaves and thin continuous descending line reviewable; structural members still occlude portions of reeving from any one angle. The renderer uses exact sampler chords and0.006m-radius joints/spans, with no spline bending. Focused source tests separately check every chord endpoint, forward/reverse descending endpoints, fixed bone lengths, shared geometry and exactly-once disposal (4tests passed). Parent/Maxwell's actual mechanism collision tests are separate evidence, not inferred from screenshots.
+
+The operator starts already on rung16. Right hand cranks while the left grips the rail; guide opening/keeper operations are still automatic in this mechanism demonstration. Operator access climb, installation, two-person guide work, cargo tackle, drum winding inventory, and both complete summit cargo lifts are not implemented or admitted by this QA. The m075-supported drive also cannot lift its own supporting c001 assembly; see `../design/next-production-integration.md`.
+
+V3 browser evidence is preserved under `../candidate-v3/browser/`, including the initial cropped diagnostic camera and favicon404 in its `initial-camera/` folder. Current root reports/screenshots are V9 only. No production film, camera, or asset family was changed during these captures.

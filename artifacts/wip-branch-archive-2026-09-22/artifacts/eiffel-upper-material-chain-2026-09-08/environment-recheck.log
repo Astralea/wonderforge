@@ -1,0 +1,42 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-rebuilt-environment.test.ts --maxWorkers=1 --minWorkers=1
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ❯ tests/eiffel-rebuilt-environment.test.ts (10 tests | 1 failed) 31224ms
+   ✓ rebuilt Eiffel environment > keeps the full rotated Seine channel submerged and all four foundation pads level 3ms
+   ✓ rebuilt Eiffel environment > keeps only the procedural quay trees when the authored exposition supplies its own plantings 92ms
+   ✓ rebuilt Eiffel environment > gives both street and side facade windows their authored world-space width 86ms
+   ✓ rebuilt Eiffel environment > centers distant bridges on the rotated Seine 36ms
+   × rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment 17797ms
+     → Test timed out in 15000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ rebuilt Eiffel environment > grounds animated soles, hooves and wheels using their transformed vertices  4319ms
+   ✓ rebuilt Eiffel environment > renders the far crowd at real scale with per-object culling and a bounded triangle cost  4485ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  4403ms
+   ✓ rebuilt Eiffel environment > uses the real apparent solar radius rather than an oversized graphic disc 0ms
+   ✓ rebuilt Eiffel environment > keeps temperate blue above a restrained neutral river haze 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-rebuilt-environment.test.ts > rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment
+Error: Test timed out in 15000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/eiffel-rebuilt-environment.test.ts:171:3
+    169|   });
+    170| 
+    171|   it('disposes the asynchronously chunked Paris environment', async ()…
+       |   ^
+    172|     const environment = new EiffelEnvironment(createMaterialLibrary(fi…
+    173|     await environment.ready;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 passed (10)
+   Start at  21:38:57
+   Duration  31.85s (transform 240ms, setup 29ms, collect 344ms, tests 31.22s, environment 0ms, prepare 45ms)
+

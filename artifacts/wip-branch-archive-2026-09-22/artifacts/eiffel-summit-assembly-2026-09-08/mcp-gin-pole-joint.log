@@ -1,0 +1,21 @@
+[09/08/26 14:08:58] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 exact summit mast preassemblies.006", "file": "", "objects": 12}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "candidate-only",
+  "poleMetres": 6,
+  "jibMetres": 3,
+  "collarBoreMetres": 0.18,
+  "baseY": 300.9,
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-assembly-2026-09-08/blender/eiffel-summit-gin-pole-candidate.blend",
+  "remaining": [
+    "final-source collar and route contact proof",
+    "rope drive and bands",
+    "supported climbing transition",
+    "initial freight handoff"
+  ]
+}

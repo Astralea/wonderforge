@@ -1,0 +1,23 @@
+
+> wonderforge@0.1.0 dev
+> vite --host 127.0.0.1 --port 5590 --strictPort
+
+
+  VITE v7.3.6  ready in 217 ms
+
+  ➜  Local:   http://127.0.0.1:5590/
+10:08:07 PM [vite] (client) hmr update /src/index.css, /src/render/three/ThreeCanvas.tsx
+10:08:43 PM [vite] (client) hmr update /src/index.css, /src/render/three/ThreeCanvas.tsx
+10:08:43 PM [vite] (client) hmr update /src/index.css, /src/ui/CaptionLayer.tsx
+10:08:43 PM [vite] (client) hmr update /src/index.css
+10:09:08 PM [vite] (client) hmr update /src/index.css, /src/ui/Home.tsx, /src/ui/CinematicView.tsx
+10:09:08 PM [vite] (client) hmr update /src/index.css, /src/ui/Home.tsx, /src/ui/CinematicView.tsx
+10:09:42 PM [vite] (client) hmr update /src/render/three/ThreeCanvas.tsx, /src/index.css
+10:11:45 PM [vite] (client) hmr update /src/index.css, /src/ui/CaptionBeatIndex.tsx, /src/ui/QuoteOverlay.tsx, /src/ui/CaptionLayer.tsx
+10:11:45 PM [vite] (client) hmr update /src/index.css, /src/ui/CaptionLayer.tsx
+10:12:46 PM [vite] (client) page reload src/engine/eiffelFilmEdit.ts
+10:15:32 PM [vite] (client) hmr update /src/index.css, /src/ui/Home.tsx, /src/ui/CinematicView.tsx, /src/ui/SoundToggle.tsx, /src/ui/CaptionVoiceToggle.tsx, /src/ui/CaptionLayer.tsx
+10:15:32 PM [vite] (client) hmr update /src/App.tsx, /src/ui/Home.tsx, /src/ui/CinematicView.tsx, /src/ui/Gallery.tsx, /src/index.css
+10:15:32 PM [vite] (client) hmr update /src/index.css, /src/ui/TransportBar.tsx
+10:15:32 PM [vite] (client) hmr update /src/ui/CinematicView.tsx, /src/index.css
+10:26:34 PM [vite] (client) hmr update /src/index.css, /src/render/three/ThreeCanvas.tsx

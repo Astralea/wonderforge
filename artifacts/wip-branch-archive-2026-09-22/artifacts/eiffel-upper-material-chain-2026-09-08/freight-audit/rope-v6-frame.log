@@ -1,0 +1,27 @@
+[
+  {
+    "id": "replacement-upper-rope-eye009",
+    "roles": [
+      "upper-197-clevis"
+    ],
+    "pairs": 40
+  },
+  {
+    "id": "upper-197-fixed-feed-sheave_groove003",
+    "roles": [
+      "upper-197-fixed-feed-sheave",
+      "upper-197-fixed-frame"
+    ],
+    "pairs": 24
+  },
+  {
+    "id": "head_sheave_groove008",
+    "roles": [
+      "upper-197-head-sheave",
+      "upper-197-cross-trolley",
+      "upper-197-travel-bridge"
+    ],
+    "pairs": 24
+  }
+]
+[]

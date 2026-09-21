@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-gin-pole-climb-asset.test.ts (9 tests) 1478ms
+   ✓ actual Blender summit gin-pole climb candidate > keeps the complete moving vertical rope outside every actual guide leaf sweep  903ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  16:03:33
+   Duration  2.14s (transform 310ms, setup 16ms, collect 489ms, tests 1.48s, environment 0ms, prepare 31ms)
+

@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-rebuilt-environment.test.ts (7 tests) 97ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  23:23:10
+   Duration  448ms (transform 108ms, setup 0ms, collect 157ms, tests 97ms, environment 0ms, prepare 80ms)
+

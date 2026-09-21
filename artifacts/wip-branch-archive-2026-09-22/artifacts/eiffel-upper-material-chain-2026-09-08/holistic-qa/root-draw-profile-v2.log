@@ -1,0 +1,217 @@
+{
+  "edit": "cinematic",
+  "t": 0.506,
+  "diagnostics": {
+    "calls": 136,
+    "triangles": 279091,
+    "points": 0,
+    "lines": 3,
+    "geometries": 136,
+    "textures": 201
+  },
+  "color": 229134,
+  "shadow": 49954,
+  "top": [
+    {
+      "name": "eiffel-kit-iron-0",
+      "parent": "eiffel-bounded-construction-kit",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "",
+      "pass": "color",
+      "triangles": 69888,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-paris-city-batch",
+      "parent": "eiffel-paris-1889-city",
+      "grandparent": "eiffel-environment",
+      "material": "",
+      "pass": "color",
+      "triangles": 55854,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-champ-floor",
+      "parent": "eiffel-environment",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "",
+      "pass": "color",
+      "triangles": 8442,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-kit-dark-iron-28",
+      "parent": "eiffel-bounded-construction-kit",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "",
+      "pass": "color",
+      "triangles": 6576,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-traffic-near-wagons",
+      "parent": "eiffel-paris-1889-traffic",
+      "grandparent": "eiffel-environment",
+      "material": "",
+      "pass": "color",
+      "triangles": 6224,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "second-floor-relay-batch-6",
+      "parent": "eiffel-second-floor-relay-candidate",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Winch dark steel.018",
+      "pass": "color",
+      "triangles": 5800,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "second-floor-relay-batch-4",
+      "parent": "eiffel-second-floor-relay-candidate",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Onward forged iron.008",
+      "pass": "color",
+      "triangles": 5588,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-10",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Rope eyes.006",
+      "pass": "shadow",
+      "triangles": 4944,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-10",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Rope eyes.006",
+      "pass": "color",
+      "triangles": 4944,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "second-floor-relay-batch-4",
+      "parent": "eiffel-second-floor-relay-candidate",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Onward forged iron.008",
+      "pass": "shadow",
+      "triangles": 4692,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-traffic-near-wagons",
+      "parent": "eiffel-paris-1889-traffic",
+      "grandparent": "eiffel-environment",
+      "material": "",
+      "pass": "shadow",
+      "triangles": 4644,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-9",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Carrier dark iron.001",
+      "pass": "shadow",
+      "triangles": 4044,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-9",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Carrier dark iron.001",
+      "pass": "color",
+      "triangles": 4044,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-2",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Winch dark steel.004",
+      "pass": "shadow",
+      "triangles": 3356,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-2",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Winch dark steel.004",
+      "pass": "color",
+      "triangles": 3356,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-4",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Freight bridge iron.010",
+      "pass": "shadow",
+      "triangles": 3084,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "long-load-export-batch-4",
+      "parent": "eiffel-long-load-first-floor",
+      "grandparent": "eiffel-tower-reference-world",
+      "material": "Freight bridge iron.010",
+      "pass": "color",
+      "triangles": 3084,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-traffic-far-people",
+      "parent": "eiffel-paris-1889-traffic",
+      "grandparent": "eiffel-environment",
+      "material": "",
+      "pass": "color",
+      "triangles": 2504,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "eiffel-traffic-far-heads",
+      "parent": "eiffel-paris-1889-traffic",
+      "grandparent": "eiffel-environment",
+      "material": "",
+      "pass": "color",
+      "triangles": 2488,
+      "calls": 1,
+      "objects": 1
+    },
+    {
+      "name": "onward-export-batch-1",
+      "parent": "eiffel-long-load-onward",
+      "grandparent": "eiffel-long-load-first-floor",
+      "material": "Onward forged iron.007",
+      "pass": "shadow",
+      "triangles": 2472,
+      "calls": 1,
+      "objects": 1
+    }
+  ],
+  "errors": []
+}

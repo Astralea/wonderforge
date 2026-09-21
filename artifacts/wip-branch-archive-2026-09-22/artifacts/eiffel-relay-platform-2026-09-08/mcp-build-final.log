@@ -1,0 +1,22 @@
+[09/08/26 03:10:57] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 supported 197m relay platform", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-relay-platform-2026-09-08/blender/eiffel-relay-platform.blend", "objects": 5420}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 supported 197m relay platform.001",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-relay-platform-2026-09-08/blender/eiffel-relay-platform.blend",
+    "floorY": 197,
+    "sourcePrisms": 144,
+    "productionReady": false,
+    "limits": [
+      "Authored fitted collars, not rated anchor/bolt capacity.",
+      "Erection, central guide support, winch mounting and cargo/rope lifecycle not admitted."
+    ]
+  },
+  "stdout": "03:11:14 | INFO: Starting glTF 2.0 export\n03:11:15 | INFO: Extracting primitive: deck-z--1.001\n03:11:15 | INFO: Primitives created: 1\n03:11:15 | INFO: Extracting primitive: collar-0-0--1.001\n03:11:15 | INFO: Primitives created: 1\n03:11:15 | INFO: Finished glTF 2.0 export in 0.14266419410705566 s\n\n03:11:15 | INFO: Data are loaded, start creating Blender stuff\n03:11:15 | INFO: Blender create Mesh node linked-unit-beam-iron.006\n03:11:21 | INFO: Blender create Mesh node 1889-curved-beacon-cupola.003\n03:11:21 | INFO: Blender create Mesh node linked-unit-beam-deck.006\n03:11:21 | INFO: Blender create Mesh node linked-unit-beam-window.003\n03:11:23 | INFO: Blender create Mesh node linked-unit-beam-dark-iron.006\n03:11:23 | INFO: Blender create Mesh node linked-unit-beam-masonry.006\n03:11:30 | INFO: Blender create Mesh node linked-unit-beam-gold.006\n03:11:33 | INFO: Blender create Mesh node linked-unit-beam-roof.003\n03:11:34 | INFO: glTF import finished in 18.87s\nInfo: Saved as \"eiffel-relay-platform.blend\"\n"
+}

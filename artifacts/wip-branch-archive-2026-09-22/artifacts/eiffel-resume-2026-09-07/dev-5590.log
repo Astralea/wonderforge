@@ -1,0 +1,12 @@
+
+> wonderforge@0.1.0 dev
+> vite --host 127.0.0.1 --port 5590 --strictPort
+
+
+  VITE v7.3.6  ready in 150 ms
+
+  ➜  Local:   http://127.0.0.1:5590/
+6:12:01 PM [vite] (client) page reload src/render/three/eiffelParis.ts
+6:14:24 PM [vite] (client) page reload src/data/eiffelSky.ts
+6:15:45 PM [vite] (client) page reload src/render/three/eiffelParis.ts
+6:18:38 PM [vite] (client) page reload src/render/three/eiffelParis.ts

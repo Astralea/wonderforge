@@ -1,0 +1,17 @@
+[09/08/26 07:20:05] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 real long-load lifting carrier", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-long-load-carrier-2026-09-08/blender/eiffel-long-load-carrier.blend", "objects": 10}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 long-load master link",
+    "objects": 11,
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-master-link-2026-09-08/blender/eiffel-master-link.blend",
+    "productionReady": false
+  },
+  "stdout": "07:20:06 | INFO: Starting glTF 2.0 export\n07:20:06 | INFO: Extracting primitive: lower-rope-eye-0\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: lower-rope-eye-1\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: lower-rope-eye-2\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: lower-rope-eye-3\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: Torus\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: sling-leg-0\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: sling-leg-1\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: sling-leg-2\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: sling-leg-3\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Extracting primitive: upper-rope-eye\n07:20:06 | INFO: Primitives created: 1\n07:20:06 | INFO: Finished glTF 2.0 export in 0.03999900817871094 s\n\nInfo: Saved as \"eiffel-master-link.blend\"\n"
+}

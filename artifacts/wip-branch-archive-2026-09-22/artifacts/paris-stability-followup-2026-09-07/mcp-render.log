@@ -1,0 +1,5 @@
+[09/07/26 22:31:25] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/07/26 22:31:29] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+meta=None content=[TextContent(type='text', text='{\n  "status": "ok",\n  "result": {\n    "scene": "WonderForge Paris 1889 — photograph-led Exposition.011",\n    "renders": [\n      "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-stability-followup-2026-09-07/renders/north-bank-roofscape.png"\n    ]\n  }\n}', annotations=None, meta=None)] structuredContent={'status': 'ok', 'result': {'scene': 'WonderForge Paris 1889 — photograph-led Exposition.011', 'renders': ['/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-stability-followup-2026-09-07/renders/north-bank-roofscape.png']}} isError=False

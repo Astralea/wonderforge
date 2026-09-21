@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-relay-receiving.test.ts tests/eiffel-relay-winch.test.ts tests/eiffel-relay-winch-asset.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-relay-winch-asset.test.ts (3 tests) 17ms
+ ✓ tests/eiffel-relay-winch.test.ts (3 tests) 14ms
+ ✓ tests/eiffel-relay-receiving.test.ts (3 tests) 142ms
+
+ Test Files  3 passed (3)
+      Tests  9 passed (9)
+   Start at  04:00:44
+   Duration  370ms (transform 88ms, setup 79ms, collect 215ms, tests 172ms, environment 0ms, prepare 159ms)
+

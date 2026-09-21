@@ -1,0 +1,55 @@
+[09/08/26 00:38:19] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/08/26 00:38:20] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 independent face-joint packing tray", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-package-2026-09-08/blender/eiffel-face-package.blend", "objects": 31}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 independent face-joint packing tray.001",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-face-package-2026-09-08/blender/eiffel-face-package.blend",
+    "productionAdmitted": false,
+    "sourceCandidateSHA256": "292cea3c72451782f7da641d5f970c4d4f192835f2c31b16a84272a5bd2aa5cb",
+    "sourceOrigin": [
+      51.45428527832031,
+      19.065,
+      -43.199999237060545
+    ],
+    "payloadOriginOnCartY": 0.858,
+    "cartBedTopY": 0.57,
+    "liftingEyes": [
+      [
+        -0.244,
+        0.276,
+        -0.5
+      ],
+      [
+        -0.244,
+        0.276,
+        0.5
+      ],
+      [
+        0.244,
+        0.276,
+        -0.5
+      ],
+      [
+        0.244,
+        0.276,
+        0.5
+      ]
+    ],
+    "densitiesKgM3": {
+      "timber": 600,
+      "iron": 7800
+    },
+    "limits": [
+      "Independent packing geometry; no lift or installation admission.",
+      "Measure actual support, mass/COM, bridle, crane and path before use.",
+      "Parts remain loose in the shaped tray; permanent fastening and unloading are not yet modelled."
+    ]
+  },
+  "stdout": "00:38:21 | INFO: Starting glTF 2.0 export\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-0-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-1-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-2-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-3-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c000.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c001.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c002.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c003.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c004.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: tray-bearing-bands-and-eyes-iron.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: tray-floor-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: tray-open-frame-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Finished glTF 2.0 export in 0.027423858642578125 s\n\n00:38:21 | INFO: Starting glTF 2.0 export\n00:38:21 | INFO: Extracting primitive: package-cart-body-iron.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-cart-body-timber-dark.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-cart-body-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-wheel-iron.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-wheel-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Finished glTF 2.0 export in 0.023613929748535156 s\n\n00:38:21 | INFO: Starting glTF 2.0 export\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-0-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-1-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-2-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: fitted-packing-cleat-3-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c000.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c001.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c002.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c003.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: lower-ne-02-m015-c004.005\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-cart-body-iron.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-cart-body-timber-dark.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-cart-body-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-wheel-iron.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: package-wheel-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: tray-bearing-bands-and-eyes-iron.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: tray-floor-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Extracting primitive: tray-open-frame-timber.001\n00:38:21 | INFO: Primitives created: 1\n00:38:21 | INFO: Finished glTF 2.0 export in 0.04755711555480957 s\n\nInfo: Saved as \"eiffel-face-package.blend\"\n"
+}

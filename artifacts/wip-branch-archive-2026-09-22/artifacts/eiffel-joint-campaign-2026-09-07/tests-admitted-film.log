@@ -1,0 +1,17 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-film.test.ts tests/eiffel-delivery-camera.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-film.test.ts (10 tests) 26ms
+ ✓ tests/eiffel-delivery-camera.test.ts (7 tests) 10467ms
+   ✓ supported ground delivery camera > keeps the near-frustum clear of all final tower solids and actual falsework while exposing the moving payload at useful pixel scale  8601ms
+   ✓ two-load supported joint campaign camera > keeps the5m near-frustum outside every final tower solid during both close follows and fastening  1586ms
+
+ Test Files  2 passed (2)
+      Tests  17 passed (17)
+   Start at  21:49:03
+   Duration  10.79s (transform 212ms, setup 0ms, collect 382ms, tests 10.49s, environment 0ms, prepare 58ms)
+

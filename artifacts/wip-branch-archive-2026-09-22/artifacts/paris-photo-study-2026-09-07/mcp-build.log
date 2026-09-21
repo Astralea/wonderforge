@@ -1,0 +1,24 @@
+[09/07/26 19:40:09] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/07/26 19:40:12] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition.009",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-photo-study-2026-09-07/blender/paris-1889.blend",
+    "cityTriangles": 233722,
+    "actors": {
+      "pedestrian-man.014": 216,
+      "pedestrian-woman.014": 256,
+      "horse.014": 216,
+      "cart.014": 1532,
+      "carriage.014": 1580,
+      "steam-boat.014": 404,
+      "barge.014": 104
+    },
+    "cityBytes": 13289512,
+    "lifeBytes": 249076
+  },
+  "evidence": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-photo-study-2026-09-07/blender/mcp-build-result.json"
+}

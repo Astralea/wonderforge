@@ -1,0 +1,160 @@
+{
+  "sourceHashes": {
+    "src/engine/eiffelSignatureTiming.ts": "53c504351ae7aff7b269138dbf8cd326280b6b45a5a2c7fd0306e55d3070961e",
+    "src/engine/eiffelConstructionTiming.ts": "f9df8c5d0b9c061231fa7eb50e451a2c9d2f2c93734022ab72b6519332434b3c",
+    "src/data/eiffelUpperRoutes.json": "cfd07aeb57f41eb1f1e91799b73849284933676612f126aeae5d60d80f0b7d6b",
+    "public/models/eiffel-construction-kit/tower-kit.manifest.json": "0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c"
+  },
+  "selection": [
+    {
+      "silhouette": "at-least-one-pixel",
+      "projectionScope": "route-samples",
+      "routeSampleCount": 6,
+      "id": "lower-pylon",
+      "partId": "lower-ne-08-m008-c000",
+      "stage": 9,
+      "start": 0.09,
+      "end": 0.13,
+      "frontness": 0.9600498543859285,
+      "clearance": "needs-route-validation",
+      "desktop": {
+        "longPixels": 22.563490877642575,
+        "effectiveWidthPixels": 4.024846396792987,
+        "areaPixels": 100.86051541985944,
+        "entirelyInFrame": true
+      },
+      "mobile": {
+        "longPixels": 8.04463733529155,
+        "effectiveWidthPixels": 1.4181781141671728,
+        "areaPixels": 12.446687015806674,
+        "entirelyInFrame": true
+      },
+      "group": "leg",
+      "leg": "ne",
+      "transportSize": [
+        0.6399999856948853,
+        0.4991999864578247,
+        5.771538257598877
+      ],
+      "center": [
+        32.869232177734375,
+        54.5,
+        -32.869232177734375
+      ]
+    },
+    {
+      "silhouette": "at-least-one-pixel",
+      "projectionScope": "route-samples",
+      "routeSampleCount": 6,
+      "id": "first-floor",
+      "partId": "platform-1-0-05-m000-c014",
+      "stage": 23,
+      "start": 0.265,
+      "end": 0.305,
+      "frontness": 0.9969049840224373,
+      "clearance": "sampled-clear",
+      "desktop": {
+        "longPixels": 26.90188908932775,
+        "effectiveWidthPixels": 5.561181982486232,
+        "areaPixels": 149.91410016760346,
+        "entirelyInFrame": true
+      },
+      "mobile": {
+        "longPixels": 10.899321989020713,
+        "effectiveWidthPixels": 2.2946370514370917,
+        "areaPixels": 25.182829788376694,
+        "entirelyInFrame": true
+      },
+      "group": "platform",
+      "leg": "axis",
+      "transportSize": [
+        2.339999961853027,
+        0.4399999976158142,
+        4.933333396911621
+      ],
+      "center": [
+        33.93000030517578,
+        57.720001220703125,
+        -32.63333511352539
+      ]
+    },
+    {
+      "silhouette": "subpixel-width-review",
+      "projectionScope": "route-samples",
+      "routeSampleCount": 6,
+      "id": "shaft",
+      "partId": "shaft-15-m008-c001",
+      "stage": 50,
+      "start": 0.54,
+      "end": 0.58,
+      "frontness": 0.7660446115282507,
+      "clearance": "needs-route-validation",
+      "desktop": {
+        "longPixels": 14.997902720181601,
+        "effectiveWidthPixels": 0.7564587226032857,
+        "areaPixels": 13.019279528480183,
+        "entirelyInFrame": true
+      },
+      "mobile": {
+        "longPixels": 10.39653110184202,
+        "effectiveWidthPixels": 0.5243764267267905,
+        "areaPixels": 6.2560873101210746,
+        "entirelyInFrame": true
+      },
+      "group": "shaft",
+      "leg": "axis",
+      "transportSize": [
+        0.2800000011920929,
+        0.2184000015258789,
+        5.50181770324707
+      ],
+      "center": [
+        4.550002574920654,
+        250.25,
+        -4.550000190734863
+      ]
+    },
+    {
+      "silhouette": "subpixel-width-review",
+      "projectionScope": "route-samples",
+      "routeSampleCount": 6,
+      "id": "summit",
+      "partId": "summit-apartment-roof-m001-c002",
+      "stage": 57,
+      "start": 0.78,
+      "end": 0.82,
+      "frontness": 0.9917145414938835,
+      "clearance": "needs-route-validation",
+      "desktop": {
+        "longPixels": 12.244293547071653,
+        "effectiveWidthPixels": 0.449127885279985,
+        "areaPixels": 5.560655118038994,
+        "entirelyInFrame": true
+      },
+      "mobile": {
+        "longPixels": 8.89491116170866,
+        "effectiveWidthPixels": 0.32800627045773495,
+        "areaPixels": 2.9586253713350743,
+        "entirelyInFrame": true
+      },
+      "group": "lantern",
+      "leg": "axis",
+      "transportSize": [
+        2.200000047683716,
+        0.20000000298023224,
+        5.199999809265137
+      ],
+      "center": [
+        4.099999904632568,
+        283.25,
+        2.5999999046325684
+      ]
+    }
+  ],
+  "scheduledParts": 13814,
+  "waves": 3579,
+  "ordinaryMedianSeconds": 0.00899346405228929,
+  "ordinaryUnder60fps": 11503,
+  "routeRevalidationRequired": true,
+  "productionIntegrated": false
+}

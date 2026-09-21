@@ -1,0 +1,28 @@
+[09/08/26 11:50:38] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/08/26 11:50:40] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{
+  "status": "ok",
+  "result": {
+    "reloaded": [
+      {
+        "file": "eiffel-long-load-onward.blend",
+        "objects": 261,
+        "meshes": 176
+      },
+      {
+        "file": "eiffel-retained-sling.blend",
+        "objects": 14,
+        "meshes": 13
+      },
+      {
+        "file": "eiffel-onward-bridge.blend",
+        "objects": 50,
+        "meshes": 48
+      }
+    ],
+    "render": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-long-load-onward-2026-09-08/renders/opening-clevis.png",
+    "reviewBlend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-long-load-onward-2026-09-08/blender/eiffel-onward-mechanism-review.blend"
+  }
+}

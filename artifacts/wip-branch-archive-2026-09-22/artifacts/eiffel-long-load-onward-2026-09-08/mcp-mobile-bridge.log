@@ -1,0 +1,34 @@
+[09/08/26 12:41:32] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 mobile retained sling", "file": "", "objects": 14}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "ironSourceComponents": 246,
+    "ironChunks": 12,
+    "ironTrianglesBefore": 2952,
+    "ironTrianglesAfter": 2952,
+    "fixedPlanksBefore": 198,
+    "fixedPlankEnvelopeAfter": 1,
+    "maximumFilledPlankGapMetres": 0.0,
+    "timberLocalBounds": [
+      [
+        -19.299999237060547,
+        3.0999999046325684,
+        -0.07999999821186066
+      ],
+      [
+        20.299999237060547,
+        4.900000095367432,
+        0.0
+      ]
+    ],
+    "objects": 62,
+    "desktopUnchanged": true
+  },
+  "stdout": "12:41:32 | INFO: Starting glTF 2.0 export\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk 0\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk 1\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk 2\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk 3\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk 4\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk 5\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk -1\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk -2\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk -3\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk -4\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk -5\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: bridge-iron chunk -6\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Continuous fixed plank envelope\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: plank-000.006\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: plank-001.006\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: plank-002.006\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: plank-003.006\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: plank-004.006\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: axle-bearing.037\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: axle-bearing.038\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: axle-bearing.039\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: axle-bearing.040\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.657\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.659\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.661\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.663\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.658\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.660\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.662\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.664\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: cart-axle.019\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: cart-axle.020\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: cart-bed.010\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.653\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.654\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.655\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cylinder.656\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.813\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.814\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.817\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.818\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.821\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.822\n12:41:32 | INFO: Primitives created: 1\n12:41:32 | INFO: Extracting primitive: Cube.825\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.826\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.811\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.812\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.815\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.816\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.819\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.820\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.823\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.824\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: push-handle-bar.010\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: push-handle-tie.019\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: push-handle-tie.020\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: push-handle-upright.019\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: push-handle-upright.020\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Extracting primitive: Cube.810\n12:41:33 | INFO: Primitives created: 1\n12:41:33 | INFO: Finished glTF 2.0 export in 0.03795194625854492 s\n\n"
+}

@@ -1,0 +1,25 @@
+
+> wonderforge@0.1.0 test
+> vitest run --reporter=dot
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+·············································································································································································································································································································································································································································································································································x·····························································
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-foundation-crew.test.ts > foundation crew steering and gait > grounds stance feet and steers the whole team around every bearing
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/eiffel-foundation-crew.test.ts:15:2
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 77 passed (78)
+      Tests  1 failed | 586 passed (587)
+   Start at  23:15:50
+   Duration  22.73s (transform 4.04s, setup 1.23s, collect 100.34s, tests 107.97s, environment 652ms, prepare 3.72s)
+

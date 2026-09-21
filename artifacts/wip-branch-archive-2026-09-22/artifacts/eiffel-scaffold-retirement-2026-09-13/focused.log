@@ -1,0 +1,52 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-ground-plant-retirement.test.ts tests/eiffel-ground-lift-renderer.test.ts tests/eiffel-world-cut-visibility.test.ts tests/eiffel-film-edit.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-ground-lift-renderer.test.ts (4 tests) 376ms
+   ✓ actual Blender ground-lift renderer > matches the sampled hoist apex with the articulated exported jib throughout the passage  324ms
+ ✓ tests/eiffel-world-cut-visibility.test.ts (4 tests) 15ms
+ ❯ tests/eiffel-ground-plant-retirement.test.ts (3 tests | 1 failed) 165ms
+   ✓ keeps all ground plant across 26–27%, until the first-floor deck is complete 9ms
+   ✓ staggers unloaded plant removal and removes crane before its support from the top down 122ms
+   × renders each station retirement independently and restores exact rigid matrices on reverse seek 33ms
+     → expected true to be false // Object.is equality
+ ✓ tests/eiffel-film-edit.test.ts (8 tests) 40131ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1450ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  14686ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3520ms
+   ✓ budgets readable structural rise and retains every seated identity through dense forward and reverse seeks  20219ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-ground-plant-retirement.test.ts > renders each station retirement independently and restores exact rigid matrices on reverse seek
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/eiffel-ground-plant-retirement.test.ts:72:173
+     70|     expect(timber.count+iron.count).toBe(nw.seatedSupportCount);
+     71|     at(90);snapshot();
+     72|     system.group.traverse(o=>{if(o instanceof InstancedMesh)expect(o.c…
+       |                                                                                                                                                                             ^
+     73|     at(74);expect(snapshot()).toEqual(expected);
+     74|     at(48.6);expect(timber.count+iron.count).toBe(0);
+ ❯ BatchedMesh.traverse node_modules/three/build/three.core.js:12807:3
+ ❯ Group.traverse node_modules/three/build/three.core.js:12813:18
+ ❯ Group.traverse node_modules/three/build/three.core.js:12813:18
+ ❯ tests/eiffel-ground-plant-retirement.test.ts:72:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 18 passed (19)
+   Start at  21:58:25
+   Duration  40.67s (transform 596ms, setup 47ms, collect 1.14s, tests 40.69s, environment 0ms, prepare 137ms)
+

@@ -1,0 +1,14 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-second-floor-supply.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-second-floor-supply.test.ts (4 tests) 194ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  04:19:29
+   Duration  559ms (transform 48ms, setup 25ms, collect 164ms, tests 194ms, environment 0ms, prepare 52ms)
+

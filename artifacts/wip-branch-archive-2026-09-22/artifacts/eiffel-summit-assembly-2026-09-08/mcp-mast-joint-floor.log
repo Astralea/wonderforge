@@ -1,0 +1,21 @@
+[09/08/26 14:18:53] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "Scene", "file": "", "objects": 3}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "partId": "summit-crown-m072-c000",
+  "sourceColumnTop": 300.51001358032227,
+  "sourceFloorTop": 300.6700134277344,
+  "nextMastBottom": 302.6666667461395,
+  "editedBottom": 300.6700083017349,
+  "editedTop": 302.6666616201401,
+  "length": 1.9966533184051514,
+  "removedOverlap": 2.670013427734375,
+  "onlyChangedKitNode": "summit-crown-m072-c000",
+  "onlyChangedCompactNode": "summit-crown/member-072",
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-assembly-2026-09-08/blender/eiffel-tower-mast-joint.blend",
+  "binaryChunksPreserved": true
+}

@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-rigid.test.ts (6 tests) 126ms
+ ✓ tests/eiffel-kit.test.ts (3 tests) 3279ms
+   ✓ bounded Blender Eiffel construction kit > maps every real exported vertex to its canonical rigid cargo frame  2988ms
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  23:45:25
+   Duration  3.57s (transform 71ms, setup 0ms, collect 158ms, tests 3.41s, environment 0ms, prepare 95ms)
+

@@ -1,0 +1,23 @@
+[09/08/26 02:37:10] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 summit terrace stock racks", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variation-2026-09-08/blender/paris-1889.blend", "objects": 6568}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 summit terrace stock racks.001",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-summit-stock-2026-09-08/blender/eiffel-summit-stock.blend",
+    "racks": 8,
+    "sourcePrisms": 176,
+    "plannedStock": 247,
+    "productionReady": false,
+    "limits": [
+      "Stock envelopes are hidden in renders; fitted cradles/restraints and extraction remain unresolved.",
+      "Bearing geometry is not a rated-capacity calculation; rack erection and crane lifecycle are not animated."
+    ]
+  },
+  "stdout": "02:37:21 | INFO: Starting glTF 2.0 export\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-0-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-1-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | WARNING: Mesh summit-stock-rack-2-foot--1--1.001 is not valid, and may be exported wrongly\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-2-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | WARNING: Mesh summit-stock-rack-3-foot--1--1.001 is not valid, and may be exported wrongly\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-3-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-4-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-5-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-6-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | INFO: Extracting primitive: summit-stock-rack-7-foot--1--1.001\n02:37:21 | INFO: Primitives created: 1\n02:37:21 | INFO: Finished glTF 2.0 export in 0.1561877727508545 s\n\n02:37:21 | INFO: Data are loaded, start creating Blender stuff\n02:37:21 | INFO: Blender create Mesh node linked-unit-beam-iron.006\n02:37:26 | INFO: Blender create Mesh node 1889-curved-beacon-cupola.003\n02:37:26 | INFO: Blender create Mesh node linked-unit-beam-deck.006\n02:37:27 | INFO: Blender create Mesh node linked-unit-beam-window.003\n02:37:28 | INFO: Blender create Mesh node linked-unit-beam-dark-iron.006\n02:37:29 | INFO: Blender create Mesh node linked-unit-beam-masonry.006\n02:37:35 | INFO: Blender create Mesh node linked-unit-beam-gold.006\n02:37:38 | INFO: Blender create Mesh node linked-unit-beam-roof.003\n02:37:38 | INFO: glTF import finished in 16.55s\nInfo: Saved as \"eiffel-summit-stock.blend\"\n"
+}

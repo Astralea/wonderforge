@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-summit-work-camera.test.ts (5 tests) 458ms
+   ✓ final summit working view > keeps the complete five-metre near frustum clear of all completed tower solids  379ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  13:19:51
+   Duration  746ms (transform 94ms, setup 15ms, collect 139ms, tests 458ms, environment 0ms, prepare 32ms)
+

@@ -1,0 +1,224 @@
+{
+  "identities": {
+    "public/models/eiffel-construction-kit/tower-kit.glb": "8c597d707ba70a38870075c5ebc22ca0092fcaeb253ce43ea030e3d57a9908f1",
+    "public/models/eiffel-second-floor-relay/relay.glb": "4b71e83c5e2403feceb44e6da7543fcc3ac96736af969adabdd96807067f4e76",
+    "artifacts/eiffel-relay-platform-2026-09-08/model/platform.glb": "558f8b9c3313e0bf5b76f12e74c66b135edc73207c36ae831d20094e8eff3ac7"
+  },
+  "filter": {
+    "maxStage": 59.55,
+    "excludedPartId": "summit-access-stair-m000-c000",
+    "scope": "Conservative stage envelope, includes same-stage future members; actual GLB surface triangles"
+  },
+  "obstacleMeshes": 13760,
+  "segments": [
+    {
+      "id": "second-floor-inward",
+      "a": [
+        -15,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -2,
+        116.47999939,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-second-floor-relay/relay.glb:side-brace-negative007"
+      ]
+    },
+    {
+      "id": "central-rise",
+      "a": [
+        -2,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -1.8
+      ],
+      "hits": []
+    },
+    {
+      "id": "platform-land-cross",
+      "a": [
+        -2,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "id": "platform-land-down",
+      "a": [
+        -2,
+        198,
+        -3.6
+      ],
+      "b": [
+        -2,
+        197,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "id": "outer-rise",
+      "a": [
+        -15,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -15,
+        198,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m026-c003",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m027-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m028-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m029-c003",
+        "eiffel-second-floor-relay/relay.glb:girder-1007",
+        "eiffel-second-floor-relay/relay.glb:girder--1007"
+      ]
+    },
+    {
+      "id": "outer-enter",
+      "a": [
+        -15,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m025-c001",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m026-c001",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m026-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m030-c001",
+        "model/platform.glb:relay-structure"
+      ]
+    }
+  ]
+}
+{
+  "sha": "797b38244b6d219cc520eaec436052efa962fc74440c4a70bd143e5b62ef7399",
+  "meshes": 265,
+  "clashes": [],
+  "route": [
+    {
+      "a": [
+        -2,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "a": [
+        -2,
+        198,
+        -3.6
+      ],
+      "b": [
+        -2,
+        197.34,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "a": [
+        -2,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        0.6
+      ],
+      "hits": []
+    },
+    {
+      "a": [
+        -2,
+        198,
+        0.6
+      ],
+      "b": [
+        0,
+        198,
+        0.6
+      ],
+      "hits": []
+    }
+  ],
+  "rings": [
+    {
+      "id": "drum_bearing_stand006",
+      "roles": [
+        "upper-197-fixed-frame"
+      ],
+      "min": [
+        4.24000009894371,
+        196.9999938905239,
+        -4.647500153630972
+      ],
+      "max": [
+        4.560000091791153,
+        197.79999390244484,
+        -4.532500151544809
+      ]
+    },
+    {
+      "id": "drum_bearing_stand007",
+      "roles": [
+        "upper-197-fixed-frame"
+      ],
+      "min": [
+        4.24000009894371,
+        196.9999938905239,
+        -3.487500086426735
+      ],
+      "max": [
+        4.560000091791153,
+        197.79999390244484,
+        -3.332500085234642
+      ]
+    },
+    {
+      "id": "drum-shaft003",
+      "roles": [
+        "upper-197-drum",
+        "upper-197-steam-drive"
+      ],
+      "min": [
+        4.344999526659671,
+        197.74501821867628,
+        -4.709999239459323
+      ],
+      "max": [
+        4.454999710400876,
+        197.85501840241747,
+        -3.3099993295821672
+      ]
+    }
+  ]
+}

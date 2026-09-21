@@ -1,0 +1,23 @@
+{
+  "rear": 5.6,
+  "guide": 7.75,
+  "clear": true,
+  "staticHits": [],
+  "routeHits": [
+    {
+      "leg": "vertical",
+      "hits": []
+    },
+    {
+      "leg": "diagonal",
+      "hits": []
+    },
+    {
+      "leg": "lower",
+      "hits": []
+    }
+  ],
+  "ropeFailures": [],
+  "ropeFailureCount": 0,
+  "footMisses": []
+}

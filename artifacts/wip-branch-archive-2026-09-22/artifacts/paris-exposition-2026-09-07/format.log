@@ -1,0 +1,5 @@
+src/render/three/eiffelParis.ts 83ms
+src/engine/eiffelConstructionTiming.ts 13ms
+tests/paris-assets.test.ts 24ms
+tests/eiffel-timing.test.ts 5ms
+scripts/qa-paris-exposition.mjs 16ms

@@ -1,0 +1,28 @@
+{
+  "assetSHA256": "6cc3331fb6ce448dbe379a7f0b3bd3c15067a05453da43032ed6fd1eb74fedc1",
+  "scope": "Actual exported fixed-crosspin triangles vs timber chord boxes for449 samples; actual cart triangles vs three actual assembly member boxes for201 samples through release/yaw. Assembly1 only. No luff tackle, all other rig bodies, or strength admission.",
+  "head": {
+    "samples": 449,
+    "clear": false,
+    "failures": [
+      {
+        "seconds": 100.5,
+        "chord": "cargo-six-metre-timber-chord002",
+        "fixed": "cargo-fixed-luff-frame-stub-crosspin",
+        "triangles": 12
+      },
+      {
+        "seconds": 100.75,
+        "chord": "cargo-six-metre-timber-chord002",
+        "fixed": "cargo-fixed-luff-frame-stub-crosspin",
+        "triangles": 10
+      }
+    ]
+  },
+  "cart": {
+    "samples": 201,
+    "contactAllowanceMetres": 0.00005,
+    "clear": true,
+    "failures": []
+  }
+}

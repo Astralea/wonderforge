@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-production-works.test.ts (1 test) 5ms
+ ✓ tests/eiffel-production-construction.test.ts (6 tests) 2477ms
+   ✓ Eiffel bounded full production schedule > gives every upper pickup a visible receiver tied to two real-face saddles  1512ms
+   ✓ Eiffel bounded full production schedule > keeps every moving cargo envelope clear of its fixed mast  462ms
+
+ Test Files  2 passed (2)
+      Tests  7 passed (7)
+   Start at  14:40:18
+   Duration  24.90s (transform 134ms, setup 0ms, collect 44.60s, tests 2.48s, environment 0ms, prepare 122ms)
+

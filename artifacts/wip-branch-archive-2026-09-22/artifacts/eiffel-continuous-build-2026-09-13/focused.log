@@ -1,0 +1,41 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-film-edit.test.ts tests/eiffel-progress-story.test.ts tests/eiffel-ground-plant-retirement.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-progress-story.test.ts (5 tests) 22372ms
+   ✓ cinematic construction story against the actual tower kit > preserves every seated identity over dense forward playback and reverse seeks  7329ms
+ ✓ tests/eiffel-ground-plant-retirement.test.ts (3 tests) 149ms
+ ❯ tests/eiffel-film-edit.test.ts (8 tests | 1 failed) 25354ms
+   ✓ maps both same-duration detailed and 180-second edits smoothly over all source time 101ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1364ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  9022ms
+   ✓ shows the hanging second member seating during its spoken close-up cue 112ms
+   ✓ keeps the four ground stations standing through the joint close-up instead of striking them 0ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3490ms
+   × budgets readable structural rise and retains every seated identity through dense forward and reverse seeks 11229ms
+     → expected 40.4 to be greater than 48
+   ✓ frames the physical first-floor arrival and supported landing throughout the relay sentence 35ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-film-edit.test.ts > budgets readable structural rise and retains every seated identity through dense forward and reverse seeks
+AssertionError: expected 40.4 to be greater than 48
+ ❯ tests/eiffel-film-edit.test.ts:138:21
+    136|   }
+    137|   expect(removals).toEqual([]);
+    138|   expect(reached50).toBeGreaterThan(48);expect(reached280).toBeGreater…
+       |                     ^
+    139|   // Exact insertion endpoints and neighboring representable source ti…
+    140|   // not round behind the production boundary, including short-edit50s…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 15 passed (16)
+   Start at  23:22:26
+   Duration  25.77s (transform 247ms, setup 44ms, collect 581ms, tests 47.88s, environment 0ms, prepare 112ms)
+

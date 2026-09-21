@@ -1,0 +1,15 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-summit-luff.test.ts (5 tests) 36ms
+ ✓ tests/eiffel-summit-operation.test.ts (5 tests) 44ms
+ ✓ tests/eiffel-summit-cargo.test.ts (4 tests) 799ms
+   ✓ summit cargo candidate > stays inside the six metre upper-collar reach and has continuous reversible samples  688ms
+ ✓ tests/eiffel-summit-cargo-rope.test.ts (7 tests) 1251ms
+   ✓ summit cargo tangent rope and fixed bridle candidate > keeps the changing ring arc on one continuous branch, including Euler wrapping and phase boundaries  760ms
+
+ Test Files  4 passed (4)
+      Tests  21 passed (21)
+   Start at  18:02:23
+   Duration  1.93s (transform 575ms, setup 127ms, collect 1.39s, tests 2.13s, environment 0ms, prepare 198ms)
+

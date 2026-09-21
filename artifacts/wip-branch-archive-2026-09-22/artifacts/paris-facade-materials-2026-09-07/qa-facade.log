@@ -1,0 +1,2 @@
+desktop [{"label":"no-mips","meanTrackedLumaChange":16.650360938166305,"validPairs":2345,"frames":20},{"label":"trilinear","meanTrackedLumaChange":7.589710788912567,"validPairs":2345,"frames":20}]
+mobile [{"label":"no-mips","meanTrackedLumaChange":18.615103827751202,"validPairs":836,"frames":20},{"label":"trilinear","meanTrackedLumaChange":7.477243779904304,"validPairs":836,"frames":20}]

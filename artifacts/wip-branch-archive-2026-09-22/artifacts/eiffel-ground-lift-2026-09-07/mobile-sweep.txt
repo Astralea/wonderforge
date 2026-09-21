@@ -1,0 +1,1 @@
+{"maxTriangles":{"t":0.9385245901639344,"calls":103,"triangles":293420,"points":0,"lines":0,"geometries":117,"textures":29},"maxCalls":{"t":0.5163934426229508,"calls":123,"triangles":134610,"points":0,"lines":0,"geometries":117,"textures":29},"errors":[]}

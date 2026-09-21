@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/eiffel-long-load-carrier.test.ts tests/eiffel-long-load-hoist.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-long-load-hoist.test.ts (2 tests) 4ms
+ ✓ tests/eiffel-long-load-carrier.test.ts (5 tests) 19ms
+
+ Test Files  2 passed (2)
+      Tests  7 passed (7)
+   Start at  07:15:42
+   Duration  253ms (transform 67ms, setup 57ms, collect 76ms, tests 23ms, environment 0ms, prepare 92ms)
+

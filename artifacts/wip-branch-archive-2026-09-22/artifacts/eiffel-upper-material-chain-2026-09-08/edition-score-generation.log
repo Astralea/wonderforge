@@ -1,0 +1,20 @@
+WARN Failed to read metadata for "/Volumes/LaCie/topological-signature/external/TopoDiffusionNet/improved_diffusion.egg-info/PKG-INFO": failed to open file `/Volumes/LaCie/topological-signature/external/TopoDiffusionNet/improved_diffusion.egg-info/PKG-INFO`: No such file or directory (os error 2)
+generating 02-hands
+generating 01-morning
+completed 02-hands: 177.058s
+generating 03-pylons
+completed 01-morning: 173.349s
+generating 04-above-paris
+completed 03-pylons: 174.132s
+generating 05-lanterns
+completed 04-above-paris: 176.353s
+generating 06-short-film
+completed 05-lanterns: 174.184s
+completed 06-short-film: 147.670s
+Traceback (most recent call last):
+  File "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/generate-eiffel-edition-scores.py", line 127, in <module>
+    assemble()
+    ~~~~~~~~^^
+  File "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/generate-eiffel-edition-scores.py", line 90, in assemble
+    raise RuntimeError('Short score under 180s: do not silently pad it.')
+RuntimeError: Short score under 180s: do not silently pad it.

@@ -1,0 +1,802 @@
+WonderForge isolated parent MCP on 9877
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+23:38:41 | INFO: Starting glTF 2.0 export
+23:38:41 | INFO: Extracting primitive: cloth-blue
+23:38:41 | INFO: Primitives created: 1
+23:38:41 | INFO: Extracting primitive: cloth-red
+23:38:41 | INFO: Primitives created: 1
+23:38:41 | INFO: Extracting primitive: cloth-white
+23:38:41 | INFO: Primitives created: 1
+23:38:41 | INFO: Extracting primitive: Cube
+23:38:41 | INFO: Primitives created: 1
+23:38:41 | INFO: Finished glTF 2.0 export in 0.014729976654052734 s
+
+23:43:56 | INFO: Starting glTF 2.0 export
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-blue-awning
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-brick
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-copper
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-cream
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-flower
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-gilt
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-glass
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-hedge
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-iron
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf-light
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-masonry-facade
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-ochre
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-paving
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-red-awning
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-road
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-slate
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-light
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-warm
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-timber
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-white
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-work-earth
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: Paris Exposition architecture and streets-zinc
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Finished glTF 2.0 export in 0.1877729892730713 s
+
+23:43:56 | INFO: Starting glTF 2.0 export
+23:43:56 | INFO: Extracting primitive: body-cream.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-hull.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-slate
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-timber.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-burgundy.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-cloth.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-iron.004
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-skin.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-timber.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.007
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.007
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.006
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.006
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.005
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.005
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.004
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.004
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-cloth.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-iron.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-skin.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-stone-warm
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-timber
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-iron
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: wheel-timber
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-horse
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-iron.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-horse.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.007
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-horse.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.006
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-horse.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.005
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-horse
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.004
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-cloth
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-skin
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-cloth.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-skin.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-cloth
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-iron
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-skin
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-cloth
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-cloth.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-burgundy
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-skin.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-burgundy.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: arm-skin.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-burgundy
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-iron.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-skin.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-burgundy
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: skirt-burgundy
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-burgundy.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: leg-iron.003
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: skirt-burgundy.001
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-burgundy.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-cream
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-glass
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-hull
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-iron.005
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Extracting primitive: body-timber.002
+23:43:56 | INFO: Primitives created: 1
+23:43:56 | INFO: Finished glTF 2.0 export in 0.09366703033447266 s
+
+{"scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition", "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/paris-1889.blend", "cityTriangles": 197292, "actors": {"pedestrian-man": 216, "pedestrian-woman": 256, "horse": 216, "cart": 1532, "carriage": 1580, "steam-boat": 404, "barge": 104}, "cityBytes": 14312672, "lifeBytes": 248784}
+23:45:51 | INFO: Starting glTF 2.0 export
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-blue-awning.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-brick.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-copper.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-courtyard-earth
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-cream.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-flower.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-gilt.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-glass.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-hedge.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-iron.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf-light.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-masonry-facade.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-ochre.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-paving.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-red-awning.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-road.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-slate.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-light.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-warm.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-timber.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-white.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-work-earth.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: Paris Exposition architecture and streets-zinc.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Finished glTF 2.0 export in 0.17353415489196777 s
+
+23:45:51 | INFO: Starting glTF 2.0 export
+23:45:51 | INFO: Extracting primitive: body-cream.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-hull.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-slate.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-timber.007
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-burgundy.004
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-cloth.005
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-iron.010
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-skin.007
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-timber.005
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.015
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.015
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.014
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.014
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.013
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.013
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.012
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.012
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-cloth.004
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-iron.009
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-skin.006
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-stone-warm.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-timber.004
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.011
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.011
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.010
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.010
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.009
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.009
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-iron.008
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: wheel-timber.008
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-horse.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-iron.008
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-horse.007
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.015
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-horse.006
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.014
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-horse.005
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.013
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-horse.004
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.012
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-cloth.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-skin.004
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-cloth.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-skin.005
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-cloth.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-iron.006
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-skin.004
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-cloth.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.008
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-cloth.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.009
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-burgundy.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-skin.006
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-burgundy.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: arm-skin.007
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-burgundy.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-iron.007
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-skin.005
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-burgundy.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.010
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: skirt-burgundy.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-burgundy.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: leg-iron.011
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: skirt-burgundy.003
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-burgundy.005
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-cream.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-glass.001
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-hull.002
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-iron.011
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Extracting primitive: body-timber.006
+23:45:51 | INFO: Primitives created: 1
+23:45:51 | INFO: Finished glTF 2.0 export in 0.12707996368408203 s
+
+{"scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition.001", "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/paris-1889.blend", "cityTriangles": 197292, "actors": {"pedestrian-man.001": 216, "pedestrian-woman.001": 256, "horse.001": 216, "cart.001": 1532, "carriage.001": 1580, "steam-boat.001": 404, "barge.001": 104}, "cityBytes": 14313912, "lifeBytes": 249076}
+23:47:15 | INFO: Starting glTF 2.0 export
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-blue-awning.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-brick.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-copper.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-courtyard-earth.001
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-cream.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-flower.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-gilt.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-glass.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-hedge.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-iron.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf-light.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-masonry-facade.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-ochre.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-paving.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-red-awning.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-road.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-slate.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-light.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-warm.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-timber.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-white.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-work-earth.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: Paris Exposition architecture and streets-zinc.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Finished glTF 2.0 export in 0.17685174942016602 s
+
+23:47:15 | INFO: Starting glTF 2.0 export
+23:47:15 | INFO: Extracting primitive: body-cream.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-hull.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-slate.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-timber.011
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-burgundy.007
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-cloth.008
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-iron.016
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-skin.011
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-timber.009
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.023
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.023
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.022
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.022
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.021
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.021
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.020
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.020
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-cloth.007
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-iron.015
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-skin.010
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-stone-warm.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-timber.008
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.019
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.019
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.018
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.018
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.017
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.017
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-iron.016
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: wheel-timber.016
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-horse.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-iron.014
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-horse.011
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.023
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-horse.010
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.022
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-horse.009
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.021
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-horse.008
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.020
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-cloth.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-skin.008
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-cloth.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-skin.009
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-cloth.006
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-iron.012
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-skin.008
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-cloth.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.016
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-cloth.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.017
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-burgundy.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-skin.010
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-burgundy.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: arm-skin.011
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-burgundy.006
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-iron.013
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-skin.009
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-burgundy.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.018
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: skirt-burgundy.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-burgundy.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: leg-iron.019
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: skirt-burgundy.005
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-burgundy.008
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-cream.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-glass.002
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-hull.004
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-iron.017
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Extracting primitive: body-timber.010
+23:47:15 | INFO: Primitives created: 1
+23:47:15 | INFO: Finished glTF 2.0 export in 0.12812590599060059 s
+
+{"scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition.002", "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/paris-1889.blend", "cityTriangles": 197292, "actors": {"pedestrian-man.002": 216, "pedestrian-woman.002": 256, "horse.002": 216, "cart.002": 1532, "carriage.002": 1580, "steam-boat.002": 404, "barge.002": 104}, "cityBytes": 14313924, "lifeBytes": 249076}
+13:24.284  render           | Saved: '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/near-city-review.png'
+23:56:32 | INFO: Starting glTF 2.0 export
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-blue-awning.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-brick.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-copper.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-courtyard-earth.003
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-cream.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-flower.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-gilt.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-glass.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-hedge.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-iron.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf-light.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-leaf.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-masonry-facade.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-ochre.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-paving.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-red-awning.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-road.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-slate.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-light.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone-warm.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-stone.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-timber.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-white.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-work-earth.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: Paris Exposition architecture and streets-zinc.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Finished glTF 2.0 export in 0.16321611404418945 s
+
+23:56:32 | INFO: Starting glTF 2.0 export
+23:56:32 | INFO: Extracting primitive: body-cream.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-hull.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-slate.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-timber.019
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-burgundy.013
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-cloth.014
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-iron.028
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-skin.019
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-timber.017
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.039
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.039
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.038
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.038
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.037
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.037
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.036
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.036
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-cloth.013
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-iron.027
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-skin.018
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-stone-warm.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-timber.016
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.035
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.035
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.034
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.034
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.033
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.033
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-iron.032
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: wheel-timber.032
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-horse.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-iron.026
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-horse.019
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.039
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-horse.018
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.038
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-horse.017
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.037
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-horse.016
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.036
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-cloth.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-skin.016
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-cloth.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-skin.017
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-cloth.012
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-iron.024
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-skin.016
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-cloth.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.032
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-cloth.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.033
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-burgundy.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-skin.018
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-burgundy.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: arm-skin.019
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-burgundy.012
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-iron.025
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-skin.017
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-burgundy.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.034
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: skirt-burgundy.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-burgundy.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: leg-iron.035
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: skirt-burgundy.009
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-burgundy.014
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-cream.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-glass.004
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-hull.008
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-iron.029
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Extracting primitive: body-timber.018
+23:56:32 | INFO: Primitives created: 1
+23:56:32 | INFO: Finished glTF 2.0 export in 0.056804656982421875 s
+
+{"scene": "WonderForge Paris 1889 \u2014 photograph-led Exposition.004", "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/paris-1889.blend", "cityTriangles": 193620, "actors": {"pedestrian-man.004": 216, "pedestrian-woman.004": 256, "horse.004": 216, "cart.004": 1532, "carriage.004": 1580, "steam-boat.004": 404, "barge.004": 104}, "cityBytes": 14115636, "lifeBytes": 249076}
+22:10.528  render           | Saved: '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/paris-street-variety-2026-09-08/blender/near-city-review.png'

@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-ground-supply.test.ts (3 tests) 5ms
+ ✓ tests/eiffel-readable-clock.test.ts (4 tests) 7640ms
+   ✓ Eiffel readable production clock > measures the complete manifest and reserves four 60 Hz frame intervals per wave  7625ms
+
+ Test Files  2 passed (2)
+      Tests  7 passed (7)
+   Start at  02:05:29
+   Duration  7.89s (transform 121ms, setup 32ms, collect 225ms, tests 7.64s, environment 0ms, prepare 66ms)
+

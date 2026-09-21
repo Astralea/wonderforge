@@ -1,0 +1,18 @@
+
+> wonderforge@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+tests/eiffel-physical-construction-clock.test.ts(8,342): error TS2345: Argument of type 'readonly [0, number, 0, number]' is not assignable to parameter of type 'readonly [0, 0, 0, 1]'.
+  Type at position 1 in source is not compatible with type at position 1 in target.
+    Type 'number' is not assignable to type '0'.
+tests/eiffel-physical-construction-clock.test.ts(8,368): error TS2345: Argument of type 'readonly [0, number, 0, number]' is not assignable to parameter of type 'readonly [0, 0, 0, 1]'.
+  Type at position 1 in source is not compatible with type at position 1 in target.
+    Type 'number' is not assignable to type '0'.
+tests/eiffel-physical-construction-clock.test.ts(8,394): error TS2345: Argument of type 'readonly [0, number, 0, number]' is not assignable to parameter of type 'readonly [0, 0, 0, 1]'.
+  Type at position 1 in source is not compatible with type at position 1 in target.
+    Type 'number' is not assignable to type '0'.
+tests/eiffel-physical-construction-clock.test.ts(8,423): error TS2345: Argument of type 'readonly [0, number, 0, number]' is not assignable to parameter of type 'readonly [0, 0, 0, 1]'.
+  Type at position 1 in source is not compatible with type at position 1 in target.
+    Type 'number' is not assignable to type '0'.
+tests/eiffel-physical-construction-clock.test.ts(10,319): error TS2345: Argument of type '{ finalPose: RigidPose; part: EiffelKitPart; start: number; end: number; pickup: RigidPose; clear: RigidPose; approach: RigidPose; ... 9 more ...; wave: number; }[]' is not assignable to parameter of type 'readonly EiffelPhysicalClockOperation[]'.
+  Property 'stage' is missing in type '{ finalPose: RigidPose; part: EiffelKitPart; start: number; end: number; pickup: RigidPose; clear: RigidPose; ... 10 more ...; wave: number; }' but required in type 'EiffelPhysicalClockOperation'.

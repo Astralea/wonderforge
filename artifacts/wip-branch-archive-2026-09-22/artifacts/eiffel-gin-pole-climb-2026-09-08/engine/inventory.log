@@ -1,0 +1,126 @@
+
+ROLE moving-pole
+foot-cap-tie { name: 'foot-cap-tie' }
+foot-cap-tie001 { name: 'foot-cap-tie.001' }
+head-axle001 { name: 'head-axle.001' }
+head-bearing-lower001 { name: 'head-bearing-lower.001' }
+heel-through-pin001 { name: 'heel-through-pin.001' }
+jib-diagonal012 { name: 'jib-diagonal.012' }
+jib-diagonal013 { name: 'jib-diagonal.013' }
+jib-diagonal014 { name: 'jib-diagonal.014' }
+jib-diagonal015 { name: 'jib-diagonal.015' }
+jib-diagonal016 { name: 'jib-diagonal.016' }
+jib-diagonal017 { name: 'jib-diagonal.017' }
+jib-diagonal018 { name: 'jib-diagonal.018' }
+jib-diagonal019 { name: 'jib-diagonal.019' }
+jib-diagonal020 { name: 'jib-diagonal.020' }
+jib-diagonal021 { name: 'jib-diagonal.021' }
+jib-diagonal022 { name: 'jib-diagonal.022' }
+jib-diagonal023 { name: 'jib-diagonal.023' }
+jib-tip-sheave001 { name: 'jib-tip-sheave.001' }
+timber-jib-chord002 { name: 'timber-jib-chord.002' }
+timber-jib-chord003 { name: 'timber-jib-chord.003' }
+tip-sheave-pin001 { name: 'tip-sheave-pin.001' }
+luff-head-crosspin001 { name: 'luff-head-crosspin.001' }
+luff-head-stay002 { name: 'luff-head-stay.002' }
+luff-head-stay003 { name: 'luff-head-stay.003' }
+moving-lug-eye001 { name: 'moving-lug-eye.001' }
+moving-lug-web001 { name: 'moving-lug-web.001' }
+pole-foot-band-cheek002 { name: 'pole-foot-band-cheek.002' }
+pole-foot-band-cheek003 { name: 'pole-foot-band-cheek.003' }
+pole-foot-band-return002 { name: 'pole-foot-band-return.002' }
+pole-foot-band-return003 { name: 'pole-foot-band-return.003' }
+positive-pole-foot-cap { name: 'positive-pole-foot-cap' }
+timber-six-metre-pole001 { name: 'timber-six-metre-pole.001', wf_axial_bore_local_y: 1.4 }
+
+ROLE guide-0-north-leaf
+fork-diagonal008 { name: 'fork-diagonal.008' }
+fork-side008 { name: 'fork-side.008' }
+hinge-keeper-pin008 { name: 'hinge-keeper-pin.008' }
+hinge-pin-pull-eye008 { name: 'hinge-pin-pull-eye.008' }
+guide-hinge-pin008 { name: 'guide-hinge-pin.008' }
+pole-guide-half-return008 { name: 'pole-guide-half-return.008' }
+pole-guide-half-side016 { name: 'pole-guide-half-side.016' }
+pole-guide-half-side017 { name: 'pole-guide-half-side.017' }
+
+ROLE guide-1-axial-pin
+axial-control-eye002 { name: 'axial-control-eye.002' }
+axial-pin-head002 { name: 'axial-pin-head.002' }
+pole-axial-lock-pin002 { name: 'pole-axial-lock-pin.002' }
+
+ROLE climb-drive-fixed
+east-guide-axle001 { name: 'east-guide-axle.001' }
+east-guide-sheave001 { name: 'east-guide-sheave.001' }
+climb-input-crank-involute { name: 'climb-input-crank-involute' }
+hand-crank-arm001 { name: 'hand-crank-arm.001' }
+hand-crank-grip001 { name: 'hand-crank-grip.001' }
+input-spindle001 { name: 'input-spindle.001' }
+climb-output-gear-involute { name: 'climb-output-gear-involute' }
+pawl-lever001 { name: 'pawl-lever.001' }
+pawl-pivot001 { name: 'pawl-pivot.001' }
+climb-ratchet-wheel-involute { name: 'climb-ratchet-wheel-involute' }
+west-fairlead-cheek002 { name: 'west-fairlead-cheek.002' }
+west-fairlead-cheek003 { name: 'west-fairlead-cheek.003' }
+west-guide-axle001 { name: 'west-guide-axle.001' }
+west-guide-sheave001 { name: 'west-guide-sheave.001' }
+winch-rope-core001 { name: 'winch-rope-core.001' }
+winch-rope-flange002 { name: 'winch-rope-flange.002' }
+winch-rope-flange003 { name: 'winch-rope-flange.003' }
+drive-bearing-column002 { name: 'drive-bearing-column.002' }
+drive-bearing-column003 { name: 'drive-bearing-column.003' }
+drive-crossbar-bearing-shoe002 { name: 'drive-crossbar-bearing-shoe.002' }
+drive-crossbar-bearing-shoe003 { name: 'drive-crossbar-bearing-shoe.003' }
+drive-top-crosshead001 { name: 'drive-top-crosshead.001' }
+drum-bearing-axle002 { name: 'drum-bearing-axle.002' }
+drum-bearing-axle003 { name: 'drum-bearing-axle.003' }
+drum-bearing-pedestal002 { name: 'drum-bearing-pedestal.002' }
+drum-bearing-pedestal003 { name: 'drum-bearing-pedestal.003' }
+east-drum-frame-stay001 { name: 'east-drum-frame-stay.001' }
+reaction-diagonal002 { name: 'reaction-diagonal.002' }
+reaction-diagonal003 { name: 'reaction-diagonal.003' }
+west-fairlead-brace001 { name: 'west-fairlead-brace.001' }
+winch-base001 { name: 'winch-base.001' }
+
+ROLE mast-access-ladder
+ladder-collar-tie008 { name: 'ladder-collar-tie.008' }
+ladder-collar-tie009 { name: 'ladder-collar-tie.009' }
+ladder-collar-tie010 { name: 'ladder-collar-tie.010' }
+ladder-collar-tie011 { name: 'ladder-collar-tie.011' }
+ladder-collar-tie012 { name: 'ladder-collar-tie.012' }
+ladder-collar-tie013 { name: 'ladder-collar-tie.013' }
+ladder-collar-tie014 { name: 'ladder-collar-tie.014' }
+ladder-collar-tie015 { name: 'ladder-collar-tie.015' }
+ladder-floor-shoe002 { name: 'ladder-floor-shoe.002' }
+ladder-floor-shoe003 { name: 'ladder-floor-shoe.003' }
+ladder-rung024 { name: 'ladder-rung.024' }
+ladder-rung025 { name: 'ladder-rung.025' }
+ladder-rung026 { name: 'ladder-rung.026' }
+ladder-rung027 { name: 'ladder-rung.027' }
+ladder-rung028 { name: 'ladder-rung.028' }
+ladder-rung029 { name: 'ladder-rung.029' }
+ladder-rung030 { name: 'ladder-rung.030' }
+ladder-rung031 { name: 'ladder-rung.031' }
+ladder-rung032 { name: 'ladder-rung.032' }
+ladder-rung033 { name: 'ladder-rung.033' }
+ladder-rung034 { name: 'ladder-rung.034' }
+ladder-rung035 { name: 'ladder-rung.035' }
+ladder-rung036 { name: 'ladder-rung.036' }
+ladder-rung037 { name: 'ladder-rung.037' }
+ladder-rung038 { name: 'ladder-rung.038' }
+ladder-rung039 { name: 'ladder-rung.039' }
+ladder-rung040 { name: 'ladder-rung.040' }
+ladder-rung041 { name: 'ladder-rung.041' }
+ladder-rung042 { name: 'ladder-rung.042' }
+ladder-rung043 { name: 'ladder-rung.043' }
+ladder-rung044 { name: 'ladder-rung.044' }
+ladder-rung045 { name: 'ladder-rung.045' }
+ladder-rung046 { name: 'ladder-rung.046' }
+ladder-rung047 { name: 'ladder-rung.047' }
+ladder-stile002 { name: 'ladder-stile.002' }
+ladder-stile003 { name: 'ladder-stile.003' }
+
+ROLE climb-west-fairlead
+west-fairlead-cheek002 { name: 'west-fairlead-cheek.002' }
+west-fairlead-cheek003 { name: 'west-fairlead-cheek.003' }
+west-guide-axle001 { name: 'west-guide-axle.001' }
+west-guide-sheave001 { name: 'west-guide-sheave.001' }

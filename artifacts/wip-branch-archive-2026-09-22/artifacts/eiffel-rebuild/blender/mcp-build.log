@@ -1,0 +1,27 @@
+[09/06/26 22:23:13] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/06/26 22:23:16] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"status\": \"ok\",\n  \"result\": {\n    \"scene\": \"WonderForge Eiffel \u2014 Blender reconstruction.002\",\n    \"assemblies\": 244,\n    \"meshes\": 5813,\n    \"triangles\": 69756,\n    \"blend\": \"/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-rebuild/blender/eiffel-tower.blend\"\n  },\n  \"stdout\": \"22:23:15 | INFO: Starting glTF 2.0 export\\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-iron.002\\n22:23:15 | INFO: Primitives created: 1\\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-dark-iron.002\\n22:23:15 | INFO: Primitives created: 1\\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-masonry.002\\n22:23:15 | INFO: Primitives created: 1\\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-gold.002\\n22:23:15 | INFO: Primitives created: 1\\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-deck.002\\n22:23:15 | INFO: Primitives created: 1\\n22:23:16 | INFO: Finished glTF 2.0 export in 1.0616817474365234 s\\n\\nInfo: Saved copy as \\\"eiffel-tower.blend\\\"\\nInfo: Saved copy as \\\"eiffel-tower.blend\\\"\\nEIFFEL BUILD COMPLETE 244 parts 5813 mesh nodes 69756 triangles\\n\"\n}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "status": "ok",
+    "result": {
+      "scene": "WonderForge Eiffel \u2014 Blender reconstruction.002",
+      "assemblies": 244,
+      "meshes": 5813,
+      "triangles": 69756,
+      "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-rebuild/blender/eiffel-tower.blend"
+    },
+    "stdout": "22:23:15 | INFO: Starting glTF 2.0 export\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-iron.002\n22:23:15 | INFO: Primitives created: 1\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-dark-iron.002\n22:23:15 | INFO: Primitives created: 1\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-masonry.002\n22:23:15 | INFO: Primitives created: 1\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-gold.002\n22:23:15 | INFO: Primitives created: 1\n22:23:15 | INFO: Extracting primitive: linked-unit-beam-deck.002\n22:23:15 | INFO: Primitives created: 1\n22:23:16 | INFO: Finished glTF 2.0 export in 1.0616817474365234 s\n\nInfo: Saved copy as \"eiffel-tower.blend\"\nInfo: Saved copy as \"eiffel-tower.blend\"\nEIFFEL BUILD COMPLETE 244 parts 5813 mesh nodes 69756 triangles\n"
+  },
+  "isError": false
+}

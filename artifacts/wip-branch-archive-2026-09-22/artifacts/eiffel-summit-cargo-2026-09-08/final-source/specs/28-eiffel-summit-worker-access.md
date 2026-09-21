@@ -1,0 +1,11 @@
+# Summit operator access candidate
+
+A separate opt-in access chapter starts the existing fixed-size18-part operator at the actual bottom crown ladder rung, then climbs to rung16 and transfers one hand to the stopped crank. Arrival at the crown platform is explicitly omitted. The existing70-second mechanical sampler and production film remain unchanged.
+
+Only one limb releases at a time; the other three contacts remain fixed to actual rung/rail geometry. Both feet must return to supported contacts before the body moves into the existing offset crank stance. Every pose uses exact fixed-length two-link IK; reverse queries must be independent of prior sampling. GPU and actual worker/rig collision checks are separate from endpoint/limb tests. This chapter does not claim to operate guide controls or install hardware.
+
+The admitted diagnostic preview stops at64s/rung16. The64–72s crank transfer is retained as a provisional source candidate because the old V9 crank/ladder arrangement failed whole-body clearance; a new outboard control is being designed. Corrected ascent uses horizontal toes on the decagonal rung top, front-surface palm contact and a rigid leaned torso. No source limb dimensions change.
+
+New-asset-only outboard candidate: the authored crank radius is0.16m, gripX0.73, and a fixed grabrail is centred[.30,306.55,−.43]. Access extends to80s: lower left foot onto rung15 while retaining three contacts, take the outboard grabrail, then move the torso/right hand to the stopped crank. Right foot remains on rung16. The subsequent70s mechanism demonstration uses the existing rig sampler with the new fixed-length worker profile; it remains opt-in and does not claim human guide operation. It must refuse the old V9 asset.
+
+Upper endpoint-only review supersedes the provisional transfer stance: both soles rest on rung16, pelvis[.60,305.95,−.58], torso faces+X and feet remain ladder-facing. Left palm contacts the actual outboard rail; right palm contacts the0.16m crank. Fixed forearm lengths terminate at rigid hand back-face wrist offsets, not inside the held handle. The endpoint review rotates controls with the pole stopped; it does not admit the80s transfer or a complete lifting sequence. New cargo-drive geometry obstructs the lower ladder, so no ascent admission is made on the new asset.

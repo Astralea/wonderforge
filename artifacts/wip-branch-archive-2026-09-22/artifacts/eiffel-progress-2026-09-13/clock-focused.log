@@ -1,0 +1,18 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/eiffel-film-edit.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-film-edit.test.ts (7 tests) 22298ms
+   ✓ keeps detailed shots on their mapped source frames and short edit camera continuous and reversible  1096ms
+   ✓ shows a growing lower frame rather than the summit at thirty percent detailed  7536ms
+   ✓ keeps short camera near-frustum clear of the actual completed tower during all close-up approaches  3210ms
+   ✓ budgets readable structural rise and retains every seated identity through dense forward and reverse seeks  10245ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  04:22:49
+   Duration  22.72s (transform 189ms, setup 17ms, collect 263ms, tests 22.30s, environment 0ms, prepare 32ms)
+

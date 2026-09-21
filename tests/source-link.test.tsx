@@ -1,0 +1,38 @@
+// @vitest-environment jsdom
+import '@testing-library/jest-dom/vitest';
+import { describe, expect, it } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import { FactsPanel, SOURCE_URL } from '../src/ui/FactsPanel';
+import { WONDERS } from '../src/data';
+
+/** Spec 05 §Cinematic view: the facts panel footer is the single repository link. */
+describe('project source link', () => {
+  it('points at the public repository over https', () => {
+    expect(SOURCE_URL).toMatch(/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/);
+  });
+
+  it('renders once in the facts panel of every wonder, credited or not', () => {
+    for (const wonder of WONDERS) {
+      const view = render(<FactsPanel wonder={wonder} open onClose={() => {}} />);
+      const links = screen.getAllByRole('link', { name: /source on github/i });
+      expect(links).toHaveLength(1);
+      expect(links[0]).toHaveAttribute('href', SOURCE_URL);
+      expect(links[0]).toHaveAttribute('target', '_blank');
+      expect(links[0]).toHaveAttribute('rel', expect.stringContaining('noreferrer'));
+      view.unmount();
+    }
+  });
+
+  it('keeps each wonder\'s own credits alongside it', () => {
+    const credited = WONDERS.find((w) => w.credits?.length);
+    expect(credited).toBeDefined();
+    const view = render(<FactsPanel wonder={credited!} open onClose={() => {}} />);
+    for (const credit of credited!.credits ?? []) {
+      expect(screen.getByRole('link', { name: credit.label })).toHaveAttribute(
+        'href',
+        credit.url,
+      );
+    }
+    view.unmount();
+  });
+});

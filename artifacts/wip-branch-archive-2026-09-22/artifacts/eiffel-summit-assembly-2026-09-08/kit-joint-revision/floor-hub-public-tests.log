@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-mast-joint.test.ts (7 tests) 442ms
+ ✓ tests/eiffel-summit-shape.test.ts (8 tests) 308ms
+
+ Test Files  2 passed (2)
+      Tests  15 passed (15)
+   Start at  14:22:38
+   Duration  1.34s (transform 39ms, setup 22ms, collect 297ms, tests 750ms, environment 0ms, prepare 57ms)
+

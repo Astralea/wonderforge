@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-face-package-lift.test.ts (3 tests) 75ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  00:57:58
+   Duration  326ms (transform 55ms, setup 31ms, collect 57ms, tests 75ms, environment 0ms, prepare 47ms)
+

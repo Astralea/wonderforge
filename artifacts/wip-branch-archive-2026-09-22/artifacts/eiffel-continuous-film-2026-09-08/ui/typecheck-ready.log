@@ -1,0 +1,12 @@
+
+> wonderforge@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+tests/eiffel-edition-soundtrack.test.ts(11,54): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(11,109): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(13,44): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(13,100): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(14,50): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(14,112): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(16,53): error TS2554: Expected 2 arguments, but got 3.
+tests/eiffel-edition-soundtrack.test.ts(30,53): error TS2554: Expected 2 arguments, but got 3.

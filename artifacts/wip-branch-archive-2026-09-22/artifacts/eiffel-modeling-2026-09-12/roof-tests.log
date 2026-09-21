@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/paris-roof-detail.test.ts --maxWorkers=2
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/paris-roof-detail.test.ts (2 tests) 1000ms
+   ✓ retains every existing city triangle and UV while adding a bounded authored roof kit  780ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  15:38:24
+   Duration  1.20s (transform 22ms, setup 14ms, collect 44ms, tests 1.00s, environment 0ms, prepare 27ms)
+

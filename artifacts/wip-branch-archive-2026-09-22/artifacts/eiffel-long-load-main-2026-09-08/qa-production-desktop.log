@@ -1,0 +1,76 @@
+pre [
+  null,               'Jump to The Champ',
+  'Jump to The Iron', 'Jump to The Legs',
+  'Jump to The Join', 'Jump to The Beacon',
+  'Previous wonder',  'Pause',
+  'Next wonder',      'Mute soundtrack',
+  'Enable narration', 'Wonder facts',
+  '1× speed',         '2× speed',
+  '4× speed'
+]
+post [
+  null,               'Jump to The Champ',
+  'Jump to The Iron', 'Jump to The Legs',
+  'Jump to The Join', 'Jump to The Beacon',
+  'Previous wonder',  'Play',
+  'Next wonder',      'Mute soundtrack',
+  'Enable narration', 'Wonder facts',
+  '1× speed',         '2× speed',
+  '4× speed'
+]
+pre [
+  null,
+  'Previous wonder',
+  'Play',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+post [
+  null,
+  'Previous wonder',
+  'Pause',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+pre [
+  null,
+  'Previous wonder',
+  'Pause',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+post [
+  null,
+  'Previous wonder',
+  'Play',
+  'Next wonder',
+  'Mute soundtrack',
+  'Enable narration',
+  'Wonder facts',
+  '1× speed',
+  '2× speed',
+  '4× speed'
+]
+[
+  {
+    name: 'desktop',
+    bundle: '/assets/main-SiNzKaoE.js',
+    frames: 17,
+    errors: []
+  }
+]

@@ -1,0 +1,144 @@
+{
+  "source": {
+    "path": "artifacts/eiffel-second-floor-relay-2026-09-08/model/second-floor-relay.glb",
+    "sha256": "f2a44bba38d420b03a9247261aaadc181f5a69e6fed630793d9667faefca1329",
+    "bytes": 1480760
+  },
+  "meshes": 301,
+  "staticHits": [
+    {
+      "part": "guide-flange002",
+      "hits": [
+        "shaft-01-m027-c002"
+      ]
+    },
+    {
+      "part": "guide-flange003",
+      "hits": [
+        "shaft-01-m027-c002",
+        "shaft-01-m028-c003"
+      ]
+    },
+    {
+      "part": "guide-groove001",
+      "hits": [
+        "shaft-01-m027-c002"
+      ]
+    }
+  ],
+  "confirmedStatic": [
+    {
+      "moving": "guide-flange003",
+      "tower": "shaft-01-m027-c002",
+      "method": "actual moving triangles versus actual rectangular shaft solid"
+    }
+  ],
+  "route": [
+    {
+      "leg": "vertical",
+      "hits": [
+        "clevis-cheek005",
+        "clevis-cheek006",
+        "clevis-crossbar003",
+        "keeper-blade003",
+        "keeper-hinge003",
+        "keeper-thumb-lever003",
+        "clevis-pin-head003",
+        "clevis-pin-shaft003",
+        "pin-guide-stop003",
+        "pin-slide-guide005",
+        "pin-slide-guide006",
+        "replacement-upper-rope-eye003"
+      ]
+    },
+    {
+      "leg": "diagonal",
+      "hits": []
+    },
+    {
+      "leg": "lower",
+      "hits": [
+        "cylinder-back-cap001",
+        "cylinder-foot001",
+        "cylinder-foot002",
+        "steam-cylinder001",
+        "piston-rod001",
+        "steam-pipe004",
+        "steam-pipe005",
+        "cart-bed002"
+      ]
+    }
+  ],
+  "floorMisses": [],
+  "gearBearing": [
+    {
+      "bearing": "winch-bearing003",
+      "vertexCount": 382,
+      "example": [
+        -16.664793004163947,
+        116.5015176832676,
+        -1.8330150101792717
+      ]
+    }
+  ],
+  "sheave": [
+    {
+      "role": "relay-moving-sheave",
+      "count": 1,
+      "objects": [
+        {
+          "name": "relay-moving-sheave001",
+          "parentRole": "relay-trolley",
+          "worldPosition": [
+            -8.736804008483887,
+            125.70001983642578,
+            -3.919851064682007
+          ],
+          "meshes": 0,
+          "localPosition": [
+            0,
+            -0.14498138427734375,
+            0
+          ],
+          "localQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "role": "sheave",
+      "count": 1,
+      "objects": [
+        {
+          "name": "sheave-groove001",
+          "parentRole": "relay-trolley",
+          "worldPosition": [
+            -8.736804008483887,
+            125.70001983642578,
+            -3.919851064682007
+          ],
+          "meshes": 1,
+          "localPosition": [
+            0,
+            -0.14498138427734375,
+            0
+          ],
+          "localQuaternion": [
+            0.7071068286895752,
+            0,
+            0,
+            0.7071068286895752
+          ]
+        }
+      ]
+    }
+  ],
+  "wheelContacts": {
+    "count": 328,
+    "misses": []
+  }
+}

@@ -1,0 +1,41 @@
+import { describe, expect, it } from 'vitest';
+import { MeshStandardMaterial, ShaderLib } from 'three';
+import { injectMaterialRecipe } from '../src/render/three/proceduralDetail';
+import { configureEiffelWater } from '../src/render/three/eiffelWater';
+
+function compile(material: MeshStandardMaterial) {
+  const shader = { vertexShader: ShaderLib.standard.vertexShader, fragmentShader: ShaderLib.standard.fragmentShader, uniforms: {} as Record<string, {value: unknown}> };
+  material.onBeforeCompile(shader as Parameters<typeof material.onBeforeCompile>[0], {} as Parameters<typeof material.onBeforeCompile>[1]);
+  return shader;
+}
+
+describe('Eiffel water sun footprint sampling', () => {
+  it('keeps the shared sky gradient and Fresnel while averaging the original sun expression', () => {
+    const material = new MeshStandardMaterial(); injectMaterialRecipe(material, 'water');
+    const before = compile(material); configureEiffelWater(material); const after = compile(material);
+    const sun = before.fragmentShader.match(/float wfCosSun = max\(dot\(wfReflectWorld, uWfSunDirection\), 0\.0\);[\s\S]*?wfSkyRefl \+= uWfSunTint \* \([\s\S]*?\n  \);/)![0];
+    expect(after.fragmentShader).toContain(sun.replace('wfSkyRefl +=', 'return'));
+    expect(after.vertexShader).toBe(before.vertexShader);
+    expect(after.fragmentShader).toContain('totalEmissiveRadiance += wfSkyRefl * wfFresnel * uWfSkyReflStrength;');
+    const evaluator = after.fragmentShader.split('vec3 wfEiffelWaterSunAt')[1]!.split('void main()')[0]!;
+    expect(evaluator).not.toMatch(/dFdx|dFdy|fwidth/);
+    expect(after.fragmentShader).not.toMatch(/dFdx\((normal|wfReflectWorld|wfCosSun)\)|dFdy\((normal|wfReflectWorld|wfCosSun)\)/);
+    expect(after.fragmentShader.indexOf('float wfNoise(vec2 p)')).toBeLessThan(after.fragmentShader.indexOf('float wfEiffelWaterNoiseAt'));
+    expect(after.fragmentShader).toContain('vec2 q = vec2(float(ix), float(iy)) * 0.5 - 0.25;');
+    material.dispose();
+  });
+  it('keeps separate live reflection and ripple controls across water program variants and leaves shared materials untouched', () => {
+    const material = new MeshStandardMaterial(), other = new MeshStandardMaterial();
+    injectMaterialRecipe(material, 'water'); injectMaterialRecipe(other, 'water');
+    const untouched = compile(other).fragmentShader; configureEiffelWater(material);
+    const a = compile(material), b = compile(material);
+    expect(a.uniforms.uEiffelReflectionFilter).toBe(material.userData.eiffelReflectionFilter);
+    expect(b.uniforms.uEiffelReflectionFilter).toBe(a.uniforms.uEiffelReflectionFilter);
+    material.userData.eiffelReflectionFilter.value = 0;
+    expect(a.uniforms.uEiffelReflectionFilter!.value).toBe(0);
+    expect(a.uniforms.uEiffelRippleFilter!.value).toBe(1);
+    expect(compile(other).fragmentShader).toBe(untouched);
+    expect(other.userData.eiffelReflectionFilter).toBeUndefined();
+    material.dispose(); other.dispose();
+  });
+});

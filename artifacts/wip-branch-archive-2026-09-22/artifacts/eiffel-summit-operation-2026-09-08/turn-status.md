@@ -1,0 +1,1 @@
+This turn made progress: parent-built/read-back V4 model, continuous empty-tackle return, winding/luff visuals, source geometry checks, final desktop/mobile QA,918 passing tests, typecheck/build. Goal remains ACTIVE. Read README.md and final-verification.json for bounded evidence and remaining production work.

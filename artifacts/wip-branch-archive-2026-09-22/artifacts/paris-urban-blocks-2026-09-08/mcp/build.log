@@ -1,0 +1,4 @@
+  File "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/build-paris-urban-blocks-via-mcp.py", line 21
+    response=await session.call_tool('execute_blender_code',{'code':f'from pathlib import Path\nscope={{"__file__":{source!r},"WF_PARIS_OUTPUT":{str(ROOT/"artifacts/paris-urban-blocks-2026-09-08/blender")!r},"WF_PARIS_MODEL_OUTPUT":{str(ROOT/"artifacts/paris-urban-blocks-2026-09-08/model")!r}}\nexec(compile(Path({source!r}).read_text(),{source!r},"exec"),scope)\nresult=scope["result"]'})
+                                                                                                                                                                                                                                                                                                     ^
+SyntaxError: f-string: single '}' is not allowed

@@ -1,0 +1,24 @@
+{
+  "productionReady": false,
+  "envelopeOnly": true,
+  "stage": 45,
+  "platformPrisms": 144,
+  "kitPartsTested": 11386,
+  "roleCounts": {
+    "collar": 16,
+    "deck": 4,
+    "frame": 80,
+    "rail": 44
+  },
+  "collisionCount": 0,
+  "collidingPlatformPrisms": 0,
+  "collidingKitParts": 0,
+  "ownerCollisionCount": 0,
+  "collisionPartCounts": {},
+  "centralOpeningIntrusions": 0,
+  "geometryClear": true,
+  "limits": [
+    "Exact convex SAT covers authored platform prisms against conservative rigid local-bound boxes for every kit part through stage 45.",
+    "Attachment face-center containment is an AABB diagnostic only; it does not establish clamp capacity, beam endpoint bearing, or construction sequence."
+  ]
+}

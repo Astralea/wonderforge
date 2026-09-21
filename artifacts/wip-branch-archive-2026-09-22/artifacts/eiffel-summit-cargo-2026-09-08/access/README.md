@@ -1,0 +1,11 @@
+# Summit ladder access — ascent verified, crank transfer pending
+
+Open `/artifacts/eiffel-summit-cargo-2026-09-08/access/index.html` on dev5590. The preview is deliberately capped at64s: a fixed18-part worker climbs16 rungs, releasing one hand/foot at a time and maintaining three other contacts. Arrival at the crown platform is omitted. The production film and V9 GLB remain unchanged.
+
+The body uses fixed-length connected IK and a rigid0.35rad torso lean. Feet are narrower and behind the rung plane, with toes resting on the actual source surface; hands grasp rung fronts. Source decagonal rung tops are centre+.018*cos(pi/10), removing the former~.86mm gap. Soles remain horizontal independently of torso lean.
+
+Verification: access6tests plus existing worker2tests pass, covering7201 reachable poses, fixed support targets, actual palm/rung contacts,34 exported-surface toe rays, all phase joins, and deterministic reverse queries. `ascent-clearance.json` records zero non-contact body/rig overlaps at129 actual-mesh poses over0–64s. Hands/feet are excluded from collision classification and checked separately as contacts. This is sampled clearance against the rig GLB, not interval proof or the separate tower GLB.
+
+Actual desktop1440×900/mobile390×844 GPU runs captured17 forward/reverse ascent poses each, zero errors and exact reverse-zero recorded roles. Candidate counts: desktop34,716triangles/87calls; mobile34,140/87. The actual served V9 asset SHA is `f304c1dc033341ca4f2c0acf8e90eb8c8c5562223d60a985bc6d2e2b594c50b4`. Inspected the top-rung close capture: both feet remain supported and hands remain on the ladder. Reports and source hashes identify this current source candidate; earlier V9 captures remain archived separately.
+
+The64–72s transfer is NOT accepted. Full-rig checks found that the earlier crank stance can intersect ladder/gear geometry despite reachable endpoints. Parent is building an outboard crank extension. `outboard-reach.json` provides reachable candidate poses for gripX.73, but does not certify mesh clearance. No automatic guide operation, hardware installation, continuous crown arrival, or full cargo lift is claimed. The raw `collision`/`actual-body-clearance` files include rejected conservative/older handoff attempts; use `ascent-clearance.json` for the accepted bounded ascent result.

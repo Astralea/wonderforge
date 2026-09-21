@@ -1,0 +1,17 @@
+[09/08/26 07:31:23] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/08/26 07:31:24] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 long-load master link.001", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-master-link-2026-09-08/blender/eiffel-master-link.blend", "objects": 11}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 closed long-load sling assembly",
+    "objects": 15,
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-closed-sling-2026-09-08/blender/eiffel-closed-sling.blend",
+    "productionReady": false
+  },
+  "stdout": "07:31:25 | INFO: Starting glTF 2.0 export\n07:31:25 | INFO: Extracting primitive: carrier-rope-eye-0\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: carrier-rope-eye-1\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: carrier-rope-eye-2\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: carrier-rope-eye-3\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: lower-rope-eye-0.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: lower-rope-eye-1.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: lower-rope-eye-2.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: lower-rope-eye-3.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: Torus.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: sling-leg-0.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: sling-leg-1.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: sling-leg-2.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: sling-leg-3.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Extracting primitive: upper-rope-eye.002\n07:31:25 | INFO: Primitives created: 1\n07:31:25 | INFO: Finished glTF 2.0 export in 0.04344511032104492 s\n\nInfo: Saved as \"eiffel-closed-sling.blend\"\n"
+}

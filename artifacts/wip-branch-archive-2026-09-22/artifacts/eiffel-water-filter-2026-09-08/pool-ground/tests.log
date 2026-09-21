@@ -1,0 +1,42 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+stdout | tests/eiffel-pool-terrain.test.ts > Actual exposition basin ground and support > clips only the actual paving intersection and retains exterior source triangles
+POOL PAVING AUDIT [{"sourceMesh":"Paris_Exposition_architecture_and_streets-paving009","sourceTriangles":25888,"removedTriangles":18,"splitTriangles":12,"replacementTriangles":18,"untouchedTriangles":25858,"removedArea":194,"affectedTriangleOffsets":[35760,35763,35766,35769,35772,35775,35778,35781,35784,35787,35790,35793,35796,35799,35802,35805,35808,35811,35814,35817,35820,35823,35826,35829,35832,35835,35838,35841,35844,35847]}]
+
+ ❯ tests/eiffel-pool-terrain.test.ts (6 tests | 1 failed) 1012ms
+   ✓ Actual exposition basin ground and support > matches the unchanged GLB floor, coping and pedestal levels 2ms
+   ✓ Actual exposition basin ground and support > removes terrain above the actual floor underside throughout both basin footprints 68ms
+   ✓ Actual exposition basin ground and support > retains actual original triangle heights immediately outside every coping boundary 138ms
+   ✓ Actual exposition basin ground and support > supports the complete coping underside and fountain base without entering the retained floor solid 30ms
+   × Actual exposition basin ground and support > clips only the actual paving intersection and retains exterior source triangles 74ms
+     → expected 18 to be 30 // Object.is equality
+   ✓ Actual exposition basin ground and support > exports finite nondegenerate prepared terrain triangles with unit face-side normals  581ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/eiffel-pool-terrain.test.ts > Actual exposition basin ground and support > clips only the actual paving intersection and retains exterior source triangles
+AssertionError: expected 18 to be 30 // Object.is equality
+
+- Expected
++ Received
+
+- 30
++ 18
+
+ ❯ tests/eiffel-pool-terrain.test.ts:83:70
+     81|   const before=new Map<string,Tri[]>();copy.traverse(o=>{if(o instance…
+     82|   const audits=clipEiffelPoolPaving(copy);console.log('POOL PAVING AUD…
+     83|   expect(audits).toHaveLength(1);expect(audits[0]!.removedTriangles).t…
+       |                                                                      ^
+     84|   const key=(t:Tri)=>t.map(v=>v.toArray().join(',')).join('|');
+     85|   copy.traverse(o=>{
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  15:31:10
+   Duration  1.48s (transform 146ms, setup 25ms, collect 225ms, tests 1.01s, environment 0ms, prepare 78ms)
+

@@ -1,0 +1,64 @@
+[09/07/26 21:18:55] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/07/26 21:18:56] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 supported iron splice campaign",
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-joint-campaign-2026-09-07/blender/eiffel-joint-campaign.blend",
+    "manifest": {
+      "supportSourceSHA256": "17d57198ca8f0f543fa0f8aabba9e5b59d87d4aea47302deaaf4807b26f344a3",
+      "supportTriangles": 312,
+      "cartTriangles": 1664,
+      "spliceTriangles": 472,
+      "bed": {
+        "size": [
+          1.8,
+          0.24,
+          5.909524027506511
+        ],
+        "topY": 1.141950000822544,
+        "centerY": 1.0219500008225442
+      },
+      "wheelRadius": 0.4,
+      "wheelZ": 1.9205953089396162,
+      "plates": [
+        {
+          "role": "splice-plate-0",
+          "center": [
+            51.247235279142856,
+            19,
+            -40.295236587524414
+          ],
+          "size": [
+            0.018,
+            0.11,
+            0.65
+          ]
+        },
+        {
+          "role": "splice-plate-1",
+          "center": [
+            51.38133527749777,
+            19,
+            -40.295236587524414
+          ],
+          "size": [
+            0.018,
+            0.11,
+            0.65
+          ]
+        }
+      ],
+      "limits": [
+        "Original authored interpretation; no historical dimensions claimed for this added support/cart/splice.",
+        "Grounded support context is not duplicated in support.glb.",
+        "Campaign paths and fastening/lifecycle need separate runtime verification."
+      ]
+    }
+  },
+  "stdout": "21:18:56 | INFO: Starting glTF 2.0 export\n21:18:56 | INFO: Extracting primitive: bearing-header-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: east-cross-raker-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: east-head-left-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: east-head-right-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: east-raker-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: east-saddle-iron\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: fastening-platform-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: joint-bearing-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: middle-tie-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-brace-east-a-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-brace-east-b-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-brace-west-a-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-brace-west-b-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-rail-north-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-rail-post-0-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-rail-post-1-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-rail-post-2-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-rail-south-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-rail-west-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-under-cross-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: platform-under-tie-timber\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: west-cross-raker-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: west-head-left-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: west-head-right-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: west-raker-timber-dark\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Extracting primitive: west-saddle-iron\n21:18:56 | INFO: Primitives created: 1\n21:18:56 | INFO: Finished glTF 2.0 export in 0.041071176528930664 s\n\n21:18:57 | INFO: Starting glTF 2.0 export\n21:18:57 | INFO: Extracting primitive: joint-cart-body-iron\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-cart-body-timber\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-cart-body-timber-dark\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-cart-wheel-iron\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-cart-wheel-timber\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Finished glTF 2.0 export in 0.02486109733581543 s\n\n21:18:57 | INFO: Starting glTF 2.0 export\n21:18:57 | INFO: Extracting primitive: joint-splice-plate-0-iron\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-splice-plate-0-rivet\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-splice-plate-1-iron\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Extracting primitive: joint-splice-plate-1-rivet\n21:18:57 | INFO: Primitives created: 1\n21:18:57 | INFO: Finished glTF 2.0 export in 0.041963815689086914 s\n\nInfo: Saved as \"eiffel-joint-campaign.blend\"\n"
+}

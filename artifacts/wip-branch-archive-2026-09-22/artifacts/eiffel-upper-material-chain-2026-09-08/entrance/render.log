@@ -1,0 +1,11 @@
+[09/08/26 22:07:19] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 Paris 1889 photographed entrance", "file": "", "objects": 145}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "render": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-upper-material-chain-2026-09-08/entrance/blender-review.png",
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-upper-material-chain-2026-09-08/blender/paris-photo-entrance.blend"
+}

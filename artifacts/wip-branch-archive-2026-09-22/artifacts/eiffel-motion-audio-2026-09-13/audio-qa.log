@@ -1,0 +1,136 @@
+{"scenario":"normal","count":2,"requests":[{"status":206,"type":"audio/mpeg"},{"status":206,"type":"audio/mpeg"}],"errors":[],"start":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":1.952329,"rate":1,"readyState":4,"error":null},"later":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":3.155572,"rate":1,"readyState":4,"error":null},"browserPauseRecovery":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":3.667508,"rate":1,"readyState":4,"error":null},"userPause":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":true,"muted":false,"currentTime":3.720792,"rate":1,"readyState":4,"error":null},"speed2":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":4.872226,"rate":1,"readyState":4,"error":null},"speed4":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":6.038511,"rate":1,"readyState":4,"error":null}}
+{"scenario":"first-request-fails","count":2,"requests":[{"status":206,"type":"audio/mpeg"}],"errors":[],"start":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":1.86405,"rate":1,"readyState":4,"error":null},"later":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":3.065928,"rate":1,"readyState":4,"error":null}}
+{"scenario":"delayed-load","count":2,"requests":[{"status":206,"type":"audio/mpeg"},{"status":206,"type":"audio/mpeg"}],"errors":[],"start":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":1.697723,"rate":1,"readyState":4,"error":null},"later":{"src":"https://wonderforge.localhost/audio/eiffel-tower-short.mp3","paused":false,"muted":false,"currentTime":2.900648,"rate":1,"readyState":4,"error":null}}
+[
+  {
+    "scenario": "normal",
+    "count": 2,
+    "requests": [
+      {
+        "status": 206,
+        "type": "audio/mpeg"
+      },
+      {
+        "status": 206,
+        "type": "audio/mpeg"
+      }
+    ],
+    "errors": [],
+    "start": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 1.952329,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "later": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 3.155572,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "browserPauseRecovery": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 3.667508,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "userPause": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": true,
+      "muted": false,
+      "currentTime": 3.720792,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "speed2": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 4.872226,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "speed4": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 6.038511,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    }
+  },
+  {
+    "scenario": "first-request-fails",
+    "count": 2,
+    "requests": [
+      {
+        "status": 206,
+        "type": "audio/mpeg"
+      }
+    ],
+    "errors": [],
+    "start": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 1.86405,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "later": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 3.065928,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    }
+  },
+  {
+    "scenario": "delayed-load",
+    "count": 2,
+    "requests": [
+      {
+        "status": 206,
+        "type": "audio/mpeg"
+      },
+      {
+        "status": 206,
+        "type": "audio/mpeg"
+      }
+    ],
+    "errors": [],
+    "start": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 1.697723,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "later": {
+      "src": "https://wonderforge.localhost/audio/eiffel-tower-short.mp3",
+      "paused": false,
+      "muted": false,
+      "currentTime": 2.900648,
+      "rate": 1,
+      "readyState": 4,
+      "error": null
+    }
+  }
+]

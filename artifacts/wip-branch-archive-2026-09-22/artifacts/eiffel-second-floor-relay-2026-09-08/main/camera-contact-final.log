@@ -1,0 +1,20 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-second-floor-relay-main.test.ts (7 tests) 116ms
+ ✓ tests/eiffel-summit-work-camera.test.ts (5 tests) 386ms
+   ✓ final summit working view > keeps the complete five-metre near frustum clear of all completed tower solids  320ms
+ ✓ tests/eiffel-second-floor-relay-camera.test.ts (3 tests) 1368ms
+   ✓ Second-floor relay construction framing > keeps the full five-metre near frustum outside completed tower solids  1093ms
+ ✓ tests/eiffel-long-load-film-camera.test.ts (6 tests) 2796ms
+   ✓ main-film actual long-load camera > fits each work envelope through continuous framing transitions in desktop and portrait  357ms
+   ✓ main-film actual long-load camera > keeps the five-metre near frustum outside every completed-tower solid  2377ms
+ ✓ tests/eiffel-film.test.ts (14 tests) 12844ms
+   ✓ Eiffel main film chapter > keeps immediate constant-direction azimuth motion through every inserted chapter boundary  3739ms
+   ✓ Eiffel main film chapter > binds the lightweight insertion coordinate to the actual production plan and manifest bytes  9073ms
+
+ Test Files  5 passed (5)
+      Tests  35 passed (35)
+   Start at  19:57:53
+   Duration  13.52s (transform 607ms, setup 69ms, collect 1.53s, tests 17.51s, environment 1ms, prepare 162ms)
+

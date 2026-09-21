@@ -1,0 +1,3672 @@
+[
+  {
+    "seconds": 130,
+    "clear": [
+      {
+        "azimuth": 98,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      }
+    ],
+    "original": [
+      {
+        "azimuth": 53.9754,
+        "pitchDegrees": 35.62500000000001,
+        "hits": [
+          {
+            "name": "tension-rod-017-0001",
+            "role": "tension-rod-0.17-0.17",
+            "point": [
+              -21.31835246136405,
+              59.681495205213956,
+              -3.82066178068143
+            ],
+            "distance": 15.538590195120744
+          },
+          {
+            "name": "tension-rod-017-0001",
+            "role": "tension-rod-0.17-0.17",
+            "point": [
+              -21.31835246136405,
+              59.681495205213956,
+              -3.82066178068143
+            ],
+            "distance": 15.538590195120744
+          },
+          {
+            "name": "tension-rod-017--0001",
+            "role": "tension-rod-0.17--0.17",
+            "point": [
+              -21.315075392117745,
+              59.78236660732822,
+              -4.16923451872751
+            ],
+            "distance": 15.70977616296782
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 53.9754,
+        "pitchDegrees": 5,
+        "hits": [
+          {
+            "name": "hatch-worker_torso001",
+            "point": [
+              -20.51600830690783,
+              59.145188856316786,
+              -2.6999999982118603
+            ],
+            "distance": 14.198153955521533
+          },
+          {
+            "name": "hatch-worker_torso001",
+            "point": [
+              -20.51600830690783,
+              59.145188856316786,
+              -2.6999999982118603
+            ],
+            "distance": 14.198153955521533
+          },
+          {
+            "name": "hatch-worker_neck001",
+            "point": [
+              -20.36585920835253,
+              59.3181150747073,
+              -2.810000001341104
+            ],
+            "distance": 14.180773785035663
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 53.9754,
+        "pitchDegrees": 10,
+        "hits": [
+          {
+            "name": "tension-rod-017-0001",
+            "role": "tension-rod-0.17-0.17",
+            "point": [
+              -21.317051012441404,
+              59.069166404127124,
+              -3.822558740281794
+            ],
+            "distance": 15.624611971722949
+          },
+          {
+            "name": "tension-rod-017-0001",
+            "role": "tension-rod-0.17-0.17",
+            "point": [
+              -21.317051012441404,
+              59.069166404127124,
+              -3.822558740281794
+            ],
+            "distance": 15.624611971722949
+          },
+          {
+            "name": "hatch-worker_head001",
+            "point": [
+              -20.328543202696213,
+              59.564291453217386,
+              -2.754999997913839
+            ],
+            "distance": 14.112276077225753
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 53.9754,
+        "pitchDegrees": 15,
+        "hits": [
+          {
+            "name": "tension-rod-017-0001",
+            "role": "tension-rod-0.17-0.17",
+            "point": [
+              -21.31715687790707,
+              59.17310458536862,
+              -3.8223606799570824
+            ],
+            "distance": 15.645599454166579
+          },
+          {
+            "name": "tension-rod-017-0001",
+            "role": "tension-rod-0.17-0.17",
+            "point": [
+              -21.31715687790707,
+              59.17310458536862,
+              -3.8223606799570824
+            ],
+            "distance": 15.645599454166579
+          },
+          null,
+          null
+        ],
+        "clear": false
+      }
+    ]
+  },
+  {
+    "seconds": 137,
+    "clear": [
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      }
+    ],
+    "original": [
+      {
+        "azimuth": 59.68407499999999,
+        "pitchDegrees": 40,
+        "hits": [
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              59.22197870978359,
+              -3.9465154105386056
+            ],
+            "distance": 15.703455279842093
+          },
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              59.22197870978359,
+              -3.9465154105386056
+            ],
+            "distance": 15.703455279842093
+          },
+          {
+            "name": "lateral-collar-1001",
+            "role": "lateral-collar-1.25",
+            "point": [
+              -21.299999997019768,
+              59.50637939221401,
+              -4.115415064335746
+            ],
+            "distance": 15.58745762158197
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 59.68407499999999,
+        "pitchDegrees": 5,
+        "hits": [
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              58.86546312065718,
+              -3.9458332079307112
+            ],
+            "distance": 15.800677996569602
+          },
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              58.86546312065718,
+              -3.9458332079307112
+            ],
+            "distance": 15.800677996569602
+          },
+          {
+            "name": "hatch-worker_torso001",
+            "point": [
+              -20.489047315049934,
+              59.19239153924234,
+              -2.6999999982118603
+            ],
+            "distance": 14.229943611929729
+          },
+          {
+            "name": "hatch-worker_head001",
+            "point": [
+              -20.474192060437076,
+              59.55473113860156,
+              -2.7631921865683595
+            ],
+            "distance": 14.25101822036375
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 59.68407499999999,
+        "pitchDegrees": 10,
+        "hits": [
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              58.90773695121183,
+              -3.945859619811868
+            ],
+            "distance": 15.808487496881748
+          },
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              58.90773695121183,
+              -3.945859619811868
+            ],
+            "distance": 15.808487496881748
+          },
+          {
+            "name": "tension-rod-017--0001",
+            "role": "tension-rod-0.17--0.17",
+            "point": [
+              -21.321970863194586,
+              59.098377143838846,
+              -4.157365242916407
+            ],
+            "distance": 15.904208136919245
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 59.68407499999999,
+        "pitchDegrees": 15,
+        "hits": [
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              58.9513387665426,
+              -3.945904759374301
+            ],
+            "distance": 15.810205340087048
+          },
+          {
+            "name": "actual-payload001",
+            "role": "actual-payload",
+            "point": [
+              -21.424999997019768,
+              58.9513387665426,
+              -3.945904759374301
+            ],
+            "distance": 15.810205340087048
+          },
+          {
+            "name": "tension-rod-017--0001",
+            "role": "tension-rod-0.17--0.17",
+            "point": [
+              -21.32206846835618,
+              59.14996302820036,
+              -4.157313071862468
+            ],
+            "distance": 15.885564839488278
+          },
+          null
+        ],
+        "clear": false
+      }
+    ]
+  },
+  {
+    "seconds": 143,
+    "clear": [
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      }
+    ],
+    "original": [
+      {
+        "azimuth": 66.453125,
+        "pitchDegrees": 40,
+        "hits": [
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.286191468013755,
+              60.20441818255726,
+              -3.114999591582209
+            ],
+            "distance": 14.446925394628996
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.286191468013755,
+              60.20441818255726,
+              -3.114999591582209
+            ],
+            "distance": 14.446925394628996
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -21.019776338723926,
+              60.77558607128964,
+              -2.890000104904175
+            ],
+            "distance": 13.84507586168087
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.97112745660565,
+              61.12740209360023,
+              -2.890000104904175
+            ],
+            "distance": 13.615608551243398
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 66.453125,
+        "pitchDegrees": 5,
+        "hits": [
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.294258826186255,
+              58.98154879149451,
+              -3.1149995904982863
+            ],
+            "distance": 14.978020743170031
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.294258826186255,
+              58.98154879149451,
+              -3.1149995904982863
+            ],
+            "distance": 14.978020743170031
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -21.022917285496398,
+              59.188551503569954,
+              -2.890000104904175
+            ],
+            "distance": 14.64457092649745
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.972049551672463,
+              59.55641368248663,
+              -2.890000104904175
+            ],
+            "distance": 14.59807553528582
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 66.453125,
+        "pitchDegrees": 10,
+        "hits": [
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.293945268143723,
+              59.12717274222542,
+              -3.1149995905404175
+            ],
+            "distance": 14.96689111610998
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.293945268143723,
+              59.12717274222542,
+              -3.1149995905404175
+            ],
+            "distance": 14.96689111610998
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -21.022794549889944,
+              59.37920035133868,
+              -2.890000104904175
+            ],
+            "distance": 14.612158070349345
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.972013519894332,
+              59.74643551079119,
+              -2.890000104904175
+            ],
+            "distance": 14.535770038577343
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 66.453125,
+        "pitchDegrees": 15,
+        "hits": [
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.293409607117535,
+              59.27727392662741,
+              -3.1149995906123884
+            ],
+            "distance": 14.937596541483979
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.293409607117535,
+              59.27727392662741,
+              -3.1149995906123884
+            ],
+            "distance": 14.937596541483979
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -21.022584999945348,
+              59.57535564584498,
+              -2.890000104904175
+            ],
+            "distance": 14.556443254813635
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.97195200182855,
+              59.941520277373456,
+              -2.8900001049041766
+            ],
+            "distance": 14.450865102185825
+          }
+        ],
+        "clear": false
+      }
+    ]
+  },
+  {
+    "seconds": 150,
+    "clear": [],
+    "original": [
+      {
+        "azimuth": 75.03739999999992,
+        "pitchDegrees": 40,
+        "hits": [
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.431282566331785,
+              59.79636780072913,
+              -3.1149995720879344
+            ],
+            "distance": 14.719657751809653
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.431282566331785,
+              59.79636780072913,
+              -3.1149995720879344
+            ],
+            "distance": 14.719657751809653
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.302710864749972,
+              60.18919604182009,
+              -3.11499958936268
+            ],
+            "distance": 14.44218887071634
+          },
+          {
+            "name": "head-brace--0004",
+            "point": [
+              -21.25476196022568,
+              60.55309023473732,
+              -3.1299995809864996
+            ],
+            "distance": 14.216924571421812
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 75.03739999999992,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.305048726875587,
+              59.124694563198304,
+              -3.1149995890485673
+            ],
+            "distance": 14.944412470665354
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.265000594512443,
+              59.50866697398435,
+              -3.1650726447573856
+            ],
+            "distance": 14.954090333312333
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 75.03739999999992,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.304958131083282,
+              59.25142183351676,
+              -3.1149995890607434
+            ],
+            "distance": 14.92492954127837
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.265000594527464,
+              59.6304705111524,
+              -3.165184439169618
+            ],
+            "distance": 14.90264248277138
+          }
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 75.03739999999992,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.304803312877873,
+              59.38198658029267,
+              -3.1149995890815427
+            ],
+            "distance": 14.890937018271767
+          },
+          {
+            "name": "mast--0004",
+            "point": [
+              -21.265000594553126,
+              59.755641946259075,
+              -3.1653754410165904
+            ],
+            "distance": 14.8378308431725
+          }
+        ],
+        "clear": false
+      }
+    ]
+  },
+  {
+    "seconds": 176,
+    "clear": [
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 12,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 65,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 70,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      }
+    ],
+    "original": [
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 12,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          {
+            "name": "pin-guide-stop001",
+            "point": [
+              -21.50214683267346,
+              65.27072589954987,
+              -3.8529999465681595
+            ],
+            "distance": 15.834042428687043
+          },
+          null,
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          {
+            "name": "pin-guide-stop001",
+            "point": [
+              -21.502134270995036,
+              65.27849902386966,
+              -3.854617188038297
+            ],
+            "distance": 15.809383914548285
+          },
+          null,
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 89.92,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      }
+    ]
+  },
+  {
+    "seconds": 202,
+    "clear": [
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 98,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 99.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 100,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 101,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 102,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 103,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 5,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 10,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 15,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 20,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 25,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 30,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 35,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 45,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 50,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 55,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 104.00000000000001,
+        "pitchDegrees": 60,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      }
+    ],
+    "original": [
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 40,
+        "hits": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "clear": true
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 5,
+        "hits": [
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.329639722163318,
+              59.40086962257002,
+              -2.8949999809265137
+            ],
+            "distance": 15.005323818222648
+          },
+          null,
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.487426647313793,
+              59.14230672915147,
+              -2.8949999809265137
+            ],
+            "distance": 15.015558555808415
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 10,
+        "hits": [
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.330091212262822,
+              59.51139381449631,
+              -2.8949999809265137
+            ],
+            "distance": 14.975010602356528
+          },
+          null,
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.48766468991682,
+              59.2304193343308,
+              -2.8949999809265137
+            ],
+            "distance": 15.01132763389255
+          },
+          null
+        ],
+        "clear": false
+      },
+      {
+        "azimuth": 92.7128125,
+        "pitchDegrees": 15,
+        "hits": [
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.32382279969196,
+              59.602827836764476,
+              -2.9833069222817397
+            ],
+            "distance": 15.024098374837408
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.320402771867474,
+              59.46075566600348,
+              -2.8949999809265137
+            ],
+            "distance": 14.974646307794531
+          },
+          {
+            "name": "bridge-iron004",
+            "role": "bridge-iron",
+            "point": [
+              -20.482875358955276,
+              59.300627968476014,
+              -2.970495667037703
+            ],
+            "distance": 15.077239656284496
+          },
+          null
+        ],
+        "clear": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/eiffel-site-layout.test.ts (2 tests) 238ms
+ ✓ tests/paris-assets.test.ts (3 tests) 1142ms
+   ✓ MCP-authored Paris exports > exports only city geometry with upward paved surfaces matching the shared terrain  808ms
+   ✓ MCP-authored Paris exports > preserves the city mesh while chunking it for real mobile-frustum culling  328ms
+ ✓ tests/eiffel-rebuilt-environment.test.ts (10 tests) 2149ms
+   ✓ rebuilt Eiffel environment > disposes the asynchronously chunked Paris environment  1212ms
+   ✓ rebuilt Eiffel environment > keeps authored steam-boat vertices clear of every bridge stone  314ms
+
+ Test Files  3 passed (3)
+      Tests  15 passed (15)
+   Start at  18:14:42
+   Duration  2.64s (transform 227ms, setup 0ms, collect 374ms, tests 3.53s, environment 0ms, prepare 264ms)
+

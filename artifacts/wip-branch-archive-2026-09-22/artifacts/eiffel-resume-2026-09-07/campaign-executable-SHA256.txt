@@ -1,0 +1,2 @@
+8dc7cd2558338cff2736059e71f2bf8e70813e7160656398ddc40c8904e86d2a  artifacts/eiffel-resume-2026-09-07/campaign-coverage-comparison.mjs
+0ff62402efcf1b3334b1fc7a43898586dddb15bc7ea2887fafed6d1836bef91c  public/models/eiffel-construction-kit/tower-kit.manifest.json

@@ -1,0 +1,18 @@
+[09/08/26 06:03:00] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[09/08/26 06:03:01] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 diagonal receiver frame candidate", "file": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-diagonal-receiver-2026-09-08/blender/eiffel-diagonal-receiver-frame.blend", "objects": 16}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "ok",
+  "result": {
+    "scene": "WonderForge \u2014 diagonal trolley fit",
+    "objects": 18,
+    "blend": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-diagonal-trolley-2026-09-08/blender/eiffel-diagonal-trolley.blend",
+    "productionReady": false,
+    "scope": "empty trolley fit; no drive or rope"
+  },
+  "stdout": "06:03:03 | INFO: Starting glTF 2.0 export\n06:03:03 | INFO: Extracting primitive: axle-bearing.028\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: axle-bearing.029\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: axle-bearing.030\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: axle-bearing.031\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.395\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.396\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.394\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: sheave-hanger.014\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: sheave-hanger.015\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.393\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.377\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.384\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: trolley-topplate\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.378\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.380\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.385\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Extracting primitive: Cylinder.387\n06:03:03 | INFO: Primitives created: 1\n06:03:03 | INFO: Finished glTF 2.0 export in 0.06369519233703613 s\n\nInfo: Saved as \"eiffel-diagonal-trolley.blend\"\n"
+}

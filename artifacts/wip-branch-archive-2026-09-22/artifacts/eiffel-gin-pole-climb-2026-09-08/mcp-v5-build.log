@@ -1,0 +1,15 @@
+[09/08/26 15:36:33] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+{"status": "ok", "result": {"version": "5.2.1 LTS", "scene": "WonderForge \u2014 supported climbing gin pole.003", "file": "", "objects": 446}}
+                    INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+{
+  "status": "candidate geometry; integration requires actual contact/sweep gates",
+  "sourceObjects": 316,
+  "sourceMeshes": 280,
+  "roles": 36,
+  "asset": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-gin-pole-climb-2026-09-08/model/summit-gin-pole-climb.glb",
+  "source": "/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/eiffel-gin-pole-climb-2026-09-08/blender/eiffel-summit-gin-pole-climb.blend"
+}

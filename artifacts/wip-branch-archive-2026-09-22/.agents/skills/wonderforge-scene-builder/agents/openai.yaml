@@ -1,0 +1,4 @@
+interface:
+  display_name: "WonderForge Scene Builder"
+  short_description: "Rebuild wonders as physical Three.js scenes"
+  default_prompt: "Use $wonderforge-scene-builder to migrate a WonderForge catalog fallback into a typed, deterministic physical construction scene."

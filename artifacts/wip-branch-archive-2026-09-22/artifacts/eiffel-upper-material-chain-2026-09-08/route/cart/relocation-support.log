@@ -1,0 +1,140 @@
+{
+  "du": 2.3,
+  "delta": [
+    -2.1785967300170017,
+    0,
+    0.7373712009288315
+  ],
+  "initial": {
+    "t": 0,
+    "position": [
+      -15,
+      116.13999938964844,
+      -1.8
+    ],
+    "yaw": 0,
+    "heading": 0,
+    "fail": []
+  },
+  "failedPoses": 0,
+  "unique": []
+}
+{
+  "identities": {
+    "public/models/eiffel-construction-kit/tower-kit.glb": "8c597d707ba70a38870075c5ebc22ca0092fcaeb253ce43ea030e3d57a9908f1",
+    "public/models/eiffel-second-floor-relay/relay.glb": "4b71e83c5e2403feceb44e6da7543fcc3ac96736af969adabdd96807067f4e76",
+    "artifacts/eiffel-relay-platform-2026-09-08/model/platform.glb": "558f8b9c3313e0bf5b76f12e74c66b135edc73207c36ae831d20094e8eff3ac7"
+  },
+  "filter": {
+    "maxStage": 59.55,
+    "excludedPartId": "summit-access-stair-m000-c000",
+    "scope": "Conservative stage envelope, includes same-stage future members; actual GLB surface triangles"
+  },
+  "obstacleMeshes": 13760,
+  "segments": [
+    {
+      "id": "second-floor-inward",
+      "a": [
+        -15,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -2,
+        116.47999939,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-second-floor-relay/relay.glb:side-brace-negative007"
+      ]
+    },
+    {
+      "id": "central-rise",
+      "a": [
+        -2,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -1.8
+      ],
+      "hits": []
+    },
+    {
+      "id": "platform-land-cross",
+      "a": [
+        -2,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "id": "platform-land-down",
+      "a": [
+        -2,
+        198,
+        -3.6
+      ],
+      "b": [
+        -2,
+        197,
+        -3.6
+      ],
+      "hits": []
+    },
+    {
+      "id": "outer-rise",
+      "a": [
+        -15,
+        116.47999939,
+        -1.8
+      ],
+      "b": [
+        -15,
+        198,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m026-c003",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m027-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m028-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-02-m029-c003",
+        "eiffel-second-floor-relay/relay.glb:girder-1007",
+        "eiffel-second-floor-relay/relay.glb:girder--1007"
+      ]
+    },
+    {
+      "id": "outer-enter",
+      "a": [
+        -15,
+        198,
+        -1.8
+      ],
+      "b": [
+        -2,
+        198,
+        -1.8
+      ],
+      "hits": [
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m025-c001",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m026-c001",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m026-c002",
+        "eiffel-construction-kit/tower-kit.glb:shaft-10-m030-c001",
+        "model/platform.glb:relay-structure"
+      ]
+    }
+  ]
+}
+{
+  "clashes": [],
+  "supports": 20,
+  "missing": []
+}

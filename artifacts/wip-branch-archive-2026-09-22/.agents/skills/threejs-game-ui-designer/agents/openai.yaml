@@ -1,0 +1,4 @@
+interface:
+  display_name: "Three.js Game UI Designer"
+  short_description: "Design premium Three.js game UI"
+  default_prompt: "Load .agents/skills/threejs-game-ui-designer/SKILL.md from the current project and follow it exactly. Non-negotiables: load the UI patterns reference first; report the reference ledger plus UI state, text-fit, safe-area, and touch-target evidence."
