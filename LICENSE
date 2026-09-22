@@ -19,20 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This license covers the source code of this repository.
-
-Generated and third-party assets carry their own terms:
-
-- **Narration audio** (`public/audio/narration/`) was generated with ElevenLabs
-  under a paid plan, which grants the account holder rights in the output.
-- **Music** (`public/audio/`) was generated with Google Lyria 3 Clip and
-  Lyria 3 Pro on Vertex AI. Google asserts no ownership of generated output.
-  The files carry SynthID and C2PA provenance marks.
-- **Lunar imagery** (`src/assets/lunar/`) is from NASA's CGI Moon Kit,
-  Scientific Visualization Studio, used unmodified.
-
-Redistributing these assets outside this project is not covered by the MIT
-grant above; check the originating service's terms first.

@@ -123,7 +123,7 @@ Deployed as a static bundle on Cloudflare Pages.
 
 Source code is MIT — see [LICENSE](LICENSE). Generated assets are not covered by
 that grant: the narration, the Lyria scores and the NASA lunar map each carry
-their own terms, summarised at the bottom of the license file.
+their own terms, listed in [NOTICE.md](NOTICE.md).
 
 ## Disclaimer
 
