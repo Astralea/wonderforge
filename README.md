@@ -8,9 +8,10 @@ hauled, ramped, levered and seated, stone by stone.
 **[wonderforge.pages.dev](https://wonderforge.pages.dev/)** — runs in any
 modern browser, nothing to install.
 
-## The films
+## The movies
 
-Four are finished and playable:
+Four are finished and playable. Giza, Stonehenge and the Colosseum run about
+a minute each; the Eiffel Tower runs three.
 
 | Wonder | Completed | What it shows |
 | --- | --- | --- |
@@ -23,7 +24,7 @@ Six more — Petra, Chichén Itzá, Machu Picchu, Angkor Wat, the Forbidden City
 and the Sydney Opera House — are in the catalog as "In production" and are not
 yet playable.
 
-Each film has a scrubbable timeline, an optional narrated history, and a
+Each one has a scrubbable timeline, an optional narrated history, and a
 wonder-specific score. Deep links are stable: `#/wonder/pyramids-of-giza`.
 
 ## How it works
