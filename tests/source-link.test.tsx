@@ -29,6 +29,21 @@ describe('project source link', () => {
     expect(SOURCE_URL).toMatch(/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/);
   });
 
+  it('shows the GitHub mark as decoration, keeping the label as the accessible name', () => {
+    for (const [label, ui] of [
+      ['catalog', <Gallery active onBack={() => {}} />],
+      ['facts', <FactsPanel wonder={WONDERS[0]} open onClose={() => {}} />],
+    ] as const) {
+      const view = render(ui);
+      const link = screen.getByRole('link', { name: 'Source on GitHub' });
+      const svg = link.querySelector('svg');
+      expect(svg, `${label} link should carry the mark`).not.toBeNull();
+      expect(svg).toHaveAttribute('aria-hidden');
+      expect(link).toHaveTextContent('Source on GitHub');
+      view.unmount();
+    }
+  });
+
   it('renders once in the facts panel of every wonder, credited or not', () => {
     for (const wonder of WONDERS) {
       const view = render(<FactsPanel wonder={wonder} open onClose={() => {}} />);
