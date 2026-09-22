@@ -1,9 +1,7 @@
 import { X } from 'lucide-react';
 import type { Wonder } from '../data/types';
 import { eraLabel, formatYear } from './format';
-
-/** Spec 05: the facts panel footer is the single place the repository is linked. */
-export const SOURCE_URL = 'https://github.com/Astralea/wonderforge';
+import { SOURCE_URL } from './links';
 
 const creditLink =
   'underline underline-offset-4 hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold';
