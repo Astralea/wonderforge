@@ -1,4 +1,4 @@
-import { X } from 'lucide-react';
+import { Github, X } from 'lucide-react';
 import type { Wonder } from '../data/types';
 import { eraLabel, formatYear } from './format';
 import { SOURCE_URL } from './links';
@@ -61,8 +61,14 @@ export function FactsPanel({
           </p>
         ))}
         <p className={wonder.credits?.length ? 'mt-2' : undefined}>
-          <a href={SOURCE_URL} target="_blank" rel="noreferrer" className={creditLink}>
-            Source on GitHub
+          <a
+            href={SOURCE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 transition-colors hover:text-parchment focus-visible:outline-2 focus-visible:outline-gold"
+          >
+            <Github size={12} aria-hidden />
+            <span className="underline underline-offset-4">Source on GitHub</span>
           </a>
         </p>
       </footer>

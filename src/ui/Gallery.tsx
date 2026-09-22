@@ -1,3 +1,4 @@
+import { Github } from 'lucide-react';
 import { useEffect, useRef, type CSSProperties } from 'react';
 import { catalogInProgress, catalogReady, type Wonder } from '../data';
 import { useUiStore } from '../store/ui';
@@ -87,9 +88,10 @@ export function Gallery({
             href={SOURCE_URL}
             target="_blank"
             rel="noreferrer"
-            className="cursor-pointer underline underline-offset-4 transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
+            className="inline-flex cursor-pointer items-center gap-1.5 transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
           >
-            Source on GitHub
+            <Github size={13} aria-hidden />
+            <span className="underline underline-offset-4">Source on GitHub</span>
           </a>
         </p>
       </main>
