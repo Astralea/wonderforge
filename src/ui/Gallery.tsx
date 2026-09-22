@@ -1,6 +1,7 @@
 import { useEffect, useRef, type CSSProperties } from 'react';
 import { catalogInProgress, catalogReady, type Wonder } from '../data';
 import { useUiStore } from '../store/ui';
+import { SOURCE_URL } from './links';
 import { eraLabel, formatYear, roman } from './format';
 import { WonderGlyph } from './WonderGlyph';
 
@@ -30,7 +31,7 @@ export function Gallery({
       >
         WonderForge
       </button>
-      <main className="min-h-0 overflow-y-auto pr-1 md:overflow-visible md:pr-2">
+      <main className="min-h-0 overflow-y-auto pr-1 md:pr-2">
         <section aria-labelledby="catalog-ready" className="pt-2">
           <h2
             id="catalog-ready"
@@ -81,6 +82,16 @@ export function Gallery({
             ))}
           </ol>
         </section>
+        <p className="mt-10 text-xs tracking-wide text-parchment/45">
+          <a
+            href={SOURCE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer underline underline-offset-4 transition-colors hover:text-gold focus-visible:outline-2 focus-visible:outline-gold"
+          >
+            Source on GitHub
+          </a>
+        </p>
       </main>
     </div>
   );
