@@ -4,6 +4,8 @@ import {
   SYDNEY_HEIGHT,
   SYDNEY_LENGTH,
   SYDNEY_WIDTH,
+  SYDNEY_FALSEWORK_STATIONS,
+  SYDNEY_SAILS,
 } from './sydneyConstruction';
 
 export interface SydneyEnvironmentPlan {
@@ -71,13 +73,13 @@ export function createSydneyEnvironmentPlan(): SydneyEnvironmentPlan {
       radius: 720,
       segments: 96,
       motion: 'static-world-space',
-      description: 'Bennelong Point peninsula in Sydney Harbour, Farm Cove east, Circular Quay south, Bridge west.',
+      description: 'Metre-scale Bennelong Point, open Farm Cove east, Circular Quay southwest and the Harbour Bridge northwest; mapped coastline with interpreted period buildings.',
     },
     monument: {
       length: SYDNEY_LENGTH,
       width: SYDNEY_WIDTH,
       height: SYDNEY_HEIGHT,
-      sails: 9,
+      sails: SYDNEY_SAILS.length,
     },
     ecology: {
       figs: 28,
@@ -85,8 +87,8 @@ export function createSydneyEnvironmentPlan(): SydneyEnvironmentPlan {
       tileStacks: 18,
       castingBeds: 10,
       description:
-        'Harbour water, fig trees, Circular Quay warehouses, a compressed 1966 ' +
-        'CBD and Kirribilli terraces, Höganäs tile palettes, and a western Harbour ' +
+        'Harbour water, fig trees, Circular Quay warehouses, an interpreted 1966 ' +
+        'CBD and Kirribilli terraces, Höganäs tile palettes, and a northwestern Harbour ' +
         'Bridge whose arch spans water between Dawes Point and Milsons Point.',
     },
     site: {
@@ -95,7 +97,7 @@ export function createSydneyEnvironmentPlan(): SydneyEnvironmentPlan {
       dozers: 3,
       dumpTrucks: 3,
       trolleys: 8,
-      falseworkStations: 8,
+      falseworkStations: SYDNEY_FALSEWORK_STATIONS,
     },
     exclusions: [
       'modern tourism',

@@ -32,7 +32,9 @@ export const useUiStore = create<UiState>((set, get) => ({
   showTitle: () => set({ homePlate: 'title' }),
 
   openWonder: (id) => {
-    if (!WONDERS.some((w) => w.id === id) || !isReadyWonder(id)) return;
+    const preview = window.location.hash === `#/debug/film/${id}`;
+    if (!WONDERS.some((w) => w.id === id) || (!isReadyWonder(id) && !preview))
+      return;
     const playback = usePlaybackStore.getState();
     useAudioStore.getState().applyNarrationDefault(id);
     playback.select(id);
@@ -44,14 +46,15 @@ export const useUiStore = create<UiState>((set, get) => ({
     // later effect-driven play() is not blocked as autoplay (same pattern as
     // caption voice). Missing cues stay silent.
     if (!prefersReducedMotion()) primeSoundtrack(id, 'cinematic');
-    if (useAudioStore.getState().voiceEnabled && !prefersReducedMotion()) primeNarrationAudio(id);
+    if (useAudioStore.getState().voiceEnabled && !prefersReducedMotion())
+      primeNarrationAudio(id);
     if (prefersReducedMotion()) {
       playback.seek(1); // completed still, scrubbable — no auto-play
     } else {
       playback.play();
     }
     set({ view: 'watch' });
-    if (window.location.hash !== hashFor(id)) {
+    if (!preview && window.location.hash !== hashFor(id)) {
       window.location.hash = hashFor(id);
     }
   },
@@ -63,9 +66,16 @@ export const useUiStore = create<UiState>((set, get) => ({
   },
 
   syncFromHash: () => {
-    const match = window.location.hash.match(/^#\/wonder\/([a-z0-9-]+)$/);
-    const id = match?.[1];
-    if (id && isReadyWonder(id)) {
+    const match = window.location.hash.match(
+      /^#\/(wonder|debug\/film)\/([a-z0-9-]+)$/,
+    );
+    const id = match?.[2];
+    const preview = match?.[1] === 'debug/film';
+    if (
+      id &&
+      WONDERS.some((w) => w.id === id) &&
+      (isReadyWonder(id) || preview)
+    ) {
       const alreadyThere =
         get().view === 'watch' && usePlaybackStore.getState().wonderId === id;
       if (!alreadyThere) get().openWonder(id);

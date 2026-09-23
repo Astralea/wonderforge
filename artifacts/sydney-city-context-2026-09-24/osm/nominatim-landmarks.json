@@ -1,0 +1,32 @@
+{
+ "Customs House, 31 Alfred Street, Sydney": {
+  "x": -386.50917205690234,
+  "z": 587.2516023338225,
+  "minX": -409.9712417574969,
+  "maxX": -361.7621426682841,
+  "minZ": 559.8558756497926,
+  "maxZ": 604.4393317122543,
+  "osm": "way/351374509",
+  "name": "Customs House, 31, Alfred Street, Quay Quarter, Sydney, New "
+ },
+ "Sydney Conservatorium of Music, Conservatorium Road": {
+  "x": -59.39911044663535,
+  "z": 738.0672484607089,
+  "minX": -142.5239846583506,
+  "maxX": 8.278514567533797,
+  "minZ": 669.0825600159566,
+  "maxZ": 808.0092845256066,
+  "osm": "way/1486021539",
+  "name": "Sydney Conservatorium of Music, 1, Conservatorium Road, Quay"
+ },
+ "Luna Park, Olympic Drive, Milsons Point": {
+  "x": -483.2694098652512,
+  "z": -1080.3811614440287,
+  "minX": -523.9536371145424,
+  "maxX": -375.7580345223494,
+  "minZ": -1275.7134719389114,
+  "maxZ": -878.1247786215682,
+  "osm": "relation/2916623",
+  "name": "Luna Park, 1, Olympic Drive, Milsons Point, Lower North Shor"
+ }
+}

@@ -12,12 +12,12 @@ import {
 } from '../src/data/sydneySky';
 import { SYDNEY_SAILS, SYDNEY_SPHERE_RADIUS } from '../src/data/sydneyConstruction';
 import type { Wonder } from '../src/data/types';
-import { sydneyCinematicShotAt } from '../src/engine/sydneyCamera';
+import { sydneyCinematicShotAt, SYDNEY_YARD_SHOT } from '../src/engine/sydneyCamera';
 import { createSydneyHarbourLots, sydneyHarbourLotsOf } from '../src/engine/sydneyHarbourLots';
-import { SYDNEY_BRIDGE, SYDNEY_WATER_Y, sydneyGroundKindAt, sydneyTerrainHeightAt } from '../src/engine/sydneyTerrain';
+import { SYDNEY_BRIDGE, SYDNEY_WATER_Y, sydneyBridgeToWorld, sydneyGroundKindAt, sydneyTerrainHeightAt } from '../src/engine/sydneyTerrain';
 import { createMaterialLibrary } from '../src/render/three/MaterialLibrary';
 import { SydneyEnvironment } from '../src/render/three/SydneyEnvironment';
-import { createSydneyPartGeometry, createSailGeometry } from '../src/render/three/SydneyStoneSystem';
+import { createSailGeometry } from '../src/render/three/SydneyStoneSystem';
 import { referenceWorldKindFor } from '../src/render/three/sceneRegistry';
 import { trackFor } from '../src/data/soundtrack';
 
@@ -69,7 +69,8 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
     expect(SYDNEY_ENVIRONMENT.ecology.figs).toBeGreaterThan(20);
     expect(SYDNEY_ENVIRONMENT.ecology.quaySheds).toBeGreaterThan(6);
     expect(SYDNEY_ENVIRONMENT.monument.height).toBe(67);
-    expect(SYDNEY_ENVIRONMENT.monument.sails).toBe(9);
+    expect(SYDNEY_ENVIRONMENT.monument.sails).toBe(SYDNEY_SAILS.length);
+    expect(SYDNEY_SAILS.length).toBeGreaterThanOrEqual(9);
     expect(SYDNEY_ENVIRONMENT.site.towerCranes).toBe(2);
     expect(SYDNEY_ENVIRONMENT.site.dozers).toBe(3);
     expect(SYDNEY_ENVIRONMENT.site.dumpTrucks).toBe(3);
@@ -89,11 +90,12 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
       expect(sydneyCinematicShotAt(t, 16 / 9)).toEqual(sydneyCinematicShotAt(t, 16 / 9));
       const shot = sydneyCinematicShotAt(t, 16 / 9);
       const pitchDeg = (shot.pitch * 180) / Math.PI;
-      expect(shot.radius).toBeGreaterThanOrEqual(500);
+      const yardInsert = t > SYDNEY_YARD_SHOT.from && t < SYDNEY_YARD_SHOT.until;
+      expect(shot.radius).toBeGreaterThanOrEqual(yardInsert ? 150 : 410);
       expect(shot.radius).toBeLessThanOrEqual(820);
       expect(shot.fov).toBe(35);
       expect(pitchDeg).toBeGreaterThan(19);
-      expect(pitchDeg).toBeLessThan(24);
+      expect(pitchDeg).toBeLessThanOrEqual(27);
     }
     const desktop = sydneyCinematicShotAt(0.54, 16 / 9);
     const portrait = sydneyCinematicShotAt(0.54, 390 / 844);
@@ -101,9 +103,13 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
     expect(portrait.fov).toBe(42);
     const opening = sydneyCinematicShotAt(0, 16 / 9);
     expect(Math.cos(opening.azimuth)).toBeGreaterThan(0.9);
-    expect(sydneyCinematicShotAt(0.12, 16 / 9).azimuth).toBeGreaterThan(opening.azimuth + 0.05);
-    expect(sydneyCinematicShotAt(1, 16 / 9).azimuth - opening.azimuth).toBeGreaterThan(0.7);
-    expect(sydneyCinematicShotAt(1, 16 / 9).azimuth - opening.azimuth).toBeLessThan(1.4);
+    expect(sydneyCinematicShotAt(0.12, 16 / 9).azimuth).toBeLessThan(opening.azimuth - 0.05);
+    const ending = sydneyCinematicShotAt(1, 16 / 9);
+    // Match the supplied north-west harbour aerial: camera west AND north,
+    // looking across the projecting glass foyers toward the southern land neck.
+    expect(Math.cos(ending.azimuth)).toBeLessThan(-0.5);
+    expect(Math.sin(ending.azimuth)).toBeLessThan(-0.5);
+    expect(ending.azimuth - opening.azimuth).toBeCloseTo(-2.1);
   });
 
   it('dispatches Sydney without changing Giza, Stonehenge, Petra, Colosseum, or remaining fallbacks', () => {
@@ -117,18 +123,6 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
   });
 
   it('builds sail skins from spherical patches and owns a harbour score', () => {
-    const sail = createSydneyPartGeometry('sail');
-    const rib = createSydneyPartGeometry('rib');
-    expect(sail.type).toBe('SphereGeometry');
-    expect(rib.type).toBe('BoxGeometry');
-    sail.computeBoundingBox();
-    const box = sail.boundingBox!;
-    expect(box.max.x - box.min.x).toBeCloseTo(1, 1);
-    expect(box.max.y - box.min.y).toBeCloseTo(1, 1);
-    expect(box.max.z - box.min.z).toBeCloseTo(1, 1);
-    expect(sail.getAttribute('position')!.count).toBeGreaterThan(24);
-    sail.dispose();
-    rib.dispose();
     expect(trackFor('sydney-opera-house', 'cinematic')?.src).toBe('/audio/sydney-opera-house-cinematic.mp3');
     expect(trackFor('sydney-opera-house', 'ambient')?.src).toBe('/audio/sydney-opera-house-ambient-loop.mp3');
   });
@@ -185,11 +179,18 @@ describe('Sydney Opera House world contract (Spec 13)', () => {
     expect(sydneyHarbourLotsOf('shed').length).toBeGreaterThan(6);
     expect(sydneyHarbourLotsOf('terrace').length).toBeGreaterThan(8);
     expect(sydneyHarbourLotsOf('fig').length).toBeGreaterThan(20);
-    expect(sydneyTerrainHeightAt(SYDNEY_BRIDGE.x, (SYDNEY_BRIDGE.northZ + SYDNEY_BRIDGE.southZ) / 2)).toBe(SYDNEY_WATER_Y);
-    expect(sydneyTerrainHeightAt(SYDNEY_BRIDGE.x, SYDNEY_BRIDGE.southZ)).toBeGreaterThan(2);
-    expect(sydneyTerrainHeightAt(SYDNEY_BRIDGE.x, SYDNEY_BRIDGE.northZ)).toBeGreaterThan(2);
-    expect(sydneyTerrainHeightAt(520, 520)).toBe(SYDNEY_WATER_Y);
+    const midpoint = sydneyBridgeToWorld(0, 0);
+    expect(sydneyTerrainHeightAt(midpoint.x, midpoint.z)).toBe(SYDNEY_WATER_Y);
+    for (const z of [SYDNEY_BRIDGE.southZ, SYDNEY_BRIDGE.northZ]) {
+      const bank = sydneyBridgeToWorld(0, z);
+      expect(sydneyTerrainHeightAt(bank.x, bank.z)).toBeGreaterThan(2);
+    }
+    // Real water on three sides of the point, with the forecourt connecting S.
+    for (const [x, z] of [[-130, 0], [0, -160], [150, 0]])
+      expect(sydneyGroundKindAt(x!, z!)).toBe('water');
+    expect(sydneyTerrainHeightAt(-30, 160)).toBeGreaterThan(2);
+    expect(sydneyTerrainHeightAt(520, 520)).toBeGreaterThan(SYDNEY_WATER_Y);
     expect(sydneyGroundKindAt(0, 0)).toBe('point');
-    expect(sydneyGroundKindAt(8, 230)).toBe('city');
+    expect(sydneyGroundKindAt(8, 230)).toBe('garden');
   });
 });

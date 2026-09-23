@@ -26,10 +26,11 @@ night): `colosseum`, `eiffel-tower`, `sydney-opera-house`.
 The typed catalog still holds all ten ids. The home gallery is two
 chronological blocks (Spec 05):
 
-**On site** (playable): Pyramids of Giza, Stonehenge, Colosseum, Eiffel Tower.
+**On site** (playable): Pyramids of Giza, Stonehenge, Colosseum, Eiffel Tower,
+Sydney Opera House (released 2026-09-24).
 
 **In production** (listed, not a control): Petra, Chichen Itza, Angkor Wat,
-Forbidden City, Machu Picchu, Sydney Opera House. Do not add a second
+Forbidden City, Machu Picchu. Do not add a second
 explanatory sentence under that heading.
 
 Never rename an id. Authoring `#/debug/wonder/:id/:t` may still render any

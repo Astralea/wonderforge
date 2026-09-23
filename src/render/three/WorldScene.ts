@@ -25,6 +25,7 @@ import { applyStonehengeShadow } from './stonehengeShadow';
 import { ColosseumWorld } from './ColosseumWorld';
 import { EiffelWorld } from './EiffelWorld';
 import { EIFFEL_CAMERA_NEAR } from './eiffelRenderPrecision';
+import { SYDNEY_CAMERA_NEAR } from './sydneyRenderPrecision';
 import { arrivalStageFor } from './wonderArrivalDrawings';
 import { GizaWorld } from './GizaWorld';
 import { LegacyWorld } from './LegacyWorld';
@@ -75,6 +76,9 @@ export class WorldScene {
       this.colosseum = new ColosseumWorld(this.materials);
       this.pipeline.scene.add(this.colosseum.group);
     } else if (this.worldKind === 'sydney') {
+      this.pipeline.setFilmGrain(0.008);
+      this.pipeline.setLensStreakEnabled(false);
+      this.pipeline.setBloomStrength(0.06);
       this.sydney = new SydneyWorld(this.materials);
       this.pipeline.scene.add(this.sydney.group);
     } else if (this.worldKind === 'eiffel') {
@@ -203,7 +207,7 @@ export class WorldScene {
   private updateColosseumCamera(t: number, fogStretch = 1, orbitElapsed?: number): void {
     const shot = colosseumCinematicShotAt(t, this.aspect);
     if (this.pipeline.scene.fog instanceof Fog) {
-      this.pipeline.scene.fog.near = shot.radius * 0.92 * fogStretch;
+      this.pipeline.scene.fog.near = shot.radius * 1.12 * fogStretch;
       this.pipeline.scene.fog.far = shot.radius * 3.6 * fogStretch;
     }
     const azimuth = shot.azimuth + ((orbitElapsed ?? 0) / 110) * Math.PI * 2;
@@ -221,9 +225,17 @@ export class WorldScene {
 
   private updateSydneyCamera(t: number, fogStretch = 1): void {
     const shot = sydneyCinematicShotAt(t, this.aspect);
+    // Portrait's fog end exceeds the shared 2.4 km clip plane. Keep the
+    // extended harbour terrain behind the fully opaque haze, not clipped.
+    this.pipeline.camera.far = 12_000;
+    // A half-metre near plane loses centimetre-scale facade/road separation
+    // across this kilometre-wide view. No scene subject is close to the lens.
+    this.pipeline.camera.near = SYDNEY_CAMERA_NEAR;
     if (this.pipeline.scene.fog instanceof Fog) {
-      this.pipeline.scene.fog.near = shot.radius * 0.92 * fogStretch;
-      this.pipeline.scene.fog.far = shot.radius * 2.18 * fogStretch;
+      // Spec 13 city pass: moderate harbour haze that still reveals the
+      // city; the portrait end stays well inside the 12 km clip plane.
+      this.pipeline.scene.fog.near = shot.radius * 1.3 * fogStretch;
+      this.pipeline.scene.fog.far = shot.radius * 4.0 * fogStretch;
     }
     const target = new Vector3(...shot.target);
     const horizontal = Math.cos(shot.pitch) * shot.radius;
@@ -358,7 +370,8 @@ export class WorldScene {
       light.fog = harbourSky.horizon;
       light.ambient.skyColor = harbourSky.zenith;
       this.pipeline.setAtmosphere(harbourSky.haze);
-      light.ambient.intensity = Math.min(0.64, light.ambient.intensity + 0.1);
+      light.ambient.intensity = 0.82 - light.emissive * 0.3;
+      light.sun.intensity = Math.max(1.65, light.sun.intensity) * (1 - light.emissive * 0.7);
       if (sun.elevation < 18 || light.emissive > 0) {
         const dusk = Math.min(1, Math.max((18 - sun.elevation) / 14, light.emissive));
         light.ambient.intensity = Math.min(0.7, light.ambient.intensity + dusk * 0.12);
@@ -401,7 +414,7 @@ export class WorldScene {
       this.pipeline.setEnvironmentNeutralizers(valleySky.fogNeutralizer,
         lerpColor('#dbe5ef', '#8a9bb5', night), lerpColor('#727767', '#4a566b', night));
     } else if (harbourSky) {
-      this.pipeline.setEnvironmentNeutralizers('#3a7a9c', '#d8e6f0', '#8a7a6a');
+      this.pipeline.setEnvironmentNeutralizers('#448ebf', '#d8e6f0', '#8a7a6a');
     } else if (parisSky) {
       this.pipeline.setEnvironmentNeutralizers('#6a92b8', '#d9d6d0', '#a2947c');
     } else {

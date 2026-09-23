@@ -1,5 +1,7 @@
 import type { Vec3 } from '../data/constructionTypes';
 import { clamp, easeInOutQuad } from './easing';
+import { SYDNEY_CONSTRUCTION } from '../data/sydneyConstruction';
+import { sydneyPartStateAt, sydneySourcePose, sydneyStagingPose } from './sydneyConstruction';
 
 export interface SydneyCameraShot {
   azimuth: number;
@@ -17,21 +19,46 @@ interface ShotKeyframe {
   target: Vec3;
 }
 
-/** Giza-like harbour panorama; east Farm Cove opening; linear azimuth. */
+/** Cross the open northern harbour from Farm Cove to the photographed western
+ * elevation. The final north-west view reveals the projecting glass foyers. */
 const SHOTS: ShotKeyframe[] = [
-  { t: 0, azimuth: 0.08, pitchDeg: 21.4, radius: 540, target: [4, 10, 4] },
-  { t: 0.16, azimuth: 0.22, pitchDeg: 21.0, radius: 562, target: [3, 11, 2] },
-  { t: 0.32, azimuth: 0.36, pitchDeg: 20.6, radius: 586, target: [2, 12, 1] },
-  { t: 0.48, azimuth: 0.50, pitchDeg: 20.4, radius: 610, target: [1, 13, 0] },
-  { t: 0.64, azimuth: 0.62, pitchDeg: 20.2, radius: 636, target: [0, 14, -1] },
-  { t: 0.8, azimuth: 0.74, pitchDeg: 20.0, radius: 662, target: [0, 15, -2] },
-  { t: 0.92, azimuth: 0.82, pitchDeg: 19.8, radius: 682, target: [0, 16, -2] },
-  { t: 1, azimuth: 0.88, pitchDeg: 19.6, radius: 698, target: [0, 16, -2] },
+  { t: 0, azimuth: -0.25, pitchDeg: 21.4, radius: 540, target: [0, 16, 0] },
+  { t: 0.5, azimuth: -1.3, pitchDeg: 23, radius: 500, target: [0, 28, 0] },
+  { t: 1, azimuth: -2.35, pitchDeg: 23, radius: 410, target: [0, 25, 0] },
 ];
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+const YARD_HERO = SYDNEY_CONSTRUCTION.parts.find(
+  (p) => p.id === 'rib-3--1-4-4',
+)!;
+export const SYDNEY_YARD_SHOT = {
+  from: YARD_HERO.start - 0.13,
+  closeFrom: YARD_HERO.start - 0.01,
+  closeUntil: YARD_HERO.start + YARD_HERO.duration * 0.25,
+  until: YARD_HERO.start + YARD_HERO.duration * 1.9,
+};
+export function sydneyYardShotWeight(t: number): number {
+  const smooth = (u: number) => {
+    const v = clamp(u);
+    return v * v * v * (v * (v * 6 - 15) + 10);
+  };
+  return (
+    smooth(
+      (t - SYDNEY_YARD_SHOT.from) /
+        (SYDNEY_YARD_SHOT.closeFrom - SYDNEY_YARD_SHOT.from),
+    ) *
+    (1 -
+      smooth(
+        (t - SYDNEY_YARD_SHOT.closeUntil) /
+          (SYDNEY_YARD_SHOT.until - SYDNEY_YARD_SHOT.closeUntil),
+      ))
+  );
+}
 
-export function sydneyCinematicShotAt(rawT: number, aspect = 16 / 9): SydneyCameraShot {
+export function sydneyCinematicShotAt(
+  rawT: number,
+  aspect = 16 / 9,
+): SydneyCameraShot {
   const t = clamp(rawT);
   let from = SHOTS[0]!;
   let to = SHOTS.at(-1)!;
@@ -44,8 +71,8 @@ export function sydneyCinematicShotAt(rawT: number, aspect = 16 / 9): SydneyCame
   }
   const span = (t - from.t) / (to.t - from.t);
   const local = from === to ? 1 : easeInOutQuad(span);
-  const narrow = Math.pow(clamp(1.78 / Math.max(0.3, aspect), 1, 2.05), 0.38);
-  return {
+  const narrow = Math.pow(clamp(1.78 / Math.max(0.3, aspect), 1, 2.05), 0.64);
+  const shot = {
     azimuth: lerp(from.azimuth, to.azimuth, from === to ? 1 : span),
     pitch: (lerp(from.pitchDeg, to.pitchDeg, local) * Math.PI) / 180,
     radius: lerp(from.radius, to.radius, local) * narrow,
@@ -53,7 +80,37 @@ export function sydneyCinematicShotAt(rawT: number, aspect = 16 / 9): SydneyCame
       lerp(from.target[0], to.target[0], local),
       lerp(from.target[1], to.target[1], local),
       lerp(from.target[2], to.target[2], local),
-    ],
+    ] as Vec3,
     fov: aspect < 0.72 ? 42 : 35,
   };
+  const weight = sydneyYardShotWeight(t);
+  const source = sydneySourcePose(YARD_HERO),
+    stage = sydneyStagingPose(YARD_HERO);
+  const yard: Vec3 = [
+    (source[0] + stage[0]) / 2,
+    8,
+    (source[2] + stage[2]) / 2,
+  ];
+  const localHero = (t - YARD_HERO.start) / YARD_HERO.duration;
+  const focusU = clamp((localHero - 0.25) / 0.3);
+  const focus = focusU * focusU * (3 - 2 * focusU);
+  // Anticipate the lift over a symmetric three-second window. Directly locking
+  // the lens to a timelapse crane load would reproduce its accelerated jerks.
+  const loadTarget: Vec3 = [0, 0, 0];
+  for (let i = -10; focus > 0 && weight > 0 && i <= 10; i++) {
+    const load = sydneyPartStateAt(YARD_HERO, SYDNEY_CONSTRUCTION.routes[0]!, t + i * 0.0025);
+    for (let axis = 0; axis < 3; axis++) loadTarget[axis]! += load.position[axis]! / 21;
+  }
+  const workTarget = yard.map((v, i) =>
+    lerp(v, loadTarget[i]!, focus),
+  ) as Vec3;
+  const workRadius = aspect < 0.72 ? lerp(165, 280, focus) : lerp(150, 200, focus);
+  shot.radius = lerp(shot.radius, workRadius, weight);
+  if (aspect < 0.72) shot.fov = lerp(shot.fov, 58, focus * weight);
+  // Look across the southern yard from its open east side; a northern close
+  // view would put the newly completed podium between the camera and workers.
+  shot.azimuth = lerp(shot.azimuth, 0.18, weight);
+  shot.pitch = lerp(shot.pitch, (23 * Math.PI) / 180, weight);
+  shot.target = shot.target.map((v, i) => lerp(v, workTarget[i]!, weight)) as Vec3;
+  return shot;
 }

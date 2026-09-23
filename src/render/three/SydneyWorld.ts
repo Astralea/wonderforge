@@ -31,7 +31,7 @@ export class SydneyWorld {
   update(t: number, light: LightState, sunDirection: Vector3, sky: SydneySkySample): void {
     const active = this.stones.update(t, light.emissive);
     this.work.update(active, t);
-    this.environment.update(t, light, sky);
+    this.environment.update(t, light, sky, sunDirection.y);
     this.sky.update(t, sky, sunDirection);
   }
 

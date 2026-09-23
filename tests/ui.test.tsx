@@ -646,7 +646,7 @@ describe('cinematic view', () => {
     fireEvent.click(screen.getByRole('button', { name: /previous wonder/i }));
     expect(usePlaybackStore.getState().wonderId).toBe('pyramids-of-giza');
     fireEvent.click(screen.getByRole('button', { name: /previous wonder/i }));
-    expect(usePlaybackStore.getState().wonderId).toBe('eiffel-tower'); // wraps Ready only
+    expect(usePlaybackStore.getState().wonderId).toBe('sydney-opera-house'); // wraps Ready only
   });
 
   it('Escape closes back to the gallery', () => {
@@ -769,4 +769,26 @@ describe('deep links', () => {
     render(<App />);
     expect(useUiStore.getState().view).toBe('home');
   });
+});
+
+it('opens an unpublished film only through the explicit debug film route', () => {
+  expect(catalogReady().some((w) => w.id === 'petra')).toBe(false);
+  window.location.hash = '#/debug/film/petra';
+  act(() => useUiStore.getState().syncFromHash());
+  expect(useUiStore.getState().view).toBe('watch');
+  expect(usePlaybackStore.getState().wonderId).toBe('petra');
+  expect(window.location.hash).toBe('#/debug/film/petra');
+  act(() => useUiStore.getState().closeWonder());
+  window.location.hash = '#/wonder/petra';
+  act(() => useUiStore.getState().syncFromHash());
+  expect(useUiStore.getState().view).toBe('home');
+});
+
+it('publishes the Sydney Opera House film on its public route', () => {
+  expect(catalogReady().map((w) => w.id).at(-1)).toBe('sydney-opera-house');
+  window.location.hash = '#/wonder/sydney-opera-house';
+  act(() => useUiStore.getState().syncFromHash());
+  expect(useUiStore.getState().view).toBe('watch');
+  expect(usePlaybackStore.getState().wonderId).toBe('sydney-opera-house');
+  act(() => useUiStore.getState().closeWonder());
 });

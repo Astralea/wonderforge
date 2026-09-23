@@ -10,12 +10,13 @@ describe('wonder catalog', () => {
     expect(WONDERS).toHaveLength(10);
   });
 
-  it('publishes four Ready films in chronological order and lists the rest as in progress', () => {
+  it('publishes five Ready films in chronological order and lists the rest as in progress', () => {
     expect(catalogReady().map((w) => w.id)).toEqual([
       'pyramids-of-giza',
       'stonehenge',
       'colosseum',
       'eiffel-tower',
+      'sydney-opera-house',
     ]);
     expect(catalogInProgress().map((w) => w.id)).toEqual([
       'petra',
@@ -23,7 +24,6 @@ describe('wonder catalog', () => {
       'angkor-wat',
       'forbidden-city',
       'machu-picchu',
-      'sydney-opera-house',
     ]);
     expect(isReadyWonder('colosseum')).toBe(true);
     expect(isReadyWonder('petra')).toBe(false);

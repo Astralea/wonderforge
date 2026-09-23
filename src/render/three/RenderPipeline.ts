@@ -7,7 +7,7 @@ import {
   HemisphereLight,
   Mesh,
   type Object3D,
-  PCFSoftShadowMap,
+  PCFShadowMap,
   PMREMGenerator,
   PerspectiveCamera,
   Scene,
@@ -322,7 +322,7 @@ export class RenderPipeline {
     this.renderer.shadowMap.enabled = true;
     // Soft PCF: hard-edged shadow texels read as low-budget; the penumbra is
     // most of what "AAA lighting" means at this scale.
-    this.renderer.shadowMap.type = PCFSoftShadowMap;
+    this.renderer.shadowMap.type = PCFShadowMap;
     this.renderer.setClearColor('#b8c7c4');
 
     // Cinematic post stack. The scene renders linear into a HalfFloat buffer
@@ -499,6 +499,11 @@ export class RenderPipeline {
   /** Analytical celestial discs can opt out of the sampled horizontal streak. */
   setLensStreakEnabled(enabled: boolean): void {
     this.lensStreakEnabled = enabled;
+  }
+
+  /** Keep bright architectural surfaces legible without changing scene light. */
+  setBloomStrength(strength: number): void {
+    this.bloom.strength = Math.max(0, Math.min(1, strength));
   }
 
   /** `filmTime` seeds the grade's grain; playback `t` keeps scrubs identical. */

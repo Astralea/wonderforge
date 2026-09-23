@@ -56,12 +56,14 @@ float fbm(vec2 p) {
 
 void main() {
   vec3 dir = normalize(vWorldPosition - cameraPosition);
-  float frameElevation = normalize(vViewRay).y;
-  float elevation = max(dir.y, frameElevation * 0.82 + 0.01);
+  float elevation = dir.y;
   float skyT = smoothstep(-0.015, 0.18, elevation);
   vec3 color = mix(uHorizon, uZenith, skyT);
 
-  vec2 weatherUv = dir.xz * (1.55 / (dir.y + 0.38)) + vec2(uTime * 0.1, -uTime * 0.035);
+  // The lower hemisphere is visible through water. Project clouds from at
+  // least horizon height: dir.y + 0.38 could reach zero and send NaN into
+  // the HDR frame. A zero cloud/fog mask cannot remove NaN before bloom.
+  vec2 weatherUv = dir.xz * (1.55 / (max(dir.y, 0.0) + 0.38)) + vec2(uTime * 0.1, -uTime * 0.035);
   float broad = fbm(weatherUv + dir.y * vec2(1.1, -0.6));
   float detail = fbm(weatherUv * 3.4 + vec2(5.1, -3.2));
   float cloudField = broad * 0.72 + detail * 0.28;
@@ -84,12 +86,12 @@ void main() {
   gl_FragColor = vec4(color, 1.0);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
-  float fogBlend = 1.0 - smoothstep(0.0, 0.042, elevation);
-  gl_FragColor.rgb = mix(gl_FragColor.rgb, uFogColor, fogBlend * 0.62);
+  float fogBlend = 1.0 - smoothstep(0.005, 0.08, elevation);
+  gl_FragColor.rgb = mix(gl_FragColor.rgb, uFogColor, fogBlend);
 }
 `;
 
-const HARBOUR_FOG_NEUTRALIZER = new Color('#3a7a9c');
+const HARBOUR_FOG_NEUTRALIZER = new Color('#448ebf');
 
 export class SydneySkyDome {
   readonly mesh: Mesh;

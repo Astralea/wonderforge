@@ -11,7 +11,9 @@ import {
 } from 'three';
 import type { SydneyConstructionPlan } from '../../data/sydneyTypes';
 import {
-  sydneyCraneRigAt,
+  sydneyCraneStateAt,
+  type SydneyCraneState,
+  SYDNEY_CRANE_MAST_HEIGHT,
   sydneyFalseworkAt,
   sydneyVerticalHalfExtent,
   type ActiveSydneyOperation,
@@ -23,10 +25,10 @@ import type { MaterialLibrary } from './MaterialLibrary';
 
 const MAX_OPERATIONS = 18;
 const MAX_WORKERS = 192;
-const FIGURE = 5.0;
-const MAX_FALSEWORK_POLES = 320;
-const MAX_FALSEWORK_DECKS = 16;
-const MAX_PLANT_BOX = 160;
+const FIGURE = 1;
+const MAX_FALSEWORK_POLES = 3200;
+const MAX_FALSEWORK_DECKS = 80;
+const MAX_PLANT_BOX = 700;
 const MAX_PLANT_CYL = 80;
 const UP = new Vector3(0, 1, 0);
 const YAW_AXIS = new Vector3(0, 1, 0);
@@ -57,7 +59,10 @@ export class SydneyWorkSystem {
   private readonly dust: InstancedMesh;
   private readonly materials: MeshStandardMaterial[] = [];
 
-  constructor(materials: MaterialLibrary, _plan: SydneyConstructionPlan) {
+  constructor(
+    materials: MaterialLibrary,
+    private readonly plan: SydneyConstructionPlan,
+  ) {
     this.group.name = 'sydney-work-system';
     const skin = materials.skin.clone();
     const linen = materials.linen.clone();
@@ -79,24 +84,80 @@ export class SydneyWorkSystem {
     dustMat.transparent = true;
     dustMat.opacity = 0.28;
     dustMat.depthWrite = false;
-    this.materials.push(skin, linen, steel, yellow, dark, timber, ropeMat, dustMat);
+    this.materials.push(
+      skin,
+      linen,
+      steel,
+      yellow,
+      dark,
+      timber,
+      ropeMat,
+      dustMat,
+    );
     this.bodies = new InstancedMesh(this.bodyGeometry, linen, MAX_WORKERS);
     this.heads = new InstancedMesh(this.headGeometry, skin, MAX_WORKERS);
     this.legs = new InstancedMesh(this.legGeometry, linen, MAX_WORKERS * 2);
     this.arms = new InstancedMesh(this.armGeometry, skin, MAX_WORKERS * 2);
-    this.trolleyDecks = new InstancedMesh(this.boxGeometry, yellow, MAX_OPERATIONS);
-    this.trolleyWheels = new InstancedMesh(this.wheelGeometry, dark, MAX_OPERATIONS * 4);
-    this.plantYellow = new InstancedMesh(this.boxGeometry, yellow, MAX_PLANT_BOX);
+    this.trolleyDecks = new InstancedMesh(
+      this.boxGeometry,
+      yellow,
+      MAX_OPERATIONS,
+    );
+    this.trolleyWheels = new InstancedMesh(
+      this.wheelGeometry,
+      dark,
+      MAX_OPERATIONS * 4,
+    );
+    this.plantYellow = new InstancedMesh(
+      this.boxGeometry,
+      yellow,
+      MAX_PLANT_BOX,
+    );
+    this.plantYellow.name = 'sydney-crane-and-plant-members';
     this.plantDark = new InstancedMesh(this.boxGeometry, dark, MAX_PLANT_BOX);
     this.plantCyls = new InstancedMesh(this.wheelGeometry, dark, MAX_PLANT_CYL);
-    this.ropes = new InstancedMesh(this.armGeometry, ropeMat, MAX_OPERATIONS * 4);
-    this.falseworkPoles = new InstancedMesh(this.poleGeometry, steel, MAX_FALSEWORK_POLES);
-    this.falseworkDecks = new InstancedMesh(this.boxGeometry, timber, MAX_FALSEWORK_DECKS);
-    this.dust = new InstancedMesh(this.dustGeometry, dustMat, MAX_OPERATIONS * 2);
+    this.ropes = new InstancedMesh(
+      this.armGeometry,
+      ropeMat,
+      MAX_OPERATIONS * 4,
+    );
+    this.ropes.name = 'sydney-crane-cables';
+    this.falseworkPoles = new InstancedMesh(
+      this.poleGeometry,
+      steel,
+      MAX_FALSEWORK_POLES,
+    );
+    this.falseworkDecks = new InstancedMesh(
+      this.boxGeometry,
+      timber,
+      MAX_FALSEWORK_DECKS,
+    );
+    this.bodies.name = 'sydney-worker-bodies';
+    this.heads.name = 'sydney-worker-heads';
+    this.legs.name = 'sydney-worker-legs';
+    this.arms.name = 'sydney-worker-arms';
+    this.falseworkPoles.name = 'sydney-falsework-poles';
+    this.falseworkDecks.name = 'sydney-falsework-decks';
+    this.trolleyDecks.name = 'sydney-trolley-decks';
+    this.trolleyWheels.name = 'sydney-trolley-wheels';
+    this.dust = new InstancedMesh(
+      this.dustGeometry,
+      dustMat,
+      MAX_OPERATIONS * 2,
+    );
     for (const mesh of [
-      this.bodies, this.heads, this.legs, this.arms,
-      this.trolleyDecks, this.trolleyWheels, this.plantYellow, this.plantDark, this.plantCyls,
-      this.ropes, this.falseworkPoles, this.falseworkDecks,
+      this.bodies,
+      this.heads,
+      this.legs,
+      this.arms,
+      this.trolleyDecks,
+      this.trolleyWheels,
+      this.plantYellow,
+      this.plantDark,
+      this.plantCyls,
+      this.ropes,
+      this.falseworkPoles,
+      this.falseworkDecks,
     ]) {
       mesh.castShadow = true;
       mesh.frustumCulled = false;
@@ -141,18 +202,32 @@ export class SydneyWorkSystem {
     const composeAlong = (from: Vector3, to: Vector3, radius: number) => {
       alongScratch.copy(to).sub(from);
       const length = Math.max(0.05, alongScratch.length());
-      quaternion.setFromUnitVectors(UP, alongScratch.multiplyScalar(1 / length));
+      quaternion.setFromUnitVectors(
+        UP,
+        alongScratch.multiplyScalar(1 / length),
+      );
       midpoint.copy(from).lerp(to, 0.5);
       matrix.compose(midpoint, quaternion, new Vector3(radius, length, radius));
     };
-    const composeWheel = (pos: Vector3, yaw: number, spin: number, radius: number, thickness: number) => {
+    const composeWheel = (
+      pos: Vector3,
+      yaw: number,
+      spin: number,
+      radius: number,
+      thickness: number,
+    ) => {
       axle.set(Math.cos(yaw), 0, -Math.sin(yaw));
       spinQuat.setFromAxisAngle(UP, spin);
       quaternion.setFromUnitVectors(UP, axle);
       quaternion.multiply(spinQuat);
       matrix.compose(pos, quaternion, new Vector3(radius, thickness, radius));
     };
-    const pushYellow = (pos: Vector3, yaw: number, scale: Vector3, lean = 0) => {
+    const pushYellow = (
+      pos: Vector3,
+      yaw: number,
+      scale: Vector3,
+      lean = 0,
+    ) => {
       if (yellowBoxes >= MAX_PLANT_BOX) return;
       compose(pos, yaw, scale, lean);
       this.plantYellow.setMatrixAt(yellowBoxes, matrix);
@@ -164,32 +239,75 @@ export class SydneyWorkSystem {
       this.plantDark.setMatrixAt(darkBoxes, matrix);
       darkBoxes += 1;
     };
-    const pushCyl = (pos: Vector3, yaw: number, radius: number, thickness: number) => {
+    const pushCyl = (
+      pos: Vector3,
+      yaw: number,
+      radius: number,
+      thickness: number,
+    ) => {
       if (plantCyls >= MAX_PLANT_CYL) return;
       composeWheel(pos, yaw, 0, radius, thickness);
       this.plantCyls.setMatrixAt(plantCyls, matrix);
       plantCyls += 1;
     };
-    const placeTowerCrane = (pose: SydneyPlantPose, active: ReturnType<typeof sydneyCraneRigAt> | undefined) => {
+    const placeTowerCrane = (
+      pose: SydneyPlantPose,
+      active: SydneyCraneState,
+    ) => {
       const [bx, by, bz] = pose.position;
-      const mastH = 82;
-      const yaw = active?.yaw ?? pose.yaw;
+      const mastH = SYDNEY_CRANE_MAST_HEIGHT;
+      const yaw = active.yaw;
       const fx = Math.sin(yaw);
       const fz = Math.cos(yaw);
       const section = mastH / 5;
       for (let lift = 0; lift < 5; lift += 1) {
-        pushYellow(new Vector3(bx, by + (lift + 0.5) * section, bz), 0, new Vector3(4.6, section * 0.92, 4.6));
+        for (const sx of [-1, 1])
+          for (const sz of [-1, 1]) {
+            pushYellow(
+              new Vector3(
+                bx + sx * 1.35,
+                by + (lift + 0.5) * section,
+                bz + sz * 1.35,
+              ),
+              0,
+              new Vector3(0.3, section, 0.3),
+            );
+          }
+        for (const sz of [-1, 1]) {
+          composeAlong(
+            new Vector3(bx - 1.35, by + lift * section, bz + sz * 1.35),
+            new Vector3(bx + 1.35, by + (lift + 1) * section, bz + sz * 1.35),
+            0.22,
+          );
+          this.plantYellow.setMatrixAt(yellowBoxes++, matrix);
+        }
       }
-      pushDark(new Vector3(bx + fx * 3.2, by + mastH - 7, bz + fz * 3.2), yaw, new Vector3(5.4, 4.2, 4.8));
-      const luff = 0.32 + pose.articulation * 0.25;
-      const reach = 62;
-      const tip = active
-        ? new Vector3(active.jibTip[0], active.jibTip[1], active.jibTip[2])
-        : new Vector3(bx + fx * reach, by + mastH - 4 + Math.sin(luff) * 28, bz + fz * reach);
-      const jibRoot = new Vector3(bx, by + mastH - 3, bz);
+      pushDark(
+        new Vector3(bx + fx * 3.2, by + mastH - 7, bz + fz * 3.2),
+        yaw,
+        new Vector3(5.4, 4.2, 4.8),
+      );
+      // Service platform turns with the crane. The visible crane hand stands
+      // on this slab, outside the opaque cabin volume.
+      pushDark(
+        new Vector3(bx - fx * 3, by + mastH - 9.29, bz - fz * 3),
+        yaw,
+        new Vector3(4.8, 0.38, 6.4),
+      );
+      composeAlong(
+        new Vector3(bx, by + mastH - 14, bz),
+        new Vector3(bx - fx * 4.6, by + mastH - 9.48, bz - fz * 4.6),
+        0.35,
+      );
+      this.plantYellow.setMatrixAt(yellowBoxes++, matrix);
+      const tip = new Vector3(...active.jibTip);
+      const jibRoot = new Vector3(bx, by + mastH, bz);
       alongScratch.copy(tip).sub(jibRoot);
       const jibLen = Math.max(0.05, alongScratch.length());
-      quaternion.setFromUnitVectors(UP, alongScratch.multiplyScalar(1 / jibLen));
+      quaternion.setFromUnitVectors(
+        UP,
+        alongScratch.multiplyScalar(1 / jibLen),
+      );
       midpoint.copy(jibRoot).lerp(tip, 0.5);
       if (yellowBoxes < MAX_PLANT_BOX) {
         matrix.compose(midpoint, quaternion, new Vector3(1.9, jibLen, 1.9));
@@ -206,7 +324,7 @@ export class SydneyWorkSystem {
         yaw,
         new Vector3(4.8, 3.6, 6.2),
       );
-      if (active && ropes < MAX_OPERATIONS * 4) {
+      if (ropes < MAX_OPERATIONS * 4) {
         composeAlong(
           new Vector3(active.jibTip[0], active.jibTip[1], active.jibTip[2]),
           new Vector3(active.hook[0], active.hook[1], active.hook[2]),
@@ -214,6 +332,12 @@ export class SydneyWorkSystem {
         );
         this.ropes.setMatrixAt(ropes, matrix);
         ropes += 1;
+        composeAlong(
+          new Vector3(...active.hook),
+          new Vector3(active.hook[0], active.hook[1] - 1.2, active.hook[2]),
+          0.11,
+        );
+        this.ropes.setMatrixAt(ropes++, matrix);
       }
     };
     const placeCrawler = (pose: SydneyPlantPose) => {
@@ -221,7 +345,7 @@ export class SydneyWorkSystem {
       const yaw = pose.yaw;
       const fx = Math.sin(yaw);
       const fz = Math.cos(yaw);
-      pushDark(new Vector3(x, y + 1.6, z), yaw, new Vector3(22, 2.4, 12.5));
+      pushDark(new Vector3(x, y + 1.6, z), yaw, new Vector3(12.5, 2.4, 22));
       pushYellow(new Vector3(x, y + 5.2, z), yaw, new Vector3(12.4, 6.2, 11));
       const boomRoot = new Vector3(x + fx * 3, y + 8.2, z + fz * 3);
       const boomTip = new Vector3(
@@ -231,15 +355,28 @@ export class SydneyWorkSystem {
       );
       alongScratch.copy(boomTip).sub(boomRoot);
       const boomLen = Math.max(0.05, alongScratch.length());
-      quaternion.setFromUnitVectors(UP, alongScratch.multiplyScalar(1 / boomLen));
+      quaternion.setFromUnitVectors(
+        UP,
+        alongScratch.multiplyScalar(1 / boomLen),
+      );
       midpoint.copy(boomRoot).lerp(boomTip, 0.5);
       if (yellowBoxes < MAX_PLANT_BOX) {
         matrix.compose(midpoint, quaternion, new Vector3(1.5, boomLen, 1.5));
         this.plantYellow.setMatrixAt(yellowBoxes, matrix);
         yellowBoxes += 1;
       }
-      pushCyl(new Vector3(x + Math.cos(yaw) * 5.1, y + 1.7, z - Math.sin(yaw) * 5.1), yaw, 2.0, 5.6);
-      pushCyl(new Vector3(x - Math.cos(yaw) * 5.1, y + 1.7, z + Math.sin(yaw) * 5.1), yaw, 2.0, 5.6);
+      pushCyl(
+        new Vector3(x + Math.cos(yaw) * 5.1, y + 2, z - Math.sin(yaw) * 5.1),
+        yaw,
+        2.0,
+        5.6,
+      );
+      pushCyl(
+        new Vector3(x - Math.cos(yaw) * 5.1, y + 2, z + Math.sin(yaw) * 5.1),
+        yaw,
+        2.0,
+        5.6,
+      );
     };
     const placeDozer = (pose: SydneyPlantPose) => {
       const [x, y, z] = pose.position;
@@ -248,27 +385,51 @@ export class SydneyWorkSystem {
       const fz = Math.cos(yaw);
       const lx = Math.cos(yaw);
       const lz = -Math.sin(yaw);
-      pushYellow(new Vector3(x, y + 3.6, z), yaw, new Vector3(22, 5.2, 13.2));
-      pushDark(new Vector3(x - fx * 3.6, y + 7.2, z - fz * 3.6), yaw, new Vector3(7.8, 4.8, 9.6));
-      pushYellow(
-        new Vector3(x + fx * 12.6, y + 3.4 + pose.articulation * 1.4, z + fz * 12.6),
+      pushYellow(new Vector3(x, y + 3.6, z), yaw, new Vector3(13.2, 5.2, 22));
+      pushDark(
+        new Vector3(x - fx * 3.6, y + 7.2, z - fz * 3.6),
         yaw,
-        new Vector3(1.6, 6.8, 15.6),
+        new Vector3(7.8, 4.8, 9.6),
+      );
+      pushYellow(
+        new Vector3(
+          x + fx * 12.6,
+          y + 3.4 + pose.articulation * 1.4,
+          z + fz * 12.6,
+        ),
+        yaw,
+        new Vector3(15.6, 6.8, 1.6),
         pose.articulation * 0.4,
       );
-      pushDark(new Vector3(x + lx * 6.4, y + 1.7, z + lz * 6.4), yaw, new Vector3(20, 2.2, 3.4));
-      pushDark(new Vector3(x - lx * 6.4, y + 1.7, z - lz * 6.4), yaw, new Vector3(20, 2.2, 3.4));
+      pushDark(
+        new Vector3(x + lx * 6.4, y + 1.1, z + lz * 6.4),
+        yaw,
+        new Vector3(3.4, 2.2, 20),
+      );
+      pushDark(
+        new Vector3(x - lx * 6.4, y + 1.1, z - lz * 6.4),
+        yaw,
+        new Vector3(3.4, 2.2, 20),
+      );
     };
     const placeTruck = (pose: SydneyPlantPose) => {
       const [x, y, z] = pose.position;
       const yaw = pose.yaw;
       const fx = Math.sin(yaw);
       const fz = Math.cos(yaw);
-      pushDark(new Vector3(x + fx * 6.8, y + 4.0, z + fz * 6.8), yaw, new Vector3(7.2, 5.4, 6.6));
-      pushYellow(
-        new Vector3(x - fx * 4.2, y + 4.1 + pose.articulation * 2, z - fz * 4.2),
+      pushDark(
+        new Vector3(x + fx * 6.8, y + 4.0, z + fz * 6.8),
         yaw,
-        new Vector3(14.4, 3.8, 6.2),
+        new Vector3(7.2, 5.4, 6.6),
+      );
+      pushYellow(
+        new Vector3(
+          x - fx * 4.2,
+          y + 4.1 + pose.articulation * 2,
+          z - fz * 4.2,
+        ),
+        yaw,
+        new Vector3(6.2, 3.8, 14.4),
         -pose.articulation * 0.55,
       );
       for (const along of [-5.0, 1.0, 6.6] as const) {
@@ -298,10 +459,15 @@ export class SydneyWorkSystem {
       const lx = Math.cos(yaw);
       const lz = -Math.sin(yaw);
       const climb = crew.role === 'climber';
-      const bob = Math.abs(Math.sin(crew.gait)) * (climb ? 0.14 : 0.07) * FIGURE;
+      const bob =
+        Math.abs(Math.sin(crew.gait)) * (climb ? 0.14 : 0.07) * FIGURE;
       const stride = Math.sin(crew.gait) * (climb ? 0.18 : 0.34) * FIGURE;
       compose(
-        new Vector3(x + fx * stride * 0.12, footY + 0.98 * FIGURE + bob, z + fz * stride * 0.12),
+        new Vector3(
+          x + fx * stride * 0.12,
+          footY + 0.98 * FIGURE + bob,
+          z + fz * stride * 0.12,
+        ),
         yaw,
         new Vector3(FIGURE, FIGURE * 0.92, FIGURE),
         crew.lean,
@@ -317,15 +483,35 @@ export class SydneyWorkSystem {
         new Vector3(FIGURE, FIGURE, FIGURE),
       );
       this.heads.setMatrixAt(bodies, matrix);
-      const hammer = crew.role === 'deck-mason' || crew.role === 'dresser' || crew.role === 'slinger' || crew.role === 'tiler';
-      const haul = crew.role === 'hauler' || crew.role === 'tag-line';
+      const hammer =
+        crew.role === 'deck-mason' ||
+        crew.role === 'dresser' ||
+        crew.role === 'slinger' ||
+        crew.role === 'tiler';
+      const haul = crew.role === 'hauler';
       const reach = climb
-        ? new Vector3(x + fx * 0.2 * FIGURE, footY + (1.85 + Math.abs(Math.sin(crew.arm)) * 0.85) * FIGURE, z + fz * 0.2 * FIGURE)
+        ? new Vector3(
+            x + fx * 0.2 * FIGURE,
+            footY + (1.85 + Math.abs(Math.sin(crew.arm)) * 0.85) * FIGURE,
+            z + fz * 0.2 * FIGURE,
+          )
         : hammer
-          ? new Vector3(x + fx * 0.7 * FIGURE, footY + (1.4 + Math.abs(Math.sin(crew.arm)) * 0.7) * FIGURE, z + fz * 0.7 * FIGURE)
+          ? new Vector3(
+              x + fx * 0.7 * FIGURE,
+              footY + (1.4 + Math.abs(Math.sin(crew.arm)) * 0.7) * FIGURE,
+              z + fz * 0.7 * FIGURE,
+            )
           : haul
-            ? new Vector3(x + fx * 0.95 * FIGURE, footY + 1.05 * FIGURE + bob, z + fz * 0.95 * FIGURE)
-            : new Vector3(x + fx * 0.55 * FIGURE, footY + 1.1 * FIGURE + bob, z + fz * 0.55 * FIGURE);
+            ? new Vector3(
+                x + fx * 0.95 * FIGURE,
+                footY + 1.05 * FIGURE + bob,
+                z + fz * 0.95 * FIGURE,
+              )
+            : new Vector3(
+                x + fx * 0.55 * FIGURE,
+                footY + 1.1 * FIGURE + bob,
+                z + fz * 0.55 * FIGURE,
+              );
       for (const legSide of [-1, 1] as const) {
         compose(
           new Vector3(
@@ -340,7 +526,9 @@ export class SydneyWorkSystem {
         legs += 1;
       }
       for (const armSide of [-1, 1] as const) {
-        const swing = haul ? 0.08 : Math.sin(crew.gait + (armSide > 0 ? 0 : Math.PI)) * 0.22 * FIGURE;
+        const swing = haul
+          ? 0.08
+          : Math.sin(crew.gait + (armSide > 0 ? 0 : Math.PI)) * 0.22 * FIGURE;
         const shoulder = new Vector3(
           x + lx * armSide * 0.2 * FIGURE,
           footY + 1.26 * FIGURE + bob,
@@ -349,6 +537,13 @@ export class SydneyWorkSystem {
         const hand = hammer
           ? reach
           : new Vector3(reach.x + lx * swing, reach.y, reach.z + lz * swing);
+        if (crew.role === 'signalman' && armSide === 1) {
+          hand.set(
+            x + lx * 0.55,
+            footY + 1.9 + Math.sin(crew.arm) * 0.15,
+            z + lz * 0.55,
+          );
+        }
         composeAlong(shoulder, hand, 0.05 * FIGURE);
         this.arms.setMatrixAt(arms, matrix);
         arms += 1;
@@ -364,36 +559,96 @@ export class SydneyWorkSystem {
       const [x, , z] = bay.position;
       const foot = bay.footY;
       if (workDecks < MAX_FALSEWORK_DECKS) {
-        compose(new Vector3(x, bay.deckY + 0.18, z), yaw, new Vector3(7.4, 0.38, 4.8));
+        compose(
+          new Vector3(x, bay.deckY + 0.19, z),
+          yaw,
+          new Vector3(4.6, 0.38, 3.2),
+        );
         this.falseworkDecks.setMatrixAt(workDecks, matrix);
         workDecks += 1;
       }
-      const corners = [[-2.1, -1.4], [2.1, -1.4], [-2.1, 1.4], [2.1, 1.4]] as const;
+      const corners = [
+        [-2.1, -1.4],
+        [2.1, -1.4],
+        [-2.1, 1.4],
+        [2.1, 1.4],
+      ] as const;
+      if (bay.capHeight > 0) {
+        // A slender central adjustable head meets the exact rib underside;
+        // the crew deck stays at least five metres below the pitched roof.
+        compose(
+          new Vector3(x, bay.deckY + 0.38 + bay.capHeight / 2, z),
+          yaw,
+          new Vector3(2.5, bay.capHeight, 2.5),
+        );
+        this.falseworkPoles.setMatrixAt(poles++, matrix);
+      }
       for (let lift = 0; lift < bay.segmentCount; lift += 1) {
         const cy = foot + lift * bay.segmentLength + bay.segmentLength / 2;
+        for (const side of [-1, 1]) {
+          composeAlong(
+            new Vector3(
+              x - lateral.x * 2.1 + forward.x * side * 1.4,
+              foot + lift * bay.segmentLength,
+              z - lateral.z * 2.1 + forward.z * side * 1.4,
+            ),
+            new Vector3(
+              x + lateral.x * 2.1 + forward.x * side * 1.4,
+              foot + (lift + 1) * bay.segmentLength,
+              z + lateral.z * 2.1 + forward.z * side * 1.4,
+            ),
+            1.8,
+          );
+          this.falseworkPoles.setMatrixAt(poles++, matrix);
+        }
         for (const [ox, oz] of corners) {
           if (poles >= MAX_FALSEWORK_POLES) break;
           const px = x + lateral.x * ox + forward.x * oz;
           const pz = z + lateral.z * ox + forward.z * oz;
-          compose(new Vector3(px, cy, pz), yaw, new Vector3(10.5, bay.segmentLength, 10.5));
+          compose(
+            new Vector3(px, cy, pz),
+            yaw,
+            new Vector3(3, bay.segmentLength, 3),
+          );
           this.falseworkPoles.setMatrixAt(poles, matrix);
           poles += 1;
         }
       }
     }
 
-    const hoistByCrane = new Map<0 | 1, ReturnType<typeof sydneyCraneRigAt>>();
-    for (const operation of operations) {
-      const rig = sydneyCraneRigAt(operation.part, operation.state);
-      if (rig) hoistByCrane.set(rig.crane, rig);
-    }
     for (const pose of sydneyPlantAt(t)) {
+      const firstYellow = yellowBoxes,
+        firstDark = darkBoxes,
+        firstCylinder = plantCyls;
       if (pose.kind === 'tower-crane') {
         const index = pose.id === 'tower-crane-0' ? 0 : 1;
-        placeTowerCrane(pose, hoistByCrane.get(index as 0 | 1));
+        placeTowerCrane(pose, sydneyCraneStateAt(index as 0 | 1, t, this.plan));
       } else if (pose.kind === 'crawler-crane') placeCrawler(pose);
       else if (pose.kind === 'dozer') placeDozer(pose);
       else placeTruck(pose);
+      if (pose.kind !== 'tower-crane') {
+        const transform = new Matrix4()
+          .makeTranslation(...pose.position)
+          .scale(new Vector3(0.45, 0.45, 0.45))
+          .multiply(
+            new Matrix4().makeTranslation(
+              -pose.position[0],
+              -pose.position[1],
+              -pose.position[2],
+            ),
+          );
+        for (const [mesh, start, end] of [
+          [this.plantYellow, firstYellow, yellowBoxes],
+          [this.plantDark, firstDark, darkBoxes],
+          [this.plantCyls, firstCylinder, plantCyls],
+        ] as const) {
+          for (let i = start; i < end; i++) {
+            mesh.getMatrixAt(i, matrix);
+            matrix.premultiply(transform);
+            mesh.setMatrixAt(i, matrix);
+          }
+        }
+      }
     }
 
     for (const operation of operations) {
@@ -404,13 +659,67 @@ export class SydneyWorkSystem {
       lateral.set(Math.cos(yaw), 0, -Math.sin(yaw));
       const halfY = sydneyVerticalHalfExtent(part.dimensions);
       const bottom = state.position[1] - halfY;
+      if (
+        part.graph === 'podium' &&
+        state.phase === 'cast' &&
+        !part.authoredVertices
+      ) {
+        for (const side of [-1, 1]) {
+          pushDark(
+            new Vector3(
+              partPos.x + side * (part.dimensions[0] / 2 + 0.08),
+              partPos.y,
+              partPos.z,
+            ),
+            0,
+            new Vector3(0.16, part.dimensions[1], part.dimensions[2] + 0.2),
+          );
+          pushDark(
+            new Vector3(
+              partPos.x,
+              partPos.y,
+              partPos.z + side * (part.dimensions[2] / 2 + 0.08),
+            ),
+            0,
+            new Vector3(part.dimensions[0], part.dimensions[1], 0.16),
+          );
+        }
+      }
+
+      if (
+        part.graph === 'shell' &&
+        (state.phase === 'cast' || state.phase === 'staged')
+      ) {
+        for (const side of [-1, 1]) {
+          const x = partPos.x + side * Math.max(0.4, part.dimensions[0] * 0.3),
+            ground = sydneyTerrainHeightAt(x, partPos.z),
+            h = bottom - 0.18 - ground;
+          if (h > 0)
+            pushDark(
+              new Vector3(x, ground + h / 2, partPos.z),
+              0,
+              new Vector3(0.6, h, Math.max(1, part.dimensions[2] + 0.2)),
+            );
+        }
+        // A full bearing deck catches the true lowest point of a curved
+        // final-orientation patch, which need not lie directly over a trestle.
+        pushDark(
+          new Vector3(partPos.x, bottom - 0.09, partPos.z),
+          0,
+          new Vector3(part.dimensions[0] + 0.2, 0.18, part.dimensions[2] + 0.2),
+        );
+      }
 
       if (state.mechanism === 'trolley') {
-        compose(new Vector3(partPos.x, bottom - state.trolleyLift * 0.2 + 0.42, partPos.z), yaw, new Vector3(
-          Math.max(part.dimensions[0], 2.2) + 1.6,
-          0.38,
-          Math.max(part.dimensions[2], 2.4) + 1.8,
-        ));
+        compose(
+          new Vector3(partPos.x, bottom - 0.19, partPos.z),
+          yaw,
+          new Vector3(
+            Math.max(part.dimensions[0], 2.2) + 1.6,
+            0.38,
+            Math.max(part.dimensions[2], 2.4) + 1.8,
+          ),
+        );
         this.trolleyDecks.setMatrixAt(decks, matrix);
         decks += 1;
         const spin = motion.get(part.id)?.trolleySpin ?? 0;
@@ -419,12 +728,12 @@ export class SydneyWorkSystem {
             composeWheel(
               new Vector3(
                 partPos.x + forward.x * along + lateral.x * side * 0.9,
-                bottom - state.trolleyLift + 0.5,
+                bottom - state.trolleyLift + 0.35,
                 partPos.z + forward.z * along + lateral.z * side * 0.9,
               ),
               yaw,
               spin,
-              0.7,
+              0.35,
               0.22,
             );
             this.trolleyWheels.setMatrixAt(wheels, matrix);
@@ -435,9 +744,17 @@ export class SydneyWorkSystem {
 
       if (state.contactDust && dust < MAX_OPERATIONS * 2) {
         compose(
-          new Vector3(partPos.x, sydneyTerrainHeightAt(partPos.x, partPos.z) + 0.6, partPos.z),
+          new Vector3(
+            partPos.x,
+            sydneyTerrainHeightAt(partPos.x, partPos.z) + 0.6,
+            partPos.z,
+          ),
           yaw,
-          new Vector3(2.4 + state.contactDustAmount * 2, 0.8, 2.4 + state.contactDustAmount * 2),
+          new Vector3(
+            2.4 + state.contactDustAmount * 2,
+            0.8,
+            2.4 + state.contactDustAmount * 2,
+          ),
         );
         this.dust.setMatrixAt(dust, matrix);
         dust += 1;
@@ -458,9 +775,19 @@ export class SydneyWorkSystem {
     this.falseworkDecks.count = workDecks;
     this.dust.count = dust;
     for (const mesh of [
-      this.bodies, this.heads, this.legs, this.arms,
-      this.trolleyDecks, this.trolleyWheels, this.plantYellow, this.plantDark, this.plantCyls,
-      this.ropes, this.falseworkPoles, this.falseworkDecks, this.dust,
+      this.bodies,
+      this.heads,
+      this.legs,
+      this.arms,
+      this.trolleyDecks,
+      this.trolleyWheels,
+      this.plantYellow,
+      this.plantDark,
+      this.plantCyls,
+      this.ropes,
+      this.falseworkPoles,
+      this.falseworkDecks,
+      this.dust,
     ]) {
       mesh.instanceMatrix.needsUpdate = true;
     }
@@ -468,14 +795,32 @@ export class SydneyWorkSystem {
 
   dispose(): void {
     for (const geometry of [
-      this.bodyGeometry, this.headGeometry, this.legGeometry, this.armGeometry,
-      this.boxGeometry, this.poleGeometry, this.wheelGeometry, this.dustGeometry,
-    ]) geometry.dispose();
+      this.bodyGeometry,
+      this.headGeometry,
+      this.legGeometry,
+      this.armGeometry,
+      this.boxGeometry,
+      this.poleGeometry,
+      this.wheelGeometry,
+      this.dustGeometry,
+    ])
+      geometry.dispose();
     for (const mesh of [
-      this.bodies, this.heads, this.legs, this.arms,
-      this.trolleyDecks, this.trolleyWheels, this.plantYellow, this.plantDark, this.plantCyls,
-      this.ropes, this.falseworkPoles, this.falseworkDecks, this.dust,
-    ]) mesh.dispose();
+      this.bodies,
+      this.heads,
+      this.legs,
+      this.arms,
+      this.trolleyDecks,
+      this.trolleyWheels,
+      this.plantYellow,
+      this.plantDark,
+      this.plantCyls,
+      this.ropes,
+      this.falseworkPoles,
+      this.falseworkDecks,
+      this.dust,
+    ])
+      mesh.dispose();
     for (const material of this.materials) material.dispose();
   }
 }

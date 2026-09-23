@@ -11,6 +11,7 @@ describe('homepage ambient wonder (Spec 05)', () => {
       'stonehenge',
       'colosseum',
       'eiffel-tower',
+      'sydney-opera-house',
     ]);
     expect(HOME_WONDER_ID).toBe('pyramids-of-giza');
     expect(homeWonderId(READY)).toBe('pyramids-of-giza');
@@ -22,5 +23,6 @@ describe('homepage ambient wonder (Spec 05)', () => {
   it('does not pick unpublished catalog entries', () => {
     expect(homeWonderId(READY)).not.toBe('sydney-opera-house');
     expect(homeWonderId(READY)).not.toBe('petra');
+    expect(homeWonderId(READY)).not.toBe('chichen-itza');
   });
 });

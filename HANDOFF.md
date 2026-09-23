@@ -1,3 +1,181 @@
+## Sydney city context pass and public release — 2026-09-24
+
+Owner: "the background is too simplified… Sydney is a great city". The owner chose
+city first, then construction. Read `artifacts/sydney-city-context-2026-09-24/README.md`
+and Spec 13 "City context pass". The new pure modules are `src/engine/sydneyLandmarks.ts`
+(landmark/viaduct primitives, lamps) and the render-side `sydneyLandmarks.ts` and
+`sydneyFacade.ts` (window/night-glow shader, shared `SYDNEY_CITY_NIGHT`). Terrain gained
+OSM SE shoreline and `sydneyReliefAt`. Lots gained `block` and `grove` kinds. Closing pitch
+is now 23°. **Draw-call peak is 89 of 90**: merge any new Sydney geometry into an
+existing batch. Static triangles 143k of 150k. Preview bundle `main-CjKaOd2b.js`;
+production QA has zero errors. Next: construction refinement (podium, erection arch, yard,
+crews). The owner then released Sydney to On site; it was merged to `main` by PR and
+deployed to Cloudflare Pages production. Cloudflare's production branch is still named
+`wonders/quality-colosseum-stonehenge-petra`: deploy `dist` with `--branch` set to that
+name (or change it to `main` in the Pages settings), otherwise the upload is only a preview.
+
+## Sydney photographic and map rebuild — 2026-09-23 (local, unreleased)
+
+The owner rejected the earlier shape/geography, supplied two photos, and requested
+Blender authoring. The current evidence root is
+`artifacts/sydney-reference-rebuild-2026-09-23/`; read its README and visual review.
+The older Sydney sections below describe superseded iterations. No publication,
+deployment, push or deletion of prior evidence was performed.
+
+Claude Code `claude-opus-5-5` authored and corrected the actual Blender geometry;
+Devin `swe-2-high` implemented the reference capture harness. Receipts are under
+`delegation/`. Generator: `scripts/build-sydney-reference-model.py`; editable
+artifact: `model/sydney-reference-model.blend`; GLB and round-trip verification
+are beside it. The active Blender UI scene was preserved. Production consumes
+`src/data/generated/sydneyBlenderModel.json`, SHA-256
+`d08faa0fb85c993987cf8775243f34071dc0e18a45e259653f8d1e4e72113a2d`.
+Do not substitute the earlier exported vault model or first-delivery captures.
+
+Official Opera House site/floor/section plans and NSW SIX aerial imagery anchor
+the unequal shell groups and harbour setting. Water lies west, north and east;
+only the southern neck connects to land. There are ten paired shell groups,
+individual bearings, curved northern foyers and a separate southwest restaurant.
+All twenty pedestals are supported. Eight large flank meshes are partitioned into
+282 rigid loads; 42 horizontal insertion approaches plus joint miters/bevels
+clear already seated roof geometry. Preserve the authored uniform flank color.
+The Opera rib hero now starts at t=0.5491296296296418, duration 0.07; source timing
+owns the close yard camera. Portrait yard radius 165–280 keeps workers readable
+and the lifted load within frame. Five boats move continuously; twelve persistent
+human-scale crew members complement the operation-specific workers.
+
+The 20 m near plane reduces depth errors by 98.19% across the latest 31-angle
+fixed-light regression. Sydney bloom is 0.06; 0.32 washed out the white roof.
+The roof/glazing/podium and distant context remain stylized approximations, not
+surveyed or photorealistic geometry. The construction is interpreted timelapse,
+not an exact historical replay. The reference map is modern coastline evidence.
+
+The separate whole-frame flashes are fixed at their source in SydneySkyDome:
+cloud projection divided by zero at dir.y=-0.38. One NaN pixel entered bloom and
+spread across 96.7% of a failing frame. Use max(dir.y,0)+0.38 in the denominator;
+a zero cloud/fog mask does not sanitize NaN. The 900-frame causal comparison
+keeps MSAA and bloom enabled, reducing 28 black grids to zero. The new GPU test
+`node tests/sydney-sky-finite.browser.mjs` fails before and passes after the fix
+(36 desktop/portrait HDR inspections; bloom deliberately forced on for both).
+
+Final production bundle is `main-B7n23WDI.js`. The full 256-file / 1,377-test suite,
+typecheck, build and diff check pass. Existing module-externalization/chunk-size
+build warnings remain. Natural playback completes in 60.310 seconds, with replay
+and catalogue return; the 1,596-frame browser recording has no detected black
+intervals. A separate direct audit reads 3,658 rendered frames with zero black
+grids and zero errors. Authoritative final captures are under `final/sky-fixed/`.
+Do not mistake earlier zero-console-error videos for clean playback; the rejected
+black-frame recordings remain preserved. See the evidence README for exact
+thresholds, build identity and source links. This is one tested GPU/browser path.
+Dev 5590 and production preview 5591 were already running; inspect ports before
+starting another service. Keep desktop/mobile, photographic and GPU evidence
+categories separate; portrait testing is browser emulation, not a physical phone.
+
+## Sydney motion repair — 2026-09-23 (local, unreleased)
+
+The owner selected construction choreography, then reported flashing scenery,
+stationary ships and invisible workers. Read
+`artifacts/sydney-motion-2026-09-23/README.md`, `visual-review.md` and
+`final-verification.json`. Current production preview on 5591 is
+`main-DLtirTZI.js`; the hidden film route below remains the entry point.
+
+Sydney now uses a 20 m near plane with its 12 km far plane. This restores
+centimetre-scale depth separation in the distant scenery; a 31-angle fixed-light
+comparison against a higher-precision reference reduces wrong pixels by 99.45%.
+The whole camera path clears actual environment bounds. Preserve this precision
+setting when changing the camera, and rerun the bounds and rotation checks.
+
+Five boats travel continuous water-clear routes; three remain berthed. Their
+keels, cabins and masts share supported rigid poses. Workers use the actual
+erected scaffold bays instead of three deleted station IDs, walk/work in film
+seconds, and remain about 1.88 m tall. A yard camera insert follows the Opera
+rib hero's haul; the four-second pullback keeps that load inside both frames.
+The source schedule owns the insert timing. Do not restore the old fast zoom.
+
+`sydneyCraneStateAt` owns loaded and empty-hook crane movement, including
+return, attach and release. The renderer must not substitute an idle pose or
+remove the cable between operations. Four hero jobs retain their identities
+and durations with reserved handling time. Background jobs remain extremely
+time-compressed: this is not a real-speed crane simulation. Historical travelling
+erection arches and prestressing are still represented only by simplified static
+falsework. Do not describe this pass as a literal historical reconstruction.
+
+Final rebuilt browser checks include desktop/portrait, hero sequences, reduced
+motion, natural 60.332-second completion, replay and catalogue return; no recorded
+errors. All 252 test files / 1,353 tests, typecheck, build and diff-check pass
+(two test workers, 30-second timeout for expensive fixtures). Evidence folders with
+`final-` are authoritative; prior attempts remain preserved. No deployment/push.
+
+## Sydney garden continuation — 2026-09-23 (local, unreleased)
+
+The owner's next resume was scoped to foreground garden composition. Read
+`artifacts/sydney-polish-2026-09-23/REPORT.md` and its visual review. The garden
+now has 16 figs in three irregular groups, a denser landward edge, an open lawn
+and a clear sector toward Farm Cove. Harbour total figs fall from 115 to 92.
+Placement remains deterministic; actual transformed canopy bounds, ground
+contact, lawn/access clearance and unchanged non-garden output are tested.
+Two authored relocations break the draft's ring without moving the other trees.
+Keep the polygon, envelope and relocation data together when changing the garden.
+
+Production preview currently serves `main-a_zVs6Wg.js` on 5591, using the same
+hidden full-player route below. Desktop/portrait checkpoints, player controls,
+reduced motion and a 60.286-second uninterrupted film pass with no recorded
+errors. The visual director accepts this bounded delta. Every matched frame
+submits 4,784 fewer triangles; peak sampled desktop calls remain 82. The prior
+roof, construction, camera, sky and renderer sources match their saved hashes.
+
+Final checks: 249 files / 1,340 tests pass with two workers and a 30-second
+per-test timeout; typecheck, build and diff-check pass. Planting is an authored
+composition, not a surveyed historical layout. Physical-phone performance and
+audible listening were not repeated. Broader city frontage and sparse stylized
+canopy remain future polish; this continuation does not claim to finish those.
+All previous evidence is preserved. No commit, push or deployment performed.
+
+## Sydney Opera House overhaul — 2026-09-23 (local, unreleased)
+
+The owner resumed the Opera House work after the preceding release pause.
+Read `artifacts/sydney-overhaul-2026-09-23/REPORT.md` and the current Spec 13.
+The local full-player review route is
+`http://127.0.0.1:5591/#/debug/film/sydney-opera-house`; the ordinary public
+catalogue still contains the same four released films. No deployment or push.
+
+The production roof now uses `src/data/sydneyShells.ts`: seven paired vaults
+with exact 75 m spherical curvature, west Concert Hall/east Opera Theatre,
+southwest restaurant, curved segmented concrete and separate tile skins.
+The old nine sail GLBs are compatibility artifacts only. Podium bays cast in
+place; precast pieces use supported yard/trolley/staging and two rigid crane
+rigs. Four large existing pieces get longer hero lifts without scale changes.
+Work finishes by .82; glazing and removal of works finish by .92.
+
+Keep the outward triangle winding and radial normals together. Thin tile skins
+cast shadows but do not receive their own shadow map. Loaded harbour kit meshes
+must own their vertex-color materials: mutating the shared fallback material
+made boats and trees black after asynchronous loading. The regression test
+covers both fresh and cached loader paths. Sydney camera far clipping is 12 km,
+beyond its portrait fog end; the old 2.4 km clip plane caused a horizontal seam.
+
+Harbour data now owns named districts, roads, footprints and exclusions.
+Bridge approaches meet terrain, office windows exist on all four sides,
+residential masses vary, and shoreline geometry continues through the haze.
+Exact runtime geometry exports to the separate original Blender/GLB inspection
+artifacts using the two `scripts/*sydney-overhaul*` export scripts. Preserve
+all earlier evidence and source assets.
+
+Final checks: **248 files / 1,334 tests pass**, two workers with a 30-second
+per-test timeout. The existing Paris moorings fixture exceeded its five-second
+default once and passed isolated in 4.429 seconds; no assertions were weakened.
+Typecheck/build/diff-check pass. Final preview `main-CC839RXx.js` matches all
+browser evidence. The independent visual board accepts every category at
+2.4/3 or above, including construction causality 3/3. See the report for the
+remaining sparse-city/subtle-material polish and device/audio boundaries.
+
+Verification status, exact production bundle, renderer counts, limitations and
+independent visual review are in the dated report. Natural playback evidence is
+muted automation, not subjective listening or physical-device testing. The
+working tree contains these source changes plus extensive pre-existing
+untracked artifacts. Existing dev/preview services currently use 5590/5591;
+check the port before starting another service. Do not publish merely because
+the preview works.
+
 ## Public announcement and owner pause — 2026-09-21 (latest)
 
 The owner reports posting the release on X:

@@ -43,7 +43,10 @@ describe('material detail recipes', () => {
         if (!term) continue;
         expect(term.scale).toBeGreaterThan(0);
         expect(term.amplitude).toBeGreaterThan(0);
-        expect(term.amplitude).toBeLessThanOrEqual(0.1);
+        // Spec 13: deliberate cream/white tile fields are albedo pattern,
+        // while fine surface noise retains its restrained shared ceiling.
+        const ceiling = recipe.role === 'hoganas-tile' && term === recipe.chevron ? 0.25 : 0.1;
+        expect(term.amplitude).toBeLessThanOrEqual(ceiling);
       }
       if (recipe.grain?.anisotropy !== undefined) {
         expect(recipe.grain.anisotropy).toBeGreaterThan(0);
