@@ -10,9 +10,10 @@ is now 23°. **Draw-call peak is 89 of 90**: merge any new Sydney geometry into 
 existing batch. Static triangles 143k of 150k. Preview bundle `main-CjKaOd2b.js`;
 production QA has zero errors. Next: construction refinement (podium, erection arch, yard,
 crews). The owner then released Sydney to On site; it was merged to `main` by PR and
-deployed to Cloudflare Pages production. Cloudflare's production branch is still named
-`wonders/quality-colosseum-stonehenge-petra`: deploy `dist` with `--branch` set to that
-name (or change it to `main` in the Pages settings), otherwise the upload is only a preview.
+deployed to Cloudflare Pages production. The Pages project (direct upload, not
+Git-connected) now uses `main` as its production branch; `npm run deploy` from an
+up-to-date `main` publishes production. Wrangler 4.137.0 is a pinned dev dependency.
+Uploads from any other branch become previews. Merged PR branches were deleted.
 
 ## Sydney photographic and map rebuild — 2026-09-23 (local, unreleased)
 
