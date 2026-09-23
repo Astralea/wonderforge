@@ -29,6 +29,7 @@ const READY_IDS = new Set([
   'stonehenge',
   'colosseum',
   'eiffel-tower',
+  'sydney-opera-house',
 ]);
 
 function byCompletedYear(a: Wonder, b: Wonder): number {

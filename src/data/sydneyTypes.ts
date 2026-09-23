@@ -1,3 +1,4 @@
+import type { SydneySurfacePatch } from './sydneyShells';
 import type { UnitScale, Vec3 } from './constructionTypes';
 
 export type SydneyPartGroup = 'podium' | 'concert' | 'opera' | 'restaurant';
@@ -57,6 +58,12 @@ export interface SydneyPart {
   start: number;
   duration: number;
   colorVariation: number;
+  surface?: SydneySurfacePatch;
+  /** Authored nonindexed world-space triangles for rigid podium pours. */
+  authoredVertices?: number[];
+  /** World translation to the clear lowering point before lateral seating. */
+  seatApproach?: Vec3;
+  dependsOn?: string[];
 }
 
 export interface SydneyRoute {

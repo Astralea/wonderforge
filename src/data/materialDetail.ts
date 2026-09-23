@@ -329,10 +329,10 @@ export const MATERIAL_DETAIL_RECIPES: MaterialDetailRecipe[] = [
       'Höganäs cream-and-white chevron fields on Utzon spherical sail skins: repeating V-bands that read as tiled roof from the cinematic hold, never a smooth CAD blob.',
     space: 'object',
     plane: 'mixed',
-    grain: { scale: 18, amplitude: 0.02 },
-    chevron: { scale: 9.5, amplitude: 0.055 },
+    grain: { scale: 8.3, amplitude: 0.006 },
+    chevron: { scale: 0.09, amplitude: 0.25 },
     roughnessSwing: 0.08,
-    normalBump: { strength: 0.28 },
+    normalBump: { strength: 0.012 },
   },
   {
     role: 'puddled-iron',

@@ -1,283 +1,430 @@
+import {
+  sydneyBuildingToWorld,
+  sydneyTerrainHeightAt,
+} from '../engine/sydneyTerrain';
 import type { Vec3 } from './constructionTypes';
-import { mulberry32 } from '../engine/random';
-import { sydneyTerrainHeightAt } from '../engine/sydneyTerrain';
-import type {
-  SydneyConstructionPlan,
-  SydneyLayer,
-  SydneyPart,
-  SydneyPartGroup,
-  SydneyRoute,
-} from './sydneyTypes';
-
-export const SYDNEY_LENGTH = 183;
-export const SYDNEY_WIDTH = 120;
-export const SYDNEY_HEIGHT = 67;
-export const SYDNEY_PODIUM_HEIGHT = 12;
-export const SYDNEY_PODIUM_DECK = 14.2;
-export const SYDNEY_SPHERE_RADIUS = 75;
-export const SYDNEY_TROLLEY_BED = 0.85;
-export const SYDNEY_MAX_ACTIVE = 18;
-export const SYDNEY_YARD: Vec3 = [10, 2.1, 78];
-export const SYDNEY_FALSEWORK_SEGMENT = 6;
-export const SYDNEY_FALSEWORK_STATIONS = 8;
-
-const LAYERS: SydneyLayer[] = [
-  { id: 'harbour-sky', depth: 0, motion: 'playback-time' },
-  { id: 'harbour-water', depth: 1, motion: 'static-world-space' },
-  { id: 'bennelong-point', depth: 2, motion: 'static-world-space' },
-  { id: 'shells', depth: 3, motion: 'playback-time' },
-  { id: 'work-systems', depth: 4, motion: 'playback-time' },
-  { id: 'foreground-yard', depth: 5, motion: 'static-world-space' },
-];
-
-export interface SydneySailDef {
-  id: number;
-  group: Exclude<SydneyPartGroup, 'podium'>;
-  /**
-   * World-space position of the seated sail centroid (metres).
-   * Derived from the sphere geometry — the renderer places this with scale [1,1,1].
-   */
-  position: Vec3;
-  /**
-   * Rotation applied to the sail mesh [rx, ry, rz] in radians.
-   * ry is the fan yaw (azimuth of the sail arc); rx tilts toward the apex.
-   */
-  rotation: Vec3;
-  /**
-   * Approximate bounding extents [width, height, depth] in metres — used only
-   * for collision/hoist clearance and caption beats, NOT as a Three.js scale.
-   * The tile geometry is authored at full size from the sphere; scale stays [1,1,1].
-   */
-  dimensions: Vec3;
-  ribCount: number;
-  /** Sphere parameters for generating the full-size cap geometry. */
-  sphere: {
-    /** Sphere centre in world space (metres). */
-    centre: Vec3;
-    /** Latitude of the shell base on the sphere (rad from north pole). */
-    phiStart: number;
-    /** Angular height of the shell patch (rad). */
-    phiLength: number;
-    /** Azimuthal half-width of the shell patch (rad). */
-    thetaHalf: number;
-  };
-  /** Pointed Utzon vault cut from the 75 m sphere (Spec 13 harbour fabric). */
-  vault: {
-    half: number;
-    foot: number;
-  };
-}
-
-/**
- * Utzon's 1961 spherical solution: every sail is a patch cut from a single
- * sphere of radius SYDNEY_SPHERE_RADIUS (75 m). Two main groups:
- *   Concert Hall — NE side (positive X), sphere centre near [6, 14, -14]
- *   Opera Theatre — NW side (negative X), sphere centre near [-12, 14, 4]
- * Shells nest from outermost (tallest) to innermost (smallest).
- * Positions are derived analytically so the silhouette reads correctly
- * from 500–700 m: a nested fan of curved blades, not individual blobs.
- */
-export const SYDNEY_SAILS: SydneySailDef[] = [
-  // Concert Hall — 4 nested shells, largest south, nesting north. Foot origin on the podium.
-  {
-    id: 0, group: 'concert',
-    position: [10, SYDNEY_PODIUM_DECK, 20], rotation: [0.22, -0.32, 0], dimensions: [49, 54, 57],
-    sphere: { centre: [12, 14, 6], phiStart: 0.72, phiLength: 0.58, thetaHalf: 0.40 },
-    vault: { half: 0.40, foot: 1.12 },
-    ribCount: 4,
-  },
-  {
-    id: 1, group: 'concert',
-    position: [13, SYDNEY_PODIUM_DECK, 10], rotation: [0.24, -0.24, 0], dimensions: [43, 48, 54],
-    sphere: { centre: [15, 14, -6], phiStart: 0.80, phiLength: 0.50, thetaHalf: 0.36 },
-    vault: { half: 0.36, foot: 1.04 },
-    ribCount: 4,
-  },
-  {
-    id: 2, group: 'concert',
-    position: [15, SYDNEY_PODIUM_DECK, 0], rotation: [0.26, -0.16, 0], dimensions: [36, 43, 50],
-    sphere: { centre: [17, 14, -16], phiStart: 0.88, phiLength: 0.42, thetaHalf: 0.32 },
-    vault: { half: 0.32, foot: 0.96 },
-    ribCount: 3,
-  },
-  {
-    id: 3, group: 'concert',
-    position: [16, SYDNEY_PODIUM_DECK, -8], rotation: [0.28, -0.08, 0], dimensions: [27, 36, 45],
-    sphere: { centre: [18, 14, -24], phiStart: 0.96, phiLength: 0.34, thetaHalf: 0.26 },
-    vault: { half: 0.26, foot: 0.88 },
-    ribCount: 3,
-  },
-  // Opera Theatre — 3 nested shells
-  {
-    id: 4, group: 'opera',
-    position: [-10, SYDNEY_PODIUM_DECK, 22], rotation: [0.22, 0.56, 0], dimensions: [48, 52, 56],
-    sphere: { centre: [-10, 14, 8], phiStart: 0.74, phiLength: 0.54, thetaHalf: 0.38 },
-    vault: { half: 0.38, foot: 1.08 },
-    ribCount: 4,
-  },
-  {
-    id: 5, group: 'opera',
-    position: [-13, SYDNEY_PODIUM_DECK, 12], rotation: [0.24, 0.66, 0], dimensions: [46, 46, 51],
-    sphere: { centre: [-13, 14, -4], phiStart: 0.82, phiLength: 0.46, thetaHalf: 0.34 },
-    vault: { half: 0.34, foot: 1.00 },
-    ribCount: 4,
-  },
-  {
-    id: 6, group: 'opera',
-    position: [-15, SYDNEY_PODIUM_DECK, 2], rotation: [0.26, 0.74, 0], dimensions: [43, 40, 45],
-    sphere: { centre: [-15, 14, -14], phiStart: 0.90, phiLength: 0.38, thetaHalf: 0.28 },
-    vault: { half: 0.28, foot: 0.92 },
-    ribCount: 3,
-  },
-  // Restaurant shells — smaller, south of the halls
-  {
-    id: 7, group: 'restaurant',
-    position: [2, SYDNEY_PODIUM_DECK, 30], rotation: [0.24, 0.12, 0], dimensions: [29, 35, 47],
-    sphere: { centre: [2, 14, 18], phiStart: 0.92, phiLength: 0.34, thetaHalf: 0.28 },
-    vault: { half: 0.28, foot: 0.90 },
-    ribCount: 3,
-  },
-  {
-    id: 8, group: 'restaurant',
-    position: [8, SYDNEY_PODIUM_DECK, 36], rotation: [0.26, 0.22, 0], dimensions: [20, 28, 41],
-    sphere: { centre: [8, 14, 26], phiStart: 1.00, phiLength: 0.26, thetaHalf: 0.22 },
-    vault: { half: 0.22, foot: 0.82 },
-    ribCount: 2,
-  },
-];
-
+import type { SydneyConstructionPlan, SydneyPart } from './sydneyTypes';
+import {
+  SYDNEY_SAILS,
+  SYDNEY_PODIUM_MESHES,
+  SYDNEY_STRUCTURAL_DETAILS,
+  sydneyBounds,
+  sydneyPodiumHeightAt,
+  sydneyPatchVertices,
+} from './sydneyShells';
+export {
+  SYDNEY_SAILS,
+  SYDNEY_PODIUM_DECK,
+  SYDNEY_SPHERE_RADIUS,
+} from './sydneyShells';
+export type { SydneySailDef } from './sydneyShells';
+export const SYDNEY_LENGTH = 183,
+  SYDNEY_WIDTH = 120,
+  SYDNEY_HEIGHT = 67;
+export const SYDNEY_PODIUM_HEIGHT = 12,
+  SYDNEY_TROLLEY_BED = 0.85,
+  SYDNEY_MAX_ACTIVE = 18;
+const routePoint = (x: number, z: number): Vec3 => {
+  const p = sydneyBuildingToWorld(x, z);
+  return [p.x, sydneyTerrainHeightAt(p.x, p.z), p.z];
+};
+export const SYDNEY_YARD: Vec3 = routePoint(-8, 151);
+export const SYDNEY_FALSEWORK_SEGMENT = 6,
+  SYDNEY_FALSEWORK_STATIONS = SYDNEY_SAILS.length * 4;
 export const SYDNEY_CRANE_BASES: Vec3[] = [
-  [46, SYDNEY_PODIUM_DECK, -6],
-  [-38, SYDNEY_PODIUM_DECK, 14],
+  [56, sydneyPodiumHeightAt(56, 26)!, 26],
+  [-38, sydneyPodiumHeightAt(-38, 18.2)!, 18.2],
 ];
 
-function part(partial: Omit<SydneyPart, 'scale' | 'routeId'>): SydneyPart {
-  return { ...partial, scale: [1, 1, 1], routeId: 'point-yard' };
+/** Verified lower-before-upper projection constraints from the authored model.
+ * Main/south concert junction still has a geometry crossing tracked by the
+ * collision gate; its intended order is south then main, never a hidden swap. */
+export const SYDNEY_SHELL_PRECEDENCE: ReadonlyArray<readonly [number, number]> =
+  [
+    [7, 2],
+    [2, 0],
+    [1, 0],
+    [8, 5],
+    [5, 3],
+    [4, 3],
+  ];
+function erectionOrder(crane: 0 | 1): number[] {
+  const remaining = new Set(
+    SYDNEY_SAILS.filter((s) => (s.group === 'opera' ? 0 : 1) === crane).map(
+      (s) => s.id,
+    ),
+  );
+  const result: number[] = [];
+  while (remaining.size) {
+    const available = [...remaining]
+      .filter(
+        (id) =>
+          !SYDNEY_SHELL_PRECEDENCE.some(
+            ([lower, upper]) => upper === id && remaining.has(lower),
+          ),
+      )
+      .sort(
+        (a, b) =>
+          SYDNEY_SAILS[a]!.position[2] - SYDNEY_SAILS[b]!.position[2] || a - b,
+      );
+    if (!available.length)
+      throw new Error('Sydney shell erection constraints contain a cycle');
+    const next = available[0]!;
+    result.push(next);
+    remaining.delete(next);
+  }
+  return result;
 }
+
+/** Authored-model insertion clearances, audited against every already seated
+ * roof and infill triangle. Most panels use the outward 6 m approach; narrow
+ * nested openings need these specific horizontal approach directions. Tests
+ * raycast the actual production trajectory, so changed geometry cannot reuse
+ * these coordinates silently. Frozen Blender model: d08faa0f, metre space. */
+const INFILL_APPROACHES: Readonly<Record<string, Vec3>> = {
+  'infill-concert-side-infill-main-middle-east-17': [1, 0, 0],
+  'infill-concert-side-infill-main-middle-east-19': [1, 0, 0],
+  'infill-concert-side-infill-main-middle-east-20': [1, 0, 0],
+  'infill-concert-side-infill-main-middle-east-21': [1, 0, 0],
+  'infill-concert-side-infill-middle-north-west-11': [-7.878462, 0, -1.389185],
+  'infill-concert-side-infill-middle-north-west-16': [-7.517541, 0, -2.736161],
+  'infill-concert-side-infill-middle-north-west-17': [-7.727407, 0, -2.070552],
+  'infill-concert-side-infill-middle-north-west-18': [-10.875693, 0, -5.071419],
+  'infill-concert-side-infill-middle-north-west-19': [-13.856406, 0, -8],
+  'infill-concert-side-infill-middle-north-west-20': [-5.908847, 0, -1.041889],
+  'infill-concert-side-infill-middle-north-west-21': [-3.464102, 0, -2],
+  'infill-concert-side-infill-middle-north-west-22': [-7.250462, 0, -3.380946],
+  'infill-concert-side-infill-middle-north-west-23': [-5.977168, 0, -0.522934],
+  'infill-concert-side-infill-middle-north-west-24': [-11.59111, 0, -3.105829],
+  'infill-concert-side-infill-middle-north-west-25': [-5.908847, 0, -1.041889],
+  'infill-concert-side-infill-middle-north-west-26': [-11.59111, 0, -3.105829],
+  'infill-concert-side-infill-middle-north-west-27': [-14.500925, 0, -6.761892],
+  'infill-concert-side-infill-middle-north-east-6': [4.588611, 0, -6.553216],
+  'infill-concert-side-infill-middle-north-east-12': [10.284602, 0, -12.256711],
+  'infill-concert-side-infill-middle-north-east-13': [6.882917, 0, -9.829825],
+  'infill-concert-side-infill-middle-north-east-14': [4.588611, 0, -6.553216],
+  'infill-concert-side-infill-middle-north-east-15': [1.389185, 0, -7.878462],
+  'infill-concert-side-infill-middle-north-east-20': [1.041889, 0, -5.908847],
+  'infill-concert-side-infill-middle-north-east-21': [3.380946, 0, -7.250462],
+  'infill-concert-side-infill-middle-north-east-22': [2, 0, -3.464102],
+  'infill-concert-side-infill-middle-north-east-23': [12, 0, 0],
+  'infill-concert-side-infill-middle-north-east-24': [6, 0, 0],
+  'infill-concert-side-infill-middle-north-east-25': [6.761892, 0, -14.500925],
+  'infill-concert-side-infill-middle-north-east-26': [1.045869, 0, -11.954336],
+  'infill-concert-side-infill-middle-north-east-27': [2.052121, 0, -5.638156],
+  'infill-opera-side-infill-main-middle-west-8': [0.642788, 0, 0.766044],
+  'infill-opera-side-infill-main-middle-west-9': [0.984808, 0, 0.173648],
+  'infill-opera-side-infill-main-middle-west-10': [-0.34202, 0, 0.939693],
+  'infill-opera-side-infill-main-middle-west-11': [1, 0, 0],
+  'infill-opera-side-infill-main-middle-west-12': [-0.258819, 0, 0.965926],
+  'infill-opera-side-infill-main-middle-west-13': [-0.173648, 0, 0.984808],
+  'infill-opera-side-infill-middle-north-west-11': [-3, 0, -5.196152],
+  'infill-opera-side-infill-middle-north-west-12': [-3.064178, 0, -2.57115],
+  'infill-opera-side-infill-middle-north-west-14': [-3, 0, -5.196152],
+  'infill-opera-side-infill-middle-north-east-9': [5.196152, 0, -3],
+  'infill-opera-side-infill-middle-north-east-12': [5.196152, 0, -3],
+  'infill-opera-side-infill-middle-north-east-14': [6, 0, 0],
+};
 
 export function createSydneyConstructionPlan(): SydneyConstructionPlan {
-  const rand = mulberry32('sydney-utzon-v1');
   const parts: SydneyPart[] = [];
-  const routes: SydneyRoute[] = [
-    {
-      id: 'point-yard',
-      yard: SYDNEY_YARD,
-      road: [8, 2, 52],
-      staging: [22, SYDNEY_PODIUM_DECK, 18],
-      laneWidth: 4.4,
-    },
-  ];
-
-  const podiumW = 108;
-  const podiumL = 92;
-  const cols = 4;
-  const rows = 3;
-  for (let row = 0; row < rows; row += 1) {
-    for (let col = 0; col < cols; col += 1) {
-      const index = row * cols + col;
-      const w = podiumW / cols;
-      const d = podiumL / rows;
-      const x = -podiumW / 2 + (col + 0.5) * w;
-      const z = -podiumL / 2 + 6 + (row + 0.5) * d;
-      const seatY = sydneyTerrainHeightAt(x, z) + SYDNEY_PODIUM_HEIGHT / 2;
-      parts.push(part({
-        id: `podium-${index}`,
-        group: 'podium',
-        kind: 'block',
-        graph: 'podium',
-        sail: -1,
-        bay: index,
-        crane: 0,
-        dimensions: [w - 0.35, SYDNEY_PODIUM_HEIGHT, d - 0.35],
-        finalPosition: [x, seatY, z],
-        finalRotation: [0, 0, 0],
-        material: 'granite',
-        lane: col % 3,
-        start: 0.02 + index * 0.012,
-        duration: 0.048,
-        colorVariation: rand() * 2 - 1,
-      }));
+  const add = (p: Omit<SydneyPart, 'scale' | 'routeId' | 'colorVariation'>) => {
+    parts.push({
+      ...p,
+      scale: [1, 1, 1],
+      routeId: 'point-yard',
+      colorVariation: Math.sin(parts.length * 7.31) * 0.6,
+    });
+  };
+  // Authored rigid additive pours, ordered by their lowest elevation so the
+  // physical podium and the finished monument use exactly the same geometry.
+  const blocks = [...SYDNEY_PODIUM_MESHES].sort(
+    (a, b) =>
+      a.position[1] -
+        a.dimensions[1] / 2 -
+        (b.position[1] - b.dimensions[1] / 2) ||
+      a.position[1] - b.position[1] ||
+      a.id.localeCompare(b.id),
+  );
+  blocks.forEach((block, i) =>
+    add({
+      id: `podium-${block.id}`,
+      group: 'podium',
+      kind: 'block',
+      graph: 'podium',
+      sail: -1,
+      bay: i,
+      crane: 0,
+      dimensions: block.dimensions,
+      finalPosition: block.position,
+      finalRotation: [0, 0, 0],
+      authoredVertices: block.vertices,
+      material: 'granite',
+      lane: 0,
+      start: 0.015 + (i / blocks.length) * 0.213,
+      duration: 0.001,
+    }),
+  );
+  const pending: SydneyPart[] = [];
+  for (const sail of SYDNEY_SAILS) {
+    const ribs: string[] = [];
+    for (const side of [-1, 1] as const)
+      for (let rib = 0; rib < 5; rib++)
+        for (let seg = 0; seg < 8; seg++) {
+          const v = (rib + 1) / 5;
+          const surface = {
+            u0: seg / 8,
+            u1: (seg + 1) / 8,
+            v0: Math.max(0, v - 0.018),
+            v1: Math.min(1, v + 0.018),
+            side,
+            depth: 0.72,
+          };
+          const bounds = sydneyBounds(sydneyPatchVertices(sail, surface));
+          const id = `rib-${sail.id}-${side}-${rib}-${seg}`;
+          ribs.push(id);
+          add({
+            id,
+            group: sail.group,
+            kind: 'rib',
+            graph: 'shell',
+            sail: sail.id,
+            bay: seg,
+            crane: sail.group === 'opera' ? 0 : 1,
+            dimensions: bounds.dimensions,
+            finalPosition: bounds.position,
+            finalRotation: [0, 0, 0],
+            surface,
+            material: 'concrete',
+            lane: 0,
+            start: 0,
+            duration: 0,
+            dependsOn: seg ? [`rib-${sail.id}-${side}-${rib}-${seg - 1}`] : [],
+          });
+        }
+    for (const side of [-1, 1] as const)
+      for (let seg = 0; seg < 8; seg++)
+        for (let tile = 0; tile < 5; tile++) {
+          const surface = {
+            u0: seg / 8 + 0.0005,
+            u1: (seg + 1) / 8 - 0.0005,
+            v0: tile / 5 + 0.001,
+            v1: (tile + 1) / 5 - 0.001,
+            side,
+            depth: 0.18,
+            offset: 0.22,
+          };
+          const bounds = sydneyBounds(sydneyPatchVertices(sail, surface));
+          const id = `tile-${sail.id}-${side}-${seg}-${tile}`;
+          pending.push({
+            id,
+            group: sail.group,
+            kind: 'sail',
+            graph: 'shell',
+            sail: sail.id,
+            bay: seg,
+            crane: sail.group === 'opera' ? 0 : 1,
+            dimensions: bounds.dimensions,
+            finalPosition: bounds.position,
+            finalRotation: [0, 0, 0],
+            surface,
+            material: 'tile',
+            lane: 0,
+            start: 0,
+            duration: 0,
+            dependsOn: ribs,
+            routeId: 'point-yard',
+            scale: [1, 1, 1],
+            colorVariation: Math.sin(seg * 4 + tile * 7 + sail.id) * 0.4,
+          });
+        }
+  }
+  // The authored leading arch spans a longer parameter interval than the old
+  // vault chart. Subdivide an oversized lid without changing its surface or
+  // enlarging a crane load. Retain the first piece's stable operation ID.
+  for (const panel of pending) {
+    const queue = [panel];
+    let serial = 0;
+    while (queue.length) {
+      const part = queue.shift()!;
+      if (Math.max(...part.dimensions) <= 15) {
+        parts.push(part);
+        continue;
+      }
+      const surface = part.surface!;
+      const middle = (surface.v0 + surface.v1) / 2;
+      for (const [index, range] of [
+        [surface.v0, middle],
+        [middle, surface.v1],
+      ].entries()) {
+        const patch = { ...surface, v0: range[0]!, v1: range[1]! };
+        const bounds = sydneyBounds(
+          sydneyPatchVertices(SYDNEY_SAILS[part.sail]!, patch),
+        );
+        queue.push({
+          ...part,
+          id: index === 0 ? part.id : `${panel.id}-split${++serial}`,
+          surface: patch,
+          dimensions: bounds.dimensions,
+          finalPosition: bounds.position,
+        });
+      }
+      if (serial > 16)
+        throw new Error(
+          `Authored Sydney panel cannot fit crane load: ${panel.id}`,
+        );
     }
   }
-
-  let cursor = 0.175;
-  for (const sail of SYDNEY_SAILS) {
-    const ribStarts: number[] = [];
-    for (let rib = 0; rib < sail.ribCount; rib += 1) {
-      const along = (rib / Math.max(1, sail.ribCount - 1) - 0.5) * sail.dimensions[0] * 0.42;
-      const yaw = sail.rotation[1];
-      const x = sail.position[0] + Math.cos(yaw) * along;
-      const z = sail.position[2] + Math.sin(yaw) * along;
-      const height = sail.dimensions[1] * (0.72 + rib * 0.04);
-      const start = cursor;
-      ribStarts.push(start);
-      parts.push(part({
-        id: `rib-${sail.id}-${rib}`,
+  // Preserve every authored infill triangle exactly, partitioned into rigid
+  // loads. Spatial subdivision changes handling units, never the final shape.
+  const structuralBeforeInfill = [...parts];
+  for (const detail of SYDNEY_STRUCTURAL_DETAILS) {
+    const sail = SYDNEY_SAILS[detail.shellId!]!;
+    if (!sail) throw new Error(`Authored infill has no shell: ${detail.name}`);
+    const triangles: number[][] = [];
+    for (let i = 0; i < detail.vertices.length; i += 9)
+      triangles.push(detail.vertices.slice(i, i + 9));
+    const panels: number[][] = [];
+    const partition = (triangles: number[][]): void => {
+      const vertices = triangles.flat(),
+        bounds = sydneyBounds(vertices);
+      if (Math.max(...bounds.dimensions) <= 8 || triangles.length === 1) {
+        panels.push(vertices);
+        return;
+      }
+      const axis = bounds.dimensions.indexOf(Math.max(...bounds.dimensions));
+      triangles.sort(
+        (a, b) =>
+          a[axis]! +
+          a[axis + 3]! +
+          a[axis + 6]! -
+          (b[axis]! + b[axis + 3]! + b[axis + 6]!),
+      );
+      const mid = Math.floor(triangles.length / 2);
+      partition(triangles.slice(0, mid));
+      partition(triangles.slice(mid));
+    };
+    partition(triangles);
+    const dependsOn = structuralBeforeInfill
+      .filter(
+        (p) =>
+          p.graph === 'shell' &&
+          (p.sail === sail.id || p.sail === detail.neighbourShellId),
+      )
+      .map((p) => p.id);
+    panels.forEach((vertices, index) => {
+      const bounds = sydneyBounds(vertices);
+      add({
+        id: `infill-${detail.name}-${index}`,
         group: sail.group,
-        kind: 'rib',
+        kind: 'sail',
         graph: 'shell',
         sail: sail.id,
-        bay: sail.id * 4 + rib,
-        crane: (sail.id % 2) as 0 | 1,
-        dimensions: [2.35, height, 1.15],
-        finalPosition: [x, SYDNEY_PODIUM_DECK + height / 2 + 0.4, z],
-        finalRotation: [sail.rotation[0] * 0.35, yaw, 0],
-        material: 'concrete',
-        lane: rib % 3,
-        start,
-        duration: 0.044,
-        colorVariation: rand() * 2 - 1,
-      }));
-      cursor += 0.015;
+        bay: index,
+        crane: sail.group === 'opera' ? 0 : 1,
+        dimensions: bounds.dimensions,
+        finalPosition: bounds.position,
+        finalRotation: [0, 0, 0],
+        authoredVertices: vertices,
+        seatApproach: INFILL_APPROACHES[`infill-${detail.name}-${index}`] ?? [
+          (detail.name.endsWith('-west') ? -1 : 1) * Math.cos(sail.yaw) * 6,
+          0,
+          -(detail.name.endsWith('-west') ? -1 : 1) * Math.sin(sail.yaw) * 6,
+        ],
+        material: 'tile',
+        lane: 0,
+        start: 0,
+        duration: 0,
+        dependsOn,
+      });
+    });
+  }
+  // Each lower/northern group is completed, including its lids, before the
+  // overlying group's ribs arrive. Within a group every lid retains its rib
+  // dependencies. The two crane lanes run independently over the film window.
+  for (const crane of [0, 1] as const) {
+    const order = erectionOrder(crane);
+    const chunks = order.flatMap((sail) =>
+      (['rib', 'sail'] as const).map((kind) =>
+        parts.filter(
+          (p) => p.crane === crane && p.sail === sail && p.kind === kind,
+        ),
+      ),
+    );
+    const heroIds = new Set([
+      `rib-${crane === 0 ? 3 : 0}--1-4-4`,
+      crane === 0 ? 'tile-3--1-5-4' : 'tile-0--1-7-0',
+    ]);
+    const count = chunks.reduce((sum, chunk) => sum + chunk.length, 0);
+    const beforeHero = 0.008,
+      afterHero = 0.014;
+    // Every chunk gets three empty slots, enough for its final rigid part to
+    // seat before the next rib/lid chunk starts. Reserve representative jobs
+    // and their unloaded return/acquisition windows in real film time.
+    const slot =
+      (0.82 - 0.25 - 0.12 - 2 * (beforeHero + afterHero + 0.002) - 0.004) /
+      (count - 2 + chunks.length * 3 + 2 * 2.8);
+    let cursor = 0.25,
+      sequence = 0;
+    let previousGroupLast: SydneyPart | undefined;
+    for (let chunkIndex = 0; chunkIndex < chunks.length; chunkIndex++) {
+      const chunk = chunks[chunkIndex]!;
+      for (const part of chunk) {
+        part.lane = sequence++ % 3;
+        if (part.kind === 'rib' && part.bay === 0 && previousGroupLast)
+          part.dependsOn = [...(part.dependsOn ?? []), previousGroupLast.id];
+        if (heroIds.has(part.id)) {
+          cursor += 2.8 * slot + beforeHero;
+          part.start = cursor;
+          part.duration = part.kind === 'rib' ? 0.07 : 0.05;
+          cursor += part.duration + afterHero + 0.002;
+        } else {
+          part.start = cursor;
+          part.duration = slot * 2.8;
+          cursor += slot;
+        }
+      }
+      cursor += 3 * slot;
+      if (chunkIndex % 2 === 1) previousGroupLast = chunk[chunk.length - 1];
     }
-    const lastRibEnd = ribStarts.at(-1)! + 0.044;
-    parts.push(part({
-      id: `sail-${sail.id}`,
-      group: sail.group,
-      kind: 'sail',
-      graph: 'shell',
-      sail: sail.id,
-      bay: sail.id,
-      crane: (sail.id % 2) as 0 | 1,
-      dimensions: sail.dimensions,
-      finalPosition: sail.position,
-      finalRotation: sail.rotation,
-      material: 'tile',
-      lane: sail.id % 3,
-      start: lastRibEnd + 0.01,
-      duration: 0.056,
-      colorVariation: rand() * 2 - 1,
-    }));
-    cursor = Math.max(cursor, lastRibEnd + 0.012);
   }
-
-  const shells = parts.filter((entry) => entry.graph === 'shell');
-  const minStart = Math.min(...shells.map((entry) => entry.start));
-  const maxEnd = Math.max(...shells.map((entry) => entry.start + entry.duration));
-  const span = Math.max(0.001, maxEnd - minStart);
-  for (const entry of shells) {
-    const u0 = (entry.start - minStart) / span;
-    const u1 = (entry.start + entry.duration - minStart) / span;
-    entry.start = 0.165 + u0 * 0.81;
-    entry.duration = Math.max(0.03, (u1 - u0) * 0.81);
-  }
-
   return {
-    seed: 'sydney-utzon-v1',
+    seed: 'sydney-blender-reference-v3',
     length: SYDNEY_LENGTH,
     width: SYDNEY_WIDTH,
     height: SYDNEY_HEIGHT,
-    podiumHeight: SYDNEY_PODIUM_HEIGHT,
-    trolleyBedHeight: SYDNEY_TROLLEY_BED,
+    podiumHeight: 12,
+    trolleyBedHeight: 0.85,
     maxActive: SYDNEY_MAX_ACTIVE,
     parts,
-    routes,
-    layers: LAYERS.map((layer) => ({ ...layer })),
+    routes: [
+      {
+        id: 'point-yard',
+        yard: SYDNEY_YARD,
+        road: routePoint(-8, 139),
+        staging: routePoint(-8, 125),
+        laneWidth: 4.4,
+      },
+    ],
+    layers: [
+      'harbour-sky',
+      'harbour-water',
+      'bennelong-point',
+      'shells',
+      'work-systems',
+      'foreground-yard',
+    ].map((id, depth) => ({
+      id: id as SydneyConstructionPlan['layers'][number]['id'],
+      depth,
+      motion:
+        depth === 1 || depth === 2 || depth === 5
+          ? 'static-world-space'
+          : 'playback-time',
+    })),
     keepOuts: [
-      { id: 'shell-volume', minX: -40, maxX: 40, minZ: -42, maxZ: 36 },
-      { id: 'south-yard', minX: -18, maxX: 28, minZ: 64, maxZ: 92 },
+      { id: 'shell-volume', minX: -60, maxX: 60, minZ: -100, maxZ: 90 },
+      { id: 'south-yard', minX: -44, maxX: 44, minZ: 90, maxZ: 138 },
     ],
   };
 }
-
 export const SYDNEY_CONSTRUCTION = createSydneyConstructionPlan();
