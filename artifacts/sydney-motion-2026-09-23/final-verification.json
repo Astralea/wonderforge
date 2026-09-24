@@ -1,0 +1,15 @@
+{
+  "bundle": "/assets/main-DLtirTZI.js",
+  "frameCount": 12,
+  "errorCount": 0,
+  "near": 20,
+  "depthReference": {
+    "oldPixels": 47751,
+    "newPixels": 262,
+    "reduction": 0.99451320391196
+  },
+  "naturalSeconds": 60.332,
+  "peakCalls": 82,
+  "replayT": 0.015,
+  "catalogReturn": true
+}

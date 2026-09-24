@@ -1,0 +1,250 @@
+{
+  "selected": [
+    {
+      "id": "rib-0--1-4-4",
+      "crane": 1,
+      "kind": "rib",
+      "dimensions": [
+        1.055278740003665,
+        7.543042436382478,
+        8.324462192612998
+      ],
+      "projectedArea": 62.79177157894138,
+      "start": 0.289039506172839,
+      "duration": 0.07,
+      "times": [
+        0.30303950617283903,
+        0.332439506172839,
+        0.342939506172839,
+        0.35133950617283904
+      ],
+      "samples": [
+        {
+          "t": 0.29393950617283904,
+          "partLocal": 0.07,
+          "phase": "cast",
+          "phaseLocal": 0.5000000000000014,
+          "position": [
+            -45.8,
+            5.238280477450498,
+            119
+          ]
+        },
+        {
+          "t": 0.31003950617283904,
+          "partLocal": 0.3,
+          "phase": "hauled",
+          "phaseLocal": 0.4705882352941182,
+          "position": [
+            -42.256747404844276,
+            6.106324819370273,
+            110.58477508650518
+          ]
+        },
+        {
+          "t": 0.32613950617283904,
+          "partLocal": 0.53,
+          "phase": "staged",
+          "phaseLocal": 0.5000000000000027,
+          "position": [
+            -37.8,
+            5.2790212181912395,
+            100
+          ]
+        },
+        {
+          "t": 0.334539506172839,
+          "partLocal": 0.65,
+          "phase": "hoisted",
+          "phaseLocal": 0.21874999999999914,
+          "position": [
+            -37.8,
+            64.84471944916328,
+            100
+          ]
+        },
+        {
+          "t": 0.342939506172839,
+          "partLocal": 0.77,
+          "phase": "hoisted",
+          "phaseLocal": 0.5937500000000002,
+          "position": [
+            -1.7174713247751399,
+            75.08541426201631,
+            -22.174971136266343
+          ]
+        },
+        {
+          "t": 0.35133950617283904,
+          "partLocal": 0.89,
+          "phase": "hoisted",
+          "phaseLocal": 0.9687500000000009,
+          "position": [
+            -25.01883964900281,
+            54.99845364725899,
+            -36.63891353745028
+          ]
+        },
+        {
+          "t": 0.355539506172839,
+          "partLocal": 0.95,
+          "phase": "seated",
+          "phaseLocal": 1,
+          "position": [
+            -25.01883964900281,
+            54.48525614964126,
+            -36.63891353745028
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rib-3--1-4-4",
+      "crane": 0,
+      "kind": "rib",
+      "dimensions": [
+        0.9636499998664902,
+        7.081362635002442,
+        7.982651434415914
+      ],
+      "projectedArea": 56.5280495959215,
+      "start": 0.3018393442622944,
+      "duration": 0.07,
+      "times": [
+        0.31583934426229443,
+        0.3452393442622944,
+        0.3557393442622944,
+        0.36413934426229444
+      ],
+      "samples": [
+        {
+          "t": 0.30673934426229443,
+          "partLocal": 0.07,
+          "phase": "cast",
+          "phaseLocal": 0.5000000000000014,
+          "position": [
+            29.799999999999997,
+            5.088922058241962,
+            119
+          ]
+        },
+        {
+          "t": 0.32283934426229444,
+          "partLocal": 0.3,
+          "phase": "hauled",
+          "phaseLocal": 0.4705882352941182,
+          "position": [
+            33.34325259515572,
+            5.920877716322186,
+            110.58477508650518
+          ]
+        },
+        {
+          "t": 0.33893934426229444,
+          "partLocal": 0.53,
+          "phase": "staged",
+          "phaseLocal": 0.5000000000000027,
+          "position": [
+            37.8,
+            5.048181317501221,
+            100
+          ]
+        },
+        {
+          "t": 0.3473393442622944,
+          "partLocal": 0.65,
+          "phase": "hoisted",
+          "phaseLocal": 0.21874999999999914,
+          "position": [
+            37.8,
+            64.61387954847328,
+            100
+          ]
+        },
+        {
+          "t": 0.3557393442622944,
+          "partLocal": 0.77,
+          "phase": "hoisted",
+          "phaseLocal": 0.5937500000000002,
+          "position": [
+            1.1686771956540554,
+            74.8545743613263,
+            -21.30279446954235
+          ]
+        },
+        {
+          "t": 0.36413934426229444,
+          "partLocal": 0.89,
+          "phase": "hoisted",
+          "phaseLocal": 0.9687500000000009,
+          "position": [
+            24.043652852970204,
+            47.85050502068873,
+            -36.00875317323618
+          ]
+        },
+        {
+          "t": 0.3683393442622944,
+          "partLocal": 0.95,
+          "phase": "seated",
+          "phaseLocal": 1,
+          "position": [
+            24.043652852970204,
+            47.160583778899195,
+            -36.00875317323618
+          ]
+        }
+      ]
+    }
+  ],
+  "start": 0.284039506172839,
+  "end": 0.37783934426229443,
+  "samples": [
+    {
+      "t": 0.285,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-00.png"
+    },
+    {
+      "t": 0.295,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-01.png"
+    },
+    {
+      "t": 0.305,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-02.png"
+    },
+    {
+      "t": 0.315,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-03.png"
+    },
+    {
+      "t": 0.321,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-04.png"
+    },
+    {
+      "t": 0.329,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-05.png"
+    },
+    {
+      "t": 0.337,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-06.png"
+    },
+    {
+      "t": 0.346,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-07.png"
+    },
+    {
+      "t": 0.354,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-08.png"
+    },
+    {
+      "t": 0.36,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-09.png"
+    },
+    {
+      "t": 0.372,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/rib/frame-10.png"
+    }
+  ],
+  "errors": [],
+  "playbackSpeed": 1
+}

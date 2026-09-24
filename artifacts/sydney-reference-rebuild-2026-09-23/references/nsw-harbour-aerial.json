@@ -1,0 +1,23 @@
+{
+  "href": "http://maps.six.nsw.gov.au/arcgis/rest/directories/arcgisoutput/sixmaps/LPI_Imagery_Best_MapServer/_ags_map043e65030f21469aa9122c4e666000fc.png",
+  "width": 1800,
+  "height": 1345,
+  "extent": {
+    "xmin": 16831395.27510637,
+    "ymin": -4010555.1349424073,
+    "xmax": 16834624.367030982,
+    "ymax": -4008142.2856987403,
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    }
+  },
+  "scale": 6780.23195050421,
+  "requestUrl": "https://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPI_Imagery_Best/MapServer/export?bbox=16831395.688452173%2C-4010555.1349424073%2C16834623.953685176%2C-4008142.2856987403&bboxSR=3857&imageSR=3857&size=1800%2C1345&format=png&f=json",
+  "requestedGeographicBbox": [
+    151.199,
+    -33.864,
+    151.228,
+    -33.846
+  ]
+}

@@ -1,0 +1,1839 @@
+{
+  "bundle": "/assets/main-Bll7j3-_.js",
+  "samples": [
+    {
+      "elapsed": 0.021,
+      "t": 0.001,
+      "diagnostics": {
+        "renderer": {
+          "calls": 58,
+          "triangles": 103229,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            507.34788768714503,
+            221.1795477762407,
+            -129.2651191948516
+          ],
+          "direction": [
+            -0.9022316701065792,
+            -0.3648767668448309,
+            0.22987596323573284
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 1.024,
+      "t": 0.017,
+      "diagnostics": {
+        "renderer": {
+          "calls": 68,
+          "triangles": 108597,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            509.2719351704175,
+            221.20890709965389,
+            -121.57967169581684
+          ],
+          "direction": [
+            -0.9056127168398723,
+            -0.364861052837384,
+            0.216199026871772
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 2.028,
+      "t": 0.034,
+      "diagnostics": {
+        "renderer": {
+          "calls": 70,
+          "triangles": 114733,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            511.09741541309864,
+            221.29128244776115,
+            -114.00879266254346
+          ],
+          "direction": [
+            -0.9087447266267954,
+            -0.3648169600496163,
+            0.20271064966633512
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 3.032,
+      "t": 0.051,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 121797,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            512.8994075467003,
+            221.43060382308042,
+            -106.23801252939168
+          ],
+          "direction": [
+            -0.9117550179660641,
+            -0.36474237593184416,
+            0.18885387582280483
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 4.037,
+      "t": 0.068,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 127669,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            514.6167340468894,
+            221.6233540502155,
+            -98.52441274190998
+          ],
+          "direction": [
+            -0.9145390357544051,
+            -0.36463916852619793,
+            0.175090344844957
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 5.043,
+      "t": 0.084,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 136525,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            516.2703289382789,
+            221.87111080226794,
+            -90.77720140109342
+          ],
+          "direction": [
+            -0.917131239403156,
+            -0.36450647266306746,
+            0.16126165414493143
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 6.048,
+      "t": 0.101,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 142021,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            517.8520430279128,
+            222.17250679968237,
+            -83.03438428027896
+          ],
+          "direction": [
+            -0.9195185834330404,
+            -0.36434499444925245,
+            0.14743913910854545
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 7.052,
+      "t": 0.118,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 147517,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            519.3668207988856,
+            222.52813395620962,
+            -75.27243654272009
+          ],
+          "direction": [
+            -0.9217086403420247,
+            -0.36415438499858566,
+            0.13358430373796937
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 8.055,
+      "t": 0.135,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 153253,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            520.8117257561345,
+            222.93704862400645,
+            -67.5063972734842
+          ],
+          "direction": [
+            -0.9236972263065878,
+            -0.36393511273721363,
+            0.11972747316496757
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 9.059,
+      "t": 0.151,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 158653,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            522.1712931296496,
+            223.39313229465284,
+            -59.82695389901085
+          ],
+          "direction": [
+            -0.9254653565701655,
+            -0.3636904185501293,
+            0.10603373634503455
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 10.061,
+      "t": 0.168,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 164245,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            523.5073824637382,
+            223.91929789864858,
+            -51.871660233072966
+          ],
+          "direction": [
+            -0.9270902249728631,
+            -0.36340795603113274,
+            0.09186061317583549
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 11.065,
+      "t": 0.185,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 169717,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            524.7479192699112,
+            224.48855011755523,
+            -44.06045409548325
+          ],
+          "direction": [
+            -0.9284821275600398,
+            -0.36310215956273195,
+            0.07795999308916479
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 12.071,
+      "t": 0.201,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 175189,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            525.9237054870173,
+            225.11263435480237,
+            -36.20983762409753
+          ],
+          "direction": [
+            -0.929679123791946,
+            -0.3627666642376518,
+            0.06400839088218402
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 13.075,
+      "t": 0.218,
+      "diagnostics": {
+        "renderer": {
+          "calls": 72,
+          "triangles": 180709,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            527.0397465164777,
+            225.79560128262648,
+            -28.276678882277196
+          ],
+          "direction": [
+            -0.9306844263076347,
+            -0.36239922216202614,
+            0.0499329791299048
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 14.079,
+      "t": 0.235,
+      "diagnostics": {
+        "renderer": {
+          "calls": 76,
+          "triangles": 178301,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            528.0856788104805,
+            226.53220383840156,
+            -20.326277193586773
+          ],
+          "direction": [
+            -0.9314873403399605,
+            -0.3620025802586103,
+            0.03585340531240178
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 15.084,
+      "t": 0.252,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 199653,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            510.587908493061,
+            219.7015066523059,
+            -6.420843211051647
+          ],
+          "direction": [
+            -0.9314983751247182,
+            -0.3630805604554157,
+            0.02198371577761349
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 16.087,
+      "t": 0.268,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 201917,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            413.6359721157917,
+            178.84498009664233,
+            31.859500140903968
+          ],
+          "direction": [
+            -0.9287126280867523,
+            -0.3707185151510842,
+            0.007786973505379715
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 17.089,
+      "t": 0.285,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 202869,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            277.60829347230094,
+            117.52610729435285,
+            78.58845114126038
+          ],
+          "direction": [
+            -0.9242018972037503,
+            -0.38185510037433595,
+            -0.006126624118883093
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 18.091,
+      "t": 0.302,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 200173,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            187.59615977213912,
+            74.39041164034091,
+            107.97488146329923
+          ],
+          "direction": [
+            -0.9208587665166844,
+            -0.3893923151906195,
+            -0.019818097786105326
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 19.093,
+      "t": 0.319,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 202733,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            171.78250363412002,
+            66.60966927339106,
+            114.57300290989281
+          ],
+          "direction": [
+            -0.9198833575608,
+            -0.3907311284892737,
+            -0.033820019399285584
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 20.096,
+      "t": 0.335,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 202045,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            171.69057789192914,
+            66.60966927339106,
+            116.64809039489231
+          ],
+          "direction": [
+            -0.9192705192795275,
+            -0.3907311284892738,
+            -0.047653935965948246
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 21.1,
+      "t": 0.352,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 201357,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            452.3068280797436,
+            197.57359476715956,
+            53.60174963171598
+          ],
+          "direction": [
+            -0.9284052674857928,
+            -0.3663444832436256,
+            -0.0620916975254724
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 22.104,
+      "t": 0.369,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 200517,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            531.375179540728,
+            231.5956951156012,
+            43.592585358358846
+          ],
+          "direction": [
+            -0.9301104527671205,
+            -0.35926631244845314,
+            -0.07630375084511211
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 23.107,
+      "t": 0.385,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 202301,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            531.0246322995537,
+            231.99030970506956,
+            51.60776076878709
+          ],
+          "direction": [
+            -0.9289408215404321,
+            -0.35905235000339,
+            -0.0902793444417389
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 24.11,
+      "t": 0.402,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 207021,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            530.5040674704175,
+            232.3310098896631,
+            59.61189042251039
+          ],
+          "direction": [
+            -0.9275509356998494,
+            -0.3588675365204193,
+            -0.10422740961042612
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 25.114,
+      "t": 0.419,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 209629,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            529.8084093920377,
+            232.61981813108582,
+            67.65838253693654
+          ],
+          "direction": [
+            -0.9259291654166033,
+            -0.35871081107854563,
+            -0.11824438526325232
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 26.116,
+      "t": 0.435,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 210429,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            528.9560353935616,
+            232.85103746231147,
+            75.5621498122785
+          ],
+          "direction": [
+            -0.9241155818193336,
+            -0.3585852967120075,
+            -0.13201127383930647
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 27.12,
+      "t": 0.452,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 213037,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            527.9087438134593,
+            233.03370922251318,
+            83.65358715176225
+          ],
+          "direction": [
+            -0.9220306124122509,
+            -0.3584861104128664,
+            -0.14610701015264072
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 28.125,
+      "t": 0.469,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 215301,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            526.7084020173887,
+            233.15948617542057,
+            91.59043780509855
+          ],
+          "direction": [
+            -0.9197588038496934,
+            -0.3584178035924945,
+            -0.15993880332462643
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 29.127,
+      "t": 0.486,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 217005,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            525.338748543589,
+            233.2318485821939,
+            99.50716493584419
+          ],
+          "direction": [
+            -0.9172664751387901,
+            -0.35837850027973134,
+            -0.17374424918169298
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 30.129,
+      "t": 0.502,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 218925,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            523.8083873838168,
+            233.25081423546496,
+            107.36456489862152
+          ],
+          "direction": [
+            -0.9145666999379956,
+            -0.35836749528532974,
+            -0.18745796778863247
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 31.134,
+      "t": 0.519,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 220413,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            522.1614110664798,
+            233.2222167528078,
+            115.26764181048107
+          ],
+          "direction": [
+            -0.9116430518442917,
+            -0.3583391625378704,
+            -0.20124609465945897
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 32.137,
+      "t": 0.536,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 223021,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            520.4532853895813,
+            233.14951258301357,
+            123.1303531214812
+          ],
+          "direction": [
+            -0.9085391435893563,
+            -0.35826713839664664,
+            -0.21494483504145234
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 33.14,
+      "t": 0.553,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 225285,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            518.6906559317471,
+            233.0336117055103,
+            130.92678633429475
+          ],
+          "direction": [
+            -0.9052689560847391,
+            -0.3581523423045772,
+            -0.2285060542983312
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 34.142,
+      "t": 0.569,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 226989,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            516.8462606822998,
+            232.8726175051544,
+            138.77641960483962
+          ],
+          "direction": [
+            -0.9017827204309596,
+            -0.357992924956046,
+            -0.24213424130748767
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 35.144,
+      "t": 0.586,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 228909,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            514.9433455112763,
+            232.66832748730656,
+            146.57811096723873
+          ],
+          "direction": [
+            -0.8981250896163964,
+            -0.3577907064730158,
+            -0.25565041318777587
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 36.148,
+      "t": 0.603,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 231021,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            512.9390433751997,
+            232.4154258850338,
+            154.50152097829502
+          ],
+          "direction": [
+            -0.8942137693569215,
+            -0.35754047862562066,
+            -0.2693446506553423
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 37.152,
+      "t": 0.619,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 233005,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            510.9315403416804,
+            232.12708063433735,
+            162.1639473230529
+          ],
+          "direction": [
+            -0.8902428699267024,
+            -0.3572553291469549,
+            -0.28255311419407453
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 38.155,
+      "t": 0.636,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 234429,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            508.788264916869,
+            231.78419467890149,
+            170.07021124077482
+          ],
+          "direction": [
+            -0.8859515292389902,
+            -0.356916447361464,
+            -0.2961427653041118
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 39.159,
+      "t": 0.653,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 230781,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            506.5907063440006,
+            231.39851059536076,
+            177.90870274845832
+          ],
+          "direction": [
+            -0.8815025593777167,
+            -0.35653553143626404,
+            -0.3095733396692869
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 40.163,
+      "t": 0.67,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 237805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            504.3477005101029,
+            230.97244276655755,
+            185.65372419277404
+          ],
+          "direction": [
+            -0.8769167398581436,
+            -0.3561150554582421,
+            -0.32279885165926153
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 41.167,
+      "t": 0.686,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 238061,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            502.0182338565513,
+            230.49833613276064,
+            193.44688888340553
+          ],
+          "direction": [
+            -0.8721121692682631,
+            -0.35564757046338075,
+            -0.33605828339396615
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 42.17,
+      "t": 0.703,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 237373,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            499.6660669644605,
+            229.98970862797424,
+            201.07803300400732
+          ],
+          "direction": [
+            -0.8672228797145805,
+            -0.3551465131000934,
+            -0.34899202158845366
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 43.179,
+      "t": 0.72,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 236685,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            497.16902021081984,
+            229.41963298004464,
+            208.93821421721478
+          ],
+          "direction": [
+            -0.8619962509368975,
+            -0.3545854941383638,
+            -0.3622590105399533
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 44.184,
+      "t": 0.737,
+      "diagnostics": {
+        "renderer": {
+          "calls": 78,
+          "triangles": 235005,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            494.60065076578235,
+            228.8035841802389,
+            216.78392530606965
+          ],
+          "direction": [
+            -0.8565867941500659,
+            -0.353979909774375,
+            -0.3754427886693763
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 45.186,
+      "t": 0.753,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 244269,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            492.01766049601895,
+            228.1583498834736,
+            224.4418899681736
+          ],
+          "direction": [
+            -0.8511206023118423,
+            -0.35334638736978746,
+            -0.3882525606522731
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 46.189,
+      "t": 0.77,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 251437,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            489.25865792394137,
+            227.51905928179076,
+            232.1731327404105
+          ],
+          "direction": [
+            -0.8453734941026916,
+            -0.3527194564344612,
+            -0.4011641067209093
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 47.195,
+      "t": 0.787,
+      "diagnostics": {
+        "renderer": {
+          "calls": 82,
+          "triangles": 258797,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            486.32994810124325,
+            226.92389884775926,
+            239.8492685983089
+          ],
+          "direction": [
+            -0.8394146027876153,
+            -0.35213647605670456,
+            -0.4139843316567384
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 48.199,
+      "t": 0.804,
+      "diagnostics": {
+        "renderer": {
+          "calls": 80,
+          "triangles": 265077,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            483.24395348449633,
+            226.37490108506972,
+            247.43983746151898
+          ],
+          "direction": [
+            -0.833267345134926,
+            -0.35159928749558234,
+            -0.426665527743209
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 49.201,
+      "t": 0.82,
+      "diagnostics": {
+        "renderer": {
+          "calls": 68,
+          "triangles": 257957,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            480.00618860757993,
+            225.87212050414587,
+            254.9362347435048
+          ],
+          "direction": [
+            -0.826940049813787,
+            -0.3511078035337225,
+            -0.4391963846751207
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 50.204,
+      "t": 0.837,
+      "diagnostics": {
+        "renderer": {
+          "calls": 68,
+          "triangles": 254563,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            476.6052645536252,
+            225.4132883197319,
+            262.36715701732317
+          ],
+          "direction": [
+            -0.8204084533619522,
+            -0.3506596811404152,
+            -0.45162789736103737
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 51.206,
+      "t": 0.854,
+      "diagnostics": {
+        "renderer": {
+          "calls": 68,
+          "triangles": 252609,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            473.00850468374375,
+            224.9948803386255,
+            269.7975400278064
+          ],
+          "direction": [
+            -0.813609988309558,
+            -0.3502513717651229,
+            -0.46407193784969425
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 52.209,
+      "t": 0.87,
+      "diagnostics": {
+        "renderer": {
+          "calls": 68,
+          "triangles": 250295,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            469.33552431422265,
+            224.6295066816162,
+            276.9879335683286
+          ],
+          "direction": [
+            -0.8067673056656686,
+            -0.34989507538423714,
+            -0.4761301825455061
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 53.212,
+      "t": 0.887,
+      "diagnostics": {
+        "renderer": {
+          "calls": 68,
+          "triangles": 248533,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            465.3732179101191,
+            224.29696426755882,
+            284.34846885107714
+          ],
+          "direction": [
+            -0.7994835460909319,
+            -0.34957100379435546,
+            -0.48849377973120134
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 54.214,
+      "t": 0.904,
+      "diagnostics": {
+        "renderer": {
+          "calls": 58,
+          "triangles": 246477,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            461.3164307225427,
+            224.01510226148017,
+            291.5069930930102
+          ],
+          "direction": [
+            -0.7921177425726883,
+            -0.3492964774391829,
+            -0.5005411598960938
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 55.217,
+      "t": 0.921,
+      "diagnostics": {
+        "renderer": {
+          "calls": 54,
+          "triangles": 245805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            457.1176784062119,
+            223.7789384191467,
+            298.55764358623134
+          ],
+          "direction": [
+            -0.7845794580124597,
+            -0.34906656980673634,
+            -0.5124330238267575
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 56.22,
+      "t": 0.937,
+      "diagnostics": {
+        "renderer": {
+          "calls": 54,
+          "triangles": 245805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            452.8007822783902,
+            223.58891756090026,
+            305.46578577331735
+          ],
+          "direction": [
+            -0.776908455230639,
+            -0.34888165542602856,
+            -0.5241133872534991
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 57.224,
+      "t": 0.954,
+      "diagnostics": {
+        "renderer": {
+          "calls": 54,
+          "triangles": 245805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            448.34347340149435,
+            223.44332206672127,
+            312.27149113764506
+          ],
+          "direction": [
+            -0.7690623652580848,
+            -0.3487400163368838,
+            -0.5356523866734755
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 58.229,
+      "t": 0.971,
+      "diagnostics": {
+        "renderer": {
+          "calls": 54,
+          "triangles": 245805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            443.62477840997104,
+            223.3399058319262,
+            319.14818441029604
+          ],
+          "direction": [
+            -0.760828913428531,
+            -0.3486394333834746,
+            -0.5473480702269906
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 59.231,
+      "t": 0.987,
+      "diagnostics": {
+        "renderer": {
+          "calls": 54,
+          "triangles": 245805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            438.83390422119714,
+            223.28343727829764,
+            325.8159272567185
+          ],
+          "direction": [
+            -0.7525372366952205,
+            -0.348584519969283,
+            -0.5587276078957495
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "elapsed": 60.235,
+      "t": 1,
+      "diagnostics": {
+        "renderer": {
+          "calls": 54,
+          "triangles": 245805,
+          "points": 0,
+          "lines": 0,
+          "geometries": 37,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            435.12204989639093,
+            223.270610589899,
+            330.78169649129933
+          ],
+          "direction": [
+            -0.7461550065063215,
+            -0.3485720473218151,
+            -0.5672303183817222
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    }
+  ],
+  "replayT": 0.015,
+  "returnedToCatalog": true,
+  "errors": [],
+  "audibleListening": false
+}

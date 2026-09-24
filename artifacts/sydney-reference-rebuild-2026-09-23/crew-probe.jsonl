@@ -1,0 +1,249 @@
+{
+  "w": 1440,
+  "h": 900,
+  "t": 0.5528796296296419,
+  "shot": {
+    "azimuth": 0.17999999999999994,
+    "pitch": 0.40142572795869574,
+    "radius": 150,
+    "target": [
+      15.6981070897521,
+      8,
+      137.77452389247685
+    ],
+    "fov": 35
+  },
+  "visible": [
+    {
+      "id": "rib-0-1-2-2-tag-0",
+      "pixels": 11.720528895303644,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-2-tag-1",
+      "pixels": 11.411779639154975,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-hauler-0",
+      "pixels": 11.429248842890377,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-hauler-1",
+      "pixels": 11.69060478835759,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-hauler-2",
+      "pixels": 11.399641440821895,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-driver",
+      "pixels": 11.359046920286305,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-4-dresser-0",
+      "pixels": 11.99708924453542,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-4-dresser-1",
+      "pixels": 11.73611477197417,
+      "inFrame": true
+    },
+    {
+      "id": "rib-3--1-4-4-dresser-0",
+      "pixels": 16.62068495158723,
+      "inFrame": true
+    },
+    {
+      "id": "rib-3--1-4-4-dresser-1",
+      "pixels": 16.08997069718066,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-0",
+      "pixels": 15.004242409986036,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-1",
+      "pixels": 15.284556747333713,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-2",
+      "pixels": 14.980020771184662,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-3",
+      "pixels": 15.259550406246975,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-4",
+      "pixels": 10.891080316961812,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-5",
+      "pixels": 10.745239798555662,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-6",
+      "pixels": 10.911748656952245,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-7",
+      "pixels": 10.765366839893542,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-0",
+      "pixels": 12.71453342079593,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-1",
+      "pixels": 12.566171977762794,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-2",
+      "pixels": 12.70275961385757,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-3",
+      "pixels": 12.554664148589758,
+      "inFrame": true
+    }
+  ],
+  "near": []
+}
+{
+  "w": 390,
+  "h": 844,
+  "t": 0.5528796296296419,
+  "shot": {
+    "azimuth": 0.17999999999999994,
+    "pitch": 0.40142572795869574,
+    "radius": 165,
+    "target": [
+      15.6981070897521,
+      8,
+      137.77452389247685
+    ],
+    "fov": 42
+  },
+  "visible": [
+    {
+      "id": "rib-3--1-4-4-dresser-0",
+      "pixels": 11.629084657388788,
+      "inFrame": true
+    },
+    {
+      "id": "rib-3--1-4-4-dresser-1",
+      "pixels": 11.290547602695678,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-0",
+      "pixels": 10.592173682311374,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-1",
+      "pixels": 10.773243208137682,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-0",
+      "pixels": 9.092315195659985,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-2",
+      "pixels": 9.084504080265484,
+      "inFrame": true
+    }
+  ],
+  "near": [
+    {
+      "id": "rib-0-1-2-2-tag-0",
+      "pixels": 8.429184891821986,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-2-tag-1",
+      "pixels": 8.221677433496138,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-hauler-0",
+      "pixels": 8.233437902087902,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-hauler-1",
+      "pixels": 8.409105223943417,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-hauler-2",
+      "pixels": 8.213504472454911,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-3-driver",
+      "pixels": 8.18616287465484,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-4-dresser-0",
+      "pixels": 8.614438397559386,
+      "inFrame": true
+    },
+    {
+      "id": "rib-0-1-2-4-dresser-1",
+      "pixels": 8.439640606631304,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-4",
+      "pixels": 7.870051302686182,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-5",
+      "pixels": 7.771187338817017,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-6",
+      "pixels": 7.884048734641839,
+      "inFrame": true
+    },
+    {
+      "id": "yard-route-7",
+      "pixels": 7.784841175390405,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-1",
+      "pixels": 8.993811806174872,
+      "inFrame": true
+    },
+    {
+      "id": "yard-dresser-3",
+      "pixels": 8.986164391246557,
+      "inFrame": true
+    }
+  ]
+}

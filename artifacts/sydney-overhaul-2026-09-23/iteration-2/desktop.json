@@ -1,0 +1,101 @@
+{
+  "url": "http://127.0.0.1:5590/#/debug/wonder/sydney-opera-house/0.92",
+  "mode": "desktop",
+  "state": null,
+  "seed": null,
+  "screenshotPath": "artifacts/sydney-overhaul-2026-09-23/iteration-2/desktop.png",
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "drawingBuffer": {
+      "width": 1440,
+      "height": 900
+    },
+    "alphaPixels": 4102,
+    "variance": 158,
+    "colorBuckets": 86,
+    "metrics": {
+      "colorBuckets": 94,
+      "colorEntropyBits": 4.72,
+      "edgeDensity": 0.264,
+      "luminance": {
+        "mean": 46.6,
+        "p5": 15.9,
+        "p95": 84.1,
+        "contrast": 68.1
+      },
+      "dominantColorShare": 0.135,
+      "nonBackgroundShare": 0.865
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 56,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 597900,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 33,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 16,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "renderer": {
+        "calls": 56,
+        "triangles": 597900,
+        "points": 0,
+        "lines": 0,
+        "geometries": 33,
+        "textures": 16
+      },
+      "camera": {
+        "position": [
+          456.44365945049253,
+          223.0052915618747,
+          297.74444971443097
+        ],
+        "direction": [
+          -0.7848704682026325,
+          -0.3490745351301399,
+          -0.5119817546232067
+        ],
+        "fov": 35,
+        "aspect": 1.6,
+        "near": 0.5
+      },
+      "scene": "sydney-opera-house-reference"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

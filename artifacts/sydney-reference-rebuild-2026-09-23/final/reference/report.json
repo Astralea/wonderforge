@@ -1,0 +1,632 @@
+{
+  "tool": "verify-sydney-reference-views",
+  "base": "http://127.0.0.1:5590/",
+  "entry": "/src/main.tsx?t=1790167690974",
+  "scriptSrcs": [
+    "/@vite/client",
+    "/src/main.tsx?t=1790167690974"
+  ],
+  "imports": [
+    "/src/render/three/WorldScene.ts",
+    "/src/data/wonders/sydney-opera-house.ts"
+  ],
+  "constructionT": 1,
+  "lightT": 0.58,
+  "cameraT": 1,
+  "convention": "+X east, +Z south; position = target + [cos(az)*cos(pitch)*r, sin(pitch)*r, sin(az)*cos(pitch)*r]",
+  "captures": [
+    {
+      "viewport": "desktop",
+      "id": "north-context",
+      "file": "desktop-north-context.png",
+      "azimuthDeg": -90,
+      "pitchDeg": 22,
+      "radius": 560,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        0,
+        233.78,
+        -519.22
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 59,
+        "triangles": 250915,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "north-architecture",
+      "file": "desktop-north-architecture.png",
+      "azimuthDeg": -90,
+      "pitchDeg": 9,
+      "radius": 240,
+      "target": [
+        0,
+        28,
+        0
+      ],
+      "position": [
+        0,
+        65.54,
+        -237.05
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 59,
+        "triangles": 250915,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "south-context",
+      "file": "desktop-south-context.png",
+      "azimuthDeg": 90,
+      "pitchDeg": 22,
+      "radius": 560,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        0,
+        233.78,
+        519.22
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "south-architecture",
+      "file": "desktop-south-architecture.png",
+      "azimuthDeg": 90,
+      "pitchDeg": 7,
+      "radius": 250,
+      "target": [
+        0,
+        26,
+        0
+      ],
+      "position": [
+        0,
+        56.47,
+        248.14
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "east-context",
+      "file": "desktop-east-context.png",
+      "azimuthDeg": 0,
+      "pitchDeg": 22,
+      "radius": 560,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        519.22,
+        233.78,
+        0
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 59,
+        "triangles": 250915,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "east-architecture",
+      "file": "desktop-east-architecture.png",
+      "azimuthDeg": 0,
+      "pitchDeg": 10,
+      "radius": 240,
+      "target": [
+        0,
+        26,
+        0
+      ],
+      "position": [
+        236.35,
+        67.68,
+        0
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "west-context",
+      "file": "desktop-west-context.png",
+      "azimuthDeg": 180,
+      "pitchDeg": 22,
+      "radius": 560,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        -519.22,
+        233.78,
+        0
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "west-architecture",
+      "file": "desktop-west-architecture.png",
+      "azimuthDeg": 180,
+      "pitchDeg": 10,
+      "radius": 240,
+      "target": [
+        0,
+        26,
+        0
+      ],
+      "position": [
+        -236.35,
+        67.68,
+        0
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 57,
+        "triangles": 248995,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "roof-plan-context",
+      "file": "desktop-roof-plan-context.png",
+      "azimuthDeg": 90,
+      "pitchDeg": 76,
+      "radius": 640,
+      "target": [
+        0,
+        8,
+        0
+      ],
+      "position": [
+        0,
+        628.99,
+        154.83
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "roof-plan-architecture",
+      "file": "desktop-roof-plan-architecture.png",
+      "azimuthDeg": 90,
+      "pitchDeg": 80,
+      "radius": 320,
+      "target": [
+        0,
+        8,
+        15
+      ],
+      "position": [
+        0,
+        323.14,
+        70.57
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "northwest-aerial-context",
+      "file": "desktop-northwest-aerial-context.png",
+      "azimuthDeg": -135,
+      "pitchDeg": 40,
+      "radius": 540,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        -292.5,
+        371.11,
+        -292.5
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "northwest-aerial-architecture",
+      "file": "desktop-northwest-aerial-architecture.png",
+      "azimuthDeg": -135,
+      "pitchDeg": 30,
+      "radius": 280,
+      "target": [
+        0,
+        22,
+        0
+      ],
+      "position": [
+        -171.46,
+        162,
+        -171.46
+      ],
+      "camera": {
+        "fov": 35,
+        "aspect": 1.3333333333333333,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 632.0506552959556,
+        "far": 1692.9928266855952
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 249715,
+        "geometries": 36,
+        "textures": 16
+      }
+    },
+    {
+      "viewport": "portrait",
+      "id": "north-portrait",
+      "file": "portrait-north-portrait.png",
+      "azimuthDeg": -90,
+      "pitchDeg": 22,
+      "radius": 840,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        0,
+        338.67,
+        -778.83
+      ],
+      "camera": {
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 831.6993210634727,
+        "far": 2227.766038562873
+      },
+      "renderer": {
+        "calls": 45,
+        "triangles": 249702,
+        "geometries": 36,
+        "textures": 5
+      }
+    },
+    {
+      "viewport": "portrait",
+      "id": "south-portrait",
+      "file": "portrait-south-portrait.png",
+      "azimuthDeg": 90,
+      "pitchDeg": 22,
+      "radius": 840,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        0,
+        338.67,
+        778.83
+      ],
+      "camera": {
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 831.6993210634727,
+        "far": 2227.766038562873
+      },
+      "renderer": {
+        "calls": 45,
+        "triangles": 249702,
+        "geometries": 36,
+        "textures": 5
+      }
+    },
+    {
+      "viewport": "portrait",
+      "id": "east-portrait",
+      "file": "portrait-east-portrait.png",
+      "azimuthDeg": 0,
+      "pitchDeg": 22,
+      "radius": 840,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        778.83,
+        338.67,
+        0
+      ],
+      "camera": {
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 831.6993210634727,
+        "far": 2227.766038562873
+      },
+      "renderer": {
+        "calls": 45,
+        "triangles": 249702,
+        "geometries": 36,
+        "textures": 5
+      }
+    },
+    {
+      "viewport": "portrait",
+      "id": "west-portrait",
+      "file": "portrait-west-portrait.png",
+      "azimuthDeg": 180,
+      "pitchDeg": 22,
+      "radius": 840,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        -778.83,
+        338.67,
+        0
+      ],
+      "camera": {
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 831.6993210634727,
+        "far": 2227.766038562873
+      },
+      "renderer": {
+        "calls": 45,
+        "triangles": 249702,
+        "geometries": 36,
+        "textures": 5
+      }
+    },
+    {
+      "viewport": "portrait",
+      "id": "roof-plan-portrait",
+      "file": "portrait-roof-plan-portrait.png",
+      "azimuthDeg": 90,
+      "pitchDeg": 76,
+      "radius": 960,
+      "target": [
+        0,
+        8,
+        0
+      ],
+      "position": [
+        0,
+        939.48,
+        232.25
+      ],
+      "camera": {
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 831.6993210634727,
+        "far": 2227.766038562873
+      },
+      "renderer": {
+        "calls": 45,
+        "triangles": 249702,
+        "geometries": 36,
+        "textures": 5
+      }
+    },
+    {
+      "viewport": "portrait",
+      "id": "northwest-aerial-portrait",
+      "file": "portrait-northwest-aerial-portrait.png",
+      "azimuthDeg": -135,
+      "pitchDeg": 40,
+      "radius": 810,
+      "target": [
+        0,
+        24,
+        0
+      ],
+      "position": [
+        -438.76,
+        544.66,
+        -438.76
+      ],
+      "camera": {
+        "fov": 42,
+        "aspect": 0.46208530805687204,
+        "near": 20,
+        "far": 12000
+      },
+      "fog": {
+        "near": 831.6993210634727,
+        "far": 2227.766038562873
+      },
+      "renderer": {
+        "calls": 45,
+        "triangles": 249702,
+        "geometries": 36,
+        "textures": 5
+      }
+    }
+  ],
+  "errors": []
+}

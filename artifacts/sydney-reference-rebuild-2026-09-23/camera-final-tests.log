@@ -1,0 +1,20 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 --testTimeout=30000 tests/sydney-reference-camera.test.ts tests/sydney-motion-readability.test.ts tests/sydney-world.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-reference-camera.test.ts (3 tests) 2547ms
+   ✓ Sydney photographed reveal framing > keeps the complete roof and podium visible at 1440x900  897ms
+   ✓ Sydney photographed reveal framing > keeps the complete roof and podium visible at 390x844  816ms
+   ✓ Sydney photographed reveal framing > keeps the complete roof and podium visible at 844x390  832ms
+ ✓ tests/sydney-world.test.ts (10 tests) 270ms
+ ✓ tests/sydney-motion-readability.test.ts (5 tests) 9565ms
+   ✓ Sydney visible work and stable harbour depth > separates 25mm facades at 1.5km and leaves the near frustum clear of real environment bounds  9356ms
+
+ Test Files  3 passed (3)
+      Tests  18 passed (18)
+   Start at  21:24:09
+   Duration  10.63s (transform 504ms, setup 66ms, collect 1.73s, tests 12.38s, environment 1ms, prepare 200ms)
+

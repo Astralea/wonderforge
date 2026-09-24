@@ -1,0 +1,26 @@
+Input #0, image2, from 'artifacts/sydney-reference-rebuild-2026-09-23/final/rendered-film/frames/%05d.jpg':
+  Duration: 00:00:41.92, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 1440x900 [SAR 1:1 DAR 8:5], 12 fps, 12 tbr, 12 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0: Video: wrapped_avframe, yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1440x900 [SAR 1:1 DAR 8:5], q=2-31, 200 kb/s, 12 fps, 12 tbn
+    Metadata:
+      encoder         : Lavc62.28.102 wrapped_avframe
+    Side data:
+      ICC Profile: (456 bytes)
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:3.916667 black_end:4 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:4.5 black_end:4.583333 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:8.583333 black_end:8.666667 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:13.75 black_end:13.833333 black_duration:0.0833333
+frame=  171 fps=0.0 q=-0.0 size=N/A time=00:00:14.25 bitrate=N/A speed=28.3x elapsed=0:00:00.50    [Parsed_blackdetect_0 @ 0xc6901c900] black_start:15.416667 black_end:15.5 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:18.5 black_end:18.583333 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:19.166667 black_end:19.25 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:27.75 black_end:27.833333 black_duration:0.0833333
+[Parsed_blackdetect_0 @ 0xc6901c900] black_start:29.25 black_end:29.333333 black_duration:0.0833333
+frame=  355 fps=352 q=-0.0 size=N/A time=00:00:29.58 bitrate=N/A speed=29.4x elapsed=0:00:01.00    [Parsed_blackdetect_0 @ 0xc6901c900] black_start:29.916667 black_end:30 black_duration:0.0833333
+frame=  489 fps=324 q=-0.0 size=N/A time=00:00:40.75 bitrate=N/A speed=  27x elapsed=0:00:01.50    [out#0/null @ 0xc6901c180] video:208KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=  503 fps=326 q=-0.0 Lsize=N/A time=00:00:41.91 bitrate=N/A speed=27.1x elapsed=0:00:01.54    

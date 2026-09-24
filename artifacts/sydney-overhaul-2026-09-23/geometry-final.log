@@ -1,0 +1,17 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/sydney-shell-geometry.test.ts tests/sydney-construction.test.ts --maxWorkers=1
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-construction.test.ts (11 tests) 1881ms
+   ✓ Sydney segmented construction and crane mechanics > clears the complete house during slew and preserves the rigid crane jib length  343ms
+   ✓ Sydney segmented construction and crane mechanics > never double-books crane hoist intervals or exceeds active slots  587ms
+ ✓ tests/sydney-shell-geometry.test.ts (6 tests) 332ms
+
+ Test Files  2 passed (2)
+      Tests  17 passed (17)
+   Start at  04:13:12
+   Duration  3.45s (transform 248ms, setup 91ms, collect 545ms, tests 2.21s, environment 0ms, prepare 157ms)
+

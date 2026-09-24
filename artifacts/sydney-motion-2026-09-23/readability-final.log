@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/sydney-motion-readability.test.ts tests/sydney-world.test.ts --maxWorkers=2 --testTimeout=30000
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-world.test.ts (10 tests) 116ms
+ ✓ tests/sydney-motion-readability.test.ts (5 tests) 10348ms
+   ✓ Sydney visible work and stable harbour depth > separates 25mm facades at 1.5km and leaves the near frustum clear of real environment bounds  10188ms
+
+ Test Files  2 passed (2)
+      Tests  15 passed (15)
+   Start at  18:22:24
+   Duration  10.77s (transform 217ms, setup 35ms, collect 517ms, tests 10.46s, environment 0ms, prepare 66ms)
+

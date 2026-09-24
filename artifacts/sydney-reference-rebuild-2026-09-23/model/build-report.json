@@ -1,0 +1,345 @@
+{
+  "shells": [
+    {
+      "id": 0,
+      "name": "concert-main",
+      "topY": 67.0,
+      "height": 52.8,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 1.6280579355608324e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -24.712,
+        -16.166,
+        -16.063
+      ]
+    },
+    {
+      "id": 1,
+      "name": "concert-south",
+      "topY": 43.9,
+      "height": 29.7,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 1.464821375527116e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -20.521,
+        -42.091,
+        83.763
+      ]
+    },
+    {
+      "id": 2,
+      "name": "concert-middle",
+      "topY": 54.2,
+      "height": 40.0,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 0.0,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -34.786,
+        -26.415,
+        -31.104
+      ]
+    },
+    {
+      "id": 3,
+      "name": "opera-main",
+      "topY": 62.1,
+      "height": 47.9,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 7.105427357601002e-15,
+      "ridgeMaxAbsX": 1.0658141036401503e-14,
+      "minRibHeightAboveDeck": -0.0,
+      "sphereCentreLocal": [
+        -24.698,
+        -17.572,
+        -26.989
+      ]
+    },
+    {
+      "id": 4,
+      "name": "opera-south",
+      "topY": 34.0075,
+      "height": 19.8075,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 1.2306961192854808e-14,
+      "ridgeMaxAbsX": 1.0658141036401503e-14,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -23.616,
+        -51.377,
+        64.562
+      ]
+    },
+    {
+      "id": 5,
+      "name": "opera-middle",
+      "topY": 49.7,
+      "height": 35.5,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -36.829,
+        -26.566,
+        -35.408
+      ]
+    },
+    {
+      "id": 6,
+      "name": "restaurant-south",
+      "topY": 31.2,
+      "height": 17.0,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 1.6280579355608324e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": -0.0,
+      "sphereCentreLocal": [
+        -40.735,
+        -45.483,
+        27.845
+      ]
+    },
+    {
+      "id": 7,
+      "name": "concert-north",
+      "topY": 43.1192,
+      "height": 28.9192,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 1.4210854715202004e-14,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -41.076,
+        -33.832,
+        -34.356
+      ]
+    },
+    {
+      "id": 8,
+      "name": "opera-north",
+      "topY": 40.4162,
+      "height": 26.2162,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 1.6280579355608324e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -44.065,
+        -34.472,
+        -30.229
+      ]
+    },
+    {
+      "id": 9,
+      "name": "restaurant-north",
+      "topY": 30.2,
+      "height": 16.0,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 1.7404671430534633e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": -0.0,
+      "sphereCentreLocal": [
+        -41.411,
+        -46.221,
+        -25.216
+      ]
+    }
+  ],
+  "backJunctions": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "sharedRearEdgeMaxGap": 2.409567650518791e-14,
+      "aVsSphereB": [
+        -0.0,
+        53.2254
+      ],
+      "bVsSphereA": [
+        -0.0,
+        31.3922
+      ]
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "sharedRearEdgeMaxGap": 2.5864145986817697e-14,
+      "aVsSphereB": [
+        0.0,
+        45.7557
+      ],
+      "bVsSphereA": [
+        0.0,
+        27.8565
+      ]
+    },
+    {
+      "pair": [
+        9,
+        6
+      ],
+      "sharedRearEdgeMaxGap": 1.7404671430534633e-14,
+      "aVsSphereB": [
+        0.0,
+        12.3724
+      ],
+      "bVsSphereA": [
+        0.0,
+        13.0699
+      ]
+    }
+  ],
+  "verticalOrder": [
+    {
+      "bAboveA": 0,
+      "bBelowA": 6,
+      "maxAbove": 0.0,
+      "maxBelow": -22.623,
+      "crossing": false,
+      "pair": [
+        0,
+        2
+      ]
+    },
+    {
+      "bAboveA": 0,
+      "bBelowA": 166,
+      "maxAbove": 0.0,
+      "maxBelow": -15.493,
+      "crossing": false,
+      "pair": [
+        2,
+        7
+      ]
+    },
+    {
+      "bAboveA": 0,
+      "bBelowA": 4,
+      "maxAbove": 0.0,
+      "maxBelow": -20.506,
+      "crossing": false,
+      "pair": [
+        3,
+        5
+      ]
+    },
+    {
+      "bAboveA": 0,
+      "bBelowA": 72,
+      "maxAbove": 0.0,
+      "maxBelow": -12.264,
+      "crossing": false,
+      "pair": [
+        5,
+        8
+      ]
+    }
+  ],
+  "crossingPairs": [],
+  "sidePanels": [
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "side": 0,
+      "minDistOutsideNeighbourSphere": 1.562
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "side": 1,
+      "minDistOutsideNeighbourSphere": 1.562
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "side": 0,
+      "minDistOutsideNeighbourSphere": 0.753
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "side": 1,
+      "minDistOutsideNeighbourSphere": 0.753
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "side": 0,
+      "minDistOutsideNeighbourSphere": 1.331
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "side": 1,
+      "minDistOutsideNeighbourSphere": 1.331
+    },
+    {
+      "pair": [
+        5,
+        8
+      ],
+      "side": 0,
+      "minDistOutsideNeighbourSphere": 0.601
+    },
+    {
+      "pair": [
+        5,
+        8
+      ],
+      "side": 1,
+      "minDistOutsideNeighbourSphere": 0.601
+    }
+  ],
+  "unsupportedPedestals": [],
+  "shorelineMinMargin": {
+    "metres": 2.12,
+    "part": "wall-east-00",
+    "at": [
+      81.72,
+      -40.84
+    ]
+  },
+  "concertOperaMinDistance": 4.258,
+  "counts": {
+    "shells": 10,
+    "podium": 249,
+    "details": 47,
+    "shellTriangles": 81920,
+    "podiumTriangles": 7664,
+    "detailTriangles": 26120,
+    "totalTriangles": 115704
+  },
+  "bounds": {
+    "min": [
+      -60.9269,
+      2.2,
+      -77.0201
+    ],
+    "max": [
+      81.7201,
+      67.329,
+      107.2946
+    ]
+  }
+}

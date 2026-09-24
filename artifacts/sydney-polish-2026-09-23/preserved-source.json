@@ -1,0 +1,10 @@
+{
+  "src/data/sydneyShells.ts": "74c09f0cc2791887f4ef979264a05b7a14647cd65d9ee6bab0280659dc961870",
+  "src/data/sydneyConstruction.ts": "e48f60e442845f3f1ccd3bd0af6855de37e8aaa1a072255278c94cc18adf9383",
+  "src/engine/sydneyConstruction.ts": "486fa0b33381d6d3802a20f1d73f17cdd5b3ec400ae7a35045d4bdd322d251b6",
+  "src/engine/sydneyCamera.ts": "18753800967e7fde2fade58bd1d4d5a8a996ce51c6c6ede7427ce7c14a21e1ee",
+  "src/render/three/SydneyStoneSystem.ts": "4788d506fbfbe187b2a7683a21d96a004b59c27ab36fd2f8f1767d93780ce359",
+  "src/render/three/SydneyWorkSystem.ts": "40df1c2b8ef6037e3dd9a0bbdfbe257b5e9b2574e9ef022ee3a7c1c4d6381d12",
+  "src/render/three/SydneyEnvironment.ts": "8eb8bae6ba3755f1c7eff70f5a8ee548d01b8abcfa2b762d1f449417a9f8b768",
+  "src/data/sydneySky.ts": "c44cde28a0e95a1e07430ea37b2b3c6056ec38acf532dc1888f1730be0567c28"
+}

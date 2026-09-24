@@ -1,0 +1,374 @@
+[
+  {
+    "t": 0,
+    "near": 0.5,
+    "changedPixels": 198,
+    "meanDelta": 0.04364699074073016
+  },
+  {
+    "t": 0,
+    "near": 20,
+    "changedPixels": 3,
+    "meanDelta": 0.004423611111111137
+  },
+  {
+    "t": 0.03333333333333333,
+    "near": 0.5,
+    "changedPixels": 263,
+    "meanDelta": 0.04165972222221369
+  },
+  {
+    "t": 0.03333333333333333,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.004401620370370379
+  },
+  {
+    "t": 0.06666666666666667,
+    "near": 0.5,
+    "changedPixels": 291,
+    "meanDelta": 0.04874999999997661
+  },
+  {
+    "t": 0.06666666666666667,
+    "near": 20,
+    "changedPixels": 0,
+    "meanDelta": 0.003523148148147943
+  },
+  {
+    "t": 0.1,
+    "near": 0.5,
+    "changedPixels": 322,
+    "meanDelta": 0.051251736111083857
+  },
+  {
+    "t": 0.1,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.0022638888888888995
+  },
+  {
+    "t": 0.13333333333333333,
+    "near": 0.5,
+    "changedPixels": 265,
+    "meanDelta": 0.04896585648145638
+  },
+  {
+    "t": 0.13333333333333333,
+    "near": 20,
+    "changedPixels": 2,
+    "meanDelta": 0.003356481481481283
+  },
+  {
+    "t": 0.16666666666666666,
+    "near": 0.5,
+    "changedPixels": 262,
+    "meanDelta": 0.0484913194444187
+  },
+  {
+    "t": 0.16666666666666666,
+    "near": 20,
+    "changedPixels": 3,
+    "meanDelta": 0.0028645833333332243
+  },
+  {
+    "t": 0.2,
+    "near": 0.5,
+    "changedPixels": 202,
+    "meanDelta": 0.046874999999977185
+  },
+  {
+    "t": 0.2,
+    "near": 20,
+    "changedPixels": 5,
+    "meanDelta": 0.0038871527777776197
+  },
+  {
+    "t": 0.23333333333333334,
+    "near": 0.5,
+    "changedPixels": 178,
+    "meanDelta": 0.040556134259250545
+  },
+  {
+    "t": 0.23333333333333334,
+    "near": 20,
+    "changedPixels": 2,
+    "meanDelta": 0.002537037037036977
+  },
+  {
+    "t": 0.26666666666666666,
+    "near": 0.5,
+    "changedPixels": 171,
+    "meanDelta": 0.03463194444444327
+  },
+  {
+    "t": 0.26666666666666666,
+    "near": 20,
+    "changedPixels": 1,
+    "meanDelta": 0.002432291666666621
+  },
+  {
+    "t": 0.3,
+    "near": 0.5,
+    "changedPixels": 0,
+    "meanDelta": 0
+  },
+  {
+    "t": 0.3,
+    "near": 20,
+    "changedPixels": 0,
+    "meanDelta": 0
+  },
+  {
+    "t": 0.3333333333333333,
+    "near": 0.5,
+    "changedPixels": 128,
+    "meanDelta": 0.02577835648148684
+  },
+  {
+    "t": 0.3333333333333333,
+    "near": 20,
+    "changedPixels": 1,
+    "meanDelta": 0.0027141203703702843
+  },
+  {
+    "t": 0.36666666666666664,
+    "near": 0.5,
+    "changedPixels": 160,
+    "meanDelta": 0.0315949074074109
+  },
+  {
+    "t": 0.36666666666666664,
+    "near": 20,
+    "changedPixels": 0,
+    "meanDelta": 0.0016851851851852325
+  },
+  {
+    "t": 0.4,
+    "near": 0.5,
+    "changedPixels": 153,
+    "meanDelta": 0.02785416666667354
+  },
+  {
+    "t": 0.4,
+    "near": 20,
+    "changedPixels": 1,
+    "meanDelta": 0.0030347222222220807
+  },
+  {
+    "t": 0.43333333333333335,
+    "near": 0.5,
+    "changedPixels": 128,
+    "meanDelta": 0.028784143518526904
+  },
+  {
+    "t": 0.43333333333333335,
+    "near": 20,
+    "changedPixels": 2,
+    "meanDelta": 0.0015543981481481838
+  },
+  {
+    "t": 0.4666666666666667,
+    "near": 0.5,
+    "changedPixels": 87,
+    "meanDelta": 0.026178819444450677
+  },
+  {
+    "t": 0.4666666666666667,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.0012586805555555578
+  },
+  {
+    "t": 0.5,
+    "near": 0.5,
+    "changedPixels": 103,
+    "meanDelta": 0.025928819444450624
+  },
+  {
+    "t": 0.5,
+    "near": 20,
+    "changedPixels": 1,
+    "meanDelta": 0.0017685185185185718
+  },
+  {
+    "t": 0.5333333333333333,
+    "near": 0.5,
+    "changedPixels": 95,
+    "meanDelta": 0.024116319444449162
+  },
+  {
+    "t": 0.5333333333333333,
+    "near": 20,
+    "changedPixels": 5,
+    "meanDelta": 0.0017500000000000362
+  },
+  {
+    "t": 0.5666666666666667,
+    "near": 0.5,
+    "changedPixels": 91,
+    "meanDelta": 0.025808449074079694
+  },
+  {
+    "t": 0.5666666666666667,
+    "near": 20,
+    "changedPixels": 3,
+    "meanDelta": 0.0014658564814815055
+  },
+  {
+    "t": 0.6,
+    "near": 0.5,
+    "changedPixels": 182,
+    "meanDelta": 0.030729745370374043
+  },
+  {
+    "t": 0.6,
+    "near": 20,
+    "changedPixels": 3,
+    "meanDelta": 0.0021284722222222343
+  },
+  {
+    "t": 0.6333333333333333,
+    "near": 0.5,
+    "changedPixels": 102,
+    "meanDelta": 0.027620370370377036
+  },
+  {
+    "t": 0.6333333333333333,
+    "near": 20,
+    "changedPixels": 2,
+    "meanDelta": 0.002910879629629505
+  },
+  {
+    "t": 0.6666666666666666,
+    "near": 0.5,
+    "changedPixels": 0,
+    "meanDelta": 0
+  },
+  {
+    "t": 0.6666666666666666,
+    "near": 20,
+    "changedPixels": 0,
+    "meanDelta": 0
+  },
+  {
+    "t": 0.7,
+    "near": 0.5,
+    "changedPixels": 148,
+    "meanDelta": 0.027755208333339144
+  },
+  {
+    "t": 0.7,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.0030416666666665346
+  },
+  {
+    "t": 0.7333333333333333,
+    "near": 0.5,
+    "changedPixels": 161,
+    "meanDelta": 0.025418402777782834
+  },
+  {
+    "t": 0.7333333333333333,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.006497106481482093
+  },
+  {
+    "t": 0.7666666666666667,
+    "near": 0.5,
+    "changedPixels": 168,
+    "meanDelta": 0.02568865740741189
+  },
+  {
+    "t": 0.7666666666666667,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.004387731481481533
+  },
+  {
+    "t": 0.8,
+    "near": 0.5,
+    "changedPixels": 264,
+    "meanDelta": 0.028805555555560098
+  },
+  {
+    "t": 0.8,
+    "near": 20,
+    "changedPixels": 4,
+    "meanDelta": 0.008010416666666728
+  },
+  {
+    "t": 0.8333333333333334,
+    "near": 0.5,
+    "changedPixels": 162,
+    "meanDelta": 0.0318697916666701
+  },
+  {
+    "t": 0.8333333333333334,
+    "near": 20,
+    "changedPixels": 5,
+    "meanDelta": 0.00802546296296297
+  },
+  {
+    "t": 0.8666666666666667,
+    "near": 0.5,
+    "changedPixels": 132,
+    "meanDelta": 0.0211157407407401
+  },
+  {
+    "t": 0.8666666666666667,
+    "near": 20,
+    "changedPixels": 6,
+    "meanDelta": 0.008919560185184696
+  },
+  {
+    "t": 0.9,
+    "near": 0.5,
+    "changedPixels": 120,
+    "meanDelta": 0.029238425925930067
+  },
+  {
+    "t": 0.9,
+    "near": 20,
+    "changedPixels": 3,
+    "meanDelta": 0.007410300925926617
+  },
+  {
+    "t": 0.9333333333333333,
+    "near": 0.5,
+    "changedPixels": 163,
+    "meanDelta": 0.0416869212962906
+  },
+  {
+    "t": 0.9333333333333333,
+    "near": 20,
+    "changedPixels": 5,
+    "meanDelta": 0.009876736111110025
+  },
+  {
+    "t": 0.9666666666666667,
+    "near": 0.5,
+    "changedPixels": 154,
+    "meanDelta": 0.030385995370373363
+  },
+  {
+    "t": 0.9666666666666667,
+    "near": 20,
+    "changedPixels": 7,
+    "meanDelta": 0.007789930555555949
+  },
+  {
+    "t": 1,
+    "near": 0.5,
+    "changedPixels": 172,
+    "meanDelta": 0.0438900462962876
+  },
+  {
+    "t": 1,
+    "near": 20,
+    "changedPixels": 3,
+    "meanDelta": 0.013809606481478366
+  }
+]

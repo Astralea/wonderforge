@@ -1,0 +1,17 @@
+{
+  "modelSha256": "d08faa0fb85c993987cf8775243f34071dc0e18a45e259653f8d1e4e72113a2d",
+  "bundle": "/assets/main-BfL2pMeG.js",
+  "views": 31,
+  "viewport": [
+    960,
+    600
+  ],
+  "referenceNear": 100,
+  "changedPixelThresholdRGBMean": 12,
+  "changedPixelsSummed": {
+    "0.5": 5025,
+    "20": 91
+  },
+  "reductionPercent": 98.18905472636817,
+  "qualification": "Fixed geometry/daylight orbit compares depth precision, not a perceptual guarantee for all devices or all camera paths."
+}

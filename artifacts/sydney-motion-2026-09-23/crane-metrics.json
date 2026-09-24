@@ -1,0 +1,78 @@
+[
+  {
+    "crane": 0,
+    "fps": 60,
+    "globalWorstTip": {
+      "meters": 170.77609911648636,
+      "t": 0.27194444444444443,
+      "from": "hoist",
+      "to": "return-lower"
+    },
+    "globalWorstHook": {
+      "meters": 177.50700765657277,
+      "t": 0.27194444444444443
+    },
+    "heroes": [
+      {
+        "id": "rib-3--1-4-4",
+        "start": 0.3063409836065565,
+        "duration": 0.07,
+        "hoistFrom": 0.3469409836065565,
+        "hoistUntil": 0.3693409836065565,
+        "preCycleSeconds": 3.0116852459016394,
+        "postCycleSeconds": 1.5014006557377046,
+        "maxTipMetersPerFrame": 10.433871112181924,
+        "maxHookMetersPerFrame": 10.383601683839927
+      },
+      {
+        "id": "tile-3--1-5-4",
+        "start": 0.6789475409836075,
+        "duration": 0.05,
+        "hoistFrom": 0.7079475409836076,
+        "hoistUntil": 0.7239475409836076,
+        "preCycleSeconds": 2.246439344262303,
+        "postCycleSeconds": 1.2935449180327807,
+        "maxTipMetersPerFrame": 15.080776933655782,
+        "maxHookMetersPerFrame": 15.065756015252486
+      }
+    ]
+  },
+  {
+    "crane": 1,
+    "fps": 60,
+    "globalWorstTip": {
+      "meters": 174.51055042444787,
+      "t": 0.39222222222222225,
+      "from": "hoist",
+      "to": "return-lower"
+    },
+    "globalWorstHook": {
+      "meters": 178.43702068501514,
+      "t": 0.745
+    },
+    "heroes": [
+      {
+        "id": "rib-0--1-4-4",
+        "start": 0.2944049382716044,
+        "duration": 0.07,
+        "hoistFrom": 0.33500493827160444,
+        "hoistUntil": 0.3574049382716044,
+        "preCycleSeconds": 2.98805925925926,
+        "postCycleSeconds": 1.4714251851851878,
+        "maxTipMetersPerFrame": 10.48628148531738,
+        "maxHookMetersPerFrame": 10.439905683060738
+      },
+      {
+        "id": "tile-0--1-7-0",
+        "start": 0.6778000000000012,
+        "duration": 0.05,
+        "hoistFrom": 0.7068000000000012,
+        "hoistUntil": 0.7228000000000012,
+        "preCycleSeconds": 2.239911111111117,
+        "postCycleSeconds": 1.2852622222222143,
+        "maxTipMetersPerFrame": 19.180180300783576,
+        "maxHookMetersPerFrame": 19.1599272748358
+      }
+    ]
+  }
+]

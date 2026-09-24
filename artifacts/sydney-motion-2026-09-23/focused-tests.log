@@ -1,0 +1,21 @@
+
+> wonderforge@0.1.0 test
+> vitest run tests/sydney-motion-readability.test.ts tests/sydney-world.test.ts tests/sydney-construction.test.ts tests/sydney-crane-choreography.test.ts tests/sydney-boat-motion.test.ts --maxWorkers=2 --testTimeout=30000
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-world.test.ts (10 tests) 115ms
+ ✓ tests/sydney-construction.test.ts (12 tests) 1280ms
+   ✓ Sydney segmented construction and crane mechanics > never double-books crane hoist intervals or exceeds active slots  333ms
+ ✓ tests/sydney-crane-choreography.test.ts (6 tests) 769ms
+   ✓ Sydney complete crane choreography > shares the actual load hook throughout each hoist without double-booking the rig  527ms
+ ✓ tests/sydney-boat-motion.test.ts (2 tests) 363ms
+ ✓ tests/sydney-motion-readability.test.ts (4 tests) 10460ms
+   ✓ Sydney visible work and stable harbour depth > separates 25mm facades at 1.5km and leaves the near frustum clear of real environment bounds  10426ms
+
+ Test Files  5 passed (5)
+      Tests  34 passed (34)
+   Start at  18:16:38
+   Duration  10.85s (transform 221ms, setup 50ms, collect 701ms, tests 12.99s, environment 0ms, prepare 155ms)
+

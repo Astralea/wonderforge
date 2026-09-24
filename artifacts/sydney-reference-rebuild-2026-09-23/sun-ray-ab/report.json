@@ -1,0 +1,49 @@
+{
+  "viewport": [
+    1440,
+    900
+  ],
+  "rows": [
+    {
+      "t": 0.5,
+      "enabled": true,
+      "brightPixels": 0
+    },
+    {
+      "t": 0.5,
+      "enabled": false,
+      "brightPixels": 0
+    },
+    {
+      "t": 0.58,
+      "enabled": true,
+      "brightPixels": 0
+    },
+    {
+      "t": 0.58,
+      "enabled": false,
+      "brightPixels": 0
+    },
+    {
+      "t": 0.625,
+      "enabled": true,
+      "brightPixels": 7043
+    },
+    {
+      "t": 0.625,
+      "enabled": false,
+      "brightPixels": 7043
+    },
+    {
+      "t": 0.7,
+      "enabled": true,
+      "brightPixels": 497
+    },
+    {
+      "t": 0.7,
+      "enabled": false,
+      "brightPixels": 497
+    }
+  ],
+  "errors": []
+}

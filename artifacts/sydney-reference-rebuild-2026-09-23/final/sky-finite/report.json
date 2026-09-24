@@ -1,0 +1,329 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.003611111111111111,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.003611111111111111,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.0038888888888888888,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.0038888888888888888,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.004722222222222222,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.004722222222222222,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.0075,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.0075,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.55,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.55,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.625,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.625,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 1,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 1,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.004722222222222222,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.004722222222222222,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.0038888888888888888,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "t": 0.0038888888888888888,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 3888000,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.003611111111111111,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.003611111111111111,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.0038888888888888888,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.0038888888888888888,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.004722222222222222,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.004722222222222222,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.0075,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.0075,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.55,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.55,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.625,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.625,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 1,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 1,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.004722222222222222,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.004722222222222222,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.0038888888888888888,
+      "stage": "linear input",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "t": 0.0038888888888888888,
+      "stage": "bloom output",
+      "nonfinite": 0,
+      "nonzero": 987480,
+      "glError": 0
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,176 @@
+{
+  "shells": [
+    {
+      "id": 0,
+      "name": "concert-main",
+      "topY": 67.0,
+      "height": 52.8,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 3.552713678800501e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -25.009,
+        -16.075,
+        -15.995
+      ]
+    },
+    {
+      "id": 1,
+      "name": "concert-south",
+      "topY": 43.9,
+      "height": 29.7,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 1.2306961192854808e-14,
+      "ridgeMaxAbsX": 3.552713678800501e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -26.176,
+        -40.288,
+        83.147
+      ]
+    },
+    {
+      "id": 2,
+      "name": "concert-middle",
+      "topY": 54.2,
+      "height": 40.0,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 0.0,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -34.786,
+        -26.415,
+        -31.104
+      ]
+    },
+    {
+      "id": 3,
+      "name": "opera-main",
+      "topY": 62.1,
+      "height": 47.9,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 1.0658141036401503e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": -0.0,
+      "sphereCentreLocal": [
+        -25.389,
+        -17.38,
+        -26.811
+      ]
+    },
+    {
+      "id": 4,
+      "name": "opera-south",
+      "topY": 34.0118,
+      "height": 19.8118,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -27.85,
+        -49.824,
+        64.253
+      ]
+    },
+    {
+      "id": 5,
+      "name": "opera-middle",
+      "topY": 49.7,
+      "height": 35.5,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -36.829,
+        -26.566,
+        -35.408
+      ]
+    },
+    {
+      "id": 6,
+      "name": "restaurant-south",
+      "topY": 31.2,
+      "height": 17.0,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 1.2306961192854808e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": -0.0,
+      "sphereCentreLocal": [
+        -42.823,
+        -44.122,
+        27.437
+      ]
+    },
+    {
+      "id": 7,
+      "name": "concert-north",
+      "topY": 43.1192,
+      "height": 28.9192,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 1.4210854715202004e-14,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -41.076,
+        -33.832,
+        -34.356
+      ]
+    },
+    {
+      "id": 8,
+      "name": "opera-north",
+      "topY": 40.4162,
+      "height": 26.2162,
+      "sphereError": 1.4210854715202004e-14,
+      "pedestalSpread": 1.6280579355608324e-14,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -44.065,
+        -34.472,
+        -30.229
+      ]
+    },
+    {
+      "id": 9,
+      "name": "restaurant-north",
+      "topY": 30.2,
+      "height": 16.0,
+      "sphereError": 2.842170943040401e-14,
+      "pedestalSpread": 0.0,
+      "ridgeMaxAbsX": 7.105427357601002e-15,
+      "minRibHeightAboveDeck": 0.0,
+      "sphereCentreLocal": [
+        -43.28,
+        -44.969,
+        -24.887
+      ]
+    }
+  ],
+  "concertOperaMinDistance": 3.279,
+  "counts": {
+    "shells": 10,
+    "podium": 291,
+    "details": 48,
+    "shellTriangles": 81920,
+    "podiumTriangles": 6136,
+    "detailTriangles": 20128,
+    "totalTriangles": 108184
+  },
+  "bounds": {
+    "min": [
+      -74.9269,
+      2.2,
+      -96.5756
+    ],
+    "max": [
+      71.9226,
+      67.3291,
+      101.3931
+    ]
+  }
+}

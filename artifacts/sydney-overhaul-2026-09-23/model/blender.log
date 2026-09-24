@@ -1,0 +1,41 @@
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+Info: Saved as "sydney-overhaul.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+04:15:34 | INFO: Starting glTF 2.0 export
+04:15:34 | INFO: Extracting primitive: podium
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-0
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-1
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-2
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-3
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-4
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-5
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: rib-6
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-0
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-1
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-2
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-3
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-4
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-5
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Extracting primitive: sail-6
+04:15:34 | INFO: Primitives created: 1
+04:15:34 | INFO: Finished glTF 2.0 export in 0.06333017349243164 s
+00:05.352  render           | Saved: '/Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/artifacts/sydney-overhaul-2026-09-23/model/inspection.png'
+
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

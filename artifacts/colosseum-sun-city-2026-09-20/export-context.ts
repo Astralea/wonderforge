@@ -1,0 +1,14 @@
+import {writeFileSync,readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {romeContextManifest} from '../../src/engine/colosseumUrbanContext';
+import {COLOSSEUM_ROME_LOTS} from '../../src/engine/colosseumRomeLots';
+import {COLOSSEUM_HILLS, COLOSSEUM_WESTERN_RIDGES} from '../../src/engine/colosseumTerrain';
+import {ColosseumUrbanContext} from '../../src/render/three/ColosseumUrbanContext';
+import {Mesh} from 'three';
+import {ColosseumAqueductContinuation} from '../../src/render/three/ColosseumAqueductContinuation';
+const manifest=romeContextManifest(), context=new ColosseumUrbanContext();
+const continuation=new ColosseumAqueductContinuation();
+context.group.add(continuation.group);
+const meshes:any[]=[];context.group.traverse(o=>{if(o instanceof Mesh){o.geometry.computeBoundingBox();meshes.push({name:o.name,triangles:(o.geometry.index?.count??o.geometry.attributes.position!.count)/3,bounds:o.geometry.boundingBox,parts:o.geometry.userData.parts,castShadow:o.castShadow});}});
+writeFileSync('artifacts/colosseum-sun-city-2026-09-20/context.manifest.json',JSON.stringify({...manifest,existingBlenderAssets:manifest.assets.map(p=>({path:p,bytes:readFileSync('public'+p).byteLength,sha256:createHash('sha256').update(readFileSync('public'+p)).digest('hex')})),hills:COLOSSEUM_HILLS,westernRelief:COLOSSEUM_WESTERN_RIDGES,lots:COLOSSEUM_ROME_LOTS,contextMeshes:meshes},null,2));
+context.dispose();continuation.dispose();

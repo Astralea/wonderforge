@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "hdr-inspect",
+    "frames": 20,
+    "startT": 0,
+    "stepT": 0.0002777777777777778,
+    "samples": [
+      4,
+      4
+    ],
+    "bloomEnabled": true,
+    "bloomBypassed": false,
+    "godraysEnabled": true,
+    "context": {
+      "alpha": true,
+      "antialias": true,
+      "depth": true,
+      "desynchronized": false,
+      "failIfMajorPerformanceCaveat": false,
+      "powerPreference": "high-performance",
+      "premultipliedAlpha": true,
+      "preserveDrawingBuffer": false,
+      "stencil": false,
+      "xrCompatible": false
+    },
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "wallMs": 881.5,
+    "lost": 0,
+    "centerBlack": 2,
+    "gridBlack": 2,
+    "fullBlack": 0,
+    "glErrors": [],
+    "nonDefaultFramebuffer": 0,
+    "blackIndices": [
+      14,
+      17
+    ],
+    "errors": []
+  }
+]

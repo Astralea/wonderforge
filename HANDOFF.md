@@ -1,3 +1,12 @@
+## Evidence storage — 2026-09-24
+
+Owner-approved cleanup deleted about 2.7 GB of untracked QA screenshots and recordings
+(PNG/JPG/WebM/MP4/raw frames) from earlier passes. Captures that older sections of this
+file cite may therefore be missing. The remaining sources are now committed: Blender
+`.blend`/`.glb` models, the owner's reference photos, the CMP PDF, NSW aerial tracings,
+soundtrack WAV masters, and the reports/JSON. Recreate captures with the scripts in
+`scripts/` when needed. Don't commit bulk captures; keep sources and reports.
+
 ## Sydney city context pass and public release — 2026-09-24
 
 Owner: "the background is too simplified… Sydney is a great city". The owner chose

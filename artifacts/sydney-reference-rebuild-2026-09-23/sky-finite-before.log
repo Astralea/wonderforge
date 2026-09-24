@@ -1,0 +1,17 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"width":1440,"height":900,"t":0.0038888888888888888,"stage":"linear input","nonfinite":3,"nonzero":3888000,"glError":0}
+
+3 !== 0
+
+    at file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/tests/sydney-sky-finite.browser.mjs:56:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 3,
+  expected: 0,
+  operator: 'strictEqual'
+}
+
+Node.js v24.4.0

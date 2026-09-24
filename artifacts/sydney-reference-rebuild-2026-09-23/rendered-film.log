@@ -1,0 +1,9 @@
+{"bundle":"/assets/main-BfL2pMeG.js","rendered":4164,"black":150,"frames":503,"errors":[],"nonDefaultFramebuffer":0}
+file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/verify-sydney-rendered-film.mjs:39
+if(audit.black.length||errors.length||audit.captureErrors.length||audit.nonDefaultFramebuffer)throw new Error('Rendered frame audit failed');
+                                                                                                    ^
+
+Error: Rendered frame audit failed
+    at file:///Users/hina/Documents/Experience-Intelligence-Domain/wonderforge/scripts/verify-sydney-rendered-film.mjs:39:101
+
+Node.js v24.4.0

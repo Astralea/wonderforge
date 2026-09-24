@@ -1,0 +1,28 @@
+{
+  "bundle": "/assets/main-B7n23WDI.js",
+  "unitTests": {
+    "files": 256,
+    "tests": 1377,
+    "passed": true,
+    "log": "full-tests-after-sky-fix.log"
+  },
+  "typecheck": "passed",
+  "build": "passed",
+  "warnings": [
+    "existing Node module externalizations",
+    "large chunks"
+  ],
+  "desktopPortraitFrames": 14,
+  "naturalPlaybackSeconds": 60.31,
+  "replay": 0.015,
+  "returnToCatalog": true,
+  "renderedFramesChecked": 3658,
+  "blackFrames": 0,
+  "savedFrames": 492,
+  "hdrInspections": 36,
+  "heroFrames": {
+    "rib": 35,
+    "sail": 39
+  },
+  "scope": "Local ANGLE Metal Apple M2 Ultra desktop and viewport-emulated mobile; stylized interpreted reconstruction, not surveyed geometry; not published"
+}

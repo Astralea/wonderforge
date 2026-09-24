@@ -1,0 +1,16 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/ui.test.tsx tests/sydney-shell-geometry.test.ts tests/sydney-world.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-shell-geometry.test.ts (5 tests) 174ms
+ ✓ tests/sydney-world.test.ts (10 tests) 145ms
+ ✓ tests/ui.test.tsx (37 tests) 1838ms
+
+ Test Files  3 passed (3)
+      Tests  52 passed (52)
+   Start at  03:59:00
+   Duration  4.34s (transform 688ms, setup 45ms, collect 1.49s, tests 2.16s, environment 612ms, prepare 172ms)
+
