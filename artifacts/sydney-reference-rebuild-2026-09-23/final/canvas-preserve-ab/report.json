@@ -1,0 +1,268 @@
+{
+  "bundle": "/assets/main-BfL2pMeG.js",
+  "samples": [
+    {
+      "elapsed": 0.012,
+      "t": 0.004
+    },
+    {
+      "elapsed": 1.016,
+      "t": 0.022
+    },
+    {
+      "elapsed": 2.019,
+      "t": 0.039
+    },
+    {
+      "elapsed": 3.024,
+      "t": 0.056
+    },
+    {
+      "elapsed": 4.026,
+      "t": 0.072
+    },
+    {
+      "elapsed": 5.03,
+      "t": 0.089
+    },
+    {
+      "elapsed": 6.034,
+      "t": 0.106
+    },
+    {
+      "elapsed": 7.037,
+      "t": 0.123
+    },
+    {
+      "elapsed": 8.041,
+      "t": 0.139
+    },
+    {
+      "elapsed": 9.043,
+      "t": 0.156
+    },
+    {
+      "elapsed": 10.046,
+      "t": 0.173
+    },
+    {
+      "elapsed": 11.049,
+      "t": 0.19
+    },
+    {
+      "elapsed": 12.052,
+      "t": 0.206
+    },
+    {
+      "elapsed": 13.054,
+      "t": 0.221
+    },
+    {
+      "elapsed": 14.056,
+      "t": 0.239
+    },
+    {
+      "elapsed": 15.06,
+      "t": 0.256
+    },
+    {
+      "elapsed": 16.063,
+      "t": 0.273
+    },
+    {
+      "elapsed": 17.066,
+      "t": 0.288
+    },
+    {
+      "elapsed": 18.068,
+      "t": 0.306
+    },
+    {
+      "elapsed": 19.071,
+      "t": 0.323
+    },
+    {
+      "elapsed": 20.073,
+      "t": 0.339
+    },
+    {
+      "elapsed": 21.075,
+      "t": 0.356
+    },
+    {
+      "elapsed": 22.078,
+      "t": 0.373
+    },
+    {
+      "elapsed": 23.08,
+      "t": 0.39
+    },
+    {
+      "elapsed": 24.082,
+      "t": 0.406
+    },
+    {
+      "elapsed": 25.085,
+      "t": 0.423
+    },
+    {
+      "elapsed": 26.088,
+      "t": 0.44
+    },
+    {
+      "elapsed": 27.091,
+      "t": 0.454
+    },
+    {
+      "elapsed": 28.094,
+      "t": 0.472
+    },
+    {
+      "elapsed": 29.097,
+      "t": 0.489
+    },
+    {
+      "elapsed": 30.1,
+      "t": 0.506
+    },
+    {
+      "elapsed": 31.101,
+      "t": 0.522
+    },
+    {
+      "elapsed": 32.104,
+      "t": 0.539
+    },
+    {
+      "elapsed": 33.107,
+      "t": 0.556
+    },
+    {
+      "elapsed": 34.109,
+      "t": 0.573
+    },
+    {
+      "elapsed": 35.112,
+      "t": 0.589
+    },
+    {
+      "elapsed": 36.115,
+      "t": 0.606
+    },
+    {
+      "elapsed": 37.116,
+      "t": 0.622
+    },
+    {
+      "elapsed": 38.119,
+      "t": 0.639
+    },
+    {
+      "elapsed": 39.122,
+      "t": 0.656
+    },
+    {
+      "elapsed": 40.124,
+      "t": 0.672
+    },
+    {
+      "elapsed": 41.127,
+      "t": 0.689
+    },
+    {
+      "elapsed": 42.129,
+      "t": 0.706
+    },
+    {
+      "elapsed": 43.132,
+      "t": 0.723
+    },
+    {
+      "elapsed": 44.134,
+      "t": 0.739
+    },
+    {
+      "elapsed": 45.137,
+      "t": 0.756
+    },
+    {
+      "elapsed": 46.14,
+      "t": 0.773
+    },
+    {
+      "elapsed": 47.143,
+      "t": 0.789
+    },
+    {
+      "elapsed": 48.145,
+      "t": 0.806
+    },
+    {
+      "elapsed": 49.149,
+      "t": 0.823
+    },
+    {
+      "elapsed": 50.152,
+      "t": 0.84
+    },
+    {
+      "elapsed": 51.154,
+      "t": 0.856
+    },
+    {
+      "elapsed": 52.157,
+      "t": 0.873
+    },
+    {
+      "elapsed": 53.16,
+      "t": 0.89
+    },
+    {
+      "elapsed": 54.162,
+      "t": 0.906
+    },
+    {
+      "elapsed": 55.165,
+      "t": 0.921
+    },
+    {
+      "elapsed": 56.168,
+      "t": 0.939
+    },
+    {
+      "elapsed": 57.171,
+      "t": 0.956
+    },
+    {
+      "elapsed": 58.173,
+      "t": 0.972
+    },
+    {
+      "elapsed": 59.176,
+      "t": 0.989
+    },
+    {
+      "elapsed": 60.179,
+      "t": 1
+    }
+  ],
+  "errors": [],
+  "lostContexts": 0,
+  "mimeType": "video/webm;codecs=vp9",
+  "contextAttributes": {
+    "alpha": true,
+    "antialias": true,
+    "depth": true,
+    "desynchronized": false,
+    "failIfMajorPerformanceCaveat": false,
+    "powerPreference": "high-performance",
+    "premultipliedAlpha": true,
+    "preserveDrawingBuffer": true,
+    "stencil": false,
+    "xrCompatible": false
+  },
+  "resizes": [],
+  "captureContextOverride": true,
+  "source": "canvas.captureStream(30), production player at 1x",
+  "audibleListening": false
+}

@@ -1,0 +1,19 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 --testTimeout=30000 tests/sydney-blender-model.test.ts tests/sydney-construction.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-blender-model.test.ts (9 tests) 1336ms
+   ✓ Sydney Blender authoring to production parity > keeps continuous authored flank colors identical across crane-load partitions  326ms
+ ✓ tests/sydney-construction.test.ts (13 tests) 4579ms
+   ✓ Sydney segmented construction and crane mechanics > clears the complete house during slew and preserves the rigid crane jib length  406ms
+   ✓ Sydney segmented construction and crane mechanics > matches actual surface vertices to the transported support plane and seats dependencies first  789ms
+   ✓ Sydney segmented construction and crane mechanics > keeps actual load vertices clear of already seated neighbouring ribs and lids during descent  2791ms
+
+ Test Files  2 passed (2)
+      Tests  22 passed (22)
+   Start at  21:37:51
+   Duration  5.22s (transform 281ms, setup 39ms, collect 923ms, tests 5.91s, environment 0ms, prepare 68ms)
+

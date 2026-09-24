@@ -1,0 +1,900 @@
+{
+  "selected": [
+    {
+      "id": "rib-0--1-4-4",
+      "crane": 1,
+      "kind": "rib",
+      "start": 0.2944049382716044,
+      "duration": 0.07,
+      "dimensions": [
+        1.055278740003665,
+        7.543042436382478,
+        8.324462192612998
+      ],
+      "samples": [
+        {
+          "t": 0.2993049382716044,
+          "state": {
+            "phase": "cast",
+            "visible": true,
+            "position": [
+              -45.8,
+              5.238280477450498,
+              119
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "cast-yard",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5000000000000014,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -25,
+              81.24564668651082,
+              -32.47668244114378
+            ],
+            "jibTip": [
+              -25,
+              159.92091676287419,
+              -32.47668244114378
+            ],
+            "yaw": 2.5932507417152566,
+            "phase": "return-lift",
+            "partId": "rib-0--1-4-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.31540493827160443,
+          "state": {
+            "phase": "hauled",
+            "visible": true,
+            "position": [
+              -42.256747404844276,
+              6.106324819370273,
+              110.58477508650518
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "trolley-bed",
+            "mechanism": "trolley",
+            "trolleyLift": 0.85,
+            "phaseLocal": 0.4705882352941182,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -16.76362547352285,
+              83.31389304382508,
+              85.1735828679956
+            ],
+            "jibTip": [
+              -16.76362547352285,
+              139.53002235405012,
+              85.1735828679956
+            ],
+            "yaw": 0.4878521415652744,
+            "phase": "return-slew",
+            "partId": "rib-0--1-4-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.33150493827160443,
+          "state": {
+            "phase": "staged",
+            "visible": true,
+            "position": [
+              -37.8,
+              5.2790212181912395,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "working-floor",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5000000000000027,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -37.78116035099718,
+              10.250542436382478,
+              96.12079496540184
+            ],
+            "jibTip": [
+              -37.78116035099718,
+              135.53404963882815,
+              96.12079496540184
+            ],
+            "yaw": 0.1973325079725527,
+            "phase": "attach",
+            "partId": "rib-0--1-4-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.3399049382716044,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -37.8,
+              64.84471944916328,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.21874999999999914,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -37.78116035099718,
+              69.81624066735452,
+              96.12079496540184
+            ],
+            "jibTip": [
+              -37.78116035099718,
+              135.53404963882815,
+              96.12079496540184
+            ],
+            "yaw": 0.1973325079725527,
+            "phase": "hoist",
+            "partId": "rib-0--1-4-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.3483049382716044,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -1.7174713247751399,
+              75.08541426201631,
+              -22.174971136266343
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5937500000000002,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -1.6986316757723294,
+              80.05693548020756,
+              -26.05417617086451
+            ],
+            "jibTip": [
+              -1.6986316757723294,
+              152.1363140532447,
+              -26.05417617086451
+            ],
+            "yaw": 2.2362954019535604,
+            "phase": "hoist",
+            "partId": "rib-0--1-4-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.35670493827160443,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -25.01883964900281,
+              54.99845364725899,
+              -36.63891353745028
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.9687500000000009,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -25,
+              59.96997486545023,
+              -40.518118572048444
+            ],
+            "jibTip": [
+              -25,
+              155.14238120667954,
+              -40.518118572048444
+            ],
+            "yaw": 2.6602237628221532,
+            "phase": "hoist",
+            "partId": "rib-0--1-4-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.3609049382716044,
+          "state": {
+            "phase": "seated",
+            "visible": true,
+            "position": [
+              -25.01883964900281,
+              54.48525614964126,
+              -36.63891353745028
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "masonry",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 1,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -25,
+              60.072461219965604,
+              -40.518118572048444
+            ],
+            "jibTip": [
+              -25,
+              155.14238120667954,
+              -40.518118572048444
+            ],
+            "yaw": 2.6602237628221532,
+            "phase": "return-lift",
+            "partId": "rib-0--1-4-5",
+            "loaded": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "rib-3--1-4-4",
+      "crane": 0,
+      "kind": "rib",
+      "start": 0.3063409836065565,
+      "duration": 0.07,
+      "dimensions": [
+        0.9636499998664902,
+        7.081362635002442,
+        7.982651434415914
+      ],
+      "samples": [
+        {
+          "t": 0.3112409836065565,
+          "state": {
+            "phase": "cast",
+            "visible": true,
+            "position": [
+              29.799999999999997,
+              5.088922058241962,
+              119
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "cast-yard",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5000000000000014,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              24,
+              81.47737065425586,
+              -32.01742745602822
+            ],
+            "jibTip": [
+              24,
+              159.83326527157163,
+              -32.01742745602822
+            ],
+            "yaw": -2.573656041401697,
+            "phase": "return-lift",
+            "partId": "rib-3--1-4-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.3273409836065565,
+          "state": {
+            "phase": "hauled",
+            "visible": true,
+            "position": [
+              33.34325259515572,
+              5.920877716322186,
+              110.58477508650518
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "trolley-bed",
+            "mechanism": "trolley",
+            "trolleyLift": 0.85,
+            "phaseLocal": 0.4705882352941182,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              18.088814596374107,
+              83.31389304382508,
+              86.27758131651521
+            ],
+            "jibTip": [
+              18.088814596374107,
+              139.09734542077516,
+              86.27758131651521
+            ],
+            "yaw": -0.4667002169828556,
+            "phase": "return-slew",
+            "partId": "rib-3--1-4-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.3434409836065565,
+          "state": {
+            "phase": "staged",
+            "visible": true,
+            "position": [
+              37.8,
+              5.048181317501221,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "working-floor",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5000000000000027,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              37.75634714702979,
+              9.788862635002445,
+              96.28007901083296
+            ],
+            "jibTip": [
+              37.75634714702979,
+              135.32747213788963,
+              96.28007901083296
+            ],
+            "yaw": -0.19724930262504284,
+            "phase": "attach",
+            "partId": "rib-3--1-4-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.35184098360655647,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              37.8,
+              64.61387954847328,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.21874999999999914,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              37.75634714702979,
+              69.3545608659745,
+              96.28007901083296
+            ],
+            "jibTip": [
+              37.75634714702979,
+              135.32747213788963,
+              96.28007901083296
+            ],
+            "yaw": -0.19724930262504284,
+            "phase": "hoist",
+            "partId": "rib-3--1-4-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.3602409836065565,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              1.1686771956540625,
+              74.8545743613263,
+              -21.30279446954234
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5937500000000002,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              1.125024342683858,
+              79.59525567882753,
+              -25.02271545870937
+            ],
+            "jibTip": [
+              1.125024342683858,
+              152.2795305764838,
+              -25.02271545870937
+            ],
+            "yaw": -2.218718625494054,
+            "phase": "hoist",
+            "partId": "rib-3--1-4-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.3686409836065565,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              24.043652852970204,
+              47.85050502068873,
+              -36.00875317323618
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.9687500000000009,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              24,
+              52.59118633818996,
+              -39.72867416240321
+            ],
+            "jibTip": [
+              24,
+              155.30854651280617,
+              -39.72867416240321
+            ],
+            "yaw": -2.6401641920346437,
+            "phase": "hoist",
+            "partId": "rib-3--1-4-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.3728409836065565,
+          "state": {
+            "phase": "seated",
+            "visible": true,
+            "position": [
+              24.043652852970204,
+              47.160583778899195,
+              -36.00875317323618
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "masonry",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 1,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              24,
+              52.521339097129655,
+              -39.72867416240321
+            ],
+            "jibTip": [
+              24,
+              155.30854651280617,
+              -39.72867416240321
+            ],
+            "yaw": -2.6401641920346437,
+            "phase": "return-lift",
+            "partId": "rib-3--1-4-5",
+            "loaded": false
+          }
+        }
+      ]
+    }
+  ],
+  "start": 0.25440493827160443,
+  "end": 0.4023409836065565,
+  "samples": [
+    {
+      "t": 0.254,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-00.png"
+    },
+    {
+      "t": 0.261,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-01.png"
+    },
+    {
+      "t": 0.268,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-02.png"
+    },
+    {
+      "t": 0.274,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-03.png"
+    },
+    {
+      "t": 0.28,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-04.png"
+    },
+    {
+      "t": 0.287,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-05.png"
+    },
+    {
+      "t": 0.293,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-06.png"
+    },
+    {
+      "t": 0.3,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-07.png"
+    },
+    {
+      "t": 0.306,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-08.png"
+    },
+    {
+      "t": 0.313,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-09.png"
+    },
+    {
+      "t": 0.319,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-10.png"
+    },
+    {
+      "t": 0.326,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-11.png"
+    },
+    {
+      "t": 0.333,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-12.png"
+    },
+    {
+      "t": 0.339,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-13.png"
+    },
+    {
+      "t": 0.346,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-14.png"
+    },
+    {
+      "t": 0.353,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-15.png"
+    },
+    {
+      "t": 0.359,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-16.png"
+    },
+    {
+      "t": 0.366,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-17.png"
+    },
+    {
+      "t": 0.372,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-18.png"
+    },
+    {
+      "t": 0.379,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-19.png"
+    },
+    {
+      "t": 0.386,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-20.png"
+    },
+    {
+      "t": 0.392,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-21.png"
+    },
+    {
+      "t": 0.399,
+      "path": "artifacts/sydney-motion-2026-09-23/final-hero-motion/rib/frame-22.png"
+    }
+  ],
+  "errors": [],
+  "playbackSpeed": 1
+}

@@ -1,0 +1,15 @@
+
+> wonderforge@0.1.0 test
+> vitest run --maxWorkers=2 tests/sydney-construction.test.ts
+
+
+ RUN  v3.2.7 /Users/hina/Documents/Experience-Intelligence-Domain/wonderforge
+
+ ✓ tests/sydney-construction.test.ts (11 tests) 1380ms
+   ✓ Sydney segmented construction and crane mechanics > never double-books crane hoist intervals or exceeds active slots  351ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  04:00:16
+   Duration  1.80s (transform 127ms, setup 23ms, collect 212ms, tests 1.38s, environment 0ms, prepare 52ms)
+

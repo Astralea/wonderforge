@@ -1,0 +1,9 @@
+Parent review pending second iteration:
+
+The first browser baseline-views/desktop-northwest-aerial-architecture.png and desktop-west-architecture.png is not accepted. New curve/tip direction improves silhouette, but there are large open sky holes between middle and main roofs: the halls read as disjoint paper fins with empty space where a real enclosed auditorium sits. Compare the supplied aerial: nested complete overlapping shells and closed flanks, not open canopy tents. Lower decorative triangular infill does not close the visible upper gaps. The northern foyers have overly flat triangular glazed fronts above an all-site grandstand stair; real photo shows curved projecting bronze-glass foyers and horizontal glazing/granite bands on articulated north podium wings. Need materially improve envelope closure and north podium/foyers, beyond changing roughness.
+
+Integration geometry audit also detects small crossing at concert-main/concert-south ridge. Pairwise verticalordering returns both0→1(6panels,.36-.44m) and1→0(16panels,up to4m). Need trim adjacent panels/sharedvalley or adjust rear P/R so surfacesmeetwithoutoverlap. construction_review can provideexactcontacts. Do not change shell IDs/schema.
+
+New map datum confirmed hero origin. Near-site shoreline: north cap world(+12.5,-97.8),NW(-36.8,-89.2),NE(+66.8,-82.4); westshore~(-53,-31) down(-72,+46);eastshore(+60,+31). Podium/glass shouldleavebroadwalk. Anycorrectingdeckbays mustkeepallpedestalsphysicallysupported at14.2.
+
+The first runtime captures may precede your widened-shell iteration. Inspect latest code/renders and fix any remaining issues; don'toverwritethealreadycapturedbaseline. Runtime agent is fixing erection order lower/north shells beforemain to avoid lifting throughseated roofs. Root will not accept hollowbuilding justbecause it passesradius75 tests.

@@ -1,0 +1,551 @@
+{
+  "bundle": "/assets/main-Dti4C-Qz.js",
+  "selected": [
+    {
+      "id": "tile-0--1-7-0",
+      "crane": 1,
+      "kind": "sail",
+      "dimensions": [
+        3.55214667271283,
+        11.225902172457957,
+        6.562758248996028
+      ],
+      "start": 0.581453646898434,
+      "duration": 0.05,
+      "samples": [
+        {
+          "t": 0.584953646898434,
+          "phase": "cast",
+          "visible": true,
+          "position": [
+            -74.91039398075961,
+            8.762951086228979,
+            145.60711821077766
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "cast-yard",
+          "mechanism": "none",
+          "trolleyLift": 0,
+          "phaseLocal": 0.49999999999999245,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.596453646898434,
+          "phase": "hauled",
+          "visible": true,
+          "position": [
+            -69.05034813234118,
+            8.762951086228979,
+            135.07987376840833
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "trolley-bed",
+          "mechanism": "trolley",
+          "trolleyLift": 0.85,
+          "phaseLocal": 0.47058823529411836,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.6054536468984341,
+          "phase": "staged",
+          "visible": true,
+          "position": [
+            -61.679509213627426,
+            8.762951086228979,
+            121.83857411824077
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "working-floor",
+          "mechanism": "none",
+          "trolleyLift": 0,
+          "phaseLocal": 4.440892098500626e-15,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.613953646898434,
+          "phase": "hoisted",
+          "visible": true,
+          "position": [
+            -61.679509213627426,
+            66.65926185011747,
+            121.83857411824077
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "crane-hook",
+          "mechanism": "crane",
+          "trolleyLift": 0,
+          "phaseLocal": 0.21874999999999845,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.619953646898434,
+          "phase": "hoisted",
+          "visible": true,
+          "position": [
+            5.824883129523464,
+            76.61295108622897,
+            26.105078772812462
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "crane-hook",
+          "mechanism": "crane",
+          "trolleyLift": 0,
+          "phaseLocal": 0.5937499999999988,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.625953646898434,
+          "phase": "hoisted",
+          "visible": true,
+          "position": [
+            -7.583896863782751,
+            38.22705967034709,
+            12.721612524613473
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "crane-hook",
+          "mechanism": "crane",
+          "trolleyLift": 0,
+          "phaseLocal": 0.9687499999999991,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.626953646898434,
+          "phase": "seated",
+          "visible": true,
+          "position": [
+            -7.583896863782751,
+            37.246346669695996,
+            12.721612524613473
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "masonry",
+          "mechanism": "none",
+          "trolleyLift": 0,
+          "phaseLocal": 1,
+          "contactDust": false,
+          "contactDustAmount": 0
+        }
+      ]
+    },
+    {
+      "id": "tile-3--1-5-4",
+      "crane": 0,
+      "kind": "sail",
+      "dimensions": [
+        6.0073031272394815,
+        9.261708507369718,
+        8.028865619145506
+      ],
+      "start": 0.6829501028806721,
+      "duration": 0.05,
+      "samples": [
+        {
+          "t": 0.6864501028806721,
+          "phase": "cast",
+          "visible": true,
+          "position": [
+            -0.09394208999987441,
+            7.780854253684859,
+            154.35346181697298
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "cast-yard",
+          "mechanism": "none",
+          "trolleyLift": 0,
+          "phaseLocal": 0.49999999999999245,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.6979501028806722,
+          "phase": "hauled",
+          "visible": true,
+          "position": [
+            6.410701941715136,
+            7.780854253684859,
+            140.79362135295145
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "trolley-bed",
+          "mechanism": "trolley",
+          "trolleyLift": 0.85,
+          "phaseLocal": 0.47058823529411836,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.7069501028806722,
+          "phase": "staged",
+          "visible": true,
+          "position": [
+            14.592324512856628,
+            7.780854253684859,
+            123.73788451929944
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "working-floor",
+          "mechanism": "none",
+          "trolleyLift": 0,
+          "phaseLocal": 4.440892098500626e-15,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.7154501028806721,
+          "phase": "hoisted",
+          "visible": true,
+          "position": [
+            14.592324512856628,
+            65.67716501757336,
+            123.73788451929944
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "crane-hook",
+          "mechanism": "crane",
+          "trolleyLift": 0,
+          "phaseLocal": 0.21874999999999845,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.7214501028806721,
+          "phase": "hoisted",
+          "visible": true,
+          "position": [
+            15.924791480497781,
+            75.63085425368486,
+            -4.247853581668711
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "crane-hook",
+          "mechanism": "crane",
+          "trolleyLift": 0,
+          "phaseLocal": 0.5937499999999988,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.7274501028806721,
+          "phase": "hoisted",
+          "visible": true,
+          "position": [
+            37.06662201008182,
+            49.255197348615425,
+            -6.797806545204502
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "crane-hook",
+          "mechanism": "crane",
+          "trolleyLift": 0,
+          "phaseLocal": 0.9687499999999991,
+          "contactDust": false,
+          "contactDustAmount": 0
+        },
+        {
+          "t": 0.7284501028806721,
+          "phase": "seated",
+          "visible": true,
+          "position": [
+            37.06662201008182,
+            48.58133128289702,
+            -6.797806545204502
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "support": "masonry",
+          "mechanism": "none",
+          "trolleyLift": 0,
+          "phaseLocal": 1,
+          "contactDust": false,
+          "contactDustAmount": 0
+        }
+      ]
+    }
+  ],
+  "start": 0.541453646898434,
+  "end": 0.7589501028806722,
+  "samples": [
+    {
+      "t": 0.542,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-00.png"
+    },
+    {
+      "t": 0.549,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-01.png"
+    },
+    {
+      "t": 0.555,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-02.png"
+    },
+    {
+      "t": 0.562,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-03.png"
+    },
+    {
+      "t": 0.569,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-04.png"
+    },
+    {
+      "t": 0.575,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-05.png"
+    },
+    {
+      "t": 0.582,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-06.png"
+    },
+    {
+      "t": 0.588,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-07.png"
+    },
+    {
+      "t": 0.595,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-08.png"
+    },
+    {
+      "t": 0.601,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-09.png"
+    },
+    {
+      "t": 0.607,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-10.png"
+    },
+    {
+      "t": 0.613,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-11.png"
+    },
+    {
+      "t": 0.62,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-12.png"
+    },
+    {
+      "t": 0.626,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-13.png"
+    },
+    {
+      "t": 0.632,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-14.png"
+    },
+    {
+      "t": 0.638,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-15.png"
+    },
+    {
+      "t": 0.644,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-16.png"
+    },
+    {
+      "t": 0.65,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-17.png"
+    },
+    {
+      "t": 0.655,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-18.png"
+    },
+    {
+      "t": 0.661,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-19.png"
+    },
+    {
+      "t": 0.666,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-20.png"
+    },
+    {
+      "t": 0.672,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-21.png"
+    },
+    {
+      "t": 0.678,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-22.png"
+    },
+    {
+      "t": 0.683,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-23.png"
+    },
+    {
+      "t": 0.689,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-24.png"
+    },
+    {
+      "t": 0.695,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-25.png"
+    },
+    {
+      "t": 0.701,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-26.png"
+    },
+    {
+      "t": 0.707,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-27.png"
+    },
+    {
+      "t": 0.713,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-28.png"
+    },
+    {
+      "t": 0.718,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-29.png"
+    },
+    {
+      "t": 0.723,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-30.png"
+    },
+    {
+      "t": 0.728,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-31.png"
+    },
+    {
+      "t": 0.734,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-32.png"
+    },
+    {
+      "t": 0.74,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-33.png"
+    },
+    {
+      "t": 0.746,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-34.png"
+    },
+    {
+      "t": 0.751,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-35.png"
+    },
+    {
+      "t": 0.755,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/verified-hero/sail/frame-36.png"
+    }
+  ],
+  "errors": [],
+  "playbackSpeed": 1
+}

@@ -1,0 +1,238 @@
+{
+  "selected": [
+    {
+      "id": "tile-0--1-7-0",
+      "crane": 1,
+      "kind": "sail",
+      "dimensions": [
+        1.7860739273174033,
+        11.64653964039909,
+        10.300327473590656
+      ],
+      "projectedArea": 119.96317223026539,
+      "start": 0.6723666666666679,
+      "duration": 0.05,
+      "times": [
+        0.6823666666666679,
+        0.7033666666666679,
+        0.7108666666666679,
+        0.7168666666666679
+      ],
+      "samples": [
+        {
+          "t": 0.6758666666666678,
+          "partLocal": 0.07,
+          "phase": "cast",
+          "phaseLocal": 0.49999999999999245,
+          "position": [
+            -29.799999999999997,
+            7.371510560940286,
+            131
+          ]
+        },
+        {
+          "t": 0.6873666666666679,
+          "partLocal": 0.3,
+          "phase": "hauled",
+          "phaseLocal": 0.47058823529411836,
+          "position": [
+            -33.34325259515572,
+            8.20346621902051,
+            117.26989619377159
+          ]
+        },
+        {
+          "t": 0.6988666666666679,
+          "partLocal": 0.53,
+          "phase": "staged",
+          "phaseLocal": 0.4999999999999938,
+          "position": [
+            -37.8,
+            7.330769820199546,
+            100
+          ]
+        },
+        {
+          "t": 0.7048666666666679,
+          "partLocal": 0.65,
+          "phase": "hoisted",
+          "phaseLocal": 0.21874999999999845,
+          "position": [
+            -37.8,
+            66.89646805117141,
+            100
+          ]
+        },
+        {
+          "t": 0.7108666666666679,
+          "partLocal": 0.77,
+          "phase": "hoisted",
+          "phaseLocal": 0.5937499999999988,
+          "position": [
+            -7.263548483312057,
+            77.13716286402462,
+            -51.55343735704541
+          ]
+        },
+        {
+          "t": 0.7168666666666679,
+          "partLocal": 0.89,
+          "phase": "hoisted",
+          "phaseLocal": 0.9687499999999991,
+          "position": [
+            -46.32687616080471,
+            21.50234864364223,
+            -64.8081361124228
+          ]
+        },
+        {
+          "t": 0.7198666666666679,
+          "partLocal": 0.95,
+          "phase": "seated",
+          "phaseLocal": 1,
+          "position": [
+            -46.32687616080471,
+            20.080946571625677,
+            -64.8081361124228
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tile-3--1-5-4",
+      "crane": 0,
+      "kind": "sail",
+      "dimensions": [
+        5.599087661863024,
+        11.212746483110415,
+        8.799965973432776
+      ],
+      "projectedArea": 98.67178752009968,
+      "start": 0.6738147540983601,
+      "duration": 0.05,
+      "times": [
+        0.6838147540983601,
+        0.7048147540983601,
+        0.7123147540983601,
+        0.7183147540983601
+      ],
+      "samples": [
+        {
+          "t": 0.6773147540983601,
+          "partLocal": 0.07,
+          "phase": "cast",
+          "phaseLocal": 0.49999999999999245,
+          "position": [
+            45.8,
+            7.0731325008144665,
+            131
+          ]
+        },
+        {
+          "t": 0.6888147540983601,
+          "partLocal": 0.3,
+          "phase": "hauled",
+          "phaseLocal": 0.47058823529411836,
+          "position": [
+            42.256747404844276,
+            7.941176842734241,
+            117.26989619377159
+          ]
+        },
+        {
+          "t": 0.7003147540983601,
+          "partLocal": 0.53,
+          "phase": "staged",
+          "phaseLocal": 0.4999999999999938,
+          "position": [
+            37.8,
+            7.113873241555208,
+            100
+          ]
+        },
+        {
+          "t": 0.7063147540983601,
+          "partLocal": 0.65,
+          "phase": "hoisted",
+          "phaseLocal": 0.21874999999999845,
+          "position": [
+            37.8,
+            66.67957147252707,
+            100
+          ]
+        },
+        {
+          "t": 0.7123147540983601,
+          "partLocal": 0.77,
+          "phase": "hoisted",
+          "phaseLocal": 0.5937499999999988,
+          "position": [
+            -3.748089330806039,
+            76.92026628538028,
+            -26.3407378067555
+          ]
+        },
+        {
+          "t": 0.7183147540983601,
+          "partLocal": 0.89,
+          "phase": "hoisted",
+          "phaseLocal": 0.9687499999999991,
+          "position": [
+            21.146729863831084,
+            50.51561962812388,
+            -44.07906515061328
+          ]
+        },
+        {
+          "t": 0.7213147540983601,
+          "partLocal": 0.95,
+          "phase": "seated",
+          "phaseLocal": 1,
+          "position": [
+            21.146729863831084,
+            49.841012909373674,
+            -44.07906515061328
+          ]
+        }
+      ]
+    }
+  ],
+  "start": 0.6673666666666679,
+  "end": 0.7298147540983602,
+  "samples": [
+    {
+      "t": 0.669,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-00.png"
+    },
+    {
+      "t": 0.678,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-01.png"
+    },
+    {
+      "t": 0.686,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-02.png"
+    },
+    {
+      "t": 0.694,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-03.png"
+    },
+    {
+      "t": 0.702,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-04.png"
+    },
+    {
+      "t": 0.71,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-05.png"
+    },
+    {
+      "t": 0.718,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-06.png"
+    },
+    {
+      "t": 0.725,
+      "path": "artifacts/sydney-overhaul-2026-09-23/hero-motion/sail/frame-07.png"
+    }
+  ],
+  "errors": [],
+  "playbackSpeed": 1
+}

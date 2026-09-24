@@ -1,0 +1,880 @@
+{
+  "selected": [
+    {
+      "id": "tile-0--1-7-0",
+      "crane": 1,
+      "kind": "sail",
+      "start": 0.6778000000000012,
+      "duration": 0.05,
+      "dimensions": [
+        1.7860739273174033,
+        11.64653964039909,
+        10.300327473590656
+      ],
+      "samples": [
+        {
+          "t": 0.6813000000000011,
+          "state": {
+            "phase": "cast",
+            "visible": true,
+            "position": [
+              -29.799999999999997,
+              7.371510560940286,
+              131
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "cast-yard",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.49999999999999245,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -25.19591697383011,
+              83.3064679608891,
+              -59.57597837742638
+            ],
+            "jibTip": [
+              -25.19591697383011,
+              138.94220851745695,
+              -59.57597837742638
+            ],
+            "yaw": 2.773005999911294,
+            "phase": "return-lift",
+            "partId": "tile-0--1-7-0",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.6928000000000012,
+          "state": {
+            "phase": "hauled",
+            "visible": true,
+            "position": [
+              -33.34325259515572,
+              8.20346621902051,
+              117.26989619377159
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "trolley-bed",
+            "mechanism": "trolley",
+            "trolleyLift": 0.85,
+            "phaseLocal": 0.47058823529411836,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -22.236083635457447,
+              83.31389304382508,
+              89.90707410385492
+            ],
+            "jibTip": [
+              -22.236083635457447,
+              137.24062042755185,
+              89.90707410385492
+            ],
+            "yaw": 0.40106086625053194,
+            "phase": "return-slew",
+            "partId": "tile-0--1-7-0",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.7043000000000011,
+          "state": {
+            "phase": "staged",
+            "visible": true,
+            "position": [
+              -37.8,
+              7.330769820199546,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "working-floor",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.4999999999999938,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -37.7665446301402,
+              14.35403964039909,
+              94.84993629021879
+            ],
+            "jibTip": [
+              -37.7665446301402,
+              137.0933933253263,
+              94.84993629021879
+            ],
+            "yaw": 0.20056617263297172,
+            "phase": "attach",
+            "partId": "tile-0--1-7-0",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.7103000000000012,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -37.8,
+              66.89646805117141,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.21874999999999845,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -37.7665446301402,
+              73.91973787137096,
+              94.84993629021879
+            ],
+            "jibTip": [
+              -37.7665446301402,
+              137.0933933253263,
+              94.84993629021879
+            ],
+            "yaw": 0.20056617263297172,
+            "phase": "hoist",
+            "partId": "tile-0--1-7-0",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.7163000000000012,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -7.263548483312057,
+              77.13716286402462,
+              -51.55343735704541
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5937499999999988,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -7.230093113452263,
+              84.16043268422416,
+              -56.70350106682662
+            ],
+            "jibTip": [
+              -7.230093113452263,
+              131.6668157298867,
+              -56.70350106682662
+            ],
+            "yaw": 2.563624633987003,
+            "phase": "hoist",
+            "partId": "tile-0--1-7-0",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.7223000000000012,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -46.32687616080471,
+              21.50234864364223,
+              -64.8081361124228
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.9687499999999991,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -46.293420790944914,
+              28.525618463841774,
+              -69.95819982220401
+            ],
+            "jibTip": [
+              -46.293420790944914,
+              132.0891347364896,
+              -69.95819982220401
+            ],
+            "yaw": 3.0511299849146774,
+            "phase": "hoist",
+            "partId": "tile-0--1-7-0",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.7253000000000012,
+          "state": {
+            "phase": "seated",
+            "visible": true,
+            "position": [
+              -46.32687616080471,
+              20.080946571625677,
+              -64.8081361124228
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "masonry",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 1,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 1,
+            "base": [
+              -54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              -54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -46.293420790944914,
+              27.104216391825222,
+              -69.95819982220401
+            ],
+            "jibTip": [
+              -46.293420790944914,
+              132.0891347364896,
+              -69.95819982220401
+            ],
+            "yaw": 3.0511299849146774,
+            "phase": "release",
+            "partId": "tile-0--1-7-0",
+            "loaded": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "tile-3--1-5-4",
+      "crane": 0,
+      "kind": "sail",
+      "start": 0.6789475409836075,
+      "duration": 0.05,
+      "dimensions": [
+        5.599087661863024,
+        11.212746483110415,
+        8.799965973432776
+      ],
+      "samples": [
+        {
+          "t": 0.6824475409836075,
+          "state": {
+            "phase": "cast",
+            "visible": true,
+            "position": [
+              45.8,
+              7.0731325008144665,
+              131
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "cast-yard",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.49999999999999245,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              18.296623934565297,
+              83.31192334953832,
+              -48.432222826358455
+            ],
+            "jibTip": [
+              18.296623934565297,
+              146.54501571311553,
+              -48.432222826358455
+            ],
+            "yaw": -2.6289307796558177,
+            "phase": "return-lift",
+            "partId": "tile-3--1-5-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.6939475409836076,
+          "state": {
+            "phase": "hauled",
+            "visible": true,
+            "position": [
+              42.256747404844276,
+              7.941176842734241,
+              117.26989619377159
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "trolley-bed",
+            "mechanism": "trolley",
+            "trolleyLift": 0.85,
+            "phaseLocal": 0.47058823529411836,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              25.986693773549963,
+              83.31389304382508,
+              91.10291387796823
+            ],
+            "jibTip": [
+              25.986693773549963,
+              137.56840279514478,
+              91.10291387796823
+            ],
+            "yaw": -0.35270563446638553,
+            "phase": "return-slew",
+            "partId": "tile-3--1-5-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.7054475409836075,
+          "state": {
+            "phase": "staged",
+            "visible": true,
+            "position": [
+              37.8,
+              7.113873241555208,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "working-floor",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 0.4999999999999938,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              40.46289621484175,
+              13.920246483110411,
+              95.64684232425483
+            ],
+            "jibTip": [
+              40.46289621484175,
+              136.73280025143063,
+              95.64684232425483
+            ],
+            "yaw": -0.16630621483175717,
+            "phase": "attach",
+            "partId": "tile-3--1-5-4",
+            "loaded": false
+          }
+        },
+        {
+          "t": 0.7114475409836075,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              37.8,
+              66.67957147252707,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.21874999999999845,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              40.46289621484175,
+              73.48594471408228,
+              95.64684232425483
+            ],
+            "jibTip": [
+              40.46289621484175,
+              136.73280025143063,
+              95.64684232425483
+            ],
+            "yaw": -0.16630621483175717,
+            "phase": "hoist",
+            "partId": "tile-3--1-5-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.7174475409836075,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              -3.7480893308060317,
+              76.92026628538028,
+              -26.3407378067555
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.5937499999999988,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              -1.0851931159642803,
+              83.72663952693549,
+              -30.693895482500672
+            ],
+            "jibTip": [
+              -1.0851931159642803,
+              147.69953003082895,
+              -30.693895482500672
+            ],
+            "yaw": -2.2632758654682363,
+            "phase": "hoist",
+            "partId": "tile-3--1-5-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.7234475409836075,
+          "state": {
+            "phase": "hoisted",
+            "visible": true,
+            "position": [
+              21.146729863831084,
+              50.51561962812388,
+              -44.07906515061328
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "crane-hook",
+            "mechanism": "crane",
+            "trolleyLift": 0,
+            "phaseLocal": 0.9687499999999991,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              23.809626078672835,
+              57.321992869679086,
+              -48.432222826358455
+            ],
+            "jibTip": [
+              23.809626078672835,
+              148.90834360509245,
+              -48.432222826358455
+            ],
+            "yaw": -2.69737196253737,
+            "phase": "hoist",
+            "partId": "tile-3--1-5-4",
+            "loaded": true
+          }
+        },
+        {
+          "t": 0.7264475409836075,
+          "state": {
+            "phase": "seated",
+            "visible": true,
+            "position": [
+              21.146729863831084,
+              49.841012909373674,
+              -44.07906515061328
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "support": "masonry",
+            "mechanism": "none",
+            "trolleyLift": 0,
+            "phaseLocal": 1,
+            "contactDust": false,
+            "contactDustAmount": 0
+          },
+          "rig": {
+            "crane": 0,
+            "base": [
+              54,
+              0.8705679461357246,
+              15
+            ],
+            "mastTop": [
+              54,
+              70.87056794613572,
+              15
+            ],
+            "hook": [
+              23.809626078672835,
+              56.64738615092888,
+              -48.432222826358455
+            ],
+            "jibTip": [
+              23.809626078672835,
+              148.90834360509245,
+              -48.432222826358455
+            ],
+            "yaw": -2.69737196253737,
+            "phase": "release",
+            "partId": "tile-3--1-5-4",
+            "loaded": false
+          }
+        }
+      ]
+    }
+  ],
+  "start": 0.6378000000000011,
+  "end": 0.7549475409836076,
+  "samples": [
+    {
+      "t": 0.638,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-00.png"
+    },
+    {
+      "t": 0.645,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-01.png"
+    },
+    {
+      "t": 0.652,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-02.png"
+    },
+    {
+      "t": 0.658,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-03.png"
+    },
+    {
+      "t": 0.664,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-04.png"
+    },
+    {
+      "t": 0.671,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-05.png"
+    },
+    {
+      "t": 0.678,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-06.png"
+    },
+    {
+      "t": 0.684,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-07.png"
+    },
+    {
+      "t": 0.691,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-08.png"
+    },
+    {
+      "t": 0.697,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-09.png"
+    },
+    {
+      "t": 0.704,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-10.png"
+    },
+    {
+      "t": 0.71,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-11.png"
+    },
+    {
+      "t": 0.717,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-12.png"
+    },
+    {
+      "t": 0.723,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-13.png"
+    },
+    {
+      "t": 0.73,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-14.png"
+    },
+    {
+      "t": 0.736,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-15.png"
+    },
+    {
+      "t": 0.742,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-16.png"
+    },
+    {
+      "t": 0.749,
+      "path": "artifacts/sydney-motion-2026-09-23/hero-motion/sail/frame-17.png"
+    }
+  ],
+  "errors": [],
+  "playbackSpeed": 1
+}

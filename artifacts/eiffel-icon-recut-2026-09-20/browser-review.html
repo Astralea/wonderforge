@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eiffel arrival artwork review</title></head>
+  <body style="margin:0;background:#122236"><div id="review"></div>
+    <script type="module">
+      import React from 'react';
+      import { createRoot } from 'react-dom/client';
+      import '/src/index.css';
+      import { WonderArrival } from '/src/render/three/WonderArrival.tsx';
+      import { WONDERS } from '/src/data/index.ts';
+      const root = createRoot(document.getElementById('review'));
+      const wonder = WONDERS.find(wonder => wonder.id === 'eiffel-tower');
+      window.reviewAt = percent => root.render(React.createElement(WonderArrival, { wonder, percent, stage: percent === 100 ? 'Starting film…' : 'Summit' }));
+      window.reviewAt(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+{
+  "note": "Manually digitized visual control points from NSW modern aerial; approximate landmark centres, not survey monuments. Typical tracing uncertainty 5-20m, centre conventions matter. EPSG3857 distances corrected by cosine(latitude).",
+  "origin": {
+    "longitude": 151.21503094749903,
+    "latitude": -33.85697442907201
+  },
+  "points": {
+    "opera-reference-centre": {
+      "pixel": [
+        995,
+        820
+      ],
+      "longitude": 151.21503094749903,
+      "latitude": -33.85697442907201,
+      "eastMetres": 0.0,
+      "southMetres": -0.0,
+      "distance": 0.0,
+      "bearingDegrees": 0.0
+    },
+    "bennelong-north-tip": {
+      "pixel": [
+        1005,
+        755
+      ],
+      "longitude": 151.21519209986732,
+      "latitude": -33.85610455626922,
+      "eastMetres": 14.9,
+      "southMetres": -96.8,
+      "distance": 98.0,
+      "bearingDegrees": 8.7
+    },
+    "south-neck-forecourt": {
+      "pixel": [
+        977,
+        930
+      ],
+      "longitude": 151.21474087323608,
+      "latitude": -33.85844650132352,
+      "eastMetres": -26.8,
+      "southMetres": 163.9,
+      "distance": 166.0,
+      "bearingDegrees": 189.3
+    },
+    "circular-quay-inner-seawall": {
+      "pixel": [
+        748,
+        1138
+      ],
+      "longitude": 151.21105048400162,
+      "latitude": -33.86122998677159,
+      "eastMetres": -368.0,
+      "southMetres": 473.7,
+      "distance": 599.8,
+      "bearingDegrees": 217.8
+    },
+    "dawes-point-shore": {
+      "pixel": [
+        678,
+        730
+      ],
+      "longitude": 151.20992241742337,
+      "latitude": -33.85576998744748,
+      "eastMetres": -472.2,
+      "southMetres": -134.1,
+      "distance": 490.9,
+      "bearingDegrees": 285.8
+    },
+    "bridge-main-span-mid": {
+      "pixel": [
+        717,
+        468
+      ],
+      "longitude": 151.21055091165985,
+      "latitude": -33.852263627356194,
+      "eastMetres": -414.1,
+      "southMetres": -524.4,
+      "distance": 668.2,
+      "bearingDegrees": 321.7
+    },
+    "milsons-point-shore": {
+      "pixel": [
+        842,
+        360
+      ],
+      "longitude": 151.21256531626378,
+      "latitude": -33.85081821565136,
+      "eastMetres": -227.9,
+      "southMetres": -685.3,
+      "distance": 722.2,
+      "bearingDegrees": 341.6
+    },
+    "kirribilli-point": {
+      "pixel": [
+        1220,
+        500
+      ],
+      "longitude": 151.2186568757862,
+      "latitude": -33.85269189279396,
+      "eastMetres": 335.2,
+      "southMetres": -476.7,
+      "distance": 582.8,
+      "bearingDegrees": 35.1
+    },
+    "farm-cove-head": {
+      "pixel": [
+        1203,
+        1290
+      ],
+      "longitude": 151.21838291676005,
+      "latitude": -33.86326401491335,
+      "eastMetres": 309.9,
+      "southMetres": 700.2,
+      "distance": 765.7,
+      "bearingDegrees": 156.1
+    },
+    "mrs-macquaries-point": {
+      "pixel": [
+        1420,
+        987
+      ],
+      "longitude": 151.2218799231525,
+      "latitude": -33.85920929241833,
+      "eastMetres": 633.1,
+      "southMetres": 248.8,
+      "distance": 680.3,
+      "bearingDegrees": 111.5
+    },
+    "fort-denison": {
+      "pixel": [
+        1656,
+        664
+      ],
+      "longitude": 151.2256831190448,
+      "latitude": -33.85488671946082,
+      "eastMetres": 984.7,
+      "southMetres": -232.4,
+      "distance": 1011.8,
+      "bearingDegrees": 76.7
+    }
+  }
+}

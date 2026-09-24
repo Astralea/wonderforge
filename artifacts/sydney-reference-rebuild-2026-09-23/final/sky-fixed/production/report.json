@@ -1,0 +1,945 @@
+{
+  "base": "http://127.0.0.1:5591/",
+  "bundle": "/assets/main-B7n23WDI.js",
+  "frames": [
+    {
+      "mode": "desktop",
+      "t": 0.12,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-0.12.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 76,
+          "triangles": 95467,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            467.2419533958928,
+            228.2444224708484,
+            -256.47014858754085
+          ],
+          "direction": [
+            -0.8151507656501555,
+            -0.3678700891784332,
+            0.4474380702933276
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "t": 0.32,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-0.32.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 163443,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            304.83381446723274,
+            234.7412591083587,
+            -401.99269754892714
+          ],
+          "direction": [
+            -0.5578888627898813,
+            -0.38405812576647924,
+            0.7357033184699879
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "t": 0.5541296296296419,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-0.5541296296296419.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 212379,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            151.54304122725773,
+            66.60966927339106,
+            162.49416257997552
+          ],
+          "direction": [
+            -0.9056328942500376,
+            -0.3907311284892738,
+            -0.1647975912499912
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "t": 0.58,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-0.58.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 214171,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            186.4635388859545,
+            92.90043858552228,
+            150.1073420799105
+          ],
+          "direction": [
+            -0.9089240746641902,
+            -0.39077371650026604,
+            -0.1454404654434771
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "t": 0.78,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-0.78.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 245319,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -134.1339704330012,
+            230.83040216340936,
+            -408.58521036222106
+          ],
+          "direction": [
+            0.2816405120123807,
+            -0.42974219020121746,
+            0.8579045820803528
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "t": 0.92,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-0.92.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 58,
+          "triangles": 249715,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -227.37315339008583,
+            225.2578250456706,
+            -324.4887279066006
+          ],
+          "direction": [
+            0.5122352890468933,
+            -0.4508027620126371,
+            0.7310211203630327
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "t": 1,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/desktop-1.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 58,
+          "triangles": 249715,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -274.8367401764855,
+            224.27950425936552,
+            -278.262954634729
+          ],
+          "direction": [
+            0.626121936037718,
+            -0.4539904997395468,
+            0.6339273991228147
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 0.12,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-0.12.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 63,
+          "triangles": 95454,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            690.9271989710948,
+            329.1915290739048,
+            -379.2514779449763
+          ],
+          "direction": [
+            -0.8151507656501559,
+            -0.3678700891784333,
+            0.44743807029332694
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 0.32,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-0.32.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 162710,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            450.7685409042528,
+            335.2046690415931,
+            -594.4408170235087
+          ],
+          "direction": [
+            -0.5578888627898811,
+            -0.38405812576647924,
+            0.7357033184699878
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 0.5541296296296419,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-0.5541296296296419.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 211166,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            165.1275346410083,
+            72.47063620073017,
+            164.9661264487254
+          ],
+          "direction": [
+            -0.9056328942500375,
+            -0.3907311284892737,
+            -0.16479759124999116
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 0.58,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-0.58.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 212958,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            243.72414862280962,
+            117.51849184174081,
+            159.26983426583084
+          ],
+          "direction": [
+            -0.9089240746641902,
+            -0.39077371650026604,
+            -0.1454404654434771
+          ],
+          "fov": 53.05375486720378,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 0.78,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-0.78.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 244106,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -198.3486452887512,
+            328.8125952022999,
+            -604.1893988431957
+          ],
+          "direction": [
+            0.2816405120123807,
+            -0.42974219020121746,
+            0.8579045820803528
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 0.92,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-0.92.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 45,
+          "triangles": 249702,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -336.22472222636253,
+            321.05479360694824,
+            -479.8329564388215
+          ],
+          "direction": [
+            0.5122352890468933,
+            -0.450802762012637,
+            0.7310211203630327
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "t": 1,
+      "path": "artifacts/sydney-reference-rebuild-2026-09-23/final/sky-fixed/production/mobile-1.png",
+      "diagnostics": {
+        "renderer": {
+          "calls": 45,
+          "triangles": 249702,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -406.4108064020325,
+            319.6816498166838,
+            -411.4772708783135
+          ],
+          "direction": [
+            0.6261219360377182,
+            -0.4539904997395467,
+            0.6339273991228147
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      },
+      "errors": []
+    }
+  ],
+  "gpu": [
+    {
+      "mode": "desktop",
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+    },
+    {
+      "mode": "mobile",
+      "backend": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Ultra, Unspecified Version)"
+    }
+  ],
+  "playback": [
+    {
+      "mode": "desktop",
+      "seek": 0.78,
+      "value": "0.78",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 245319,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -134.1339704330012,
+            230.83040216340936,
+            -408.58521036222106
+          ],
+          "direction": [
+            0.2816405120123807,
+            -0.42974219020121746,
+            0.8579045820803528
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "desktop",
+      "seek": 0.32,
+      "value": "0.32",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 163443,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            304.83381446723274,
+            234.7412591083587,
+            -401.99269754892714
+          ],
+          "direction": [
+            -0.5578888627898813,
+            -0.38405812576647924,
+            0.7357033184699879
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "desktop",
+      "seek": 1,
+      "value": "1",
+      "diagnostics": {
+        "renderer": {
+          "calls": 58,
+          "triangles": 249715,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            -274.8367401764855,
+            224.27950425936552,
+            -278.262954634729
+          ],
+          "direction": [
+            0.626121936037718,
+            -0.4539904997395468,
+            0.6339273991228147
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "desktop",
+      "seek": 0.58,
+      "value": "0.58",
+      "diagnostics": {
+        "renderer": {
+          "calls": 87,
+          "triangles": 214171,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 16
+        },
+        "camera": {
+          "position": [
+            186.4635388859545,
+            92.90043858552228,
+            150.1073420799105
+          ],
+          "direction": [
+            -0.9089240746641902,
+            -0.39077371650026604,
+            -0.1454404654434771
+          ],
+          "fov": 35,
+          "aspect": 1.6,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "desktop",
+      "naturalPlayback": {
+        "before": 0.58,
+        "after": 0.6
+      }
+    },
+    {
+      "mode": "desktop",
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "WonderForge, back to films",
+          "text": "WonderForge",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": null,
+          "text": "Chapters",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Point",
+          "text": "The PointThe podium of reconstituted granite is finished on Bennelong Point before any sail is raised.",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Ribs",
+          "text": "The RibsPrecast concrete ribs — sections of Utzon's 75-metre sphere — wait in the on-site yard.",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Cranes",
+          "text": "The CranesFavelle Favco tower cranes, developed for this job, lift each rib onto steel falsework.",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Tiles",
+          "text": "The TilesMore than one million Höganäs ceramic tiles clad the sails only after those ribs are seated.",
+          "type": "button"
+        },
+        {
+          "tag": "INPUT",
+          "label": "Film position",
+          "text": "",
+          "type": "range"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Previous wonder",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Next wonder",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mute soundtrack",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Turn narration on",
+          "text": "Narration off",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "About this wonder",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Playback speed: 1 times",
+          "text": "1×",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Playback speed: 2 times",
+          "text": "2×",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Playback speed: 4 times",
+          "text": "4×",
+          "type": null
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "nextHash": "#/wonder/pyramids-of-giza"
+    },
+    {
+      "mode": "mobile",
+      "seek": 0.78,
+      "value": "0.78",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 244106,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -198.3486452887512,
+            328.8125952022999,
+            -604.1893988431957
+          ],
+          "direction": [
+            0.2816405120123807,
+            -0.42974219020121746,
+            0.8579045820803528
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "mobile",
+      "seek": 0.32,
+      "value": "0.32",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 162710,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            450.7685409042528,
+            335.2046690415931,
+            -594.4408170235087
+          ],
+          "direction": [
+            -0.5578888627898811,
+            -0.38405812576647924,
+            0.7357033184699878
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "mobile",
+      "seek": 1,
+      "value": "1",
+      "diagnostics": {
+        "renderer": {
+          "calls": 45,
+          "triangles": 249702,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            -406.4108064020325,
+            319.6816498166838,
+            -411.4772708783135
+          ],
+          "direction": [
+            0.6261219360377182,
+            -0.4539904997395467,
+            0.6339273991228147
+          ],
+          "fov": 42,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "mobile",
+      "seek": 0.58,
+      "value": "0.58",
+      "diagnostics": {
+        "renderer": {
+          "calls": 73,
+          "triangles": 212958,
+          "points": 0,
+          "lines": 0,
+          "geometries": 40,
+          "textures": 5
+        },
+        "camera": {
+          "position": [
+            243.72414862280962,
+            117.51849184174081,
+            159.26983426583084
+          ],
+          "direction": [
+            -0.9089240746641902,
+            -0.39077371650026604,
+            -0.1454404654434771
+          ],
+          "fov": 53.05375486720378,
+          "aspect": 0.46208530805687204,
+          "near": 20
+        },
+        "scene": "sydney-opera-house-reference"
+      }
+    },
+    {
+      "mode": "mobile",
+      "naturalPlayback": {
+        "before": 0.58,
+        "after": 0.603
+      }
+    },
+    {
+      "mode": "mobile",
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "label": "WonderForge, back to films",
+          "text": "WonderForge",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": null,
+          "text": "Chapters",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Point",
+          "text": "The PointThe podium of reconstituted granite is finished on Bennelong Point before any sail is raised.",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Ribs",
+          "text": "The RibsPrecast concrete ribs — sections of Utzon's 75-metre sphere — wait in the on-site yard.",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Cranes",
+          "text": "The CranesFavelle Favco tower cranes, developed for this job, lift each rib onto steel falsework.",
+          "type": "button"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play from The Tiles",
+          "text": "The TilesMore than one million Höganäs ceramic tiles clad the sails only after those ribs are seated.",
+          "type": "button"
+        },
+        {
+          "tag": "INPUT",
+          "label": "Film position",
+          "text": "",
+          "type": "range"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Previous wonder",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Play",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Next wonder",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mute soundtrack",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Turn narration on",
+          "text": "Narration off",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "About this wonder",
+          "text": "",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Playback speed: 1 times",
+          "text": "1×",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Playback speed: 2 times",
+          "text": "2×",
+          "type": null
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Playback speed: 4 times",
+          "text": "4×",
+          "type": null
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mode": "mobile",
+      "nextHash": "#/wonder/pyramids-of-giza"
+    }
+  ],
+  "reducedMotion": {
+    "initial": "1",
+    "held": "1",
+    "errors": []
+  }
+}

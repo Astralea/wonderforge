@@ -1,0 +1,263 @@
+{
+  "provider": "Original project-authored spherical geometry; Blender inspection export",
+  "units": "metres",
+  "axes": "Three.js Y up, +X east, +Z south; Blender X east, Y north, Z up",
+  "sphereRadius": 75,
+  "shells": [
+    {
+      "id": 0,
+      "group": "concert",
+      "height": 53,
+      "yaw": 0,
+      "centreX": -52.99997093739851,
+      "centreY": -0.06602567212768307,
+      "length": 53.065984596966956,
+      "position": [
+        -25,
+        14.2,
+        -70
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        44,
+        53,
+        53.065984596966956
+      ],
+      "ribCount": 10
+    },
+    {
+      "id": 1,
+      "group": "concert",
+      "height": 33,
+      "yaw": 3.141592653589793,
+      "centreX": -62.526022016681054,
+      "centreY": -8.418553460611292,
+      "length": 40.553970562700094,
+      "position": [
+        -25,
+        14.2,
+        24.21995515966705
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        24,
+        33,
+        40.553970562700094
+      ],
+      "ribCount": 10
+    },
+    {
+      "id": 2,
+      "group": "concert",
+      "height": 23,
+      "yaw": 0,
+      "centreX": -64.38993954484067,
+      "centreY": -15.456932865372437,
+      "length": 35.21390225191086,
+      "position": [
+        -25,
+        14.2,
+        24.21995515966705
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        18,
+        23,
+        35.21390225191086
+      ],
+      "ribCount": 10
+    },
+    {
+      "id": 3,
+      "group": "opera",
+      "height": 45,
+      "yaw": 0,
+      "centreX": -54.737276344109574,
+      "centreY": -6.272122819604252,
+      "length": 50.88704210075864,
+      "position": [
+        24,
+        14.2,
+        -68
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        40,
+        45,
+        50.88704210075864
+      ],
+      "ribCount": 10
+    },
+    {
+      "id": 4,
+      "group": "opera",
+      "height": 30,
+      "yaw": 3.141592653589793,
+      "centreX": -62.00101419121985,
+      "centreY": -12.200405676487943,
+      "length": 40.398321012008346,
+      "position": [
+        24,
+        14.2,
+        23.88536311276699
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        24,
+        30,
+        40.398321012008346
+      ],
+      "ribCount": 10
+    },
+    {
+      "id": 5,
+      "group": "opera",
+      "height": 20,
+      "yaw": 0,
+      "centreX": -64.91398937105936,
+      "centreY": -17.565595748423743,
+      "length": 33.205780068189185,
+      "position": [
+        24,
+        14.2,
+        23.88536311276699
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        16,
+        20,
+        33.205780068189185
+      ],
+      "ribCount": 10
+    },
+    {
+      "id": 6,
+      "group": "restaurant",
+      "height": 20,
+      "yaw": 3.141592653589793,
+      "centreX": -63.15910639193129,
+      "centreY": -20.44659787636908,
+      "length": 34.89790702971689,
+      "position": [
+        -5,
+        14.2,
+        58
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": [
+        18,
+        20,
+        34.89790702971689
+      ],
+      "ribCount": 10
+    }
+  ],
+  "parts": 4032,
+  "meshes": [
+    {
+      "name": "podium",
+      "material": "granite",
+      "triangles": 34944
+    },
+    {
+      "name": "rib-0",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "rib-1",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "rib-2",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "rib-3",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "rib-4",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "rib-5",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "rib-6",
+      "material": "concrete",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-0",
+      "material": "tile",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-1",
+      "material": "tile",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-2",
+      "material": "tile",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-3",
+      "material": "tile",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-4",
+      "material": "tile",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-5",
+      "material": "tile",
+      "triangles": 2560
+    },
+    {
+      "name": "sail-6",
+      "material": "tile",
+      "triangles": 2560
+    }
+  ],
+  "source": "src/data/sydneyShells.ts, src/data/sydneyConstruction.ts",
+  "interpretation": "Seven paired vaults and representative assembly units; not a measured digital twin. Existing original harbour kit reused."
+}

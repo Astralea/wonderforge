@@ -1,0 +1,28 @@
+{
+  "blendShellMaxAbsError": 3.808593746157385e-06,
+  "blendPodiumMaxAbsError": 3.808593746157385e-06,
+  "blendDetailMaxAbsError": 3.808593746157385e-06,
+  "blendObjects": {
+    "shell": 10,
+    "podium": 249,
+    "detail": 47
+  },
+  "blendCameras": [
+    "cam_aerialNW",
+    "cam_eastLow",
+    "cam_lowW",
+    "cam_north",
+    "cam_south",
+    "cam_top"
+  ],
+  "blendMaterials": [
+    "SOH_bronze",
+    "SOH_concrete",
+    "SOH_glass_topaz",
+    "SOH_granite_pink",
+    "SOH_tile"
+  ],
+  "glbTriangles": 115704,
+  "glbShellTopYMaxError": 1.6601562506934897e-06,
+  "glbMeshObjects": 306
+}
